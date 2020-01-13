@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta name="charset" content="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="プログラミング言語 Nim は C, C++ と JavaScript へ コンパイルを行える簡潔で高速なプログラミング言語です。">
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="/assets/img/logo_bw.png" />
+
+  
+  <title>Windows 版のインストール - プログラミング言語 Nim (非公式日本語β版)</title>
+  
+  <link rel="stylesheet" href="/assets/css/pure.min.css">
+  <link rel="stylesheet" href="/assets/css/pure-grids-responsive.min.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  
+  <link rel="stylesheet" href="/assets/css/highlight/github.css">
+  
+
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Titillium+Web" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css?t=1575092008269061700">
+
+  <meta name="twitter:title" content="Windows 版のインストール">
+
+  
+  <meta name="twitter:description" content="プログラミング言語 Nim は C, C++ と JavaScript へ コンパイルを行える簡潔で高速なプログラミング言語です。">
+  <meta property="og:description" content="プログラミング言語 Nim は C, C++ と JavaScript へ コンパイルを行える簡潔で高速なプログラミング言語です。">
+  
+
+  <meta name="twitter:site" content="@nim_lang">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://nim-lang.org/assets/img/twitter_banner.png">
+
+  <meta property="og:title" content="Windows 版のインストール" />
+  <meta property="og:site_name" content="プログラミング言語 Nim (非公式日本語β版)" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://nim-lang.org/assets/img/twitter_banner.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1000" />
+  <meta property="og:image:height" content="500" />
+  <meta property="og:image:alt" content="プログラミング言語 Nim" />
+</head>
+
+  <body class="site">
+    <header>
+  <nav class="pure-menu pure-menu-horizontal pure-menu-scrollable">
+    <div class="nav-content">
+      <a href="/" class="pure-menu-heading pure-menu-link site-logo-container">
+        <img class="site-logo" src="/assets/img/logo.svg" height="28" alt="Nim">
+      </a>
+      <ul class="pure-menu-list">
+        
+        <li class="pure-menu-item">
+          <a href="/blog.html"
+             class="pure-menu-link ">
+            ブログ
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a href="/features.html"
+             class="pure-menu-link ">
+            特徴
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a href="/install.html"
+             class="pure-menu-link ">
+            ダウンロード
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a href="/learn.html"
+             class="pure-menu-link ">
+            学ぶ
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a href="/documentation.html"
+             class="pure-menu-link ">
+            資料
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a href="https://forum.nim-lang.org"
+             class="pure-menu-link ">
+            フォーラム
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a href="/donate.html"
+             class="pure-menu-link ">
+            寄付
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://github.com/nim-lang/Nim">ソース</a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu-fade"></div>
+  </nav>
+</header>
+
+    <div class="site-content install_windows slim content">
+      <h1 class="text-centered page-title main-heading">Nim のインストール (Windows 版)</h1>
+
+<div class="center">
+  <a href="/download/nim-1.0.4_x32.zip" class="pure-button pure-button-primary download-button">
+    <i class="fa fa-file-archive-o" aria-hidden="true"></i>
+    x86版の入手 (zip形式)
+  </a>
+  <a href="/download/nim-1.0.4_x32.zip.sha256" class="pure-button">
+    <i class="fa fa-file-text-o" aria-hidden="true"></i>
+    SHA256
+  </a>
+</div>
+
+<div class="center">
+  <a href="/download/nim-1.0.4_x64.zip" class="pure-button pure-button-primary download-button">
+    <i class="fa fa-file-archive-o" aria-hidden="true"></i><!-- 「～版のダウンロード (zip 形式)」にするとレイアウトが崩れてしまう。 -->
+    x86_64版の入手 (zip形式)
+  </a>
+  <a href="/download/nim-1.0.4_x64.zip.sha256" class="pure-button">
+    <i class="fa fa-file-text-o" aria-hidden="true"></i>
+    SHA256
+  </a>
+</div>
+
+<h1 id="バイナリのインストールに関する注意点">バイナリのインストールに関する注意点</h1>
+
+<p>提供されている zip ファイルでのインストールは、かなり簡単です。
+ご希望のインストールディレクトリへファイルを展開してから
+<code class="highlighter-rouge">finish.exe</code> を実行します (場合により管理者権限での実行が必要です)。</p>
+
+<h2 id="環境変数-path-の設定">環境変数 <code class="highlighter-rouge">PATH</code> の設定</h2>
+
+<p>さて、バイナリは zip ファイルから <code class="highlighter-rouge">bin</code> ディレクトリにあります。
+一般に Nim 開発者は<a href="https://en.wikipedia.org/wiki/PATH_(variable)">環境変数 <code class="highlighter-rouge">PATH</code></a>
+へ下記のディレクトリを指定してパスを通します:</p>
+
+<ul>
+  <li>前述の <code class="highlighter-rouge">bin</code> ディレクトリ</li>
+  <li><code class="highlighter-rouge">%USERPROFILE%\.nimble\bin</code> (<code class="highlighter-rouge">%USERPROFILE%</code> はホームディレクトリ)</li>
+</ul>
+
+<p>簡単に bin ディレクトリへの <code class="highlighter-rouge">PATH</code> を追加するアプリケーションとして
+<code class="highlighter-rouge">finish.exe</code> を zip ファイルに収録してあります。
+また、このツールは C コンパイラの有無を確認します。無ければ Windows 版
+GNU C コンパイラ・コレクションである <code class="highlighter-rouge">MinGW</code> をインストールすることもできます。</p>
+
+<h1 id="コンパイラの依存性に関する注意点">コンパイラの依存性に関する注意点</h1>
+
+<p>Nim コンパイラはソフトウェアのコンパイルをするために C コンパイラが必要です。
+<code class="highlighter-rouge">finish.exe</code> で <code class="highlighter-rouge">MinGW</code> をインストールできます。</p>
+
+<p>このバージョンの <code class="highlighter-rouge">MinGW</code> は、最新版の Nim
+で動作確認済みです。</p>
+
+<!-- TODO: Instructions on what to do with these 7z files? -->
+
+<ul>
+  <li>32 bit - <a href="/download/mingw32.7z">mingw32.7z</a></li>
+  <li>64 bit - <a href="/download/mingw64.7z">mingw64.z</a></li>
+</ul>
+
+<h1 id="そのほかの依存性">そのほかの依存性</h1>
+
+<p>Nim を使うために依存性のインストールが必要になる場合があります。
+対象は:</p>
+
+<ul>
+  <li>PCRE</li>
+  <li>OpenSSL</li>
+</ul>
+
+<p>Windows ユーザは、<a href="/download/dlls.zip">こちらから</a>
+共有ライブラリ (DLL) をダウンロードできます。ダウンロードした共有ライブラリは
+<code class="highlighter-rouge">nim.exe</code> と同じディレクトリに配置してください。</p>
+
+    </div>
+    <footer>
+  <section class="content">
+    <div class="pure-g">
+      <div class="copyright pure-u-2-3">
+        <p>
+          特に明記のない場合に限り、
+          このページのコンテンツの利用条件は
+          <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>
+          ライセンスです。
+          また、このウェブサイトに掲載されているソースコードの利用条件は MIT ライセンスです。
+        </p>
+        <p>
+          このウェブサイトのソースコードは
+          <a href="https://github.com/nim-lang/website">GitHub</a>
+          にあります。ご貢献を歓迎します。
+          ウェブサイトのオリジナルデザインは
+          <a href="https://github.com/dom96">Dominik Picheta</a> と
+          <a href="https://github.com/Calinou">Hugo Locurcio</a> です。
+          ロゴデザインは <a href="https://github.com/josephwecker">Joseph Wecker</a> です。日本語訳は <a href="https://twitter.com/isvowel/">isVowel</a> と <a href="https://osdn.net/projects/nim-lang-081/wiki/Contributors">&#x1f34e;むつさんチーム</a> です。
+        </p>
+      </div>
+      <div class="pure-u-1-3 right-center">
+        <a href="https://m.do.co/c/637ab907c7f4"><img src="/assets/img/do.png"/></a>
+      </div>
+    </div>
+  </section>
+
+</footer>
+<script>
+    (function(){
+      function setTracking(a) {
+        var url = a.href;
+        a.onclick = function() {
+          if (typeof(ga) !== "undefined") {
+            ga('send', 'event', 'outbound', 'click', url, {
+              'transport': 'beacon',
+              'hitCallback': function(){document.location = url;}
+            });
+          }
+        };
+      }
+
+      var a = document.getElementsByTagName("a");
+      for (var i = 0; i < a.length; ++i) {
+        if (a[i].hostname != location.hostname &&
+            a[i].getAttribute("target") !== "_blank"
+        ) {
+          setTracking(a[i])
+        }
+      }
+    })();
+</script>
+
+  </body>
+</html>

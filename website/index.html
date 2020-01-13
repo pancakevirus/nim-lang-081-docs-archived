@@ -1,0 +1,334 @@
+---
+layout: default
+use_dark_highlighting: true
+---
+
+<section class="main jumbotron">
+  <section class="main jumbotron"></section> <!-- hack to move everything down, without increasing padding -->
+  <section class="content">
+    <div class="pure-g">
+      <div class="pure-u-1 main-block">
+        <h1>経済性、表現力、優美</h1>
+      </div>
+      <div class="pure-u-1 pure-u-md-3-5 main-block">
+        <h2>
+          Nim は静的型付けを採用したコンパイラ方式のシステムプログラミング言語です。<!-- Nim は静的型付けでコンパイルを行うシステムプログラミング言語です。 -->
+          Python,
+          Ada や Modula など洗練された言語で定評のある思想<!--「概念」ではつまらない-->を取り入れています。<!--の化学反応です。にしたかった-->
+        </h2>
+        <h3>経済性<!-- みなさんは効率的よりも経済性(ウィスキー)がお好きでしょう？  それに、～的は中国語っぽくて野暮ったいような。 --></h3>
+        <ul>
+          <li>Nim は依存性のないネイティブ動作の実行可能ファイルを生成します。
+              生成ファイルは仮想マシンへの依存性がなく、小型軽量であるため簡単に配布できます</li>
+          <li>Nim コンパイラと生成された実行可能ファイルは
+               Windows, Linux, BSD および macOS など主要なプラットホームにすべて対応しています。</li>
+          <li>リアルタイムシステムに対応した高速遅延参照カウント方式によるメモリ管理。</li>
+          <li>オーバーヘッドのないイテレーターとユーザ定義関数のコンパイル時の評価、
+              値ベースのデータ型の優先的スタック割り当てなどモダンな概念を併用することで、
+              究極の高性能コードを実現します。</li>
+          <li>各種バックエンドへの対応: C, C++ または JavaScript へコンパイルします。
+               Nim は必要に応じて、さまざまなバックエンドとフロントエンドを使用できます。</li>
+        </ul>
+        <h3>表現力<!-- 「幽玄」もいいなぁ。 --></h3>
+        <ul>
+          <li>Nim は自己完結型です: コンパイラと標準ライブラリは Nim で実装してあります。</li>
+          <li>Nim には抽象構文木 (AST)
+              を直接操作できる無限の可能性を秘めた強力なマクロシステムがあります。</li>
+        </ul>
+        <h3>優美</h3>
+        <ul>
+          <li>必要性がないため Nim のシンタックスはマクロによる変更はできません —
+              シンタックスは十分柔軟です。</li>
+          <li>局所型推論、タプル、ジェネリックと総和型によるモダンな型システム。</li>
+          <li>ステートメントはインデントでまとめますが、複数行をまたがることもできます。</li>
+        </ul>
+
+        <div class="text-centered">
+          <a class="pure-button pure-button-primary" href="{{ site.baseurl }}/install.html">インストール</a>
+          <a class="pure-button" href="{{ site.baseurl }}/learn.html">Nim を学ぶ</a>
+        </div>
+      </div>
+
+      <div class="pure-u-1 pure-u-md-2-5">
+        {% highlight nim %}
+import strformat
+
+type
+  Person = object
+    name: string
+    age: Natural # 正数として age を確保します。
+
+let people = [
+  Person(name: "John", age: 45),
+  Person(name: "Kate", age: 30)
+]
+
+for person in people:
+  # コンパイル時に評価される、
+  # 型安全の文字列補完
+  echo(fmt"{person.name} is {person.age} years old")
+{% endhighlight %}
+
+        {% highlight nim %}
+# Nim の 'iterator' と 'yield' コンストラクトにより、
+# イテレータは普通の関数と同じように簡単に記述できます。
+# コンパイル時はインラインループとして展開します。
+iterator oddNumbers[Idx, T](a: array[Idx, T]): T =
+  for x in a:
+    if x mod 2 == 1:
+      yield x
+
+for odd in oddNumbers([3, 6, 9, 12, 15, 18]):
+  echo odd
+{% endhighlight %}
+
+
+          {% highlight nim %}
+# データ処理を中心とする難解な
+# x86 インストラクションの記述において、
+# アセンブラと JIT で使う参照テーブルの変換で
+# Nim のマクロシステムを使用します。
+import macros, strutils
+
+macro toLookupTable(data: static[string]): untyped =
+  result = newTree(nnkBracket)
+  for w in data.split(';'):
+    result.add newLit(w)
+
+const
+  data = "mov;btc;cli;xor"
+  opcodes = toLookupTable(data)
+
+for o in opcodes:
+  echo o
+{% endhighlight %}
+
+        <div class="text-centered">
+          <a href="http://rosettacode.org/wiki/Category:Nim">続きは RosettaCode で…</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</section>
+
+<section class="content">
+  <h1 class="section-heading">新着情報<!-- 最新情報、最近の記事、最新記事 --></h1>
+  <div class="pure-g">
+    {% for post in site.posts limit: 2 %}
+    <div class="news-item pure-u-1 pure-u-md-1-2">
+      <div class="post-meta">
+        <span>
+          <i class="far fa-calendar-alt" aria-hidden="true"></i>
+          {{ post.date | date: "%Y年%m月%d日" }} <!-- 参考: http://masoojp.blogspot.com/2014/04/jekyll.html?m=1 -->
+        </span>
+      </div>
+      <h2>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+      </h2>
+      {{ post.excerpt }}
+    </div>
+    {% endfor %}
+  </div>
+  <div class="text-centered">
+  <a class="pure-button" href="{{ "/blog.html" | prepend: site.baseurl }}">過去の新着情報<!-- All articles --></a>
+  </div>
+</section>
+
+<section class="background-faded call-to-action feature-projects">
+  <section class="content">
+    <h1 class="section-heading">注目のプロジェクト</h1>
+    <div class="pure-g center">
+
+      <div class="pure-u-1-1 pure-u-md-1-2">
+        <div class="project-container">
+          <h2>
+            <a href="https://github.com/pragmagic/karax">Karax</a>
+          </h2>
+          <span class="tag">SPA フレームワーク</span>
+          <p>
+            Karax は Nim でシングルページ・アプリケーションを開発するためのフレームワークです。
+            ボイラープレートのいらないアプリケーション開発ができるフレームワークであり
+            Nim のマクロ生成システムを活用して作りました。
+          </p>
+        </div>
+      </div>
+
+      <div class="pure-u-1-1 pure-u-md-1-2">
+        <div class="project-container">
+          <h2>
+            <a href="https://github.com/status-im/nimbus">Nimbus</a>
+          </h2>
+          <span class="tag">Ethereum クライアント</span>
+          <p>
+            Nimbus は Ethereum 2.0 のブロックチェーン用に開発されたシャーディング・クライアントです。
+            Ethereum は組み込み機器で今後使われる可能性があるため、
+            IoT と個人向けモバイル機器で動作するように設計してあります。
+          </p>
+        </div>
+      </div>
+
+    </div>
+    <div class="text-centered">
+      <a class="pure-button pure-button-primary" href="https://github.com/trending/nim">プロジェクトを探す</a>
+    </div>
+  </section>
+</section>
+
+<section class="content center-banner">
+  <h1 class="section-heading">
+    <i class="fa fa-graduation-cap fa-2x" aria-hidden="true"></i>
+    モダンな Nim を学びましょう
+  </h1>
+  <div class="pure-g center">
+    <div class="pure-u-1-2">
+      <h3>
+        コマンドラインアプリケーション、ゲーム、ウェブサーバー、
+        カーネルなどありとあらゆるものが作れます。
+         Nim は習得しやすく<!-- low barrier to entry: の参入障壁は低く -->、主流プログラミング言語にはない強力な機能があります。
+      </h3>
+    </div>
+    <div class="pure-u-1 center">
+      <a class="pure-button" href="{{ site.baseurl }}/learn.html">はじめる</a>
+    </div>
+  </div>
+</section>
+
+<section class="jumbotron" id="book">
+  <section class="content">
+    <div class="pure-g">
+      <div class="pure-u-1 pure-u-md-2-5">
+        <img height="470px" class="pure-img" src="{{ site.baseurl }}/assets/img/nim_in_action_cover.jpg"/>
+      </div>
+      <div class="pure-u-1 pure-u-md-3-5 main-block">
+        <h1>Nim in Action</h1>
+        <h3>
+          Nim 史上初となる公式解説書「<ruby>Nim<rp>(</rp><rt>ニム</rt><rp>)</rp></ruby>
+          <ruby>in<rp>(</rp><rt>イン</rt><rp>)</rp></ruby>
+          <ruby>Action<rp>(</rp><rt>アクション</rt><rp>)</rp></ruby>」は好評発売中です (英語版のみ)。
+          電子書籍版、または製本版 (ソフトカバー) を購入できます。
+          Nim のシンタックスなどの基礎とマクロなどの高度な機能を学び、
+          豊富なアプリケーション開発の例題<!-- による指南 -->で言語の実務経験を会得しましょう。
+        </h3>
+        <ul>
+          <li>Nim のシンタックスなどの基礎を解説してあります。</li>
+          <li>Nimble パッケージマネージャーの使用方法を解説してあります。</li>
+          <li>チャットプログラム、
+            Twitter
+            クローンなど多岐にわたるアプリケーション開発方法について手順を追って詳しく解説してあります。
+          </li>
+        </ul>
+      </div>
+      <div class="pure-u-1 center">
+        <a class="pure-button pure-button-primary" href="https://book.picheta.me/">くわしく</a>
+      </div>
+    </div>
+  </section>
+</section>
+
+<section class="content center-banner">
+  <h1 class="section-heading">
+    <img height="100px" src="{{ site.baseurl }}/assets/img/piggy.svg"/>
+    Nim のサポート
+  </h1>
+  <div class="pure-g center">
+    <div class="pure-u-1-2">
+      <h2>Nim のサポートには 100 以上の企業と個人が参加しています。</h2>
+      <h3>
+        Nim プロジェクトは世界中の<ruby>篤<rp>(</rp><rt>とく</rt><rp>)</rp></ruby><ruby>志<rp>(</rp><rt>し</rt><rp>)</rp></ruby><ruby>家<rp>(</rp><rt>か</rt><rp>)</rp></ruby>らにより開発が続けられています。
+        もっと精力的に Nim の活動に<ruby>励<rp>(</rp><rt>はげ</rt><rp>)</rp></ruby>めるよう、<!--時間を使えようにするため、 --><!-- いいたいことを受け止めきれていない。誤訳だな。-->
+        寄付の定期継続を歓迎します。<!-- ボランティアよりも篤志家のほうが熱い物語がありそうでかっこいい -->
+      </h3>
+    </div>
+    <div class="pure-u-1 center">
+      <a class="pure-button pure-button-primary" href="{{ site.baseurl }}/donate.html">寄付する</a>
+    </div>
+  </div>
+</section>
+
+<section class="background-faded call-to-action">
+  <section class="content text-centered">
+    <h1>トップスポンサー</h1>
+    <div class="pure-g center">
+      <div class="pure-u-2-3">
+        {% for sponsor in site.data.sponsors %}
+          {% if sponsor.level == "250" %}
+            <div class="sponsor-container">
+              <a href="{{sponsor.url}}">
+                <img src="{{ site.baseurl }}{{sponsor.logo}}"/>
+                <span class="green tag">+${{sponsor.this_month}}/month</span>
+                <p class="title">{{sponsor.name}}</p>
+              </a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <a class="pure-button" href="{{ site.baseurl }}/sponsors.html">確認する<!-- 詳しく見る --></a>
+  </section>
+</section>
+
+<section class="jumbotron" id="community">
+  <section class="content">
+    <h1>コミュニティ</h1>
+    <div class="pure-g">
+      <div class="pure-u-1 pure-u-md-1-4">
+        <h2>チャット<!-- リアルタイムチャット --></h2>
+        <p><a href="irc://freenode.net/nim"><i class="fc fa-irc">#</i>FreeNode#nim</a></p>
+        <p><a href="https://gitter.im/nim-lang/Nim"><i class="fab fa-gitter"></i>Gitter/Nim</a></p>
+        <p><a href="https://discord.gg/ezDFDw2"><i class="fab fa-discord"></i>Discord/Nim</a></p>
+        <p><a href="https://matrix.to/#/#freenode_#nim:matrix.org"><i class="fab i">m</i>#nim:matrix.org</a></p>
+        <p><a href="https://irclogs.nim-lang.org"><i class="fc fa-irc">#</i>IRC ログ</a></p>
+        <p><a href="https://t.me/nim_lang"><i class="fab fa-telegram"></i>Telegram/nim_lang</a></p>
+      </div>
+
+      <div class="pure-u-1 pure-u-md-1-4">
+        <h2>フォーラム</h2>
+        <p><a href="https://forum.nim-lang.org">
+          <i class="fa fa-comments" aria-hidden="true"></i>forum.nim-lang.org</a></p>
+        <p><a href="https://reddit.com/r/nim">
+          <i class="fab fa-reddit" aria-hidden="true"></i>r/nim</a></p>
+        <p><a href="https://stackoverflow.com/questions/tagged/nim-lang">
+          <i class="fab fa-stack-overflow" aria-hidden="true"></i>StackOverflow</a></p>
+      </div>
+
+      <div class="pure-u-1 pure-u-md-1-4">
+        <h2>不具合の報告<!-- バグレポート --></h2>
+        <p><a href="https://github.com/nim-lang/Nim/issues">
+          <i class="fab fa-github" aria-hidden="true"></i>nim-lang/Nim</a></p>
+      </div>
+
+      <div class="pure-u-1 pure-u-md-1-4">
+        <h2>Twitter</h2>
+        <p><a href="https://twitter.com/nim_lang">
+          <i class="fab fa-twitter" aria-hidden="true"></i>@nim_lang
+        </a></p>
+      </div>
+
+      <div class="pure-u-1 center">
+        <p><a class="pure-button" href="{{ site.baseurl }}/community.html">コミュニティへ参加する</a></p>
+      </div>
+    </div>
+
+  </section>
+</section>
+
+<section class="content center-banner">
+  <h1 class="section-heading">
+    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+    GitHub リポジトリをお探しですか？
+  </h1>
+  <div class="pure-g center">
+    <div class="pure-u-1-2">
+      <h3>
+        Nim のコンパイラとツールはすべて Nim で記述されており、利用条件は MIT ライセンスです。
+        なお、 開発作業は GitHub で行っています。
+        Nim の開発に関する更新情報を受け取るには、リポジトリの参照、
+        またはスターによる評価をお願いします。
+      </h3>
+    </div>
+    <div class="pure-u-1 center">
+      <a class="pure-button" href="https://github.com/nim-lang/Nim">ソースコード</a>
+    </div>
+  </div>
+</section>

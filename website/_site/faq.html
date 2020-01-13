@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta name="charset" content="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="プログラミング言語 Nim は C, C++ と JavaScript へ コンパイルを行える簡潔で高速なプログラミング言語です。">
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="/assets/img/logo_bw.png" />
+
+  
+  <title>よくある質問と回答 - プログラミング言語 Nim (非公式日本語β版)</title>
+  
+  <link rel="stylesheet" href="/assets/css/pure.min.css">
+  <link rel="stylesheet" href="/assets/css/pure-grids-responsive.min.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  
+  <link rel="stylesheet" href="/assets/css/highlight/github.css">
+  
+
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Titillium+Web" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css?t=1575086493317106700">
+
+  <meta name="twitter:title" content="よくある質問と回答">
+
+  
+  <meta name="twitter:description" content="プログラミング言語 Nim は C, C++ と JavaScript へ コンパイルを行える簡潔で高速なプログラミング言語です。">
+  <meta property="og:description" content="プログラミング言語 Nim は C, C++ と JavaScript へ コンパイルを行える簡潔で高速なプログラミング言語です。">
+  
+
+  <meta name="twitter:site" content="@nim_lang">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://nim-lang.org/assets/img/twitter_banner.png">
+
+  <meta property="og:title" content="よくある質問と回答" />
+  <meta property="og:site_name" content="プログラミング言語 Nim (非公式日本語β版)" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://nim-lang.org/assets/img/twitter_banner.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1000" />
+  <meta property="og:image:height" content="500" />
+  <meta property="og:image:alt" content="プログラミング言語 Nim" />
+</head>
+
+  <body class="site">
+    <header>
+  <nav class="pure-menu pure-menu-horizontal pure-menu-scrollable">
+    <div class="nav-content">
+      <a href="/" class="pure-menu-heading pure-menu-link site-logo-container">
+        <img class="site-logo" src="/assets/img/logo.svg" height="28" alt="Nim">
+      </a>
+      <ul class="pure-menu-list">
+        
+        <li class="pure-menu-item">
+          <a href="/blog.html"
+             class="pure-menu-link ">
+            ブログ
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a href="/features.html"
+             class="pure-menu-link ">
+            特徴
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a href="/install.html"
+             class="pure-menu-link ">
+            ダウンロード
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a href="/learn.html"
+             class="pure-menu-link ">
+            学ぶ
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a href="/documentation.html"
+             class="pure-menu-link ">
+            資料
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a href="https://forum.nim-lang.org"
+             class="pure-menu-link ">
+            フォーラム
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a href="/donate.html"
+             class="pure-menu-link ">
+            寄付
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://github.com/nim-lang/Nim">ソース</a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu-fade"></div>
+  </nav>
+</header>
+
+    <div class="site-content faq slim content">
+      <h1 class="text-centered page-title main-heading">よくある質問と回答</h1>
+
+<h1 id="一般的な質問">一般的な質問</h1>
+
+<h2 id="第三のプログラミング言語が必要な理由は">第三のプログラミング言語が必要な理由は？</h2>
+
+<p>Nim は数少ない「プログラム可能」な静的型付け言語であり、
+C の速度とメモリの効率性、表情力豊かなシンタックス、
+メモリの安全性と複数のターゲット言語を兼ね備えています。</p>
+
+<h2 id="nim-は安定していますか">Nim は安定していますか？</h2>
+
+<p>コンパイラと標準ライブラリは積極的に開発が続けられており、
+継続的な安定性を保証するためにテストケース一式を用意しております。
+安定した基盤を求めているプロジェクト向けに基準として使用できる正規リリースを３～６ヶ月ごとに公開しております。
+稀に破壊的変更が行われることはありますが、詳細情報は<a href="https://nim-lang.org/blog/2018/03/01/version-0180-released.html">ドキュメント化</a>されているため、
+通常は最小限の労力で対応可能であります。
+また、コンパイラは必要十分な通知と移行期間を提供するために
+廃止予定機能の強調表示を行います。</p>
+
+<h2 id="セキュリティとメモリの安全性は">セキュリティとメモリの安全性は？</h2>
+
+<p>Nim はポインター演算の実行不可、オプションの<a href="https://nim-lang.org/docs/manual.html#pragmas-compilation-option-pragmas">チェック</a>、
+参照のトレースとアントレース、さらにオプションの null 不可型によりメモリの安全性を提供しております。
+これは koch ツールと汚染分析により Valgrind をサポートしております。</p>
+
+<h2 id="nim-のライセンスは">Nim のライセンスは？</h2>
+
+<p>Nim のコンパイラとライブラリは MIT ライセンスです。
+つまり、 Nim を用いて開発したプログラムには、
+お好きなライセンスを適用できます。</p>
+
+<h2 id="jvmclr-バックエンドのサポート状況は">JVM/CLR バックエンドのサポート状況は？</h2>
+
+<p>最近の計画に JVM/CLR のサポートはありません。しかし、前述の仮想マシンは C の FFI をサポートしております。
+よって Nim の強力なメタプログラミング機能を使い、透過的なグルーコード全体の生成を行うことでネイティブ Nim ブリッジの開発は可能であります。</p>
+
+<h2 id="エディタのサポート状況は">エディタのサポート状況は？</h2>
+
+<ul>
+  <li>Aporia (ネイティブ Nim エディタ): <a href="https://github.com/nim-lang/Aporia">https://github.com/nim-lang/Aporia</a></li>
+  <li>Visual Studio Code: <a href="https://marketplace.visualstudio.com/items?itemName=kosz78.nim">https://marketplace.visualstudio.com/items?itemName=kosz78.nim</a></li>
+  <li>Emacs: <a href="https://github.com/nim-lang/nim-mode">https://github.com/nim-lang/nim-mode</a></li>
+  <li>Vim: <a href="https://github.com/zah/nimrod.vim">https://github.com/zah/nimrod.vim/</a></li>
+  <li>QtCreator (4.1+): 実験的なプラグインとして収録済み。</li>
+  <li>Scite: 収録済み</li>
+  <li>Gedit: <a href="https://github.com/nim-lang/Aporia/blob/master/share/gtksourceview-2.0/language-specs/nim.lang">Aporia の .lang ファイル</a></li>
+  <li>Geany: 収録済み</li>
+  <li>jEdit: <a href="https://github.com/exhu/nimrod-misc/tree/master/jedit">https://github.com/exhu/nimrod-misc/tree/master/jedit</a></li>
+  <li>TextMate: <a href="https://github.com/textmate/nim.tmbundle">https://github.com/textmate/nim.tmbundle</a></li>
+  <li>Sublime Text: <a href="https://github.com/Varriount/NimLime">https://github.com/Varriount/NimLime</a></li>
+  <li>LiClipse: <a href="http://www.liclipse.com/">http://www.liclipse.com/</a> (Eclipse ベースのプラグイン)</li>
+  <li>Howl: 収録済み</li>
+  <li>Notepad++: <a href="https://github.com/jangko/nppnim/releases">https://github.com/jangko/nppnim/releases</a></li>
+  <li>Micro: 収録済み</li>
+  <li>Atom: <a href="https://atom.io/packages/nim">https://atom.io/packages/nim</a></li>
+</ul>
+
+<h2 id="言語設計で大いに影響を受けたものは">言語設計で大いに影響を受けたものは？</h2>
+
+<p>大量に模倣した言語 (影響を受けた順) :
+Modula 3, Delphi, Ada, C++, Python, Lisp, Oberon</p>
+
+<h2 id="proc-と命名した理由は"><code class="highlighter-rouge">proc</code> と命名した理由は？</h2>
+
+<p><em>Procedure</em> (手続き) が一般用語として用いられるのとは対照的に <em>function</em> (関数)
+は副作用のない数学的存在であります。実際のところ、 Nim の <code class="highlighter-rouge">func</code> は
+<code class="highlighter-rouge">proc {.noSideEffect.}</code> の糖衣構文です。 <code class="highlighter-rouge">def</code> は <code class="highlighter-rouge">define</code> (定義) の略記ですが、 
+Nim では <code class="highlighter-rouge">iterator</code> (反復)と <code class="highlighter-rouge">method</code> (方法) キーワードを提供しているため <code class="highlighter-rouge">def</code>
+という命名では何を指しているのか意味が通じません。</p>
+
+<h1 id="コンパイル関連の質問">コンパイル関連の質問</h1>
+
+<h2 id="最速動作の実行可能ファイルを生成するオプションは">最速動作の実行可能ファイルを生成するオプションは？</h2>
+
+<p>標準的な環境設定ファイルでは、 <code class="highlighter-rouge">-d:release</code> が秘訣です。
+コンパイラでサポートしている場合は、リンク時の最適化を有効にすると
+実行可能ファイルの動作速度をもっと向上できます: <code class="highlighter-rouge">--passc:-flto</code></p>
+
+<h2 id="最小容量の実行可能ファイルを生成するオプションは">最小容量の実行可能ファイルを生成するオプションは？</h2>
+
+<p>標準的な環境設定ファイルでは、 <code class="highlighter-rouge">-d:quick --opt:size</code> が秘訣です。
+コンパイラでサポートしている場合は、リンク時の最適化を有効にすると
+実行可能ファイルの容量をもっと縮小できます: <code class="highlighter-rouge">--passc:-flto</code></p>
+
+<h2 id="デフォルトの-c-コンパイラとは違うものを使うには">デフォルトの C コンパイラとは違うものを使うには？</h2>
+
+<p><code class="highlighter-rouge">config/nim.cfg</code> ファイルを編集します。
+変数 <code class="highlighter-rouge">cc</code> の値を下記の中から一つ選んで変更してください:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>略称</th>
+      <th>C/C++ コンパイラ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">vcc</code></td>
+      <td>Microsoft Visual C++</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">gcc</code></td>
+      <td>GNU C コンパイラ</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">llvm_gcc</code></td>
+      <td>LLVM-GCC コンパイラ</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">icc</code></td>
+      <td>Intel C コンパイラ</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">clang</code></td>
+      <td>Clang コンパイラ</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">ucc</code></td>
+      <td>一般的な UNIX C コンパイラ</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>それ以外の C コンパイラは公式にはサポートしておりませんが、動作する可能性があります。</p>
+
+<p>上記のリストに記載されていない C コンパイラの場合は、 <em>一般的な UNIX C コンパイラ</em> (<code class="highlighter-rouge">ucc</code>)
+を試してみてください。また、 C コンパイラで異なるコマンドライン引数が必要ならば
+<code class="highlighter-rouge">--passc</code> と <code class="highlighter-rouge">--passl</code> スイッチを試してみてください。</p>
+
+    </div>
+    <footer>
+  <section class="content">
+    <div class="pure-g">
+      <div class="copyright pure-u-2-3">
+        <p>
+          特に明記のない場合に限り、
+          このページのコンテンツの利用条件は
+          <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>
+          ライセンスです。
+          また、このウェブサイトに掲載されているソースコードの利用条件は MIT ライセンスです。
+        </p>
+        <p>
+          このウェブサイトのソースコードは
+          <a href="https://github.com/nim-lang/website">GitHub</a>
+          にあります。ご貢献を歓迎します。
+          ウェブサイトのオリジナルデザインは
+          <a href="https://github.com/dom96">Dominik Picheta</a> と
+          <a href="https://github.com/Calinou">Hugo Locurcio</a> です。
+          ロゴデザインは <a href="https://github.com/josephwecker">Joseph Wecker</a> です。日本語訳は <a href="https://twitter.com/isvowel/">isVowel</a> と <a href="https://osdn.net/projects/nim-lang-081/wiki/Contributors">&#x1f34e;むつさんチーム</a> です。
+        </p>
+      </div>
+      <div class="pure-u-1-3 right-center">
+        <a href="https://m.do.co/c/637ab907c7f4"><img src="/assets/img/do.png"/></a>
+      </div>
+    </div>
+  </section>
+
+</footer>
+<script>
+    (function(){
+      function setTracking(a) {
+        var url = a.href;
+        a.onclick = function() {
+          if (typeof(ga) !== "undefined") {
+            ga('send', 'event', 'outbound', 'click', url, {
+              'transport': 'beacon',
+              'hitCallback': function(){document.location = url;}
+            });
+          }
+        };
+      }
+
+      var a = document.getElementsByTagName("a");
+      for (var i = 0; i < a.length; ++i) {
+        if (a[i].hostname != location.hostname &&
+            a[i].getAttribute("target") !== "_blank"
+        ) {
+          setTracking(a[i])
+        }
+      }
+    })();
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,1241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta name="charset" content="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="プログラミング言語 Nim は C, C++ と JavaScript へ コンパイルを行える簡潔で高速なプログラミング言語です。">
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="/assets/img/logo_bw.png" />
+
+  
+  <title>A guide to documenting, profiling and debugging Nim code - Nim ブログ</title>
+  
+  <link rel="stylesheet" href="/assets/css/pure.min.css">
+  <link rel="stylesheet" href="/assets/css/pure-grids-responsive.min.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  
+  <link rel="stylesheet" href="/assets/css/highlight/github.css">
+  
+
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans|Titillium+Web" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css?t=1575086493317106700">
+
+  <meta name="twitter:title" content="A guide to documenting, profiling and debugging Nim code">
+
+  
+  <meta name="twitter:description" content="This guide discusses some of the useful tools for documenting, profiling and debugging Nim code.">
+  <meta property="og:description" content="This guide discusses some of the useful tools for documenting, profiling and debugging Nim code.">
+  
+
+  <meta name="twitter:site" content="@nim_lang">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://nim-lang.org/assets/img/twitter_banner.png">
+
+  <meta property="og:title" content="A guide to documenting, profiling and debugging Nim code" />
+  <meta property="og:site_name" content="プログラミング言語 Nim (非公式日本語β版)" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://nim-lang.org/assets/img/twitter_banner.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1000" />
+  <meta property="og:image:height" content="500" />
+  <meta property="og:image:alt" content="プログラミング言語 Nim" />
+</head>
+
+  <body class="site">
+    <header>
+  <nav class="pure-menu pure-menu-horizontal pure-menu-scrollable">
+    <div class="nav-content">
+      <a href="/" class="pure-menu-heading pure-menu-link site-logo-container">
+        <img class="site-logo" src="/assets/img/logo.svg" height="28" alt="Nim">
+      </a>
+      <ul class="pure-menu-list">
+        
+        <li class="pure-menu-item">
+          <a href="/blog.html"
+             class="pure-menu-link ">
+            ブログ
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a href="/features.html"
+             class="pure-menu-link ">
+            特徴
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a href="/install.html"
+             class="pure-menu-link ">
+            ダウンロード
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a href="/learn.html"
+             class="pure-menu-link ">
+            学ぶ
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a href="/documentation.html"
+             class="pure-menu-link ">
+            資料
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a href="https://forum.nim-lang.org"
+             class="pure-menu-link ">
+            フォーラム
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a href="/donate.html"
+             class="pure-menu-link ">
+            寄付
+          </a>
+        </li>
+        
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://github.com/nim-lang/Nim">ソース</a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu-fade"></div>
+  </nav>
+</header>
+
+    <div class="site-content post-page">
+      <div class="content">
+        <div class="width-reduced">
+          <h1 class="post-title">
+            A guide to documenting, profiling and debugging Nim code
+          </h1>
+          <h3 class="post-meta">
+            <span>
+              <i class="far fa-calendar-alt" aria-hidden="true"></i>
+              2017年10月02日
+            </span>
+            
+            <span>
+              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              Dominik Picheta
+            </span>
+            
+          </h3>
+          <div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#documenting-your-code">1. Documenting your code</a></li>
+<li><a href="#profiling-your-code">2. Profiling your code</a>
+<ul class="sectlevel2">
+<li><a href="#profiling-with-nimprof">2.1. Profiling with nimprof</a></li>
+<li><a href="#profiling-with-valgrind">2.2. Profiling with Valgrind</a></li>
+</ul>
+</li>
+<li><a href="#debugging-nim-code">3. Debugging Nim code</a>
+<ul class="sectlevel2">
+<li><a href="#debugging-using-code-echo-code">3.1. Debugging using <code>echo</code></a></li>
+<li><a href="#using-code-writestacktrace-code">3.2. Using <code>writeStackTrace</code></a></li>
+<li><a href="#using-gdb-lldb">3.3. Using GDB/LLDB</a></li>
+</ul>
+</li>
+<li><a href="#conclusion">4. Conclusion</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Nim in Action</div>
+<div class="paragraph">
+<p>
+<table class="hackytable">
+  <tr>
+  <td width="200px">
+  <img src="https://nim-lang.org/assets/img/nim_in_action_cover.jpg"/>
+  </td>
+  <td style="padding-left: 10pt;">
+
+This small guide was originally written for
+<a href="https://book.picheta.me">Nim in Action</a>. It didn&#8217;t end up in the book
+due to size constraints. Nim in Action is written in a similar
+style to this guide, check it out for more in-depth information about the
+Nim programming language.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Discount</div>
+Get 37% off Nim in Action with code <code>fccpicheta</code>.
+
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>This guide will discuss some of the useful tools for documenting, profiling
+and debugging Nim code. Some of the things you will be introduced to include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The reStructuredText language which is used in Nim&#8217;s doc comments</p>
+</li>
+<li>
+<p>The Nim performance and memory usage profiler</p>
+</li>
+<li>
+<p>Using GDB/LLDB with Nim</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Be sure to have a Nim compiler ready and follow along with the instructions
+in this guide to get the most out of it.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="documenting-your-code">1. Documenting your code</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Code documentation is important. It explains details about software which
+may not be immediately apparent when looking at the API of libraries or even
+the software&#8217;s source code.</p>
+</div>
+<div class="paragraph">
+<p>There are many ways to document code. You like already know that,
+like many programming languages, Nim supports comments. Comments act as
+an annotation for source code, a way to make code easier to understand.</p>
+</div>
+<div class="paragraph">
+<p>In Nim a single-line comment is delimited by a hash character <code>&#35;</code>.
+Multi-line comments can be delimited by <code>&#35;[</code> and <code>]&#35;</code>.
+<a href="#list_1_1">Listing 1.1</a> shows an example of both.</p>
+</div>
+<div id="list_1_1" class="listingblock">
+<div class="title">Listing 1. 1. Comments in Nim</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="nim"><span></span><span style="color: #008000; font-weight: bold">var</span> x <span style="color: #666666">=</span> <span style="color: #666666">5</span> <span style="color: #408080; font-style: italic"># Assign 5 to x.</span>
+<span style="color: #408080; font-style: italic">#[multi-</span>
+  line      <i class="conum" data-value="1"></i><b>(1)</b>
+  comment<span style="color: #666666">]</span><span style="color: #408080; font-style: italic">#</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This syntax is still relatively new and so most syntax highlighters
+are not aware of it.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Nim also supports a special type of comment, called a documentation comment.
+This type of comment is processed by Nim&#8217;s documentation generator. Any comment
+using two hash characters <code>&#35;&#35;</code> is a documentation comment.</p>
+</div>
+<div id="list_1_2" class="listingblock">
+<div class="title">Listing 1. 2. Example showing a simple documentation comment</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="nim"><span></span><span style="color: #BA2121; font-style: italic">## This is a *documentation comment* for module ``test``.</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="#list_1_2">Listing 1.2</a> shows a very simple documentation comment.
+The Nim compiler
+includes a command to generate documentation for a given module. Save the code
+in <a href="#list_1_2">Listing 1.2</a> as <code>test.nim</code> somewhere on your file system then
+execute <code>nim doc test.nim</code>. A <code>test.html</code> file should be produced beside
+your <code>test.nim</code> file. Open it in your favourite web browser to see the
+generated HTML. You should see something similar to the screenshot in
+<a href="#fig_1_1">figure 1.1</a>.</p>
+</div>
+<div id="fig_1_1" class="imageblock">
+<div class="content">
+<img src="/assets/news/images/asciidoc/ch05_docgen.png" alt="ch05 docgen">
+</div>
+<div class="title">Figure 1. 1. HTML documentation for the <code>test.nim</code> module</div>
+</div>
+<div class="paragraph">
+<p>Note the different styles of text seen in the screenshot. The text
+"documentation comment" is in italics because it is surrounded by asterisks
+(<code>*</code>) in the doc comment. The "test" is surrounded by two backticks which makes
+the font monospaced, useful when talking about identifiers such as variable
+names.</p>
+</div>
+<div class="paragraph">
+<p>These special delimiters are part of the reStructuredText markup language
+which the documentation generator supports.
+The documentation generator reads the file you specify on the command-line,
+it finds all the documentation comments and then goes through each of them.
+Each documentation comment is parsed using a
+reStructuredText parser. The documentation generator then generates HTML
+based on the reStructuredText markup that it parses.</p>
+</div>
+<div class="paragraph">
+<p><a href="#table_1_1">Table 1.1</a> shows some example syntax of the reStructuredText
+markup language.</p>
+</div>
+<table id="table_1_1" class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. 1. reStructuredText syntax examples</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Syntax</th>
+<th class="tableblock halign-left valign-top">Result</th>
+<th class="tableblock halign-left valign-top">Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>*italics*</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>italics</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Emphasising words weakly</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>**bold**</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>bold</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Emphasising words strongly</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>``monospace``</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>monospace</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifiers: variable, procedure, etc. names.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>`HyperLink &lt;http://google.com&gt;`_</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://google.com">HyperLink</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Linking to other web pages.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><code>
+Heading<br>
+=======<br>
+</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><span class="image"><img src="/assets/news/images/asciidoc/ch05_rst_heading.png" alt="ch05 rst heading" width="120"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>=</code> can be any punctuation character, heading levels are determined from
+succession of headings.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>.. code-block:: nim</code><br></p>
+<p class="tableblock"><pre>
+  echo("Hello World")
+</pre>
+</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><code>
+echo("Hello World")
+</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To show some example code. This will add syntax highlighting to the code
+specified.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>For a more comprehensive reference take a look at the following link:
+<a href="http://sphinx-doc.org/rest.html" class="bare">http://sphinx-doc.org/rest.html</a></p>
+</div>
+<div class="paragraph">
+<p>Let me show you another example.</p>
+</div>
+<div id="list_1_3" class="listingblock">
+<div class="title">Listing 1. 3. Different placements of doc comments</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="nim"><span></span><span style="color: #BA2121; font-style: italic">## This is the best module in the world.</span>
+<span style="color: #BA2121; font-style: italic">## We have a lot of documentation!</span>
+<span style="color: #BA2121; font-style: italic">##</span>
+<span style="color: #BA2121; font-style: italic">##</span>
+<span style="color: #BA2121; font-style: italic">## Examples</span>
+<span style="color: #BA2121; font-style: italic">## ========</span>
+<span style="color: #BA2121; font-style: italic">##</span>
+<span style="color: #BA2121; font-style: italic">## Some examples will follow:</span>
+<span style="color: #BA2121; font-style: italic">##</span>
+<span style="color: #BA2121; font-style: italic">##</span>
+<span style="color: #BA2121; font-style: italic">## Adding two numbers together</span>
+<span style="color: #BA2121; font-style: italic">## ---------------------------</span>
+<span style="color: #BA2121; font-style: italic">##</span>
+<span style="color: #BA2121; font-style: italic">## .. code-block:: nim</span>
+<span style="color: #BA2121; font-style: italic">##</span>
+<span style="color: #BA2121; font-style: italic">##   doAssert add(5, 5) == 10</span>
+<span style="color: #BA2121; font-style: italic">##</span>
+
+<span style="color: #008000; font-weight: bold">proc </span><span style="color: #0000FF">add</span><span style="color: #666666">*</span>(a, b: <span style="color: #B00040">int</span>): <span style="color: #B00040">int</span> <span style="color: #666666">=</span>
+  <span style="color: #BA2121; font-style: italic">## Adds integer ``a`` to integer ``b`` and returns the result.</span>
+  <span style="color: #008000; font-weight: bold">return</span> a <span style="color: #666666">+</span> b</code></pre>
+</div>
+</div>
+<div id="fig_1_2" class="imageblock">
+<div class="content">
+<img src="/assets/news/images/asciidoc/ch05_math_docs.png" alt="ch05 math docs">
+</div>
+<div class="title">Figure 1. 2. The resulting documentation for <a href="#list_1_3">listing 1.3</a></div>
+</div>
+<div class="paragraph">
+<p>As you can see from the example in <a href="#list_1_3">listing 1.3</a>,
+documentation comments
+can be placed in many places. They can be in the global scope or locally under
+a procedure. Doc comments under a procedure document what that procedure does,
+the Nim documentation generator generates a listing of all procedures that
+are exported in a module, the ones that have documentation comments will display
+them underneath as shown in <a href="#fig_1_2">figure 1.2</a>.</p>
+</div>
+<div class="paragraph">
+<p>This is how the Nim standard library is documented. For more examples on how
+to document your code you should take a look
+<a href="https://github.com/nim-lang/Nim/tree/devel/lib/pure">its source code</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="profiling-your-code">2. Profiling your code</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Profiling an application is the act of analysing it at runtime to determine
+what it spends its time doing. For example, in which procedures it spends
+most of its time, or how many times each procedure is called.
+These measurements help to find areas of code which need optimisation.
+Occasionally they can also help you find bugs in your application.</p>
+</div>
+<div class="paragraph">
+<p>There is a large amount of profilers available for the Nim programming language.
+This may come as a surprise because Nim is a relatively new
+language. The fact is that most of these profilers have not been created
+specifically for Nim but for C. C profilers support
+Nim applications because Nim compiles to C. There are only a few
+things that you need to know to take advantage of such profilers.</p>
+</div>
+<div class="paragraph">
+<p>There is one profiler that is actually included with the Nim compiler, it is
+so far the only profiler designed for profiling Nim applications. Let&#8217;s take
+a look at it before moving to the C profilers.</p>
+</div>
+<div class="sect2">
+<h3 id="profiling-with-nimprof">2.1. Profiling with nimprof</h3>
+<div class="paragraph">
+<p>The Embedded Stack Trace Profiler (ESTP), or sometimes just called NimProf, is
+a Nim profiler included with the standard Nim distribution. To activate this
+profiler you only need to follow the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Import the <code>nimprof</code> module in your program&#8217;s main Nim module (the one you
+will be compiling),</p>
+</li>
+<li>
+<p>Compile your program with the <code>--profiler:on</code> and <code>stacktrace:on</code> flags.</p>
+</li>
+<li>
+<p>Run your program as usual.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Application speed</div>
+As a result of the profiling your application will run slower, this is
+      because the profiler needs to analyse your application&#8217;s execution at
+      runtime which has an obvious overhead.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Consider the following code listing.</p>
+</div>
+<div id="listing_1_4" class="listingblock">
+<div class="title">Listing 1. 4. A simple profiler example</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="nim"><span></span><span style="color: #008000; font-weight: bold">import</span> nimprof <i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #008000; font-weight: bold">import</span> strutils <i class="conum" data-value="2"></i><b>(2)</b>
+
+<span style="color: #008000; font-weight: bold">proc </span><span style="color: #0000FF">ab</span>() <span style="color: #666666">=</span>
+  echo(<span style="color: #BA2121">&quot;Found letter&quot;</span>)
+
+<span style="color: #008000; font-weight: bold">proc </span><span style="color: #0000FF">num</span>() <span style="color: #666666">=</span>
+  echo(<span style="color: #BA2121">&quot;Found number&quot;</span>)
+
+<span style="color: #008000; font-weight: bold">proc </span><span style="color: #0000FF">diff</span>() <span style="color: #666666">=</span>
+  echo(<span style="color: #BA2121">&quot;Found something else&quot;</span>)
+
+<span style="color: #008000; font-weight: bold">proc </span><span style="color: #0000FF">analyse</span>(x: <span style="color: #B00040">string</span>) <span style="color: #666666">=</span>
+  <span style="color: #008000; font-weight: bold">var</span> i <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+  <span style="color: #008000; font-weight: bold">while</span> <span style="color: #008000">true</span>:
+    <span style="color: #008000; font-weight: bold">case</span> x<span style="color: #666666">[</span>i<span style="color: #666666">]</span> <i class="conum" data-value="3"></i><b>(3)</b>
+    <span style="color: #008000; font-weight: bold">of</span> Letters: ab()
+    <span style="color: #008000; font-weight: bold">of</span> {<span style="color: #BA2121">&#39;0&#39;</span> .. <span style="color: #BA2121">&#39;9&#39;</span>}: num()
+    <span style="color: #008000; font-weight: bold">of</span> <span style="color: #BA2121">&#39;</span><span style="color: #BB6622; font-weight: bold">\0</span><span style="color: #BA2121">&#39;</span>: <span style="color: #008000; font-weight: bold">break</span> <i class="conum" data-value="4"></i><b>(4)</b>
+    <span style="color: #008000; font-weight: bold">else</span>: diff()
+    i.inc
+
+<span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #666666">0</span> .. <span style="color: #666666">10000</span>: <i class="conum" data-value="5"></i><b>(5)</b>
+  analyse(<span style="color: #BA2121">&quot;uyguhijkmnbdv44354gasuygiuiolknchyqudsayd12635uha&quot;</span>)</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The <code>nimprof</code> module is essential in order for the profiler to work.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The <code>strutils</code> module defines the <code>Letters</code> set.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Each character in the string <code>x</code> is iterated over, if a character is a
+letter then <code>ab</code> is called, if it&#8217;s a number then <code>num</code> is called, and
+if it&#8217;s something else then <code>diff</code> is called.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>The <code>\0</code> signifies the end of the string, we break out of the loop here.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>We perform the analysis 10 thousand times in order to let the profiler
+measure reliably.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Save it as <code>main.nim</code>, then compile it by executing
+<code>nim c --profiler:on --stacktrace:on main.nim</code>. The example should compile
+successfully. You may then run it. After the program has finished executing
+you should see a message similar to "writing profile_results.txt&#8230;&#8203;" appear
+in your terminal window.
+The <code>main</code> program should create a <code>profile_results.txt</code> file in your current
+working directory. The file&#8217;s contents should be similar to those in
+<a href="#listing_1_5">listing 1.5</a>.</p>
+</div>
+<div id="listing_1_5" class="listingblock">
+<div class="title">Listing 1. 5. The profiling results</div>
+<div class="content">
+<pre class="pygments highlight"><code>total executions of each stack trace:
+Entry: 1/4 Calls: 89/195 = 45.64% [sum: 89; 89/195 = 45.64%]
+  analyse 192/195 = 98.46%
+  main 195/195 = 100.00%
+Entry: 2/4 Calls: 83/195 = 42.56% [sum: 172; 172/195 = 88.21%]
+  ab 83/195 = 42.56%
+  analyse 192/195 = 98.46%
+  main 195/195 = 100.00%
+Entry: 3/4 Calls: 20/195 = 10.26% [sum: 192; 192/195 = 98.46%]
+  num 20/195 = 10.26%
+  analyse 192/195 = 98.46%
+  main 195/195 = 100.00%
+Entry: 4/4 Calls: 3/195 = 1.54% [sum: 195; 195/195 = 100.00%]
+  main 195/195 = 100.00%</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>While the application is running the profiler takes multiple snapshots of the
+line of code that is currently being executed. It notes the stack trace which
+tells it how the application ended up executing that piece of code. The most
+common code paths are then reported in <code>profile_results.txt</code>.</p>
+</div>
+<div class="paragraph">
+<p>In the report shown in <a href="#listing_1_5">listing 1.5</a>,
+the profiler has made 195 snapshots.
+It found that the line of code being executed was inside the <code>analyse</code>
+procedure in 45.64% of those snapshots. In 42.56% of those snapshots it was
+in the <code>ab</code> procedure, this makes sense because the string passed to
+<code>analyse</code> is mostly made up of letters. Numbers are less popular and so
+the execution of the <code>num</code> procedure only makes up 10.26% of those snapshots.
+The profiler did not pick up any calls to the <code>diff</code> procedure because there
+are no other characters in the <code>x</code> string. Try adding some punctuation to
+the string passed to the <code>analyse</code> procedure and you will find that the
+profiler results then show the <code>diff</code> procedure.</p>
+</div>
+<div class="paragraph">
+<p>It is easy to determine where the bulk of the processing takes place in
+<a href="#listing_1_4">listing 1.4</a> without the use of a profiler.
+But for more complex modules
+and applications the Nim profiler is great for determining which
+procedures are most used.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Memory usage</div>
+The Nim profiler can also be used for measuring memory usage, simply
+     compile your application with the <code>--profiler:off</code>, <code>--stackTrace:on</code>,
+     and <code>-d:memProfiler</code> flags.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="profiling-with-valgrind">2.2. Profiling with Valgrind</h3>
+<div class="paragraph">
+<p>Unfortunately in some cases profilers are not cross-platform. Valgrind is
+one of those cases, if you are a Windows user
+then I&#8217;m afraid you will not be able to use it.</p>
+</div>
+<div class="paragraph">
+<p>Valgrind is not just a profiler, it is primarily a tool for memory debugging
+and memory leak detection. The profiler component is called Callgrind and it
+analyses procedures that your application calls and what those procedures then
+call and so on. An application called KCacheGrind can visualise output from
+Callgrind.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Installing Valgrind</div>
+To follow along with the examples here you will need to install the
+      Valgrind tool together with KCacheGrind. There is a chance these tools
+      are already installed on your operating system if you are using Linux.
+      On Mac OS X you can easily install them using Homebrew, just execute
+      <code>brew install valgrind QCacheGrind</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s try Valgrind on the example application in <a href="#listing_1_4">listing 1.4</a>.
+First recompile the
+application without any flags by running <code>nim c main</code>. You
+will need to comment out the <code>import nimprof</code> line in your <code>main.nim</code> file
+to do this successfully.</p>
+</div>
+<div class="paragraph">
+<p>You may then execute the following
+command to run this application under
+Valgrind: <code>valgrind --tool=callgrind -v ./main</code></p>
+</div>
+<div class="paragraph">
+<p>The callgrind tool adds an even bigger overhead than the Nim profiler so you
+may need to terminate the application, you can safely do so by pressing
+the Control and C keys together.</p>
+</div>
+<div class="paragraph">
+<p>The textual output given by the callgrind tool is very large and so looking
+at it all in a text editor is impractical. Thankfully a tool exists to
+allow us to explore it visually. This tool is called KCacheGrind (QCacheGrind
+on Mac OS X). You can execute it in the directory where you executed Valgrind
+to get something similar to the screenshot in <a href="#figure_1_3">figure 1.3</a>.</p>
+</div>
+<div id="figure_1_3" class="imageblock">
+<div class="content">
+<img src="/assets/news/images/asciidoc/ch05_qcachegrind.png" alt="ch05 qcachegrind">
+</div>
+<div class="title">Figure 1. 3. QCacheGrind showing the call graph of <a href="#listing_1_4">listing 1.4</a></div>
+</div>
+<div class="paragraph">
+<p>The results of the Callgrind tool show many more calls during the lifetime of
+<a href="#listing_1_4">listing 1.4</a>. This is because many of the C
+functions, which have been defined by Nim, during the translation to C
+are now visible. These functions are necessary to implement the behaviour of
+the code in <a href="#listing_1_4">listing 1.4</a>.</p>
+</div>
+<div class="paragraph">
+<p>The C function which is selected in the screenshots corresponds to the
+<code>analyse</code> Nim procedure. Procedures' names undergo a process called name
+mangling when translated to C functions, this prevents clashes between other
+C functions. The name mangling process currently just adds an underscore
+followed by a number to the C function name. Thankfully figuring out which
+C functions correspond to which Nim procedures is still easy.</p>
+</div>
+<div class="paragraph">
+<p>The output from Callgrind gives you more low-level details about the
+execution of your Nim applications. <a href="#figure_1_3">Figure 1.3</a> shows the
+number of times
+every single C function has been executed, it allows you to diagnose performance
+problems which may be outside your control. But with greater power comes
+greater complexity so Valgrind has a higher learning curve than the Nim
+profiler.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="debugging-nim-code">3. Debugging Nim code</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Debugging is one of the most important activities in software development.
+Bugs in software occur inadvertantly. When a user reports an issue with
+your software, how do you fix it?</p>
+</div>
+<div class="paragraph">
+<p>The first step is to reproduce the issue. After that debugging tools help to
+diagnose the issue and to figure out its root cause.</p>
+</div>
+<div class="paragraph">
+<p>Nim does many things to make debugging as easy as possible. For example it
+ensures that detailed and easy to understand stack traces are reported
+whenever your application crashes. Consider the following code in
+<a href="#listing_1_6">listing 1.6</a>.</p>
+</div>
+<div id="listing_1_6" class="listingblock">
+<div class="title">Listing 1. 6. A simple calculator</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="nim"><span></span><span style="color: #008000; font-weight: bold">import</span> strutils <i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #008000; font-weight: bold">let</span> line <span style="color: #666666">=</span> stdin.readLine() <i class="conum" data-value="2"></i><b>(2)</b>
+<span style="color: #008000; font-weight: bold">let</span> result <span style="color: #666666">=</span> line.parseInt <span style="color: #666666">+</span> <span style="color: #666666">5</span> <i class="conum" data-value="3"></i><b>(3)</b>
+echo(line, <span style="color: #BA2121">&quot; + 5 = &quot;</span>, result) <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The <code>strutils</code> module defines the <code>parseInt</code> procedure.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Read a line from the standard input.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The string <code>line</code> is converted into an integer, the number 5 is then
+added to that integer.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Display the result of the calculation.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This code is fairly simple. It reads a line of text from the standard input,
+converts this line into an integer, adds the number 5 to it and displays
+the result. Save this code as <code>adder.nim</code> and compile it by executing
+<code>nim c adder.nim</code>, then execute the resulting binary. The program will
+wait for your input, once you type in a number you will see the sum of 5
+and the number you typed in. But what happens when you don&#8217;t type in a number?
+Type in some text and observe the results. You should see something similar
+to the output in <a href="#listing_1_7">listing 1.7</a> below.</p>
+</div>
+<div id="listing_1_7" class="listingblock">
+<div class="title">Listing 1. 7. Stack trace for a <code>ValueError</code> exception</div>
+<div class="content">
+<pre class="pygments highlight"><code>Traceback (most recent call last)
+adder.nim(3)             adder <i class="conum" data-value="1"></i><b>(1)</b>
+strutils.nim             parseInt <i class="conum" data-value="2"></i><b>(2)</b>
+Error: unhandled exception: invalid integer: some text [ValueError] <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The program was executing line 3 in the <code>adder</code> module&#8230;&#8203;</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>&#8230;&#8203; followed by the <code>parseInt</code> procedure which raised the <code>ValueError</code>
+exception.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>This is the exception message followed by the exception type in
+square brackets.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The program crashed because an exception was raised and it was not caught
+by any <code>try</code> statements. This resulted in a stack trace being displayed and
+the program exiting. The stack trace in <a href="#listing_1_7">listing 1.7</a> is
+very informative,
+it leads directly to the line which caused the crash. After the <code>adder.nim</code>
+module name, the number <code>3</code> points to the line number
+in the <code>adder</code> module. This line is highlighted in
+<a href="#listing_1_8">listing 1.8</a> below.</p>
+</div>
+<div id="listing_1_8" class="listingblock">
+<div class="title">Listing 1. 8. A simple calculator</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="nim"><span></span><span style="color: #008000; font-weight: bold">import</span> strutils
+<span style="color: #008000; font-weight: bold">let</span> line <span style="color: #666666">=</span> stdin.readLine()
+<span style="color: #666666"><strong></span><span style="color: #008000; font-weight: bold">let</span> result <span style="color: #666666">=</span> line.parseInt <span style="color: #666666">+</span> <span style="color: #666666">5</strong></span>
+echo(line, <span style="color: #BA2121">&quot; + 5 = &quot;</span>, result)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>parseInt</code> procedure cannot convert strings containing only letters
+into a number because no number exists in that string. The exception message
+shown at the bottom of the stack trace informs us of this. It includes
+the string value that <code>parseInt</code> attempted to parse which gives further hints
+about what went wrong.</p>
+</div>
+<div class="paragraph">
+<p>You may not think it but program crashes are a good thing when it comes
+to debugging. The truly horrible bugs are the ones which produce no crashes,
+but instead result in your program producing incorrect results. In such cases
+advanced debugging techniques need to be used. Debugging also comes in handy
+when a stack trace does not give enough information about the issue.</p>
+</div>
+<div class="paragraph">
+<p>The primary purpose of debugging is to investigate the state of memory
+at a particular point in the execution of your program. You may for example
+want to find out what the value of the <code>line</code> variable is just before
+the <code>parseInt</code> procedure is called. This can be done in many ways.</p>
+</div>
+<div class="sect2">
+<h3 id="debugging-using-code-echo-code">3.1. Debugging using <code>echo</code></h3>
+<div class="paragraph">
+<p>By far the simplest and most common approach is to use the <code>echo</code>
+procedure. The <code>echo</code>
+procedure allows you to display the value of most variables, as long as the
+type of the variable implements the <code>$</code> procedure it can be displayed.
+For other variables the <code>repr</code> procedure can be used, you can pass any
+type of variable to it and get a textual representation of that
+variable&#8217;s value.</p>
+</div>
+<div class="paragraph">
+<p>Using the <code>repr</code> procedure and <code>echo</code>, let&#8217;s investigate the value of the
+<code>line</code> variable just before the call to <code>parseInt</code>.</p>
+</div>
+<div id="listing_1_9" class="listingblock">
+<div class="title">Listing 1. 9. Investigating the value of the <code>line</code> variable using <code>repr</code>.</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="nim"><span></span><span style="color: #008000; font-weight: bold">import</span> strutils
+<span style="color: #008000; font-weight: bold">let</span> line <span style="color: #666666">=</span> stdin.readLine()
+<span style="color: #666666"><strong></span>echo(<span style="color: #BA2121">&quot;The value of the <code>line</code> variable is: &quot;</span>, repr(line))<span style="color: #666666"></strong></span>
+<span style="color: #008000; font-weight: bold">let</span> result <span style="color: #666666">=</span> line.parseInt <span style="color: #666666">+</span> <span style="color: #666666">5</span>
+echo(line, <span style="color: #BA2121">&quot; + 5 = &quot;</span>, result)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>repr</code> procedure is useful because it shows non-printable characters
+in their escaped form. It also shows extra information about many types of
+data. Running the example in <a href="#listing_1_9">listing 1.9</a> and typing in 3 Tab
+characters results in the following output.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code>The value of the `line` variable is: 0x105ff3050"\9\9\9"
+Traceback (most recent call last)
+foo.nim(4)               foo
+strutils.nim             parseInt
+Error: unhandled exception: invalid integer:       [ValueError]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The exception message just shows some whitespace which is how Tab characters
+are shown in normal text. But you have no way of distinguishing whether
+that whitespace is just normal space characters or whether it is in fact a
+multiple Tab characters. The <code>repr</code> procedure solves this ambiguity by showing
+<code>\9\9\9</code>, the number 9 is the ASCII number code for the tab character.
+The memory address of the <code>line</code> variable is also shown.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Procedures with no side effects and <code>echo</code></div>
+<div class="paragraph">
+<p>A procedure marked with the <code>{.noSideEffect.}</code> pragma is said to have no side
+effect. This means that the procedure does not modify or read any
+external state, such
+as changing global variables or writing to a file. Marking a procedure as
+having no side effects is useful when you want this to be enforced by the
+compiler, that way the code will not compile unless the procedure
+remains side effect free. For example consider the following <code>add</code> procedure,
+it is said to contain no side effects because passing the same inputs to this
+procedure will always produce the same output.</p>
+</div>
+<div class="listingblock">
+<div class="title">Listing 1. 10. The side effect free <code>add</code> procedure</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="nim"><span></span><span style="color: #008000; font-weight: bold">proc </span><span style="color: #0000FF">add</span>(a, b: <span style="color: #B00040">int</span>): <span style="color: #B00040">int</span> {.noSideEffect.} <span style="color: #666666">=</span>
+  <span style="color: #008000; font-weight: bold">return</span> a <span style="color: #666666">+</span> b</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This creates a problem whenever you want to debug such procedures with the
+<code>echo</code> procedure. The <code>echo</code> procedure is not side effect free because it
+accesses a global <code>stdout</code> variable. So the following code will not compile.</p>
+</div>
+<div id="listing_1_11" class="listingblock">
+<div class="title">Listing 1. 11. <code>echo</code> cannot be used inside a side effect free procedure</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="nim"><span></span><span style="color: #008000; font-weight: bold">proc </span><span style="color: #0000FF">add</span>(a, b: <span style="color: #B00040">int</span>): <span style="color: #B00040">int</span> {.noSideEffect.} <span style="color: #666666">=</span>
+  echo(<span style="color: #BA2121">&quot;Value of a is:&quot;</span>, a)
+  <span style="color: #008000; font-weight: bold">return</span> a <span style="color: #666666">+</span> b</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Compiling the code in <a href="#listing_1_11">listing 1.11</a> will fail with an error:
+"'add' can have side effects". Thankfully the solution is simple. Nim provides
+a side effect free <code>echo</code> for this very purpose, it is called <code>debugEcho</code> so
+all you need to do is replace <code>echo</code> with <code>debugEcho</code> and the code will
+compile.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="using-code-writestacktrace-code">3.2. Using <code>writeStackTrace</code></h3>
+<div class="paragraph">
+<p>An unhandled exception is not the only way for a stack trace to be displayed.
+You may find it useful to display the current stack trace anywhere in your
+program for debugging purposes. This can give you vital information, especially
+in larger programs with many procedures, where it can show you the
+path through those procedures and how your program&#8217;s execution ended in a
+certain procedure.</p>
+</div>
+<div class="paragraph">
+<p>Consider the following example.</p>
+</div>
+<div class="listingblock">
+<div class="title">Listing 1. 12. <code>writeStackTrace</code> example</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="nim"><span></span><span style="color: #008000; font-weight: bold">proc </span><span style="color: #0000FF">a1</span>() <span style="color: #666666">=</span>
+  writeStackTrace()
+
+<span style="color: #008000; font-weight: bold">proc </span><span style="color: #0000FF">a</span>() <span style="color: #666666">=</span>
+  a1()
+
+a()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Compiling and running this example will display the following stack trace.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code>Traceback (most recent call last)
+foo.nim(7)               foo
+foo.nim(5)               a
+foo.nim(2)               a1</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>a</code> procedure is called first on line 7, followed by <code>a1</code> at line 5,
+and finally the <code>writeStackTrace</code> procedure is called on line 2.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="using-gdb-lldb">3.3. Using GDB/LLDB</h3>
+<div class="paragraph">
+<p>Sometimes a proper debugging tool is necessary for the truly complicated
+issues. As with profiling tools in the previous section, Nim programs can be
+debugged using most C debuggers. One of the most popular debugging tools
+is the GNU Debugger, its often known by the acronym GDB.</p>
+</div>
+<div class="paragraph">
+<p>The GNU debugger should be included with your distribution of gcc which you
+should already have as part of your Nim installation. Unfortunately on the
+latest versions of
+Mac OS X installation of gdb is problematic, but you can use a similar debugger
+called LLDB. LLDB is a much newer debugger, but it functions in almost
+exactly the same way.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s try to use GDB (or LLDB if you&#8217;re on Mac OS X) to debug the small
+<code>adder.nim</code> example introduced in <a href="#listing_1_8">listing 1.8</a>.
+I will repeat the example below.</p>
+</div>
+<div class="listingblock">
+<div class="title">Listing 1. 13. The <code>adder.nim</code> example</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="nim"><span></span><span style="color: #008000; font-weight: bold">import</span> strutils
+<span style="color: #008000; font-weight: bold">let</span> line <span style="color: #666666">=</span> stdin.readLine()
+<span style="color: #008000; font-weight: bold">let</span> result <span style="color: #666666">=</span> line.parseInt <span style="color: #666666">+</span> <span style="color: #666666">5</span>
+echo(line, <span style="color: #BA2121">&quot; + 5 = &quot;</span>, result)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In order to use these debugging tools you will need to compile <code>adder.nim</code>
+with two additional flags. The <code>--debuginfo</code> flag, which will instruct the
+compiler to add extra debugging information to the resulting binary. The
+debugging information will be used by GDB and LLDB to read procedure names
+and line numbers of the currently executed code.
+And also the <code>--linedir:on</code> flag which will include Nim-specific debug
+information
+such as module names and Nim source code lines. GDB and LLDB will use the
+information added by the <code>--linedir:on</code> flag to report Nim-specific module
+names and line numbers.</p>
+</div>
+<div class="paragraph">
+<p>Putting both of these together you should compile the <code>adder</code> module using the
+following command: <code>nim c --debuginfo --linedir:on adder.nim</code>.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">The <code>--debugger:native</code> flag</div>
+Newer versions of Nim support the <code>--debugger:native</code> flag which is
+     equivalent to specifying the <code>--linedir:on</code> and <code>--debuginfo</code> flags.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The next step is to launch the debugging tool. The usage of both of these tools
+is very similar. To launch the <code>adder</code> executable in GDB execute <code>gdb adder</code>
+and to launch it in LLDB execute <code>lldb adder</code>. GDB or LLDB should launch
+and you should see something similar to <a href="#figure_1_4">figure 1.4</a>
+or <a href="#figure_1_5">figure 1.5</a>.</p>
+</div>
+<div id="figure_1_4" class="imageblock">
+<div class="content">
+<img src="/assets/news/images/asciidoc/ch05_gdb_adder.PNG" alt="ch05 gdb adder">
+</div>
+<div class="title">Figure 1. 4. GDB on Windows</div>
+</div>
+<div id="figure_1_5" class="imageblock">
+<div class="content">
+<img src="/assets/news/images/asciidoc/ch05_lldb_adder.png" alt="ch05 lldb adder">
+</div>
+<div class="title">Figure 1. 5. LLDB on Mac OS X</div>
+</div>
+<div class="paragraph">
+<p>Once these tools are launched they will wait for input from the user.
+The input is in the form of a command. Both of these tools support a range
+of different commands for controlling the execution of the program, to watch
+the values of specific variables, to set breakpoints and much more. To get a
+full list of supported commands type in <code>help</code> and press enter.</p>
+</div>
+<div class="paragraph">
+<p>The aim for this debugging session is to find out the value of the <code>line</code>
+variable, just like in the
+previous sections. To do this we need to set a breakpoint at line 3 in the
+<code>adder.nim</code> file. Thankfully, both GDB and LLDB share the same command syntax
+for creating
+breakpoints. Simply type in <code>b adder.nim:3</code> into the terminal and press enter.
+A breakpoint should be successfully created, the debugger will confirm this
+by displaying a message that is similar to <em>Listing 5.23</em>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Listing 1. 14. This message is shown when a breakpoint is successfully created in LLDB.</div>
+<div class="content">
+<pre class="pygments highlight"><code>Breakpoint 1: where = adder`adderInit000 + 119 at adder.nim:3, address = 0x0000000100020f17</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Once the breakpoint is created, you can instruct the debugger to run the
+<code>adder</code> program by using the <code>run</code> command. Type in <code>run</code> into the terminal
+and press enter. The program won&#8217;t hit the breakpoint because it will first
+read a line from standard input, so after you use the <code>run</code> command you will
+need to type something else into the terminal. This time the <code>adder</code> program
+will read it.</p>
+</div>
+<div class="paragraph">
+<p>The debugger will then stop the execution of the program at line 3.
+Figures <a href="#figure_1_6">1.6</a> and <a href="#figure_1_7">1.7</a> show what that will look like.</p>
+</div>
+<div id="figure_1_6" class="imageblock">
+<div class="content">
+<img src="/assets/news/images/asciidoc/ch05_gdb_adder_2.PNG" alt="ch05 gdb adder 2">
+</div>
+<div class="title">Figure 1. 6. Execution paused at line 3 in GDB</div>
+</div>
+<div id="figure_1_7" class="imageblock">
+<div class="content">
+<img src="/assets/news/images/asciidoc/ch05_lldb_adder_2.png" alt="ch05 lldb adder 2">
+</div>
+<div class="title">Figure 1. 7. Execution paused at line 3 in LLDB</div>
+</div>
+<div class="paragraph">
+<p>At this point in the execution of the program, we should be able to display the
+value of the <code>line</code> variable.
+Displaying the value of a variable is the same in
+both GDB and LLDB.
+One can use the <code>p</code> (or <code>print</code>) command to display the value of any variable.
+Unfortunately you cannot simply type in <code>print line</code> and get the result.
+This is because of name mangling which I mentioned in the profiling section.
+Before you can print out the value of the <code>line</code> variable you will need to
+find out what the new name of it is. In almost all cases the variable name will
+only have an underscore followed by a randomised number appended to it.
+This makes finding the name rather trivial, but the process differs between
+GDB and LLDB.</p>
+</div>
+<div class="paragraph">
+<p>In GDB it is simple
+to find out the name of the <code>line</code> variable, you can simply type in
+<code>print line_</code>
+and press the Tab button. GDB will then auto-complete the name for you, or give
+you a list of choices.</p>
+</div>
+<div class="paragraph">
+<p>As for LLDB, because it does not support auto-complete via the Tab key, this
+is a bit more complicated. You need to find the name of the variable by looking
+at the list of local and global variables in the current scope. You can get
+a list of local variables by using the <code>fr v -a</code>
+(or <code>frame variable --no-args</code>) command, and a list of global variables
+by using the <code>ta v</code> (or <code>target variable</code>) command. The <code>line</code> variable is
+a global variable so type in <code>ta v</code> to get a list of the global variables.
+You should see something similar to the screenshot in <a href="#figure_1_8">figure 1.8</a>.</p>
+</div>
+<div id="figure_1_8" class="imageblock">
+<div class="content">
+<img src="/assets/news/images/asciidoc/ch05_lldb_adder_3.png" alt="ch05 lldb adder 3">
+</div>
+<div class="title">Figure 1. 8. The list of global variables in LLDB</div>
+</div>
+<div class="paragraph">
+<p>You can see the <code>line</code> variable at the bottom of the list as <code>line_106004</code>.</p>
+</div>
+<div class="paragraph">
+<p>Now print the <code>line</code> variable by using the <code>print &lt;var_name_here&gt;</code> command,
+make sure to replace the <code>&lt;var_name_here&gt;</code> with the name of the <code>line</code> variable
+that you found from the previous step. Figures <a href="#figure_1_9">1.9</a> and
+<a href="#figure_1_10">1.10</a> show what you may see.</p>
+</div>
+<div id="figure_1_9" class="imageblock">
+<div class="content">
+<img src="/assets/news/images/asciidoc/ch05_gdb_adder_3.PNG" alt="ch05 gdb adder 3">
+</div>
+<div class="title">Figure 1. 9. Printing the value of the <code>line</code> variable in GDB</div>
+</div>
+<div id="figure_1_10" class="imageblock">
+<div class="content">
+<img src="/assets/news/images/asciidoc/ch05_lldb_adder_4.png" alt="ch05 lldb adder 4">
+</div>
+<div class="title">Figure 1. 10. Printing the value of the <code>line</code> variable in LLDB</div>
+</div>
+<div class="paragraph">
+<p>This unfortunately tells us nothing about the value of the <code>line</code> variable.
+We are in the land of low-level C, so the <code>line</code> variable is a pointer to
+a <code>NimStringDesc</code> type. We can dereference this pointer by appending an
+asterisk to the beginning of the variable name: <code>print *line_106004</code>.</p>
+</div>
+<div class="paragraph">
+<p>Doing this will show values of each of the fields in the <code>NimStringDesc</code>
+type. Unfortunately in LLDB this does not show the value of the <code>data</code> field,
+so we must explicitly access it: <code>print (char*)line_106004->data</code>. The
+<code>(char*)</code> is required to cast the <code>data</code> field into something which LLDB
+can display. Figures <a href="#figure_1_11">1.11</a> and <a href="#figure_1_12">1.12</a>
+show what this looks like in GDB and LLDB respectively.</p>
+</div>
+<div id="figure_1_11" class="imageblock">
+<div class="content">
+<img src="/assets/news/images/asciidoc/ch05_gdb_adder_4.PNG" alt="ch05 gdb adder 4">
+</div>
+<div class="title">Figure 1. 11. Displaying the value of the <code>line</code> variable in GDB</div>
+</div>
+<div id="figure_1_12" class="imageblock">
+<div class="content">
+<img src="/assets/news/images/asciidoc/ch05_lldb_adder_5.png" alt="ch05 lldb adder 5">
+</div>
+<div class="title">Figure 1. 12. Displaying the value of the <code>line</code> variable in LLDB</div>
+</div>
+<div class="paragraph">
+<p>This is much more complicated than simply using the <code>echo</code> procedure, but should
+be useful for more complicated debugging scenarios. Hopefully this gave you
+an idea of how to compile your Nim program so that it can
+be debugged using GDB and LLDB. There are many more features that
+these debuggers provide which are beyond the scope of this article. These
+features allow you to analyse the execution of your program in many other
+ways. You may wish
+to learn more by looking at the many resources available online for these
+debuggers and many others.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="conclusion">4. Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Thank you for reading. If you require help with these topics or anything else
+related to Nim, be sure to get in touch with our
+<a href="https://nim-lang.org/community.html">community</a>.</p>
+</div>
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+    <footer>
+  <section class="content">
+    <div class="pure-g">
+      <div class="copyright pure-u-2-3">
+        <p>
+          特に明記のない場合に限り、
+          このページのコンテンツの利用条件は
+          <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>
+          ライセンスです。
+          また、このウェブサイトに掲載されているソースコードの利用条件は MIT ライセンスです。
+        </p>
+        <p>
+          このウェブサイトのソースコードは
+          <a href="https://github.com/nim-lang/website">GitHub</a>
+          にあります。ご貢献を歓迎します。
+          ウェブサイトのオリジナルデザインは
+          <a href="https://github.com/dom96">Dominik Picheta</a> と
+          <a href="https://github.com/Calinou">Hugo Locurcio</a> です。
+          ロゴデザインは <a href="https://github.com/josephwecker">Joseph Wecker</a> です。日本語訳は <a href="https://twitter.com/isvowel/">isVowel</a> と <a href="https://osdn.net/projects/nim-lang-081/wiki/Contributors">&#x1f34e;むつさんチーム</a> です。
+        </p>
+      </div>
+      <div class="pure-u-1-3 right-center">
+        <a href="https://m.do.co/c/637ab907c7f4"><img src="/assets/img/do.png"/></a>
+      </div>
+    </div>
+  </section>
+
+</footer>
+<script>
+    (function(){
+      function setTracking(a) {
+        var url = a.href;
+        a.onclick = function() {
+          if (typeof(ga) !== "undefined") {
+            ga('send', 'event', 'outbound', 'click', url, {
+              'transport': 'beacon',
+              'hitCallback': function(){document.location = url;}
+            });
+          }
+        };
+      }
+
+      var a = document.getElementsByTagName("a");
+      for (var i = 0; i < a.length; ++i) {
+        if (a[i].hostname != location.hostname &&
+            a[i].getAttribute("target") !== "_blank"
+        ) {
+          setTracking(a[i])
+        }
+      }
+    })();
+</script>
+
+  </div>
+  </body>
+</html>
