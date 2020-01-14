@@ -825,7 +825,7 @@ function main() {
       onkeyup="search()" />
   </div>
   <ul class="simple simple-toc" id="toc-list">
-<li><a class="reference" id="about-this-document_toc" href="#about-this-document">About this document</a></li>
+<li><a class="reference" id="about-this-document_toc" href="#about-this-document">このドキュメントについて</a></li>
 <li><a class="reference" id="package-level-objects_toc" href="#package-level-objects">Package level objects</a></li>
 <li><a class="reference" id="void-type_toc" href="#void-type">Void type</a></li>
 <li><a class="reference" id="covariance_toc" href="#covariance">Covariance</a></li>
@@ -875,10 +875,10 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"><table class="docinfo" frame="void" rules="none"><col class="docinfo-name" /><col class="docinfo-content" /><tbody valign="top"><tr><th class="docinfo-name">Authors:</th><td> アンドレアス・ルンプフ</td></tr>
+  <p class="module-desc"><table class="docinfo" frame="void" rules="none"><col class="docinfo-name" /><col class="docinfo-content" /><tbody valign="top"><tr><th class="docinfo-name">作成者:</th><td> アンドレアス・ルンプフ</td></tr>
 <tr><th class="docinfo-name">バージョン:</th><td>  1.0.4</td></tr>
 </tbody></table>
-<h1><a class="toc-backref" id="about-this-document" href="#about-this-document">About this document</a></h1><p>This document describes features of Nim that are to be considered experimental. Some of these are not covered by the <tt class="docutils literal"><span class="pre">.experimental</span></tt> pragma or <tt class="docutils literal"><span class="pre">--experimental</span></tt> switch because they are already behind a special syntax and one may want to use Nim libraries using these features without using them oneself.</p>
+<h1><a class="toc-backref" id="about-this-document" href="#about-this-document">このドキュメントについて</a></h1><p>This document describes features of Nim that are to be considered experimental. Some of these are not covered by the <tt class="docutils literal"><span class="pre">.experimental</span></tt> pragma or <tt class="docutils literal"><span class="pre">--experimental</span></tt> switch because they are already behind a special syntax and one may want to use Nim libraries using these features without using them oneself.</p>
 <p><strong>Note</strong>: Unless otherwise indicated, these features are not to be removed, but refined and overhauled.</p>
 
 <h1><a class="toc-backref" id="package-level-objects" href="#package-level-objects">Package level objects</a></h1><p>Every Nim module resides in a (nimble) package. An object type can be attached to the package it resides in. If that is done, the type can be referenced from other modules as an <span id="incomplete_1">incomplete</span> object type. This feature allows to break up recursive type dependencies accross module boundaries. Incomplete object types are always passed <tt class="docutils literal"><span class="pre">byref</span></tt> and can only be used in pointer like contexts (<tt class="docutils literal"><span class="pre">var/ref/ptr IncompleteObject</span></tt>) in general since the compiler does not yet know the size of the object. To complete an incomplete object the <tt class="docutils literal"><span class="pre">package</span></tt> pragma has to be used. <tt class="docutils literal"><span class="pre">package</span></tt> implies <tt class="docutils literal"><span class="pre">byref</span></tt>.</p>

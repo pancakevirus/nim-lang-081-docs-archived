@@ -863,7 +863,7 @@ function main() {
 <li><a class="reference" id="basic-types-floats_toc" href="#basic-types-floats">浮動小数</a></li>
 <li><a class="reference" id="basic-types-type-conversion_toc" href="#basic-types-type-conversion">型変換</a></li>
 </ul><li><a class="reference" id="internal-type-representation_toc" href="#internal-type-representation">型の内部表現</a></li>
-<li><a class="reference" id="advanced-types_toc" href="#advanced-types">Advanced types</a></li>
+<li><a class="reference" id="advanced-types_toc" href="#advanced-types">上級型</a></li>
 <ul class="simple"><li><a class="reference" id="advanced-types-enumerations_toc" href="#advanced-types-enumerations">列挙型</a></li>
 <li><a class="reference" id="advanced-types-ordinal-types_toc" href="#advanced-types-ordinal-types">序数型</a></li>
 <li><a class="reference" id="advanced-types-subranges_toc" href="#advanced-types-subranges">部分範囲型</a></li>
@@ -895,12 +895,12 @@ function main() {
 <tr><th class="docinfo-name">バージョン:</th><td>  1.0.4</td></tr>
 </tbody></table>
 <h1><a class="toc-backref" id="introduction" href="#introduction">紹介</a></h1><blockquote><p>
-"人間は視覚動物である ― だから、私は美しくありたい。"
-</p></blockquote><p>This document is a tutorial for the programming language <em>Nim</em>. This tutorial assumes that you are familiar with basic programming concepts like variables, types or statements but is kept very basic. The <a class="reference external" href="manual.html">manual</a> contains many more examples of the advanced language features. All code examples in this tutorial, as well as the ones found in the rest of Nim's documentation, follow the <a class="reference external" href="nep1.html">Nim style guide</a>.</p>
+"人間は視覚の動物である ― だから、ボクはキミに美しくいて欲しい。"
+</p></blockquote><p>このドキュメントはプログラミング言語 <em>Nim</em> のチュートリアルです。This tutorial assumes that you are familiar with basic programming concepts like variables, types or statements but is kept very basic. The <a class="reference external" href="manual.html">manual</a> contains many more examples of the advanced language features. All code examples in this tutorial, as well as the ones found in the rest of Nim's documentation, follow the <a class="reference external" href="nep1.html">Nim style guide</a>.</p>
 
 <h1><a class="toc-backref" id="the-first-program" href="#the-first-program">最初のプログラム</a></h1><p>We start the tour with a modified "hello world" program:</p>
-<pre class="listing"><span class="Comment"># This is a comment</span>
-<span class="Identifier">echo</span> <span class="StringLit">"What's your name? "</span>
+<pre class="listing"><span class="Comment"># これはコメントです</span>
+<span class="Identifier">echo</span> <span class="StringLit">"What's your name?"</span>
 <span class="Keyword">var</span> <span class="Identifier">name</span><span class="Punctuation">:</span> <span class="Identifier">string</span> <span class="Operator">=</span> <span class="Identifier">readLine</span><span class="Punctuation">(</span><span class="Identifier">stdin</span><span class="Punctuation">)</span>
 <span class="Identifier">echo</span> <span class="StringLit">"Hi, "</span><span class="Punctuation">,</span> <span class="Identifier">name</span><span class="Punctuation">,</span> <span class="StringLit">"!"</span></pre><p>Save this code to the file "greetings.nim". Now compile and run it:<pre>
 nim compile --run greetings.nim</pre>
@@ -1289,7 +1289,7 @@ out inside this with no indentation restrictions.
 <span class="Comment"># --&gt; 42:42</span>
 <span class="Identifier">echo</span> <span class="Identifier">myFloat</span><span class="Punctuation">,</span> <span class="StringLit">":"</span><span class="Punctuation">,</span> <span class="Identifier">repr</span><span class="Punctuation">(</span><span class="Identifier">myFloat</span><span class="Punctuation">)</span>
 <span class="Comment"># --&gt; 3.1400000000000001e+00:3.1400000000000001e+00</span></pre>
-<h1><a class="toc-backref" id="advanced-types" href="#advanced-types">Advanced types</a></h1><p>In Nim new types can be defined within a <tt class="docutils literal"><span class="pre">type</span></tt> statement:</p>
+<h1><a class="toc-backref" id="advanced-types" href="#advanced-types">上級型</a></h1><p>In Nim new types can be defined within a <tt class="docutils literal"><span class="pre">type</span></tt> statement:</p>
 <pre class="listing"><span class="Keyword">type</span>
   <span class="Identifier">biggestInt</span> <span class="Operator">=</span> <span class="Identifier">int64</span>      <span class="Comment"># biggest integer type that is available</span>
   <span class="Identifier">biggestFloat</span> <span class="Operator">=</span> <span class="Identifier">float64</span>  <span class="Comment"># biggest float type that is available</span></pre><p>Enumeration and object types may only be defined within a <tt class="docutils literal"><span class="pre">type</span></tt> statement.</p>

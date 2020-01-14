@@ -8,8 +8,8 @@
       <tuv xml:lang="EN-US">
         <seg>"Der Mensch ist doch ein Augentier -- schöne Dinge wünsch ich mir."</seg>
       </tuv>
-      <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T034607Z" creationid="isVowel" creationdate="20200113T032410Z">
-        <seg>"人間は視覚動物である ― だから、私は美しくありたい。"</seg>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T091607Z" creationid="isVowel" creationdate="20200113T032410Z">
+        <seg>"人間は視覚の動物である ― だから、ボクはキミに美しくいて欲しい。"</seg>
       </tuv>
     </tu>
     <tu>
@@ -38,10 +38,44 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;s0&gt;</bpt># This is a comment<ept i="0">&lt;/s0&gt;</ept>
+<bpt i="1" x="1">&lt;s1&gt;</bpt>echo<ept i="1">&lt;/s1&gt;</ept> <it pos="begin" x="2">&lt;s2&gt;</it>"What's your name?</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T074428Z" creationid="isVowel" creationdate="20200114T074428Z">
+        <seg><bpt i="0" x="0">&lt;s0&gt;</bpt># これはコメントです<ept i="0">&lt;/s0&gt;</ept>
+<bpt i="1" x="1">&lt;s1&gt;</bpt>echo<ept i="1">&lt;/s1&gt;</ept> <it pos="begin" x="2">&lt;s2&gt;</it>"What's your name?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>About this document</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T090432Z" creationid="isVowel" creationdate="20200114T090432Z">
+        <seg>このドキュメントについて</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Advanced types</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T073106Z" creationid="isVowel" creationdate="20200114T073106Z">
+        <seg>上級型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Andreas Rumpf</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T033027Z" creationid="isVowel" creationdate="20200113T032944Z">
         <seg>アンドレアス・ルンプフ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Andreas Rumpf, Zahary Karadjov</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T090140Z" creationid="isVowel" creationdate="20200114T090140Z">
+        <seg>アンドレアス・ルンプフ、ザハリー・カラゾフ</seg>
       </tuv>
     </tu>
     <tu>
@@ -54,9 +88,25 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Assembler statement</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T081740Z" creationid="isVowel" creationdate="20200114T081740Z">
+        <seg>Assembler ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Author:</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T050842Z" creationid="isVowel" creationdate="20200113T032930Z">
+        <seg>作成者:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Authors:</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T083746Z" creationid="isVowel" creationdate="20200114T083746Z">
         <seg>作成者:</seg>
       </tuv>
     </tu>
@@ -86,6 +136,30 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Bitsize pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082130Z" creationid="isVowel" creationdate="20200114T082130Z">
+        <seg>Bitsize プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Block expression</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T081821Z" creationid="isVowel" creationdate="20200114T081821Z">
+        <seg>Block 式</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Block statement</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T081731Z" creationid="isVowel" creationdate="20200114T081731Z">
+        <seg>Block ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Booleans</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T042008Z" creationid="isVowel" creationdate="20200113T042008Z">
@@ -102,10 +176,42 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Bycopy pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T083617Z" creationid="isVowel" creationdate="20200114T083617Z">
+        <seg>Bycopy プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Byref pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T083619Z" creationid="isVowel" creationdate="20200114T083619Z">
+        <seg>Byref プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Case expression</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T081818Z" creationid="isVowel" creationdate="20200114T081818Z">
+        <seg>Case 式</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Case statement</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T041201Z" creationid="isVowel" creationdate="20200113T041201Z">
         <seg>Case ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Character literals</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T091045Z" creationid="isVowel" creationdate="20200114T091045Z">
+        <seg>文字リテラル</seg>
       </tuv>
     </tu>
     <tu>
@@ -118,10 +224,34 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>CodegenDecl pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T083600Z" creationid="isVowel" creationdate="20200114T083600Z">
+        <seg>CodegenDecl プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Commands</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T075048Z" creationid="isVowel" creationdate="20200114T075048Z">
+        <seg>コマンド</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Comments</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T041812Z" creationid="isVowel" creationdate="20200113T041812Z">
         <seg>コメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Compile pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082146Z" creationid="isVowel" creationdate="20200114T082146Z">
+        <seg>Compile プラグマ</seg>
       </tuv>
     </tu>
     <tu>
@@ -158,6 +288,22 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Defer statement</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T090529Z" creationid="isVowel" creationdate="20200114T090529Z">
+        <seg>Defer ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Definitions</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T090705Z" creationid="isVowel" creationdate="20200114T090705Z">
+        <seg>定義</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Discard statement</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T041609Z" creationid="isVowel" creationdate="20200113T041609Z">
@@ -170,6 +316,22 @@
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T042217Z" creationid="isVowel" creationdate="20200113T042217Z">
         <seg>特異型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Emit pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082156Z" creationid="isVowel" creationdate="20200114T082156Z">
+        <seg>Emit プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Encoding</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T090722Z" creationid="isVowel" creationdate="20200114T090722Z">
+        <seg>エンコーディング</seg>
       </tuv>
     </tu>
     <tu>
@@ -198,10 +360,34 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Exception handling</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T090521Z" creationid="isVowel" creationdate="20200114T090521Z">
+        <seg>例外処理</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Excluding symbols</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T041025Z" creationid="isVowel" creationdate="20200113T041025Z">
         <seg>シンボルの除外</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Exportc pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T083613Z" creationid="isVowel" creationdate="20200114T083613Z">
+        <seg>Exportc プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Extern pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T083615Z" creationid="isVowel" creationdate="20200114T083615Z">
+        <seg>Extern プラグマ</seg>
       </tuv>
     </tu>
     <tu>
@@ -262,6 +448,14 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Generated: 2019-11-27 09:15:13 UTC</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T075254Z" creationid="isVowel" creationdate="20200114T075254Z">
+        <seg>生成日時: 2019年11月27日 午前09時15分13秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Generated: 2019-11-27 09:16:35 UTC</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T023747Z" creationid="isVowel" creationdate="20200113T023747Z">
@@ -278,10 +472,74 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Header pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082137Z" creationid="isVowel" creationdate="20200114T082137Z">
+        <seg>Header プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Identifiers &amp; Keywords</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T090755Z" creationid="isVowel" creationdate="20200114T090755Z">
+        <seg>識別子とキーワード</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>If expression</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T081813Z" creationid="isVowel" creationdate="20200114T081813Z">
+        <seg>If 式</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>If statement</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T041158Z" creationid="isVowel" creationdate="20200113T041158Z">
         <seg>If ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>ImportCpp pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082158Z" creationid="isVowel" creationdate="20200114T082158Z">
+        <seg>ImportCpp プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>ImportJs pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T083546Z" creationid="isVowel" creationdate="20200114T083546Z">
+        <seg>ImportJs プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>ImportObjC pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T083549Z" creationid="isVowel" creationdate="20200114T083549Z">
+        <seg>ImportObjC プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Importc pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T083611Z" creationid="isVowel" creationdate="20200114T083611Z">
+        <seg>Importc プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Imports</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T075138Z" creationid="isVowel" creationdate="20200114T075138Z">
+        <seg>インポート</seg>
       </tuv>
     </tu>
     <tu>
@@ -294,10 +552,34 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>IncompleteStruct pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082140Z" creationid="isVowel" creationdate="20200114T082140Z">
+        <seg>IncompleteStruct プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Indentation</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T090731Z" creationid="isVowel" creationdate="20200114T090731Z">
+        <seg>インデント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Index</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T025100Z" creationid="isVowel" creationdate="20200113T025100Z">
         <seg>索引</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>InjectStmt pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T083603Z" creationid="isVowel" creationdate="20200114T083603Z">
+        <seg>InjectStmt プラグマ</seg>
       </tuv>
     </tu>
     <tu>
@@ -334,10 +616,34 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Let statement</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T081623Z" creationid="isVowel" creationdate="20200114T081623Z">
+        <seg>Let ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Lexical Analysis</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T090716Z" creationid="isVowel" creationdate="20200114T090716Z">
+        <seg>字句解析</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Lexical elements</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T041757Z" creationid="isVowel" creationdate="20200113T041757Z">
         <seg>字句要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Link pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082149Z" creationid="isVowel" creationdate="20200114T082149Z">
+        <seg>Link プラグマ</seg>
       </tuv>
     </tu>
     <tu>
@@ -366,10 +672,26 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Multiline comments</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T090747Z" creationid="isVowel" creationdate="20200114T090747Z">
+        <seg>複数行コメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Named arguments</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T041619Z" creationid="isVowel" creationdate="20200113T041619Z">
         <seg>アーギュメントの命名</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Nim Manual</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T080228Z" creationid="isVowel" creationdate="20200114T080228Z">
+        <seg>Nim マニュアル</seg>
       </tuv>
     </tu>
     <tu>
@@ -390,10 +712,34 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Nim maintenance script</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T075017Z" creationid="isVowel" creationdate="20200114T075017Z">
+        <seg>Nim メンテナンス・スクリプト</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>NoDecl pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082135Z" creationid="isVowel" creationdate="20200114T082135Z">
+        <seg>NoDecl プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Numbers</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T041817Z" creationid="isVowel" creationdate="20200113T041817Z">
         <seg>数値</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Numerical constants</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T091035Z" creationid="isVowel" creationdate="20200114T091035Z">
+        <seg>数値定数</seg>
       </tuv>
     </tu>
     <tu>
@@ -438,10 +784,26 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Other tokens</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T091102Z" creationid="isVowel" creationdate="20200114T091102Z">
+        <seg>そのほかのトークン</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Overloaded procedures</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T041700Z" creationid="isVowel" creationdate="20200113T041700Z">
         <seg>プロシージャのオーバーロード</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Packed pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T083626Z" creationid="isVowel" creationdate="20200114T083626Z">
+        <seg>Packed プラグマ</seg>
       </tuv>
     </tu>
     <tu>
@@ -458,6 +820,30 @@
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T040942Z" creationid="isVowel" creationdate="20200113T040942Z">
         <seg>第２部</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>PassC pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082151Z" creationid="isVowel" creationdate="20200114T082151Z">
+        <seg>PassC プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>PassL pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082154Z" creationid="isVowel" creationdate="20200114T082154Z">
+        <seg>PassL プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Pragmas</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T081958Z" creationid="isVowel" creationdate="20200114T081958Z">
+        <seg>プラグマ</seg>
       </tuv>
     </tu>
     <tu>
@@ -486,6 +872,14 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Raise statement</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T090532Z" creationid="isVowel" creationdate="20200114T090532Z">
+        <seg>Raise ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Reference and pointer types</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T042206Z" creationid="isVowel" creationdate="20200113T042206Z">
@@ -506,6 +900,14 @@
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T041258Z" creationid="isVowel" creationdate="20200113T041258Z">
         <seg>Result 変数</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Return statement</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T081725Z" creationid="isVowel" creationdate="20200114T081725Z">
+        <seg>Return ステートメント</seg>
       </tuv>
     </tu>
     <tu>
@@ -590,10 +992,34 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Static statement/expression</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T081654Z" creationid="isVowel" creationdate="20200114T081654Z">
+        <seg>Static ステートメント/式</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>String and character literals</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T041806Z" creationid="isVowel" creationdate="20200113T041806Z">
         <seg>文字列と文字リテラル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>String handling</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T074859Z" creationid="isVowel" creationdate="20200114T074859Z">
+        <seg>文字列処理</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>String literals</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T090934Z" creationid="isVowel" creationdate="20200114T090934Z">
+        <seg>文字列リテラル</seg>
       </tuv>
     </tu>
     <tu>
@@ -614,10 +1040,34 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Syntax</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T091017Z" creationid="isVowel" creationdate="20200114T091017Z">
+        <seg>シンタックス</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Templates</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T043859Z" creationid="isVowel" creationdate="20200113T043859Z">
         <seg>テンプレート</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>The <bpt i="0" x="0">&lt;s0&gt;</bpt>koch<ept i="0">&lt;/s0&gt;</ept> program is Nim's maintenance script.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T075921Z" creationid="isVowel" creationdate="20200114T075921Z">
+        <seg><bpt i="0" x="0">&lt;s0&gt;</bpt>koch<ept i="0">&lt;/s0&gt;</ept> プログラムは Nim のメンテナンス・スクリプトです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>The addr operator</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T081835Z" creationid="isVowel" creationdate="20200114T081835Z">
+        <seg>addr 演算子</seg>
       </tuv>
     </tu>
     <tu>
@@ -646,10 +1096,74 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>The unsafeAddr operator</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T081850Z" creationid="isVowel" creationdate="20200114T081850Z">
+        <seg>unsafeAddr 演算子</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>The var statement</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T041828Z" creationid="isVowel" creationdate="20200113T041828Z">
         <seg>var ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>This document is a tutorial for the programming language <bpt i="0" x="0">&lt;e0&gt;</bpt>Nim<ept i="0">&lt;/e0&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T091753Z" creationid="isVowel" creationdate="20200114T091753Z">
+        <seg>このドキュメントはプログラミング言語 <bpt i="0" x="0">&lt;e0&gt;</bpt>Nim<ept i="0">&lt;/e0&gt;</ept> のチュートリアルです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Thread pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T083641Z" creationid="isVowel" creationdate="20200114T083641Z">
+        <seg>Thread プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Threads</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T083638Z" creationid="isVowel" creationdate="20200114T083638Z">
+        <seg>スレッド</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Threads and exceptions</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T083718Z" creationid="isVowel" creationdate="20200114T083718Z">
+        <seg>スレッドと例外</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Threadvar pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T083646Z" creationid="isVowel" creationdate="20200114T083646Z">
+        <seg>Threadvar プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Try expression</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T090507Z" creationid="isVowel" creationdate="20200114T090507Z">
+        <seg>Try ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Try statement</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T090505Z" creationid="isVowel" creationdate="20200114T090505Z">
+        <seg>Try ステートメント</seg>
       </tuv>
     </tu>
     <tu>
@@ -686,10 +1200,58 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Union pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T083624Z" creationid="isVowel" creationdate="20200114T083624Z">
+        <seg>Union プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Using statement</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T081743Z" creationid="isVowel" creationdate="20200114T081743Z">
+        <seg>Using ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Var statement</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T081620Z" creationid="isVowel" creationdate="20200114T081620Z">
+        <seg>Var ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Varargs pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T083622Z" creationid="isVowel" creationdate="20200114T083622Z">
+        <seg>Varargs プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Version:</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T032952Z" creationid="isVowel" creationdate="20200113T032952Z">
         <seg>バージョン:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Volatile pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082133Z" creationid="isVowel" creationdate="20200114T082133Z">
+        <seg>Volatile プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>When expression</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T081816Z" creationid="isVowel" creationdate="20200114T081816Z">
+        <seg>When 式</seg>
       </tuv>
     </tu>
     <tu>
@@ -722,6 +1284,246 @@
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T050409Z" creationid="isVowel" creationdate="20200113T050409Z">
         <seg>ラッパー</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Yield statement</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T081729Z" creationid="isVowel" creationdate="20200114T081729Z">
+        <seg>Yield ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>acyclic pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082011Z" creationid="isVowel" creationdate="20200114T082011Z">
+        <seg>acyclic プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>asmNoStackFrame pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082023Z" creationid="isVowel" creationdate="20200114T082023Z">
+        <seg>asmNoStackFrame プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>boot command</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T075051Z" creationid="isVowel" creationdate="20200114T075051Z">
+        <seg>boot コマンド</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>compileTime pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082006Z" creationid="isVowel" creationdate="20200114T082006Z">
+        <seg>compileTime プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>computedGoto pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082053Z" creationid="isVowel" creationdate="20200114T082053Z">
+        <seg>computedGoto プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>csource command</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T075053Z" creationid="isVowel" creationdate="20200114T075053Z">
+        <seg>csource コマンド</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>deprecated pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082001Z" creationid="isVowel" creationdate="20200114T082001Z">
+        <seg>deprecated プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>error pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082026Z" creationid="isVowel" creationdate="20200114T082026Z">
+        <seg>error プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>experimental pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082126Z" creationid="isVowel" creationdate="20200114T082126Z">
+        <seg>experimental プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>fatal pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082028Z" creationid="isVowel" creationdate="20200114T082028Z">
+        <seg>fatal プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>final pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082013Z" creationid="isVowel" creationdate="20200114T082013Z">
+        <seg>final プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>global pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082114Z" creationid="isVowel" creationdate="20200114T082114Z">
+        <seg>global プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>hint pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082037Z" creationid="isVowel" creationdate="20200114T082037Z">
+        <seg>hint プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>immediate pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082101Z" creationid="isVowel" creationdate="20200114T082101Z">
+        <seg>immediate プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>line pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082039Z" creationid="isVowel" creationdate="20200114T082039Z">
+        <seg>line プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>linearScanEnd pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082045Z" creationid="isVowel" creationdate="20200114T082045Z">
+        <seg>linearScanEnd プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>noReturn pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082009Z" creationid="isVowel" creationdate="20200114T082009Z">
+        <seg>noReturn プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>noSideEffect pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082004Z" creationid="isVowel" creationdate="20200114T082004Z">
+        <seg>noSideEffect プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>pragma pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082117Z" creationid="isVowel" creationdate="20200114T082117Z">
+        <seg>pragma プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>pure pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082020Z" creationid="isVowel" creationdate="20200114T082020Z">
+        <seg>pure プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>register pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082111Z" creationid="isVowel" creationdate="20200114T082111Z">
+        <seg>register プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>shallow pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082016Z" creationid="isVowel" creationdate="20200114T082016Z">
+        <seg>shallow プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>temp command</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T075055Z" creationid="isVowel" creationdate="20200114T075055Z">
+        <seg>temp コマンド</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>test command</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T075057Z" creationid="isVowel" creationdate="20200114T075057Z">
+        <seg>test コマンド</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>unroll pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082056Z" creationid="isVowel" creationdate="20200114T082056Z">
+        <seg>unroll プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>used pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082122Z" creationid="isVowel" creationdate="20200114T082122Z">
+        <seg>used プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>warning pragma</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T082035Z" creationid="isVowel" creationdate="20200114T082035Z">
+        <seg>warning プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>web command</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T075059Z" creationid="isVowel" creationdate="20200114T075059Z">
+        <seg>web コマンド</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>  <bpt i="0" x="0">&lt;a0&gt;</bpt>Source<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>Edit<ept i="1">&lt;/a1&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T073746Z" creationid="isVowel" creationdate="20200114T073746Z">
+        <seg>  <bpt i="0" x="0">&lt;a0&gt;</bpt>ソース<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>編集<ept i="1">&lt;/a1&gt;</ept></seg>
       </tuv>
     </tu>
     <tu>

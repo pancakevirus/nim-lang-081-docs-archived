@@ -851,9 +851,9 @@ function main() {
 <li><a class="reference" id="callsslashexpressions-curly-braces_toc" href="#callsslashexpressions-curly-braces">Curly braces</a></li>
 <li><a class="reference" id="callsslashexpressions-brackets_toc" href="#callsslashexpressions-brackets">Brackets</a></li>
 <li><a class="reference" id="callsslashexpressions-ranges_toc" href="#callsslashexpressions-ranges">Ranges</a></li>
-<li><a class="reference" id="callsslashexpressions-if-expression_toc" href="#callsslashexpressions-if-expression">If expression</a></li>
+<li><a class="reference" id="callsslashexpressions-if-expression_toc" href="#callsslashexpressions-if-expression">If 式</a></li>
 <li><a class="reference" id="callsslashexpressions-documentation-comments_toc" href="#callsslashexpressions-documentation-comments">Documentation Comments</a></li>
-<li><a class="reference" id="callsslashexpressions-pragmas_toc" href="#callsslashexpressions-pragmas">Pragmas</a></li>
+<li><a class="reference" id="callsslashexpressions-pragmas_toc" href="#callsslashexpressions-pragmas">プラグマ</a></li>
 </ul><li><a class="reference" id="statements_toc" href="#statements">Statements</a></li>
 <ul class="simple"><li><a class="reference" id="statements-if-statement_toc" href="#statements-if-statement">If ステートメント</a></li>
 <li><a class="reference" id="statements-when-statement_toc" href="#statements-when-statement">When ステートメント</a></li>
@@ -862,13 +862,13 @@ function main() {
 <li><a class="reference" id="statements-case-statement_toc" href="#statements-case-statement">Case ステートメント</a></li>
 <li><a class="reference" id="statements-while-statement_toc" href="#statements-while-statement">While ステートメント</a></li>
 <li><a class="reference" id="statements-for-statement_toc" href="#statements-for-statement">For ステートメント</a></li>
-<li><a class="reference" id="statements-try-statement_toc" href="#statements-try-statement">Try statement</a></li>
-<li><a class="reference" id="statements-return-statement_toc" href="#statements-return-statement">Return statement</a></li>
-<li><a class="reference" id="statements-yield-statement_toc" href="#statements-yield-statement">Yield statement</a></li>
+<li><a class="reference" id="statements-try-statement_toc" href="#statements-try-statement">Try ステートメント</a></li>
+<li><a class="reference" id="statements-return-statement_toc" href="#statements-return-statement">Return ステートメント</a></li>
+<li><a class="reference" id="statements-yield-statement_toc" href="#statements-yield-statement">Yield ステートメント</a></li>
 <li><a class="reference" id="statements-discard-statement_toc" href="#statements-discard-statement">Discard ステートメント</a></li>
 <li><a class="reference" id="statements-continue-statement_toc" href="#statements-continue-statement">Continue ステートメント</a></li>
 <li><a class="reference" id="statements-break-statement_toc" href="#statements-break-statement">Break ステートメント</a></li>
-<li><a class="reference" id="statements-block-statement_toc" href="#statements-block-statement">Block statement</a></li>
+<li><a class="reference" id="statements-block-statement_toc" href="#statements-block-statement">Block ステートメント</a></li>
 <li><a class="reference" id="statements-asm-statement_toc" href="#statements-asm-statement">Asm statement</a></li>
 <li><a class="reference" id="statements-import-section_toc" href="#statements-import-section">Import section</a></li>
 <li><a class="reference" id="statements-from-statement_toc" href="#statements-from-statement">From ステートメント</a></li>
@@ -1543,7 +1543,7 @@ function main() {
                 <span class="Comment"># 3</span>
                 <span class="Comment"># 3</span>
                 <span class="Comment"># 3</span></pre>
-<h2><a class="toc-backref" id="callsslashexpressions-if-expression" href="#callsslashexpressions-if-expression">If expression</a></h2><p>The representation of the <tt class="docutils literal"><span class="pre">if</span></tt> expression is subtle, but easy to traverse.</p>
+<h2><a class="toc-backref" id="callsslashexpressions-if-expression" href="#callsslashexpressions-if-expression">If 式</a></h2><p>The representation of the <tt class="docutils literal"><span class="pre">if</span></tt> expression is subtle, but easy to traverse.</p>
 <p>Concrete syntax:</p>
 <pre class="listing"><span class="Keyword">if</span> <span class="Identifier">cond1</span><span class="Punctuation">:</span> <span class="Identifier">expr1</span> <span class="Keyword">elif</span> <span class="Identifier">cond2</span><span class="Punctuation">:</span> <span class="Identifier">expr2</span> <span class="Keyword">else</span><span class="Punctuation">:</span> <span class="Identifier">expr3</span></pre><p>AST:</p>
 <pre class="listing"><span class="Identifier">nnkIfExpr</span><span class="Punctuation">(</span>
@@ -1561,7 +1561,7 @@ function main() {
 <span class="Identifier">stmt1</span>
 <span class="Identifier">nnkCommentStmt</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Comment"># another nnkCommentStmt because there is another comment</span>
                  <span class="Comment"># (separate from the first)</span></pre>
-<h2><a class="toc-backref" id="callsslashexpressions-pragmas" href="#callsslashexpressions-pragmas">Pragmas</a></h2><p>One of Nim's cool features is pragmas, which allow fine-tuning of various aspects of the language. They come in all types, such as adorning procs and objects, but the standalone <tt class="docutils literal"><span class="pre">emit</span></tt> pragma shows the basics with the AST.</p>
+<h2><a class="toc-backref" id="callsslashexpressions-pragmas" href="#callsslashexpressions-pragmas">プラグマ</a></h2><p>One of Nim's cool features is pragmas, which allow fine-tuning of various aspects of the language. They come in all types, such as adorning procs and objects, but the standalone <tt class="docutils literal"><span class="pre">emit</span></tt> pragma shows the basics with the AST.</p>
 <p>Concrete syntax:</p>
 <pre class="listing"><span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">emit</span><span class="Punctuation">:</span> <span class="StringLit">"#include &lt;stdio.h&gt;"</span><span class="Operator">.</span><span class="Punctuation">}</span></pre><p>AST:</p>
 <pre class="listing"><span class="Identifier">nnkPragma</span><span class="Punctuation">(</span>
@@ -1633,7 +1633,7 @@ function main() {
 <pre class="listing"><span class="Keyword">for</span> <span class="Identifier">ident1</span><span class="Punctuation">,</span> <span class="Identifier">ident2</span> <span class="Keyword">in</span> <span class="Identifier">expr1</span><span class="Punctuation">:</span>
   <span class="Identifier">stmt1</span></pre><p>AST:</p>
 <pre class="listing"><span class="Identifier">nnkForStmt</span><span class="Punctuation">(</span><span class="Identifier">ident1</span><span class="Punctuation">,</span> <span class="Identifier">ident2</span><span class="Punctuation">,</span> <span class="Identifier">expr1</span><span class="Punctuation">,</span> <span class="Identifier">stmt1</span><span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="statements-try-statement" href="#statements-try-statement">Try statement</a></h2><p>Concrete syntax:</p>
+<h2><a class="toc-backref" id="statements-try-statement" href="#statements-try-statement">Try ステートメント</a></h2><p>Concrete syntax:</p>
 <pre class="listing"><span class="Keyword">try</span><span class="Punctuation">:</span>
   <span class="Identifier">stmt1</span>
 <span class="Keyword">except</span> <span class="Identifier">e1</span><span class="Punctuation">,</span> <span class="Identifier">e2</span><span class="Punctuation">:</span>
@@ -1651,10 +1651,10 @@ function main() {
   <span class="Identifier">nnkExceptBranch</span><span class="Punctuation">(</span><span class="Identifier">stmt4</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkFinally</span><span class="Punctuation">(</span><span class="Identifier">stmt5</span><span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="statements-return-statement" href="#statements-return-statement">Return statement</a></h2><p>Concrete syntax:</p>
+<h2><a class="toc-backref" id="statements-return-statement" href="#statements-return-statement">Return ステートメント</a></h2><p>Concrete syntax:</p>
 <pre class="listing"><span class="Keyword">return</span> <span class="Identifier">expr1</span></pre><p>AST:</p>
 <pre class="listing"><span class="Identifier">nnkReturnStmt</span><span class="Punctuation">(</span><span class="Identifier">expr1</span><span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="statements-yield-statement" href="#statements-yield-statement">Yield statement</a></h2><p>Like <tt class="docutils literal"><span class="pre">return</span></tt>, but with <tt class="docutils literal"><span class="pre">nnkYieldStmt</span></tt> kind.</p>
+<h2><a class="toc-backref" id="statements-yield-statement" href="#statements-yield-statement">Yield ステートメント</a></h2><p>Like <tt class="docutils literal"><span class="pre">return</span></tt>, but with <tt class="docutils literal"><span class="pre">nnkYieldStmt</span></tt> kind.</p>
 <pre class="listing"><span class="Identifier">nnkYieldStmt</span><span class="Punctuation">(</span><span class="Identifier">expr1</span><span class="Punctuation">)</span></pre>
 <h2><a class="toc-backref" id="statements-discard-statement" href="#statements-discard-statement">Discard ステートメント</a></h2><p>Like <tt class="docutils literal"><span class="pre">return</span></tt>, but with <tt class="docutils literal"><span class="pre">nnkDiscardStmt</span></tt> kind.</p>
 <pre class="listing"><span class="Identifier">nnkDiscardStmt</span><span class="Punctuation">(</span><span class="Identifier">expr1</span><span class="Punctuation">)</span></pre>
@@ -1665,7 +1665,7 @@ function main() {
 <pre class="listing"><span class="Keyword">break</span> <span class="Identifier">otherLocation</span></pre><p>AST:</p>
 <pre class="listing"><span class="Identifier">nnkBreakStmt</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"otherLocation"</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre><p>If <tt class="docutils literal"><span class="pre">break</span></tt> is used without a jump-to location, <tt class="docutils literal"><span class="pre">nnkEmpty</span></tt> replaces <tt class="docutils literal"><span class="pre">nnkIdent</span></tt>.</p>
 
-<h2><a class="toc-backref" id="statements-block-statement" href="#statements-block-statement">Block statement</a></h2><p>Concrete syntax:</p>
+<h2><a class="toc-backref" id="statements-block-statement" href="#statements-block-statement">Block ステートメント</a></h2><p>Concrete syntax:</p>
 <pre class="listing"><span class="Keyword">block</span> <span class="Identifier">name</span><span class="Punctuation">:</span></pre><p>AST:</p>
 <pre class="listing"><span class="Identifier">nnkBlockStmt</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"name"</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">nnkStmtList</span><span class="Punctuation">(</span><span class="Operator">...</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre><p>A <tt class="docutils literal"><span class="pre">block</span></tt> doesn't need an name, in which case <tt class="docutils literal"><span class="pre">nnkEmpty</span></tt> is used.</p>
 
@@ -2258,26 +2258,18 @@ class="link-seesrc" target="_blank">Source</a>
   
   </div>
 
-
-
-Compares two Nim identifiers.
-&nbsp;&nbsp;<a
+Compares two Nim identifiers. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L150"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L150" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L150" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="==,NimNode,NimNode"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#%3D%3D%2CNimNode%2CNimNode"><span class="Identifier">`==`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"EqNimrodNode"</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Compare two Nim nodes. Return true if nodes are structurally equivalent. This means two independently created nodes can be equal.
-&nbsp;&nbsp;<a
+Compare two Nim nodes. Return true if nodes are structurally equivalent. This means two independently created nodes can be equal. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L154"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L154" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L154" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="==,NimSym,NimSym"></a>
@@ -2288,13 +2280,9 @@ class="link-seesrc" target="_blank">Source</a>
   
   </div>
 
-
-
-Compares two Nim symbols.
-&nbsp;&nbsp;<a
+Compares two Nim symbols. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L158"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L158" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L158" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="sameType,NimNode,NimNode"></a>
@@ -2302,13 +2290,9 @@ class="link-seesrc" target="_blank">Source</a>
                                 <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Compares two Nim nodes' types. Return true if the types are the same, eg. true when comparing alias with original type.
-&nbsp;&nbsp;<a
+Compares two Nim nodes' types. Return true if the types are the same, eg. true when comparing alias with original type. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L164"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L164" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L164" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="len,NimNode"></a>
@@ -2431,26 +2415,18 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#intVal%2CNimNode"><span class="Identifier">intVal</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#BiggestInt"><span class="Identifier">BiggestInt</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"NIntVal"</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Returns an integer value from any integer literal or enum field symbol.
-&nbsp;&nbsp;<a
+Returns an integer value from any integer literal or enum field symbol. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L229"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L229" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L229" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="floatVal,NimNode"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#floatVal%2CNimNode"><span class="Identifier">floatVal</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#BiggestFloat"><span class="Identifier">BiggestFloat</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"NFloatVal"</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Returns a float from any floating point literal.
-&nbsp;&nbsp;<a
+Returns a float from any floating point literal. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L232"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L232" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L232" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="ident,NimNode"></a>
@@ -2540,13 +2516,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
   
   </div>
 
-
-
-Converts a Nim identifier to a string.
-&nbsp;&nbsp;<a
+Converts a Nim identifier to a string. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L255"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L255" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L255" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="$,NimSym"></a>
@@ -2557,13 +2529,9 @@ class="link-seesrc" target="_blank">Source</a>
   
   </div>
 
-
-
-Converts a Nim symbol to a string.
-&nbsp;&nbsp;<a
+Converts a Nim symbol to a string. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L259"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L259" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L259" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="owner,NimNode"></a>
@@ -2706,26 +2674,18 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#signatureHash%2CNimNode"><span class="Identifier">signatureHash</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"NSigHash"</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Returns a stable identifier derived from the signature of a symbol. The signature combines many factors such as the type of the symbol, the owning module of the symbol and others. The same identifier is used in the back-end to produce the mangled symbol name.
-&nbsp;&nbsp;<a
+Returns a stable identifier derived from the signature of a symbol. The signature combines many factors such as the type of the symbol, the owning module of the symbol and others. The same identifier is used in the back-end to produce the mangled symbol name. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L366"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L366" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L366" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="symBodyHash,NimNode"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#symBodyHash%2CNimNode"><span class="Identifier">symBodyHash</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Returns a stable digest for symbols derived not only from type signature and owning module, but also implementation body. All procs/variables used in the implementation of this symbol are hashed recursively as well, including magics from system module.
-&nbsp;&nbsp;<a
+Returns a stable digest for symbols derived not only from type signature and owning module, but also implementation body. All procs/variables used in the implementation of this symbol are hashed recursively as well, including magics from system module. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L372"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L372" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L372" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getTypeImpl,typedesc"></a>
@@ -2851,26 +2811,18 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#warning%2Cstring%2CNimNode"><span class="Identifier">warning</span></a><span class="Other">(</span><span class="Identifier">msg</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span class="Other">=</span> <span class="Keyword">nil</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"NWarning"</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Writes a warning message at compile time.
-&nbsp;&nbsp;<a
+Writes a warning message at compile time. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L429"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L429" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L429" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="hint,string,NimNode"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#hint%2Cstring%2CNimNode"><span class="Identifier">hint</span></a><span class="Other">(</span><span class="Identifier">msg</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span class="Other">=</span> <span class="Keyword">nil</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"NHint"</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Writes a hint message at compile time.
-&nbsp;&nbsp;<a
+Writes a hint message at compile time. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L432"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L432" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L432" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newStrLitNode,string"></a>
@@ -2891,13 +2843,9 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Creates a comment statement node.
-&nbsp;&nbsp;<a
+Creates a comment statement node. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L440"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L440" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L440" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newIntLitNode,BiggestInt"></a>
@@ -2969,13 +2917,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">noSideEffect</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Generates a fresh symbol that is guaranteed to be unique. The symbol needs to occur in a declaration context.
-&nbsp;&nbsp;<a
+Generates a fresh symbol that is guaranteed to be unique. The symbol needs to occur in a declaration context. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L498"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L498" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L498" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="callsite"></a>
@@ -2986,13 +2930,9 @@ class="link-seesrc" target="_blank">Source</a>
   
   </div>
 
-
-
-Returns the AST of the invocation expression that invoked this macro.
-&nbsp;&nbsp;<a
+Returns the AST of the invocation expression that invoked this macro. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L503"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L503" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L503" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="toStrLit,NimNode"></a>
@@ -3180,13 +3120,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Produces a new node with children.
-&nbsp;&nbsp;<a
+Produces a new node with children. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L630"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L630" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L630" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newCall,NimNode,varargs[NimNode]"></a>
@@ -3227,195 +3163,135 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#newLit%2Cchar"><span class="Identifier">newLit</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <a href="system.html#char"><span class="Identifier">char</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Produces a new character literal node.
-&nbsp;&nbsp;<a
+Produces a new character literal node. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L664"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L664" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L664" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newLit,int"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newLit%2Cint"><span class="Identifier">newLit</span></a><span class="Other">(</span><span class="Identifier">i</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Produces a new integer literal node.
-&nbsp;&nbsp;<a
+Produces a new integer literal node. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L669"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L669" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L669" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newLit,int8"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newLit%2Cint8"><span class="Identifier">newLit</span></a><span class="Other">(</span><span class="Identifier">i</span><span class="Other">:</span> <a href="system.html#int8"><span class="Identifier">int8</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Produces a new integer literal node.
-&nbsp;&nbsp;<a
+Produces a new integer literal node. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L674"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L674" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L674" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newLit,int16"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newLit%2Cint16"><span class="Identifier">newLit</span></a><span class="Other">(</span><span class="Identifier">i</span><span class="Other">:</span> <a href="system.html#int16"><span class="Identifier">int16</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Produces a new integer literal node.
-&nbsp;&nbsp;<a
+Produces a new integer literal node. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L679"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L679" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L679" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newLit,int32"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newLit%2Cint32"><span class="Identifier">newLit</span></a><span class="Other">(</span><span class="Identifier">i</span><span class="Other">:</span> <a href="system.html#int32"><span class="Identifier">int32</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Produces a new integer literal node.
-&nbsp;&nbsp;<a
+Produces a new integer literal node. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L684"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L684" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L684" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newLit,int64"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newLit%2Cint64"><span class="Identifier">newLit</span></a><span class="Other">(</span><span class="Identifier">i</span><span class="Other">:</span> <a href="system.html#int64"><span class="Identifier">int64</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Produces a new integer literal node.
-&nbsp;&nbsp;<a
+Produces a new integer literal node. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L689"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L689" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L689" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newLit,uint"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newLit%2Cuint"><span class="Identifier">newLit</span></a><span class="Other">(</span><span class="Identifier">i</span><span class="Other">:</span> <a href="system.html#uint"><span class="Identifier">uint</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Produces a new unsigned integer literal node.
-&nbsp;&nbsp;<a
+Produces a new unsigned integer literal node. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L694"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L694" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L694" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newLit,uint8"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newLit%2Cuint8"><span class="Identifier">newLit</span></a><span class="Other">(</span><span class="Identifier">i</span><span class="Other">:</span> <a href="system.html#uint8"><span class="Identifier">uint8</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Produces a new unsigned integer literal node.
-&nbsp;&nbsp;<a
+Produces a new unsigned integer literal node. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L699"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L699" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L699" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newLit,uint16"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newLit%2Cuint16"><span class="Identifier">newLit</span></a><span class="Other">(</span><span class="Identifier">i</span><span class="Other">:</span> <a href="system.html#uint16"><span class="Identifier">uint16</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Produces a new unsigned integer literal node.
-&nbsp;&nbsp;<a
+Produces a new unsigned integer literal node. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L704"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L704" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L704" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newLit,uint32"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newLit%2Cuint32"><span class="Identifier">newLit</span></a><span class="Other">(</span><span class="Identifier">i</span><span class="Other">:</span> <a href="system.html#uint32"><span class="Identifier">uint32</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Produces a new unsigned integer literal node.
-&nbsp;&nbsp;<a
+Produces a new unsigned integer literal node. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L709"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L709" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L709" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newLit,uint64"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newLit%2Cuint64"><span class="Identifier">newLit</span></a><span class="Other">(</span><span class="Identifier">i</span><span class="Other">:</span> <a href="system.html#uint64"><span class="Identifier">uint64</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Produces a new unsigned integer literal node.
-&nbsp;&nbsp;<a
+Produces a new unsigned integer literal node. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L714"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L714" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L714" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newLit,bool"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newLit%2Cbool"><span class="Identifier">newLit</span></a><span class="Other">(</span><span class="Identifier">b</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Produces a new boolean literal node.
-&nbsp;&nbsp;<a
+Produces a new boolean literal node. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L719"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L719" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L719" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newLit,string"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newLit%2Cstring"><span class="Identifier">newLit</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Produces a new string literal node.
-&nbsp;&nbsp;<a
+Produces a new string literal node. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L723"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L723" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L723" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newLit,float32"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newLit%2Cfloat32"><span class="Identifier">newLit</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="system.html#float32"><span class="Identifier">float32</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Produces a new float literal node.
-&nbsp;&nbsp;<a
+Produces a new float literal node. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L735"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L735" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L735" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newLit,float64"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newLit%2Cfloat64"><span class="Identifier">newLit</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="system.html#float64"><span class="Identifier">float64</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Produces a new float literal node.
-&nbsp;&nbsp;<a
+Produces a new float literal node. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L740"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L740" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L740" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newLit"></a>
@@ -3561,104 +3437,72 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#newEmptyNode"><span class="Identifier">newEmptyNode</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Create a new empty node.
-&nbsp;&nbsp;<a
+Create a new empty node. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L992"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L992" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L992" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newStmtList,varargs[NimNode]"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newStmtList%2Cvarargs%5BNimNode%5D"><span class="Identifier">newStmtList</span></a><span class="Other">(</span><span class="Identifier">stmts</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Create a new statement list.
-&nbsp;&nbsp;<a
+Create a new statement list. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L996"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L996" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L996" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newPar,varargs[NimNode]"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newPar%2Cvarargs%5BNimNode%5D"><span class="Identifier">newPar</span></a><span class="Other">(</span><span class="Identifier">exprs</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Create a new parentheses-enclosed expression.
-&nbsp;&nbsp;<a
+Create a new parentheses-enclosed expression. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1000"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1000" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1000" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newBlockStmt,NimNode,NimNode"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newBlockStmt%2CNimNode%2CNimNode"><span class="Identifier">newBlockStmt</span></a><span class="Other">(</span><span class="Identifier">label</span><span class="Other">,</span> <span class="Identifier">body</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Create a new block statement with label.
-&nbsp;&nbsp;<a
+Create a new block statement with label. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1004"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1004" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1004" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newBlockStmt,NimNode"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newBlockStmt%2CNimNode"><span class="Identifier">newBlockStmt</span></a><span class="Other">(</span><span class="Identifier">body</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Create a new block: stmt.
-&nbsp;&nbsp;<a
+Create a new block: stmt. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1008"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1008" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1008" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newVarStmt,NimNode,NimNode"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newVarStmt%2CNimNode%2CNimNode"><span class="Identifier">newVarStmt</span></a><span class="Other">(</span><span class="Identifier">name</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Create a new var stmt.
-&nbsp;&nbsp;<a
+Create a new var stmt. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1012"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1012" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1012" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newLetStmt,NimNode,NimNode"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newLetStmt%2CNimNode%2CNimNode"><span class="Identifier">newLetStmt</span></a><span class="Other">(</span><span class="Identifier">name</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Create a new let stmt.
-&nbsp;&nbsp;<a
+Create a new let stmt. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1017"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1017" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1017" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newConstStmt,NimNode,NimNode"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newConstStmt%2CNimNode%2CNimNode"><span class="Identifier">newConstStmt</span></a><span class="Other">(</span><span class="Identifier">name</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Create a new const stmt.
-&nbsp;&nbsp;<a
+Create a new const stmt. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1022"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1022" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1022" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newAssignment,NimNode,NimNode"></a>
@@ -3722,13 +3566,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#newNilLit"><span class="Identifier">newNilLit</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-New nil literal shortcut.
-&nbsp;&nbsp;<a
+New nil literal shortcut. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1072"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1072" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1072" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="last,NimNode"></a>
@@ -3855,39 +3695,27 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#pragma%2CNimNode"><span class="Identifier">pragma</span></a><span class="Other">(</span><span class="Identifier">someProc</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Get the pragma of a proc type. These will be expanded.
-&nbsp;&nbsp;<a
+Get the pragma of a proc type. These will be expanded. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1208"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1208" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1208" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="pragma=,NimNode,NimNode"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#pragma%3D%2CNimNode%2CNimNode"><span class="Identifier">pragma=</span></a><span class="Other">(</span><span class="Identifier">someProc</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">;</span> <span class="Identifier">val</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Set the pragma of a proc type.
-&nbsp;&nbsp;<a
+Set the pragma of a proc type. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1216"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1216" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1216" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="addPragma,NimNode,NimNode"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#addPragma%2CNimNode%2CNimNode"><span class="Identifier">addPragma</span></a><span class="Other">(</span><span class="Identifier">someProc</span><span class="Other">,</span> <span class="Identifier">pragma</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Adds pragma to routine definition.
-&nbsp;&nbsp;<a
+Adds pragma to routine definition. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1225"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1225" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1225" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="body,NimNode"></a>
@@ -3914,26 +3742,18 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2CNimNode"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">node</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Get the string of an identifier node.
-&nbsp;&nbsp;<a
+Get the string of an identifier node. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1261"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1261" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1261" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="ident,string"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#ident%2Cstring"><span class="Identifier">ident</span></a><span class="Other">(</span><span class="Identifier">name</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"StrToIdent"</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Create a new ident node from a string.
-&nbsp;&nbsp;<a
+Create a new ident node from a string. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1275"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1275" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1275" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="insert,NimNode,int,NimNode"></a>
@@ -3953,13 +3773,9 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#basename%2CNimNode"><span class="Identifier">basename</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Pull an identifier from prefix/postfix expressions.
-&nbsp;&nbsp;<a
+Pull an identifier from prefix/postfix expressions. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1322"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1322" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1322" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="basename=,NimNode,string"></a>
@@ -4052,13 +3868,9 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#eqIdent%2Cstring%2Cstring"><span class="Identifier">eqIdent</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"EqIdent"</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Style insensitive comparison.
-&nbsp;&nbsp;<a
+Style insensitive comparison. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1371"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1371" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1371" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="eqIdent,NimNode,string"></a>
@@ -4201,13 +4013,9 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#isExported%2CNimNode"><span class="Identifier">isExported</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Returns whether the symbol is exported or not.
-&nbsp;&nbsp;<a
+Returns whether the symbol is exported or not. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1664"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1664" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1664" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 

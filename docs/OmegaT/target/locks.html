@@ -889,13 +889,9 @@ function main() {
 <dt><pre><a href="locks.html#Lock"><span class="Identifier">Lock</span></a> <span class="Other">=</span> <span class="Identifier">SysLock</span></pre></dt>
 <dd>
 
-
-
-Nim lock; whether this is re-entrant or not is unspecified!
-&nbsp;&nbsp;<a
+Nim lock; whether this is re-entrant or not is unspecified!&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/locks.nim#L16"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/locks.nim#L16" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/locks.nim#L16" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="Cond"></a>
@@ -920,26 +916,18 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#initLock%2CSysLock"><span class="Identifier">initLock</span></a><span class="Other">(</span><span class="Identifier">lock</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="locks.html#Lock"><span class="Identifier">Lock</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Initializes the given lock.
-&nbsp;&nbsp;<a
+Initializes the given lock. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/locks.nim#L22"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/locks.nim#L22" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/locks.nim#L22" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="deinitLock,SysLock"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#deinitLock%2CSysLock"><span class="Identifier">deinitLock</span></a><span class="Other">(</span><span class="Identifier">lock</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="locks.html#Lock"><span class="Identifier">Lock</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Frees the resources associated with the lock.
-&nbsp;&nbsp;<a
+Frees the resources associated with the lock. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/locks.nim#L26"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/locks.nim#L26" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/locks.nim#L26" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="tryAcquire,SysLock"></a>
@@ -959,52 +947,36 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#acquire%2CSysLock"><span class="Identifier">acquire</span></a><span class="Other">(</span><span class="Identifier">lock</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="locks.html#Lock"><span class="Identifier">Lock</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Acquires the given lock.
-&nbsp;&nbsp;<a
+Acquires the given lock. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/locks.nim#L34"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/locks.nim#L34" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/locks.nim#L34" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="release,SysLock"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#release%2CSysLock"><span class="Identifier">release</span></a><span class="Other">(</span><span class="Identifier">lock</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="locks.html#Lock"><span class="Identifier">Lock</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Releases the given lock.
-&nbsp;&nbsp;<a
+Releases the given lock. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/locks.nim#L38"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/locks.nim#L38" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/locks.nim#L38" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="initCond,Cond"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#initCond%2CCond"><span class="Identifier">initCond</span></a><span class="Other">(</span><span class="Identifier">cond</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="locks.html#Cond"><span class="Identifier">Cond</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Initializes the given condition variable.
-&nbsp;&nbsp;<a
+Initializes the given condition variable. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/locks.nim#L43"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/locks.nim#L43" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/locks.nim#L43" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="deinitCond,Cond"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#deinitCond%2CCond"><span class="Identifier">deinitCond</span></a><span class="Other">(</span><span class="Identifier">cond</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="locks.html#Cond"><span class="Identifier">Cond</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Frees the resources associated with the lock.
-&nbsp;&nbsp;<a
+Frees the resources associated with the lock. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/locks.nim#L47"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/locks.nim#L47" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/locks.nim#L47" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="wait,Cond,SysLock"></a>
@@ -1042,13 +1014,9 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">template</span> <a href="#withLock.t%2CSysLock%2Cuntyped"><span class="Identifier">withLock</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="locks.html#Lock"><span class="Identifier">Lock</span></a><span class="Other">;</span> <span class="Identifier">body</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">)</span></pre></dt>
 <dd>
 
-
-
-Acquires the given lock, executes the statements in body and releases the lock after the statements finish executing.
-&nbsp;&nbsp;<a
+Acquires the given lock, executes the statements in body and releases the lock after the statements finish executing. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/locks.nim#L59"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/locks.nim#L59" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/locks.nim#L59" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 

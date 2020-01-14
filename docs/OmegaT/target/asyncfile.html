@@ -833,7 +833,7 @@ function main() {
   </div>
   <ul class="simple simple-toc" id="toc-list">
 <li>
-  <a class="reference reference-toplevel" href="#6" id="56">Imports</a>
+  <a class="reference reference-toplevel" href="#6" id="56">インポート</a>
   <ul class="simple simple-toc-section">
     
   </ul>
@@ -903,7 +903,7 @@ function main() {
 
 <span class="Identifier">waitFor</span> <span class="Identifier">main</span><span class="Punctuation">(</span><span class="Punctuation">)</span></pre></p>
   <div class="section" id="6">
-<h1><a class="toc-backref" href="#6">Imports</a></h1>
+<h1><a class="toc-backref" href="#6">インポート</a></h1>
 <dl class="item">
 <a class="reference external" href="asyncdispatch.html">asyncdispatch</a>, <a class="reference external" href="os.html">os</a>, <a class="reference external" href="winlean.html">winlean</a>
 </dl></div>
@@ -932,13 +932,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#getFileSize%2CAsyncFile"><span class="Identifier">getFileSize</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="asyncfile.html#AsyncFile"><span class="Identifier">AsyncFile</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int64"><span class="Identifier">int64</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">OSError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Retrieves the specified file's size.
-&nbsp;&nbsp;<a
+Retrieves the specified file's size. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L72"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L72" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L72" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newAsyncFile,AsyncFD"></a>
@@ -992,39 +988,27 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">FutureError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Reads a single line from the specified file asynchronously.
-&nbsp;&nbsp;<a
+Reads a single line from the specified file asynchronously. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L299"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L299" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L299" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getFilePos,AsyncFile"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getFilePos%2CAsyncFile"><span class="Identifier">getFilePos</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="asyncfile.html#AsyncFile"><span class="Identifier">AsyncFile</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int64"><span class="Identifier">int64</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Retrieves the current position of the file pointer that is used to read from the specified file. The file's first byte has the index zero.
-&nbsp;&nbsp;<a
+Retrieves the current position of the file pointer that is used to read from the specified file. The file's first byte has the index zero. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L312"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L312" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L312" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="setFilePos,AsyncFile,int64"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#setFilePos%2CAsyncFile%2Cint64"><span class="Identifier">setFilePos</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="asyncfile.html#AsyncFile"><span class="Identifier">AsyncFile</span></a><span class="Other">;</span> <span class="Identifier">pos</span><span class="Other">:</span> <a href="system.html#int64"><span class="Identifier">int64</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Sets the position of the file pointer that is used for read/write operations. The file's first byte has the index zero.
-&nbsp;&nbsp;<a
+Sets the position of the file pointer that is used for read/write operations. The file's first byte has the index zero. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L318"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L318" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L318" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="readAll,AsyncFile"></a>
@@ -1032,13 +1016,9 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">FutureError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Reads all data from the specified file.
-&nbsp;&nbsp;<a
+Reads all data from the specified file. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L327"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L327" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L327" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="writeBuffer,AsyncFile,pointer,int"></a>
@@ -1071,26 +1051,18 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#setFileSize%2CAsyncFile%2Cint64"><span class="Identifier">setFileSize</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="asyncfile.html#AsyncFile"><span class="Identifier">AsyncFile</span></a><span class="Other">;</span> <span class="Identifier">length</span><span class="Other">:</span> <a href="system.html#int64"><span class="Identifier">int64</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">OSError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Set a file length.
-&nbsp;&nbsp;<a
+Set a file length. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L481"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L481" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L481" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="close,AsyncFile"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#close%2CAsyncFile"><span class="Identifier">close</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="asyncfile.html#AsyncFile"><span class="Identifier">AsyncFile</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Closes the file specified.
-&nbsp;&nbsp;<a
+Closes the file specified. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L498"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L498" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L498" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="writeFromStream,AsyncFile,FutureStream[string]"></a>
@@ -1111,13 +1083,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">FutureError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Writes data to the specified future stream as the file is read.
-&nbsp;&nbsp;<a
+Writes data to the specified future stream as the file is read. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L522"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L522" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L522" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 

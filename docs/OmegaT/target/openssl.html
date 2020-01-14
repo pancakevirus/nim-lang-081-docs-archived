@@ -833,7 +833,7 @@ function main() {
   </div>
   <ul class="simple simple-toc" id="toc-list">
 <li>
-  <a class="reference reference-toplevel" href="#6" id="56">Imports</a>
+  <a class="reference reference-toplevel" href="#6" id="56">インポート</a>
   <ul class="simple simple-toc-section">
     
   </ul>
@@ -1339,7 +1339,7 @@ function main() {
 <pre class="listing"><span class="Operator">./</span><span class="Identifier">bin</span><span class="Operator">/</span><span class="Identifier">nim</span> <span class="Identifier">c</span> <span class="Operator">-</span><span class="Identifier">d</span><span class="Punctuation">:</span><span class="Identifier">ssl</span> <span class="Operator">-</span><span class="Identifier">p</span><span class="Punctuation">:</span><span class="Operator">.</span> <span class="Operator">-</span><span class="Identifier">r</span> <span class="Identifier">tests</span><span class="Operator">/</span><span class="Identifier">untestable</span><span class="Operator">/</span><span class="Identifier">tssl</span><span class="Operator">.</span><span class="Identifier">nim</span>
 <span class="Operator">./</span><span class="Identifier">bin</span><span class="Operator">/</span><span class="Identifier">nim</span> <span class="Identifier">c</span> <span class="Operator">-</span><span class="Identifier">d</span><span class="Punctuation">:</span><span class="Identifier">ssl</span> <span class="Operator">-</span><span class="Identifier">p</span><span class="Punctuation">:</span><span class="Operator">.</span> <span class="Operator">--</span><span class="Identifier">dynlibOverride</span><span class="Punctuation">:</span><span class="Identifier">ssl</span> <span class="Operator">--</span><span class="Identifier">passl</span><span class="Punctuation">:</span><span class="Operator">-</span><span class="Identifier">lcrypto</span> <span class="Operator">--</span><span class="Identifier">passl</span><span class="Punctuation">:</span><span class="Operator">-</span><span class="Identifier">lssl</span> <span class="Operator">-</span><span class="Identifier">r</span> <span class="Identifier">tests</span><span class="Operator">/</span><span class="Identifier">untestable</span><span class="Operator">/</span><span class="Identifier">tssl</span><span class="Operator">.</span><span class="Identifier">nim</span></pre></p>
   <div class="section" id="6">
-<h1><a class="toc-backref" href="#6">Imports</a></h1>
+<h1><a class="toc-backref" href="#6">インポート</a></h1>
 <dl class="item">
 <a class="reference external" href="winlean.html">winlean</a>, <a class="reference external" href="dynlib.html">dynlib</a>, <a class="reference external" href="strutils.html">strutils</a>
 </dl></div>
@@ -3358,13 +3358,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#SSL_set_tlsext_host_name%2CSslPtr%2Ccstring"><span class="Identifier">SSL_set_tlsext_host_name</span></a><span class="Other">(</span><span class="Identifier">ssl</span><span class="Other">:</span> <a href="openssl.html#SslPtr"><span class="Identifier">SslPtr</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <a href="system.html#cstring"><span class="Identifier">cstring</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Set the SNI server name extension to be used in a client hello. Returns 1 if SNI was set, 0 if current SSL configuration doesn't support SNI.
-&nbsp;&nbsp;<a
+Set the SNI server name extension to be used in a client hello. Returns 1 if SNI was set, 0 if current SSL configuration doesn't support SNI. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/wrappers/openssl.nim#L454"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/wrappers/openssl.nim#L454" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/wrappers/openssl.nim#L454" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="SSL_get_servername,SslPtr,cint"></a>
@@ -3415,13 +3411,9 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">DLLSSLName</span><span class="Other">,</span> <span class="Identifier">importc</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Set callback called when OpenSSL needs PSK (for client).
-&nbsp;&nbsp;<a
+Set callback called when OpenSSL needs PSK (for client). &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/wrappers/openssl.nim#L487"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/wrappers/openssl.nim#L487" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/wrappers/openssl.nim#L487" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="SSL_CTX_set_psk_server_callback,SslCtx,PskServerCallback"></a>
@@ -3429,13 +3421,9 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">DLLSSLName</span><span class="Other">,</span> <span class="Identifier">importc</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Set callback called when OpenSSL needs PSK (for server).
-&nbsp;&nbsp;<a
+Set callback called when OpenSSL needs PSK (for server). &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/wrappers/openssl.nim#L490"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/wrappers/openssl.nim#L490" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/wrappers/openssl.nim#L490" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="SSL_CTX_use_psk_identity_hint,SslCtx,cstring"></a>
@@ -3443,26 +3431,18 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">DLLSSLName</span><span class="Other">,</span> <span class="Identifier">importc</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Set PSK identity hint to use.
-&nbsp;&nbsp;<a
+Set PSK identity hint to use. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/wrappers/openssl.nim#L493"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/wrappers/openssl.nim#L493" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/wrappers/openssl.nim#L493" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="SSL_get_psk_identity,SslPtr"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#SSL_get_psk_identity%2CSslPtr"><span class="Identifier">SSL_get_psk_identity</span></a><span class="Other">(</span><span class="Identifier">ssl</span><span class="Other">:</span> <a href="openssl.html#SslPtr"><span class="Identifier">SslPtr</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#cstring"><span class="Identifier">cstring</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">dynlib</span><span class="Other">:</span> <span class="Identifier">DLLSSLName</span><span class="Other">,</span> <span class="Identifier">importc</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Get PSK identity.
-&nbsp;&nbsp;<a
+Get PSK identity. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/wrappers/openssl.nim#L496"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/wrappers/openssl.nim#L496" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/wrappers/openssl.nim#L496" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="bioNew,PBIO_METHOD"></a>

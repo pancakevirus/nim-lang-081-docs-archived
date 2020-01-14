@@ -839,7 +839,7 @@ function main() {
 <li><a class="reference" id="examples-inserting-data_toc" href="#examples-inserting-data">Inserting data</a></li>
 <li><a class="reference" id="examples-large-example_toc" href="#examples-large-example">Large example</a></li>
 </ul><li>
-  <a class="reference reference-toplevel" href="#6" id="56">Imports</a>
+  <a class="reference reference-toplevel" href="#6" id="56">インポート</a>
   <ul class="simple simple-toc-section">
     
   </ul>
@@ -963,7 +963,7 @@ function main() {
 
 <span class="Identifier">theDb</span><span class="Operator">.</span><span class="Identifier">close</span><span class="Punctuation">(</span><span class="Punctuation">)</span></pre></p>
   <div class="section" id="6">
-<h1><a class="toc-backref" href="#6">Imports</a></h1>
+<h1><a class="toc-backref" href="#6">インポート</a></h1>
 <dl class="item">
 <a class="reference external" href="strutils.html">strutils</a>, <a class="reference external" href="odbcsql.html">odbcsql</a>, <a class="reference external" href="db_common.html">db_common</a>
 </dl></div>
@@ -987,13 +987,9 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><a href="db_odbc.html#Row"><span class="Identifier">Row</span></a> <span class="Other">=</span> <a href="system.html#seq"><span class="Identifier">seq</span></a><span class="Other">[</span><a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">]</span></pre></dt>
 <dd>
 
-
-
-a row of a dataset. NULL database values will be converted to nil.
-&nbsp;&nbsp;<a
+a row of a dataset. NULL database values will be converted to nil. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/impure/db_odbc.nim#L98"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/db_odbc.nim#L98" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/db_odbc.nim#L98" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="InstantRow"></a>
@@ -1031,13 +1027,9 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#dbQuote%2Cstring"><span class="Identifier">dbQuote</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-DB quotes the string.
-&nbsp;&nbsp;<a
+DB quotes the string. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/impure/db_odbc.nim#L186"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/db_odbc.nim#L186" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/db_odbc.nim#L186" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="tryExec,DbConn,SqlQuery,varargs[string,]"></a>
@@ -1045,13 +1037,9 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><a href="db_common.html#ReadDbEffect"><span class="Identifier">ReadDbEffect</span></a><span class="Other">,</span> <a href="db_common.html#WriteDbEffect"><span class="Identifier">WriteDbEffect</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Tries to execute the query and returns true if successful, false otherwise.
-&nbsp;&nbsp;<a
+Tries to execute the query and returns true if successful, false otherwise. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/impure/db_odbc.nim#L237"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/db_odbc.nim#L237" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/db_odbc.nim#L237" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="exec,DbConn,SqlQuery,varargs[string,]"></a>
@@ -1059,13 +1047,9 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><a href="db_common.html#ReadDbEffect"><span class="Identifier">ReadDbEffect</span></a><span class="Other">,</span> <a href="db_common.html#WriteDbEffect"><span class="Identifier">WriteDbEffect</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><a href="db_common.html#DbError"><span class="Identifier">DbError</span></a><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Executes the query and raises EDB if not successful.
-&nbsp;&nbsp;<a
+Executes the query and raises EDB if not successful. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/impure/db_odbc.nim#L256"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/db_odbc.nim#L256" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/db_odbc.nim#L256" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="[],InstantRow,int"></a>
@@ -1112,13 +1096,9 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><a href="db_common.html#ReadDbEffect"><span class="Identifier">ReadDbEffect</span></a><span class="Other">,</span> <a href="db_common.html#WriteDbEffect"><span class="Identifier">WriteDbEffect</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><a href="db_common.html#DbError"><span class="Identifier">DbError</span></a><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Retrieves a single row. If the query doesn't return any rows, this proc will return a Row with empty strings for each column.
-&nbsp;&nbsp;<a
+Retrieves a single row. If the query doesn't return any rows, this proc will return a Row with empty strings for each column. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/impure/db_odbc.nim#L343"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/db_odbc.nim#L343" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/db_odbc.nim#L343" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getAllRows,DbConn,SqlQuery,varargs[string,]"></a>
@@ -1126,13 +1106,9 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><a href="db_common.html#ReadDbEffect"><span class="Identifier">ReadDbEffect</span></a><span class="Other">,</span> <a href="db_common.html#WriteDbEffect"><span class="Identifier">WriteDbEffect</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><a href="db_common.html#DbError"><span class="Identifier">DbError</span></a><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Executes the query and returns the whole result dataset.
-&nbsp;&nbsp;<a
+Executes the query and returns the whole result dataset. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/impure/db_odbc.nim#L371"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/db_odbc.nim#L371" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/db_odbc.nim#L371" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getValue,DbConn,SqlQuery,varargs[string,]"></a>
@@ -1140,13 +1116,9 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><a href="db_common.html#ReadDbEffect"><span class="Identifier">ReadDbEffect</span></a><span class="Other">,</span> <a href="db_common.html#WriteDbEffect"><span class="Identifier">WriteDbEffect</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Executes the query and returns the first column of the first row of the result dataset. Returns "" if the dataset contains no rows or the database value is NULL.
-&nbsp;&nbsp;<a
+Executes the query and returns the first column of the first row of the result dataset. Returns "" if the dataset contains no rows or the database value is NULL. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/impure/db_odbc.nim#L411"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/db_odbc.nim#L411" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/db_odbc.nim#L411" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="tryInsertId,DbConn,SqlQuery,varargs[string,]"></a>
@@ -1154,13 +1126,9 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><a href="db_common.html#ReadDbEffect"><span class="Identifier">ReadDbEffect</span></a><span class="Other">,</span> <a href="db_common.html#WriteDbEffect"><span class="Identifier">WriteDbEffect</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Executes the query (typically "INSERT") and returns the generated ID for the row or -1 in case of an error.
-&nbsp;&nbsp;<a
+Executes the query (typically "INSERT") and returns the generated ID for the row or -1 in case of an error. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/impure/db_odbc.nim#L422"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/db_odbc.nim#L422" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/db_odbc.nim#L422" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="insertId,DbConn,SqlQuery,varargs[string,]"></a>
@@ -1168,13 +1136,9 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><a href="db_common.html#ReadDbEffect"><span class="Identifier">ReadDbEffect</span></a><span class="Other">,</span> <a href="db_common.html#WriteDbEffect"><span class="Identifier">WriteDbEffect</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><a href="db_common.html#DbError"><span class="Identifier">DbError</span></a><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Executes the query (typically "INSERT") and returns the generated ID for the row.
-&nbsp;&nbsp;<a
+Executes the query (typically "INSERT") and returns the generated ID for the row. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/impure/db_odbc.nim#L446"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/db_odbc.nim#L446" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/db_odbc.nim#L446" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="execAffectedRows,DbConn,SqlQuery,varargs[string,]"></a>
@@ -1195,13 +1159,9 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#close%2CDbConn"><span class="Identifier">close</span></a><span class="Other">(</span><span class="Identifier">db</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="db_odbc.html#DbConn"><span class="Identifier">DbConn</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><a href="db_common.html#WriteDbEffect"><span class="Identifier">WriteDbEffect</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Closes the database connection.
-&nbsp;&nbsp;<a
+Closes the database connection. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/impure/db_odbc.nim#L469"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/db_odbc.nim#L469" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/db_odbc.nim#L469" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="open,string,string,string,string"></a>
@@ -1256,13 +1216,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><a href="db_common.html#ReadDbEffect"><span class="Identifier">ReadDbEffect</span></a><span class="Other">,</span> <a href="db_common.html#WriteDbEffect"><span class="Identifier">WriteDbEffect</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">DbError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Same as fastRows but returns a handle that can be used to get column text on demand using []. Returned handle is valid only within the iterator body.
-&nbsp;&nbsp;<a
+Same as fastRows but returns a handle that can be used to get column text on demand using []. Returned handle is valid only within the iterator body. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/impure/db_odbc.nim#L302"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/db_odbc.nim#L302" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/db_odbc.nim#L302" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="rows.i,DbConn,SqlQuery,varargs[string,]"></a>

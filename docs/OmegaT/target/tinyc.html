@@ -1120,13 +1120,9 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#addFile%2CPccState%2Ccstring"><span class="Identifier">addFile</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="tinyc.html#PccState"><span class="Identifier">PccState</span></a><span class="Other">;</span> <span class="Identifier">filename</span><span class="Other">:</span> <a href="system.html#cstring"><span class="Identifier">cstring</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#cint"><span class="Identifier">cint</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">"tcc_add_file"</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-add a file (either a C file, dll, an object, a library or an ld script). Return -1 if error.
-&nbsp;&nbsp;<a
+add a file (either a C file, dll, an object, a library or an ld script). Return -1 if error. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/wrappers/tinyc.nim#L49"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/wrappers/tinyc.nim#L49" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/wrappers/tinyc.nim#L49" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="compileString,PccState,cstring"></a>
@@ -1134,13 +1130,9 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">"tcc_compile_string"</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-compile a string containing a C source. Return non zero if error.
-&nbsp;&nbsp;<a
+compile a string containing a C source. Return non zero if error. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/wrappers/tinyc.nim#L54"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/wrappers/tinyc.nim#L54" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/wrappers/tinyc.nim#L54" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="setOutputType,PccState,cint"></a>
@@ -1204,26 +1196,18 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">"tcc_output_file"</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-output an executable, library or object file. DO NOT call tcc_relocate() before.
-&nbsp;&nbsp;<a
+output an executable, library or object file. DO NOT call tcc_relocate() before. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/wrappers/tinyc.nim#L85"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/wrappers/tinyc.nim#L85" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/wrappers/tinyc.nim#L85" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="run,PccState,cint,cstringArray"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#run%2CPccState%2Ccint%2CcstringArray"><span class="Identifier">run</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="tinyc.html#PccState"><span class="Identifier">PccState</span></a><span class="Other">;</span> <span class="Identifier">argc</span><span class="Other">:</span> <a href="system.html#cint"><span class="Identifier">cint</span></a><span class="Other">;</span> <span class="Identifier">argv</span><span class="Other">:</span> <a href="system.html#cstringArray"><span class="Identifier">cstringArray</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#cint"><span class="Identifier">cint</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">"tcc_run"</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-link and run main() function and return its value. DO NOT call tcc_relocate() before.
-&nbsp;&nbsp;<a
+link and run main() function and return its value. DO NOT call tcc_relocate() before. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/wrappers/tinyc.nim#L90"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/wrappers/tinyc.nim#L90" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/wrappers/tinyc.nim#L90" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="relocate,PccState,pointer"></a>
