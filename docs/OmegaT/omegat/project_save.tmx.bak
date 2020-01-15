@@ -5,11 +5,39 @@
   <body>
 <!-- Default translations -->
     <tu>
+      <note>この引用句はロバートさんの発言だから英語から日本語へ翻訳するときhは一人称の「I (私は)」を省いて構わない。付けるなら、「私に言わせるならば、偉大なる料理人こそ心より尊敬する芸術家だ」あたりでしょう。
+
+「～すべき」は文中に無い意訳。強調文として使っています。もしかしたら should を省いているかもしれません。
+</note>
+      <tuv lang="EN-US">
+        <seg>"A great chef is an artist that I truly respect" -- Robert Stack.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T073215Z" creationid="isVowel" creationdate="20200115T073215Z">
+        <seg>"偉大なる料理人こそ心より尊敬すべき芸術家です。" -- ロバート・スタック</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv lang="EN-US">
         <seg>"Der Mensch ist doch ein Augentier -- schöne Dinge wünsch ich mir."</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200114T072641Z" creationid="isVowel" creationdate="20200113T032410Z">
-        <seg>"人間は視覚動物である ― だから、ボクはキミに美しさを求めた。"</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200114T091607Z" creationid="isVowel" creationdate="20200113T032410Z">
+        <seg>"人間は視覚の動物である ― だから、ボクはキミに美しくいて欲しい。"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>0 (lowest)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T061036Z" creationid="isVowel" creationdate="20200115T061036Z">
+        <seg>0 (最低)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>10 (highest)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T061059Z" creationid="isVowel" creationdate="20200115T061059Z">
+        <seg>10 (最高)</seg>
       </tuv>
     </tu>
     <tu>
@@ -38,12 +66,148 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;e0&gt;assignment operator&lt;/e0&gt; (like &lt;t1&gt;&lt;s2&gt;+=&lt;/s2&gt;&lt;/t1&gt;, &lt;t3&gt;&lt;s4&gt;*=&lt;/s4&gt;&lt;/t3&gt;)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T060832Z" creationid="isVowel" creationdate="20200115T060832Z">
+        <seg>&lt;e0&gt;代入演算子&lt;/e0&gt; (&lt;t1&gt;&lt;s2&gt;+=&lt;/s2&gt;&lt;/t1&gt;, &lt;t3&gt;&lt;s4&gt;*=&lt;/s4&gt;&lt;/t3&gt; など)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;# Module A&lt;/s0&gt;
+&lt;s1&gt;type&lt;/s1&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T053307Z" creationid="isVowel" creationdate="20200115T053307Z">
+        <seg>&lt;s0&gt;# モジュール A&lt;/s0&gt;
+&lt;s1&gt;type&lt;/s1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;# Module A&lt;/s0&gt;
+&lt;s1&gt;var&lt;/s1&gt; &lt;s2&gt;x&lt;/s2&gt;&lt;s3&gt;*:&lt;/s3&gt; &lt;s4&gt;string&lt;/s4&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T053122Z" creationid="isVowel" creationdate="20200115T053122Z">
+        <seg>&lt;s0&gt;# モジュール A&lt;/s0&gt;
+&lt;s1&gt;var&lt;/s1&gt; &lt;s2&gt;x&lt;/s2&gt;&lt;s3&gt;*:&lt;/s3&gt; &lt;s4&gt;string&lt;/s4&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;# Module B&lt;/s0&gt;
+&lt;s1&gt;import&lt;/s1&gt; &lt;s2&gt;A&lt;/s2&gt;  &lt;s3&gt;# A is not parsed here!</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T053316Z" creationid="isVowel" creationdate="20200115T053316Z">
+        <seg>&lt;s0&gt;# モジュール B&lt;/s0&gt;
+&lt;s1&gt;import&lt;/s1&gt; &lt;s2&gt;A&lt;/s2&gt;  &lt;s3&gt;# A is not parsed here!</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;# Module B&lt;/s0&gt;
+&lt;s1&gt;var&lt;/s1&gt; &lt;s2&gt;x&lt;/s2&gt;&lt;s3&gt;*:&lt;/s3&gt; &lt;s4&gt;int&lt;/s4&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T053126Z" creationid="isVowel" creationdate="20200115T053126Z">
+        <seg>&lt;s0&gt;# モジュール B&lt;/s0&gt;
+&lt;s1&gt;var&lt;/s1&gt; &lt;s2&gt;x&lt;/s2&gt;&lt;s3&gt;*:&lt;/s3&gt; &lt;s4&gt;int&lt;/s4&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;# Module C&lt;/s0&gt;
+&lt;s1&gt;import&lt;/s1&gt; &lt;s2&gt;A&lt;/s2&gt;&lt;s3&gt;,&lt;/s3&gt; &lt;s4&gt;B&lt;/s4&gt;
+&lt;s5&gt;write&lt;/s5&gt;&lt;s6&gt;(&lt;/s6&gt;&lt;s7&gt;stdout&lt;/s7&gt;&lt;s8&gt;,&lt;/s8&gt; &lt;s9&gt;x&lt;/s9&gt;&lt;s10&gt;)&lt;/s10&gt; &lt;s11&gt;# error: x is ambiguous&lt;/s11&gt;
+&lt;s12&gt;write&lt;/s12&gt;&lt;s13&gt;(&lt;/s13&gt;&lt;s14&gt;stdout&lt;/s14&gt;&lt;s15&gt;,&lt;/s15&gt; &lt;s16&gt;A&lt;/s16&gt;&lt;s17&gt;.&lt;/s17&gt;&lt;s18&gt;x&lt;/s18&gt;&lt;s19&gt;)&lt;/s19&gt; &lt;s20&gt;# no error: qualifier used&lt;/s20&gt;
+
+&lt;s21&gt;var&lt;/s21&gt; &lt;s22&gt;x&lt;/s22&gt; &lt;s23&gt;=&lt;/s23&gt; &lt;s24&gt;4&lt;/s24&gt;
+&lt;s25&gt;write&lt;/s25&gt;&lt;s26&gt;(&lt;/s26&gt;&lt;s27&gt;stdout&lt;/s27&gt;&lt;s28&gt;,&lt;/s28&gt; &lt;s29&gt;x&lt;/s29&gt;&lt;s30&gt;)&lt;/s30&gt; &lt;s31&gt;# not ambiguous: uses the module C's x&lt;/s31&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T053128Z" creationid="isVowel" creationdate="20200115T053128Z">
+        <seg>&lt;s0&gt;# モジュール C&lt;/s0&gt;
+&lt;s1&gt;import&lt;/s1&gt; &lt;s2&gt;A&lt;/s2&gt;&lt;s3&gt;,&lt;/s3&gt; &lt;s4&gt;B&lt;/s4&gt;
+&lt;s5&gt;write&lt;/s5&gt;&lt;s6&gt;(&lt;/s6&gt;&lt;s7&gt;stdout&lt;/s7&gt;&lt;s8&gt;,&lt;/s8&gt; &lt;s9&gt;x&lt;/s9&gt;&lt;s10&gt;)&lt;/s10&gt; &lt;s11&gt;# error: x is ambiguous&lt;/s11&gt;
+&lt;s12&gt;write&lt;/s12&gt;&lt;s13&gt;(&lt;/s13&gt;&lt;s14&gt;stdout&lt;/s14&gt;&lt;s15&gt;,&lt;/s15&gt; &lt;s16&gt;A&lt;/s16&gt;&lt;s17&gt;.&lt;/s17&gt;&lt;s18&gt;x&lt;/s18&gt;&lt;s19&gt;)&lt;/s19&gt; &lt;s20&gt;# no error: qualifier used&lt;/s20&gt;
+
+&lt;s21&gt;var&lt;/s21&gt; &lt;s22&gt;x&lt;/s22&gt; &lt;s23&gt;=&lt;/s23&gt; &lt;s24&gt;4&lt;/s24&gt;
+&lt;s25&gt;write&lt;/s25&gt;&lt;s26&gt;(&lt;/s26&gt;&lt;s27&gt;stdout&lt;/s27&gt;&lt;s28&gt;,&lt;/s28&gt; &lt;s29&gt;x&lt;/s29&gt;&lt;s30&gt;)&lt;/s30&gt; &lt;s31&gt;# not ambiguous: uses the module C's x&lt;/s31&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;s0&gt;# This is a comment&lt;/s0&gt;
 &lt;s1&gt;echo&lt;/s1&gt; &lt;s2&gt;"What's your name?</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T074428Z" creationid="isVowel" creationdate="20200114T074428Z">
         <seg>&lt;s0&gt;# これはコメントです&lt;/s0&gt;
 &lt;s1&gt;echo&lt;/s1&gt; &lt;s2&gt;"What's your name?</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;# module A&lt;/s0&gt;
+&lt;s1&gt;import&lt;/s1&gt; &lt;s2&gt;B&lt;/s2&gt;
+&lt;s3&gt;export&lt;/s3&gt; &lt;s4&gt;B&lt;/s4&gt;&lt;s5&gt;.&lt;/s5&gt;&lt;s6&gt;MyObject&lt;/s6&gt;
+
+&lt;s7&gt;proc&lt;/s7&gt; &lt;s8&gt;`&lt;/s8&gt;&lt;s9&gt;$&lt;/s9&gt;&lt;s10&gt;`&lt;/s10&gt;&lt;s11&gt;*&lt;/s11&gt;&lt;s12&gt;(&lt;/s12&gt;&lt;s13&gt;x&lt;/s13&gt;&lt;s14&gt;:&lt;/s14&gt; &lt;s15&gt;MyObject&lt;/s15&gt;&lt;s16&gt;)&lt;/s16&gt;&lt;s17&gt;:&lt;/s17&gt; &lt;s18&gt;string&lt;/s18&gt; &lt;s19&gt;=&lt;/s19&gt; &lt;s20&gt;"my object"&lt;/s20&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T053210Z" creationid="isVowel" creationdate="20200115T053210Z">
+        <seg>&lt;s0&gt;# モジュール A&lt;/s0&gt;
+&lt;s1&gt;import&lt;/s1&gt; &lt;s2&gt;B&lt;/s2&gt;
+&lt;s3&gt;export&lt;/s3&gt; &lt;s4&gt;B&lt;/s4&gt;&lt;s5&gt;.&lt;/s5&gt;&lt;s6&gt;MyObject&lt;/s6&gt;
+
+&lt;s7&gt;proc&lt;/s7&gt; &lt;s8&gt;`&lt;/s8&gt;&lt;s9&gt;$&lt;/s9&gt;&lt;s10&gt;`&lt;/s10&gt;&lt;s11&gt;*&lt;/s11&gt;&lt;s12&gt;(&lt;/s12&gt;&lt;s13&gt;x&lt;/s13&gt;&lt;s14&gt;:&lt;/s14&gt; &lt;s15&gt;MyObject&lt;/s15&gt;&lt;s16&gt;)&lt;/s16&gt;&lt;s17&gt;:&lt;/s17&gt; &lt;s18&gt;string&lt;/s18&gt; &lt;s19&gt;=&lt;/s19&gt; &lt;s20&gt;"my object"&lt;/s20&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;# module B&lt;/s0&gt;
+&lt;s1&gt;type&lt;/s1&gt; &lt;s2&gt;MyObject&lt;/s2&gt;&lt;s3&gt;*&lt;/s3&gt; &lt;s4&gt;=&lt;/s4&gt; &lt;s5&gt;object&lt;/s5&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T053203Z" creationid="isVowel" creationdate="20200115T053203Z">
+        <seg>&lt;s0&gt;# モジュール B&lt;/s0&gt;
+&lt;s1&gt;type&lt;/s1&gt; &lt;s2&gt;MyObject&lt;/s2&gt;&lt;s3&gt;*&lt;/s3&gt; &lt;s4&gt;=&lt;/s4&gt; &lt;s5&gt;object&lt;/s5&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;# module C&lt;/s0&gt;
+&lt;s1&gt;import&lt;/s1&gt; &lt;s2&gt;A&lt;/s2&gt;
+
+&lt;s3&gt;# B.MyObject has been imported implicitly here:&lt;/s3&gt;
+&lt;s4&gt;var&lt;/s4&gt; &lt;s5&gt;x&lt;/s5&gt;&lt;s6&gt;:&lt;/s6&gt; &lt;s7&gt;MyObject&lt;/s7&gt;
+&lt;s8&gt;echo&lt;/s8&gt; &lt;s9&gt;$&lt;/s9&gt;&lt;s10&gt;x&lt;/s10&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T053213Z" creationid="isVowel" creationdate="20200115T053213Z">
+        <seg>&lt;s0&gt;# モジュール C&lt;/s0&gt;
+&lt;s1&gt;import&lt;/s1&gt; &lt;s2&gt;A&lt;/s2&gt;
+
+&lt;s3&gt;# B.MyObject has been imported implicitly here:&lt;/s3&gt;
+&lt;s4&gt;var&lt;/s4&gt; &lt;s5&gt;x&lt;/s5&gt;&lt;s6&gt;:&lt;/s6&gt; &lt;s7&gt;MyObject&lt;/s7&gt;
+&lt;s8&gt;echo&lt;/s8&gt; &lt;s9&gt;$&lt;/s9&gt;&lt;s10&gt;x&lt;/s10&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Note&lt;/s0&gt;: This document is a draft!</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T050656Z" creationid="isVowel" creationdate="20200115T050656Z">
+        <seg>&lt;s0&gt;備考&lt;/s0&gt;: このドキュメントは草稿段階です！</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;t3&gt;&lt;s4&gt;koch&lt;/s4&gt;&lt;/t3&gt; is used mainly to build the Nim compiler, but it can also be used for other tasks.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T080943Z" creationid="isVowel" creationdate="20200115T075103Z">
+        <seg>&lt;t3&gt;&lt;s4&gt;koch&lt;/s4&gt;&lt;/t3&gt; は、主に Nim コンパイラのビルドで使いますが、それ以外の作業にも使います。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>API symbols</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T070447Z" creationid="isVowel" creationdate="20200115T070447Z">
+        <seg>API シンボル</seg>
       </tuv>
     </tu>
     <tu>
@@ -80,6 +244,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Anonymous Procs</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T060501Z" creationid="isVowel" creationdate="20200115T060501Z">
+        <seg>無名プロシージャ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Arrays</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T042127Z" creationid="isVowel" creationdate="20200113T042127Z">
@@ -92,6 +264,14 @@
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T081740Z" creationid="isVowel" creationdate="20200114T081740Z">
         <seg>Assembler ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Associativity</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T023705Z" creationid="isVowel" creationdate="20200115T023705Z">
+        <seg>結合性</seg>
       </tuv>
     </tu>
     <tu>
@@ -112,6 +292,22 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Auto type</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T024731Z" creationid="isVowel" creationdate="20200115T024731Z">
+        <seg>Auto 型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Avoiding SQL injection attacks</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T030542Z" creationid="isVowel" creationdate="20200115T030542Z">
+        <seg>SQL インジェクション攻撃の回避</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Basic types</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T042004Z" creationid="isVowel" creationdate="20200113T042004Z">
@@ -124,6 +320,14 @@
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T045553Z" creationid="isVowel" creationdate="20200113T045402Z">
         <seg>基本の用法</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Bind statement</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T021624Z" creationid="isVowel" creationdate="20200115T021624Z">
+        <seg>Bind ステートメント</seg>
       </tuv>
     </tu>
     <tu>
@@ -148,6 +352,14 @@
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T081821Z" creationid="isVowel" creationdate="20200114T081821Z">
         <seg>Block 式</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Block scope</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T063924Z" creationid="isVowel" creationdate="20200115T063924Z">
+        <seg>ブロックのスコープ</seg>
       </tuv>
     </tu>
     <tu>
@@ -224,6 +436,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Closures</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T031305Z" creationid="isVowel" creationdate="20200115T031305Z">
+        <seg>クロージャ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>CodegenDecl pragma</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T083600Z" creationid="isVowel" creationdate="20200114T083600Z">
@@ -256,10 +476,34 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Compiler Messages</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T054656Z" creationid="isVowel" creationdate="20200115T054028Z">
+        <seg>コンパイラメッセージ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Const section</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T024452Z" creationid="isVowel" creationdate="20200115T024452Z">
+        <seg>Const セクション</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Constants</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T032220Z" creationid="isVowel" creationdate="20200113T032220Z">
         <seg>定数</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Constants and Constant Expressions</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T024013Z" creationid="isVowel" creationdate="20200115T024013Z">
+        <seg>定数と定数式</seg>
       </tuv>
     </tu>
     <tu>
@@ -320,6 +564,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Documents: &lt;a0&gt;API naming design&lt;/a0&gt;, &lt;a1&gt;Code owners&lt;/a1&gt;, &lt;a2&gt;Contributing&lt;/a2&gt;, &lt;a3&gt;Embedded Stack Trace Profiler (ESTP) User Guide&lt;/a3&gt;, &lt;a4&gt;Hot code reloading&lt;/a4&gt;, &lt;a5&gt;Internals of the Nim Compiler&lt;/a5&gt;, &lt;a6&gt;Nim Backend Integration&lt;/a6&gt;, &lt;a7&gt;Nim Compiler User Guide&lt;/a7&gt;, &lt;a8&gt;Nim Destructors and Move Semantics&lt;/a8&gt;, &lt;a9&gt;Nim DocGen Tools Guide&lt;/a9&gt;, &lt;a10&gt;Nim Documentation Overview&lt;/a10&gt;, &lt;a11&gt;Nim Enhancement Proposal #1 - Standard Library Style Guide&lt;/a11&gt;, &lt;a12&gt;Nim Experimental Features&lt;/a12&gt;, &lt;a13&gt;Nim IDE Integration Guide&lt;/a13&gt;, &lt;a14&gt;Nim IDE Integration Guide&lt;/a14&gt;, &lt;a15&gt;Nim maintenance script&lt;/a15&gt;, &lt;a16&gt;Nim Manual&lt;/a16&gt;, &lt;a17&gt;Nim Standard Library&lt;/a17&gt;, &lt;a18&gt;Nim Tutorial (Part I)&lt;/a18&gt;, &lt;a19&gt;Nim Tutorial (Part II)&lt;/a19&gt;, &lt;a20&gt;Nim Tutorial (Part III)&lt;/a20&gt;, &lt;a21&gt;Nim's Garbage Collector&lt;/a21&gt;, &lt;a22&gt;nimgrep User's manual&lt;/a22&gt;, &lt;a23&gt;niminst User's manual&lt;/a23&gt;, &lt;a24&gt;NimScript&lt;/a24&gt;, &lt;a25&gt;Packaging Nim&lt;/a25&gt;, &lt;a26&gt;Source Code Filters&lt;/a26&gt;, &lt;a27&gt;Tools available with Nim&lt;/a27&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T070857Z" creationid="isVowel" creationdate="20200115T064940Z">
+        <seg>ドキュメント: &lt;a0&gt;API naming design&lt;/a0&gt;, &lt;a1&gt;Code owners&lt;/a1&gt;, &lt;a2&gt;Contributing&lt;/a2&gt;, &lt;a3&gt;Embedded Stack Trace Profiler (ESTP) User Guide&lt;/a3&gt;, &lt;a4&gt;Hot code reloading&lt;/a4&gt;, &lt;a5&gt;Nim コンパイラの内部構造&lt;/a5&gt;, &lt;a6&gt;Nim Backend Integration&lt;/a6&gt;, &lt;a7&gt;Nim Compiler User Guide&lt;/a7&gt;, &lt;a8&gt;Nim Destructors and Move Semantics&lt;/a8&gt;, &lt;a9&gt;Nim DocGen Tools Guide&lt;/a9&gt;, &lt;a10&gt;Nim ドキュメンテーションの概要&lt;/a10&gt;, &lt;a11&gt;Nim Enhancement Proposal #1 - 標準ライブラリのスタイルガイド&lt;/a11&gt;, &lt;a12&gt;Nim Experimental Features&lt;/a12&gt;, &lt;a13&gt;Nim IDE Integration Guide&lt;/a13&gt;, &lt;a14&gt;Nim IDE Integration Guide&lt;/a14&gt;, &lt;a15&gt;Nim メンテナンス・スクリプト&lt;/a15&gt;, &lt;a16&gt;Nim マニュアル&lt;/a16&gt;, &lt;a17&gt;Nim 標準ライブラリ&lt;/a17&gt;, &lt;a18&gt;Nim チュートリアル（第１部）&lt;/a18&gt;, &lt;a19&gt;Nim チュートリアル（第２部）&lt;/a19&gt;, &lt;a20&gt;Nim チュートリアル（第３部）&lt;/a20&gt;, &lt;a21&gt;Nim's Garbage Collector&lt;/a21&gt;, &lt;a22&gt;nimgrep User's manual&lt;/a22&gt;, &lt;a23&gt;niminst User's manual&lt;/a23&gt;, &lt;a24&gt;NimScript&lt;/a24&gt;, &lt;a25&gt;Packaging Nim&lt;/a25&gt;, &lt;a26&gt;Source Code Filters&lt;/a26&gt;, &lt;a27&gt;Tools available with Nim&lt;/a27&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Emit pragma</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082156Z" creationid="isVowel" creationdate="20200114T082156Z">
@@ -340,6 +592,14 @@
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T042102Z" creationid="isVowel" creationdate="20200113T042102Z">
         <seg>列挙型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Escape sequence</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T054713Z" creationid="isVowel" creationdate="20200115T054713Z">
+        <seg>エスケープシーケンス</seg>
       </tuv>
     </tu>
     <tu>
@@ -376,6 +636,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Export statement</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T021929Z" creationid="isVowel" creationdate="20200115T021929Z">
+        <seg>Export ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Exportc pragma</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T083613Z" creationid="isVowel" creationdate="20200114T083613Z">
@@ -408,6 +676,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Foreign function interface</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T021154Z" creationid="isVowel" creationdate="20200115T021154Z">
+        <seg>外部関数インタフェース</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Forward declarations</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041713Z" creationid="isVowel" creationdate="20200113T041713Z">
@@ -424,6 +700,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Func</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T024358Z" creationid="isVowel" creationdate="20200115T024358Z">
+        <seg>関数</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Funcs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T043852Z" creationid="isVowel" creationdate="20200113T043852Z">
@@ -432,10 +716,26 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Future directions</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T060434Z" creationid="isVowel" creationdate="20200115T060434Z">
+        <seg>将来的方向</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>GUI libraries</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T050413Z" creationid="isVowel" creationdate="20200113T050413Z">
         <seg>GUI ライブラリ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2019-11-27 09:14:28 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T022127Z" creationid="isVowel" creationdate="20200115T022127Z">
+        <seg>生成日時: 2019年11月27日 午前09時14分28秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
@@ -460,6 +760,22 @@
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T023747Z" creationid="isVowel" creationdate="20200113T023747Z">
         <seg>生成日時: 2019年11月27日 午前09時16分35秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generics</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T063848Z" creationid="isVowel" creationdate="20200115T063848Z">
+        <seg>ジェネリック</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Grammar</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T023847Z" creationid="isVowel" creationdate="20200115T023847Z">
+        <seg>文法</seg>
       </tuv>
     </tu>
     <tu>
@@ -500,6 +816,14 @@
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041158Z" creationid="isVowel" creationdate="20200113T041158Z">
         <seg>If ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Import statement</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T021908Z" creationid="isVowel" creationdate="20200115T021908Z">
+        <seg>Import ステートメント</seg>
       </tuv>
     </tu>
     <tu>
@@ -602,8 +926,30 @@
       <tuv lang="EN-US">
         <seg>Introduction</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200113T041743Z" creationid="isVowel" creationdate="20200113T041743Z">
-        <seg>紹介</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T080337Z" creationid="isVowel" creationdate="20200113T041743Z">
+        <seg>はじめに</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Is operator</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T021547Z" creationid="isVowel" creationdate="20200115T021547Z">
+        <seg>Is 演算子</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>make 直訳してしまうと動詞の make と混同してしまう恐れがあるため、「make コマンド」と意味を強調しています。
+
+advantageは「優れた」へ意訳しています。
+
+replacementは「代替手段」を指します。このまま「代替ツール」と訳すると違和感がありますので、単に「ツール」と意訳しています。
+</note>
+      <tuv lang="EN-US">
+        <seg>It is a replacement for make and shell scripting with the advantage that it is much more portable.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T074129Z" creationid="isVowel" creationdate="20200115T073613Z">
+        <seg>make コマンドやシェルスクリプトよりも高い汎用性がある優れたツールです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -612,6 +958,14 @@
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041721Z" creationid="isVowel" creationdate="20200113T041721Z">
         <seg>イテレータ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Iterators and the for statement</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T055856Z" creationid="isVowel" creationdate="20200115T055856Z">
+        <seg>イテレータと for ステートメント</seg>
       </tuv>
     </tu>
     <tu>
@@ -648,6 +1002,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Macros</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T021802Z" creationid="isVowel" creationdate="20200115T021802Z">
+        <seg>マクロ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Made with Nim.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T023708Z" creationid="isVowel" creationdate="20200113T023708Z">
@@ -664,10 +1026,50 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Meaning</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T055242Z" creationid="isVowel" creationdate="20200115T055242Z">
+        <seg>説明</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Mixin statement</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T021730Z" creationid="isVowel" creationdate="20200115T021730Z">
+        <seg>Mixin ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Module scope</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T063952Z" creationid="isVowel" creationdate="20200115T063952Z">
+        <seg>モジュールのスコープ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Modules</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T033134Z" creationid="isVowel" creationdate="20200113T033134Z">
         <seg>モジュール</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Modules: &lt;a0&gt;algorithm&lt;/a0&gt;, &lt;a1&gt;assertions&lt;/a1&gt;, &lt;a2&gt;asyncdispatch&lt;/a2&gt;, &lt;a3&gt;asyncfile&lt;/a3&gt;, &lt;a4&gt;asyncftpclient&lt;/a4&gt;, &lt;a5&gt;asyncfutures&lt;/a5&gt;, &lt;a6&gt;asynchttpserver&lt;/a6&gt;, &lt;a7&gt;asyncjs&lt;/a7&gt;, &lt;a8&gt;asyncnet&lt;/a8&gt;, &lt;a9&gt;asyncstreams&lt;/a9&gt;, &lt;a10&gt;base64&lt;/a10&gt;, &lt;a11&gt;bitops&lt;/a11&gt;, &lt;a12&gt;browsers&lt;/a12&gt;, &lt;a13&gt;cgi&lt;/a13&gt;, &lt;a14&gt;chains&lt;/a14&gt;, &lt;a15&gt;channels&lt;/a15&gt;, &lt;a16&gt;colors&lt;/a16&gt;, &lt;a17&gt;complex&lt;/a17&gt;, &lt;a18&gt;cookies&lt;/a18&gt;, &lt;a19&gt;coro&lt;/a19&gt;, &lt;a20&gt;cpuinfo&lt;/a20&gt;, &lt;a21&gt;cpuload&lt;/a21&gt;, &lt;a22&gt;critbits&lt;/a22&gt;, &lt;a23&gt;cstrutils&lt;/a23&gt;, &lt;a24&gt;db_common&lt;/a24&gt;, &lt;a25&gt;db_mysql&lt;/a25&gt;, &lt;a26&gt;db_odbc&lt;/a26&gt;, &lt;a27&gt;db_postgres&lt;/a27&gt;, &lt;a28&gt;db_sqlite&lt;/a28&gt;, &lt;a29&gt;deques&lt;/a29&gt;, &lt;a30&gt;diff&lt;/a30&gt;, &lt;a31&gt;distros&lt;/a31&gt;, &lt;a32&gt;dollars&lt;/a32&gt;, &lt;a33&gt;dom&lt;/a33&gt;, &lt;a34&gt;dynlib&lt;/a34&gt;, &lt;a35&gt;editdistance&lt;/a35&gt;, &lt;a36&gt;encodings&lt;/a36&gt;, &lt;a37&gt;endians&lt;/a37&gt;, &lt;a38&gt;fenv&lt;/a38&gt;, &lt;a39&gt;hashes&lt;/a39&gt;, &lt;a40&gt;heapqueue&lt;/a40&gt;, &lt;a41&gt;highlite&lt;/a41&gt;, &lt;a42&gt;htmlgen&lt;/a42&gt;, &lt;a43&gt;htmlparser&lt;/a43&gt;, &lt;a44&gt;httpclient&lt;/a44&gt;, &lt;a45&gt;httpcore&lt;/a45&gt;, &lt;a46&gt;intsets&lt;/a46&gt;, &lt;a47&gt;io&lt;/a47&gt;, &lt;a48&gt;iterators&lt;/a48&gt;, &lt;a49&gt;jsconsole&lt;/a49&gt;, &lt;a50&gt;jsffi&lt;/a50&gt;, &lt;a51&gt;json&lt;/a51&gt;, &lt;a52&gt;lenientops&lt;/a52&gt;, &lt;a53&gt;lexbase&lt;/a53&gt;, &lt;a54&gt;linenoise&lt;/a54&gt;, &lt;a55&gt;lists&lt;/a55&gt;, &lt;a56&gt;locks&lt;/a56&gt;, &lt;a57&gt;logging&lt;/a57&gt;, &lt;a58&gt;macros&lt;/a58&gt;, &lt;a59&gt;marshal&lt;/a59&gt;, &lt;a60&gt;math&lt;/a60&gt;, &lt;a61&gt;md5&lt;/a61&gt;, &lt;a62&gt;memfiles&lt;/a62&gt;, &lt;a63&gt;mersenne&lt;/a63&gt;, &lt;a64&gt;mimetypes&lt;/a64&gt;, &lt;a65&gt;monotimes&lt;/a65&gt;, &lt;a66&gt;nativesockets&lt;/a66&gt;, &lt;a67&gt;net&lt;/a67&gt;, &lt;a68&gt;nimprof&lt;/a68&gt;, &lt;a69&gt;nimscript&lt;/a69&gt;, &lt;a70&gt;nre&lt;/a70&gt;, &lt;a71&gt;oids&lt;/a71&gt;, &lt;a72&gt;options&lt;/a72&gt;, &lt;a73&gt;os&lt;/a73&gt;, &lt;a74&gt;osproc&lt;/a74&gt;, &lt;a75&gt;oswalkdir&lt;/a75&gt;, &lt;a76&gt;parsecfg&lt;/a76&gt;, &lt;a77&gt;parsecsv&lt;/a77&gt;, &lt;a78&gt;parsejson&lt;/a78&gt;, &lt;a79&gt;parseopt&lt;/a79&gt;, &lt;a80&gt;parsesql&lt;/a80&gt;, &lt;a81&gt;parseutils&lt;/a81&gt;, &lt;a82&gt;parsexml&lt;/a82&gt;, &lt;a83&gt;pegs&lt;/a83&gt;, &lt;a84&gt;posix_utils&lt;/a84&gt;, &lt;a85&gt;punycode&lt;/a85&gt;, &lt;a86&gt;random&lt;/a86&gt;, &lt;a87&gt;rationals&lt;/a87&gt;, &lt;a88&gt;rdstdin&lt;/a88&gt;, &lt;a89&gt;re&lt;/a89&gt;, &lt;a90&gt;registry&lt;/a90&gt;, &lt;a91&gt;rlocks&lt;/a91&gt;, &lt;a92&gt;ropes&lt;/a92&gt;, &lt;a93&gt;rst&lt;/a93&gt;, &lt;a94&gt;rstast&lt;/a94&gt;, &lt;a95&gt;rstgen&lt;/a95&gt;, &lt;a96&gt;rtarrays&lt;/a96&gt;, &lt;a97&gt;segfaults&lt;/a97&gt;, &lt;a98&gt;selectors&lt;/a98&gt;, &lt;a99&gt;sequtils&lt;/a99&gt;, &lt;a100&gt;sets&lt;/a100&gt;, &lt;a101&gt;sexp&lt;/a101&gt;, &lt;a102&gt;sha1&lt;/a102&gt;, &lt;a103&gt;sharedlist&lt;/a103&gt;, &lt;a104&gt;sharedtables&lt;/a104&gt;, &lt;a105&gt;smtp&lt;/a105&gt;, &lt;a106&gt;stats&lt;/a106&gt;, &lt;a107&gt;streams&lt;/a107&gt;, &lt;a108&gt;strformat&lt;/a108&gt;, &lt;a109&gt;strmisc&lt;/a109&gt;, &lt;a110&gt;strscans&lt;/a110&gt;, &lt;a111&gt;strtabs&lt;/a111&gt;, &lt;a112&gt;strutils&lt;/a112&gt;, &lt;a113&gt;sugar&lt;/a113&gt;, &lt;a114&gt;sums&lt;/a114&gt;, &lt;a115&gt;system&lt;/a115&gt;, &lt;a116&gt;tables&lt;/a116&gt;, &lt;a117&gt;terminal&lt;/a117&gt;, &lt;a118&gt;threadpool&lt;/a118&gt;, &lt;a119&gt;threads&lt;/a119&gt;, &lt;a120&gt;time_t&lt;/a120&gt;, &lt;a121&gt;times&lt;/a121&gt;, &lt;a122&gt;typeinfo&lt;/a122&gt;, &lt;a123&gt;typetraits&lt;/a123&gt;, &lt;a124&gt;unicode&lt;/a124&gt;, &lt;a125&gt;unidecode&lt;/a125&gt;, &lt;a126&gt;unittest&lt;/a126&gt;, &lt;a127&gt;uri&lt;/a127&gt;, &lt;a128&gt;util&lt;/a128&gt;, &lt;a129&gt;varints&lt;/a129&gt;, &lt;a130&gt;volatile&lt;/a130&gt;, &lt;a131&gt;widestrs&lt;/a131&gt;, &lt;a132&gt;winlean&lt;/a132&gt;, &lt;a133&gt;wordwrap&lt;/a133&gt;, &lt;a134&gt;xmlparser&lt;/a134&gt;, &lt;a135&gt;xmltree&lt;/a135&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T070441Z" creationid="isVowel" creationdate="20200115T070441Z">
+        <seg>モジュール: &lt;a0&gt;algorithm&lt;/a0&gt;, &lt;a1&gt;assertions&lt;/a1&gt;, &lt;a2&gt;asyncdispatch&lt;/a2&gt;, &lt;a3&gt;asyncfile&lt;/a3&gt;, &lt;a4&gt;asyncftpclient&lt;/a4&gt;, &lt;a5&gt;asyncfutures&lt;/a5&gt;, &lt;a6&gt;asynchttpserver&lt;/a6&gt;, &lt;a7&gt;asyncjs&lt;/a7&gt;, &lt;a8&gt;asyncnet&lt;/a8&gt;, &lt;a9&gt;asyncstreams&lt;/a9&gt;, &lt;a10&gt;base64&lt;/a10&gt;, &lt;a11&gt;bitops&lt;/a11&gt;, &lt;a12&gt;browsers&lt;/a12&gt;, &lt;a13&gt;cgi&lt;/a13&gt;, &lt;a14&gt;chains&lt;/a14&gt;, &lt;a15&gt;channels&lt;/a15&gt;, &lt;a16&gt;colors&lt;/a16&gt;, &lt;a17&gt;complex&lt;/a17&gt;, &lt;a18&gt;cookies&lt;/a18&gt;, &lt;a19&gt;coro&lt;/a19&gt;, &lt;a20&gt;cpuinfo&lt;/a20&gt;, &lt;a21&gt;cpuload&lt;/a21&gt;, &lt;a22&gt;critbits&lt;/a22&gt;, &lt;a23&gt;cstrutils&lt;/a23&gt;, &lt;a24&gt;db_common&lt;/a24&gt;, &lt;a25&gt;db_mysql&lt;/a25&gt;, &lt;a26&gt;db_odbc&lt;/a26&gt;, &lt;a27&gt;db_postgres&lt;/a27&gt;, &lt;a28&gt;db_sqlite&lt;/a28&gt;, &lt;a29&gt;deques&lt;/a29&gt;, &lt;a30&gt;diff&lt;/a30&gt;, &lt;a31&gt;distros&lt;/a31&gt;, &lt;a32&gt;dollars&lt;/a32&gt;, &lt;a33&gt;dom&lt;/a33&gt;, &lt;a34&gt;dynlib&lt;/a34&gt;, &lt;a35&gt;editdistance&lt;/a35&gt;, &lt;a36&gt;encodings&lt;/a36&gt;, &lt;a37&gt;endians&lt;/a37&gt;, &lt;a38&gt;fenv&lt;/a38&gt;, &lt;a39&gt;hashes&lt;/a39&gt;, &lt;a40&gt;heapqueue&lt;/a40&gt;, &lt;a41&gt;highlite&lt;/a41&gt;, &lt;a42&gt;htmlgen&lt;/a42&gt;, &lt;a43&gt;htmlparser&lt;/a43&gt;, &lt;a44&gt;httpclient&lt;/a44&gt;, &lt;a45&gt;httpcore&lt;/a45&gt;, &lt;a46&gt;intsets&lt;/a46&gt;, &lt;a47&gt;io&lt;/a47&gt;, &lt;a48&gt;iterators&lt;/a48&gt;, &lt;a49&gt;jsconsole&lt;/a49&gt;, &lt;a50&gt;jsffi&lt;/a50&gt;, &lt;a51&gt;json&lt;/a51&gt;, &lt;a52&gt;lenientops&lt;/a52&gt;, &lt;a53&gt;lexbase&lt;/a53&gt;, &lt;a54&gt;linenoise&lt;/a54&gt;, &lt;a55&gt;lists&lt;/a55&gt;, &lt;a56&gt;locks&lt;/a56&gt;, &lt;a57&gt;logging&lt;/a57&gt;, &lt;a58&gt;macros&lt;/a58&gt;, &lt;a59&gt;marshal&lt;/a59&gt;, &lt;a60&gt;math&lt;/a60&gt;, &lt;a61&gt;md5&lt;/a61&gt;, &lt;a62&gt;memfiles&lt;/a62&gt;, &lt;a63&gt;mersenne&lt;/a63&gt;, &lt;a64&gt;mimetypes&lt;/a64&gt;, &lt;a65&gt;monotimes&lt;/a65&gt;, &lt;a66&gt;nativesockets&lt;/a66&gt;, &lt;a67&gt;net&lt;/a67&gt;, &lt;a68&gt;nimprof&lt;/a68&gt;, &lt;a69&gt;nimscript&lt;/a69&gt;, &lt;a70&gt;nre&lt;/a70&gt;, &lt;a71&gt;oids&lt;/a71&gt;, &lt;a72&gt;options&lt;/a72&gt;, &lt;a73&gt;os&lt;/a73&gt;, &lt;a74&gt;osproc&lt;/a74&gt;, &lt;a75&gt;oswalkdir&lt;/a75&gt;, &lt;a76&gt;parsecfg&lt;/a76&gt;, &lt;a77&gt;parsecsv&lt;/a77&gt;, &lt;a78&gt;parsejson&lt;/a78&gt;, &lt;a79&gt;parseopt&lt;/a79&gt;, &lt;a80&gt;parsesql&lt;/a80&gt;, &lt;a81&gt;parseutils&lt;/a81&gt;, &lt;a82&gt;parsexml&lt;/a82&gt;, &lt;a83&gt;pegs&lt;/a83&gt;, &lt;a84&gt;posix_utils&lt;/a84&gt;, &lt;a85&gt;punycode&lt;/a85&gt;, &lt;a86&gt;random&lt;/a86&gt;, &lt;a87&gt;rationals&lt;/a87&gt;, &lt;a88&gt;rdstdin&lt;/a88&gt;, &lt;a89&gt;re&lt;/a89&gt;, &lt;a90&gt;registry&lt;/a90&gt;, &lt;a91&gt;rlocks&lt;/a91&gt;, &lt;a92&gt;ropes&lt;/a92&gt;, &lt;a93&gt;rst&lt;/a93&gt;, &lt;a94&gt;rstast&lt;/a94&gt;, &lt;a95&gt;rstgen&lt;/a95&gt;, &lt;a96&gt;rtarrays&lt;/a96&gt;, &lt;a97&gt;segfaults&lt;/a97&gt;, &lt;a98&gt;selectors&lt;/a98&gt;, &lt;a99&gt;sequtils&lt;/a99&gt;, &lt;a100&gt;sets&lt;/a100&gt;, &lt;a101&gt;sexp&lt;/a101&gt;, &lt;a102&gt;sha1&lt;/a102&gt;, &lt;a103&gt;sharedlist&lt;/a103&gt;, &lt;a104&gt;sharedtables&lt;/a104&gt;, &lt;a105&gt;smtp&lt;/a105&gt;, &lt;a106&gt;stats&lt;/a106&gt;, &lt;a107&gt;streams&lt;/a107&gt;, &lt;a108&gt;strformat&lt;/a108&gt;, &lt;a109&gt;strmisc&lt;/a109&gt;, &lt;a110&gt;strscans&lt;/a110&gt;, &lt;a111&gt;strtabs&lt;/a111&gt;, &lt;a112&gt;strutils&lt;/a112&gt;, &lt;a113&gt;sugar&lt;/a113&gt;, &lt;a114&gt;sums&lt;/a114&gt;, &lt;a115&gt;system&lt;/a115&gt;, &lt;a116&gt;tables&lt;/a116&gt;, &lt;a117&gt;terminal&lt;/a117&gt;, &lt;a118&gt;threadpool&lt;/a118&gt;, &lt;a119&gt;threads&lt;/a119&gt;, &lt;a120&gt;time_t&lt;/a120&gt;, &lt;a121&gt;times&lt;/a121&gt;, &lt;a122&gt;typeinfo&lt;/a122&gt;, &lt;a123&gt;typetraits&lt;/a123&gt;, &lt;a124&gt;unicode&lt;/a124&gt;, &lt;a125&gt;unidecode&lt;/a125&gt;, &lt;a126&gt;unittest&lt;/a126&gt;, &lt;a127&gt;uri&lt;/a127&gt;, &lt;a128&gt;util&lt;/a128&gt;, &lt;a129&gt;varints&lt;/a129&gt;, &lt;a130&gt;volatile&lt;/a130&gt;, &lt;a131&gt;widestrs&lt;/a131&gt;, &lt;a132&gt;winlean&lt;/a132&gt;, &lt;a133&gt;wordwrap&lt;/a133&gt;, &lt;a134&gt;xmlparser&lt;/a134&gt;, &lt;a135&gt;xmltree&lt;/a135&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Multi-methods</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T060159Z" creationid="isVowel" creationdate="20200115T060159Z">
+        <seg>多重メソッド</seg>
       </tuv>
     </tu>
     <tu>
@@ -684,6 +1086,14 @@
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041619Z" creationid="isVowel" creationdate="20200113T041619Z">
         <seg>アーギュメントの命名</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Namespaces</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T064520Z" creationid="isVowel" creationdate="20200115T064520Z">
+        <seg>名前空間</seg>
       </tuv>
     </tu>
     <tu>
@@ -776,6 +1186,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Order of evaluation</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T023959Z" creationid="isVowel" creationdate="20200115T023959Z">
+        <seg>評価順序</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Ordinal types</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T042107Z" creationid="isVowel" creationdate="20200113T042107Z">
@@ -848,6 +1266,22 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Precedence</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T022422Z" creationid="isVowel" creationdate="20200115T022422Z">
+        <seg>優先順位</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Precedence level</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T061115Z" creationid="isVowel" creationdate="20200115T061115Z">
+        <seg>優先順位</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Procedural type</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T042212Z" creationid="isVowel" creationdate="20200113T042212Z">
@@ -868,6 +1302,22 @@
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T043823Z" creationid="isVowel" creationdate="20200113T043823Z">
         <seg>プロシージャ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Produces:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T053058Z" creationid="isVowel" creationdate="20200115T052057Z">
+        <seg>結果:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Properties</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T064551Z" creationid="isVowel" creationdate="20200115T064551Z">
+        <seg>プロパティ</seg>
       </tuv>
     </tu>
     <tu>
@@ -908,6 +1358,14 @@
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T081725Z" creationid="isVowel" creationdate="20200114T081725Z">
         <seg>Return ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Scope rules</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T063959Z" creationid="isVowel" creationdate="20200115T063959Z">
+        <seg>スコープルール</seg>
       </tuv>
     </tu>
     <tu>
@@ -980,6 +1438,14 @@
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T023409Z" creationid="isVowel" creationdate="20200113T023409Z">
         <seg>標準ライブラリ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Statements and expressions</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T051602Z" creationid="isVowel" creationdate="20200115T051602Z">
+        <seg>ステートメントと式</seg>
       </tuv>
     </tu>
     <tu>
@@ -1111,6 +1577,23 @@
       </tuv>
     </tu>
     <tu>
+      <note>直訳するよりも、この意訳のほうがはっきりした意味になると思います。</note>
+      <tuv lang="EN-US">
+        <seg>The word &lt;e1&gt;koch&lt;/e1&gt; means &lt;e2&gt;cook&lt;/e2&gt; in German.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T074827Z" creationid="isVowel" creationdate="20200115T074331Z">
+        <seg>&lt;e1&gt;koch&lt;/e1&gt; はドイツ語であり、日本語で&lt;e2&gt;料理人&lt;/e2&gt;の意味です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This document is a tutorial for the programming language &lt;e0&gt;Nim&lt;/e0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200114T091753Z" creationid="isVowel" creationdate="20200114T091753Z">
+        <seg>このドキュメントはプログラミング言語 &lt;e0&gt;Nim&lt;/e0&gt; のチュートリアルです。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv lang="EN-US">
         <seg>Thread pragma</seg>
       </tuv>
@@ -1156,6 +1639,14 @@
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T090505Z" creationid="isVowel" creationdate="20200114T090505Z">
         <seg>Try ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Tuple or object scope</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T063941Z" creationid="isVowel" creationdate="20200115T063941Z">
+        <seg>タプルまたはオブジェクトのスコープ</seg>
       </tuv>
     </tu>
     <tu>
@@ -1208,6 +1699,22 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Var parameters</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T060447Z" creationid="isVowel" creationdate="20200115T060447Z">
+        <seg>Var パラメータ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Var return type</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T063704Z" creationid="isVowel" creationdate="20200115T063704Z">
+        <seg>Var 返値型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Var statement</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T081620Z" creationid="isVowel" creationdate="20200114T081620Z">
@@ -1232,6 +1739,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Void context</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T024708Z" creationid="isVowel" creationdate="20200115T024708Z">
+        <seg>Void コンテキスト</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Volatile pragma</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082133Z" creationid="isVowel" creationdate="20200114T082133Z">
@@ -1244,6 +1759,14 @@
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T081816Z" creationid="isVowel" creationdate="20200114T081816Z">
         <seg>When 式</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When nimvm statement</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T024439Z" creationid="isVowel" creationdate="20200115T024439Z">
+        <seg>When nimvm ステートメント</seg>
       </tuv>
     </tu>
     <tu>
@@ -1304,10 +1827,34 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>backslash</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T055140Z" creationid="isVowel" creationdate="20200115T055133Z">
+        <seg>バックスラッシュ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>boot command</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T075051Z" creationid="isVowel" creationdate="20200114T075051Z">
         <seg>boot コマンド</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>carriage return</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T054743Z" creationid="isVowel" creationdate="20200115T054743Z">
+        <seg>キャリッジリターン</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>compilation option pragmas</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T064036Z" creationid="isVowel" creationdate="20200115T064036Z">
+        <seg>コンパイルオプションのプラグマ</seg>
       </tuv>
     </tu>
     <tu>
@@ -1376,6 +1923,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>form feed</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T055040Z" creationid="isVowel" creationdate="20200115T055040Z">
+        <seg>フォームフィード</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>global pragma</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082114Z" creationid="isVowel" creationdate="20200114T082114Z">
@@ -1388,6 +1943,14 @@
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082037Z" creationid="isVowel" creationdate="20200114T082037Z">
         <seg>hint プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>https://nim-lang.org</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T075639Z" creationid="isVowel" creationdate="20200115T075639Z">
+        <seg>https://nim-lang.org/</seg>
       </tuv>
     </tu>
     <tu>
@@ -1448,6 +2011,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>push and pop pragmas</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T022006Z" creationid="isVowel" creationdate="20200115T022006Z">
+        <seg>push と pop プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>register pragma</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082111Z" creationid="isVowel" creationdate="20200114T082111Z">
@@ -1460,6 +2031,14 @@
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082016Z" creationid="isVowel" creationdate="20200114T082016Z">
         <seg>shallow プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tabulator</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T054755Z" creationid="isVowel" creationdate="20200115T054755Z">
+        <seg>タブ</seg>
       </tuv>
     </tu>
     <tu>
@@ -1480,6 +2059,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>typeof operator</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T021850Z" creationid="isVowel" creationdate="20200115T021850Z">
+        <seg>typeof 演算子</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>unroll pragma</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082056Z" creationid="isVowel" creationdate="20200114T082056Z">
@@ -1492,6 +2079,14 @@
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082122Z" creationid="isVowel" creationdate="20200114T082122Z">
         <seg>used プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>vertical tabulator</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T055001Z" creationid="isVowel" creationdate="20200115T055001Z">
+        <seg>垂直タブ</seg>
       </tuv>
     </tu>
     <tu>

@@ -872,14 +872,14 @@ function main() {
 <li><a class="reference" id="statements-asm-statement_toc" href="#statements-asm-statement">Asm statement</a></li>
 <li><a class="reference" id="statements-import-section_toc" href="#statements-import-section">Import section</a></li>
 <li><a class="reference" id="statements-from-statement_toc" href="#statements-from-statement">From ステートメント</a></li>
-<li><a class="reference" id="statements-export-statement_toc" href="#statements-export-statement">Export statement</a></li>
+<li><a class="reference" id="statements-export-statement_toc" href="#statements-export-statement">Export ステートメント</a></li>
 <li><a class="reference" id="statements-include-statement_toc" href="#statements-include-statement">Include ステートメント</a></li>
 <li><a class="reference" id="statements-var-section_toc" href="#statements-var-section">Var section</a></li>
 <li><a class="reference" id="statements-let-section_toc" href="#statements-let-section">Let section</a></li>
-<li><a class="reference" id="statements-const-section_toc" href="#statements-const-section">Const section</a></li>
+<li><a class="reference" id="statements-const-section_toc" href="#statements-const-section">Const セクション</a></li>
 <li><a class="reference" id="statements-type-section_toc" href="#statements-type-section">Type section</a></li>
-<li><a class="reference" id="statements-mixin-statement_toc" href="#statements-mixin-statement">Mixin statement</a></li>
-<li><a class="reference" id="statements-bind-statement_toc" href="#statements-bind-statement">Bind statement</a></li>
+<li><a class="reference" id="statements-mixin-statement_toc" href="#statements-mixin-statement">Mixin ステートメント</a></li>
+<li><a class="reference" id="statements-bind-statement_toc" href="#statements-bind-statement">Bind ステートメント</a></li>
 <li><a class="reference" id="statements-procedure-declaration_toc" href="#statements-procedure-declaration">Procedure declaration</a></li>
 <li><a class="reference" id="statements-iterator-declaration_toc" href="#statements-iterator-declaration">Iterator declaration</a></li>
 <li><a class="reference" id="statements-converter-declaration_toc" href="#statements-converter-declaration">Converter declaration</a></li>
@@ -1312,7 +1312,7 @@ function main() {
   </ul>
 </li>
 <li>
-  <a class="reference reference-toplevel" href="#17" id="67">Macros</a>
+  <a class="reference reference-toplevel" href="#17" id="67">マクロ</a>
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#dumpTree.m%2Cuntyped"
     title="dumpTree(s: untyped): untyped"><wbr />dump<wbr />Tree<span class="attachedType"></span></a></li>
@@ -1698,7 +1698,7 @@ function main() {
 <pre class="listing"><span class="Keyword">from</span> <span class="Identifier">math</span> <span class="Keyword">import</span> <span class="Identifier">pow</span></pre><p>AST:</p>
 <pre class="listing"><span class="Identifier">nnkFromStmt</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"math"</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"pow"</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre><p>Using <tt class="docutils literal"><span class="pre">from math as m import pow</span></tt> works identically to the <tt class="docutils literal"><span class="pre">as</span></tt> modifier with the <tt class="docutils literal"><span class="pre">import</span></tt> statement, but wrapped in <tt class="docutils literal"><span class="pre">nnkFromStmt</span></tt>.</p>
 
-<h2><a class="toc-backref" id="statements-export-statement" href="#statements-export-statement">Export statement</a></h2><p>When you are making an imported module accessible by modules that import yours, the <tt class="docutils literal"><span class="pre">export</span></tt> syntax is pretty straightforward.</p>
+<h2><a class="toc-backref" id="statements-export-statement" href="#statements-export-statement">Export ステートメント</a></h2><p>When you are making an imported module accessible by modules that import yours, the <tt class="docutils literal"><span class="pre">export</span></tt> syntax is pretty straightforward.</p>
 <p>Concrete syntax:</p>
 <pre class="listing"><span class="Keyword">export</span> <span class="Identifier">unsigned</span></pre><p>AST:</p>
 <pre class="listing"><span class="Identifier">nnkExportStmt</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"unsigned"</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre><p>Similar to the <tt class="docutils literal"><span class="pre">import</span></tt> statement, the AST is different for <tt class="docutils literal"><span class="pre">export ... except</span></tt>.</p>
@@ -1730,7 +1730,7 @@ function main() {
     <span class="Identifier">nnkIntLit</span><span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="statements-const-section" href="#statements-const-section">Const section</a></h2><p>Concrete syntax:</p>
+<h2><a class="toc-backref" id="statements-const-section" href="#statements-const-section">Const セクション</a></h2><p>Concrete syntax:</p>
 <pre class="listing"><span class="Keyword">const</span> <span class="Identifier">a</span> <span class="Operator">=</span> <span class="DecNumber">3</span></pre><p>AST:</p>
 <pre class="listing"><span class="Identifier">nnkConstSection</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkConstDef</span><span class="Punctuation">(</span> <span class="Comment"># not nnkConstDefs!</span>
@@ -1903,10 +1903,10 @@ function main() {
   <span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre><p>The same syntax applies to <tt class="docutils literal"><span class="pre">iterator</span></tt> (with <tt class="docutils literal"><span class="pre">nnkIteratorTy</span></tt>), but <em>does not</em> apply to <tt class="docutils literal"><span class="pre">converter</span></tt> or <tt class="docutils literal"><span class="pre">template</span></tt>.</p>
 
-<h2><a class="toc-backref" id="statements-mixin-statement" href="#statements-mixin-statement">Mixin statement</a></h2><p>Concrete syntax:</p>
+<h2><a class="toc-backref" id="statements-mixin-statement" href="#statements-mixin-statement">Mixin ステートメント</a></h2><p>Concrete syntax:</p>
 <pre class="listing"><span class="Keyword">mixin</span> <span class="Identifier">x</span></pre><p>AST:</p>
 <pre class="listing"><span class="Identifier">nnkMixinStmt</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"x"</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="statements-bind-statement" href="#statements-bind-statement">Bind statement</a></h2><p>Concrete syntax:</p>
+<h2><a class="toc-backref" id="statements-bind-statement" href="#statements-bind-statement">Bind ステートメント</a></h2><p>Concrete syntax:</p>
 <pre class="listing"><span class="Keyword">bind</span> <span class="Identifier">x</span></pre><p>AST:</p>
 <pre class="listing"><span class="Identifier">nnkBindStmt</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"x"</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre>
 <h2><a class="toc-backref" id="statements-procedure-declaration" href="#statements-procedure-declaration">Procedure declaration</a></h2><p>Let's take a look at a procedure with a lot of interesting aspects to get a feel for how procedure calls are broken down.</p>
@@ -4065,7 +4065,7 @@ class="link-seesrc" target="_blank">Source</a>
 
 </dl></div>
 <div class="section" id="17">
-<h1><a class="toc-backref" href="#17">Macros</a></h1>
+<h1><a class="toc-backref" href="#17">マクロ</a></h1>
 <dl class="item">
 <a id="dumpTree.m,untyped"></a>
 <dt><pre><span class="Keyword">macro</span> <a href="#dumpTree.m%2Cuntyped"><span class="Identifier">dumpTree</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>

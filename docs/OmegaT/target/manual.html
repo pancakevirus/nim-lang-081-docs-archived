@@ -843,11 +843,11 @@ function main() {
 <li><a class="reference" id="lexical-analysis-operators_toc" href="#lexical-analysis-operators">演算子</a></li>
 <li><a class="reference" id="lexical-analysis-other-tokens_toc" href="#lexical-analysis-other-tokens">そのほかのトークン</a></li>
 </ul><li><a class="reference" id="syntax_toc" href="#syntax">シンタックス</a></li>
-<ul class="simple"><li><a class="reference" id="syntax-associativity_toc" href="#syntax-associativity">Associativity</a></li>
-<li><a class="reference" id="syntax-precedence_toc" href="#syntax-precedence">Precedence</a></li>
-<li><a class="reference" id="syntax-grammar_toc" href="#syntax-grammar">Grammar</a></li>
-</ul><li><a class="reference" id="order-of-evaluation_toc" href="#order-of-evaluation">Order of evaluation</a></li>
-<li><a class="reference" id="constants-and-constant-expressions_toc" href="#constants-and-constant-expressions">Constants and Constant Expressions</a></li>
+<ul class="simple"><li><a class="reference" id="syntax-associativity_toc" href="#syntax-associativity">結合性</a></li>
+<li><a class="reference" id="syntax-precedence_toc" href="#syntax-precedence">優先順位</a></li>
+<li><a class="reference" id="syntax-grammar_toc" href="#syntax-grammar">文法</a></li>
+</ul><li><a class="reference" id="order-of-evaluation_toc" href="#order-of-evaluation">評価順序</a></li>
+<li><a class="reference" id="constants-and-constant-expressions_toc" href="#constants-and-constant-expressions">定数と定数式</a></li>
 <li><a class="reference" id="restrictions-on-compileminustime-execution_toc" href="#restrictions-on-compileminustime-execution">Restrictions on Compile-Time Execution</a></li>
 <li><a class="reference" id="types_toc" href="#types">型</a></li>
 <ul class="simple"><li><a class="reference" id="types-ordinal-types_toc" href="#types-ordinal-types">序数型</a></li>
@@ -875,8 +875,8 @@ function main() {
 <li><a class="reference" id="types-procedural-type_toc" href="#types-procedural-type">プロシージャ型</a></li>
 <li><a class="reference" id="types-distinct-type_toc" href="#types-distinct-type">特異型</a></li>
 <ul class="simple"><li><a class="reference" id="distinct-type-modelling-currencies_toc" href="#distinct-type-modelling-currencies">Modelling currencies</a></li>
-<li><a class="reference" id="distinct-type-avoiding-sql-injection-attacks_toc" href="#distinct-type-avoiding-sql-injection-attacks">Avoiding SQL injection attacks</a></li>
-</ul><li><a class="reference" id="types-auto-type_toc" href="#types-auto-type">Auto type</a></li>
+<li><a class="reference" id="distinct-type-avoiding-sql-injection-attacks_toc" href="#distinct-type-avoiding-sql-injection-attacks">SQL インジェクション攻撃の回避</a></li>
+</ul><li><a class="reference" id="types-auto-type_toc" href="#types-auto-type">Auto 型</a></li>
 </ul><li><a class="reference" id="type-relations_toc" href="#type-relations">Type relations</a></li>
 <ul class="simple"><li><a class="reference" id="type-relations-type-equality_toc" href="#type-relations-type-equality">Type equality</a></li>
 <li><a class="reference" id="type-relations-type-equality-modulo-type-distinction_toc" href="#type-relations-type-equality-modulo-type-distinction">Type equality modulo type distinction</a></li>
@@ -887,19 +887,19 @@ function main() {
 <ul class="simple"><li><a class="reference" id="overloading-resolution-overloading-based-on-var-t_toc" href="#overloading-resolution-overloading-based-on-var-t">Overloading based on 'var T'</a></li>
 <li><a class="reference" id="overloading-resolution-lazy-type-resolution-for-untyped_toc" href="#overloading-resolution-lazy-type-resolution-for-untyped">Lazy type resolution for untyped</a></li>
 <li><a class="reference" id="overloading-resolution-varargs-matching_toc" href="#overloading-resolution-varargs-matching">Varargs matching</a></li>
-</ul><li><a class="reference" id="statements-and-expressions_toc" href="#statements-and-expressions">Statements and expressions</a></li>
+</ul><li><a class="reference" id="statements-and-expressions_toc" href="#statements-and-expressions">ステートメントと式</a></li>
 <ul class="simple"><li><a class="reference" id="statements-and-expressions-statement-list-expression_toc" href="#statements-and-expressions-statement-list-expression">Statement list expression</a></li>
 <li><a class="reference" id="statements-and-expressions-discard-statement_toc" href="#statements-and-expressions-discard-statement">Discard ステートメント</a></li>
-<li><a class="reference" id="statements-and-expressions-void-context_toc" href="#statements-and-expressions-void-context">Void context</a></li>
+<li><a class="reference" id="statements-and-expressions-void-context_toc" href="#statements-and-expressions-void-context">Void コンテキスト</a></li>
 <li><a class="reference" id="statements-and-expressions-var-statement_toc" href="#statements-and-expressions-var-statement">Var ステートメント</a></li>
 <li><a class="reference" id="statements-and-expressions-let-statement_toc" href="#statements-and-expressions-let-statement">Let ステートメント</a></li>
 <li><a class="reference" id="statements-and-expressions-tuple-unpacking_toc" href="#statements-and-expressions-tuple-unpacking">Tuple unpacking</a></li>
-<li><a class="reference" id="statements-and-expressions-const-section_toc" href="#statements-and-expressions-const-section">Const section</a></li>
+<li><a class="reference" id="statements-and-expressions-const-section_toc" href="#statements-and-expressions-const-section">Const セクション</a></li>
 <li><a class="reference" id="statements-and-expressions-static-statementslashexpression_toc" href="#statements-and-expressions-static-statementslashexpression">Static ステートメント/式</a></li>
 <li><a class="reference" id="statements-and-expressions-if-statement_toc" href="#statements-and-expressions-if-statement">If ステートメント</a></li>
 <li><a class="reference" id="statements-and-expressions-case-statement_toc" href="#statements-and-expressions-case-statement">Case ステートメント</a></li>
 <li><a class="reference" id="statements-and-expressions-when-statement_toc" href="#statements-and-expressions-when-statement">When ステートメント</a></li>
-<li><a class="reference" id="statements-and-expressions-when-nimvm-statement_toc" href="#statements-and-expressions-when-nimvm-statement">When nimvm statement</a></li>
+<li><a class="reference" id="statements-and-expressions-when-nimvm-statement_toc" href="#statements-and-expressions-when-nimvm-statement">When nimvm ステートメント</a></li>
 <li><a class="reference" id="statements-and-expressions-return-statement_toc" href="#statements-and-expressions-return-statement">Return ステートメント</a></li>
 <li><a class="reference" id="statements-and-expressions-yield-statement_toc" href="#statements-and-expressions-yield-statement">Yield ステートメント</a></li>
 <li><a class="reference" id="statements-and-expressions-block-statement_toc" href="#statements-and-expressions-block-statement">Block ステートメント</a></li>
@@ -920,20 +920,20 @@ function main() {
 </ul><li><a class="reference" id="procedures_toc" href="#procedures">プロシージャ</a></li>
 <ul class="simple"><li><a class="reference" id="procedures-export-marker_toc" href="#procedures-export-marker">Export marker</a></li>
 <li><a class="reference" id="procedures-method-call-syntax_toc" href="#procedures-method-call-syntax">Method call syntax</a></li>
-<li><a class="reference" id="procedures-properties_toc" href="#procedures-properties">Properties</a></li>
+<li><a class="reference" id="procedures-properties_toc" href="#procedures-properties">プロパティ</a></li>
 <li><a class="reference" id="procedures-command-invocation-syntax_toc" href="#procedures-command-invocation-syntax">Command invocation syntax</a></li>
-<li><a class="reference" id="procedures-closures_toc" href="#procedures-closures">Closures</a></li>
+<li><a class="reference" id="procedures-closures_toc" href="#procedures-closures">クロージャ</a></li>
 <ul class="simple"><li><a class="reference" id="closures-creating-closures-in-loops_toc" href="#closures-creating-closures-in-loops">Creating closures in loops</a></li>
-</ul><li><a class="reference" id="procedures-anonymous-procs_toc" href="#procedures-anonymous-procs">Anonymous Procs</a></li>
-<li><a class="reference" id="procedures-func_toc" href="#procedures-func">Func</a></li>
+</ul><li><a class="reference" id="procedures-anonymous-procs_toc" href="#procedures-anonymous-procs">無名プロシージャ</a></li>
+<li><a class="reference" id="procedures-func_toc" href="#procedures-func">関数</a></li>
 <li><a class="reference" id="procedures-nonoverloadable-builtins_toc" href="#procedures-nonoverloadable-builtins">Nonoverloadable builtins</a></li>
-<li><a class="reference" id="procedures-var-parameters_toc" href="#procedures-var-parameters">Var parameters</a></li>
-<li><a class="reference" id="procedures-var-return-type_toc" href="#procedures-var-return-type">Var return type</a></li>
-<ul class="simple"><li><a class="reference" id="var-return-type-future-directions_toc" href="#var-return-type-future-directions">Future directions</a></li>
+<li><a class="reference" id="procedures-var-parameters_toc" href="#procedures-var-parameters">Var パラメータ</a></li>
+<li><a class="reference" id="procedures-var-return-type_toc" href="#procedures-var-return-type">Var 返値型</a></li>
+<ul class="simple"><li><a class="reference" id="var-return-type-future-directions_toc" href="#var-return-type-future-directions">将来的方向</a></li>
 </ul><li><a class="reference" id="procedures-overloading-of-the-subscript-operator_toc" href="#procedures-overloading-of-the-subscript-operator">Overloading of the subscript operator</a></li>
-</ul><li><a class="reference" id="multiminusmethods_toc" href="#multiminusmethods">Multi-methods</a></li>
+</ul><li><a class="reference" id="multiminusmethods_toc" href="#multiminusmethods">多重メソッド</a></li>
 <ul class="simple"><li><a class="reference" id="multiminusmethods-inhibit-dynamic-method-resolution-via-proccall_toc" href="#multiminusmethods-inhibit-dynamic-method-resolution-via-proccall">Inhibit dynamic method resolution via procCall</a></li>
-</ul><li><a class="reference" id="iterators-and-the-for-statement_toc" href="#iterators-and-the-for-statement">Iterators and the for statement</a></li>
+</ul><li><a class="reference" id="iterators-and-the-for-statement_toc" href="#iterators-and-the-for-statement">イテレータと for ステートメント</a></li>
 <ul class="simple"><li><a class="reference" id="iterators-and-the-for-statement-implict-itemsslashpairs-invocations_toc" href="#iterators-and-the-for-statement-implict-itemsslashpairs-invocations">Implict items/pairs invocations</a></li>
 <li><a class="reference" id="iterators-and-the-for-statement-first-class-iterators_toc" href="#iterators-and-the-for-statement-first-class-iterators">First class iterators</a></li>
 </ul><li><a class="reference" id="converters_toc" href="#converters">Converters</a></li>
@@ -950,15 +950,15 @@ function main() {
 <ul class="simple"><li><a class="reference" id="effect-system-exception-tracking_toc" href="#effect-system-exception-tracking">Exception tracking</a></li>
 <li><a class="reference" id="effect-system-tag-tracking_toc" href="#effect-system-tag-tracking">Tag tracking</a></li>
 <li><a class="reference" id="effect-system-effects-pragma_toc" href="#effect-system-effects-pragma">Effects pragma</a></li>
-</ul><li><a class="reference" id="generics_toc" href="#generics">Generics</a></li>
-<ul class="simple"><li><a class="reference" id="generics-is-operator_toc" href="#generics-is-operator">Is operator</a></li>
+</ul><li><a class="reference" id="generics_toc" href="#generics">ジェネリック</a></li>
+<ul class="simple"><li><a class="reference" id="generics-is-operator_toc" href="#generics-is-operator">Is 演算子</a></li>
 <li><a class="reference" id="generics-type-classes_toc" href="#generics-type-classes">Type Classes</a></li>
 <li><a class="reference" id="generics-implicit-generics_toc" href="#generics-implicit-generics">Implicit generics</a></li>
 <li><a class="reference" id="generics-generic-inference-restrictions_toc" href="#generics-generic-inference-restrictions">Generic inference restrictions</a></li>
 <li><a class="reference" id="generics-symbol-lookup-in-generics_toc" href="#generics-symbol-lookup-in-generics">Symbol lookup in generics</a></li>
 <ul class="simple"><li><a class="reference" id="symbol-lookup-in-generics-open-and-closed-symbols_toc" href="#symbol-lookup-in-generics-open-and-closed-symbols">Open and Closed symbols</a></li>
-</ul><li><a class="reference" id="generics-mixin-statement_toc" href="#generics-mixin-statement">Mixin statement</a></li>
-<li><a class="reference" id="generics-bind-statement_toc" href="#generics-bind-statement">Bind statement</a></li>
+</ul><li><a class="reference" id="generics-mixin-statement_toc" href="#generics-mixin-statement">Mixin ステートメント</a></li>
+<li><a class="reference" id="generics-bind-statement_toc" href="#generics-bind-statement">Bind ステートメント</a></li>
 </ul><li><a class="reference" id="templates_toc" href="#templates">テンプレート</a></li>
 <ul class="simple"><li><a class="reference" id="templates-typed-vs-untyped-parameters_toc" href="#templates-typed-vs-untyped-parameters">Typed vs untyped parameters</a></li>
 <li><a class="reference" id="templates-passing-a-code-block-to-a-template_toc" href="#templates-passing-a-code-block-to-a-template">Passing a code block to a template</a></li>
@@ -968,7 +968,7 @@ function main() {
 <li><a class="reference" id="templates-lookup-rules-for-template-parameters_toc" href="#templates-lookup-rules-for-template-parameters">Lookup rules for template parameters</a></li>
 <li><a class="reference" id="templates-hygiene-in-templates_toc" href="#templates-hygiene-in-templates">Hygiene in templates</a></li>
 <li><a class="reference" id="templates-limitations-of-the-method-call-syntax_toc" href="#templates-limitations-of-the-method-call-syntax">Limitations of the method call syntax</a></li>
-</ul><li><a class="reference" id="macros_toc" href="#macros">Macros</a></li>
+</ul><li><a class="reference" id="macros_toc" href="#macros">マクロ</a></li>
 <ul class="simple"><li><a class="reference" id="macros-debug-example_toc" href="#macros-debug-example">Debug Example</a></li>
 <li><a class="reference" id="macros-bindsym_toc" href="#macros-bindsym">BindSym</a></li>
 <li><a class="reference" id="macros-caseminusof-macro_toc" href="#macros-caseminusof-macro">Case-Of Macro</a></li>
@@ -977,21 +977,21 @@ function main() {
 </ul><li><a class="reference" id="special-types_toc" href="#special-types">Special Types</a></li>
 <ul class="simple"><li><a class="reference" id="special-types-static-t_toc" href="#special-types-static-t">static[T]</a></li>
 <li><a class="reference" id="special-types-typedesc-t_toc" href="#special-types-typedesc-t">typedesc[T]</a></li>
-<li><a class="reference" id="special-types-typeof-operator_toc" href="#special-types-typeof-operator">typeof operator</a></li>
+<li><a class="reference" id="special-types-typeof-operator_toc" href="#special-types-typeof-operator">typeof 演算子</a></li>
 </ul><li><a class="reference" id="modules_toc" href="#modules">モジュール</a></li>
-<ul class="simple"><li><a class="reference" id="modules-import-statement_toc" href="#modules-import-statement">Import statement</a></li>
+<ul class="simple"><li><a class="reference" id="modules-import-statement_toc" href="#modules-import-statement">Import ステートメント</a></li>
 <li><a class="reference" id="modules-include-statement_toc" href="#modules-include-statement">Include ステートメント</a></li>
 <li><a class="reference" id="modules-module-names-in-imports_toc" href="#modules-module-names-in-imports">Module names in imports</a></li>
 <li><a class="reference" id="modules-collective-imports-from-a-directory_toc" href="#modules-collective-imports-from-a-directory">Collective imports from a directory</a></li>
 <li><a class="reference" id="modules-pseudo-importslashinclude-paths_toc" href="#modules-pseudo-importslashinclude-paths">Pseudo import/include paths</a></li>
 <li><a class="reference" id="modules-from-import-statement_toc" href="#modules-from-import-statement">From import statement</a></li>
-<li><a class="reference" id="modules-export-statement_toc" href="#modules-export-statement">Export statement</a></li>
-</ul><ul class="simple"><li><a class="reference" id="modules-scope-rules_toc" href="#modules-scope-rules">Scope rules</a></li>
-<ul class="simple"><li><a class="reference" id="scope-rules-block-scope_toc" href="#scope-rules-block-scope">Block scope</a></li>
-<li><a class="reference" id="scope-rules-tuple-or-object-scope_toc" href="#scope-rules-tuple-or-object-scope">Tuple or object scope</a></li>
-<li><a class="reference" id="scope-rules-module-scope_toc" href="#scope-rules-module-scope">Module scope</a></li>
+<li><a class="reference" id="modules-export-statement_toc" href="#modules-export-statement">Export ステートメント</a></li>
+</ul><ul class="simple"><li><a class="reference" id="modules-scope-rules_toc" href="#modules-scope-rules">スコープルール</a></li>
+<ul class="simple"><li><a class="reference" id="scope-rules-block-scope_toc" href="#scope-rules-block-scope">ブロックのスコープ</a></li>
+<li><a class="reference" id="scope-rules-tuple-or-object-scope_toc" href="#scope-rules-tuple-or-object-scope">タプルまたはオブジェクトのスコープ</a></li>
+<li><a class="reference" id="scope-rules-module-scope_toc" href="#scope-rules-module-scope">モジュールのスコープ</a></li>
 <li><a class="reference" id="scope-rules-code-reordering_toc" href="#scope-rules-code-reordering">Code reordering</a></li>
-</ul></ul><li><a class="reference" id="compiler-messages_toc" href="#compiler-messages">Compiler Messages</a></li>
+</ul></ul><li><a class="reference" id="compiler-messages_toc" href="#compiler-messages">コンパイラメッセージ</a></li>
 <li><a class="reference" id="pragmas_toc" href="#pragmas">プラグマ</a></li>
 <ul class="simple"><li><a class="reference" id="pragmas-deprecated-pragma_toc" href="#pragmas-deprecated-pragma">deprecated プラグマ</a></li>
 <li><a class="reference" id="pragmas-nosideeffect-pragma_toc" href="#pragmas-nosideeffect-pragma">noSideEffect プラグマ</a></li>
@@ -1011,8 +1011,8 @@ function main() {
 <li><a class="reference" id="pragmas-computedgoto-pragma_toc" href="#pragmas-computedgoto-pragma">computedGoto プラグマ</a></li>
 <li><a class="reference" id="pragmas-unroll-pragma_toc" href="#pragmas-unroll-pragma">unroll プラグマ</a></li>
 <li><a class="reference" id="pragmas-immediate-pragma_toc" href="#pragmas-immediate-pragma">immediate プラグマ</a></li>
-<li><a class="reference" id="pragmas-compilation-option-pragmas_toc" href="#pragmas-compilation-option-pragmas">compilation option pragmas</a></li>
-<li><a class="reference" id="pragmas-push-and-pop-pragmas_toc" href="#pragmas-push-and-pop-pragmas">push and pop pragmas</a></li>
+<li><a class="reference" id="pragmas-compilation-option-pragmas_toc" href="#pragmas-compilation-option-pragmas">コンパイルオプションのプラグマ</a></li>
+<li><a class="reference" id="pragmas-push-and-pop-pragmas_toc" href="#pragmas-push-and-pop-pragmas">push と pop プラグマ</a></li>
 <li><a class="reference" id="pragmas-register-pragma_toc" href="#pragmas-register-pragma">register プラグマ</a></li>
 <li><a class="reference" id="pragmas-global-pragma_toc" href="#pragmas-global-pragma">global プラグマ</a></li>
 <li><a class="reference" id="pragmas-pragma-pragma_toc" href="#pragmas-pragma-pragma">pragma プラグマ</a></li>
@@ -1031,7 +1031,7 @@ function main() {
 <li><a class="reference" id="implementation-specific-pragmas-passl-pragma_toc" href="#implementation-specific-pragmas-passl-pragma">PassL プラグマ</a></li>
 <li><a class="reference" id="implementation-specific-pragmas-emit-pragma_toc" href="#implementation-specific-pragmas-emit-pragma">Emit プラグマ</a></li>
 <li><a class="reference" id="implementation-specific-pragmas-importcpp-pragma_toc" href="#implementation-specific-pragmas-importcpp-pragma">ImportCpp プラグマ</a></li>
-<ul class="simple"><li><a class="reference" id="importcpp-pragma-namespaces_toc" href="#importcpp-pragma-namespaces">Namespaces</a></li>
+<ul class="simple"><li><a class="reference" id="importcpp-pragma-namespaces_toc" href="#importcpp-pragma-namespaces">名前空間</a></li>
 <li><a class="reference" id="importcpp-pragma-importcpp-for-enums_toc" href="#importcpp-pragma-importcpp-for-enums">Importcpp for enums</a></li>
 <li><a class="reference" id="importcpp-pragma-importcpp-for-procs_toc" href="#importcpp-pragma-importcpp-for-procs">Importcpp for procs</a></li>
 <li><a class="reference" id="importcpp-pragma-wrapping-constructors_toc" href="#importcpp-pragma-wrapping-constructors">Wrapping constructors</a></li>
@@ -1043,7 +1043,7 @@ function main() {
 <li><a class="reference" id="implementation-specific-pragmas-injectstmt-pragma_toc" href="#implementation-specific-pragmas-injectstmt-pragma">InjectStmt プラグマ</a></li>
 <li><a class="reference" id="implementation-specific-pragmas-compile-time-define-pragmas_toc" href="#implementation-specific-pragmas-compile-time-define-pragmas">compile time define pragmas</a></li>
 <li><a class="reference" id="implementation-specific-pragmas-custom-annotations_toc" href="#implementation-specific-pragmas-custom-annotations">Custom annotations</a></li>
-</ul><li><a class="reference" id="foreign-function-interface_toc" href="#foreign-function-interface">Foreign function interface</a></li>
+</ul><li><a class="reference" id="foreign-function-interface_toc" href="#foreign-function-interface">外部関数インタフェース</a></li>
 <ul class="simple"><li><a class="reference" id="foreign-function-interface-importc-pragma_toc" href="#foreign-function-interface-importc-pragma">Importc プラグマ</a></li>
 <li><a class="reference" id="foreign-function-interface-exportc-pragma_toc" href="#foreign-function-interface-exportc-pragma">Exportc プラグマ</a></li>
 <li><a class="reference" id="foreign-function-interface-extern-pragma_toc" href="#foreign-function-interface-extern-pragma">Extern プラグマ</a></li>
@@ -1070,7 +1070,7 @@ function main() {
 <tr><th class="docinfo-name">バージョン:</th><td>  1.0.4</td></tr>
 </tbody></table><blockquote><p>"Complexity" seems to be a lot like "energy": you can transfer it from the end user to one/some of the other players, but the total amount seems to remain pretty much constant for a given task. -- Ran</p></blockquote>
 
-<h1><a class="toc-backref" id="about-this-document" href="#about-this-document">このドキュメントについて</a></h1><p><strong>Note</strong>: This document is a draft! Several of Nim's features may need more precise wording. This manual is constantly evolving into a proper specification.</p>
+<h1><a class="toc-backref" id="about-this-document" href="#about-this-document">このドキュメントについて</a></h1><p><strong>備考</strong>: このドキュメントは草稿段階です！Several of Nim's features may need more precise wording. This manual is constantly evolving into a proper specification.</p>
 <p><strong>Note</strong>: The experimental features of Nim are covered <a class="reference external" href="manual_experimental.html">here</a>.</p>
 <p><strong>Note</strong>: Assignments, moves and destruction are specified in the <a class="reference external" href="destructors.html">destructors</a> document.</p>
 <p>This document describes the lexis, the syntax, and the semantics of the Nim language.</p>
@@ -1177,14 +1177,14 @@ IDENTIFIER ::= letter ( ['_'] (letter | digit) )*</pre>
 
 <h2><a class="toc-backref" id="lexical-analysis-string-literals" href="#lexical-analysis-string-literals">文字列リテラル</a></h2><p>Terminal symbol in the grammar: <tt class="docutils literal"><span class="pre">STR_LIT</span></tt>.</p>
 <p>String literals can be delimited by matching double quotes, and can contain the following <span id="escape-sequences_1">escape sequences</span>:</p>
-<table border="1" class="docutils"><tr><th>Escape sequence</th><th>Meaning</th></tr>
+<table border="1" class="docutils"><tr><th>エスケープシーケンス</th><th>説明</th></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\p</span></tt></td><td>platform specific newline: CRLF on Windows, LF on Unix</td></tr>
-<tr><td><tt class="docutils literal"><span class="pre">\r</span></tt>, <tt class="docutils literal"><span class="pre">\c</span></tt></td><td><span id="carriage-return_1">carriage return</span></td></tr>
+<tr><td><tt class="docutils literal"><span class="pre">\r</span></tt>, <tt class="docutils literal"><span class="pre">\c</span></tt></td><td><span id="carriage-return_1">キャリッジリターン</span></td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\n</span></tt>, <tt class="docutils literal"><span class="pre">\l</span></tt></td><td><span id="line-feed_1">line feed</span> (often called <span id="newline_1">newline</span>)</td></tr>
-<tr><td><tt class="docutils literal"><span class="pre">\f</span></tt></td><td><span id="form-feed_1">form feed</span></td></tr>
-<tr><td><tt class="docutils literal"><span class="pre">\t</span></tt></td><td><span id="tabulator_1">tabulator</span></td></tr>
-<tr><td><tt class="docutils literal"><span class="pre">\v</span></tt></td><td><span id="vertical-tabulator_1">vertical tabulator</span></td></tr>
-<tr><td><tt class="docutils literal"><span class="pre">\\</span></tt></td><td><span id="backslash_1">backslash</span></td></tr>
+<tr><td><tt class="docutils literal"><span class="pre">\f</span></tt></td><td><span id="form-feed_1">フォームフィード</span></td></tr>
+<tr><td><tt class="docutils literal"><span class="pre">\t</span></tt></td><td><span id="tabulator_1">タブ</span></td></tr>
+<tr><td><tt class="docutils literal"><span class="pre">\v</span></tt></td><td><span id="vertical-tabulator_1">垂直タブ</span></td></tr>
+<tr><td><tt class="docutils literal"><span class="pre">\\</span></tt></td><td><span id="backslash_1">バックスラッシュ</span></td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\"</span></tt></td><td><span id="quotation-mark_1">quotation mark</span></td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\'</span></tt></td><td><span id="apostrophe_1">apostrophe</span></td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\</span></tt> '0'..'9'+</td><td><span id="character-with-decimal-value-d_1">character with decimal value d</span>; all decimal digits directly following are used for the character</td></tr>
@@ -1198,14 +1198,14 @@ IDENTIFIER ::= letter ( ['_'] (letter | digit) )*</pre>
 
 <h2><a class="toc-backref" id="lexical-analysis-triple-quoted-string-literals" href="#lexical-analysis-triple-quoted-string-literals">Triple quoted string literals</a></h2><p>Terminal symbol in the grammar: <tt class="docutils literal"><span class="pre">TRIPLESTR_LIT</span></tt>.</p>
 <p>String literals can also be delimited by three double quotes <tt class="docutils literal"><span class="pre">"""</span></tt> ... <tt class="docutils literal"><span class="pre">"""</span></tt>. Literals in this form may run for several lines, may contain <tt class="docutils literal"><span class="pre">"</span></tt> and do not interpret any escape sequences. For convenience, when the opening <tt class="docutils literal"><span class="pre">"""</span></tt> is followed by a newline (there may be whitespace between the opening <tt class="docutils literal"><span class="pre">"""</span></tt> and the newline), the newline (and the preceding whitespace) is not included in the string. The ending of the string literal is defined by the pattern <tt class="docutils literal"><span class="pre">"""[^"]</span></tt>, so this:</p>
-<pre class="listing"><span class="LongStringLit">""""long string within quotes""""</span></pre><p>Produces:<pre>
+<pre class="listing"><span class="LongStringLit">""""long string within quotes""""</span></pre><p>結果:<pre>
 "long string within quotes"</pre>
 </p>
 
 <h2><a class="toc-backref" id="lexical-analysis-raw-string-literals" href="#lexical-analysis-raw-string-literals">Raw string literals</a></h2><p>Terminal symbol in the grammar: <tt class="docutils literal"><span class="pre">RSTR_LIT</span></tt>.</p>
 <p>There are also raw string literals that are preceded with the letter <tt class="docutils literal"><span class="pre">r</span></tt> (or <tt class="docutils literal"><span class="pre">R</span></tt>) and are delimited by matching double quotes (just like ordinary string literals) and do not interpret the escape sequences. This is especially convenient for regular expressions or Windows paths:</p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">f</span> <span class="Operator">=</span> <span class="Identifier">openFile</span><span class="Punctuation">(</span><span class="RawData">r"C:\texts\text.txt"</span><span class="Punctuation">)</span> <span class="Comment"># a raw string, so ``\t`` is no tab</span></pre><p>To produce a single <tt class="docutils literal"><span class="pre">"</span></tt> within a raw string literal, it has to be doubled:</p>
-<pre class="listing"><span class="RawData">r"a""</span><span class="RawData">b"</span></pre><p>Produces:<pre>
+<pre class="listing"><span class="RawData">r"a""</span><span class="RawData">b"</span></pre><p>結果:<pre>
 a"b</pre>
 </p>
 <p><tt class="docutils literal"><span class="pre">r""""</span></tt> is not possible with this notation, because the three leading quotes introduce a triple quoted string literal. <tt class="docutils literal"><span class="pre">r"""</span></tt> is the same as <tt class="docutils literal"><span class="pre">"""</span></tt> since triple quoted string literals do not interpret escape sequences either.</p>
@@ -1215,13 +1215,13 @@ a"b</pre>
 <p>The construct <tt class="docutils literal"><span class="pre">identifier"""string literal"""</span></tt> exists too. It is a shortcut for <tt class="docutils literal"><span class="pre">identifier("""string literal""")</span></tt>.</p>
 
 <h2><a class="toc-backref" id="lexical-analysis-character-literals" href="#lexical-analysis-character-literals">文字リテラル</a></h2><p>Character literals are enclosed in single quotes <tt class="docutils literal"><span class="pre">''</span></tt> and can contain the same escape sequences as strings - with one exception: the platform dependent <span id="newline_2">newline</span> (<tt class="docutils literal"><span class="pre">\p</span></tt>) is not allowed as it may be wider than one character (often it is the pair CR/LF for example).  Here are the valid <span id="escape-sequences_2">escape sequences</span> for character literals:</p>
-<table border="1" class="docutils"><tr><th>Escape sequence</th><th>Meaning</th></tr>
-<tr><td><tt class="docutils literal"><span class="pre">\r</span></tt>, <tt class="docutils literal"><span class="pre">\c</span></tt></td><td><span id="carriage-return_2">carriage return</span></td></tr>
+<table border="1" class="docutils"><tr><th>エスケープシーケンス</th><th>説明</th></tr>
+<tr><td><tt class="docutils literal"><span class="pre">\r</span></tt>, <tt class="docutils literal"><span class="pre">\c</span></tt></td><td><span id="carriage-return_2">キャリッジリターン</span></td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\n</span></tt>, <tt class="docutils literal"><span class="pre">\l</span></tt></td><td><span id="line-feed_2">line feed</span></td></tr>
-<tr><td><tt class="docutils literal"><span class="pre">\f</span></tt></td><td><span id="form-feed_2">form feed</span></td></tr>
-<tr><td><tt class="docutils literal"><span class="pre">\t</span></tt></td><td><span id="tabulator_2">tabulator</span></td></tr>
-<tr><td><tt class="docutils literal"><span class="pre">\v</span></tt></td><td><span id="vertical-tabulator_2">vertical tabulator</span></td></tr>
-<tr><td><tt class="docutils literal"><span class="pre">\\</span></tt></td><td><span id="backslash_2">backslash</span></td></tr>
+<tr><td><tt class="docutils literal"><span class="pre">\f</span></tt></td><td><span id="form-feed_2">フォームフィード</span></td></tr>
+<tr><td><tt class="docutils literal"><span class="pre">\t</span></tt></td><td><span id="tabulator_2">タブ</span></td></tr>
+<tr><td><tt class="docutils literal"><span class="pre">\v</span></tt></td><td><span id="vertical-tabulator_2">垂直タブ</span></td></tr>
+<tr><td><tt class="docutils literal"><span class="pre">\\</span></tt></td><td><span id="backslash_2">バックスラッシュ</span></td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\"</span></tt></td><td><span id="quotation-mark_2">quotation mark</span></td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\'</span></tt></td><td><span id="apostrophe_2">apostrophe</span></td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\</span></tt> '0'..'9'+</td><td><span id="character-with-decimal-value-d_2">character with decimal value d</span>; all decimal digits directly following are used for the character</td></tr>
@@ -1303,20 +1303,20 @@ FLOAT64_LIT = HEX_LIT '\'' FLOAT64_SUFFIX
 <h1><a class="toc-backref" id="syntax" href="#syntax">シンタックス</a></h1><p>This section lists Nim's standard syntax. How the parser handles the indentation is already described in the <a class="reference external" href="#lexical-analysis">Lexical Analysis</a> section.</p>
 <p>Nim allows user-definable operators. Binary operators have 11 different levels of precedence.</p>
 
-<h2><a class="toc-backref" id="syntax-associativity" href="#syntax-associativity">Associativity</a></h2><p>Binary operators whose first character is <tt class="docutils literal"><span class="pre">^</span></tt> are right-associative, all other binary operators are left-associative.</p>
+<h2><a class="toc-backref" id="syntax-associativity" href="#syntax-associativity">結合性</a></h2><p>Binary operators whose first character is <tt class="docutils literal"><span class="pre">^</span></tt> are right-associative, all other binary operators are left-associative.</p>
 <pre class="listing"><span class="Keyword">proc</span> <span class="Punctuation">`</span><span class="Operator">^/</span><span class="Punctuation">`</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">,</span> <span class="Identifier">y</span><span class="Punctuation">:</span> <span class="Identifier">float</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">float</span> <span class="Operator">=</span>
   <span class="Comment"># a right-associative division operator</span>
   <span class="Identifier">result</span> <span class="Operator">=</span> <span class="Identifier">x</span> <span class="Operator">/</span> <span class="Identifier">y</span>
 <span class="Identifier">echo</span> <span class="DecNumber">12</span> <span class="Operator">^/</span> <span class="DecNumber">4</span> <span class="Operator">^/</span> <span class="DecNumber">8</span> <span class="Comment"># 24.0 (4 / 8 = 0.5, then 12 / 0.5 = 24.0)</span>
 <span class="Identifier">echo</span> <span class="DecNumber">12</span>  <span class="Operator">/</span> <span class="DecNumber">4</span>  <span class="Operator">/</span> <span class="DecNumber">8</span> <span class="Comment"># 0.375 (12 / 4 = 3.0, then 3 / 8 = 0.375)</span></pre>
-<h2><a class="toc-backref" id="syntax-precedence" href="#syntax-precedence">Precedence</a></h2><p>Unary operators always bind stronger than any binary operator: <tt class="docutils literal"><span class="pre">$a + b</span></tt> is <tt class="docutils literal"><span class="pre">($a) + b</span></tt> and not <tt class="docutils literal"><span class="pre">$(a + b)</span></tt>.</p>
+<h2><a class="toc-backref" id="syntax-precedence" href="#syntax-precedence">優先順位</a></h2><p>Unary operators always bind stronger than any binary operator: <tt class="docutils literal"><span class="pre">$a + b</span></tt> is <tt class="docutils literal"><span class="pre">($a) + b</span></tt> and not <tt class="docutils literal"><span class="pre">$(a + b)</span></tt>.</p>
 <p>If an unary operator's first character is <tt class="docutils literal"><span class="pre">@</span></tt> it is a <span id="sigilminuslike_1">sigil-like</span> operator which binds stronger than a <tt class="docutils literal"><span class="pre">primarySuffix</span></tt>: <tt class="docutils literal"><span class="pre">@x.abc</span></tt> is parsed as <tt class="docutils literal"><span class="pre">(@x).abc</span></tt> whereas <tt class="docutils literal"><span class="pre">$x.abc</span></tt> is parsed as <tt class="docutils literal"><span class="pre">$(x.abc)</span></tt>.</p>
 <p>For binary operators that are not keywords the precedence is determined by the following rules:</p>
 <p>Operators ending in either <tt class="docutils literal"><span class="pre">-&gt;</span></tt>, <tt class="docutils literal"><span class="pre">~&gt;</span></tt> or <tt class="docutils literal"><span class="pre">=&gt;</span></tt> are called <span id="arrow-like_1">arrow like</span>, and have the lowest precedence of all operators.</p>
 <p>If the operator ends with <tt class="docutils literal"><span class="pre">=</span></tt> and its first character is none of <tt class="docutils literal"><span class="pre">&lt;</span></tt>, <tt class="docutils literal"><span class="pre">&gt;</span></tt>, <tt class="docutils literal"><span class="pre">!</span></tt>, <tt class="docutils literal"><span class="pre">=</span></tt>, <tt class="docutils literal"><span class="pre">~</span></tt>, <tt class="docutils literal"><span class="pre">?</span></tt>, it is an <em>assignment operator</em> which has the second lowest precedence.</p>
 <p>Otherwise precedence is determined by the first character.</p>
-<table border="1" class="docutils"><tr><th>Precedence level</th><th>演算子</th><th>First character</th><th>Terminal symbol</th></tr>
-<tr><td>10 (highest)</td><td></td><td><tt class="docutils literal"><span class="pre">$ ^</span></tt></td><td>OP10</td></tr>
+<table border="1" class="docutils"><tr><th>優先順位</th><th>演算子</th><th>First character</th><th>Terminal symbol</th></tr>
+<tr><td>10 (最高)</td><td></td><td><tt class="docutils literal"><span class="pre">$ ^</span></tt></td><td>OP10</td></tr>
 <tr><td>9</td><td><tt class="docutils literal"><span class="pre">* / div mod shl shr %</span></tt></td><td><tt class="docutils literal"><span class="pre">* % \ /</span></tt></td><td>OP9</td></tr>
 <tr><td>8</td><td><tt class="docutils literal"><span class="pre">+ -</span></tt></td><td><tt class="docutils literal"><span class="pre">+ - ~ |</span></tt></td><td>OP8</td></tr>
 <tr><td>7</td><td><tt class="docutils literal"><span class="pre">&amp;</span></tt></td><td><tt class="docutils literal"><span class="pre">&amp;</span></tt></td><td>OP7</td></tr>
@@ -1325,14 +1325,14 @@ FLOAT64_LIT = HEX_LIT '\'' FLOAT64_SUFFIX
 <tr><td>4</td><td><tt class="docutils literal"><span class="pre">and</span></tt></td><td></td><td>OP4</td></tr>
 <tr><td>3</td><td><tt class="docutils literal"><span class="pre">or xor</span></tt></td><td></td><td>OP3</td></tr>
 <tr><td>2</td><td></td><td><tt class="docutils literal"><span class="pre">@ : ?</span></tt></td><td>OP2</td></tr>
-<tr><td>1</td><td><em>assignment operator</em> (like <tt class="docutils literal"><span class="pre">+=</span></tt>, <tt class="docutils literal"><span class="pre">*=</span></tt>)</td><td></td><td>OP1</td></tr>
-<tr><td>0 (lowest)</td><td><em>arrow like operator</em> (like <tt class="docutils literal"><span class="pre">-&gt;</span></tt>, <tt class="docutils literal"><span class="pre">=&gt;</span></tt>)</td><td></td><td>OP0</td></tr>
+<tr><td>1</td><td><em>代入演算子</em> (<tt class="docutils literal"><span class="pre">+=</span></tt>, <tt class="docutils literal"><span class="pre">*=</span></tt> など)</td><td></td><td>OP1</td></tr>
+<tr><td>0 (最低)</td><td><em>arrow like operator</em> (like <tt class="docutils literal"><span class="pre">-&gt;</span></tt>, <tt class="docutils literal"><span class="pre">=&gt;</span></tt>)</td><td></td><td>OP0</td></tr>
 </table><p>Whether an operator is used a prefix operator is also affected by preceding whitespace (this parsing change was introduced with version 0.13.0):</p>
 <pre class="listing"><span class="Identifier">echo</span> <span class="Operator">$</span><span class="Identifier">foo</span>
 <span class="Comment"># is parsed as</span>
 <span class="Identifier">echo</span><span class="Punctuation">(</span><span class="Operator">$</span><span class="Identifier">foo</span><span class="Punctuation">)</span></pre><p>Spacing also determines whether <tt class="docutils literal"><span class="pre">(a, b)</span></tt> is parsed as an the argument list of a call or whether it is parsed as a tuple constructor:</p>
 <pre class="listing"><span class="Identifier">echo</span><span class="Punctuation">(</span><span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">)</span> <span class="Comment"># pass 1 and 2 to echo</span></pre><pre class="listing"><span class="Identifier">echo</span> <span class="Punctuation">(</span><span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">)</span> <span class="Comment"># pass the tuple (1, 2) to echo</span></pre>
-<h2><a class="toc-backref" id="syntax-grammar" href="#syntax-grammar">Grammar</a></h2><p>The grammar's start symbol is <tt class="docutils literal"><span class="pre">module</span></tt>.</p>
+<h2><a class="toc-backref" id="syntax-grammar" href="#syntax-grammar">文法</a></h2><p>The grammar's start symbol is <tt class="docutils literal"><span class="pre">module</span></tt>.</p>
 <pre># This file is generated by compiler/parser.nim.
 module = stmt ^* (';' / IND{=})
 comma = ',' COMMENT?
@@ -1540,7 +1540,7 @@ stmt = (IND{&gt;} complexOrSimpleStmt^+(IND{=} / ';') DED)
      / simpleStmt ^+ ';'
 </pre>
 
-<h1><a class="toc-backref" id="order-of-evaluation" href="#order-of-evaluation">Order of evaluation</a></h1><p>Order of evaluation is strictly left-to-right, inside-out as it is typical for most others imperative programming languages:</p>
+<h1><a class="toc-backref" id="order-of-evaluation" href="#order-of-evaluation">評価順序</a></h1><p>Order of evaluation is strictly left-to-right, inside-out as it is typical for most others imperative programming languages:</p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">s</span> <span class="Operator">=</span> <span class="StringLit">""</span>
 
 <span class="Keyword">proc</span> <span class="Identifier">p</span><span class="Punctuation">(</span><span class="Identifier">arg</span><span class="Punctuation">:</span> <span class="Identifier">int</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">int</span> <span class="Operator">=</span>
@@ -1595,7 +1595,7 @@ stmt = (IND{&gt;} complexOrSimpleStmt^+(IND{=} / ';') DED)
 
 <span class="Identifier">doAssert</span> <span class="Identifier">s</span> <span class="Operator">==</span> <span class="StringLit">"qppqpq"</span></pre><p>Rationale: This is far easier to implement than hypothetical alternatives.</p>
 
-<h1><a class="toc-backref" id="constants-and-constant-expressions" href="#constants-and-constant-expressions">Constants and Constant Expressions</a></h1><p>A <span id="constant_1">constant</span> is a symbol that is bound to the value of a constant expression. Constant expressions are restricted to depend only on the following categories of values and operations, because these are either built into the language or declared and evaluated before semantic analysis of the constant expression:</p>
+<h1><a class="toc-backref" id="constants-and-constant-expressions" href="#constants-and-constant-expressions">定数と定数式</a></h1><p>A <span id="constant_1">constant</span> is a symbol that is bound to the value of a constant expression. Constant expressions are restricted to depend only on the following categories of values and operations, because these are either built into the language or declared and evaluated before semantic analysis of the constant expression:</p>
 <ul class="simple"><li>literals</li>
 <li>built-in operators</li>
 <li>previously declared constants and compile-time variables</li>
@@ -2222,7 +2222,7 @@ ord(Direction.west) == 3</pre>
 <span class="Identifier">bb</span><span class="Operator">.</span><span class="Identifier">a</span> <span class="Operator">=</span> <span class="DecNumber">90</span>
 <span class="Identifier">bb</span><span class="Operator">.</span><span class="Identifier">s</span> <span class="Operator">=</span> <span class="StringLit">"abc"</span></pre><p>Currently only the dot accessor can be borrowed in this way.</p>
 
-<h3><a class="toc-backref" id="distinct-type-avoiding-sql-injection-attacks" href="#distinct-type-avoiding-sql-injection-attacks">Avoiding SQL injection attacks</a></h3><p>An SQL statement that is passed from Nim to an SQL database might be modelled as a string. However, using string templates and filling in the values is vulnerable to the famous <span id="sql-injection-attack_1">SQL injection attack</span>:</p>
+<h3><a class="toc-backref" id="distinct-type-avoiding-sql-injection-attacks" href="#distinct-type-avoiding-sql-injection-attacks">SQL インジェクション攻撃の回避</a></h3><p>An SQL statement that is passed from Nim to an SQL database might be modelled as a string. However, using string templates and filling in the values is vulnerable to the famous <span id="sql-injection-attack_1">SQL injection attack</span>:</p>
 <pre class="listing"><span class="Keyword">import</span> <span class="Identifier">strutils</span>
 
 <span class="Keyword">proc</span> <span class="Identifier">query</span><span class="Punctuation">(</span><span class="Identifier">db</span><span class="Punctuation">:</span> <span class="Identifier">DbHandle</span><span class="Punctuation">,</span> <span class="Identifier">statement</span><span class="Punctuation">:</span> <span class="Identifier">string</span><span class="Punctuation">)</span> <span class="Operator">=</span> <span class="Operator">...</span>
@@ -2258,7 +2258,7 @@ ord(Direction.west) == 3</pre>
 
 <span class="Identifier">db</span><span class="Operator">.</span><span class="Identifier">query</span><span class="Punctuation">(</span><span class="StringLit">"SELECT FROM users WHERE name = '$1'"</span><span class="Operator">.</span><span class="Identifier">SQL</span> <span class="Operator">%</span> <span class="Punctuation">[</span><span class="Identifier">username</span><span class="Punctuation">]</span><span class="Punctuation">)</span></pre><p>Now we have compile-time checking against SQL injection attacks.  Since <tt class="docutils literal"><span class="pre">"".SQL</span></tt> is transformed to <tt class="docutils literal"><span class="pre">SQL("")</span></tt> no new syntax is needed for nice looking <tt class="docutils literal"><span class="pre">SQL</span></tt> string literals. The hypothetical <tt class="docutils literal"><span class="pre">SQL</span></tt> type actually exists in the library as the <a class="reference external" href="db_common.html#SqlQuery">SqlQuery type</a> of modules like <a class="reference external" href="db_sqlite.html">db_sqlite</a>.</p>
 
-<h2><a class="toc-backref" id="types-auto-type" href="#types-auto-type">Auto type</a></h2><p>The <tt class="docutils literal"><span class="pre">auto</span></tt> type can only be used for return types and parameters. For return types it causes the compiler to infer the type from the routine body:</p>
+<h2><a class="toc-backref" id="types-auto-type" href="#types-auto-type">Auto 型</a></h2><p>The <tt class="docutils literal"><span class="pre">auto</span></tt> type can only be used for return types and parameters. For return types it causes the compiler to infer the type from the routine body:</p>
 <pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">returnsInt</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">auto</span> <span class="Operator">=</span> <span class="DecNumber">1984</span></pre><p>For parameters it currently creates implicitly generic routines:</p>
 <pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">foo</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">,</span> <span class="Identifier">b</span><span class="Punctuation">:</span> <span class="Identifier">auto</span><span class="Punctuation">)</span> <span class="Operator">=</span> <span class="Keyword">discard</span></pre><p>Is the same as:</p>
 <pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">foo</span><span class="Punctuation">[</span><span class="Identifier">T1</span><span class="Punctuation">,</span> <span class="Identifier">T2</span><span class="Punctuation">]</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">:</span> <span class="Identifier">T1</span><span class="Punctuation">,</span> <span class="Identifier">b</span><span class="Punctuation">:</span> <span class="Identifier">T2</span><span class="Punctuation">)</span> <span class="Operator">=</span> <span class="Keyword">discard</span></pre><p>However later versions of the language might change this to mean "infer the parameters' types from the body". Then the above <tt class="docutils literal"><span class="pre">foo</span></tt> would be rejected as the parameters' types can not be inferred from an empty <tt class="docutils literal"><span class="pre">discard</span></tt> statement.</p>
@@ -2487,7 +2487,7 @@ return "ambiguous"</pre>
 
 <h2><a class="toc-backref" id="overloading-resolution-varargs-matching" href="#overloading-resolution-varargs-matching">Varargs matching</a></h2><p>See <a class="reference external" href="#types-varargs">Varargs</a>.</p>
 
-<h1><a class="toc-backref" id="statements-and-expressions" href="#statements-and-expressions">Statements and expressions</a></h1><p>Nim uses the common statement/expression paradigm: Statements do not produce a value in contrast to expressions. However, some expressions are statements.</p>
+<h1><a class="toc-backref" id="statements-and-expressions" href="#statements-and-expressions">ステートメントと式</a></h1><p>Nim uses the common statement/expression paradigm: Statements do not produce a value in contrast to expressions. However, some expressions are statements.</p>
 <p>Statements are separated into <span id="simple-statements_1">simple statements</span> and <span id="complex-statements_1">complex statements</span>. Simple statements are statements that cannot contain other statements like assignments, calls or the <tt class="docutils literal"><span class="pre">return</span></tt> statement; complex statements can contain other statements. To avoid the <span id="dangling-else-problem_1">dangling else problem</span>, complex statements always have to be indented. The details can be found in the grammar.</p>
 
 <h2><a class="toc-backref" id="statements-and-expressions-statement-list-expression" href="#statements-and-expressions-statement-list-expression">Statement list expression</a></h2><p>Statements can also occur in an expression context that looks like <tt class="docutils literal"><span class="pre">(stmt1; stmt2; ...; ex)</span></tt>. This is called an statement list expression or <tt class="docutils literal"><span class="pre">(;)</span></tt>. The type of <tt class="docutils literal"><span class="pre">(stmt1; stmt2; ...; ex)</span></tt> is the type of <tt class="docutils literal"><span class="pre">ex</span></tt>. All the other statements must be of type <tt class="docutils literal"><span class="pre">void</span></tt>. (One can use <tt class="docutils literal"><span class="pre">discard</span></tt> to produce a <tt class="docutils literal"><span class="pre">void</span></tt> type.) <tt class="docutils literal"><span class="pre">(;)</span></tt> does not introduce a new scope.</p>
@@ -2508,7 +2508,7 @@ return "ambiguous"</pre>
   <span class="Keyword">of</span> <span class="Identifier">SymChars</span><span class="Punctuation">,</span> <span class="CharLit">'_'</span><span class="Punctuation">:</span> <span class="Identifier">echo</span> <span class="StringLit">"an identifier"</span>
   <span class="Keyword">of</span> <span class="CharLit">'0'</span><span class="Operator">..</span><span class="CharLit">'9'</span><span class="Punctuation">:</span> <span class="Identifier">echo</span> <span class="StringLit">"a number"</span>
   <span class="Keyword">else</span><span class="Punctuation">:</span> <span class="Keyword">discard</span></pre>
-<h2><a class="toc-backref" id="statements-and-expressions-void-context" href="#statements-and-expressions-void-context">Void context</a></h2><p>In a list of statements every expression except the last one needs to have the type <tt class="docutils literal"><span class="pre">void</span></tt>. In addition to this rule an assignment to the builtin <tt class="docutils literal"><span class="pre">result</span></tt> symbol also triggers a mandatory <tt class="docutils literal"><span class="pre">void</span></tt> context for the subsequent expressions:</p>
+<h2><a class="toc-backref" id="statements-and-expressions-void-context" href="#statements-and-expressions-void-context">Void コンテキスト</a></h2><p>In a list of statements every expression except the last one needs to have the type <tt class="docutils literal"><span class="pre">void</span></tt>. In addition to this rule an assignment to the builtin <tt class="docutils literal"><span class="pre">result</span></tt> symbol also triggers a mandatory <tt class="docutils literal"><span class="pre">void</span></tt> context for the subsequent expressions:</p>
 <pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">invalid</span><span class="Operator">*</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">string</span> <span class="Operator">=</span>
   <span class="Identifier">result</span> <span class="Operator">=</span> <span class="StringLit">"foo"</span>
   <span class="StringLit">"invalid"</span>  <span class="Comment"># Error: value of type 'string' has to be discarded</span></pre><pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">valid</span><span class="Operator">*</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">string</span> <span class="Operator">=</span>
@@ -2553,7 +2553,7 @@ return "ambiguous"</pre>
 <pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">returnsTuple</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Punctuation">(</span><span class="Identifier">int</span><span class="Punctuation">,</span> <span class="Identifier">int</span><span class="Punctuation">,</span> <span class="Identifier">int</span><span class="Punctuation">)</span> <span class="Operator">=</span> <span class="Punctuation">(</span><span class="DecNumber">4</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">)</span>
 
 <span class="Keyword">let</span> <span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">,</span> <span class="Identifier">_</span><span class="Punctuation">,</span> <span class="Identifier">z</span><span class="Punctuation">)</span> <span class="Operator">=</span> <span class="Identifier">returnsTuple</span><span class="Punctuation">(</span><span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="statements-and-expressions-const-section" href="#statements-and-expressions-const-section">Const section</a></h2><p>A const section declares constants whose values are constant expressions:</p>
+<h2><a class="toc-backref" id="statements-and-expressions-const-section" href="#statements-and-expressions-const-section">Const セクション</a></h2><p>A const section declares constants whose values are constant expressions:</p>
 <pre class="listing"><span class="Keyword">import</span> <span class="Identifier">strutils</span>
 <span class="Keyword">const</span>
   <span class="Identifier">roundPi</span> <span class="Operator">=</span> <span class="FloatNumber">3.1415</span>
@@ -2627,7 +2627,7 @@ return "ambiguous"</pre>
 </ul>
 <p>The <tt class="docutils literal"><span class="pre">when</span></tt> statement enables conditional compilation techniques. As a special syntactic extension, the <tt class="docutils literal"><span class="pre">when</span></tt> construct is also available within <tt class="docutils literal"><span class="pre">object</span></tt> definitions.</p>
 
-<h2><a class="toc-backref" id="statements-and-expressions-when-nimvm-statement" href="#statements-and-expressions-when-nimvm-statement">When nimvm statement</a></h2><p><tt class="docutils literal"><span class="pre">nimvm</span></tt> is a special symbol, that may be used as expression of <tt class="docutils literal"><span class="pre">when nimvm</span></tt> statement to differentiate execution path between compile time and the executable.</p>
+<h2><a class="toc-backref" id="statements-and-expressions-when-nimvm-statement" href="#statements-and-expressions-when-nimvm-statement">When nimvm ステートメント</a></h2><p><tt class="docutils literal"><span class="pre">nimvm</span></tt> is a special symbol, that may be used as expression of <tt class="docutils literal"><span class="pre">when nimvm</span></tt> statement to differentiate execution path between compile time and the executable.</p>
 <p>用例:</p>
 <pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">someProcThatMayRunInCompileTime</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">bool</span> <span class="Operator">=</span>
   <span class="Keyword">when</span> <span class="Identifier">nimvm</span><span class="Punctuation">:</span>
@@ -2861,7 +2861,7 @@ return "ambiguous"</pre>
 <p>See also: <a class="reference external" href="#templates-limitations-of-the-method-call-syntax">Limitations of the method call syntax</a>.</p>
 <p>The <tt class="docutils literal"><span class="pre">[: ]</span></tt> notation has been designed to mitigate this issue: <tt class="docutils literal"><span class="pre">x.p[:T]</span></tt> is rewritten by the parser to <tt class="docutils literal"><span class="pre">p[T](x)</span></tt>, <tt class="docutils literal"><span class="pre">x.p[:T](y)</span></tt> is rewritten to <tt class="docutils literal"><span class="pre">p[T](x, y)</span></tt>. Note that <tt class="docutils literal"><span class="pre">[: ]</span></tt> has no AST representation, the rewrite is performed directly in the parsing step.</p>
 
-<h2><a class="toc-backref" id="procedures-properties" href="#procedures-properties">Properties</a></h2><p>Nim has no need for <em>get-properties</em>: Ordinary get-procedures that are called with the <em>method call syntax</em> achieve the same. But setting a value is different; for this a special setter syntax is needed:</p>
+<h2><a class="toc-backref" id="procedures-properties" href="#procedures-properties">プロパティ</a></h2><p>Nim has no need for <em>get-properties</em>: Ordinary get-procedures that are called with the <em>method call syntax</em> achieve the same. But setting a value is different; for this a special setter syntax is needed:</p>
 <pre class="listing"><span class="Comment"># Module asocket</span>
 <span class="Keyword">type</span>
   <span class="Identifier">Socket</span><span class="Operator">*</span> <span class="Operator">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">RootObj</span>
@@ -2900,17 +2900,17 @@ return "ambiguous"</pre>
 <span class="Keyword">let</span> <span class="Identifier">y</span> <span class="Operator">=</span> <span class="FloatNumber">1.</span><span class="Identifier">optarg</span> <span class="Identifier">optarg</span> <span class="DecNumber">8</span>    <span class="Comment"># same thing as above, w/o the parenthesis</span>
 <span class="Identifier">assert</span> <span class="Identifier">x</span> <span class="Operator">==</span> <span class="Identifier">y</span></pre><p>The command invocation syntax also can't have complex expressions as arguments. For example: (<a class="reference external" href="#procedures-anonymous-procs">anonymous procs</a>), <tt class="docutils literal"><span class="pre">if</span></tt>, <tt class="docutils literal"><span class="pre">case</span></tt> or <tt class="docutils literal"><span class="pre">try</span></tt>. Function calls with no arguments still needs () to distinguish between a call and the function itself as a first class value.</p>
 
-<h2><a class="toc-backref" id="procedures-closures" href="#procedures-closures">Closures</a></h2><p>Procedures can appear at the top level in a module as well as inside other scopes, in which case they are called nested procs. A nested proc can access local variables from its enclosing scope and if it does so it becomes a closure. Any captured variables are stored in a hidden additional argument to the closure (its environment) and they are accessed by reference by both the closure and its enclosing scope (i.e. any modifications made to them are visible in both places). The closure environment may be allocated on the heap or on the stack if the compiler determines that this would be safe.</p>
+<h2><a class="toc-backref" id="procedures-closures" href="#procedures-closures">クロージャ</a></h2><p>Procedures can appear at the top level in a module as well as inside other scopes, in which case they are called nested procs. A nested proc can access local variables from its enclosing scope and if it does so it becomes a closure. Any captured variables are stored in a hidden additional argument to the closure (its environment) and they are accessed by reference by both the closure and its enclosing scope (i.e. any modifications made to them are visible in both places). The closure environment may be allocated on the heap or on the stack if the compiler determines that this would be safe.</p>
 
 <h3><a class="toc-backref" id="closures-creating-closures-in-loops" href="#closures-creating-closures-in-loops">Creating closures in loops</a></h3><p>Since closures capture local variables by reference it is often not wanted behavior inside loop bodies. See <a class="reference external" href="system.html#closureScope.t,untyped">closureScope</a> for details on how to change this behavior.</p>
 
-<h2><a class="toc-backref" id="procedures-anonymous-procs" href="#procedures-anonymous-procs">Anonymous Procs</a></h2><p>Unnamed procedures can be used as lambda expressions to pass into other procedures:</p>
+<h2><a class="toc-backref" id="procedures-anonymous-procs" href="#procedures-anonymous-procs">無名プロシージャ</a></h2><p>Unnamed procedures can be used as lambda expressions to pass into other procedures:</p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">cities</span> <span class="Operator">=</span> <span class="Operator">@</span><span class="Punctuation">[</span><span class="StringLit">"Frankfurt"</span><span class="Punctuation">,</span> <span class="StringLit">"Tokyo"</span><span class="Punctuation">,</span> <span class="StringLit">"New York"</span><span class="Punctuation">,</span> <span class="StringLit">"Kyiv"</span><span class="Punctuation">]</span>
 
 <span class="Identifier">cities</span><span class="Operator">.</span><span class="Identifier">sort</span><span class="Punctuation">(</span><span class="Keyword">proc</span> <span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">,</span><span class="Identifier">y</span><span class="Punctuation">:</span> <span class="Identifier">string</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">int</span> <span class="Operator">=</span>
     <span class="Identifier">cmp</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Operator">.</span><span class="Identifier">len</span><span class="Punctuation">,</span> <span class="Identifier">y</span><span class="Operator">.</span><span class="Identifier">len</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre><p>Procs as expressions can appear both as nested procs and inside top level executable code. The  <a class="reference external" href="sugar.html">sugar</a> module contains the <tt class="docutils literal"><span class="pre">=&gt;</span></tt> macro which enables a more succinct syntax for anonymous procedures resembling lambdas as they are in languages like JavaScript, C#, etc.</p>
 
-<h2><a class="toc-backref" id="procedures-func" href="#procedures-func">Func</a></h2><p>The <tt class="docutils literal"><span class="pre">func</span></tt> keyword introduces a shortcut for a <span id="nosideeffect_1">noSideEffect</span> proc.</p>
+<h2><a class="toc-backref" id="procedures-func" href="#procedures-func">関数</a></h2><p>The <tt class="docutils literal"><span class="pre">func</span></tt> keyword introduces a shortcut for a <span id="nosideeffect_1">noSideEffect</span> proc.</p>
 <pre class="listing"><span class="Keyword">func</span> <span class="Identifier">binarySearch</span><span class="Punctuation">[</span><span class="Identifier">T</span><span class="Punctuation">]</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">:</span> <span class="Identifier">openArray</span><span class="Punctuation">[</span><span class="Identifier">T</span><span class="Punctuation">]</span><span class="Punctuation">;</span> <span class="Identifier">elem</span><span class="Punctuation">:</span> <span class="Identifier">T</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">int</span></pre><p>Is short for:</p>
 <pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">binarySearch</span><span class="Punctuation">[</span><span class="Identifier">T</span><span class="Punctuation">]</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">:</span> <span class="Identifier">openArray</span><span class="Punctuation">[</span><span class="Identifier">T</span><span class="Punctuation">]</span><span class="Punctuation">;</span> <span class="Identifier">elem</span><span class="Punctuation">:</span> <span class="Identifier">T</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">int</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">noSideEffect</span><span class="Operator">.</span><span class="Punctuation">}</span></pre>
 <h2><a class="toc-backref" id="procedures-nonoverloadable-builtins" href="#procedures-nonoverloadable-builtins">Nonoverloadable builtins</a></h2><p>The following builtin procs cannot be overloaded for reasons of implementation simplicity (they require specialized semantic checking):<pre>
@@ -2921,7 +2921,7 @@ is, shallowCopy, getAst, astToStr, spawn, procCall</pre>
 declared, defined, definedInScope, compiles, getAst, astToStr</pre>
 </p>
 
-<h2><a class="toc-backref" id="procedures-var-parameters" href="#procedures-var-parameters">Var parameters</a></h2><p>The type of a parameter may be prefixed with the <tt class="docutils literal"><span class="pre">var</span></tt> keyword:</p>
+<h2><a class="toc-backref" id="procedures-var-parameters" href="#procedures-var-parameters">Var パラメータ</a></h2><p>The type of a parameter may be prefixed with the <tt class="docutils literal"><span class="pre">var</span></tt> keyword:</p>
 <pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">divmod</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">,</span> <span class="Identifier">b</span><span class="Punctuation">:</span> <span class="Identifier">int</span><span class="Punctuation">;</span> <span class="Identifier">res</span><span class="Punctuation">,</span> <span class="Identifier">remainder</span><span class="Punctuation">:</span> <span class="Keyword">var</span> <span class="Identifier">int</span><span class="Punctuation">)</span> <span class="Operator">=</span>
   <span class="Identifier">res</span> <span class="Operator">=</span> <span class="Identifier">a</span> <span class="Keyword">div</span> <span class="Identifier">b</span>
   <span class="Identifier">remainder</span> <span class="Operator">=</span> <span class="Identifier">a</span> <span class="Keyword">mod</span> <span class="Identifier">b</span>
@@ -2952,7 +2952,7 @@ declared, defined, definedInScope, compiles, getAst, astToStr</pre>
 <span class="Identifier">assert</span> <span class="Identifier">x</span> <span class="Operator">==</span> <span class="DecNumber">1</span>
 <span class="Identifier">assert</span> <span class="Identifier">y</span> <span class="Operator">==</span> <span class="DecNumber">3</span></pre><p><strong>Note</strong>: <tt class="docutils literal"><span class="pre">var</span></tt> parameters are never necessary for efficient parameter passing. Since non-var parameters cannot be modified the compiler is always free to pass arguments by reference if it considers it can speed up execution.</p>
 
-<h2><a class="toc-backref" id="procedures-var-return-type" href="#procedures-var-return-type">Var return type</a></h2><p>A proc, converter or iterator may return a <tt class="docutils literal"><span class="pre">var</span></tt> type which means that the returned value is an l-value and can be modified by the caller:</p>
+<h2><a class="toc-backref" id="procedures-var-return-type" href="#procedures-var-return-type">Var 返値型</a></h2><p>A proc, converter or iterator may return a <tt class="docutils literal"><span class="pre">var</span></tt> type which means that the returned value is an l-value and can be modified by the caller:</p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">g</span> <span class="Operator">=</span> <span class="DecNumber">0</span>
 
 <span class="Keyword">proc</span> <span class="Identifier">writeAccessToG</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Keyword">var</span> <span class="Identifier">int</span> <span class="Operator">=</span>
@@ -2978,12 +2978,12 @@ Memory safety for returning by <tt class="docutils literal"><span class="pre">va
                       <span class="Comment"># which is not p's first parameter and lives</span>
                       <span class="Comment"># on the stack.</span></pre><p>In other words, the lifetime of what <tt class="docutils literal"><span class="pre">result</span></tt> points to is attached to the lifetime of the first parameter and that is enough knowledge to verify memory safety at the callsite.  </p>
 
-<h3><a class="toc-backref" id="var-return-type-future-directions" href="#var-return-type-future-directions">Future directions</a></h3><p>Later versions of Nim can be more precise about the borrowing rule with a syntax like:</p>
+<h3><a class="toc-backref" id="var-return-type-future-directions" href="#var-return-type-future-directions">将来的方向</a></h3><p>Later versions of Nim can be more precise about the borrowing rule with a syntax like:</p>
 <pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">foo</span><span class="Punctuation">(</span><span class="Identifier">other</span><span class="Punctuation">:</span> <span class="Identifier">Y</span><span class="Punctuation">;</span> <span class="Identifier">container</span><span class="Punctuation">:</span> <span class="Keyword">var</span> <span class="Identifier">X</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Keyword">var</span> <span class="Identifier">T</span> <span class="Keyword">from</span> <span class="Identifier">container</span></pre><p>Here <tt class="docutils literal"><span class="pre">var T from container</span></tt> explicitly exposes that the location is deviated from the second parameter (called 'container' in this case). The syntax <tt class="docutils literal"><span class="pre">var T from p</span></tt> specifies a type <tt class="docutils literal"><span class="pre">varTy[T, 2]</span></tt> which is incompatible with <tt class="docutils literal"><span class="pre">varTy[T, 1]</span></tt>.</p>
 
 <h2><a class="toc-backref" id="procedures-overloading-of-the-subscript-operator" href="#procedures-overloading-of-the-subscript-operator">Overloading of the subscript operator</a></h2><p>The <tt class="docutils literal"><span class="pre">[]</span></tt> subscript operator for arrays/openarrays/sequences can be overloaded.</p>
 
-<h1><a class="toc-backref" id="multiminusmethods" href="#multiminusmethods">Multi-methods</a></h1><p><strong>Note:</strong> Starting from Nim 0.20, to use multi-methods one must explicitly pass <tt class="docutils literal"><span class="pre">--multimethods:on</span></tt> when compiling.</p>
+<h1><a class="toc-backref" id="multiminusmethods" href="#multiminusmethods">多重メソッド</a></h1><p><strong>Note:</strong> Starting from Nim 0.20, to use multi-methods one must explicitly pass <tt class="docutils literal"><span class="pre">--multimethods:on</span></tt> when compiling.</p>
 <p>Procedures always use static dispatch. Multi-methods use dynamic dispatch. For dynamic dispatch to work on an object it should be a reference type.</p>
 <pre class="listing"><span class="Keyword">type</span>
   <span class="Identifier">Expression</span> <span class="Operator">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">RootObj</span> <span class="Comment">## abstract base class for an expression</span>
@@ -3029,7 +3029,7 @@ Memory safety for returning by <tt class="docutils literal"><span class="pre">va
   <span class="Comment"># Call the base method:</span>
   <span class="Identifier">procCall</span> <span class="Identifier">m</span><span class="Punctuation">(</span><span class="Identifier">Thing</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">)</span><span class="Punctuation">)</span>
   <span class="Identifier">echo</span> <span class="StringLit">"1"</span></pre>
-<h1><a class="toc-backref" id="iterators-and-the-for-statement" href="#iterators-and-the-for-statement">Iterators and the for statement</a></h1><p>The <span id="for_1">for</span> statement is an abstract mechanism to iterate over the elements of a container. It relies on an <span id="iterator_1">iterator</span> to do so. Like <tt class="docutils literal"><span class="pre">while</span></tt> statements, <tt class="docutils literal"><span class="pre">for</span></tt> statements open an <span id="implicit-block_1">implicit block</span>, so that they can be left with a <tt class="docutils literal"><span class="pre">break</span></tt> statement.</p>
+<h1><a class="toc-backref" id="iterators-and-the-for-statement" href="#iterators-and-the-for-statement">イテレータと for ステートメント</a></h1><p>The <span id="for_1">for</span> statement is an abstract mechanism to iterate over the elements of a container. It relies on an <span id="iterator_1">iterator</span> to do so. Like <tt class="docutils literal"><span class="pre">while</span></tt> statements, <tt class="docutils literal"><span class="pre">for</span></tt> statements open an <span id="implicit-block_1">implicit block</span>, so that they can be left with a <tt class="docutils literal"><span class="pre">break</span></tt> statement.</p>
 <p>The <tt class="docutils literal"><span class="pre">for</span></tt> loop declares iteration variables - their scope reaches until the end of the loop body. The iteration variables' types are inferred by the return type of the iterator.</p>
 <p>An iterator is similar to a procedure, except that it can be called in the context of a <tt class="docutils literal"><span class="pre">for</span></tt> loop. Iterators provide a way to specify the iteration over an abstract type. A key role in the execution of a <tt class="docutils literal"><span class="pre">for</span></tt> loop plays the <tt class="docutils literal"><span class="pre">yield</span></tt> statement in the called iterator. Whenever a <tt class="docutils literal"><span class="pre">yield</span></tt> statement is reached the data is bound to the <tt class="docutils literal"><span class="pre">for</span></tt> loop variables and control continues in the body of the <tt class="docutils literal"><span class="pre">for</span></tt> loop. The iterator's local variables and execution state are automatically saved between calls. 用例:</p>
 <pre class="listing"><span class="Comment"># this definition exists in the system module</span>
@@ -3294,7 +3294,7 @@ Memory safety for returning by <tt class="docutils literal"><span class="pre">va
   <span class="Keyword">else</span><span class="Punctuation">:</span>
     <span class="Keyword">raise</span> <span class="Identifier">newException</span><span class="Punctuation">(</span><span class="Identifier">OSError</span><span class="Punctuation">,</span> <span class="StringLit">"OS"</span><span class="Punctuation">)</span></pre><p>The compiler produces a hint message that <tt class="docutils literal"><span class="pre">IOError</span></tt> can be raised. <tt class="docutils literal"><span class="pre">OSError</span></tt> is not listed as it cannot be raised in the branch the <tt class="docutils literal"><span class="pre">effects</span></tt> pragma appears in.</p>
 
-<h1><a class="toc-backref" id="generics" href="#generics">Generics</a></h1><p>Generics are Nim's means to parametrize procs, iterators or types with <span id="type-parameters_1">type parameters</span>. Depending on context, the brackets are used either to introduce type parameters or to instantiate a generic proc, iterator or type.</p>
+<h1><a class="toc-backref" id="generics" href="#generics">ジェネリック</a></h1><p>Generics are Nim's means to parametrize procs, iterators or types with <span id="type-parameters_1">type parameters</span>. Depending on context, the brackets are used either to introduce type parameters or to instantiate a generic proc, iterator or type.</p>
 <p>The following example shows a generic binary tree can be modelled:</p>
 <pre class="listing"><span class="Keyword">type</span>
   <span class="Identifier">BinaryTree</span><span class="Operator">*</span><span class="Punctuation">[</span><span class="Identifier">T</span><span class="Punctuation">]</span> <span class="Operator">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span> <span class="Comment"># BinaryTree is a generic type with</span>
@@ -3350,7 +3350,7 @@ Memory safety for returning by <tt class="docutils literal"><span class="pre">va
 <span class="Keyword">for</span> <span class="Identifier">str</span> <span class="Keyword">in</span> <span class="Identifier">preorder</span><span class="Punctuation">(</span><span class="Identifier">root</span><span class="Punctuation">)</span><span class="Punctuation">:</span>
   <span class="Identifier">stdout</span><span class="Operator">.</span><span class="Identifier">writeLine</span><span class="Punctuation">(</span><span class="Identifier">str</span><span class="Punctuation">)</span></pre><p>The <tt class="docutils literal"><span class="pre">T</span></tt> is called a <span id="generic-type-parameter_1">generic type parameter</span> or a <span id="type-variable_1">type variable</span>.</p>
 
-<h2><a class="toc-backref" id="generics-is-operator" href="#generics-is-operator">Is operator</a></h2><p>The <tt class="docutils literal"><span class="pre">is</span></tt> operator is evaluated during semantic analysis to check for type equivalence. It is therefore very useful for type specialization within generic code:</p>
+<h2><a class="toc-backref" id="generics-is-operator" href="#generics-is-operator">Is 演算子</a></h2><p>The <tt class="docutils literal"><span class="pre">is</span></tt> operator is evaluated during semantic analysis to check for type equivalence. It is therefore very useful for type specialization within generic code:</p>
 <pre class="listing"><span class="Keyword">type</span>
   <span class="Identifier">Table</span><span class="Punctuation">[</span><span class="Identifier">Key</span><span class="Punctuation">,</span> <span class="Identifier">Value</span><span class="Punctuation">]</span> <span class="Operator">=</span> <span class="Keyword">object</span>
     <span class="Identifier">keys</span><span class="Punctuation">:</span> <span class="Identifier">seq</span><span class="Punctuation">[</span><span class="Identifier">Key</span><span class="Punctuation">]</span>
@@ -3472,7 +3472,7 @@ Memory safety for returning by <tt class="docutils literal"><span class="pre">va
 
 <span class="Identifier">echo</span> <span class="Identifier">a</span> <span class="Operator">==</span> <span class="Identifier">b</span> <span class="Comment"># works!</span></pre><p>In the example the generic <tt class="docutils literal"><span class="pre">==</span></tt> for tuples (as defined in the system module) uses the <tt class="docutils literal"><span class="pre">==</span></tt> operators of the tuple's components. However, the <tt class="docutils literal"><span class="pre">==</span></tt> for the <tt class="docutils literal"><span class="pre">Index</span></tt> type is defined <em>after</em> the <tt class="docutils literal"><span class="pre">==</span></tt> for tuples; yet the example compiles as the instantiation takes the currently defined symbols into account too.</p>
 
-<h2><a class="toc-backref" id="generics-mixin-statement" href="#generics-mixin-statement">Mixin statement</a></h2><p>A symbol can be forced to be open by a <span id="mixin_1">mixin</span> declaration:</p>
+<h2><a class="toc-backref" id="generics-mixin-statement" href="#generics-mixin-statement">Mixin ステートメント</a></h2><p>A symbol can be forced to be open by a <span id="mixin_1">mixin</span> declaration:</p>
 <pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">create</span><span class="Operator">*</span><span class="Punctuation">[</span><span class="Identifier">T</span><span class="Punctuation">]</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Keyword">ref</span> <span class="Identifier">T</span> <span class="Operator">=</span>
   <span class="Comment"># there is no overloaded 'init' here, so we need to state that it's an</span>
   <span class="Comment"># open symbol explicitly:</span>
@@ -3480,7 +3480,7 @@ Memory safety for returning by <tt class="docutils literal"><span class="pre">va
   <span class="Identifier">new</span> <span class="Identifier">result</span>
   <span class="Identifier">init</span> <span class="Identifier">result</span></pre><p><tt class="docutils literal"><span class="pre">mixin</span></tt> statements only make sense in templates and generics.</p>
 
-<h2><a class="toc-backref" id="generics-bind-statement" href="#generics-bind-statement">Bind statement</a></h2><p>The <tt class="docutils literal"><span class="pre">bind</span></tt> statement is the counterpart to the <tt class="docutils literal"><span class="pre">mixin</span></tt> statement. It can be used to explicitly declare identifiers that should be bound early (i.e. the identifiers should be looked up in the scope of the template/generic definition):</p>
+<h2><a class="toc-backref" id="generics-bind-statement" href="#generics-bind-statement">Bind ステートメント</a></h2><p>The <tt class="docutils literal"><span class="pre">bind</span></tt> statement is the counterpart to the <tt class="docutils literal"><span class="pre">mixin</span></tt> statement. It can be used to explicitly declare identifiers that should be bound early (i.e. the identifiers should be looked up in the scope of the template/generic definition):</p>
 <pre class="listing"><span class="Comment"># Module A</span>
 <span class="Keyword">var</span>
   <span class="Identifier">lastId</span> <span class="Operator">=</span> <span class="DecNumber">0</span>
@@ -3662,7 +3662,7 @@ Memory safety for returning by <tt class="docutils literal"><span class="pre">va
 
 <span class="Keyword">var</span> <span class="Identifier">info</span> <span class="Operator">=</span> <span class="Identifier">something</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Operator">.</span><span class="Identifier">toSeq</span></pre><p>The problem here is that the compiler already decided that <tt class="docutils literal"><span class="pre">something()</span></tt> as an iterator is not callable in this context before <tt class="docutils literal"><span class="pre">toSeq</span></tt> gets its chance to convert it into a sequence.</p>
 
-<h1><a class="toc-backref" id="macros" href="#macros">Macros</a></h1><p>A macro is a special function that is executed at compile time. Normally the input for a macro is an abstract syntax tree (AST) of the code that is passed to it. The macro can then do transformations on it and return the transformed AST. This can be used to add custom language features and implement <span id="domain-specific-languages_1">domain specific languages</span>.</p>
+<h1><a class="toc-backref" id="macros" href="#macros">マクロ</a></h1><p>A macro is a special function that is executed at compile time. Normally the input for a macro is an abstract syntax tree (AST) of the code that is passed to it. The macro can then do transformations on it and return the transformed AST. This can be used to add custom language features and implement <span id="domain-specific-languages_1">domain specific languages</span>.</p>
 <p>Macro invocation is a case where semantic analyis does <strong>not</strong> entirely proceed top to bottom and left to right. Instead, semantic analysis happens at least twice:</p>
 <ul class="simple"><li>Semantic analysis recognizes and resolves the macro invocation.</li>
 <li>The compiler executes the macro body (which may invoke other procs).</li>
@@ -3871,7 +3871,7 @@ Memory safety for returning by <tt class="docutils literal"><span class="pre">va
   <span class="Identifier">result</span> <span class="Operator">=</span> <span class="Identifier">tmp</span>
 
 <span class="Keyword">var</span> <span class="Identifier">tmp</span><span class="Punctuation">:</span> <span class="Identifier">forwardType</span><span class="Punctuation">(</span><span class="Identifier">int</span><span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="special-types-typeof-operator" href="#special-types-typeof-operator">typeof operator</a></h2><p><strong>Note</strong>: <tt class="docutils literal"><span class="pre">typeof(x)</span></tt> can for historical reasons also be written as <tt class="docutils literal"><span class="pre">type(x)</span></tt> but <tt class="docutils literal"><span class="pre">type(x)</span></tt> is discouraged.</p>
+<h2><a class="toc-backref" id="special-types-typeof-operator" href="#special-types-typeof-operator">typeof 演算子</a></h2><p><strong>Note</strong>: <tt class="docutils literal"><span class="pre">typeof(x)</span></tt> can for historical reasons also be written as <tt class="docutils literal"><span class="pre">type(x)</span></tt> but <tt class="docutils literal"><span class="pre">type(x)</span></tt> is discouraged.</p>
 <p>You can obtain the type of a given expression by constructing a <tt class="docutils literal"><span class="pre">typeof</span></tt> value from it (in many other languages this is known as the <span id="typeof_1">typeof</span> operator):</p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">x</span> <span class="Operator">=</span> <span class="DecNumber">0</span>
 <span class="Keyword">var</span> <span class="Identifier">y</span><span class="Punctuation">:</span> <span class="Identifier">typeof</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">)</span> <span class="Comment"># y has type int</span></pre><p>If <tt class="docutils literal"><span class="pre">typeof</span></tt> is used to determine the result type of a proc/iterator/converter call <tt class="docutils literal"><span class="pre">c(X)</span></tt> (where <tt class="docutils literal"><span class="pre">X</span></tt> stands for a possibly empty list of arguments), the interpretation where <tt class="docutils literal"><span class="pre">c</span></tt> is an iterator is preferred over the other interpretations, but this behavior can be changed by passing <tt class="docutils literal"><span class="pre">typeOfProc</span></tt> as the second argument to <tt class="docutils literal"><span class="pre">typeof</span></tt>:</p>
@@ -3888,7 +3888,7 @@ Memory safety for returning by <tt class="docutils literal"><span class="pre">va
 <li>if there is a cycle only import the already parsed symbols (that are exported); if an unknown identifier occurs then abort</li>
 </ul>
 <p>This is best illustrated by an example:</p>
-<pre class="listing"><span class="Comment"># Module A</span>
+<pre class="listing"><span class="Comment"># モジュール A</span>
 <span class="Keyword">type</span>
   <span class="Identifier">T1</span><span class="Operator">*</span> <span class="Operator">=</span> <span class="Identifier">int</span>  <span class="Comment"># Module A exports the type ``T1``</span>
 <span class="Keyword">import</span> <span class="Identifier">B</span>     <span class="Comment"># the compiler starts parsing B</span>
@@ -3896,15 +3896,15 @@ Memory safety for returning by <tt class="docutils literal"><span class="pre">va
 <span class="Keyword">proc</span> <span class="Identifier">main</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Operator">=</span>
   <span class="Keyword">var</span> <span class="Identifier">i</span> <span class="Operator">=</span> <span class="Identifier">p</span><span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">)</span> <span class="Comment"># works because B has been parsed completely here</span>
 
-<span class="Identifier">main</span><span class="Punctuation">(</span><span class="Punctuation">)</span></pre><pre class="listing"><span class="Comment"># Module B</span>
-<span class="Keyword">import</span> <span class="Identifier">A</span>  <span class="Comment"># A is not parsed here! Only the already known symbols</span>
+<span class="Identifier">main</span><span class="Punctuation">(</span><span class="Punctuation">)</span></pre><pre class="listing"><span class="Comment"># モジュール B</span>
+<span class="Keyword">import</span> <span class="Identifier">A</span>  <span class="Comment"># A is not parsed here!Only the already known symbols</span>
           <span class="Comment"># of A are imported.</span>
 
 <span class="Keyword">proc</span> <span class="Identifier">p</span><span class="Operator">*</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">:</span> <span class="Identifier">A</span><span class="Operator">.</span><span class="Identifier">T1</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">A</span><span class="Operator">.</span><span class="Identifier">T1</span> <span class="Operator">=</span>
   <span class="Comment"># this works because the compiler has already</span>
   <span class="Comment"># added T1 to A's interface symbol table</span>
   <span class="Identifier">result</span> <span class="Operator">=</span> <span class="Identifier">x</span> <span class="Operator">+</span> <span class="DecNumber">1</span></pre>
-<h3><a class="toc-backref" id="modules-import-statement" href="#modules-import-statement">Import statement</a></h3><p>After the <tt class="docutils literal"><span class="pre">import</span></tt> statement a list of module names can follow or a single module name followed by an <tt class="docutils literal"><span class="pre">except</span></tt> list to prevent some symbols to be imported:</p>
+<h3><a class="toc-backref" id="modules-import-statement" href="#modules-import-statement">Import ステートメント</a></h3><p>After the <tt class="docutils literal"><span class="pre">import</span></tt> statement a list of module names can follow or a single module name followed by an <tt class="docutils literal"><span class="pre">except</span></tt> list to prevent some symbols to be imported:</p>
 <pre class="listing"><span class="Keyword">import</span> <span class="Identifier">strutils</span> <span class="Keyword">except</span> <span class="Punctuation">`</span><span class="Operator">%</span><span class="Punctuation">`</span><span class="Punctuation">,</span> <span class="Identifier">toUpperAscii</span>
 
 <span class="Comment"># doesn't work then:</span>
@@ -3935,13 +3935,13 @@ Memory safety for returning by <tt class="docutils literal"><span class="pre">va
 <span class="Comment"># always possible: full qualification:</span>
 <span class="Identifier">echo</span> <span class="Identifier">strutils</span><span class="Operator">.</span><span class="Identifier">replace</span><span class="Punctuation">(</span><span class="StringLit">"abc"</span><span class="Punctuation">,</span> <span class="StringLit">"a"</span><span class="Punctuation">,</span> <span class="StringLit">"z"</span><span class="Punctuation">)</span></pre><p>It's also possible to use <tt class="docutils literal"><span class="pre">from module import nil</span></tt> if one wants to import the module but wants to enforce fully qualified access to every symbol in <tt class="docutils literal"><span class="pre">module</span></tt>.</p>
 
-<h3><a class="toc-backref" id="modules-export-statement" href="#modules-export-statement">Export statement</a></h3><p>An <tt class="docutils literal"><span class="pre">export</span></tt> statement can be used for symbol forwarding so that client modules don't need to import a module's dependencies:</p>
-<pre class="listing"><span class="Comment"># module B</span>
-<span class="Keyword">type</span> <span class="Identifier">MyObject</span><span class="Operator">*</span> <span class="Operator">=</span> <span class="Keyword">object</span></pre><pre class="listing"><span class="Comment"># module A</span>
+<h3><a class="toc-backref" id="modules-export-statement" href="#modules-export-statement">Export ステートメント</a></h3><p>An <tt class="docutils literal"><span class="pre">export</span></tt> statement can be used for symbol forwarding so that client modules don't need to import a module's dependencies:</p>
+<pre class="listing"><span class="Comment"># モジュール B</span>
+<span class="Keyword">type</span> <span class="Identifier">MyObject</span><span class="Operator">*</span> <span class="Operator">=</span> <span class="Keyword">object</span></pre><pre class="listing"><span class="Comment"># モジュール A</span>
 <span class="Keyword">import</span> <span class="Identifier">B</span>
 <span class="Keyword">export</span> <span class="Identifier">B</span><span class="Operator">.</span><span class="Identifier">MyObject</span>
 
-<span class="Keyword">proc</span> <span class="Punctuation">`</span><span class="Operator">$</span><span class="Punctuation">`</span><span class="Operator">*</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">:</span> <span class="Identifier">MyObject</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">string</span> <span class="Operator">=</span> <span class="StringLit">"my object"</span></pre><pre class="listing"><span class="Comment"># module C</span>
+<span class="Keyword">proc</span> <span class="Punctuation">`</span><span class="Operator">$</span><span class="Punctuation">`</span><span class="Operator">*</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">:</span> <span class="Identifier">MyObject</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">string</span> <span class="Operator">=</span> <span class="StringLit">"my object"</span></pre><pre class="listing"><span class="Comment"># モジュール C</span>
 <span class="Keyword">import</span> <span class="Identifier">A</span>
 
 <span class="Comment"># B.MyObject has been imported implicitly here:</span>
@@ -3950,21 +3950,21 @@ Memory safety for returning by <tt class="docutils literal"><span class="pre">va
 <p>Notice that when exporting, you need to specify only the module name:</p>
 <pre class="listing"><span class="Keyword">import</span> <span class="Identifier">foo</span><span class="Operator">/</span><span class="Identifier">bar</span><span class="Operator">/</span><span class="Identifier">baz</span>
 <span class="Keyword">export</span> <span class="Identifier">baz</span></pre>
-<h2><a class="toc-backref" id="modules-scope-rules" href="#modules-scope-rules">Scope rules</a></h2><p>Identifiers are valid from the point of their declaration until the end of the block in which the declaration occurred. The range where the identifier is known is the scope of the identifier. The exact scope of an identifier depends on the way it was declared.</p>
+<h2><a class="toc-backref" id="modules-scope-rules" href="#modules-scope-rules">スコープルール</a></h2><p>Identifiers are valid from the point of their declaration until the end of the block in which the declaration occurred. The range where the identifier is known is the scope of the identifier. The exact scope of an identifier depends on the way it was declared.</p>
 
-<h3><a class="toc-backref" id="scope-rules-block-scope" href="#scope-rules-block-scope">Block scope</a></h3><p>The <em>scope</em> of a variable declared in the declaration part of a block is valid from the point of declaration until the end of the block. If a block contains a second block, in which the identifier is redeclared, then inside this block, the second declaration will be valid. Upon leaving the inner block, the first declaration is valid again. An identifier cannot be redefined in the same block, except if valid for procedure or iterator overloading purposes.</p>
+<h3><a class="toc-backref" id="scope-rules-block-scope" href="#scope-rules-block-scope">ブロックのスコープ</a></h3><p>The <em>scope</em> of a variable declared in the declaration part of a block is valid from the point of declaration until the end of the block. If a block contains a second block, in which the identifier is redeclared, then inside this block, the second declaration will be valid. Upon leaving the inner block, the first declaration is valid again. An identifier cannot be redefined in the same block, except if valid for procedure or iterator overloading purposes.</p>
 
-<h3><a class="toc-backref" id="scope-rules-tuple-or-object-scope" href="#scope-rules-tuple-or-object-scope">Tuple or object scope</a></h3><p>The field identifiers inside a tuple or object definition are valid in the following places:</p>
+<h3><a class="toc-backref" id="scope-rules-tuple-or-object-scope" href="#scope-rules-tuple-or-object-scope">タプルまたはオブジェクトのスコープ</a></h3><p>The field identifiers inside a tuple or object definition are valid in the following places:</p>
 <ul class="simple"><li>To the end of the tuple/object definition.</li>
 <li>Field designators of a variable of the given tuple/object type.</li>
 <li>In all descendant types of the object type.</li>
 </ul>
 
-<h3><a class="toc-backref" id="scope-rules-module-scope" href="#scope-rules-module-scope">Module scope</a></h3><p>All identifiers of a module are valid from the point of declaration until the end of the module. Identifiers from indirectly dependent modules are <em>not</em> available. The <span id="system_1">system</span> module is automatically imported in every module.</p>
+<h3><a class="toc-backref" id="scope-rules-module-scope" href="#scope-rules-module-scope">モジュールのスコープ</a></h3><p>All identifiers of a module are valid from the point of declaration until the end of the module. Identifiers from indirectly dependent modules are <em>not</em> available. The <span id="system_1">system</span> module is automatically imported in every module.</p>
 <p>If a module imports an identifier by two different modules, each occurrence of the identifier has to be qualified, unless it is an overloaded procedure or iterator in which case the overloading resolution takes place:</p>
-<pre class="listing"><span class="Comment"># Module A</span>
-<span class="Keyword">var</span> <span class="Identifier">x</span><span class="Operator">*:</span> <span class="Identifier">string</span></pre><pre class="listing"><span class="Comment"># Module B</span>
-<span class="Keyword">var</span> <span class="Identifier">x</span><span class="Operator">*:</span> <span class="Identifier">int</span></pre><pre class="listing"><span class="Comment"># Module C</span>
+<pre class="listing"><span class="Comment"># モジュール A</span>
+<span class="Keyword">var</span> <span class="Identifier">x</span><span class="Operator">*:</span> <span class="Identifier">string</span></pre><pre class="listing"><span class="Comment"># モジュール B</span>
+<span class="Keyword">var</span> <span class="Identifier">x</span><span class="Operator">*:</span> <span class="Identifier">int</span></pre><pre class="listing"><span class="Comment"># モジュール C</span>
 <span class="Keyword">import</span> <span class="Identifier">A</span><span class="Punctuation">,</span> <span class="Identifier">B</span>
 <span class="Identifier">write</span><span class="Punctuation">(</span><span class="Identifier">stdout</span><span class="Punctuation">,</span> <span class="Identifier">x</span><span class="Punctuation">)</span> <span class="Comment"># error: x is ambiguous</span>
 <span class="Identifier">write</span><span class="Punctuation">(</span><span class="Identifier">stdout</span><span class="Punctuation">,</span> <span class="Identifier">A</span><span class="Operator">.</span><span class="Identifier">x</span><span class="Punctuation">)</span> <span class="Comment"># no error: qualifier used</span>
@@ -3999,7 +3999,7 @@ Memory safety for returning by <tt class="docutils literal"><span class="pre">va
     <span class="Identifier">echo</span><span class="Punctuation">(</span><span class="StringLit">"Hello!"</span><span class="Punctuation">)</span>
 
 <span class="Identifier">a</span><span class="Punctuation">(</span><span class="Punctuation">)</span></pre>
-<h1><a class="toc-backref" id="compiler-messages" href="#compiler-messages">Compiler Messages</a></h1><p>The Nim compiler emits different kinds of messages: <span id="hint_1">hint</span>, <span id="warning_1">warning</span>, and <span id="error_1">error</span> messages. An <em>error</em> message is emitted if the compiler encounters any static error.</p>
+<h1><a class="toc-backref" id="compiler-messages" href="#compiler-messages">コンパイラメッセージ</a></h1><p>The Nim compiler emits different kinds of messages: <span id="hint_1">hint</span>, <span id="warning_1">warning</span>, and <span id="error_1">error</span> messages. An <em>error</em> message is emitted if the compiler encounters any static error.</p>
 
 <h1><a class="toc-backref" id="pragmas" href="#pragmas">プラグマ</a></h1><p>Pragmas are Nim's method to give the compiler additional information / commands without introducing a massive number of new keywords. Pragmas are processed on the fly during semantic checking. Pragmas are enclosed in the special <tt class="docutils literal"><span class="pre">{.</span></tt> and <tt class="docutils literal"><span class="pre">.}</span></tt> curly brackets. Pragmas are also often used as a first implementation to play with a language feature before a nicer syntax to access the feature becomes available.</p>
 
@@ -4129,7 +4129,7 @@ Memory safety for returning by <tt class="docutils literal"><span class="pre">va
 
 <h2><a class="toc-backref" id="pragmas-immediate-pragma" href="#pragmas-immediate-pragma">immediate プラグマ</a></h2><p>The immediate pragma is obsolete. See <a class="reference external" href="#templates-typed-vs-untyped-parameters">Typed vs untyped parameters</a>.</p>
 
-<h2><a class="toc-backref" id="pragmas-compilation-option-pragmas" href="#pragmas-compilation-option-pragmas">compilation option pragmas</a></h2><p>The listed pragmas here can be used to override the code generation options for a proc/method/converter.</p>
+<h2><a class="toc-backref" id="pragmas-compilation-option-pragmas" href="#pragmas-compilation-option-pragmas">コンパイルオプションのプラグマ</a></h2><p>The listed pragmas here can be used to override the code generation options for a proc/method/converter.</p>
 <p>The implementation currently provides the following possible options (various others may be added later).</p>
 <table border="1" class="docutils"><tr><th>pragma</th><th>allowed values</th><th>description</th></tr>
 <tr><td>checks</td><td>on|off  </td><td>Turns the code generation for all runtime checks on or off.</td></tr>
@@ -4145,7 +4145,7 @@ Memory safety for returning by <tt class="docutils literal"><span class="pre">va
 </table><p>用例:</p>
 <pre class="listing"><span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">checks</span><span class="Punctuation">:</span> <span class="Identifier">off</span><span class="Punctuation">,</span> <span class="Identifier">optimization</span><span class="Punctuation">:</span> <span class="Identifier">speed</span><span class="Operator">.</span><span class="Punctuation">}</span>
 <span class="Comment"># compile without runtime checks and optimize for speed</span></pre>
-<h2><a class="toc-backref" id="pragmas-push-and-pop-pragmas" href="#pragmas-push-and-pop-pragmas">push and pop pragmas</a></h2><p>The <span id="pushslashpop_1">push/pop</span> pragmas are very similar to the option directive, but are used to override the settings temporarily. 用例:</p>
+<h2><a class="toc-backref" id="pragmas-push-and-pop-pragmas" href="#pragmas-push-and-pop-pragmas">push と pop プラグマ</a></h2><p>The <span id="pushslashpop_1">push/pop</span> pragmas are very similar to the option directive, but are used to override the settings temporarily. 用例:</p>
 <pre class="listing"><span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">push</span> <span class="Identifier">checks</span><span class="Punctuation">:</span> <span class="Identifier">off</span><span class="Operator">.</span><span class="Punctuation">}</span>
 <span class="Comment"># compile this section without runtime checks as it is</span>
 <span class="Comment"># speed critical</span>
@@ -4327,7 +4327,7 @@ using namespace gui;
 <span class="Keyword">proc</span> <span class="Identifier">run</span><span class="Punctuation">(</span><span class="Identifier">device</span><span class="Punctuation">:</span> <span class="Identifier">IrrlichtDevice</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">bool</span> <span class="Punctuation">{</span><span class="Operator">.</span>
   <span class="Identifier">header</span><span class="Punctuation">:</span> <span class="Identifier">irr</span><span class="Punctuation">,</span> <span class="Identifier">importcpp</span><span class="Punctuation">:</span> <span class="StringLit">"#.run(@)"</span><span class="Operator">.</span><span class="Punctuation">}</span></pre><p>The compiler needs to be told to generate C++ (command <tt class="docutils literal"><span class="pre">cpp</span></tt>) for this to work. The conditional symbol <tt class="docutils literal"><span class="pre">cpp</span></tt> is defined when the compiler emits C++ code.</p>
 
-<h3><a class="toc-backref" id="importcpp-pragma-namespaces" href="#importcpp-pragma-namespaces">Namespaces</a></h3><p>The <em>sloppy interfacing</em> example uses <tt class="docutils literal"><span class="pre">.emit</span></tt> to produce <tt class="docutils literal"><span class="pre">using namespace</span></tt> declarations. It is usually much better to instead refer to the imported name via the <tt class="docutils literal"><span class="pre">namespace::identifier</span></tt> notation:</p>
+<h3><a class="toc-backref" id="importcpp-pragma-namespaces" href="#importcpp-pragma-namespaces">名前空間</a></h3><p>The <em>sloppy interfacing</em> example uses <tt class="docutils literal"><span class="pre">.emit</span></tt> to produce <tt class="docutils literal"><span class="pre">using namespace</span></tt> declarations. It is usually much better to instead refer to the imported name via the <tt class="docutils literal"><span class="pre">namespace::identifier</span></tt> notation:</p>
 <pre class="listing"><span class="Keyword">type</span>
   <span class="Identifier">IrrlichtDeviceObj</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">header</span><span class="Punctuation">:</span> <span class="Identifier">irr</span><span class="Punctuation">,</span>
                       <span class="Identifier">importcpp</span><span class="Punctuation">:</span> <span class="StringLit">"irr::IrrlichtDevice"</span><span class="Operator">.</span><span class="Punctuation">}</span> <span class="Operator">=</span> <span class="Keyword">object</span></pre>
@@ -4341,7 +4341,7 @@ using namespace gui;
 <p>For example:</p>
 <pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">cppMethod</span><span class="Punctuation">(</span><span class="Identifier">this</span><span class="Punctuation">:</span> <span class="Identifier">CppObj</span><span class="Punctuation">,</span> <span class="Identifier">a</span><span class="Punctuation">,</span> <span class="Identifier">b</span><span class="Punctuation">,</span> <span class="Identifier">c</span><span class="Punctuation">:</span> <span class="Identifier">cint</span><span class="Punctuation">)</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">importcpp</span><span class="Punctuation">:</span> <span class="StringLit">"#.CppMethod(@)"</span><span class="Operator">.</span><span class="Punctuation">}</span>
 <span class="Keyword">var</span> <span class="Identifier">x</span><span class="Punctuation">:</span> <span class="Keyword">ptr</span> <span class="Identifier">CppObj</span>
-<span class="Identifier">cppMethod</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">[</span><span class="Punctuation">]</span><span class="Punctuation">,</span> <span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">)</span></pre><p>Produces:</p>
+<span class="Identifier">cppMethod</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">[</span><span class="Punctuation">]</span><span class="Punctuation">,</span> <span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">)</span></pre><p>結果:</p>
 <pre class="listing"><span class="Identifier">x</span><span class="Operator">-&gt;</span><span class="Identifier">CppMethod</span><span class="Punctuation">(</span><span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">)</span></pre><p>As a special rule to keep backwards compatibility with older versions of the <tt class="docutils literal"><span class="pre">importcpp</span></tt> pragma, if there is no special pattern character (any of <tt class="docutils literal"><span class="pre"># ' @</span></tt>) at all, C++'s dot or arrow notation is assumed, so the above example can also be written as:</p>
 <pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">cppMethod</span><span class="Punctuation">(</span><span class="Identifier">this</span><span class="Punctuation">:</span> <span class="Identifier">CppObj</span><span class="Punctuation">,</span> <span class="Identifier">a</span><span class="Punctuation">,</span> <span class="Identifier">b</span><span class="Punctuation">,</span> <span class="Identifier">c</span><span class="Punctuation">:</span> <span class="Identifier">cint</span><span class="Punctuation">)</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">importcpp</span><span class="Punctuation">:</span> <span class="StringLit">"CppMethod"</span><span class="Operator">.</span><span class="Punctuation">}</span></pre><p>Note that the pattern language naturally also covers C++'s operator overloading capabilities:</p>
 <pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">vectorAddition</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">,</span> <span class="Identifier">b</span><span class="Punctuation">:</span> <span class="Identifier">Vec3</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">Vec3</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">importcpp</span><span class="Punctuation">:</span> <span class="StringLit">"# + #"</span><span class="Operator">.</span><span class="Punctuation">}</span>
@@ -4351,7 +4351,7 @@ using namespace gui;
 <pre class="listing"><span class="Keyword">type</span> <span class="Identifier">Input</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">importcpp</span><span class="Punctuation">:</span> <span class="StringLit">"System::Input"</span><span class="Operator">.</span><span class="Punctuation">}</span> <span class="Operator">=</span> <span class="Keyword">object</span>
 <span class="Keyword">proc</span> <span class="Identifier">getSubsystem</span><span class="Operator">*</span><span class="Punctuation">[</span><span class="Identifier">T</span><span class="Punctuation">]</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Keyword">ptr</span> <span class="Identifier">T</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">importcpp</span><span class="Punctuation">:</span> <span class="StringLit">"SystemManager::getSubsystem&lt;'*0&gt;()"</span><span class="Punctuation">,</span> <span class="Identifier">nodecl</span><span class="Operator">.</span><span class="Punctuation">}</span>
 
-<span class="Keyword">let</span> <span class="Identifier">x</span><span class="Punctuation">:</span> <span class="Keyword">ptr</span> <span class="Identifier">Input</span> <span class="Operator">=</span> <span class="Identifier">getSubsystem</span><span class="Punctuation">[</span><span class="Identifier">Input</span><span class="Punctuation">]</span><span class="Punctuation">(</span><span class="Punctuation">)</span></pre><p>Produces:</p>
+<span class="Keyword">let</span> <span class="Identifier">x</span><span class="Punctuation">:</span> <span class="Keyword">ptr</span> <span class="Identifier">Input</span> <span class="Operator">=</span> <span class="Identifier">getSubsystem</span><span class="Punctuation">[</span><span class="Identifier">Input</span><span class="Punctuation">]</span><span class="Punctuation">(</span><span class="Punctuation">)</span></pre><p>結果:</p>
 <pre class="listing"><span class="Identifier">x</span> <span class="Operator">=</span> <span class="Identifier">SystemManager</span><span class="Punctuation">:</span><span class="Punctuation">:</span><span class="Identifier">getSubsystem</span><span class="Operator">&lt;</span><span class="Identifier">System</span><span class="Punctuation">:</span><span class="Punctuation">:</span><span class="Identifier">Input</span><span class="Operator">&gt;</span><span class="Punctuation">(</span><span class="Punctuation">)</span></pre><ul class="simple"><li><tt class="docutils literal"><span class="pre">#@</span></tt> is a special case to support a <tt class="docutils literal"><span class="pre">cnew</span></tt> operation. It is required so that the call expression is inlined directly, without going through a temporary location. This is only required to circumvent a limitation of the current code generator.</li>
 </ul>
 <p>For example C++'s <tt class="docutils literal"><span class="pre">new</span></tt> operator can be "imported" like this:</p>
@@ -4360,7 +4360,7 @@ using namespace gui;
 <span class="Comment"># constructor of 'Foo':</span>
 <span class="Keyword">proc</span> <span class="Identifier">constructFoo</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">,</span> <span class="Identifier">b</span><span class="Punctuation">:</span> <span class="Identifier">cint</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">Foo</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">importcpp</span><span class="Punctuation">:</span> <span class="StringLit">"Foo(@)"</span><span class="Operator">.</span><span class="Punctuation">}</span>
 
-<span class="Keyword">let</span> <span class="Identifier">x</span> <span class="Operator">=</span> <span class="Identifier">cnew</span> <span class="Identifier">constructFoo</span><span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="DecNumber">4</span><span class="Punctuation">)</span></pre><p>Produces:</p>
+<span class="Keyword">let</span> <span class="Identifier">x</span> <span class="Operator">=</span> <span class="Identifier">cnew</span> <span class="Identifier">constructFoo</span><span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="DecNumber">4</span><span class="Punctuation">)</span></pre><p>結果:</p>
 <pre class="listing"><span class="Identifier">x</span> <span class="Operator">=</span> <span class="Identifier">new</span> <span class="Identifier">Foo</span><span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="DecNumber">4</span><span class="Punctuation">)</span></pre><p>However, depending on the use case <tt class="docutils literal"><span class="pre">new Foo</span></tt> can also be wrapped like this instead:</p>
 <pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">newFoo</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">,</span> <span class="Identifier">b</span><span class="Punctuation">:</span> <span class="Identifier">cint</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Keyword">ptr</span> <span class="Identifier">Foo</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">importcpp</span><span class="Punctuation">:</span> <span class="StringLit">"new Foo(@)"</span><span class="Operator">.</span><span class="Punctuation">}</span>
 
@@ -4377,14 +4377,14 @@ using namespace gui;
   <span class="Identifier">importcpp</span><span class="Punctuation">:</span> <span class="StringLit">"#[#] = #"</span><span class="Punctuation">,</span> <span class="Identifier">header</span><span class="Punctuation">:</span> <span class="StringLit">"&lt;map&gt;"</span><span class="Operator">.</span><span class="Punctuation">}</span>
 
 <span class="Keyword">var</span> <span class="Identifier">x</span><span class="Punctuation">:</span> <span class="Identifier">StdMap</span><span class="Punctuation">[</span><span class="Identifier">cint</span><span class="Punctuation">,</span> <span class="Identifier">cdouble</span><span class="Punctuation">]</span>
-<span class="Identifier">x</span><span class="Punctuation">[</span><span class="DecNumber">6</span><span class="Punctuation">]</span> <span class="Operator">=</span> <span class="FloatNumber">91.4</span></pre><p>Produces:</p>
+<span class="Identifier">x</span><span class="Punctuation">[</span><span class="DecNumber">6</span><span class="Punctuation">]</span> <span class="Operator">=</span> <span class="FloatNumber">91.4</span></pre><p>結果:</p>
 <pre class="listing"><span class="Identifier">std</span><span class="Punctuation">:</span><span class="Punctuation">:</span><span class="Identifier">map</span><span class="Operator">&lt;</span><span class="Keyword">int</span><span class="Punctuation">,</span> <span class="Keyword">double</span><span class="Operator">&gt;</span> <span class="Identifier">x</span><span class="Punctuation">;</span>
 <span class="Identifier">x</span><span class="Punctuation">[</span><span class="DecNumber">6</span><span class="Punctuation">]</span> <span class="Operator">=</span> <span class="FloatNumber">91.4</span><span class="Punctuation">;</span></pre><ul class="simple"><li>If more precise control is needed, the apostrophe <tt class="docutils literal"><span class="pre">'</span></tt> can be used in the supplied pattern to denote the concrete type parameters of the generic type. See the usage of the apostrophe operator in proc patterns for more details.</li>
 </ul>
 <pre class="listing"><span class="Keyword">type</span>
   <span class="Identifier">VectorIterator</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">importcpp</span><span class="Punctuation">:</span> <span class="StringLit">"std::vector&lt;'0&gt;::iterator"</span><span class="Operator">.</span><span class="Punctuation">}</span> <span class="Punctuation">[</span><span class="Identifier">T</span><span class="Punctuation">]</span> <span class="Operator">=</span> <span class="Keyword">object</span>
 
-<span class="Keyword">var</span> <span class="Identifier">x</span><span class="Punctuation">:</span> <span class="Identifier">VectorIterator</span><span class="Punctuation">[</span><span class="Identifier">cint</span><span class="Punctuation">]</span></pre><p>Produces:</p>
+<span class="Keyword">var</span> <span class="Identifier">x</span><span class="Punctuation">:</span> <span class="Identifier">VectorIterator</span><span class="Punctuation">[</span><span class="Identifier">cint</span><span class="Punctuation">]</span></pre><p>結果:</p>
 <pre class="listing"><span class="Identifier">std</span><span class="Punctuation">:</span><span class="Punctuation">:</span><span class="Identifier">vector</span><span class="Operator">&lt;</span><span class="Keyword">int</span><span class="Operator">&gt;::</span><span class="Identifier">iterator</span> <span class="Identifier">x</span><span class="Punctuation">;</span></pre>
 <h2><a class="toc-backref" id="implementation-specific-pragmas-importjs-pragma" href="#implementation-specific-pragmas-importjs-pragma">ImportJs プラグマ</a></h2><p>Similar to the <a class="reference external" href="#foreign-function-interface-importc-pragma">importcpp pragma for C++</a>, the <tt class="docutils literal"><span class="pre">importjs</span></tt> pragma can be used to import Javascript methods or symbols in general. The generated code then uses the Javascript method calling syntax: <tt class="docutils literal"><span class="pre">obj.method(arg)</span></tt>.</p>
 
@@ -4482,7 +4482,7 @@ using namespace gui;
 <pre class="listing"><span class="Keyword">type</span> <span class="Identifier">MyComponent</span> <span class="Operator">=</span> <span class="Keyword">object</span>
   <span class="Identifier">position</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">editable</span><span class="Punctuation">,</span> <span class="Identifier">animatable</span><span class="Operator">.</span><span class="Punctuation">}</span><span class="Punctuation">:</span> <span class="Identifier">Vector3</span>
   <span class="Identifier">alpha</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">editRange</span><span class="Punctuation">:</span> <span class="Punctuation">[</span><span class="FloatNumber">0.0</span><span class="Operator">..</span><span class="FloatNumber">1.0</span><span class="Punctuation">]</span><span class="Punctuation">,</span> <span class="Identifier">animatable</span><span class="Operator">.</span><span class="Punctuation">}</span><span class="Punctuation">:</span> <span class="Identifier">float32</span></pre>
-<h1><a class="toc-backref" id="foreign-function-interface" href="#foreign-function-interface">Foreign function interface</a></h1><p>Nim's <span id="ffi_1">FFI</span> (foreign function interface) is extensive and only the parts that scale to other future backends (like the LLVM/JavaScript backends) are documented here.</p>
+<h1><a class="toc-backref" id="foreign-function-interface" href="#foreign-function-interface">外部関数インタフェース</a></h1><p>Nim's <span id="ffi_1">FFI</span> (foreign function interface) is extensive and only the parts that scale to other future backends (like the LLVM/JavaScript backends) are documented here.</p>
 
 <h2><a class="toc-backref" id="foreign-function-interface-importc-pragma" href="#foreign-function-interface-importc-pragma">Importc プラグマ</a></h2><p>The <tt class="docutils literal"><span class="pre">importc</span></tt> pragma provides a means to import a proc or a variable from C. The optional argument is a string containing the C identifier. If the argument is missing, the C name is the Nim identifier <em>exactly as spelled</em>:</p>
 <pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">printf</span><span class="Punctuation">(</span><span class="Identifier">formatstr</span><span class="Punctuation">:</span> <span class="Identifier">cstring</span><span class="Punctuation">)</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">header</span><span class="Punctuation">:</span> <span class="StringLit">"&lt;stdio.h&gt;"</span><span class="Punctuation">,</span> <span class="Identifier">importc</span><span class="Punctuation">:</span> <span class="StringLit">"printf"</span><span class="Punctuation">,</span> <span class="Identifier">varargs</span><span class="Operator">.</span><span class="Punctuation">}</span></pre><p>Note that this pragma has been abused in the past to also work in the js backand for js objects and functions. : Other backends do provide the same feature under the same name. Also, when the target language is not set to C, other pragmas are available:</p>
@@ -4584,7 +4584,7 @@ libtcl8.3.so.0</pre>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 Generated: 2019-11-27 09:14:28 UTC</small>
+        <small>Nim で作成しました。 生成日時: 2019年11月27日 午前09時14分28秒 (UTC)</small>
       </div>
     </div>
   </div>

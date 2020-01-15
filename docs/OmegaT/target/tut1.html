@@ -825,7 +825,7 @@ function main() {
       onkeyup="search()" />
   </div>
   <ul class="simple simple-toc" id="toc-list">
-<li><a class="reference" id="introduction_toc" href="#introduction">紹介</a></li>
+<li><a class="reference" id="introduction_toc" href="#introduction">はじめに</a></li>
 <li><a class="reference" id="the-first-program_toc" href="#the-first-program">最初のプログラム</a></li>
 <li><a class="reference" id="lexical-elements_toc" href="#lexical-elements">字句要素</a></li>
 <ul class="simple"><li><a class="reference" id="lexical-elements-string-and-character-literals_toc" href="#lexical-elements-string-and-character-literals">文字列と文字リテラル</a></li>
@@ -894,7 +894,7 @@ function main() {
   <p class="module-desc"><table class="docinfo" frame="void" rules="none"><col class="docinfo-name" /><col class="docinfo-content" /><tbody valign="top"><tr><th class="docinfo-name">作成者:</th><td> アンドレアス・ルンプフ</td></tr>
 <tr><th class="docinfo-name">バージョン:</th><td>  1.0.4</td></tr>
 </tbody></table>
-<h1><a class="toc-backref" id="introduction" href="#introduction">紹介</a></h1><blockquote><p>
+<h1><a class="toc-backref" id="introduction" href="#introduction">はじめに</a></h1><blockquote><p>
 "人間は視覚の動物である ― だから、ボクはキミに美しくいて欲しい。"
 </p></blockquote><p>このドキュメントはプログラミング言語 <em>Nim</em> のチュートリアルです。This tutorial assumes that you are familiar with basic programming concepts like variables, types or statements but is kept very basic. The <a class="reference external" href="manual.html">manual</a> contains many more examples of the advanced language features. All code examples in this tutorial, as well as the ones found in the rest of Nim's documentation, follow the <a class="reference external" href="nep1.html">Nim style guide</a>.</p>
 
@@ -1641,8 +1641,8 @@ out inside this with no indentation restrictions.
 <p>A module's top-level statements are executed at the start of the program. This can be used to initialize complex data structures for example.</p>
 <p>Each module has a special magic constant <tt class="docutils literal"><span class="pre">isMainModule</span></tt> that is true if the module is compiled as the main file. This is very useful to embed tests within the module as shown by the above example.</p>
 <p>A symbol of a module <em>can</em> be <em>qualified</em> with the <tt class="docutils literal"><span class="pre">module.symbol</span></tt> syntax. And if a symbol is ambiguous, it <em>must</em> be qualified. A symbol is ambiguous if it is defined in two (or more) different modules and both modules are imported by a third one:</p>
-<pre class="listing"><span class="Comment"># Module A</span>
-<span class="Keyword">var</span> <span class="Identifier">x</span><span class="Operator">*:</span> <span class="Identifier">string</span></pre><pre class="listing"><span class="Comment"># Module B</span>
+<pre class="listing"><span class="Comment"># モジュール A</span>
+<span class="Keyword">var</span> <span class="Identifier">x</span><span class="Operator">*:</span> <span class="Identifier">string</span></pre><pre class="listing"><span class="Comment"># モジュール B</span>
 <span class="Keyword">var</span> <span class="Identifier">x</span><span class="Operator">*:</span> <span class="Identifier">int</span></pre><pre class="listing"><span class="Comment"># Module C</span>
 <span class="Keyword">import</span> <span class="Identifier">A</span><span class="Punctuation">,</span> <span class="Identifier">B</span>
 <span class="Identifier">write</span><span class="Punctuation">(</span><span class="Identifier">stdout</span><span class="Punctuation">,</span> <span class="Identifier">x</span><span class="Punctuation">)</span> <span class="Comment"># error: x is ambiguous</span>

@@ -809,7 +809,7 @@ function main() {
 <tr><th class="docinfo-name">バージョン:</th><td>  1.0.4</td></tr>
 </tbody></table><blockquote><p>"The road to hell is paved with good intentions."</p></blockquote>
 
-<h1 id="introduction">紹介</h1><p>This document describes how the GC works and how to tune it for (soft) <span id="realtime-systems_1">realtime systems</span>.</p>
+<h1 id="introduction">はじめに</h1><p>This document describes how the GC works and how to tune it for (soft) <span id="realtime-systems_1">realtime systems</span>.</p>
 <p>The basic algorithm is <em>Deferred Reference Counting</em> with cycle detection. References on the stack are not counted for better performance (and easier C code generation). Cycle detection is currently done by a simple mark&amp;sweep GC that has to scan the full (thread local heap). <tt class="docutils literal"><span class="pre">--gc:v2</span></tt> replaces this with an incremental mark and sweep. That it is not production ready yet, however.</p>
 <p>The GC is only triggered in a memory allocation operation. It is not triggered by some timer and does not run in a background thread.</p>
 <p>To force a full collection call <tt class="docutils literal"><span class="pre">GC_fullCollect</span></tt>. Note that it is generally better to let the GC do its work and not enforce a full collection.</p>
