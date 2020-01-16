@@ -1,2 +1,3 @@
 statement	ステートメント
 tabulator	タブ
+interactive mode	インタラクティブモード	対話型実行方式

@@ -1003,13 +1003,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#toRational%2CT"><span class="Identifier">toRational</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <a href="system.html#SomeInteger"><span class="Identifier">SomeInteger</span></a><span class="Other">]</span><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <a href="rationals.html#Rational"><span class="Identifier">Rational</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span></pre></dt>
 <dd>
 
-
-
-Convert some integer <tt class="docutils literal"><span class="pre">x</span></tt> to a rational number.
-&nbsp;&nbsp;<a
+Convert some integer <tt class="docutils literal"><span class="pre">x</span></tt> to a rational number. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/rationals.nim#L37"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/rationals.nim#L37" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/rationals.nim#L37" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="toRational,float,int"></a>
@@ -1033,13 +1029,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#toFloat%2CRational%5BT%5D"><span class="Identifier">toFloat</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <a href="rationals.html#Rational"><span class="Identifier">Rational</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#float"><span class="Identifier">float</span></a></pre></dt>
 <dd>
 
-
-
-Convert a rational number <tt class="docutils literal"><span class="pre">x</span></tt> to a float.
-&nbsp;&nbsp;<a
+Convert a rational number <tt class="docutils literal"><span class="pre">x</span></tt> to a float. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/rationals.nim#L77"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/rationals.nim#L77" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/rationals.nim#L77" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="toInt,Rational[T]"></a>
@@ -1055,13 +1047,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#reduce%2CRational%5BT%3A+SomeInteger%5D"><span class="Identifier">reduce</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <a href="system.html#SomeInteger"><span class="Identifier">SomeInteger</span></a><span class="Other">]</span><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="rationals.html#Rational"><span class="Identifier">Rational</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
 <dd>
 
-
-
-Reduce rational <tt class="docutils literal"><span class="pre">x</span></tt>.
-&nbsp;&nbsp;<a
+Reduce rational <tt class="docutils literal"><span class="pre">x</span></tt>. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/rationals.nim#L86"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/rationals.nim#L86" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/rationals.nim#L86" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="+,Rational[T],Rational[T]"></a>
@@ -1328,13 +1316,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#mod%2CRational%5BT%3A+SomeInteger%5D%2CRational%5BT%3A+SomeInteger%5D"><span class="Identifier">`mod`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <a href="system.html#SomeInteger"><span class="Identifier">SomeInteger</span></a><span class="Other">]</span><span class="Other">(</span><span class="Identifier">x</span><span class="Other">,</span> <span class="Identifier">y</span><span class="Other">:</span> <a href="rationals.html#Rational"><span class="Identifier">Rational</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="rationals.html#Rational"><span class="Identifier">Rational</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span></pre></dt>
 <dd>
 
-
-
-Computes the rational modulo by truncated division (remainder). This is same as <tt class="docutils literal"><span class="pre">x - (x div y) * y</span></tt>.
-&nbsp;&nbsp;<a
+Computes the rational modulo by truncated division (remainder). This is same as <tt class="docutils literal"><span class="pre">x - (x div y) * y</span></tt>. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/rationals.nim#L249"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/rationals.nim#L249" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/rationals.nim#L249" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="floorDiv,Rational[T: SomeInteger],Rational[T: SomeInteger]"></a>

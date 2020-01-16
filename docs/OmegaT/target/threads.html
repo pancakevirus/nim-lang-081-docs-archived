@@ -946,52 +946,36 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#running%2CThread%5BTArg%5D"><span class="Identifier">running</span></a><span class="Operator">*</span><span class="Other">[</span><span class="Identifier">TArg</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Thread</span><span class="Other">[</span><span class="Identifier">TArg</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Returns true if <tt class="docutils literal"><span class="pre">t</span></tt> is running.
-&nbsp;&nbsp;<a
+Returns true if <tt class="docutils literal"><span class="pre">t</span></tt> is running. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/threads.nim#L193"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/threads.nim#L193" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/threads.nim#L193" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="handle,Thread[TArg]"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#handle%2CThread%5BTArg%5D"><span class="Identifier">handle</span></a><span class="Operator">*</span><span class="Other">[</span><span class="Identifier">TArg</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Thread</span><span class="Other">[</span><span class="Identifier">TArg</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">SysThread</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Returns the thread handle of <tt class="docutils literal"><span class="pre">t</span></tt>.
-&nbsp;&nbsp;<a
+Returns the thread handle of <tt class="docutils literal"><span class="pre">t</span></tt>. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/threads.nim#L197"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/threads.nim#L197" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/threads.nim#L197" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="joinThread,Thread[TArg]"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#joinThread%2CThread%5BTArg%5D"><span class="Identifier">joinThread</span></a><span class="Operator">*</span><span class="Other">[</span><span class="Identifier">TArg</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">Thread</span><span class="Other">[</span><span class="Identifier">TArg</span><span class="Other">]</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Waits for the thread <tt class="docutils literal"><span class="pre">t</span></tt> to finish.
-&nbsp;&nbsp;<a
+Waits for the thread <tt class="docutils literal"><span class="pre">t</span></tt> to finish. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/threads.nim#L204"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/threads.nim#L204" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/threads.nim#L204" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="joinThreads,varargs[Thread[TArg]]"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#joinThreads%2Cvarargs%5BThread%5BTArg%5D%5D"><span class="Identifier">joinThreads</span></a><span class="Operator">*</span><span class="Other">[</span><span class="Identifier">TArg</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Identifier">varargs</span><span class="Other">[</span><span class="Identifier">Thread</span><span class="Other">[</span><span class="Identifier">TArg</span><span class="Other">]</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
 <dd>
 
-
-
-Waits for every thread in <tt class="docutils literal"><span class="pre">t</span></tt> to finish.
-&nbsp;&nbsp;<a
+Waits for every thread in <tt class="docutils literal"><span class="pre">t</span></tt> to finish. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/threads.nim#L208"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/threads.nim#L208" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/threads.nim#L208" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="createThread,Thread[TArg],proc(TArg),TArg"></a>

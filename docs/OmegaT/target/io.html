@@ -1101,13 +1101,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                              <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Writes a value to the file <tt class="docutils literal"><span class="pre">f</span></tt>. May throw an IO exception.
-&nbsp;&nbsp;<a
+Writes a value to the file <tt class="docutils literal"><span class="pre">f</span></tt>. May throw an IO exception. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L178"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L178" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L178" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="writeBuffer,File,pointer,Natural"></a>
@@ -1176,26 +1172,18 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#readChar%2CFile"><span class="Identifier">readChar</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <span class="Identifier">File</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">char</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Reads a single character from the stream <tt class="docutils literal"><span class="pre">f</span></tt>. Should not be used in performance sensitive code.
-&nbsp;&nbsp;<a
+Reads a single character from the stream <tt class="docutils literal"><span class="pre">f</span></tt>. Should not be used in performance sensitive code. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L260"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L260" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L260" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="flushFile,File"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#flushFile%2CFile"><span class="Identifier">flushFile</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <span class="Identifier">File</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">WriteIOEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Flushes <tt class="docutils literal"><span class="pre">f</span></tt>'s buffer.
-&nbsp;&nbsp;<a
+Flushes <tt class="docutils literal"><span class="pre">f</span></tt>'s buffer. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L269"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L269" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L269" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getFileHandle,File"></a>
@@ -1211,13 +1199,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#getOsFileHandle%2CFile"><span class="Identifier">getOsFileHandle</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <span class="Identifier">File</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">FileHandle</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns the OS file handle of the file <tt class="docutils literal"><span class="pre">f</span></tt>. This is only useful for platform specific programming.
-&nbsp;&nbsp;<a
+returns the OS file handle of the file <tt class="docutils literal"><span class="pre">f</span></tt>. This is only useful for platform specific programming. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L281"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L281" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L281" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="readLine,File,TaintedString"></a>
@@ -1326,13 +1310,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#endOfFile%2CFile"><span class="Identifier">endOfFile</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <span class="Identifier">File</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Returns true iff <tt class="docutils literal"><span class="pre">f</span></tt> is at the end.
-&nbsp;&nbsp;<a
+Returns true iff <tt class="docutils literal"><span class="pre">f</span></tt> is at the end. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L398"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L398" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L398" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="readAll,File"></a>
@@ -1424,13 +1404,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#getFilePos%2CFile"><span class="Identifier">getFilePos</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <span class="Identifier">File</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int64</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-retrieves the current position of the file pointer that is used to read from the file <tt class="docutils literal"><span class="pre">f</span></tt>. The file's first byte has the index zero.
-&nbsp;&nbsp;<a
+retrieves the current position of the file pointer that is used to read from the file <tt class="docutils literal"><span class="pre">f</span></tt>. The file's first byte has the index zero. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L577"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L577" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L577" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getFileSize,File"></a>
@@ -1438,13 +1414,9 @@ class="link-seesrc" target="_blank">Source</a>
                                <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-retrieves the file size (in bytes) of <tt class="docutils literal"><span class="pre">f</span></tt>.
-&nbsp;&nbsp;<a
+retrieves the file size (in bytes) of <tt class="docutils literal"><span class="pre">f</span></tt>. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L583"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L583" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L583" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="setStdIoUnbuffered"></a>
@@ -1544,13 +1516,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">template</span> <a href="#stdmsg.t"><span class="Identifier">stdmsg</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">File</span></pre></dt>
 <dd>
 
-
-
-Template which expands to either stdout or stderr depending on <tt class="docutils literal"><span class="pre">useStdoutAsStdmsg</span></tt> compile-time switch.
-&nbsp;&nbsp;<a
+Template which expands to either stdout or stderr depending on <tt class="docutils literal"><span class="pre">useStdoutAsStdmsg</span></tt> compile-time switch. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L49"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L49" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L49" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 

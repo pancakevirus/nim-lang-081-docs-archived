@@ -7,6 +7,8 @@
     <tu>
       <note>この引用句はロバートさんの発言だから英語から日本語へ翻訳するときhは一人称の「I (私は)」を省いて構わない。付けるなら、「私に言わせるならば、偉大なる料理人こそ心より尊敬する芸術家だ」あたりでしょう。
 
+truly は心より～の意味もあります。
+
 「～すべき」は文中に無い意訳。強調文として使っています。もしかしたら should を省いているかもしれません。
 </note>
       <tuv lang="EN-US">
@@ -195,6 +197,9 @@
       </tuv>
     </tu>
     <tu>
+      <note>原文はあまりよくありません。改訳時に意味を壊さない程度に「使います
+」を省いた方が良いかもしれません。
+</note>
       <tuv lang="EN-US">
         <seg>&lt;t3&gt;&lt;s4&gt;koch&lt;/s4&gt;&lt;/t3&gt; is used mainly to build the Nim compiler, but it can also be used for other tasks.</seg>
       </tuv>
@@ -384,6 +389,14 @@
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041212Z" creationid="isVowel" creationdate="20200113T041212Z">
         <seg>Break ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>By default the documentation will be built in parallel using the number of available CPU cores.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T030416Z" creationid="isVowel" creationdate="20200116T025319Z">
+        <seg>デフォルトでは利用できる CPU コア数を使い、ドキュメンテーションを並列ビルドします。</seg>
       </tuv>
     </tu>
     <tu>
@@ -732,6 +745,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Generated: 2019-11-27 09:13:23 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T045549Z" creationid="isVowel" creationdate="20200116T045549Z">
+        <seg>生成日時: 2019年11月27日 午前09時13分23秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Generated: 2019-11-27 09:14:28 UTC</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T022127Z" creationid="isVowel" creationdate="20200115T022127Z">
@@ -752,6 +773,14 @@
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T075254Z" creationid="isVowel" creationdate="20200114T075254Z">
         <seg>生成日時: 2019年11月27日 午前09時15分13秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2019-11-27 09:15:22 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T054932Z" creationid="isVowel" creationdate="20200116T054932Z">
+        <seg>生成日時: 2019年11月27日 午前09時15分22秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
@@ -800,6 +829,17 @@
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T090755Z" creationid="isVowel" creationdate="20200114T090755Z">
         <seg>識別子とキーワード</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>「meaninful」は「meaningful」のスペルミスです。この訳では「有意義な」としていますけど、省いたり、「詳しいエラー内容」と言い換えたり、または「有効な～」や「重要な～」としてもいいと思います。
+
+改訳を考えた方が良いでしょうか。</note>
+      <tuv lang="EN-US">
+        <seg>If any documentation build sub commands fail, they will be rerun in serial fashion so that meaninful error output can be gathered for inspection.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T031813Z" creationid="isVowel" creationdate="20200116T031723Z">
+        <seg>ドキュメンテーションのビルドにおいてサブコマンドが失敗したならば、検証用に収集した有意義なエラーの出力後に直列ビルドを再実行します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -936,6 +976,23 @@
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T021547Z" creationid="isVowel" creationdate="20200115T021547Z">
         <seg>Is 演算子</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>直訳するなら「なお、この処理は繰り返されますので、結果として https://nim-lang.org/ で使うことができるものを web/upload へ配置します」ではあります。これではよくわかりません。
+
+「same operation」は「何度も繰り返す」と訳していいのかもしれないです。
+
+「place」は格納や保管、収納などの意味もある(うんのさん辞書より)。転じて「処理結果の保存先」。
+
+「repeats the same operation but ～」を訳すと「前述の処理を繰り返しますが」となってしまい、すっきりしない (but のせい)。よって「but」と「repeats」を省いて「変換処理」としています。前文で「一括変換」と記していますからね。
+
+</note>
+      <tuv lang="EN-US">
+        <seg>It also repeats the same operation but places the result in the &lt;t3&gt;&lt;s4&gt;web/upload&lt;/s4&gt;&lt;/t3&gt; which can be used to update the website at &lt;a5&gt;https://nim-lang.org&lt;/a5&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T024401Z" creationid="isVowel" creationdate="20200116T013737Z">
+        <seg>また、この変換処理はウェブサイト &lt;a5&gt;https://nim-lang.org/&lt;/a5&gt; の更新で使うドキュメンテーション一式を &lt;t3&gt;&lt;s4&gt;web/upload&lt;/s4&gt;&lt;/t3&gt; へ出力します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1362,6 +1419,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Returns 0 if it cannot be detected.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T054841Z" creationid="isVowel" creationdate="20200116T054841Z">
+        <seg>検出不能時は 0 を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Scope rules</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T063959Z" creationid="isVowel" creationdate="20200115T063959Z">
@@ -1513,6 +1578,16 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
     </tu>
     <tu>
+      <note>以前は「整数を与えると何度も "hello world!" を出力します。」と訳していました。
+</note>
+      <tuv lang="EN-US">
+        <seg>Takes an integer and outputs as many "hello world!"s</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T051856Z" creationid="isVowel" creationdate="20200116T051208Z">
+        <seg>"hello world!" の出力回数を整数で指定します。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv lang="EN-US">
         <seg>Templates</seg>
       </tuv>
@@ -1522,10 +1597,44 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The &lt;s0&gt;csource&lt;/s0&gt; command builds the C sources for installation.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T040146Z" creationid="isVowel" creationdate="20200116T040146Z">
+        <seg>&lt;s0&gt;csource&lt;/s0&gt; コマンドはインストール用の C ソースをビルドします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The &lt;s0&gt;koch&lt;/s0&gt; program is Nim's maintenance script.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T075921Z" creationid="isVowel" creationdate="20200114T075921Z">
         <seg>&lt;s0&gt;koch&lt;/s0&gt; プログラムは Nim のメンテナンス・スクリプトです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>rst 形式は軽量マークアップ言語の一種である reStructredText のことです。
+</note>
+      <tuv lang="EN-US">
+        <seg>The &lt;s0&gt;web&lt;/s0&gt; command converts the documentation in the &lt;t1&gt;&lt;s2&gt;doc&lt;/s2&gt;&lt;/t1&gt; directory from rst to HTML.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T021019Z" creationid="isVowel" creationdate="20200116T013449Z">
+        <seg>&lt;s0&gt;web&lt;/s0&gt; コマンドは &lt;t1&gt;&lt;s2&gt;doc&lt;/s2&gt;&lt;/t1&gt; ディレクトリにある rst 形式のファイルを HTML 形式のドキュメンテーションへ一括変換します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>force a specific number の意味は「指定された数値の強制」です。
+
+everything は「すべて～」ですが、この場合は、起動から終了までの全作業を指しますので「一貫」で意訳しています。
+
+「コンフィギュレーションオプション」は長すぎますね。
+
+
+</note>
+      <tuv lang="EN-US">
+        <seg>The &lt;t0&gt;&lt;s1&gt;--parallelBuild:n&lt;/s1&gt;&lt;/t0&gt; switch or configuration option can be used to force a specific number of parallel jobs or run everything serially from the start (&lt;t2&gt;&lt;s3&gt;n == 1&lt;/s3&gt;&lt;/t2&gt;).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T034310Z" creationid="isVowel" creationdate="20200116T034247Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;--parallelBuild:n&lt;/s1&gt;&lt;/t0&gt; スイッチやコンフィギュレーションオプションは並列ジョブ数の強制指定、または起動から一貫して直列ジョブで実行するために使います (&lt;t2&gt;&lt;s3&gt;n == 1&lt;/s3&gt;&lt;/t2&gt;)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1577,20 +1686,24 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
     </tu>
     <tu>
-      <note>直訳するよりも、この意訳のほうがはっきりした意味になると思います。</note>
+      <note>直訳するよりも、この意訳のほうがはっきりした意味になると思います。
+
+前文でソフトウェアの名称が示されているため word は「単語」ではなく「由来」と意訳しています。</note>
       <tuv lang="EN-US">
         <seg>The word &lt;e1&gt;koch&lt;/e1&gt; means &lt;e2&gt;cook&lt;/e2&gt; in German.</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200115T074827Z" creationid="isVowel" creationdate="20200115T074331Z">
-        <seg>&lt;e1&gt;koch&lt;/e1&gt; はドイツ語であり、日本語で&lt;e2&gt;料理人&lt;/e2&gt;の意味です。</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T034913Z" creationid="isVowel" creationdate="20200115T074331Z">
+        <seg>&lt;e1&gt;koch&lt;/e1&gt; の由来はドイツ語であり、日本語で&lt;e2&gt;料理人&lt;/e2&gt;の意味です。</seg>
       </tuv>
     </tu>
     <tu>
+      <note>この場合は「この対象で使える機能」を指すので「対応している (supported)、他動詞」は対象物の名詞 (Koch)へ言い換えても構わないかと思います。
+</note>
       <tuv lang="EN-US">
         <seg>This document describes the supported commands and their options.</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200115T081116Z" creationid="isVowel" creationdate="20200115T081116Z">
-        <seg>このドキュメントでは対応しているコマンドとオプションを説明します。</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T085455Z" creationid="isVowel" creationdate="20200115T081116Z">
+        <seg>このドキュメントでは koch のコマンドとオプションを説明します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1599,6 +1712,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T091753Z" creationid="isVowel" creationdate="20200114T091753Z">
         <seg>このドキュメントはプログラミング言語 &lt;e0&gt;Nim&lt;/e0&gt; のチュートリアルです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This module implements procs to determine the number of CPUs / cores.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T055259Z" creationid="isVowel" creationdate="20200116T054639Z">
+        <seg>このモジュールは CPU / 数を判定するプロシージャの実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This module is a sample.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T045502Z" creationid="isVowel" creationdate="20200116T045502Z">
+        <seg>このモジュールはサンプルです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1695,6 +1824,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T083624Z" creationid="isVowel" creationdate="20200114T083624Z">
         <seg>Union プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Use the linenoise library for interactive mode (not needed on Windows).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200115T084647Z" creationid="isVowel" creationdate="20200115T084647Z">
+        <seg>インタラクティブモードで linenoise ライブラリを使います (Windows では不要)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1890,11 +2027,23 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
     </tu>
     <tu>
+      <note>このブロックは作業対象外です。変更してしまうと、正常に動作しなくなります。</note>
+      <tuv lang="EN-US">
+        <seg>data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA==</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv lang="EN-US">
         <seg>deprecated pragma</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082001Z" creationid="isVowel" creationdate="20200114T082001Z">
         <seg>deprecated プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>このブロックは作業対象外です。変更してしまうと、正常に動作しなくなります。</note>
+      <tuv lang="EN-US">
+        <seg>en</seg>
       </tuv>
     </tu>
     <tu>
@@ -1951,6 +2100,18 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082037Z" creationid="isVowel" creationdate="20200114T082037Z">
         <seg>hint プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>このブロックは作業対象外です。変更してしまうと、正常に動作しなくなります。</note>
+      <tuv lang="EN-US">
+        <seg>https://fonts.googleapis.com/css?family=Lato:400,600,900</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>このブロックは作業対象外です。変更してしまうと、正常に動作しなくなります。</note>
+      <tuv lang="EN-US">
+        <seg>https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600</seg>
       </tuv>
     </tu>
     <tu>
@@ -2035,6 +2196,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>returns the number of the processors/cores the machine has.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T054840Z" creationid="isVowel" creationdate="20200116T054840Z">
+        <seg>マシンに搭載されているプロセッサ / コア数を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>shallow pragma</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082016Z" creationid="isVowel" creationdate="20200114T082016Z">
@@ -2114,11 +2283,25 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
     </tu>
     <tu>
+      <note>このブロックは作業対象外です。変更してしまうと、正常に動作しなくなります。</note>
+      <tuv lang="EN-US">
+        <seg>width=device-width, initial-scale=1.0</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv lang="EN-US">
         <seg>  &lt;a0&gt;Source&lt;/a0&gt; &lt;a1&gt;Edit&lt;/a1&gt;</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T073746Z" creationid="isVowel" creationdate="20200114T073746Z">
         <seg>  &lt;a0&gt;ソース&lt;/a0&gt; &lt;a1&gt;編集&lt;/a1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>  &lt;a2&gt;Source&lt;/a2&gt; &lt;a3&gt;Edit&lt;/a3&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T052527Z" creationid="isVowel" creationdate="20200116T052527Z">
+        <seg>  &lt;a2&gt;ソース&lt;/a2&gt; &lt;a3&gt;編集&lt;/a3&gt;</seg>
       </tuv>
     </tu>
     <tu>
