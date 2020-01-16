@@ -837,10 +837,10 @@ function main() {
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#PathComponent"
     title="PathComponent = enum
-  pcFile,                     ## path refers to a file
-  pcLinkToFile,               ## path refers to a symbolic link to a file
-  pcDir,                      ## path refers to a directory
-  pcLinkToDir                 ## path refers to a symbolic link to a directory"><wbr />Path<wbr />Component<span class="attachedType"></span></a></li>
+  pcFile,                     ## ファイルの参照パス
+  pcLinkToFile,               ## シンボリックリンクによるファイルの参照パス
+  pcDir,                      ## ディレクトリの参照パス
+  pcLinkToDir                 ## シンボリックリンクによるディレクトリの参照パス"><wbr />Path<wbr />Component<span class="attachedType"></span></a></li>
 
   </ul>
 </li>
@@ -861,19 +861,19 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc">Compile-time only version for walkDir if you need it at compile-time for JavaScript.</p>
+  <p class="module-desc">JavaScript のコンパイルで必要となるコンパイル処理専用バージョンの walkDir です。</p>
   <div class="section" id="7">
 <h1><a class="toc-backref" href="#7">型</a></h1>
 <dl class="item">
 <a id="PathComponent"></a>
 <dt><pre><a href="oswalkdir.html#PathComponent"><span class="Identifier">PathComponent</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
-  <span class="Identifier">pcFile</span><span class="Other">,</span>                     <span class="Comment">## path refers to a file</span>
-  <span class="Identifier">pcLinkToFile</span><span class="Other">,</span>               <span class="Comment">## path refers to a symbolic link to a file</span>
-  <span class="Identifier">pcDir</span><span class="Other">,</span>                      <span class="Comment">## path refers to a directory</span>
-  <span class="Identifier">pcLinkToDir</span>                 <span class="Comment">## path refers to a symbolic link to a directory</span></pre></dt>
+  <span class="Identifier">pcFile</span><span class="Other">,</span>                     <span class="Comment">## ファイルの参照パス</span>
+  <span class="Identifier">pcLinkToFile</span><span class="Other">,</span>               <span class="Comment">## シンボリックリンクによるファイルの参照パス</span>
+  <span class="Identifier">pcDir</span><span class="Other">,</span>                      <span class="Comment">## ディレクトリの参照パス</span>
+  <span class="Identifier">pcLinkToDir</span>                 <span class="Comment">## シンボリックリンクによるディレクトリの参照パス</span></pre></dt>
 <dd>
 
-Enumeration specifying a path component. &nbsp;&nbsp;<a
+パス構成の指定に使う列挙型です。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/oswalkdir.nim#L14"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/oswalkdir.nim#L14" class="link-seesrc" target="_blank" >編集</a>
 
@@ -914,7 +914,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 Generated: 2019-11-27 09:16:32 UTC</small>
+        <small>Nim で作成しました。 生成日時: 2019年11月27日 午前09時16分32秒 (UTC)</small>
       </div>
     </div>
   </div>

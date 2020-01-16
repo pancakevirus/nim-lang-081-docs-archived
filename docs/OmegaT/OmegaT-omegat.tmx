@@ -197,6 +197,38 @@ truly は心より～の意味もあります。
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s10&gt;pcDir&lt;/s10&gt;&lt;s11&gt;,&lt;/s11&gt;                      &lt;s12&gt;## path refers to a directory&lt;/s12&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T072004Z" creationid="isVowel" creationdate="20200116T072004Z">
+        <seg>&lt;s10&gt;pcDir&lt;/s10&gt;&lt;s11&gt;,&lt;/s11&gt;                      &lt;s12&gt;## ディレクトリの参照パス&lt;/s12&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s13&gt;pcLinkToDir&lt;/s13&gt;                 &lt;s14&gt;## path refers to a symbolic link to a directory&lt;/s14&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T072024Z" creationid="isVowel" creationdate="20200116T072024Z">
+        <seg>&lt;s13&gt;pcLinkToDir&lt;/s13&gt;                 &lt;s14&gt;## シンボリックリンクによるディレクトリの参照パス&lt;/s14&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s4&gt;pcFile&lt;/s4&gt;&lt;s5&gt;,&lt;/s5&gt;                     &lt;s6&gt;## path refers to a file&lt;/s6&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T071931Z" creationid="isVowel" creationdate="20200116T071931Z">
+        <seg>&lt;s4&gt;pcFile&lt;/s4&gt;&lt;s5&gt;,&lt;/s5&gt;                     &lt;s6&gt;## ファイルの参照パス&lt;/s6&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s7&gt;pcLinkToFile&lt;/s7&gt;&lt;s8&gt;,&lt;/s8&gt;               &lt;s9&gt;## path refers to a symbolic link to a file&lt;/s9&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T071948Z" creationid="isVowel" creationdate="20200116T071948Z">
+        <seg>&lt;s7&gt;pcLinkToFile&lt;/s7&gt;&lt;s8&gt;,&lt;/s8&gt;               &lt;s9&gt;## シンボリックリンクによるファイルの参照パス&lt;/s9&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>原文はあまりよくありません。改訳時に意味を壊さない程度に「使います
 」を省いた方が良いかもしれません。
 </note>
@@ -488,6 +520,15 @@ truly は心より～の意味もあります。
       </tuv>
     </tu>
     <tu>
+      <note>「if you need it at ～」は「～ならばそれが必要」といった意味です。</note>
+      <tuv lang="EN-US">
+        <seg>Compile-time only version for walkDir if you need it at compile-time for JavaScript.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T072139Z" creationid="isVowel" creationdate="20200116T071852Z">
+        <seg>JavaScript のコンパイルで必要となるコンパイル処理専用バージョンの walkDir です。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv lang="EN-US">
         <seg>Compiler Messages</seg>
       </tuv>
@@ -597,6 +638,14 @@ truly は心より～の意味もあります。
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T090722Z" creationid="isVowel" creationdate="20200114T090722Z">
         <seg>エンコーディング</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Enumeration specifying a path component.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T071506Z" creationid="isVowel" creationdate="20200116T071506Z">
+        <seg>パス構成の指定に使う列挙型です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -785,10 +834,34 @@ truly は心より～の意味もあります。
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Generated: 2019-11-27 09:16:05 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T063018Z" creationid="isVowel" creationdate="20200116T063018Z">
+        <seg>生成日時: 2019年11月27日 午前09時16分05秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2019-11-27 09:16:32 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T070702Z" creationid="isVowel" creationdate="20200116T070702Z">
+        <seg>生成日時: 2019年11月27日 午前09時16分32秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Generated: 2019-11-27 09:16:35 UTC</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T023747Z" creationid="isVowel" creationdate="20200113T023747Z">
         <seg>生成日時: 2019年11月27日 午前09時16分35秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2019-11-27 09:16:38 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T065730Z" creationid="isVowel" creationdate="20200116T065730Z">
+        <seg>生成日時: 2019年11月27日 午前09時16分38秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
@@ -821,6 +894,19 @@ truly は心より～の意味もあります。
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082137Z" creationid="isVowel" creationdate="20200114T082137Z">
         <seg>Header プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>以前の訳は「nre.nim 専用の内部処理で使うファイルです。」
+
+「For use only by ～」は「でのみ使用」ですが「～専用」と訳してもいいこともあります。
+
+「internal」は「内部」ですが、このままですと説明不足です。必要であれば補ってください。</note>
+      <tuv lang="EN-US">
+        <seg>INTERNAL FILE FOR USE ONLY BY nre.nim.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T064720Z" creationid="isVowel" creationdate="20200116T063656Z">
+        <seg>nre.nim 専用の内部処理ファイルです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1087,6 +1173,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T055242Z" creationid="isVowel" creationdate="20200115T055242Z">
         <seg>説明</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Memory tracking support for Nim.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T070112Z" creationid="isVowel" creationdate="20200116T065716Z">
+        <seg>Nim のメモリトラッキング・サポートです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1718,8 +1812,8 @@ everything は「すべて～」ですが、この場合は、起動から終了
       <tuv lang="EN-US">
         <seg>This module implements procs to determine the number of CPUs / cores.</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200116T055259Z" creationid="isVowel" creationdate="20200116T054639Z">
-        <seg>このモジュールは CPU / 数を判定するプロシージャの実装です。</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T062928Z" creationid="isVowel" creationdate="20200116T054639Z">
+        <seg>このモジュールは CPU / コア数を判定するプロシージャの実装です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2160,6 +2254,38 @@ everything は「すべて～」ですが、この場合は、起動から終了
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082004Z" creationid="isVowel" creationdate="20200114T082004Z">
         <seg>noSideEffect プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>pcDir,                      ## path refers to a directory</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T070951Z" creationid="isVowel" creationdate="20200116T070951Z">
+        <seg>pcDir,                      ## ディレクトリの参照パス</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>pcFile,                     ## path refers to a file</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T070934Z" creationid="isVowel" creationdate="20200116T070934Z">
+        <seg>pcFile,                     ## ファイルの参照パス</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>pcLinkToDir                 ## path refers to a symbolic link to a directory</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T071127Z" creationid="isVowel" creationdate="20200116T071051Z">
+        <seg>pcLinkToDir                 ## シンボリックリンクによるディレクトリの参照パス</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>pcLinkToFile,               ## path refers to a symbolic link to a file</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200116T071143Z" creationid="isVowel" creationdate="20200116T071046Z">
+        <seg>pcLinkToFile,               ## シンボリックリンクによるファイルの参照パス</seg>
       </tuv>
     </tu>
     <tu>
