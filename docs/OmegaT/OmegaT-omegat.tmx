@@ -229,14 +229,19 @@ truly は心より～の意味もあります。
       </tuv>
     </tu>
     <tu>
-      <note>原文はあまりよくありません。改訳時に意味を壊さない程度に「使います
-」を省いた方が良いかもしれません。
+      <note>1. 原文は機械翻訳を通したような雰囲気があるので、あまりよくありません。改訳時に意味を壊さない程度に「使います」を省いた方が良いかもしれません。
+
+2. 以前は「&lt;t3&gt;&lt;s4&gt;koch&lt;/s4&gt;&lt;/t3&gt; は、主に Nim コンパイラのビルドで使いますが、それ以外の作業にも使います。」と直訳していました。
+
+3. 「used～」は「～使われています」ですが、文脈によっては「用途 (purpose)」として訳したほうが自然です。used を二度も使うのは好ましくありませんので「あります(available)」に言い換えています。
+
+4. 今後の機能拡張による書き換えの手間をなくしたり、含みを持たせるため「task」の訳出は省いていますが、明示的に書くならば「それ以外にもドキュメントの生成などがあります」でしょうか。
 </note>
       <tuv lang="EN-US">
         <seg>&lt;t3&gt;&lt;s4&gt;koch&lt;/s4&gt;&lt;/t3&gt; is used mainly to build the Nim compiler, but it can also be used for other tasks.</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200115T080943Z" creationid="isVowel" creationdate="20200115T075103Z">
-        <seg>&lt;t3&gt;&lt;s4&gt;koch&lt;/s4&gt;&lt;/t3&gt; は、主に Nim コンパイラのビルドで使いますが、それ以外の作業にも使います。</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200117T020228Z" creationid="isVowel" creationdate="20200115T075103Z">
+        <seg>&lt;t3&gt;&lt;s4&gt;koch&lt;/s4&gt;&lt;/t3&gt; の主な用途は Nim コンパイラのビルドですが、それ以外にもあります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -261,6 +266,16 @@ truly は心より～の意味もあります。
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T073106Z" creationid="isVowel" creationdate="20200114T073106Z">
         <seg>上級型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>1. hopefully は「うまくけば～」
+2. end up は「採取的に、～になります」</note>
+      <tuv lang="EN-US">
+        <seg>After compilation is finished you will hopefully end up with the nim compiler in the &lt;t0&gt;&lt;s1&gt;bin&lt;/s1&gt;&lt;/t0&gt; directory.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200117T043112Z" creationid="isVowel" creationdate="20200117T043112Z">
+        <seg>コンパイル終了後、成功すれば Nim コンパイラは &lt;t0&gt;&lt;s1&gt;bin&lt;/s1&gt;&lt;/t0&gt; ディレクトリに生成されます。</seg>
       </tuv>
     </tu>
     <tu>
@@ -424,6 +439,28 @@ truly は心より～の意味もあります。
       </tuv>
     </tu>
     <tu>
+      <note>あんまり原文の出来が良くない。
+あとで改訳のこと。
+
+以下、改訳案。
+
+1. このオプションを指定するとリリースビルドを作成します（デフォルトではデバッグバージョン）。動作速度低下の原因となりますので、コンパイラのデバッグ時以外は、このオプションを指定してください。
+
+→ デフォルトは無指定時のことだと思います (koch に -d:debug オプションはありません)。
+
+→ これなら、forceは省いてもいい。文脈から読んでも強調ですからね(デバッグとリリースしかない)。
+
+→ preferred は「望ましい」なんですが、「なるべく、できれば」といった意味もあります。改訳時に、(できれば)をつけるなど、そこも考えたほうが良いでしょう。
+</note>
+      <tuv lang="EN-US">
+        <seg>By default a debug version is created, passing this option will force a release build, which is much faster and should be preferred unless you are debugging the compiler.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200117T040918Z" creationid="isVowel" creationdate="20200117T040335Z">
+        <seg>デフォルトではデバッグバージョンを作成します。このオプションを指定すると強制的にリリースビルドになります。動作速度向上のため、コンパイラのデバッグをしていないのであれば、このオプションを指定してください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>「number of available ～」は「利用できる対象の個数」です。</note>
       <tuv lang="EN-US">
         <seg>By default the documentation will be built in parallel using the number of available CPU cores.</seg>
       </tuv>
@@ -918,14 +955,16 @@ truly は心より～の意味もあります。
       </tuv>
     </tu>
     <tu>
-      <note>「meaninful」は「meaningful」のスペルミスです。この訳では「有意義な」としていますけど、省いたり、「詳しいエラー内容」と言い換えたり、または「有効な～」や「重要な～」としてもいいと思います。
+      <note>1.「meaninful」は「meaningful」のスペルミスです。この訳では「有意義な」としていますけど、省いたり、「詳しいエラー内容」と言い換えたり、または「有効な～」や「重要な～」としてもいいと思います。改訳を考えた方が良いでしょう。
 
-改訳を考えた方が良いでしょうか。</note>
+2. 「検証用に収集した有意義なエラーの出力後」は冗長なので「エラーの詳細を出力後」へ改訳。
+
+</note>
       <tuv lang="EN-US">
         <seg>If any documentation build sub commands fail, they will be rerun in serial fashion so that meaninful error output can be gathered for inspection.</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200116T031813Z" creationid="isVowel" creationdate="20200116T031723Z">
-        <seg>ドキュメンテーションのビルドにおいてサブコマンドが失敗したならば、検証用に収集した有意義なエラーの出力後に直列ビルドを再実行します。</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200117T020717Z" creationid="isVowel" creationdate="20200116T031723Z">
+        <seg>ドキュメンテーションのビルドにおいてサブコマンドが失敗したならば、エラーの詳細を出力後に直列ビルドを再実行します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1065,13 +1104,27 @@ truly は心より～の意味もあります。
       </tuv>
     </tu>
     <tu>
-      <note>直訳するなら「なお、この処理は繰り返されますので、結果として https://nim-lang.org/ で使うことができるものを web/upload へ配置します」ではあります。これではよくわかりません。
+      <note>1. acccept を can be ～　へ読み替えて意訳しています。
 
-「same operation」は「何度も繰り返す」と訳していいのかもしれないです。
+2. pass は「～渡す」「～与える(give)」「～指定する(specify)」の意味で使います。 
 
-「place」は格納や保管、収納などの意味もある(うんのさん辞書より)。転じて「処理結果の保存先」。
+3. 原則は原文に忠実とはいえ……ちゃんとした日本語にするには、強引に訳そうとせず、ネイティブスピーカーが書いた各種参考書をもとに訳したほうが良いです。
+</note>
+      <tuv lang="EN-US">
+        <seg>It accepts the same options as you would pass to the &lt;a1&gt;boot command&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200117T032952Z" creationid="isVowel" creationdate="20200117T032952Z">
+        <seg>&lt;a1&gt;boot&lt;/a1&gt; コマンドと同じオプションを指定できます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>1. 直訳するなら「なお、この処理は繰り返されますので、結果として https://nim-lang.org/ で使うことができるものを web/upload へ配置します」ではあります。これではよくわかりません。
 
-「repeats the same operation but ～」を訳すと「前述の処理を繰り返しますが」となってしまい、すっきりしない (but のせい)。よって「but」と「repeats」を省いて「変換処理」としています。前文で「一括変換」と記していますからね。
+2. 「same operation」は「何度も繰り返す」と訳していいのかもしれないです。
+
+3. 「place」は格納や保管、収納などの意味もある(うんのさん辞書より)。転じて「処理結果の保存先」。
+
+4. 「repeats the same operation but ～」を訳すと「前述の処理を繰り返しますが」となってしまい、すっきりしない (but のせい)。よって「but」と「repeats」を省いて「変換処理」としています。前文で「一括変換」と記していますからね。
 
 </note>
       <tuv lang="EN-US">
@@ -1569,6 +1622,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>See its source code for available options.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200117T060106Z" creationid="isVowel" creationdate="20200117T060106Z">
+        <seg>利用できるオプションについてはソースコードを参照してください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Sequences</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T042132Z" creationid="isVowel" creationdate="20200113T042132Z">
@@ -1690,6 +1751,36 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
     </tu>
     <tu>
+      <note>1.「accept(s)」は「受け入れる」ですが、「扱えます」や「指定できます」のほうが良いこともあります。また、「要求」の意味もあります。
+
+2. 「accepts」は「必要です」と訳してしまうと、オプション省略時の動作がないと誤解の恐れがある (-d:release の説明と異なってしまう)。よって「指定できます」のほうが自然です。
+
+3.「different」は「各種」と訳しても良いが、この場合は、次の文節に説明があるので「ビルド」と明示したほうが分かりやすい。
+
+4. can/require/need/specify の代わりに accept を使うのは見かけます。そこは機械的に置き換えるのではなく、和訳するときに文脈で判断してください。
+
+5. and は接続詞なので句読点を打って、文を続けても良い。たとえば「～です。また、」など。
+
+参考文献
+　『新装版　英和翻訳表現辞典』
+　中村保男(著)・研究社
+　ISBN978-4-7674-3010-2
+  p.  8 → accept
+  p.189 → different
+
+　『ビジネス技術実用英語大辞典V6』
+　海野文男、海野和子(著)
+　合同会社プロジェクトポトス
+　→ accept
+</note>
+      <tuv lang="EN-US">
+        <seg>The &lt;s0&gt;boot&lt;/s0&gt; command bootstraps the compiler, and it accepts different options:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200117T033057Z" creationid="isVowel" creationdate="20200117T023217Z">
+        <seg>&lt;s0&gt;boot&lt;/s0&gt; コマンドはコンパイラのブートストラップです。ビルドオプションを指定できます。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv lang="EN-US">
         <seg>The &lt;s0&gt;csource&lt;/s0&gt; command builds the C sources for installation.</seg>
       </tuv>
@@ -1706,6 +1797,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;s0&gt;test&lt;/s0&gt; command can also be invoked with the alias &lt;t1&gt;&lt;s2&gt;tests&lt;/s2&gt;&lt;/t1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200117T054450Z" creationid="isVowel" creationdate="20200117T054048Z">
+        <seg>&lt;s0&gt;test&lt;/s0&gt; コマンド&lt;t1&gt;は &lt;s2&gt;tests&lt;/s2&gt;&lt;/t1&gt; コマンドを呼び出すためのエイリアスです。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>rst 形式は軽量マークアップ言語の一種である reStructredText のことです。
 </note>
       <tuv lang="EN-US">
@@ -1716,13 +1815,13 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
     </tu>
     <tu>
-      <note>force a specific number の意味は「指定された数値の強制」です。
+      <note>1. force a specific number の意味は「指定された数値の強制」です。
 
-everything は「すべて～」ですが、この場合は、起動から終了までの全作業を指しますので「一貫」で意訳しています。
+2. everything は「すべて～」ですが、この場合は、起動から終了までの全作業を指しますので「一貫」で意訳しています。
 
-「コンフィギュレーションオプション」は長すぎますね。
+3. 「コンフィギュレーションオプション」は長すぎますね。
 
-
+4. この文脈の force は省くとあいまいになるので省かなくていいです。
 </note>
       <tuv lang="EN-US">
         <seg>The &lt;t0&gt;&lt;s1&gt;--parallelBuild:n&lt;/s1&gt;&lt;/t0&gt; switch or configuration option can be used to force a specific number of parallel jobs or run everything serially from the start (&lt;t2&gt;&lt;s3&gt;n == 1&lt;/s3&gt;&lt;/t2&gt;).</seg>
@@ -1765,6 +1864,14 @@ everything は「すべて～」ですが、この場合は、起動から終了
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The temp command builds the Nim compiler but with a different final name (&lt;t0&gt;&lt;s1&gt;nim_temp&lt;/s1&gt;&lt;/t0&gt;), so it doesn't overwrite your normal compiler.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200117T050912Z" creationid="isVowel" creationdate="20200117T050912Z">
+        <seg>temp コマンドは、標準コンパイラを上書きせずに一時ファイル名 (&lt;t0&gt;&lt;s1&gt;nim_temp&lt;/s1&gt;&lt;/t0&gt;) で Nim コンパイラをビルドします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The unsafeAddr operator</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T081850Z" creationid="isVowel" creationdate="20200114T081850Z">
@@ -1788,6 +1895,14 @@ everything は「すべて～」ですが、この場合は、起動から終了
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T034913Z" creationid="isVowel" creationdate="20200115T074331Z">
         <seg>&lt;e1&gt;koch&lt;/e1&gt; の由来はドイツ語であり、日本語で&lt;e2&gt;料理人&lt;/e2&gt;の意味です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This command will compile and run &lt;t3&gt;&lt;s4&gt;testament/tester.nim&lt;/s4&gt;&lt;/t3&gt;, which is the main driver of Nim's test suite.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200117T055126Z" creationid="isVowel" creationdate="20200117T054910Z">
+        <seg>このコマンドは Nim のテストスイートにおけるメインドライバです。 &lt;t3&gt;&lt;s4&gt;testament/tester.nim&lt;/s4&gt;&lt;/t3&gt; のコンパイル、および実行します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2046,6 +2161,52 @@ everything は「すべて～」ですが、この場合は、起動から終了
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T081729Z" creationid="isVowel" creationdate="20200114T081729Z">
         <seg>Yield ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>自信がないので、あとで改訳します。
+
+1. この場合の place は「確認」です。
+
+2. なお、Nim の bin ディレクトリの追加と確認方法について述べています。
+
+3. 原文の出来が悪いで訳文に引っ張られないように注意して翻訳してください。
+</note>
+      <tuv lang="EN-US">
+        <seg>You can add Nim's &lt;t2&gt;&lt;s3&gt;bin&lt;/s3&gt;&lt;/t2&gt; directory to your &lt;t4&gt;&lt;s5&gt;$PATH&lt;/s5&gt;&lt;/t4&gt; or use the install command to place it where it will be found.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200117T050105Z" creationid="isVowel" creationdate="20200117T045026Z">
+        <seg>Nim の &lt;t2&gt;&lt;s3&gt;bin&lt;/s3&gt;&lt;/t2&gt; ディレクトリのパスは環境変数 &lt;t4&gt;&lt;s5&gt;$PATH&lt;/s5&gt;&lt;/t4&gt; へ追加できます。また、 &lt;t2&gt;&lt;s3&gt;bin&lt;/s3&gt;&lt;/t2&gt; ディレクトリのパスを確認するには install コマンドを実行します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>後で改訳。
+
+これでは「なにを転送する」のか意味がわからない。 koch.nim を読まないと理解不能。</note>
+      <tuv lang="EN-US">
+        <seg>You can pass options to the &lt;t5&gt;&lt;s6&gt;test&lt;/s6&gt;&lt;/t5&gt; command, they will be forwarded to the tester.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200117T060027Z" creationid="isVowel" creationdate="20200117T060027Z">
+        <seg>&lt;t5&gt;&lt;s6&gt;test&lt;/s6&gt;&lt;/t5&gt; コマンドにオプションを指定すると、テスターへ転送します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>1. issue をどう訳すかが難しいところです。ただ、この文脈では boot コマンドの動作内容を指すわけではなく boot コマンドの issue (記事)を指すようです。
+
+2. 訳すならば 「test コマンドの動作やオプションついては boot コマンドと同じですので、そちら記事を参照してください」になるかと思います。
+
+3. いや、違うな。 boot コマンドンに問題があると思われるときに。なのかね。
+
+4. would issue なので「問題がある疑い」としておこう。とりあえず、この訳で決定。
+
+以前の訳:
+このコマンドはビルドオプションのテストで使います。 &lt;a2&gt;boot&lt;/a2&gt; コマンドと同じオプションを指定できます
+</note>
+      <tuv lang="EN-US">
+        <seg>You can use this command to test different options, the same you would issue for the &lt;a2&gt;boot command&lt;/a2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200117T053855Z" creationid="isVowel" creationdate="20200117T051514Z">
+        <seg>このコマンドは &lt;a2&gt;boot&lt;/a2&gt; コマンドに問題があると思われるときに、ビルドオプションのテストで使えます。</seg>
       </tuv>
     </tu>
     <tu>
