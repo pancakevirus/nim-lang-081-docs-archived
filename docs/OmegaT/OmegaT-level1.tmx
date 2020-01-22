@@ -914,6 +914,14 @@ proc helloWorld*(times: int) =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Exports</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T112905Z" creationid="isVowel" creationdate="20200122T112905Z">
+        <seg>エクスポート</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Extern pragma</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T083615Z" creationid="isVowel" creationdate="20200114T083615Z">
@@ -1063,6 +1071,14 @@ proc helloWorld*(times: int) =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T063018Z" creationid="isVowel" creationdate="20200116T063018Z">
         <seg>生成日時: 2019年11月27日 午前09時16分05秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2019-11-27 09:16:28 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T112935Z" creationid="isVowel" creationdate="20200122T112914Z">
+        <seg>生成日時: 2019年11月27日 午前09時16分28秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
@@ -2315,6 +2331,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This module implements a helper for a thread pool to determine whether creating a thread is a good idea.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T111850Z" creationid="isVowel" creationdate="20200122T111850Z">
+        <seg>このモジュールはスレッドプールへのスレッド作成が得策であるかの判断に用いる補助機能の実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This module implements procs to determine the number of CPUs / cores.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T062928Z" creationid="isVowel" creationdate="20200116T054639Z">
@@ -2423,6 +2447,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T083624Z" creationid="isVowel" creationdate="20200114T083624Z">
         <seg>Union プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Unstable API.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T093951Z" creationid="isVowel" creationdate="20200122T093943Z">
+        <seg>この API は不安定です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2939,6 +2971,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082016Z" creationid="isVowel" creationdate="20200114T082016Z">
         <seg>shallow プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>size of a buffered socket's buffer   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T113311Z" creationid="isVowel" creationdate="20200122T113311Z">
+        <seg>size of a buffered socket's buffer   ソース 編集</seg>
       </tuv>
     </tu>
     <tu>

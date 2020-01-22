@@ -11,3 +11,8 @@ backend	バックエンド
 Declaration	宣言
 Model	モデル
 Document	ドキュメント
+good idea	得策	名案、良案、良い考え
+helper	補助	手助けとなる、介助、お手伝い、支援
+determine	判断	判定、決定
+thread pool	スレッドプール
+thread	スレッド

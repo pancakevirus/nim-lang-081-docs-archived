@@ -778,6 +778,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Describes the type of an IP address   &lt;a0&gt;Source&lt;/a0&gt; &lt;a1&gt;Edit&lt;/a1&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T113408Z" creationid="isVowel" creationdate="20200122T113408Z">
+        <seg>Describes the type of an IP address   &lt;a0&gt;ソース&lt;/a0&gt; &lt;a1&gt;編集&lt;/a1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Discard statement</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041609Z" creationid="isVowel" creationdate="20200113T041609Z">
@@ -910,6 +918,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T083613Z" creationid="isVowel" creationdate="20200114T083613Z">
         <seg>Exportc プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Exports</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T112905Z" creationid="isVowel" creationdate="20200122T112905Z">
+        <seg>エクスポート</seg>
       </tuv>
     </tu>
     <tu>
@@ -1063,6 +1079,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T063018Z" creationid="isVowel" creationdate="20200116T063018Z">
         <seg>生成日時: 2019年11月27日 午前09時16分05秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2019-11-27 09:16:28 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T112935Z" creationid="isVowel" creationdate="20200122T112914Z">
+        <seg>生成日時: 2019年11月27日 午前09時16分28秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
@@ -1884,6 +1908,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Returns the IPv4 broadcast address (255.255.255.255)   &lt;a0&gt;Source&lt;/a0&gt; &lt;a1&gt;Edit&lt;/a1&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T114230Z" creationid="isVowel" creationdate="20200122T114230Z">
+        <seg>IPv4  のブロードキャストアドレスを返します (255.255.255.255)   &lt;a0&gt;ソース&lt;/a0&gt; &lt;a1&gt;編集&lt;/a1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the IPv4 loopback address (127.0.0.1)   &lt;a0&gt;Source&lt;/a0&gt; &lt;a1&gt;Edit&lt;/a1&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T114310Z" creationid="isVowel" creationdate="20200122T114310Z">
+        <seg>IPv4  のループバックアドレスを返します (127.0.0.1)   &lt;a0&gt;ソース&lt;/a0&gt; &lt;a1&gt;編集&lt;/a1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Scope rules</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T063959Z" creationid="isVowel" creationdate="20200115T063959Z">
@@ -2054,6 +2094,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T042113Z" creationid="isVowel" creationdate="20200113T042113Z">
         <seg>部分範囲型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Supports IPv4 and v6.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T113832Z" creationid="isVowel" creationdate="20200122T113832Z">
+        <seg>IPv4 と v6 に対応しています。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2311,6 +2359,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T091753Z" creationid="isVowel" creationdate="20200114T091753Z">
         <seg>このドキュメントはプログラミング言語 &lt;e0&gt;Nim&lt;/e0&gt; のチュートリアルです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This module implements a helper for a thread pool to determine whether creating a thread is a good idea.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T111850Z" creationid="isVowel" creationdate="20200122T111850Z">
+        <seg>このモジュールはスレッドプールへのスレッド作成が得策であるかの判断に用いる補助機能の実装です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2633,6 +2689,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>an alias for 'send'.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T113757Z" creationid="isVowel" creationdate="20200122T113757Z">
+        <seg>'send' のエイリアスです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>asmNoStackFrame pragma</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082023Z" creationid="isVowel" creationdate="20200114T082023Z">
@@ -2947,6 +3011,22 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082016Z" creationid="isVowel" creationdate="20200114T082016Z">
         <seg>shallow プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>size of a buffered socket's buffer   &lt;a0&gt;Source&lt;/a0&gt; &lt;a1&gt;Edit&lt;/a1&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T113311Z" creationid="isVowel" creationdate="20200122T113311Z">
+        <seg>size of a buffered socket's buffer   &lt;a0&gt;ソース&lt;/a0&gt; &lt;a1&gt;編集&lt;/a1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>stores an arbitrary IP address   &lt;a0&gt;Source&lt;/a0&gt; &lt;a1&gt;Edit&lt;/a1&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T113348Z" creationid="isVowel" creationdate="20200122T113348Z">
+        <seg>stores an arbitrary IP address   &lt;a0&gt;ソース&lt;/a0&gt; &lt;a1&gt;編集&lt;/a1&gt;</seg>
       </tuv>
     </tu>
     <tu>
