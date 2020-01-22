@@ -16,7 +16,7 @@
 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600' rel='stylesheet' type='text/css'/>
 
 
-<title>Nim DocGen Tools Guide</title>
+<title>Nim DocGen ツールガイド</title>
 <style type="text/css" >
 /*
 Stylesheet for use with Docutils/rst2html.
@@ -804,7 +804,7 @@ function main() {
 <body onload="main()">
 <div class="document" id="documentId">
   <div class="container">
-    <h1 class="title">Nim DocGen Tools Guide</h1>
+    <h1 class="title">Nim DocGen ツールガイド</h1>
     <div class="row">
   <div class="three columns">
   <div id="global-links">
@@ -826,20 +826,20 @@ function main() {
   </div>
   <ul class="simple simple-toc" id="toc-list">
 <li><a class="reference" id="introduction_toc" href="#introduction">はじめに</a></li>
-<ul class="simple"><li><a class="reference" id="introduction-quick-start_toc" href="#introduction-quick-start">Quick start</a></li>
-<li><a class="reference" id="introduction-documentation-comments_toc" href="#introduction-documentation-comments">Documentation Comments</a></li>
-<li><a class="reference" id="introduction-nim-file-input_toc" href="#introduction-nim-file-input">Nim file input</a></li>
-</ul><li><a class="reference" id="document-types_toc" href="#document-types">Document Types</a></li>
+<ul class="simple"><li><a class="reference" id="introduction-quick-start_toc" href="#introduction-quick-start">クイックスタート</a></li>
+<li><a class="reference" id="introduction-documentation-comments_toc" href="#introduction-documentation-comments">ドキュメンテーションのコメント</a></li>
+<li><a class="reference" id="introduction-nim-file-input_toc" href="#introduction-nim-file-input">Nim ファイルの入力</a></li>
+</ul><li><a class="reference" id="document-types_toc" href="#document-types">ドキュメント形式</a></li>
 <ul class="simple"><li><a class="reference" id="document-types-html_toc" href="#document-types-html">HTML</a></li>
 <li><a class="reference" id="document-types-json_toc" href="#document-types-json">JSON</a></li>
-</ul><li><a class="reference" id="related-options_toc" href="#related-options">Related Options</a></li>
-<ul class="simple"><li><a class="reference" id="related-options-project-switch_toc" href="#related-options-project-switch">Project switch</a></li>
-<li><a class="reference" id="related-options-index-switch_toc" href="#related-options-index-switch">Index switch</a></li>
-<li><a class="reference" id="related-options-see-source-switch_toc" href="#related-options-see-source-switch">See source switch</a></li>
-</ul><li><a class="reference" id="other-input-formats_toc" href="#other-input-formats">Other Input Formats</a></li>
-<li><a class="reference" id="html-anchor-generation_toc" href="#html-anchor-generation">HTML anchor generation</a></li>
-<li><a class="reference" id="index-idx-file-format_toc" href="#index-idx-file-format">Index (idx) file format</a></li>
-<li><a class="reference" id="additional-resources_toc" href="#additional-resources">Additional resources</a></li>
+</ul><li><a class="reference" id="related-options_toc" href="#related-options">関連オプション</a></li>
+<ul class="simple"><li><a class="reference" id="related-options-project-switch_toc" href="#related-options-project-switch">Project スイッチ</a></li>
+<li><a class="reference" id="related-options-index-switch_toc" href="#related-options-index-switch">Index スイッチ</a></li>
+<li><a class="reference" id="related-options-see-source-switch_toc" href="#related-options-see-source-switch">ソース参照用スイッチ</a></li>
+</ul><li><a class="reference" id="other-input-formats_toc" href="#other-input-formats">そのほかのドキュメント入力形式</a></li>
+<li><a class="reference" id="html-anchor-generation_toc" href="#html-anchor-generation">HTML アンカー生成</a></li>
+<li><a class="reference" id="index-idx-file-format_toc" href="#index-idx-file-format">インデックスファイル形式 (idx)</a></li>
+<li><a class="reference" id="additional-resources_toc" href="#additional-resources">そのほかのリソース</a></li>
 
 </ul>
 
@@ -847,24 +847,24 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"><table class="docinfo" frame="void" rules="none"><col class="docinfo-name" /><col class="docinfo-content" /><tbody valign="top"><tr><th class="docinfo-name">作成者:</th><td>  Erik O'Leary</td></tr>
+  <p class="module-desc"><table class="docinfo" frame="void" rules="none"><col class="docinfo-name" /><col class="docinfo-content" /><tbody valign="top"><tr><th class="docinfo-name">作成者:</th><td> エリック・オライリー</td></tr>
 <tr><th class="docinfo-name">バージョン:</th><td>  1.0.4</td></tr>
 </tbody></table>
-<h1><a class="toc-backref" id="introduction" href="#introduction">はじめに</a></h1><p>This document describes the <span id="documentation-generation-tools_1">documentation generation tools</span> built into the <a class="reference external" href="nimc.html">Nim compiler</a>, which can generate HTML and JSON output from input .nim files and projects, as well as HTML and LaTeX from input RST (reStructuredText) files. The output documentation will include module dependencies (<tt class="docutils literal"><span class="pre">import</span></tt>), any top-level documentation comments (##), and exported symbols (*), including procedures, types, and variables.</p>
+<h1><a class="toc-backref" id="introduction" href="#introduction">はじめに</a></h1><p>このドキュメントは <a class="reference external" href="nimc.html">Nim  コンパイラ</a> に搭載の<span id="documentation-generation-tools_1">ドキュメント生成ツール</span>について説明しています。このツールは .min ファイルやプロジェクトファイルを入力して HTML と JSON を出力したり、 RST (reStructuredText) ファイルを入力して LaTeX と HTML を出力することもできます。The output documentation will include module dependencies (<tt class="docutils literal"><span class="pre">import</span></tt>), any top-level documentation comments (##), and exported symbols (*), including procedures, types, and variables.</p>
 
-<h2><a class="toc-backref" id="introduction-quick-start" href="#introduction-quick-start">Quick start</a></h2><p>Generate HTML documentation for a file:</p>
-<pre>nim doc &lt;filename&gt;.nim</pre>
-<p>Generate HTML documentation for a whole project:</p>
-<pre># delete any htmldocs/*.idx file before starting
-nim doc --project --index:on --git.url:&lt;url&gt; --git.commit:&lt;tag&gt; &lt;main_filename&gt;.nim
+<h2><a class="toc-backref" id="introduction-quick-start" href="#introduction-quick-start">クイックスタート</a></h2><p>ファイルから HTML ドキュメンテーションを生成するには:</p>
+<pre>nim doc &lt;ファイル名&gt;.nim</pre>
+<p>プロジェクト全体から HTML ドキュメンテーションを生成するには:</p>
+<pre># はじめる前に htmldocs/*.idx ファイルを全て削除してください
+nim doc --project --index:on --git.url:&lt;url&gt; --git.commit:&lt;タグ&gt; &lt;メインファイル名&gt;.nim
 nim buildIndex -o:htmldocs/theindex.html htmldocs</pre>
 
-<h2><a class="toc-backref" id="introduction-documentation-comments" href="#introduction-documentation-comments">Documentation Comments</a></h2><p>Any comments which are preceded by a double-hash (##), are interpreted as documentation.  Comments are parsed as RST (see <a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickref.html">reference</a>), providing Nim module authors the ability to easily generate richly formatted documentation with only their well-documented code.</p>
+<h2><a class="toc-backref" id="introduction-documentation-comments" href="#introduction-documentation-comments">ドキュメンテーションのコメント</a></h2><p>Any comments which are preceded by a double-hash (##), are interpreted as documentation.  Comments are parsed as RST (see <a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickref.html">reference</a>), providing Nim module authors the ability to easily generate richly formatted documentation with only their well-documented code.</p>
 <p>用例:</p>
 <pre class="listing"><span class="Keyword">type</span> <span class="Identifier">Person</span><span class="Operator">*</span> <span class="Operator">=</span> <span class="Keyword">object</span>
   <span class="Comment">## This type contains a description of a person</span>
   <span class="Identifier">name</span><span class="Punctuation">:</span> <span class="Identifier">string</span>
-  <span class="Identifier">age</span><span class="Punctuation">:</span> <span class="Identifier">int</span></pre><p>Outputs:<pre>Person* = object
+  <span class="Identifier">age</span><span class="Punctuation">:</span> <span class="Identifier">int</span></pre><p>出力:<pre>Person* = object
   name: string
   age: int</pre>
 </p>
@@ -873,90 +873,90 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</pre>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">numValues</span><span class="Punctuation">:</span> <span class="Identifier">int</span> <span class="Comment">## \</span>
   <span class="Comment">## `numValues` stores the number of values</span></pre><p>Note that without the <tt class="docutils literal"><span class="pre">*</span></tt> following the name of the type, the documentation for this type would not be generated. Documentation will only be generated for <em>exported</em> types/procedures/etc.</p>
 
-<h2><a class="toc-backref" id="introduction-nim-file-input" href="#introduction-nim-file-input">Nim file input</a></h2><p>The following examples will generate documentation for the below contrived <em>Nim</em> module, aptly named 'sample.nim'</p>
+<h2><a class="toc-backref" id="introduction-nim-file-input" href="#introduction-nim-file-input">Nim ファイルの入力</a></h2><p>The following examples will generate documentation for the below contrived <em>Nim</em> module, aptly named 'sample.nim'</p>
 <p>sample.nim:</p>
-<pre class="listing"><span class="Comment">## This module is a sample.</span>
+<pre class="listing"><span class="Comment">## このモジュールはサンプルです。</span>
 
 <span class="Keyword">import</span> <span class="Identifier">strutils</span>
 
 <span class="Keyword">proc</span> <span class="Identifier">helloWorld</span><span class="Operator">*</span><span class="Punctuation">(</span><span class="Identifier">times</span><span class="Punctuation">:</span> <span class="Identifier">int</span><span class="Punctuation">)</span> <span class="Operator">=</span>
-  <span class="Comment">## Takes an integer and outputs</span>
-  <span class="Comment">## as many "hello world!"s</span>
+  <span class="Comment">## "hello world!" の出力回数を</span>
+  <span class="Comment">## 整数で指定します</span>
   
   <span class="Keyword">for</span> <span class="Identifier">i</span> <span class="Keyword">in</span> <span class="DecNumber">0</span> <span class="Operator">..</span> <span class="Identifier">times</span><span class="Operator">-</span><span class="DecNumber">1</span><span class="Punctuation">:</span>
     <span class="Identifier">echo</span> <span class="StringLit">"hello world!"</span>
 
 <span class="Identifier">helloWorld</span><span class="Punctuation">(</span><span class="DecNumber">5</span><span class="Punctuation">)</span></pre>
-<h1><a class="toc-backref" id="document-types" href="#document-types">Document Types</a></h1>
+<h1><a class="toc-backref" id="document-types" href="#document-types">ドキュメント形式</a></h1>
 <h2><a class="toc-backref" id="document-types-html" href="#document-types-html">HTML</a></h2><p>Generation of HTML documents is done via the <tt class="docutils literal"><span class="pre">doc</span></tt> command. This command takes either a single .nim file, outputting a single .html file with the same base filename, or multiple .nim files, outputting multiple .html files and, optionally, an index file.</p>
-<p>The <tt class="docutils literal"><span class="pre">doc</span></tt> command:<pre>nim doc sample</pre>
+<p><tt class="docutils literal"><span class="pre">doc</span></tt> コマンド:<pre>nim doc sample</pre>
 </p>
-<p>Partial Output:<pre>...
+<p>部分出力:<pre>...
 proc helloWorld(times: int) {.raises: [], tags: [].}
 ...</pre>
 </p>
-<p>The full output can be seen here: <a class="reference external" href="docgen_sample.html">docgen_sample.html</a>. It runs after semantic checking, and includes pragmas attached implicitly by the compiler.</p>
+<p>完全な出力は <a class="reference external" href="docgen_sample.html">docgen_sample.html</a> を参照してください。It runs after semantic checking, and includes pragmas attached implicitly by the compiler.</p>
 
 <h2><a class="toc-backref" id="document-types-json" href="#document-types-json">JSON</a></h2><p>Generation of JSON documents is done via the <tt class="docutils literal"><span class="pre">jsondoc</span></tt> command. This command takes in a .nim file, and outputs a .json file with the same base filename. Note that this tool is built off of the <tt class="docutils literal"><span class="pre">doc</span></tt> command (previously <tt class="docutils literal"><span class="pre">doc2</span></tt>), and contains the same information.</p>
-<p>The <tt class="docutils literal"><span class="pre">jsondoc</span></tt> command:<pre>nim jsondoc sample</pre>
+<p><tt class="docutils literal"><span class="pre">jsondoc</span></tt> コマンド:<pre>nim jsondoc sample</pre>
 </p>
-<p>Output:<pre>{
+<p>出力:<pre>{
   "orig": "docgen_sample.nim",
   "nimble": "",
-  "moduleDescription": "This module is a sample",
+  "moduleDescription": "このモジュールはサンプルです。",
   "entries": [
     {
       "name": "helloWorld",
       "type": "skProc",
       "line": 5,
       "col": 0,
-      "description": "Takes an integer and outputs as many &amp;quot;hello world!&amp;quot;s",
+      "description": "&amp;quot;hello world!&amp;quot; の出力回数を整数で指定します。",
       "code": "proc helloWorld(times: int) {.raises: [], tags: [].}"
     }
   ]
 }</pre>
 </p>
 <p>Similarly to the old <tt class="docutils literal"><span class="pre">doc</span></tt> command the old <tt class="docutils literal"><span class="pre">jsondoc</span></tt> command has been renamed <tt class="docutils literal"><span class="pre">jsondoc0</span></tt>.</p>
-<p>The <tt class="docutils literal"><span class="pre">jsondoc0</span></tt> command:<pre>nim jsondoc0 sample</pre>
+<p><tt class="docutils literal"><span class="pre">jsondoc0</span></tt> コマンド:<pre>nim jsondoc0 sample</pre>
 </p>
-<p>Output:<pre>[
+<p>出力:<pre>[
   {
-    "comment": "This module is a sample."
+    "comment": "このモジュールはサンプルです。"
   },
   {
     "name": "helloWorld",
     "type": "skProc",
-    "description": "Takes an integer and outputs as many &amp;quot;hello world!&amp;quot;s",
+    "description": "&amp;quot;hello world!&amp;quot; の出力回数を整数で指定します。",
     "code": "proc helloWorld*(times: int)"
   }
 ]</pre>
 </p>
 <p>Note that the <tt class="docutils literal"><span class="pre">jsondoc</span></tt> command outputs it's JSON without pretty-printing it, while <tt class="docutils literal"><span class="pre">jsondoc0</span></tt> outputs pretty-printed JSON.</p>
 
-<h1><a class="toc-backref" id="related-options" href="#related-options">Related Options</a></h1>
-<h2><a class="toc-backref" id="related-options-project-switch" href="#related-options-project-switch">Project switch</a></h2><pre>nim doc --project filename.nim</pre>
+<h1><a class="toc-backref" id="related-options" href="#related-options">関連オプション</a></h1>
+<h2><a class="toc-backref" id="related-options-project-switch" href="#related-options-project-switch">Project スイッチ</a></h2><pre>nim doc --project ファイル名.nim</pre>
 <p>This will recursively generate documentation of all nim modules imported into the input module that belong to the Nimble package that <tt class="docutils literal"><span class="pre">filename.nim</span></tt> belongs to.</p>
 
-<h2><a class="toc-backref" id="related-options-index-switch" href="#related-options-index-switch">Index switch</a></h2><pre>nim doc2 --index:on filename.nim</pre>
+<h2><a class="toc-backref" id="related-options-index-switch" href="#related-options-index-switch">Index スイッチ</a></h2><pre>nim doc2 --index:on ファイル名.nim</pre>
 <p>This will generate an index of all the exported symbols in the input Nim module, and put it into a neighboring file with the extension of <tt class="docutils literal"><span class="pre">.idx</span></tt>. The index file is line oriented (newlines have to be escaped). Each line represents a tab separated record of several columns, the first two mandatory, the rest optional. See the <a class="reference external" href="#index-idx-file-format">Index (idx) file format</a> section for details.</p>
 <p>Once index files have been generated for one or more modules, the Nim compiler command <tt class="docutils literal"><span class="pre">buildIndex directory</span></tt> can be run to go over all the index files in the specified directory to generate a <a class="reference external" href="theindex.html">theindex.html</a> file.</p>
 
-<h2><a class="toc-backref" id="related-options-see-source-switch" href="#related-options-see-source-switch">See source switch</a></h2><p>The <tt class="docutils literal"><span class="pre">docSeeSrcUrl</span></tt> switch is deprecated. Use:</p>
-<pre>nim doc2 --git.url:&lt;url&gt; filename.nim</pre>
+<h2><a class="toc-backref" id="related-options-see-source-switch" href="#related-options-see-source-switch">ソース参照用スイッチ</a></h2><p>The <tt class="docutils literal"><span class="pre">docSeeSrcUrl</span></tt> switch is deprecated. Use:</p>
+<pre>nim doc2 --git.url:&lt;url&gt; ファイル名.nim</pre>
 <p>With the <tt class="docutils literal"><span class="pre">git.url</span></tt> switch the <em>See source</em> hyperlink will appear below each documented item in your source code pointing to the implementation of that item on a GitHub repository. You can click the link to see the implementation of the item.</p>
 <p>The <tt class="docutils literal"><span class="pre">git.commit</span></tt> switch overrides the hardcoded <tt class="docutils literal"><span class="pre">devel</span></tt> branch in config/nimdoc.cfg. This is useful to link to a different branch e.g. <tt class="docutils literal"><span class="pre">--git.commit:master</span></tt>, or to a tag e.g. <tt class="docutils literal"><span class="pre">--git.commit:1.2.3</span></tt> or a commit.</p>
 <p>Source URLs are generated as <tt class="docutils literal"><span class="pre">href="${url}/tree/${commit}/${path}#L${line}"</span></tt> by default and this compatible with GitHub but not with GitLab.</p>
 <p>You can edit <tt class="docutils literal"><span class="pre">config/nimdoc.cfg</span></tt> and modify the <tt class="docutils literal"><span class="pre">doc.item.seesrc</span></tt> value with a hyperlink to your own code repository.</p>
 <p>In the case of Nim's own documentation, the <tt class="docutils literal"><span class="pre">commit</span></tt> value is just a commit hash to append to a formatted URL to <a class="reference external" href="https://github.com/nim-lang/Nim">https://github.com/nim-lang/Nim</a>. The <tt class="docutils literal"><span class="pre">tools/nimweb.nim</span></tt> helper queries the current git commit hash during doc generation, but since you might be working on an unpublished repository, it also allows specifying a <tt class="docutils literal"><span class="pre">githash</span></tt> value in <tt class="docutils literal"><span class="pre">web/website.ini</span></tt> to force a specific commit in the output.</p>
 
-<h1><a class="toc-backref" id="other-input-formats" href="#other-input-formats">Other Input Formats</a></h1><p>The <em>Nim compiler</em> also has support for RST (reStructuredText) files with the <tt class="docutils literal"><span class="pre">rst2html</span></tt> and <tt class="docutils literal"><span class="pre">rst2tex</span></tt> commands. Documents like this one are initially written in a dialect of RST which adds support for nim sourcecode highlighting with the <tt class="docutils literal"><span class="pre">.. code-block:: nim</span></tt> prefix. <tt class="docutils literal"><span class="pre">code-block</span></tt> also supports highlighting of C++ and some other c-like languages.</p>
-<p>Usage:<pre>nim rst2html docgen.txt</pre>
+<h1><a class="toc-backref" id="other-input-formats" href="#other-input-formats">そのほかのドキュメント入力形式</a></h1><p>The <em>Nim compiler</em> also has support for RST (reStructuredText) files with the <tt class="docutils literal"><span class="pre">rst2html</span></tt> and <tt class="docutils literal"><span class="pre">rst2tex</span></tt> commands. Documents like this one are initially written in a dialect of RST which adds support for nim sourcecode highlighting with the <tt class="docutils literal"><span class="pre">.. code-block:: nim</span></tt> prefix. <tt class="docutils literal"><span class="pre">code-block</span></tt> also supports highlighting of C++ and some other c-like languages.</p>
+<p>用法:<pre>nim rst2html docgen.txt</pre>
 </p>
-<p>Output:<pre>You're reading it!</pre>
+<p>出力:<pre>You're reading it!</pre>
 </p>
 <p>The <tt class="docutils literal"><span class="pre">rst2tex</span></tt> command is invoked identically to <tt class="docutils literal"><span class="pre">rst2html</span></tt>, but outputs a .tex file instead of .html.</p>
 
-<h1><a class="toc-backref" id="html-anchor-generation" href="#html-anchor-generation">HTML anchor generation</a></h1><p>When you run the <tt class="docutils literal"><span class="pre">rst2html</span></tt> command, all sections in the RST document will get an anchor you can hyperlink to. Usually you can guess the anchor lower casing the section title and replacing spaces with dashes, and in any case you can get it from the table of contents. But when you run the <tt class="docutils literal"><span class="pre">doc</span></tt> or <tt class="docutils literal"><span class="pre">doc2</span></tt> commands to generate API documentation, some symbol get one or two anchors at the same time: a numerical identifier, or a plain name plus a complex name.</p>
+<h1><a class="toc-backref" id="html-anchor-generation" href="#html-anchor-generation">HTML アンカー生成</a></h1><p>When you run the <tt class="docutils literal"><span class="pre">rst2html</span></tt> command, all sections in the RST document will get an anchor you can hyperlink to. Usually you can guess the anchor lower casing the section title and replacing spaces with dashes, and in any case you can get it from the table of contents. But when you run the <tt class="docutils literal"><span class="pre">doc</span></tt> or <tt class="docutils literal"><span class="pre">doc2</span></tt> commands to generate API documentation, some symbol get one or two anchors at the same time: a numerical identifier, or a plain name plus a complex name.</p>
 <p>The numerical identifier is just a random number. The number gets assigned according to the section and position of the symbol in the file being processed and you should not rely on it being constant: if you add or remove a symbol the numbers may shuffle around.</p>
 <p>The plain name of a symbol is a simplified version of its fully exported signature. Variables or constants have the same plain name symbol as their complex name. The plain name for procs, templates, and other callable types will be their unquoted value after removing parameters, return types and pragmas. The plain name allows short and nice linking of symbols which works unless you have a module with collisions due to overloading.</p>
 <p>If you hyperlink a plain name symbol and there are other matches on the same HTML file, most browsers will go to the first one. To differentiate the rest, you will need to use the complex name. A complex name for a callable type is made up from several parts:</p>
@@ -979,7 +979,7 @@ proc helloWorld(times: int) {.raises: [], tags: [].}
 <li><tt class="docutils literal"><span class="pre">template newException[](exceptn: typedesc; message: string; parentException: ref Exception = nil): untyped</span></tt> <strong>=&gt;</strong> <a class="reference external" href="system.html#newException.t,typedesc,string,ref.Exception">#newException.t,typedesc,string,ref.Exception</a></li>
 </ul>
 
-<h1><a class="toc-backref" id="index-idx-file-format" href="#index-idx-file-format">Index (idx) file format</a></h1><p>Files with the <tt class="docutils literal"><span class="pre">.idx</span></tt> extension are generated when you use the <a class="reference external" href="#related-options-index-switch">Index switch</a> along with commands to generate documentation from source or text files. You can programatically generate indices with the <a class="reference external" href="rstgen.html#setIndexTerm,RstGenerator,string,string,string,string,string">setIndexTerm()</a> and <a class="reference external" href="rstgen.html#writeIndexFile,RstGenerator,string">writeIndexFile()</a> procs. The purpose of <tt class="docutils literal"><span class="pre">idx</span></tt> files is to hold the interesting symbols and their HTML references so they can be later concatenated into a big index file with <a class="reference external" href="rstgen.html#mergeIndexes,string">mergeIndexes()</a>.  This section documents the file format in detail.</p>
+<h1><a class="toc-backref" id="index-idx-file-format" href="#index-idx-file-format">インデックスファイル形式 (idx)</a></h1><p>Files with the <tt class="docutils literal"><span class="pre">.idx</span></tt> extension are generated when you use the <a class="reference external" href="#related-options-index-switch">Index switch</a> along with commands to generate documentation from source or text files. You can programatically generate indices with the <a class="reference external" href="rstgen.html#setIndexTerm,RstGenerator,string,string,string,string,string">setIndexTerm()</a> and <a class="reference external" href="rstgen.html#writeIndexFile,RstGenerator,string">writeIndexFile()</a> procs. The purpose of <tt class="docutils literal"><span class="pre">idx</span></tt> files is to hold the interesting symbols and their HTML references so they can be later concatenated into a big index file with <a class="reference external" href="rstgen.html#mergeIndexes,string">mergeIndexes()</a>.  This section documents the file format in detail.</p>
 <p>Index files are line oriented and tab separated (newline and tab characters have to be escaped). Each line represents a record with at least two fields, but can have up to four (additional columns are ignored). The content of these columns is:</p>
 <ol class="simple"><li>Mandatory term being indexed. Terms can include quoting according to Nim's rules (eg. `^`).</li>
 <li>Base filename plus anchor hyperlink (eg. <tt class="docutils literal"><span class="pre">algorithm.html#*,int,SortOrder</span></tt>).</li>
@@ -990,8 +990,8 @@ proc helloWorld(times: int) {.raises: [], tags: [].}
 <p>To differentiate both types (documents and APIs), the index generator will add to the index of documents an entry with the title of the document. Since the title is the topmost element, it will be added with a second field containing just the filename without any HTML anchor.  By convention this entry without anchor is the <em>title entry</em>, and since entries in the index file are added as they are scanned, the title entry will be the first line. The title for APIs is not present because it can be generated concatenating the name of the file to the word <strong>Module</strong>.</p>
 <p>Normal symbols are added to the index with surrounding whitespaces removed. An exception to this are table of content (TOC) entries. TOC entries are added to the index file with their third column having as much prefix spaces as their level is in the TOC (at least 1 character). The prefix whitespace helps to filter TOC entries from API or text symbols. This is important because the amount of spaces is used to replicate the hiearchy for document TOCs in the final index, and TOC entries found in <tt class="docutils literal"><span class="pre">.nim</span></tt> files are discarded.</p>
 
-<h1><a class="toc-backref" id="additional-resources" href="#additional-resources">Additional resources</a></h1><p><a class="reference external" href="nimc.html#compiler-usage-command-line-switches">Nim Compiler User Guide</a></p>
-<p><a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickref.html">RST Quick Reference</a></p>
+<h1><a class="toc-backref" id="additional-resources" href="#additional-resources">そのほかのリソース</a></h1><p><a class="reference external" href="nimc.html#compiler-usage-command-line-switches">Nim コンパイラ ユーザガイド</a></p>
+<p><a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickref.html">RST クイックリファレンス</a></p>
 <p>The output for HTML and LaTeX comes from the <tt class="docutils literal"><span class="pre">config/nimdoc.cfg</span></tt> and <tt class="docutils literal"><span class="pre">config/nimdoc.tex.cfg</span></tt> configuration files. You can add and modify these files to your project to change the look of docgen output.</p>
 <p>You can import the <a class="reference external" href="rstgen.html">packages/docutils/rstgen module</a> in your programs if you want to reuse the compiler's documentation generation procs.  </p>
 </p>

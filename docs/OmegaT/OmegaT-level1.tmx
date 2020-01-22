@@ -19,11 +19,61 @@ truly は心より～の意味もあります。
       </tuv>
     </tu>
     <tu>
+      <note>"Complexity" seems to be a lot like "energy"
+
+→たとえるならば、計算量は膨大なエネルギーであろう。
+
+You can transfer it from the end user to one/some of the other players,
+
+それを誰かから別の誰かへ分け与えることができる（それって誰？）。
+
+But the total amount seems to remain pretty much constant for a given task.</note>
+      <tuv lang="EN-US">
+        <seg>"Complexity" seems to be a lot like "energy": you can transfer it from the end user to one/some of the other players, but the total amount seems to remain pretty much constant for a given task.</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv lang="EN-US">
         <seg>"Der Mensch ist doch ein Augentier -- schöne Dinge wünsch ich mir."</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T091607Z" creationid="isVowel" creationdate="20200113T032410Z">
         <seg>"人間は視覚の動物である ― だから、ボクはキミに美しくいて欲しい。"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>"comment": "This module is a sample."</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T060854Z" creationid="isVowel" creationdate="20200122T060854Z">
+        <seg>"comment": "このモジュールはサンプルです。"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>"description": "Takes an integer and outputs as many &amp;quot;hello world!&amp;quot;s",</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T060924Z" creationid="isVowel" creationdate="20200122T060824Z">
+        <seg>"description": "&amp;quot;hello world!&amp;quot; の出力回数を整数で指定します。",</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>"moduleDescription": "This module is a sample",</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T060917Z" creationid="isVowel" creationdate="20200122T060734Z">
+        <seg>"moduleDescription": "このモジュールはサンプルです。",</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg># delete any htmldocs/*.idx file before starting
+nim doc --project --index:on --git.url:&lt;url&gt; --git.commit:&lt;tag&gt; &lt;main_filename&gt;.nim
+nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200119T024715Z" creationid="isVowel" creationdate="20200119T012053Z">
+        <seg># はじめる前に htmldocs/*.idx ファイルを全て削除してください
+nim doc --project --index:on --git.url:&lt;url&gt; --git.commit:&lt;タグ&gt; &lt;メインファイル名&gt;.nim
+nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
     </tu>
     <tu>
@@ -190,6 +240,30 @@ echo $x</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>## This module is a sample.
+
+import strutils
+
+proc helloWorld*(times: int) =</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200119T012314Z" creationid="isVowel" creationdate="20200119T012314Z">
+        <seg>## このモジュールはサンプルです。
+
+import strutils
+
+proc helloWorld*(times: int) =</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note: The experimental features of Nim are covered here.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T062340Z" creationid="isVowel" creationdate="20200122T062340Z">
+        <seg>備考: こちらで Nim の試験的機能を解説しています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Note: This document is a draft!</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T050656Z" creationid="isVowel" creationdate="20200115T050656Z">
@@ -202,6 +276,22 @@ echo $x</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T072004Z" creationid="isVowel" creationdate="20200116T072004Z">
         <seg>pcDir,                      ## ディレクトリの参照パス</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>## Takes an integer and outputs</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200119T012434Z" creationid="isVowel" creationdate="20200119T012434Z">
+        <seg>## "hello world!" の出力回数を</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>## as many "hello world!"s</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200119T012452Z" creationid="isVowel" creationdate="20200119T012452Z">
+        <seg>## 整数で指定します</seg>
       </tuv>
     </tu>
     <tu>
@@ -258,6 +348,14 @@ echo $x</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T090432Z" creationid="isVowel" creationdate="20200114T090432Z">
         <seg>このドキュメントについて</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Additional resources</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200118T025911Z" creationid="isVowel" creationdate="20200118T025911Z">
+        <seg>そのほかのリソース</seg>
       </tuv>
     </tu>
     <tu>
@@ -567,6 +665,14 @@ echo $x</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Compiler</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200117T061622Z" creationid="isVowel" creationdate="20200117T061622Z">
+        <seg>コンパイラ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Compiler Messages</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T054656Z" creationid="isVowel" creationdate="20200115T054028Z">
@@ -599,6 +705,14 @@ echo $x</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Consts</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200117T151947Z" creationid="isVowel" creationdate="20200117T151947Z">
+        <seg>定数</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Continue statement</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041215Z" creationid="isVowel" creationdate="20200113T041215Z">
@@ -611,6 +725,23 @@ echo $x</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041901Z" creationid="isVowel" creationdate="20200113T041901Z">
         <seg>制御流れステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Debug Example</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T061632Z" creationid="isVowel" creationdate="20200122T061624Z">
+        <seg>デバッグの用例</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>この場合の for は「～用の」ではなく「使える」と訳した。「～の」ばかり使うと小池さんに失礼と思う。</note>
+      <tuv lang="EN-US">
+        <seg>Declaration of the Document Object Model for the JavaScript backend.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T083333Z" creationid="isVowel" creationdate="20200122T082918Z">
+        <seg>JavaScript バックエンド で使えるドキュメント・オブジェクト・モデル (DOM: Document Object Model) の宣言です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -639,6 +770,14 @@ echo $x</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Deprecated</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T074827Z" creationid="isVowel" creationdate="20200122T074827Z">
+        <seg>廃止予定</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Discard statement</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041609Z" creationid="isVowel" creationdate="20200113T041609Z">
@@ -651,6 +790,22 @@ echo $x</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T042217Z" creationid="isVowel" creationdate="20200113T042217Z">
         <seg>特異型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Document Types</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200118T024109Z" creationid="isVowel" creationdate="20200118T024109Z">
+        <seg>ドキュメント形式</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Documentation Comments</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200118T023058Z" creationid="isVowel" creationdate="20200118T023058Z">
+        <seg>ドキュメンテーションのコメント</seg>
       </tuv>
     </tu>
     <tu>
@@ -691,6 +846,14 @@ echo $x</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T042102Z" creationid="isVowel" creationdate="20200113T042102Z">
         <seg>列挙型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Erik O'Leary</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200118T022254Z" creationid="isVowel" creationdate="20200118T022254Z">
+        <seg>エリック・オライリー</seg>
       </tuv>
     </tu>
     <tu>
@@ -831,6 +994,23 @@ echo $x</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Generate HTML documentation for a file:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200118T022727Z" creationid="isVowel" creationdate="20200118T022727Z">
+        <seg>ファイルから HTML ドキュメンテーションを生成するには:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>しっくりこないので whole は後で改訳のこと。単に省くだけなのだろう。</note>
+      <tuv lang="EN-US">
+        <seg>Generate HTML documentation for a whole project:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200118T022926Z" creationid="isVowel" creationdate="20200118T022926Z">
+        <seg>プロジェクト全体から HTML ドキュメンテーションを生成するには:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Generated: 2019-11-27 09:13:23 UTC</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T045549Z" creationid="isVowel" creationdate="20200116T045549Z">
@@ -867,6 +1047,14 @@ echo $x</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T054932Z" creationid="isVowel" creationdate="20200116T054932Z">
         <seg>生成日時: 2019年11月27日 午前09時15分22秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2019-11-27 09:15:23 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T073350Z" creationid="isVowel" creationdate="20200122T073350Z">
+        <seg>生成日時: 2019年11月27日 午前09時15分23秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
@@ -923,6 +1111,14 @@ echo $x</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T025451Z" creationid="isVowel" creationdate="20200113T025451Z">
         <seg>分類:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>HTML anchor generation</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200118T022605Z" creationid="isVowel" creationdate="20200118T022605Z">
+        <seg>HTML アンカー生成</seg>
       </tuv>
     </tu>
     <tu>
@@ -1061,6 +1257,22 @@ echo $x</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T025100Z" creationid="isVowel" creationdate="20200113T025100Z">
         <seg>索引</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Index (idx) file format</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200118T025435Z" creationid="isVowel" creationdate="20200118T025435Z">
+        <seg>インデックスファイル形式 (idx)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Index switch</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200118T025050Z" creationid="isVowel" creationdate="20200118T025050Z">
+        <seg>Index スイッチ</seg>
       </tuv>
     </tu>
     <tu>
@@ -1302,6 +1514,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Nim Compiler User Guide</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200118T031625Z" creationid="isVowel" creationdate="20200118T031625Z">
+        <seg>Nim コンパイラ ユーザガイド</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Nim DocGen Tools Guide</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200118T022409Z" creationid="isVowel" creationdate="20200118T022409Z">
+        <seg>Nim DocGen ツールガイド</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Nim Manual</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T080228Z" creationid="isVowel" creationdate="20200114T080228Z">
@@ -1326,10 +1554,27 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Nim file input</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200118T023236Z" creationid="isVowel" creationdate="20200118T023213Z">
+        <seg>Nim ファイルの入力</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Nim maintenance script</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T075017Z" creationid="isVowel" creationdate="20200114T075017Z">
         <seg>Nim メンテナンス・スクリプト</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>ドキュメントを読む限りでは、バージョンの確認方法は、この定数との比較以外は用意されていない。</note>
+      <tuv lang="EN-US">
+        <seg>No guarantees though.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T085224Z" creationid="isVowel" creationdate="20200122T084611Z">
+        <seg>ただし、この定数を用いたバージョンの確認が行われる保証はありません。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1406,10 +1651,34 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Other Input Formats</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200118T025526Z" creationid="isVowel" creationdate="20200118T025510Z">
+        <seg>そのほかのドキュメント入力形式</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Other tokens</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T091102Z" creationid="isVowel" creationdate="20200114T091102Z">
         <seg>そのほかのトークン</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Output:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200118T023539Z" creationid="isVowel" creationdate="20200118T023539Z">
+        <seg>出力:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Outputs:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200118T023025Z" creationid="isVowel" creationdate="20200118T023025Z">
+        <seg>出力:</seg>
       </tuv>
     </tu>
     <tu>
@@ -1442,6 +1711,15 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T040942Z" creationid="isVowel" creationdate="20200113T040942Z">
         <seg>第２部</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>改訳対象</note>
+      <tuv lang="EN-US">
+        <seg>Partial Output:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200118T024600Z" creationid="isVowel" creationdate="20200118T024139Z">
+        <seg>部分出力:</seg>
       </tuv>
     </tu>
     <tu>
@@ -1518,10 +1796,34 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Project switch</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200118T025048Z" creationid="isVowel" creationdate="20200118T025048Z">
+        <seg>Project スイッチ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Properties</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T064551Z" creationid="isVowel" creationdate="20200115T064551Z">
         <seg>プロパティ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Quick start</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200118T022436Z" creationid="isVowel" creationdate="20200118T022436Z">
+        <seg>クイックスタート</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>RST Quick Reference</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200118T023452Z" creationid="isVowel" creationdate="20200118T023452Z">
+        <seg>RST クイックリファレンス</seg>
       </tuv>
     </tu>
     <tu>
@@ -1546,6 +1848,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T050404Z" creationid="isVowel" creationdate="20200113T050404Z">
         <seg>正規表現</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Related Options</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200118T024923Z" creationid="isVowel" creationdate="20200118T024923Z">
+        <seg>関連オプション</seg>
       </tuv>
     </tu>
     <tu>
@@ -1630,6 +1940,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>See source switch</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T060442Z" creationid="isVowel" creationdate="20200122T060335Z">
+        <seg>ソース参照用スイッチ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Sequences</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T042132Z" creationid="isVowel" creationdate="20200113T042132Z">
@@ -1642,6 +1960,20 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T042117Z" creationid="isVowel" creationdate="20200113T042117Z">
         <seg>集合</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>どうやって wording を意訳するか翻訳者の腕の見せ所でしょう。「言葉づかい」と直訳するほど、このドキュメントの解説範囲は狭いのかと疑おう。
+
+may ～は「かもしれない」に限らない。辞書を調べよう。
+
+良く考えよう。
+A. 未だ Nim の機能について正確な説明が求められる箇所があります。〔改訂が必要になる場所があります〕
+
+B. 本ドキュメントにおける Nim の機能解説は未だ不十分であり、正確さを樹死した改訂が必要であろうと思われる。
+</note>
+      <tuv lang="EN-US">
+        <seg>Several of Nim's features may need more precise wording.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1832,6 +2164,30 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The doc command:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200119T013235Z" creationid="isVowel" creationdate="20200119T013235Z">
+        <seg>doc コマンド:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The jsondoc0 command:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T060937Z" creationid="isVowel" creationdate="20200122T060937Z">
+        <seg>jsondoc0 コマンド:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The jsondoc command:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200119T013543Z" creationid="isVowel" creationdate="20200119T013543Z">
+        <seg>jsondoc コマンド:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The addr operator</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T081835Z" creationid="isVowel" creationdate="20200114T081835Z">
@@ -1852,6 +2208,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041751Z" creationid="isVowel" creationdate="20200113T041751Z">
         <seg>最初のプログラム</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The full output can be seen here: docgen_sample.html.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200119T013032Z" creationid="isVowel" creationdate="20200118T024546Z">
+        <seg>完全な出力は docgen_sample.html を参照してください。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1903,6 +2267,32 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200117T055126Z" creationid="isVowel" creationdate="20200117T054910Z">
         <seg>このコマンドは Nim のテストスイートにおけるメインドライバです。 testament/tester.nim のコンパイル、および実行します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>たまには Q&amp;A 方式による翻訳をしてみましょうか。
+
+This document describes the documentation generation tools built into the Nim compiler, 
+
+Q1. このドキュメントはあることについて解説しています。
+
+A1. ドキュメント生成ツールについて。それはNimコンパイラに内蔵というか搭載やら組み込まれています。
+
+which can generate HTML and JSON output from input .nim files and projects, 
+
+Q2. それは何ができますか？
+A2. .min ファイルやプロジェクトの入力から HTML と JSON 出力ができます。
+
+as well as HTML and LaTeX from input RST (reStructuredText) files.
+
+Q3. ほかに何ができますか？
+A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にすることもできます。
+</note>
+      <tuv lang="EN-US">
+        <seg>This document describes the documentation generation tools built into the Nim compiler, which can generate HTML and JSON output from input .nim files and projects, as well as HTML and LaTeX from input RST (reStructuredText) files.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T060638Z">
+        <seg>このドキュメントは Nim  コンパイラ に搭載のドキュメント生成ツールについて説明しています。このツールは .min ファイルやプロジェクトファイルを入力して HTML と JSON を出力したり、 RST (reStructuredText) ファイルを入力して LaTeX と HTML を出力することもできます。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2037,6 +2427,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Usage:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200118T023552Z" creationid="isVowel" creationdate="20200118T023552Z">
+        <seg>用法:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Use the linenoise library for interactive mode (not needed on Windows).</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T084647Z" creationid="isVowel" creationdate="20200115T084647Z">
@@ -2081,6 +2479,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T083622Z" creationid="isVowel" creationdate="20200114T083622Z">
         <seg>Varargs プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Vars</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T073101Z" creationid="isVowel" creationdate="20200122T073101Z">
+        <seg>変数</seg>
       </tuv>
     </tu>
     <tu>
@@ -2402,6 +2808,44 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
     </tu>
     <tu>
+      <note>すっきりしないので、改訳してください。</note>
+      <tuv lang="EN-US">
+        <seg>manual_experimental.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>nim doc --project filename.nim</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T061203Z" creationid="isVowel" creationdate="20200122T061203Z">
+        <seg>nim doc --project ファイル名.nim</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>nim doc &lt;filename&gt;.nim</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200118T022641Z" creationid="isVowel" creationdate="20200118T022641Z">
+        <seg>nim doc &lt;ファイル名&gt;.nim</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>nim doc2 --git.url:&lt;url&gt; filename.nim</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T061221Z" creationid="isVowel" creationdate="20200122T061221Z">
+        <seg>nim doc2 --git.url:&lt;url&gt; ファイル名.nim</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>nim doc2 --index:on filename.nim</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T061211Z" creationid="isVowel" creationdate="20200122T061211Z">
+        <seg>nim doc2 --index:on ファイル名.nim</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv lang="EN-US">
         <seg>noReturn pragma</seg>
       </tuv>
@@ -2499,6 +2943,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>subsystem</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200117T061631Z" creationid="isVowel" creationdate="20200117T061631Z">
+        <seg>サブシステム</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>tabulator</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T054755Z" creationid="isVowel" creationdate="20200115T054755Z">
@@ -2519,6 +2971,23 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T075057Z" creationid="isVowel" creationdate="20200114T075057Z">
         <seg>test コマンド</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>the list of known distributions   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200117T152120Z" creationid="isVowel" creationdate="20200117T152120Z">
+        <seg>the list of known distributions   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>followで「追従する」「採用する」転じて「対応する」</note>
+      <tuv lang="EN-US">
+        <seg>the version of DOM API we try to follow.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T084610Z" creationid="isVowel" creationdate="20200122T084610Z">
+        <seg>DOM API の対応バージョンです。</seg>
       </tuv>
     </tu>
     <tu>

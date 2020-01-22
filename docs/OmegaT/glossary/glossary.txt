@@ -1,3 +1,13 @@
+Erik	エリック	【人名】
+O'Leary	オライリー	【人名】オライリー、オレーリー、オレアリー、オリーリ  【参考】O'Leary - Wikipedia : https://en.wikipedia.org/wiki/O%27Leary
+interactive mode	インタラクティブモード	対話型実行方式
 statement	ステートメント
 tabulator	タブ
-interactive mode	インタラクティブモード	対話型実行方式
+RST	RST	RST = reStructuredText (軽量マークアップ言語の一種)
+documentation	ドキュメンテーション
+Complexity	複雑性	計算量、複雑度、集合体
+Deprecated	廃止予定
+backend	バックエンド
+Declaration	宣言
+Model	モデル
+Document	ドキュメント
