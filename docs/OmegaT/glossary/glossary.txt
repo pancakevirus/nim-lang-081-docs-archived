@@ -1,18 +1,31 @@
+Complexity	複雑性	計算量、複雑度、集合体
+Declaration	宣言
+Deprecated	廃止予定
+Document	ドキュメント
 Erik	エリック	【人名】
+Model	モデル
 O'Leary	オライリー	【人名】オライリー、オレーリー、オレアリー、オリーリ  【参考】O'Leary - Wikipedia : https://en.wikipedia.org/wiki/O%27Leary
+RST	RST	RST = reStructuredText (軽量マークアップ言語の一種)
+backend	バックエンド
+determine	判断	判定、決定
+documentation	ドキュメンテーション
+good idea	得策	名案、良案、良い考え
+helper	補助	手助けとなる、介助、お手伝い、支援
 interactive mode	インタラクティブモード	対話型実行方式
 statement	ステートメント
 tabulator	タブ
-RST	RST	RST = reStructuredText (軽量マークアップ言語の一種)
-documentation	ドキュメンテーション
-Complexity	複雑性	計算量、複雑度、集合体
-Deprecated	廃止予定
-backend	バックエンド
-Declaration	宣言
-Model	モデル
-Document	ドキュメント
-good idea	得策	名案、良案、良い考え
-helper	補助	手助けとなる、介助、お手伝い、支援
-determine	判断	判定、決定
-thread pool	スレッドプール
 thread	スレッド
+thread pool	スレッドプール
+object	オブジェクト
+custom	カスタム
+Usage	用法
+heap	ヒープ
+Create	作成	作る、生成
+new	新規	新しい
+empty	空	無、虚空
+Wrapper	ラッパー
+JavaScript	JavaScript
+wordwrap	ワードラップ
+string	文字列
+module	モジュール
+algorithm	アルゴリズム

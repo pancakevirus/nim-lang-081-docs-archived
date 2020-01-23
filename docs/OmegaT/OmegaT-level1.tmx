@@ -118,6 +118,22 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Deprecated: Deprecated since v0.20.0: use 'clear' instead.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T121745Z" creationid="isVowel" creationdate="20200122T121745Z">
+        <seg>廃止予定: v0.20.0 以降で廃止予定:  'clear' をお使いください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Deprecated: Deprecated since v0.20.0: use 'initHeapQueue' instead.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T122042Z" creationid="isVowel" creationdate="20200122T122042Z">
+        <seg>廃止予定: v0.20.0 以降で廃止予定:  'initHeapQueue' をお使いください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>assignment operator (like +=, *=)</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T060832Z" creationid="isVowel" creationdate="20200115T060832Z">
@@ -256,6 +272,14 @@ proc helloWorld*(times: int) =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Note: Import packages/docutils/highlite to use this module</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T121340Z" creationid="isVowel" creationdate="20200122T121340Z">
+        <seg>備考: このモジュールを使うには packages/docutils/highlite をインポートしてください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Note: The experimental features of Nim are covered here.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T062340Z" creationid="isVowel" creationdate="20200122T062340Z">
@@ -268,6 +292,14 @@ proc helloWorld*(times: int) =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T050656Z" creationid="isVowel" creationdate="20200115T050656Z">
         <seg>備考: このドキュメントは草稿段階です！</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>escape [ESC]</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T031540Z" creationid="isVowel" creationdate="20200123T031540Z">
+        <seg>エスケープ [ESC]</seg>
       </tuv>
     </tu>
     <tu>
@@ -388,8 +420,8 @@ proc helloWorld*(times: int) =</seg>
       <tuv lang="EN-US">
         <seg>Andreas Rumpf, Zahary Karadjov</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200114T090140Z" creationid="isVowel" creationdate="20200114T090140Z">
-        <seg>アンドレアス・ルンプフ、ザハリー・カラゾフ</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T030455Z" creationid="isVowel" creationdate="20200114T090140Z">
+        <seg>アンドレアス・ルンプフ、ザハリー・カラジョフ</seg>
       </tuv>
     </tu>
     <tu>
@@ -729,6 +761,14 @@ proc helloWorld*(times: int) =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Create a new empty heap.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T023155Z" creationid="isVowel" creationdate="20200123T023155Z">
+        <seg>空のヒープを新規作成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Debug Example</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T061632Z" creationid="isVowel" creationdate="20200122T061624Z">
@@ -774,6 +814,14 @@ proc helloWorld*(times: int) =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T074827Z" creationid="isVowel" creationdate="20200122T074827Z">
         <seg>廃止予定</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Describes the type of an IP address   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T113408Z" creationid="isVowel" creationdate="20200122T113408Z">
+        <seg>Describes the type of an IP address   ソース 編集</seg>
       </tuv>
     </tu>
     <tu>
@@ -1067,10 +1115,42 @@ proc helloWorld*(times: int) =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Generated: 2019-11-27 09:15:24 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T025038Z" creationid="isVowel" creationdate="20200123T025038Z">
+        <seg>生成日時: 2019年11月27日 午前09時15分24秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2019-11-27 09:15:30 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T034631Z" creationid="isVowel" creationdate="20200123T034631Z">
+        <seg>生成日時: 2019年11月27日 午前09時15分30秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2019-11-27 09:15:31 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T040840Z" creationid="isVowel" creationdate="20200123T040840Z">
+        <seg>生成日時: 2019年11月27日 午前09時15分31秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Generated: 2019-11-27 09:16:05 UTC</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T063018Z" creationid="isVowel" creationdate="20200116T063018Z">
         <seg>生成日時: 2019年11月27日 午前09時16分05秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2019-11-27 09:16:18 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T121129Z" creationid="isVowel" creationdate="20200122T121129Z">
+        <seg>生成日時: 2019年11月27日 午前09時16分18秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
@@ -1091,10 +1171,26 @@ proc helloWorld*(times: int) =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Generated: 2019-11-27 09:16:33 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T023246Z" creationid="isVowel" creationdate="20200123T023246Z">
+        <seg>生成日時: 2019年11月27日 午前09時16分33秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Generated: 2019-11-27 09:16:35 UTC</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T023747Z" creationid="isVowel" creationdate="20200113T023747Z">
         <seg>生成日時: 2019年11月27日 午前09時16分35秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2019-11-27 09:16:37 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T043350Z" creationid="isVowel" creationdate="20200123T043350Z">
+        <seg>生成日時: 2019年11月27日 午前09時16分37秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
@@ -1900,6 +1996,30 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Returns the IPv4 broadcast address (255.255.255.255)   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T114230Z" creationid="isVowel" creationdate="20200122T114230Z">
+        <seg>IPv4  のブロードキャストアドレスを返します (255.255.255.255)   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the IPv4 loopback address (127.0.0.1)   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T114310Z" creationid="isVowel" creationdate="20200122T114310Z">
+        <seg>IPv4  のループバックアドレスを返します (127.0.0.1)   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the next pseudo random number ranging from 0 to high(uint32)   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T043338Z" creationid="isVowel" creationdate="20200123T043338Z">
+        <seg>0 ～ 最大値 (uint32) までの擬似乱数を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Scope rules</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T063959Z" creationid="isVowel" creationdate="20200115T063959Z">
@@ -2070,6 +2190,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T042113Z" creationid="isVowel" creationdate="20200113T042113Z">
         <seg>部分範囲型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Supports IPv4 and v6.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T113832Z" creationid="isVowel" creationdate="20200122T113832Z">
+        <seg>IPv4 と v6 に対応しています。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2331,6 +2459,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This module contains an algorithm to wordwrap a Unicode string.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T035107Z" creationid="isVowel" creationdate="20200123T035107Z">
+        <seg>このモジュールは Unicode 文字列で使えるワードラップ・アルゴリズムの実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This module implements a helper for a thread pool to determine whether creating a thread is a good idea.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T111850Z" creationid="isVowel" creationdate="20200122T111850Z">
@@ -2351,6 +2487,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T045502Z" creationid="isVowel" creationdate="20200116T045502Z">
         <seg>このモジュールはサンプルです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This module is experimental and its interface may change.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T041230Z" creationid="isVowel" creationdate="20200123T041100Z">
+        <seg>このモジュールは実験的なものであり、インタフェースは変更されることがあります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2455,6 +2599,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T093951Z" creationid="isVowel" creationdate="20200122T093943Z">
         <seg>この API は不安定です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Usage with custom object</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T022925Z" creationid="isVowel" creationdate="20200123T022925Z">
+        <seg>カスタムオブジェクトの用法</seg>
       </tuv>
     </tu>
     <tu>
@@ -2579,10 +2731,26 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Word wraps s.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T035420Z" creationid="isVowel" creationdate="20200123T034653Z">
+        <seg>s にワードラップをします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Wrapper for time_t.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T023631Z" creationid="isVowel" creationdate="20200113T023631Z">
         <seg>time_t のラッパーです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Wrapper for the console object for the JavaScript backend.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T025622Z" creationid="isVowel" creationdate="20200123T025622Z">
+        <seg>JavaScript バックエンドで使える console オブジェクトのラッパーです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2649,10 +2817,34 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Zahary Karadjov</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T040802Z" creationid="isVowel" creationdate="20200123T040802Z">
+        <seg>ザハリー・カラジョフ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>acyclic pragma</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082011Z" creationid="isVowel" creationdate="20200114T082011Z">
         <seg>acyclic プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>an alias for 'send'.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T113757Z" creationid="isVowel" creationdate="20200122T113757Z">
+        <seg>'send' のエイリアスです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>apostrophe</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T030545Z" creationid="isVowel" creationdate="20200123T030545Z">
+        <seg>アポストロフィ</seg>
       </tuv>
     </tu>
     <tu>
@@ -2669,6 +2861,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T055140Z" creationid="isVowel" creationdate="20200115T055133Z">
         <seg>バックスラッシュ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>backspace</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T031527Z" creationid="isVowel" creationdate="20200123T031527Z">
+        <seg>バックスペース</seg>
       </tuv>
     </tu>
     <tu>
@@ -2979,6 +3179,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T113311Z" creationid="isVowel" creationdate="20200122T113311Z">
         <seg>size of a buffered socket's buffer   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>stores an arbitrary IP address   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200122T113348Z" creationid="isVowel" creationdate="20200122T113348Z">
+        <seg>stores an arbitrary IP address   ソース 編集</seg>
       </tuv>
     </tu>
     <tu>

@@ -1152,7 +1152,7 @@ function main() {
   </ul>
 </li>
 <li>
-  <a class="reference reference-toplevel" href="#8" id="58">Vars</a>
+  <a class="reference reference-toplevel" href="#8" id="58">変数</a>
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#programResult"
     title="programResult: int"><wbr />program<wbr />Result<span class="attachedType"></span></a></li>
@@ -1179,7 +1179,7 @@ function main() {
   </ul>
 </li>
 <li>
-  <a class="reference reference-toplevel" href="#10" id="60">Consts</a>
+  <a class="reference reference-toplevel" href="#10" id="60">定数</a>
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#on"
     title="on = true"><wbr />on<span class="attachedType"></span></a></li>
@@ -2284,7 +2284,7 @@ function main() {
   </ul>
 </li>
 <li>
-  <a class="reference reference-toplevel" href="#19" id="69">Exports</a>
+  <a class="reference reference-toplevel" href="#19" id="69">エクスポート</a>
   <ul class="simple simple-toc-section">
     
   </ul>
@@ -3786,7 +3786,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 </dl></div>
 <div class="section" id="8">
-<h1><a class="toc-backref" href="#8">Vars</a></h1>
+<h1><a class="toc-backref" href="#8">変数</a></h1>
 <dl class="item">
 <a id="programResult"></a>
 <dt><pre><a href="system.html#programResult"><span class="Identifier">programResult</span></a><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a></pre></dt>
@@ -3852,7 +3852,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                                       <span class="Identifier">nimcall</span></span><span class="Other">.}</span></span><span class="Other">)</span></pre></dt>
 <dd>
 
-Function that will be called instead of <tt class="docutils literal"><span class="pre">stdmsg.write</span></tt> when printing stacktrace. Unstable API. &nbsp;&nbsp;<a
+Function that will be called instead of <tt class="docutils literal"><span class="pre">stdmsg.write</span></tt> when printing stacktrace. この API は不安定です。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/excpt.nim#L14"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/excpt.nim#L14" class="link-seesrc" target="_blank" >編集</a>
 
@@ -3863,7 +3863,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Set this error 
 handler to override the existing behaviour on an unhandled exception.</p>
-<p>The default is to write a stacktrace to <tt class="docutils literal"><span class="pre">stderr</span></tt> and then call <tt class="docutils literal"><span class="pre">quit(1)</span></tt>. Unstable API.</p>
+<p>The default is to write a stacktrace to <tt class="docutils literal"><span class="pre">stderr</span></tt> and then call <tt class="docutils literal"><span class="pre">quit(1)</span></tt>. この API は不安定です。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/excpt.nim#L322"
@@ -3887,7 +3887,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 </dl></div>
 <div class="section" id="10">
-<h1><a class="toc-backref" href="#10">Consts</a></h1>
+<h1><a class="toc-backref" href="#10">定数</a></h1>
 <dl class="item">
 <a id="on"></a>
 <dt><pre><a href="system.html#on"><span class="Identifier">on</span></a> <span class="Other">=</span> <span class="DecNumber">true</span></pre></dt>
@@ -4166,7 +4166,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 A section you should use to mark <span id="runnable-example_1">runnable example</span> code with.<ul class="simple"><li>In normal debug and release builds code within a <tt class="docutils literal"><span class="pre">runnableExamples</span></tt> section is ignored.</li>
 <li>The documentation generator is aware of these examples and considers them part of the <tt class="docutils literal"><span class="pre">##</span></tt> doc comment. As the last step of documentation generation each runnableExample is put in its own file <tt class="docutils literal"><span class="pre">$file_examples$i.nim</span></tt>, compiled and tested. The collected examples are put into their own module to ensure the examples do not refer to non-exported symbols.</li>
 </ul>
-<p>Usage:</p>
+<p>用法:</p>
 <pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">double</span><span class="Operator">*</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">:</span> <span class="Identifier">int</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">int</span> <span class="Operator">=</span>
   <span class="Comment">## This proc doubles a number.</span>
   <span class="Identifier">runnableExamples</span><span class="Punctuation">:</span>
@@ -5017,7 +5017,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%3C%2COrdinal%5BT%5D"><span class="Identifier">`&lt;`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <a href="system.html#Ordinal"><span class="Identifier">Ordinal</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"UnaryLt"</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">deprecated</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
   <div class="deprecation-message">
-    <b>Deprecated</b> 
+    <b>廃止予定</b> 
   </div>
 
 <p><strong>Deprecated since version 0.18.0</strong>. For the common excluding range write <tt class="docutils literal"><span class="pre">0 ..&lt; 10</span></tt> instead of <tt class="docutils literal"><span class="pre">0 .. &lt; 10</span></tt> (look at the spacing). For <tt class="docutils literal"><span class="pre">&lt;x</span></tt> write <tt class="docutils literal"><span class="pre">pred(x)</span></tt>.</p>
@@ -5299,7 +5299,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#ze%2Cint8"><span class="Identifier">ze</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <a href="system.html#int8"><span class="Identifier">int8</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">deprecated</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
   <div class="deprecation-message">
-    <b>Deprecated</b> 
+    <b>廃止予定</b> 
   </div>
 
 
@@ -5315,7 +5315,7 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#ze%2Cint16"><span class="Identifier">ze</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <a href="system.html#int16"><span class="Identifier">int16</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">deprecated</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
   <div class="deprecation-message">
-    <b>Deprecated</b> 
+    <b>廃止予定</b> 
   </div>
 
 
@@ -5331,7 +5331,7 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#ze64%2Cint8"><span class="Identifier">ze64</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <a href="system.html#int8"><span class="Identifier">int8</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int64"><span class="Identifier">int64</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">deprecated</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
   <div class="deprecation-message">
-    <b>Deprecated</b> 
+    <b>廃止予定</b> 
   </div>
 
 
@@ -5347,7 +5347,7 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#ze64%2Cint16"><span class="Identifier">ze64</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <a href="system.html#int16"><span class="Identifier">int16</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int64"><span class="Identifier">int64</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">deprecated</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
   <div class="deprecation-message">
-    <b>Deprecated</b> 
+    <b>廃止予定</b> 
   </div>
 
 
@@ -5363,7 +5363,7 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#ze64%2Cint32"><span class="Identifier">ze64</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <a href="system.html#int32"><span class="Identifier">int32</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int64"><span class="Identifier">int64</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">deprecated</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
   <div class="deprecation-message">
-    <b>Deprecated</b> 
+    <b>廃止予定</b> 
   </div>
 
 
@@ -5379,7 +5379,7 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#ze64%2Cint"><span class="Identifier">ze64</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int64"><span class="Identifier">int64</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">deprecated</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
   <div class="deprecation-message">
-    <b>Deprecated</b> 
+    <b>廃止予定</b> 
   </div>
 
 
@@ -5395,7 +5395,7 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#toU8%2Cint"><span class="Identifier">toU8</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int8"><span class="Identifier">int8</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">deprecated</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
   <div class="deprecation-message">
-    <b>Deprecated</b> 
+    <b>廃止予定</b> 
   </div>
 
 
@@ -5411,7 +5411,7 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#toU16%2Cint"><span class="Identifier">toU16</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int16"><span class="Identifier">int16</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">deprecated</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
   <div class="deprecation-message">
-    <b>Deprecated</b> 
+    <b>廃止予定</b> 
   </div>
 
 
@@ -5427,7 +5427,7 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#toU32%2Cint64"><span class="Identifier">toU32</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <a href="system.html#int64"><span class="Identifier">int64</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int32"><span class="Identifier">int32</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">deprecated</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
   <div class="deprecation-message">
-    <b>Deprecated</b> 
+    <b>廃止予定</b> 
   </div>
 
 
@@ -8934,7 +8934,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
   <div class="deprecation-message">
-    <b>Deprecated</b> 
+    <b>廃止予定</b> 
   </div>
 
 <p><strong>Deprecated since version 0.18.1</strong>: No good usages of this feature are known.</p>
@@ -9457,7 +9457,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#safeAdd%2Cseq%5BT%5D%5BT%5D%2CT"><span class="Identifier">safeAdd</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="system.html#seq"><span class="Identifier">seq</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">y</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">deprecated</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
   <div class="deprecation-message">
-    <b>Deprecated</b> 
+    <b>廃止予定</b> 
   </div>
 
 
@@ -9473,7 +9473,7 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#safeAdd%2Cstring%2Cchar"><span class="Identifier">safeAdd</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">y</span><span class="Other">:</span> <a href="system.html#char"><span class="Identifier">char</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">deprecated</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
   <div class="deprecation-message">
-    <b>Deprecated</b> 
+    <b>廃止予定</b> 
   </div>
 
 
@@ -9489,7 +9489,7 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#safeAdd%2Cstring%2Cstring"><span class="Identifier">safeAdd</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">y</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">deprecated</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
   <div class="deprecation-message">
-    <b>Deprecated</b> 
+    <b>廃止予定</b> 
   </div>
 
 
@@ -10341,7 +10341,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 </dl></div>
 <div class="section" id="19">
-<h1><a class="toc-backref" href="#19">Exports</a></h1>
+<h1><a class="toc-backref" href="#19">エクスポート</a></h1>
 <dl class="item">
 <a href="assertions.html#doAssertRaises"><span class="Identifier">doAssertRaises</span></a>, <a href="assertions.html#raiseAssert"><span class="Identifier">raiseAssert</span></a>, <a href="assertions.html#failedAssertImpl"><span class="Identifier">failedAssertImpl</span></a>, <a href="assertions.html#doAssert"><span class="Identifier">doAssert</span></a>, <a class="reference external" href="assertions.html">assertions</a>, <a href="assertions.html#assert"><span class="Identifier">assert</span></a>, <a href="assertions.html#onFailedAssert"><span class="Identifier">onFailedAssert</span></a>, <a class="reference external" href="iterators.html">iterators</a>, <a href="iterators.html#items"><span class="Identifier">items</span></a>, <a href="iterators.html#items"><span class="Identifier">items</span></a>, <a href="iterators.html#fieldPairs"><span class="Identifier">fieldPairs</span></a>, <a href="iterators.html#items"><span class="Identifier">items</span></a>, <a href="iterators.html#pairs"><span class="Identifier">pairs</span></a>, <a href="iterators.html#fieldPairs"><span class="Identifier">fieldPairs</span></a>, <a href="iterators.html#mitems"><span class="Identifier">mitems</span></a>, <a href="iterators.html#fields"><span class="Identifier">fields</span></a>, <a href="iterators.html#mpairs"><span class="Identifier">mpairs</span></a>, <a href="iterators.html#pairs"><span class="Identifier">pairs</span></a>, <a href="iterators.html#mitems"><span class="Identifier">mitems</span></a>, <a href="iterators.html#items"><span class="Identifier">items</span></a>, <a href="iterators.html#mpairs"><span class="Identifier">mpairs</span></a>, <a href="iterators.html#fields"><span class="Identifier">fields</span></a>, <a href="iterators.html#mitems"><span class="Identifier">mitems</span></a>, <a href="iterators.html#items"><span class="Identifier">items</span></a>, <a href="iterators.html#mpairs"><span class="Identifier">mpairs</span></a>, <a href="iterators.html#mpairs"><span class="Identifier">mpairs</span></a>, <a href="iterators.html#items"><span class="Identifier">items</span></a>, <a href="iterators.html#mpairs"><span class="Identifier">mpairs</span></a>, <a href="iterators.html#pairs"><span class="Identifier">pairs</span></a>, <a href="iterators.html#pairs"><span class="Identifier">pairs</span></a>, <a href="iterators.html#items"><span class="Identifier">items</span></a>, <a href="iterators.html#mitems"><span class="Identifier">mitems</span></a>, <a href="iterators.html#items"><span class="Identifier">items</span></a>, <a href="iterators.html#pairs"><span class="Identifier">pairs</span></a>, <a href="iterators.html#mitems"><span class="Identifier">mitems</span></a>, <a href="dollars.html#$"><span class="Identifier">$</span></a>, <a class="reference external" href="dollars.html">dollars</a>, <a href="dollars.html#$"><span class="Identifier">$</span></a>, <a href="dollars.html#$"><span class="Identifier">$</span></a>, <a href="dollars.html#$"><span class="Identifier">$</span></a>, <a href="dollars.html#$"><span class="Identifier">$</span></a>, <a href="dollars.html#$"><span class="Identifier">$</span></a>, <a href="dollars.html#$"><span class="Identifier">$</span></a>, <a href="dollars.html#$"><span class="Identifier">$</span></a>, <a href="dollars.html#$"><span class="Identifier">$</span></a>, <a href="dollars.html#$"><span class="Identifier">$</span></a>, <a href="dollars.html#$"><span class="Identifier">$</span></a>, <a href="dollars.html#$"><span class="Identifier">$</span></a>, <a href="dollars.html#$"><span class="Identifier">$</span></a>, <a href="dollars.html#$"><span class="Identifier">$</span></a>, <a href="dollars.html#$"><span class="Identifier">$</span></a>, <a href="widestrs.html#len"><span class="Identifier">len</span></a>, <a href="widestrs.html#$"><span class="Identifier">$</span></a>, <a href="widestrs.html#newWideCString"><span class="Identifier">newWideCString</span></a>, <a href="widestrs.html#Utf16Char"><span class="Identifier">Utf16Char</span></a>, <a href="widestrs.html#WideCStringObj"><span class="Identifier">WideCStringObj</span></a>, <a class="reference external" href="widestrs.html">widestrs</a>, <a href="widestrs.html#$"><span class="Identifier">$</span></a>, <a href="widestrs.html#newWideCString"><span class="Identifier">newWideCString</span></a>, <a href="widestrs.html#WideCString"><span class="Identifier">WideCString</span></a>, <a href="widestrs.html#newWideCString"><span class="Identifier">newWideCString</span></a>, <a href="io.html#writeFile"><span class="Identifier">writeFile</span></a>, <a href="io.html#write"><span class="Identifier">write</span></a>, <a href="io.html#File"><span class="Identifier">File</span></a>, <a href="io.html#write"><span class="Identifier">write</span></a>, <a href="io.html#writeChars"><span class="Identifier">writeChars</span></a>, <a href="io.html#endOfFile"><span class="Identifier">endOfFile</span></a>, <a href="io.html#getFilePos"><span class="Identifier">getFilePos</span></a>, <a href="io.html#readChars"><span class="Identifier">readChars</span></a>, <a href="io.html#fmReadWrite"><span class="Identifier">fmReadWrite</span></a>, <a href="io.html#readLines"><span class="Identifier">readLines</span></a>, <a href="io.html#write"><span class="Identifier">write</span></a>, <a href="io.html#readLine"><span class="Identifier">readLine</span></a>, <a href="io.html#open"><span class="Identifier">open</span></a>, <a href="io.html#reopen"><span class="Identifier">reopen</span></a>, <a href="io.html#readChar"><span class="Identifier">readChar</span></a>, <a href="io.html#writeBuffer"><span class="Identifier">writeBuffer</span></a>, <a href="io.html#stdmsg"><span class="Identifier">stdmsg</span></a>, <a href="io.html#getFileHandle"><span class="Identifier">getFileHandle</span></a>, <a href="io.html#close"><span class="Identifier">close</span></a>, <a href="io.html#write"><span class="Identifier">write</span></a>, <a href="io.html#getOsFileHandle"><span class="Identifier">getOsFileHandle</span></a>, <a href="io.html#readFile"><span class="Identifier">readFile</span></a>, <a href="io.html#setFilePos"><span class="Identifier">setFilePos</span></a>, <a href="io.html#write"><span class="Identifier">write</span></a>, <a href="io.html#fmWrite"><span class="Identifier">fmWrite</span></a>, <a href="io.html#setStdIoUnbuffered"><span class="Identifier">setStdIoUnbuffered</span></a>, <a href="io.html#lines"><span class="Identifier">lines</span></a>, <a href="io.html#stdout"><span class="Identifier">stdout</span></a>, <a href="io.html#getFileSize"><span class="Identifier">getFileSize</span></a>, <a href="io.html#fmReadWriteExisting"><span class="Identifier">fmReadWriteExisting</span></a>, <a class="reference external" href="io.html">io</a>, <a href="io.html#FileHandle"><span class="Identifier">FileHandle</span></a>, <a href="io.html#write"><span class="Identifier">write</span></a>, <a href="io.html#write"><span class="Identifier">write</span></a>, <a href="io.html#readBytes"><span class="Identifier">readBytes</span></a>, <a href="io.html#fmRead"><span class="Identifier">fmRead</span></a>, <a href="io.html#writeLine"><span class="Identifier">writeLine</span></a>, <a href="io.html#write"><span class="Identifier">write</span></a>, <a href="io.html#readLine"><span class="Identifier">readLine</span></a>, <a href="io.html#open"><span class="Identifier">open</span></a>, <a href="io.html#flushFile"><span class="Identifier">flushFile</span></a>, <a href="io.html#readAll"><span class="Identifier">readAll</span></a>, <a href="io.html#fmAppend"><span class="Identifier">fmAppend</span></a>, <a href="io.html#FileMode"><span class="Identifier">FileMode</span></a>, <a href="io.html#write"><span class="Identifier">write</span></a>, <a href="io.html#readBuffer"><span class="Identifier">readBuffer</span></a>, <a href="io.html#stderr"><span class="Identifier">stderr</span></a>, <a href="io.html#stdin"><span class="Identifier">stdin</span></a>, <a href="io.html#open"><span class="Identifier">open</span></a>, <a href="io.html#writeBytes"><span class="Identifier">writeBytes</span></a>, <a href="io.html#lines"><span class="Identifier">lines</span></a>
 </dl></div>

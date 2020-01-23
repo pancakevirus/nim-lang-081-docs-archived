@@ -1300,13 +1300,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
   <span class="Identifier">IPv4</span>                        <span class="Comment">## IPv4 address</span></pre></dt>
 <dd>
 
-
-
-Describes the type of an IP address
-&nbsp;&nbsp;<a
+Describes the type of an IP address &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/net.nim#L156"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/net.nim#L156" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/net.nim#L156" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="IpAddress"></a>
@@ -1323,13 +1319,9 @@ class="link-seesrc" target="_blank">Source</a>
   </pre></dt>
 <dd>
 
-
-
-stores an arbitrary IP address
-&nbsp;&nbsp;<a
+stores an arbitrary IP address &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/net.nim#L160"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/net.nim#L160" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/net.nim#L160" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 
@@ -2036,26 +2028,18 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#IPv4_loopback"><span class="Identifier">IPv4_loopback</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="net.html#IpAddress"><span class="Identifier">IpAddress</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Returns the IPv4 loopback address (127.0.0.1)
-&nbsp;&nbsp;<a
+IPv4  のループバックアドレスを返します (127.0.0.1) &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/net.nim#L1433"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/net.nim#L1433" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/net.nim#L1433" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="IPv4_broadcast"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#IPv4_broadcast"><span class="Identifier">IPv4_broadcast</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="net.html#IpAddress"><span class="Identifier">IpAddress</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Returns the IPv4 broadcast address (255.255.255.255)
-&nbsp;&nbsp;<a
+IPv4  のブロードキャストアドレスを返します (255.255.255.255) &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/net.nim#L1439"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/net.nim#L1439" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/net.nim#L1439" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="IPv6_any"></a>
@@ -2157,7 +2141,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Finds the local IP address, usually assigned to eth0 on LAN or wlan0 on WiFi, used to reach an external address. Useful to run local services.</p>
 <p>No traffic is sent.</p>
-<p>Supports IPv4 and v6. Raises OSError if external networking is not set up.</p>
+<p>IPv4 と v6 に対応しています。Raises OSError if external networking is not set up.</p>
 <pre class="listing"><span class="Identifier">echo</span> <span class="Operator">$</span><span class="Identifier">getPrimaryIPAddr</span><span class="Punctuation">(</span><span class="Punctuation">)</span>  <span class="Comment"># "192.168.1.2"</span></pre>
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/net.nim#L1683"
@@ -2173,7 +2157,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">template</span> <a href="#%26%3D.t%2CSocket%2Ctyped"><span class="Identifier">`&amp;=`</span></a><span class="Other">(</span><span class="Identifier">socket</span><span class="Other">:</span> <a href="net.html#Socket"><span class="Identifier">Socket</span></a><span class="Other">;</span> <span class="Identifier">data</span><span class="Other">:</span> <a href="system.html#typed"><span class="Identifier">typed</span></a><span class="Other">)</span></pre></dt>
 <dd>
 
-an alias for 'send'. &nbsp;&nbsp;<a
+'send' のエイリアスです。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/net.nim#L1358"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/net.nim#L1358" class="link-seesrc" target="_blank" >編集</a>
 

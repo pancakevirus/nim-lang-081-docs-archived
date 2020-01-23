@@ -864,10 +864,10 @@ function main() {
   fpOthersRead                ## read access for others"><wbr />File<wbr />Permission<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#PathComponent"
     title="PathComponent = enum
-  pcFile,                     ## path refers to a file
-  pcLinkToFile,               ## path refers to a symbolic link to a file
-  pcDir,                      ## path refers to a directory
-  pcLinkToDir                 ## path refers to a symbolic link to a directory"><wbr />Path<wbr />Component<span class="attachedType"></span></a></li>
+  pcFile,                     ## ファイルの参照パス
+  pcLinkToFile,               ## シンボリックリンクによるファイルの参照パス
+  pcDir,                      ## ディレクトリの参照パス
+  pcLinkToDir                 ## シンボリックリンクによるディレクトリの参照パス"><wbr />Path<wbr />Component<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#DeviceId"
     title="DeviceId = int32"><wbr />Device<wbr />Id<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#FileId"
@@ -886,7 +886,7 @@ function main() {
   </ul>
 </li>
 <li>
-  <a class="reference reference-toplevel" href="#10" id="60">Consts</a>
+  <a class="reference reference-toplevel" href="#10" id="60">定数</a>
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#doslikeFileSystem"
     title="doslikeFileSystem = true"><wbr />doslike<wbr />File<wbr />System<span class="attachedType"></span></a></li>
@@ -1231,13 +1231,13 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </dd>
 <a id="PathComponent"></a>
 <dt><pre><a href="os.html#PathComponent"><span class="Identifier">PathComponent</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
-  <span class="Identifier">pcFile</span><span class="Other">,</span>                     <span class="Comment">## path refers to a file</span>
-  <span class="Identifier">pcLinkToFile</span><span class="Other">,</span>               <span class="Comment">## path refers to a symbolic link to a file</span>
-  <span class="Identifier">pcDir</span><span class="Other">,</span>                      <span class="Comment">## path refers to a directory</span>
-  <span class="Identifier">pcLinkToDir</span>                 <span class="Comment">## path refers to a symbolic link to a directory</span></pre></dt>
+  <span class="Identifier">pcFile</span><span class="Other">,</span>                     <span class="Comment">## ファイルの参照パス</span>
+  <span class="Identifier">pcLinkToFile</span><span class="Other">,</span>               <span class="Comment">## シンボリックリンクによるファイルの参照パス</span>
+  <span class="Identifier">pcDir</span><span class="Other">,</span>                      <span class="Comment">## ディレクトリの参照パス</span>
+  <span class="Identifier">pcLinkToDir</span>                 <span class="Comment">## シンボリックリンクによるディレクトリの参照パス</span></pre></dt>
 <dd>
 
-<p>Enumeration specifying a path component.</p>
+<p>パス構成の指定に使う列挙型です。</p>
 <p>関連:</p>
 <ul class="simple"><li><a class="reference external" href="#walkDirRec.i,string">walkDirRec iterator</a></li>
 <li><a class="reference external" href="#FileInfo">FileInfo object</a></li>
@@ -1296,7 +1296,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 </dl></div>
 <div class="section" id="10">
-<h1><a class="toc-backref" href="#10">Consts</a></h1>
+<h1><a class="toc-backref" href="#10">定数</a></h1>
 <dl class="item">
 <a id="doslikeFileSystem"></a>
 <dt><pre><a href="os.html#doslikeFileSystem"><span class="Identifier">doslikeFileSystem</span></a> <span class="Other">=</span> <span class="DecNumber">true</span></pre></dt>
