@@ -877,7 +877,7 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc">This module implements nice syntactic sugar based on Nim's macro system.</p>
+  <p class="module-desc">このモジュールは Nim のマクロシステムをベースとした素晴らしいシンタックスシュガーの実装です。</p>
   <div class="section" id="6">
 <h1><a class="toc-backref" href="#6">インポート</a></h1>
 <dl class="item">
@@ -905,9 +905,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#%3D%3E.m%2Cuntyped%2Cuntyped"><span class="Identifier">`=&gt;`</span></a><span class="Other">(</span><span class="Identifier">p</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-
-
-Syntax sugar for anonymous procedures.<pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">passTwoAndTwo</span><span class="Punctuation">(</span><span class="Identifier">f</span><span class="Punctuation">:</span> <span class="Punctuation">(</span><span class="Identifier">int</span><span class="Punctuation">,</span> <span class="Identifier">int</span><span class="Punctuation">)</span> <span class="Operator">-&gt;</span> <span class="Identifier">int</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">int</span> <span class="Operator">=</span>
+無名プロシージャのシンタックスシュガーです。<pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">passTwoAndTwo</span><span class="Punctuation">(</span><span class="Identifier">f</span><span class="Punctuation">:</span> <span class="Punctuation">(</span><span class="Identifier">int</span><span class="Punctuation">,</span> <span class="Identifier">int</span><span class="Punctuation">)</span> <span class="Operator">-&gt;</span> <span class="Identifier">int</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">int</span> <span class="Operator">=</span>
   <span class="Identifier">f</span><span class="Punctuation">(</span><span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">)</span>
 
 <span class="Identifier">passTwoAndTwo</span><span class="Punctuation">(</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">,</span> <span class="Identifier">y</span><span class="Punctuation">)</span> <span class="Operator">=&gt;</span> <span class="Identifier">x</span> <span class="Operator">+</span> <span class="Identifier">y</span><span class="Punctuation">)</span> <span class="Comment"># 4</span></pre>
@@ -920,12 +918,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#-%3E.m%2Cuntyped%2Cuntyped"><span class="Identifier">`-&gt;`</span></a><span class="Other">(</span><span class="Identifier">p</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-
-
-Syntax sugar for procedure types.<pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">pass2</span><span class="Punctuation">(</span><span class="Identifier">f</span><span class="Punctuation">:</span> <span class="Punctuation">(</span><span class="Identifier">float</span><span class="Punctuation">,</span> <span class="Identifier">float</span><span class="Punctuation">)</span> <span class="Operator">-&gt;</span> <span class="Identifier">float</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">float</span> <span class="Operator">=</span>
+プロシージャ型のシンタックスシュガーです。<pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">pass2</span><span class="Punctuation">(</span><span class="Identifier">f</span><span class="Punctuation">:</span> <span class="Punctuation">(</span><span class="Identifier">float</span><span class="Punctuation">,</span> <span class="Identifier">float</span><span class="Punctuation">)</span> <span class="Operator">-&gt;</span> <span class="Identifier">float</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">float</span> <span class="Operator">=</span>
   <span class="Identifier">f</span><span class="Punctuation">(</span><span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">)</span>
 
-<span class="Comment"># is the same as:</span>
+<span class="Comment"># は下記と同じです。</span>
 
 <span class="Keyword">proc</span> <span class="Identifier">pass2</span><span class="Punctuation">(</span><span class="Identifier">f</span><span class="Punctuation">:</span> <span class="Keyword">proc</span> <span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">,</span> <span class="Identifier">y</span><span class="Punctuation">:</span> <span class="Identifier">float</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">float</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">float</span> <span class="Operator">=</span>
   <span class="Identifier">f</span><span class="Punctuation">(</span><span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">)</span></pre>
@@ -941,13 +937,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <b>廃止予定</b> 
   </div>
 
-
-
-List comprehension, returns a sequence. <tt class="docutils literal"><span class="pre">comp</span></tt> is the actual list comprehension, for example <tt class="docutils literal"><span class="pre">x | (x &lt;- 1..10, x mod 2 == 0)</span></tt>. <tt class="docutils literal"><span class="pre">typ</span></tt> is the type that will be stored inside the result seq.<pre class="listing"><span class="Identifier">echo</span> <span class="Identifier">lc</span><span class="Punctuation">[</span><span class="Identifier">x</span> <span class="Operator">|</span> <span class="Punctuation">(</span><span class="Identifier">x</span> <span class="Operator">&lt;-</span> <span class="FloatNumber">1.</span><span class="Operator">.</span><span class="DecNumber">10</span><span class="Punctuation">,</span> <span class="Identifier">x</span> <span class="Keyword">mod</span> <span class="DecNumber">2</span> <span class="Operator">==</span> <span class="DecNumber">0</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">int</span><span class="Punctuation">]</span>
+リストを解読して、シーケンスを返します。<tt class="docutils literal"><span class="pre">comp</span></tt> は、 <tt class="docutils literal"><span class="pre">x | (x &lt;- 1..10, x mod 2 == 0)</span></tt> などの解読対象となるリストです。<tt class="docutils literal"><span class="pre">typ</span></tt> はシーケンスの処理結果へ格納する型です。<pre class="listing"><span class="Identifier">echo</span> <span class="Identifier">lc</span><span class="Punctuation">[</span><span class="Identifier">x</span> <span class="Operator">|</span> <span class="Punctuation">(</span><span class="Identifier">x</span> <span class="Operator">&lt;-</span> <span class="FloatNumber">1.</span><span class="Operator">.</span><span class="DecNumber">10</span><span class="Punctuation">,</span> <span class="Identifier">x</span> <span class="Keyword">mod</span> <span class="DecNumber">2</span> <span class="Operator">==</span> <span class="DecNumber">0</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">int</span><span class="Punctuation">]</span>
 
 <span class="Keyword">const</span> <span class="Identifier">n</span> <span class="Operator">=</span> <span class="DecNumber">20</span>
 <span class="Identifier">echo</span> <span class="Identifier">lc</span><span class="Punctuation">[</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">,</span><span class="Identifier">y</span><span class="Punctuation">,</span><span class="Identifier">z</span><span class="Punctuation">)</span> <span class="Operator">|</span> <span class="Punctuation">(</span><span class="Identifier">x</span> <span class="Operator">&lt;-</span> <span class="FloatNumber">1.</span><span class="Operator">.</span><span class="Identifier">n</span><span class="Punctuation">,</span> <span class="Identifier">y</span> <span class="Operator">&lt;-</span> <span class="Identifier">x</span><span class="Operator">..</span><span class="Identifier">n</span><span class="Punctuation">,</span> <span class="Identifier">z</span> <span class="Operator">&lt;-</span> <span class="Identifier">y</span><span class="Operator">..</span><span class="Identifier">n</span><span class="Punctuation">,</span> <span class="Identifier">x</span><span class="Operator">*</span><span class="Identifier">x</span> <span class="Operator">+</span> <span class="Identifier">y</span><span class="Operator">*</span><span class="Identifier">y</span> <span class="Operator">==</span> <span class="Identifier">z</span><span class="Operator">*</span><span class="Identifier">z</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
-        <span class="Keyword">tuple</span><span class="Punctuation">[</span><span class="Identifier">a</span><span class="Punctuation">,</span><span class="Identifier">b</span><span class="Punctuation">,</span><span class="Identifier">c</span><span class="Punctuation">:</span> <span class="Identifier">int</span><span class="Punctuation">]</span><span class="Punctuation">]</span></pre><p><strong>Deprecated since version 0.19.9</strong></p>
+        <span class="Keyword">tuple</span><span class="Punctuation">[</span><span class="Identifier">a</span><span class="Punctuation">,</span><span class="Identifier">b</span><span class="Punctuation">,</span><span class="Identifier">c</span><span class="Punctuation">:</span> <span class="Identifier">int</span><span class="Punctuation">]</span><span class="Punctuation">]</span></pre><p><strong>version 0.19.9 以降で廃止予定</strong></p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/sugar.nim#L130"
@@ -958,12 +952,12 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#dump.m%2Ctyped"><span class="Identifier">dump</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <a href="system.html#typed"><span class="Identifier">typed</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-<p>Dumps the content of an expression, useful for debugging. It accepts any expression and prints a textual representation of the tree representing the expression - as it would appear in source code - together with the value of the expression.</p>
-<p>As an example,</p>
+<p>式の内容をダンプして、デバッグで使えるようにします。式の入力後、ソースコードに出現する式の値と併せて式のツリー構造をテキスト形式で出力します。</p>
+<p>用例:</p>
 <pre class="listing"><span class="Keyword">let</span>
   <span class="Identifier">x</span> <span class="Operator">=</span> <span class="DecNumber">10</span>
   <span class="Identifier">y</span> <span class="Operator">=</span> <span class="DecNumber">20</span>
-<span class="Identifier">dump</span><span class="Punctuation">(</span><span class="Identifier">x</span> <span class="Operator">+</span> <span class="Identifier">y</span><span class="Punctuation">)</span></pre><p>will print <tt class="docutils literal"><span class="pre">x + y = 30</span></tt>.</p>
+<span class="Identifier">dump</span><span class="Punctuation">(</span><span class="Identifier">x</span> <span class="Operator">+</span> <span class="Identifier">y</span><span class="Punctuation">)</span></pre><p><tt class="docutils literal"><span class="pre">x + y = 30</span></tt> を出力します。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/sugar.nim#L184"
@@ -974,10 +968,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#distinctBase.m%2Ctypedesc"><span class="Identifier">distinctBase</span></a><span class="Other">(</span><span class="Identifier">T</span><span class="Other">:</span> <a href="system.html#typedesc"><span class="Identifier">typedesc</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-
-
-reverses <tt class="docutils literal"><span class="pre">type T = distinct A</span></tt>; works recursively.
-
+<tt class="docutils literal"><span class="pre">type T = distinct A</span></tt> を反転します。これは再帰的処理を行います。
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">type</span>
   <span class="Identifier">T</span> <span class="Other">=</span> <span class="Keyword">distinct</span> <span class="Identifier">int</span>
@@ -1020,7 +1011,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 Generated: 2019-11-27 09:16:29 UTC</small>
+        <small>Nim で作成しました。 生成日時: 2019年11月27日 午前09時16分29秒 (UTC)</small>
       </div>
     </div>
   </div>

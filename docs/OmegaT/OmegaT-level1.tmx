@@ -102,10 +102,58 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>decode proc for decoding a string</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T080842Z" creationid="isVowel" creationdate="20200123T080810Z">
+        <seg>decode プロシージャ は文字列のデコードをします</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>encode proc for encoding a string</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T080835Z" creationid="isVowel" creationdate="20200123T080746Z">
+        <seg>encode プロシージャ は文字列のエンコードをします</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>encode proc for encoding an openarray</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T081155Z" creationid="isVowel" creationdate="20200123T081051Z">
+        <seg>encode プロシージャ は無蓋配列のエンコードをします</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>hashes module for efficient computations of hash values for diverse Nim types</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200126T031616Z" creationid="isVowel" creationdate="20200125T143559Z">
+        <seg>hashes モジュール は様々な Nim 型で使える効率的なハッシュ値の算出方法</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>md5 module implements the MD5 checksum algorithm</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T075609Z" creationid="isVowel" creationdate="20200123T075609Z">
+        <seg>md5 モジュール MD5 チェックサム・アルゴリズムの実装</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>sequtils module for working with the built-in seq type</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T044025Z" creationid="isVowel" creationdate="20200113T044025Z">
         <seg>sequtils モジュール for working with the built-in seq type</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>sha1 module implements a sha1 encoder and decoder</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T075642Z" creationid="isVowel" creationdate="20200123T075642Z">
+        <seg>sha1 モジュール SHA1 エンコーダーとデコーダーの実装</seg>
       </tuv>
     </tu>
     <tu>
@@ -336,6 +384,22 @@ proc helloWorld*(times: int) =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>f(2, 2)
+
+# is the same as:
+
+proc pass2(f: proc (x, y: float): float): float =</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T021454Z" creationid="isVowel" creationdate="20200127T021454Z">
+        <seg>f(2, 2)
+
+# は下記と同じです。
+
+proc pass2(f: proc (x, y: float): float): float =</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>pcFile,                     ## path refers to a file</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T071931Z" creationid="isVowel" creationdate="20200116T071931Z">
@@ -348,6 +412,14 @@ proc helloWorld*(times: int) =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T071948Z" creationid="isVowel" creationdate="20200116T071948Z">
         <seg>pcLinkToFile,               ## シンボリックリンクによるファイルの参照パス</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>comp is the actual list comprehension, for example x | (x &lt;- 1..10, x mod 2 == 0).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T022854Z" creationid="isVowel" creationdate="20200127T022653Z">
+        <seg>comp は、 x | (x &lt;- 1..10, x mod 2 == 0) などの解読対象となるリストです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -364,6 +436,14 @@ proc helloWorld*(times: int) =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200117T020228Z" creationid="isVowel" creationdate="20200115T075103Z">
         <seg>koch の主な用途は Nim コンパイラのビルドですが、それ以外にもあります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>typ is the type that will be stored inside the result seq.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T024307Z" creationid="isVowel" creationdate="20200127T023100Z">
+        <seg>typ はシーケンスの処理結果へ格納する型です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -396,6 +476,14 @@ proc helloWorld*(times: int) =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T073106Z" creationid="isVowel" creationdate="20200114T073106Z">
         <seg>上級型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>After lineLen characters, a newline is added.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200125T144038Z" creationid="isVowel" creationdate="20200125T144038Z">
+        <seg>lineLen 文字の後に、 newline (改行文字) を追加します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -434,10 +522,26 @@ proc helloWorld*(times: int) =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Apart from strings you can also encode lists of integers or characters:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T012521Z" creationid="isVowel" creationdate="20200127T011904Z">
+        <seg>文字列以外にも整数、または文字から成るリストをエンコードできます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Arrays</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T042127Z" creationid="isVowel" creationdate="20200113T042127Z">
         <seg>配列</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>As an example,</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T023845Z" creationid="isVowel" creationdate="20200127T023845Z">
+        <seg>用例:</seg>
       </tuv>
     </tu>
     <tu>
@@ -486,6 +590,14 @@ proc helloWorld*(times: int) =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T030542Z" creationid="isVowel" creationdate="20200115T030542Z">
         <seg>SQL インジェクション攻撃の回避</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Base64 is an encoding and decoding technique used to convert binary data to an ASCII string format.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T011316Z" creationid="isVowel" creationdate="20200127T010251Z">
+        <seg>Base64 はバイナリデータから ASCII 文字列形式への変換に用いるエンコードとデコードの技術です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -786,6 +898,22 @@ proc helloWorld*(times: int) =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Decodes string s in base64 representation back into its original form.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T013920Z" creationid="isVowel" creationdate="20200127T013920Z">
+        <seg>Base64 形式の文字列 s をデコードして元形式へ復元します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Decoding data</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T075452Z" creationid="isVowel" creationdate="20200123T075452Z">
+        <seg>データのデコード</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Default values</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041949Z" creationid="isVowel" creationdate="20200113T041949Z">
@@ -814,6 +942,14 @@ proc helloWorld*(times: int) =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T074827Z" creationid="isVowel" creationdate="20200122T074827Z">
         <seg>廃止予定</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Deprecated since version 0.19.9</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T022113Z" creationid="isVowel" creationdate="20200127T022113Z">
+        <seg>version 0.19.9 以降で廃止予定</seg>
       </tuv>
     </tu>
     <tu>
@@ -860,8 +996,24 @@ proc helloWorld*(times: int) =</seg>
       <tuv lang="EN-US">
         <seg>Documents: API naming design, Code owners, Contributing, Embedded Stack Trace Profiler (ESTP) User Guide, Hot code reloading, Internals of the Nim Compiler, Nim Backend Integration, Nim Compiler User Guide, Nim Destructors and Move Semantics, Nim DocGen Tools Guide, Nim Documentation Overview, Nim Enhancement Proposal #1 - Standard Library Style Guide, Nim Experimental Features, Nim IDE Integration Guide, Nim IDE Integration Guide, Nim maintenance script, Nim Manual, Nim Standard Library, Nim Tutorial (Part I), Nim Tutorial (Part II), Nim Tutorial (Part III), Nim's Garbage Collector, nimgrep User's manual, niminst User's manual, NimScript, Packaging Nim, Source Code Filters, Tools available with Nim.</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200115T070857Z" creationid="isVowel" creationdate="20200115T064940Z">
-        <seg>ドキュメント: API naming design, Code owners, Contributing, Embedded Stack Trace Profiler (ESTP) User Guide, Hot code reloading, Nim コンパイラの内部構造, Nim Backend Integration, Nim Compiler User Guide, Nim Destructors and Move Semantics, Nim DocGen Tools Guide, Nim ドキュメンテーションの概要, Nim Enhancement Proposal #1 - 標準ライブラリのスタイルガイド, Nim Experimental Features, Nim IDE Integration Guide, Nim IDE Integration Guide, Nim メンテナンス・スクリプト, Nim マニュアル, Nim 標準ライブラリ, Nim チュートリアル（第１部）, Nim チュートリアル（第２部）, Nim チュートリアル（第３部）, Nim's Garbage Collector, nimgrep User's manual, niminst User's manual, NimScript, Packaging Nim, Source Code Filters, Tools available with Nim.</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T020340Z" creationid="isVowel" creationdate="20200115T064940Z">
+        <seg>ドキュメント: API naming design, Code owners, Contributing, Embedded Stack Trace Profiler (ESTP) User Guide, Hot code reloading, Nim コンパイラの内部構造, Nim バックエンドシステム統合, Nim コンパイラ ユーザガイド, Nim Destructors and Move Semantics, Nim DocGen ツールガイド, Nim ドキュメンテーションの概要, Nim Enhancement Proposal #1 - 標準ライブラリのスタイルガイド, Nim Experimental Features, Nim IDE システム統合ガイド (idetools), Nim IDE システム統合ガイド (nimsuggest), Nim メンテナンス・スクリプト, Nim マニュアル, Nim 標準ライブラリ, Nim チュートリアル（第１部）, Nim チュートリアル（第２部）, Nim チュートリアル（第３部）, Nim's Garbage Collector, nimgrep ユーザーズ・ガイド, niminst ユーザーズ・マニュアル, NimScript, Packaging Nim, ソースコードフィルタ, Tools available with Nim.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Dumps the content of an expression, useful for debugging.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T023656Z" creationid="isVowel" creationdate="20200127T023656Z">
+        <seg>式の内容をダンプして、デバッグで使えるようにします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Each Base64 digit represents exactly 6 bits of data.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T010624Z" creationid="isVowel" creationdate="20200127T010544Z">
+        <seg>Base64 の各桁は必ず 6 bit データ表現になります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -874,10 +1026,26 @@ proc helloWorld*(times: int) =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Encodes s into base64 representation.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200125T142846Z" creationid="isVowel" creationdate="20200125T142800Z">
+        <seg>Base64 形式で s をエンコードします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Encoding</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T090722Z" creationid="isVowel" creationdate="20200114T090722Z">
         <seg>エンコーディング</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Encoding data</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T075515Z" creationid="isVowel" creationdate="20200123T075440Z">
+        <seg>データのエンコード</seg>
       </tuv>
     </tu>
     <tu>
@@ -1139,10 +1307,34 @@ proc helloWorld*(times: int) =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Generated: 2019-11-27 09:15:51 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T071701Z" creationid="isVowel" creationdate="20200123T071701Z">
+        <seg>生成日時: 2019年11月27日 午前09時15分51秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2019-11-27 09:16:04 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T081224Z" creationid="isVowel" creationdate="20200123T081224Z">
+        <seg>生成日時: 2019年11月27日 午前09時16分04秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Generated: 2019-11-27 09:16:05 UTC</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T063018Z" creationid="isVowel" creationdate="20200116T063018Z">
         <seg>生成日時: 2019年11月27日 午前09時16分05秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2019-11-27 09:16:15 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T030732Z" creationid="isVowel" creationdate="20200127T030732Z">
+        <seg>生成日時: 2019年11月27日 午前09時16分15秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
@@ -1159,6 +1351,14 @@ proc helloWorld*(times: int) =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T112935Z" creationid="isVowel" creationdate="20200122T112914Z">
         <seg>生成日時: 2019年11月27日 午前09時16分28秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2019-11-27 09:16:29 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T020602Z" creationid="isVowel" creationdate="20200127T020602Z">
+        <seg>生成日時: 2019年11月27日 午前09時16分29秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
@@ -1428,6 +1628,14 @@ proc helloWorld*(times: int) =</seg>
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>It accepts any expression and prints a textual representation of the tree representing the expression - as it would appear in source code - together with the value of the expression.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T030230Z" creationid="isVowel" creationdate="20200127T025044Z">
+        <seg>式の入力後、ソースコードに出現する式の値と併せて式のツリー構造をテキスト形式で出力します。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>1. acccept を can be ～　へ読み替えて意訳しています。
 
 2. pass は「～渡す」「～与える(give)」「～指定する(specify)」の意味で使います。 
@@ -1518,6 +1726,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082149Z" creationid="isVowel" creationdate="20200114T082149Z">
         <seg>Link プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>List comprehension, returns a sequence.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T022028Z" creationid="isVowel" creationdate="20200127T022028Z">
+        <seg>リストを解読して、シーケンスを返します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1775,6 +1991,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T091102Z" creationid="isVowel" creationdate="20200114T091102Z">
         <seg>そのほかのトークン</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Otherwise the environment variable BROWSER is used to determine the default browser to use.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T071342Z" creationid="isVowel" creationdate="20200123T071342Z">
+        <seg>さもなければ、環境変数 BROWSER で指定されたデフォルトブラウザを使います。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2209,6 +2433,22 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>Syntax sugar for anonymous procedures.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T021318Z" creationid="isVowel" creationdate="20200127T021318Z">
+        <seg>無名プロシージャのシンタックスシュガーです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Syntax sugar for procedure types.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T021424Z" creationid="isVowel" creationdate="20200127T021424Z">
+        <seg>プロシージャ型のシンタックスシュガーです。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>以前は「整数を与えると何度も "hello world!" を出力します。」と訳していました。
 </note>
       <tuv lang="EN-US">
@@ -2363,6 +2603,21 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
     </tu>
     <tu>
+      <note>The initial whitespace is skipped.
+
+whitespace : 半角空白文字 (スペースやタブのこと)
+
+initial (類語は start, begin など) : 頭文字、文頭、行頭
+
+skipped : スキップする、無視する、読み飛ばす。</note>
+      <tuv lang="EN-US">
+        <seg>The initial whitespace is skipped.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T014300Z" creationid="isVowel" creationdate="20200125T144905Z">
+        <seg>頭文字にあるホワイトスペースは無視します。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv lang="EN-US">
         <seg>The let statement</seg>
       </tuv>
@@ -2459,6 +2714,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This does not block.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T070827Z" creationid="isVowel" creationdate="20200123T070827Z">
+        <seg>これはブロックできません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This module contains an algorithm to wordwrap a Unicode string.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200123T035107Z" creationid="isVowel" creationdate="20200123T035107Z">
@@ -2467,10 +2730,42 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This module contains helpers that deal with different byte orders (endian).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T031106Z" creationid="isVowel" creationdate="20200127T031106Z">
+        <seg>このモジュールは異種バイトオーダー (エンディアン) の処理に用いる補助機能の実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This module implements a base64 encoder and decoder.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T075358Z" creationid="isVowel" creationdate="20200123T075323Z">
+        <seg>このモジュールは Base64 エンコーダーとデコーダーの実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This module implements a helper for a thread pool to determine whether creating a thread is a good idea.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T111850Z" creationid="isVowel" creationdate="20200122T111850Z">
         <seg>このモジュールはスレッドプールへのスレッド作成が得策であるかの判断に用いる補助機能の実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This module implements a simple proc for opening URLs with the user's default browser.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T071848Z" creationid="isVowel" creationdate="20200123T071848Z">
+        <seg>このモジュールはユーザのデフォルトブラウザで URL を開くプロシージャの実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This module implements nice syntactic sugar based on Nim's macro system.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T020943Z" creationid="isVowel" creationdate="20200127T020943Z">
+        <seg>このモジュールは Nim のマクロシステムをベースとした素晴らしいシンタックスシュガーの実装です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2495,6 +2790,30 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200123T041230Z" creationid="isVowel" creationdate="20200123T041100Z">
         <seg>このモジュールは実験的なものであり、インタフェースは変更されることがあります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This proc doesn't raise an exception on error, beware.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T072816Z" creationid="isVowel" creationdate="20200123T072816Z">
+        <seg>このプロシージャのエラーでは例外処理が起きないことに、注意してください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This procedure encodes a string.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200125T142842Z" creationid="isVowel" creationdate="20200123T081000Z">
+        <seg>このプロシージャは文字列をエンコードします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This procedure encodes an openarray (array or sequence) of either integers or characters.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T013253Z" creationid="isVowel" creationdate="20200127T012512Z">
+        <seg>このプロシージャは整数、または文字から成る無蓋配列 (無蓋やシーケンス) をエンコードします。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2527,6 +2846,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T083646Z" creationid="isVowel" creationdate="20200114T083646Z">
         <seg>Threadvar プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Three 8-bit bytes (i.e., a total of 24 bits) can therefore be represented by four 6-bit Base64 digits.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T011239Z" creationid="isVowel" creationdate="20200127T011239Z">
+        <seg>したがって、 3 桁の 8 bit バイト (つまり、合計 24 bit) は Base64 において 4 桁の 6 bit 表現になります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2583,6 +2910,30 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T025553Z" creationid="isVowel" creationdate="20200113T025553Z">
         <seg>型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Under Mac OS X the open command is used.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T070517Z" creationid="isVowel" creationdate="20200123T070517Z">
+        <seg>Mac OS X では、 open コマンドを使います。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Under Unix, it is checked if xdg-open exists and used if it does.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T070744Z" creationid="isVowel" creationdate="20200123T070716Z">
+        <seg>Unix では、 xdg-open コマンドがあれば使います。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Under Windows, ShellExecute is used.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T070453Z" creationid="isVowel" creationdate="20200123T070453Z">
+        <seg>Windows では、 ShellExecute を使います。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3095,6 +3446,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>opens url with the user's default browser.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200123T070436Z" creationid="isVowel" creationdate="20200123T070436Z">
+        <seg>ユーザのデフォルトブラウザで url を開きます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>pcDir,                      ## path refers to a directory</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T070951Z" creationid="isVowel" creationdate="20200116T070951Z">
@@ -3163,6 +3522,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T054840Z" creationid="isVowel" creationdate="20200116T054840Z">
         <seg>マシンに搭載されているプロセッサ / コア数を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>reverses type T = distinct A; works recursively.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T023815Z" creationid="isVowel" creationdate="20200127T023815Z">
+        <seg>type T = distinct A を反転します。これは再帰的処理を行います。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3290,6 +3657,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       <note>このブロックは作業対象外です。変更してしまうと、正常に動作しなくなります。</note>
       <tuv lang="EN-US">
         <seg>width=device-width, initial-scale=1.0</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>will print x + y = 30.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200127T024022Z" creationid="isVowel" creationdate="20200127T024022Z">
+        <seg>x + y = 30 を出力します。</seg>
       </tuv>
     </tu>
     <tu>

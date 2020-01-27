@@ -853,7 +853,7 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"><p>This module implements a simple proc for opening URLs with the user's default browser.</p>
+  <p class="module-desc"><p>このモジュールはユーザのデフォルトブラウザで URL を開くプロシージャの実装です。</p>
 <p>この API は不安定です。</p>
 </p>
   <div class="section" id="6">
@@ -868,9 +868,9 @@ function main() {
 <dt><pre><span class="Keyword">proc</span> <a href="#openDefaultBrowser%2Cstring"><span class="Identifier">openDefaultBrowser</span></a><span class="Other">(</span><span class="Identifier">url</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>opens <tt class="docutils literal"><span class="pre">url</span></tt> with the user's default browser. This does not block.</p>
-<p>Under Windows, <tt class="docutils literal"><span class="pre">ShellExecute</span></tt> is used. Under Mac OS X the <tt class="docutils literal"><span class="pre">open</span></tt> command is used. Under Unix, it is checked if <tt class="docutils literal"><span class="pre">xdg-open</span></tt> exists and used if it does. Otherwise the environment variable <tt class="docutils literal"><span class="pre">BROWSER</span></tt> is used to determine the default browser to use.</p>
-<p>This proc doesn't raise an exception on error, beware.</p>
+<p>ユーザのデフォルトブラウザで <tt class="docutils literal"><span class="pre">url</span></tt> を開きます。これはブロックできません。</p>
+<p>Windows では、 <tt class="docutils literal"><span class="pre">ShellExecute</span></tt> を使います。Mac OS X では、 <tt class="docutils literal"><span class="pre">open</span></tt> コマンドを使います。Unix では、 <tt class="docutils literal"><span class="pre">xdg-open</span></tt> コマンドがあれば使います。さもなければ、環境変数 <tt class="docutils literal"><span class="pre">BROWSER</span></tt> で指定されたデフォルトブラウザを使います。</p>
+<p>このプロシージャのエラーでは例外処理が起きないことに、注意してください。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/browsers.nim#L22"
@@ -887,7 +887,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 Generated: 2019-11-27 09:15:51 UTC</small>
+        <small>Nim で作成しました。 生成日時: 2019年11月27日 午前09時15分51秒 (UTC)</small>
       </div>
     </div>
   </div>

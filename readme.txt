@@ -3,7 +3,7 @@
 --------
 Nim のライセンスに準ずるものとします。ただし、翻訳物にも著作権があります。
 また、主要翻訳者は一切の対価を得ていません。個人・法人などを問わず書面による
-事前許諾なしに商用利用、および就職・転職活動などでの経歴詐称など不正利用は固く禁じます。
+事前許諾なしに商用利用、および就職・転職活動などにおいて、経歴詐称など不正利用は固く禁じます。
 
 商業利用の場合は、必ず事前に許諾を得てください。
 その場合のプロジェクト支援の対価は任意であり強制ではありません。許諾だけでも励みになります。
@@ -13,22 +13,26 @@ Nim のライセンスに準ずるものとします。ただし、翻訳物にも著作権があります。
 作業記録
 --------
 対象バージョン : Nim 1.0.4
-作業対象ファイル : 完了: 13 - 合計 : 181 = 残り : 168
+作業対象ファイル : 完了: 17 - 合計 : 181 = 残り : 164
 
 仮訳完了:
+	browsers.html
 	cpuinfo.html
 	cpuload.html
 	docgen_sample.html
 	dom.html
 	jsconsole.html
 	koch.html
+	mersenne.html
 	nimtracker.html
 	oswalkdir.html
 	registry.html
 	time_t.html
 	util.html
 	wordwrap.html
-	mersenne.html
+	base64.html
+	sugar.html
+	endians.html
 
 寄贈者
 ------
@@ -40,6 +44,7 @@ Nim のライセンスに準ずるものとします。ただし、翻訳物にも著作権があります。
 事前に OSDN, OmegaT, TMX/TBX Editor, Git の使いかたを理解してくださるようお願いします。
 
 * OmegaT                 : https://www.omegat.org/
+* Okapi Framework        : 
 * Goldpan TMX/TBX Editor : https://logrusglobal.com/goldpan.html
 
 

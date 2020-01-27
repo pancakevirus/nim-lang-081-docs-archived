@@ -833,8 +833,8 @@ function main() {
   </div>
   <ul class="simple simple-toc" id="toc-list">
 <li><a class="reference" id="basic-usage_toc" href="#basic-usage">基本の用法</a></li>
-<ul class="simple"><li><a class="reference" id="basic-usage-encoding-data_toc" href="#basic-usage-encoding-data">Encoding data</a></li>
-<li><a class="reference" id="basic-usage-decoding-data_toc" href="#basic-usage-decoding-data">Decoding data</a></li>
+<ul class="simple"><li><a class="reference" id="basic-usage-encoding-data_toc" href="#basic-usage-encoding-data">データのエンコード</a></li>
+<li><a class="reference" id="basic-usage-decoding-data_toc" href="#basic-usage-decoding-data">データのデコード</a></li>
 </ul><li><a class="reference" id="see-also_toc" href="#see-also">関連</a></li>
 <li>
   <a class="reference reference-toplevel" href="#12" id="62">プロシージャ</a>
@@ -855,25 +855,25 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"><p>This module implements a base64 encoder and decoder.</p>
+  <p class="module-desc"><p>このモジュールは Base64 エンコーダーとデコーダーの実装です。</p>
 <p>この API は不安定です。</p>
-<p>Base64 is an encoding and decoding technique used to convert binary data to an ASCII string format. Each Base64 digit represents exactly 6 bits of data. Three 8-bit bytes (i.e., a total of 24 bits) can therefore be represented by four 6-bit Base64 digits.</p>
+<p>Base64 はバイナリデータから ASCII 文字列形式への変換に用いるエンコードとデコードの技術です。Base64 の各桁は必ず 6 bit データ表現になります。したがって、 3 桁の 8 bit バイト (つまり、合計 24 bit) は Base64 において 4 桁の 6 bit 表現になります。</p>
 
 <h1><a class="toc-backref" id="basic-usage" href="#basic-usage">基本の用法</a></h1>
-<h2><a class="toc-backref" id="basic-usage-encoding-data" href="#basic-usage-encoding-data">Encoding data</a></h2><pre class="listing"><span class="Keyword">import</span> <span class="Identifier">base64</span>
+<h2><a class="toc-backref" id="basic-usage-encoding-data" href="#basic-usage-encoding-data">データのエンコード</a></h2><pre class="listing"><span class="Keyword">import</span> <span class="Identifier">base64</span>
 <span class="Keyword">let</span> <span class="Identifier">encoded</span> <span class="Operator">=</span> <span class="Identifier">encode</span><span class="Punctuation">(</span><span class="StringLit">"Hello World"</span><span class="Punctuation">)</span>
-<span class="Identifier">assert</span> <span class="Identifier">encoded</span> <span class="Operator">==</span> <span class="StringLit">"SGVsbG8gV29ybGQ="</span></pre><p>Apart from strings you can also encode lists of integers or characters:</p>
+<span class="Identifier">assert</span> <span class="Identifier">encoded</span> <span class="Operator">==</span> <span class="StringLit">"SGVsbG8gV29ybGQ="</span></pre><p>文字列以外にも整数、または文字から成るリストをエンコードできます。</p>
 <pre class="listing"><span class="Keyword">import</span> <span class="Identifier">base64</span>
 <span class="Keyword">let</span> <span class="Identifier">encodedInts</span> <span class="Operator">=</span> <span class="Identifier">encode</span><span class="Punctuation">(</span><span class="Punctuation">[</span><span class="DecNumber">1</span><span class="Punctuation">,</span><span class="DecNumber">2</span><span class="Punctuation">,</span><span class="DecNumber">3</span><span class="Punctuation">]</span><span class="Punctuation">)</span>
 <span class="Identifier">assert</span> <span class="Identifier">encodedInts</span> <span class="Operator">==</span> <span class="StringLit">"AQID"</span>
 <span class="Keyword">let</span> <span class="Identifier">encodedChars</span> <span class="Operator">=</span> <span class="Identifier">encode</span><span class="Punctuation">(</span><span class="Punctuation">[</span><span class="CharLit">'h'</span><span class="Punctuation">,</span><span class="CharLit">'e'</span><span class="Punctuation">,</span><span class="CharLit">'y'</span><span class="Punctuation">]</span><span class="Punctuation">)</span>
 <span class="Identifier">assert</span> <span class="Identifier">encodedChars</span> <span class="Operator">==</span> <span class="StringLit">"aGV5"</span></pre>
-<h2><a class="toc-backref" id="basic-usage-decoding-data" href="#basic-usage-decoding-data">Decoding data</a></h2><pre class="listing"><span class="Keyword">import</span> <span class="Identifier">base64</span>
+<h2><a class="toc-backref" id="basic-usage-decoding-data" href="#basic-usage-decoding-data">データのデコード</a></h2><pre class="listing"><span class="Keyword">import</span> <span class="Identifier">base64</span>
 <span class="Keyword">let</span> <span class="Identifier">decoded</span> <span class="Operator">=</span> <span class="Identifier">decode</span><span class="Punctuation">(</span><span class="StringLit">"SGVsbG8gV29ybGQ="</span><span class="Punctuation">)</span>
 <span class="Identifier">assert</span> <span class="Identifier">decoded</span> <span class="Operator">==</span> <span class="StringLit">"Hello World"</span></pre>
-<h1><a class="toc-backref" id="see-also" href="#see-also">関連</a></h1><ul class="simple"><li><a class="reference external" href="hashes.html">hashes module</a> for efficient computations of hash values for diverse Nim types</li>
-<li><a class="reference external" href="md5.html">md5 module</a> implements the MD5 checksum algorithm</li>
-<li><a class="reference external" href="sha1.html">sha1 module</a> implements a sha1 encoder and decoder</li>
+<h1><a class="toc-backref" id="see-also" href="#see-also">関連</a></h1><ul class="simple"><li><a class="reference external" href="hashes.html">hashes モジュール</a> は様々な Nim 型で使える効率的なハッシュ値の算出方法</li>
+<li><a class="reference external" href="md5.html">md5 モジュール</a> MD5 チェックサム・アルゴリズムの実装</li>
+<li><a class="reference external" href="sha1.html">sha1 モジュール</a> SHA1 エンコーダーとデコーダーの実装</li>
 </ul>
 </p>
   <div class="section" id="12">
@@ -883,11 +883,11 @@ function main() {
 <dt><pre><span class="Keyword">proc</span> <a href="#encode%2CopenArray%5BT%5D%2Cint%2Cstring"><span class="Identifier">encode</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <a href="system.html#SomeInteger"><span class="Identifier">SomeInteger</span></a> <span class="Operator">|</span> <a href="system.html#char"><span class="Identifier">char</span></a><span class="Other">]</span><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#openArray"><span class="Identifier">openArray</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">lineLen</span> <span class="Other">=</span> <span class="DecNumber">75</span><span class="Other">;</span> <span class="Identifier">newLine</span> <span class="Other">=</span> <span class="StringLit">""</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a></pre></dt>
 <dd>
 
-<p>Encodes <tt class="docutils literal"><span class="pre">s</span></tt> into base64 representation. After <tt class="docutils literal"><span class="pre">lineLen</span></tt> characters, a <tt class="docutils literal"><span class="pre">newline</span></tt> is added.</p>
-<p>This procedure encodes an openarray (array or sequence) of either integers or characters.</p>
+<p>Base64 形式で <tt class="docutils literal"><span class="pre">s</span></tt> をエンコードします。<tt class="docutils literal"><span class="pre">lineLen</span></tt> 文字の後に、 <tt class="docutils literal"><span class="pre">newline</span></tt> (改行文字) を追加します。</p>
+<p>このプロシージャは整数、または文字から成る無蓋配列 (無蓋やシーケンス) をエンコードします。</p>
 <p><strong>関連:</strong></p>
-<ul class="simple"><li><a class="reference external" href="#encode,string,int,string">encode proc</a> for encoding a string</li>
-<li><a class="reference external" href="#decode,string">decode proc</a> for decoding a string</li>
+<ul class="simple"><li><a class="reference external" href="#encode,string,int,string">encode プロシージャ</a> は文字列のエンコードをします</li>
+<li><a class="reference external" href="#decode,string">decode プロシージャ</a> は文字列のデコードをします</li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -903,11 +903,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#encode%2Cstring%2Cint%2Cstring"><span class="Identifier">encode</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">lineLen</span> <span class="Other">=</span> <span class="DecNumber">75</span><span class="Other">;</span> <span class="Identifier">newLine</span> <span class="Other">=</span> <span class="StringLit">""</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Encodes <tt class="docutils literal"><span class="pre">s</span></tt> into base64 representation. After <tt class="docutils literal"><span class="pre">lineLen</span></tt> characters, a <tt class="docutils literal"><span class="pre">newline</span></tt> is added.</p>
-<p>This procedure encodes a string.</p>
+<p>Base64 形式で <tt class="docutils literal"><span class="pre">s</span></tt> をエンコードします。<tt class="docutils literal"><span class="pre">lineLen</span></tt> 文字の後に、 <tt class="docutils literal"><span class="pre">newline</span></tt> (改行文字) を追加します。</p>
+<p>このプロシージャは文字列をエンコードします。</p>
 <p><strong>関連:</strong></p>
-<ul class="simple"><li><a class="reference external" href="#encode,openArray[T],int,string">encode proc</a> for encoding an openarray</li>
-<li><a class="reference external" href="#decode,string">decode proc</a> for decoding a string</li>
+<ul class="simple"><li><a class="reference external" href="#encode,openArray[T],int,string">encode プロシージャ</a> は無蓋配列のエンコードをします</li>
+<li><a class="reference external" href="#decode,string">decode プロシージャ</a> は文字列のデコードをします</li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -922,10 +922,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#decode%2Cstring"><span class="Identifier">decode</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Decodes string <tt class="docutils literal"><span class="pre">s</span></tt> in base64 representation back into its original form. The initial whitespace is skipped.</p>
+<p>Base64 形式の文字列 <tt class="docutils literal"><span class="pre">s</span></tt> をデコードして元形式へ復元します。頭文字にあるホワイトスペースは無視します。</p>
 <p><strong>関連:</strong></p>
-<ul class="simple"><li><a class="reference external" href="#encode,openArray[T]">encode proc</a> for encoding an openarray</li>
-<li><a class="reference external" href="#encode,string">encode proc</a> for encoding a string</li>
+<ul class="simple"><li><a class="reference external" href="#encode,openArray[T]">encode プロシージャ</a> は無蓋配列のエンコードをします</li>
+<li><a class="reference external" href="#encode,string">encode プロシージャ</a> は文字列のエンコードをします</li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -946,7 +946,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 Generated: 2019-11-27 09:16:04 UTC</small>
+        <small>Nim で作成しました。 生成日時: 2019年11月27日 午前09時16分04秒 (UTC)</small>
       </div>
     </div>
   </div>

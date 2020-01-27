@@ -29,3 +29,17 @@ wordwrap	ワードラップ
 string	文字列
 module	モジュール
 algorithm	アルゴリズム
+Encodes	エンコード
+representation	形式	表現
+base64	Base64
+characters	文字
+openarray	無蓋配列	openarray のこと。 Dephi言語ではオープン配列、ほかの言語では可変長配列を指す。「無蓋」の出典は「ニューセンチュリー英和辞典」より。
+array	配列	アレイ、アレー
+syntactic sugar	シンタックスシュガー	糖衣構文
+macro	マクロ
+system	システム
+implements	実装
+Syntax sugar	シンタックスシュガー
+anonymous procedures	無名プロシージャ
+procedure types	プロシージャ型
+tree representing	ツリー構造	represent(ing)が何を指しているのか考えること。
