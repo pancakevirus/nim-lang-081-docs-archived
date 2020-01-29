@@ -978,13 +978,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#excl%2CCritBitTree%5BT%5D%2Cstring"><span class="Identifier">excl</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span></pre></dt>
 <dd>
 
-
-
-removes <tt class="docutils literal"><span class="pre">key</span></tt> (and its associated value) from the set <tt class="docutils literal"><span class="pre">c</span></tt>. If the <tt class="docutils literal"><span class="pre">key</span></tt> does not exist, nothing happens.
-&nbsp;&nbsp;<a
+removes <tt class="docutils literal"><span class="pre">key</span></tt> (and its associated value) from the set <tt class="docutils literal"><span class="pre">c</span></tt>. If the <tt class="docutils literal"><span class="pre">key</span></tt> does not exist, nothing happens. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/collections/critbits.nim#L132"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L132" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L132" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="missingOrExcl,CritBitTree[T],string"></a>
@@ -1000,26 +996,18 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#containsOrIncl%2CCritBitTree%5BT%5D%2Cstring%2CT"><span class="Identifier">containsOrIncl</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">val</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a></pre></dt>
 <dd>
 
-
-
-returns true iff <tt class="docutils literal"><span class="pre">c</span></tt> contains the given <tt class="docutils literal"><span class="pre">key</span></tt>. If the key does not exist <tt class="docutils literal"><span class="pre">c[key] = val</span></tt> is performed.
-&nbsp;&nbsp;<a
+returns true iff <tt class="docutils literal"><span class="pre">c</span></tt> contains the given <tt class="docutils literal"><span class="pre">key</span></tt>. If the key does not exist <tt class="docutils literal"><span class="pre">c[key] = val</span></tt> is performed. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/collections/critbits.nim#L144"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L144" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L144" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="containsOrIncl,CritBitTree[void],string"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#containsOrIncl%2CCritBitTree%5Bvoid%5D%2Cstring"><span class="Identifier">containsOrIncl</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><a href="system.html#void"><span class="Identifier">void</span></a><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns true iff <tt class="docutils literal"><span class="pre">c</span></tt> contains the given <tt class="docutils literal"><span class="pre">key</span></tt>. If the key does not exist it is inserted into <tt class="docutils literal"><span class="pre">c</span></tt>.
-&nbsp;&nbsp;<a
+returns true iff <tt class="docutils literal"><span class="pre">c</span></tt> contains the given <tt class="docutils literal"><span class="pre">key</span></tt>. If the key does not exist it is inserted into <tt class="docutils literal"><span class="pre">c</span></tt>. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/collections/critbits.nim#L153"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L153" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L153" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="inc,CritBitTree[int],string,int"></a>
@@ -1044,13 +1032,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#incl%2CCritBitTree%5BT%5D%2Cstring%2CT"><span class="Identifier">incl</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">val</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span></pre></dt>
 <dd>
 
-
-
-inserts <tt class="docutils literal"><span class="pre">key</span></tt> with value <tt class="docutils literal"><span class="pre">val</span></tt> into <tt class="docutils literal"><span class="pre">c</span></tt>.
-&nbsp;&nbsp;<a
+inserts <tt class="docutils literal"><span class="pre">key</span></tt> with value <tt class="docutils literal"><span class="pre">val</span></tt> into <tt class="docutils literal"><span class="pre">c</span></tt>. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/collections/critbits.nim#L169"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L169" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L169" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="[]=,CritBitTree[T],string,T"></a>

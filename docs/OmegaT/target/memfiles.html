@@ -1061,26 +1061,18 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#flush%2CMemFile%2CNatural"><span class="Identifier">flush</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="memfiles.html#MemFile"><span class="Identifier">MemFile</span></a><span class="Other">;</span> <span class="Identifier">attempts</span><span class="Other">:</span> <a href="system.html#Natural"><span class="Identifier">Natural</span></a> <span class="Other">=</span> <span class="DecNumber">3</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">OSError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Flushes <tt class="docutils literal"><span class="pre">f</span></tt>'s buffer for the number of attempts equal to <tt class="docutils literal"><span class="pre">attempts</span></tt>. If were errors an exception <tt class="docutils literal"><span class="pre">OSError</span></tt> will be raised.
-&nbsp;&nbsp;<a
+Flushes <tt class="docutils literal"><span class="pre">f</span></tt>'s buffer for the number of attempts equal to <tt class="docutils literal"><span class="pre">attempts</span></tt>. If were errors an exception <tt class="docutils literal"><span class="pre">OSError</span></tt> will be raised. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/memfiles.nim#L280"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/memfiles.nim#L280" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/memfiles.nim#L280" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="resize,MemFile,int"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#resize%2CMemFile%2Cint"><span class="Identifier">resize</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="memfiles.html#MemFile"><span class="Identifier">MemFile</span></a><span class="Other">;</span> <span class="Identifier">newFileSize</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><a href="system.html#IOError"><span class="Identifier">IOError</span></a><span class="Other">,</span> <a href="system.html#OSError"><span class="Identifier">OSError</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-resize and re-map the file underlying an <tt class="docutils literal"><span class="pre">allowRemap MemFile</span></tt>. <strong>Note</strong>: this assumes the entire file is mapped read-write at offset zero. Also, the value of <tt class="docutils literal"><span class="pre">.mem</span></tt> will probably change. <strong>Note</strong>: This is not (yet) available on Windows.
-&nbsp;&nbsp;<a
+resize and re-map the file underlying an <tt class="docutils literal"><span class="pre">allowRemap MemFile</span></tt>. <strong>Note</strong>: this assumes the entire file is mapped read-write at offset zero. Also, the value of <tt class="docutils literal"><span class="pre">.mem</span></tt> will probably change. <strong>Note</strong>: This is not (yet) available on Windows. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/memfiles.nim#L303"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/memfiles.nim#L303" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/memfiles.nim#L303" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="close,MemFile"></a>

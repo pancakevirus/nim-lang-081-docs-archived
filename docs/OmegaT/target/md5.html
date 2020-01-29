@@ -872,10 +872,10 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"><p>Module for computing <a class="reference external" href="https://en.wikipedia.org/wiki/MD5">MD5 checksums</a>.</p>
+  <p class="module-desc"><p><a class="reference external" href="https://en.wikipedia.org/wiki/MD5">MD5 チェックサム</a>の計算で使えるモジュールです。</p>
 <p><strong>関連:</strong></p>
-<ul class="simple"><li><a class="reference external" href="base64.html">base64 module</a> implements a base64 encoder and decoder</li>
-<li><a class="reference external" href="sha1.html">std/sha1 module</a> for a sha1 encoder and decoder</li>
+<ul class="simple"><li><a class="reference external" href="base64.html">base64 モジュール</a> は Base64 エンコーダーとデコーダーの実装</li>
+<li><a class="reference external" href="sha1.html">std/sha1 モジュール</a> は SHA1 エンコーダーとデコーダーの実装</li>
 <li><a class="reference external" href="hashes.html">hashes モジュール</a> は様々な Nim 型で使える効率的なハッシュ値の算出方法</li>
 </ul>
 </p>
@@ -887,14 +887,9 @@ function main() {
 <dd>
 
 
-
-
-
-MD5 checksum of a string, obtained with <a class="reference external" href="#toMD5,string">toMD5 proc</a>.
-&nbsp;&nbsp;<a
+<a class="reference external" href="#toMD5,string">toMD5 プロシージャ</a> で得られる文字列の MD5 チェックサムです。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/md5.nim#L25"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/md5.nim#L25" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/md5.nim#L25" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="MD5Context"></a>
@@ -920,10 +915,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#toMD5%2Cstring"><span class="Identifier">toMD5</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="md5.html#MD5Digest"><span class="Identifier">MD5Digest</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Computes the <tt class="docutils literal"><span class="pre">MD5Digest</span></tt> value for a string <tt class="docutils literal"><span class="pre">s</span></tt>.</p>
+<p>文字列 <tt class="docutils literal"><span class="pre">s</span></tt> の <tt class="docutils literal"><span class="pre">MD5Digest</span></tt> 値を算出します。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#getMD5,string">getMD5 proc</a> which returns a string representation of the <tt class="docutils literal"><span class="pre">MD5Digest</span></tt></li>
-<li><a class="reference external" href="#$,MD5Digest">$ proc</a> for converting MD5Digest to string</li>
+<ul class="simple"><li><a class="reference external" href="#getMD5,string">getMD5 プロシージャ</a> は <tt class="docutils literal"><span class="pre">MD5Digest</span></tt> を文字列形式で返します。</li>
+<li><a class="reference external" href="#$,MD5Digest">$ プロシージャ</a> は MD5Digest を文字列へ変換します。</li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -937,7 +932,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2CMD5Digest"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">d</span><span class="Other">:</span> <a href="md5.html#MD5Digest"><span class="Identifier">MD5Digest</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Converts a <tt class="docutils literal"><span class="pre">MD5Digest</span></tt> value into its string representation. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">MD5Digest</span></tt> 値を文字列形式へ変換します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/md5.nim#L195"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/md5.nim#L195" class="link-seesrc" target="_blank" >編集</a>
 
@@ -946,9 +941,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#getMD5%2Cstring"><span class="Identifier">getMD5</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Computes an MD5 value of <tt class="docutils literal"><span class="pre">s</span></tt> and returns its string representation. .. note:: available at compile time</p>
+<p><tt class="docutils literal"><span class="pre">s</span></tt> の MD5 値を算出して文字列形式で返します。 
+.. 備考:: コンパイル時に利用可能です</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#toMD5,string">toMD5 proc</a> which returns the <tt class="docutils literal"><span class="pre">MD5Digest</span></tt> of a string</li>
+<ul class="simple"><li><a class="reference external" href="#toMD5,string">toMD5 プロシージャ</a> は文字列の <tt class="docutils literal"><span class="pre">MD5Digest</span></tt> を返します</li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -962,7 +958,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%3D%3D%2CMD5Digest%2CMD5Digest"><span class="Identifier">`==`</span></a><span class="Other">(</span><span class="Identifier">D1</span><span class="Other">,</span> <span class="Identifier">D2</span><span class="Other">:</span> <a href="md5.html#MD5Digest"><span class="Identifier">MD5Digest</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Checks if two <tt class="docutils literal"><span class="pre">MD5Digest</span></tt> values are identical. &nbsp;&nbsp;<a
+双方の <tt class="docutils literal"><span class="pre">MD5Digest</span></tt> 値が同一値であるか確認します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/md5.nim#L221"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/md5.nim#L221" class="link-seesrc" target="_blank" >編集</a>
 
@@ -971,8 +967,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#md5Init%2CMD5Context"><span class="Identifier">md5Init</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="md5.html#MD5Context"><span class="Identifier">MD5Context</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">gcsafe</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Initializes a <tt class="docutils literal"><span class="pre">MD5Context</span></tt>.</p>
-<p>If you use <a class="reference external" href="#toMD5,string">toMD5 proc</a> there's no need to call this function explicitly.</p>
+<p><tt class="docutils literal"><span class="pre">MD5Context</span></tt> を初期化します。</p>
+<p>この関数は <a class="reference external" href="#toMD5,string">toMD5 プロシージャ</a> を使うときは明示的に呼び出す必要はありません。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/md5.nim#L228"
@@ -983,8 +979,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#md5Update%2CMD5Context%2Ccstring%2Cint"><span class="Identifier">md5Update</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="md5.html#MD5Context"><span class="Identifier">MD5Context</span></a><span class="Other">;</span> <span class="Identifier">input</span><span class="Other">:</span> <a href="system.html#cstring"><span class="Identifier">cstring</span></a><span class="Other">;</span> <span class="Identifier">len</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">gcsafe</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Updates the <tt class="docutils literal"><span class="pre">MD5Context</span></tt> with the <tt class="docutils literal"><span class="pre">input</span></tt> data of length <tt class="docutils literal"><span class="pre">len</span></tt>.</p>
-<p>If you use <a class="reference external" href="#toMD5,string">toMD5 proc</a> there's no need to call this function explicitly.</p>
+<p><tt class="docutils literal"><span class="pre">input</span></tt> データの長さ <tt class="docutils literal"><span class="pre">len</span></tt> を用いて <tt class="docutils literal"><span class="pre">MD5Context</span></tt> を更新します。</p>
+<p>この関数は <a class="reference external" href="#toMD5,string">toMD5 プロシージャ</a> を使うときは明示的に呼び出す必要はありません。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/md5.nim#L241"
@@ -995,8 +991,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#md5Final%2CMD5Context%2CMD5Digest"><span class="Identifier">md5Final</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="md5.html#MD5Context"><span class="Identifier">MD5Context</span></a><span class="Other">;</span> <span class="Identifier">digest</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="md5.html#MD5Digest"><span class="Identifier">MD5Digest</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">gcsafe</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Finishes the <tt class="docutils literal"><span class="pre">MD5Context</span></tt> and stores the result in <tt class="docutils literal"><span class="pre">digest</span></tt>.</p>
-<p>If you use <a class="reference external" href="#toMD5,string">toMD5 proc</a> there's no need to call this function explicitly.</p>
+<p><tt class="docutils literal"><span class="pre">MD5Context</span></tt> の生成後の結果を <tt class="docutils literal"><span class="pre">digest</span></tt> へ格納します。</p>
+<p>この関数は <a class="reference external" href="#toMD5,string">toMD5 プロシージャ</a> を使うときは明示的に呼び出す必要はありません。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/md5.nim#L263"

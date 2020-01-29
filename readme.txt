@@ -1,4 +1,5 @@
 
+
 ライセンス
 --------
 Nim のライセンスに準ずるものとします。ただし、翻訳物にも著作権があります。
@@ -9,51 +10,82 @@ Nim のライセンスに準ずるものとします。ただし、翻訳物にも著作権があります。
 その場合のプロジェクト支援の対価は任意であり強制ではありません。許諾だけでも励みになります。
 
 
-
 作業記録
 --------
 対象バージョン : Nim 1.0.4
-作業対象ファイル : 完了: 17 - 合計 : 181 = 残り : 164
+作業対象ファイル : 完了: 21 - 合計 : 181 = 残り : 160
 
 仮訳完了:
+	base64.html
 	browsers.html
 	cpuinfo.html
 	cpuload.html
 	docgen_sample.html
 	dom.html
+	endians.html
 	jsconsole.html
+	jscore.html
 	koch.html
+	md5.html
 	mersenne.html
 	nimtracker.html
 	oswalkdir.html
+	punycode.html
 	registry.html
+	sha1.html
+	sugar.html
 	time_t.html
 	util.html
 	wordwrap.html
-	base64.html
-	sugar.html
-	endians.html
-
-寄贈者
-------
-・主要翻訳者: isVowel (Twitter: @isvowel)
 
 
 翻訳活動への参加方法
 --------------------
-事前に OSDN, OmegaT, TMX/TBX Editor, Git の使いかたを理解してくださるようお願いします。
+1. 事前に ツール (OSDN, OmegaT, TMX/TBX Editor, Git など) の使いかたを理解してくださるようお願いします。
 
-* OmegaT                 : https://www.omegat.org/
-* Okapi Framework        : 
-* Goldpan TMX/TBX Editor : https://logrusglobal.com/goldpan.html
-
-
-内輪揉めをしているほど人生は暇ではありません。利用者の混乱を避けるため、フォークの乱立は避けてください。
+* OmegaT (4.3.1 以降。ただし安定版のみ)                 : https://www.omegat.org/
+* Okapi Framework (6.038 以降)                          : https://okapiframework.org/
+* Rogrus Global Goldpan TBX/TMX Editor (3.3 以降)       : https://logrusglobal.com/goldpan.html
+* BusyBox                                               : 
 
 
 翻訳活動への参加方法 (注意点)
 -----------------------------
+
+内輪揉めをしているほど人生は暇ではありません。利用者の混乱を避けるため、フォークの乱立は避けてください。
+
 * 原則として OmegaT 形式以外でのコミットは受け付けておりません。大変お手数ですが、変換をしてからお願いします。
-* LogoVista コリャ英和形式でのコミットはご相談ください。
-* Google翻訳などウェブ翻訳サービスを使用した訳出結果のコミットはライセンス規約上の問題以外にも、ニューラル翻訳特有の問題があります。正確さを保証・検証できないため使用を禁止させていただいております。
+* 主要翻訳者、および関係者へメールで送られても対応できません。
+* LogoVista コリャ英和形式、およびそれ以外の形式によるコミットはご相談ください。
+* Google翻訳などウェブ翻訳サービスを使用した訳出結果のコミットはライセンス規約上の問題以外にも、
+  ニューラル翻訳特有の問題があります。正確さを保証・検証できないため使用を禁止させていただいております。
+
+
+LogoVista コリャ英和！  一発翻訳形式 (krydoc)
+---------------------------------------------
+OmegaT版 (Nim 1.0.4)では全翻訳・仮訳完了を優先していますが、
+この形式は最新安定版 (Nim 1.0.6) の機械翻訳版となります。
+
+閲覧と編集には「LogoVista コリャ英和！  一発翻訳 2020」以降が必要です。
+捨て値で手に入りやすい「LogoVista コリャ英和！  一発翻訳 2009 」以降での編集はできますが、
+環境によってロックされた文節を編集しようとすると落ちたり、ツールバーが吹っ飛んだりするバグが潜んでいますので
+お勧めしません。
+
+この形式のファイルは下記フォルダに収録してあります。
+
+* nim/docs/LogoVista/*
+
+この形式の作業優先順位は高くありません。
+1MB 程度の訳文を編集するだけでも翻訳スタジオの動作がかなり遅い。さらに訳出精度が悪すぎる上、ポストエディットと改訳にも手間がかかりすぎます。
+また、ファイル翻訳には致命的なバグがあり、特定の Nim ドキュメントを処理対象にするとハングアップします。そのたびにワークアラウンドを実行するのはかなりきついです。
+
+注意: 
+主要翻訳者によるコリャ英和の使用は Nim を以て終了となるため、この形式の更新は OmegaT 版の全仮訳完了後に終了となります (Nim 1.0.8 ～ 1.0.10 公開後の予定)。
+
+備考: krydoc 形式の実態は zip ファイルです。 SrcText (原文), TrgText (訳文) からテキストファイルを取り出すことができます。よって、テキストエディタで修正後に bysybox (paste コマンド)、アライメントツールなどを使って tmx へ変換することは可能です 。
+
+
+寄贈者
+------
+・主要翻訳者: isVowel (Twitter: @isvowel)
 

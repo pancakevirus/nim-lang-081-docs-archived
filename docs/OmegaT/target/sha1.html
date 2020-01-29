@@ -882,8 +882,8 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"><p><strong>Note:</strong> Import <tt class="docutils literal"><span class="pre">std/sha1</span></tt> to use this module</p>
-<p>SHA-1 (Secure Hash Algorithm 1) is a cryptographic hash function which takes an input and produces a 160-bit (20-byte) hash value known as a message digest.</p>
+  <p class="module-desc"><p><strong>備考:</strong> このモジュールを使うには <tt class="docutils literal"><span class="pre">std/sha1</span></tt> をインポートしてください。</p>
+<p>SHA-1 (Secure Hash Algorithm 1) はメッセージダイジェストとして知られている 160-bit (20-byte) によるハッシュ値の入力と生成を処理する暗号化ハッシュ関数です。</p>
 <pre class="listing"><span class="Keyword">import</span> <span class="Identifier">std</span><span class="Operator">/</span><span class="Identifier">sha1</span>
 
 <span class="Keyword">let</span> <span class="Identifier">accessName</span> <span class="Operator">=</span> <span class="Identifier">secureHash</span><span class="Punctuation">(</span><span class="StringLit">"John Doe"</span><span class="Punctuation">)</span>
@@ -895,7 +895,7 @@ function main() {
 
 <span class="Keyword">if</span> <span class="Identifier">a</span> <span class="Operator">==</span> <span class="Identifier">b</span><span class="Punctuation">:</span>
   <span class="Identifier">echo</span> <span class="StringLit">"Files match"</span></pre><p><strong>関連:</strong></p>
-<ul class="simple"><li><a class="reference external" href="base64.html">base64 module</a> implements a base64 encoder and decoder</li>
+<ul class="simple"><li><a class="reference external" href="base64.html">base64 モジュール</a> は Base64 エンコーダーとデコーダーの実装</li>
 <li><a class="reference external" href="hashes.html">hashes モジュール</a> は様々な Nim 型で使える効率的なハッシュ値の算出方法</li>
 <li><a class="reference external" href="md5.html">md5 モジュール</a> MD5 チェックサム・アルゴリズムの実装</li>
 </ul>
@@ -981,10 +981,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#secureHash%2CopenArray%5Bchar%5D"><span class="Identifier">secureHash</span></a><span class="Other">(</span><span class="Identifier">str</span><span class="Other">:</span> <a href="system.html#openArray"><span class="Identifier">openArray</span></a><span class="Other">[</span><a href="system.html#char"><span class="Identifier">char</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="sha1.html#SecureHash"><span class="Identifier">SecureHash</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Generates a <tt class="docutils literal"><span class="pre">SecureHash</span></tt> from a <tt class="docutils literal"><span class="pre">str</span></tt>.</p>
+<p><tt class="docutils literal"><span class="pre">str</span></tt> から <tt class="docutils literal"><span class="pre">SecureHash</span></tt> を生成します。</p>
 <p><strong>関連:</strong></p>
-<ul class="simple"><li><a class="reference external" href="#secureHashFile,string">secureHashFile proc</a> for generating a <tt class="docutils literal"><span class="pre">SecureHash</span></tt> from a file</li>
-<li><a class="reference external" href="#parseSecureHash,string">parseSecureHash proc</a> for converting a string <tt class="docutils literal"><span class="pre">hash</span></tt> to <tt class="docutils literal"><span class="pre">SecureHash</span></tt></li>
+<ul class="simple"><li><a class="reference external" href="#secureHashFile,string">secureHashFile プロシージャ</a> はファイルから <tt class="docutils literal"><span class="pre">SecureHash</span></tt> を生成します</li>
+<li><a class="reference external" href="#parseSecureHash,string">parseSecureHash プロシージャ</a> は文字列 <tt class="docutils literal"><span class="pre">hash</span></tt> を <tt class="docutils literal"><span class="pre">SecureHash</span></tt> へ変換します</li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1000,10 +1000,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Generates a <tt class="docutils literal"><span class="pre">SecureHash</span></tt> from a file.</p>
+<p>ファイルから <tt class="docutils literal"><span class="pre">SecureHash</span></tt> を生成します。</p>
 <p><strong>関連:</strong></p>
-<ul class="simple"><li><a class="reference external" href="#secureHash,openArray[char]">secureHash proc</a> for generating a <tt class="docutils literal"><span class="pre">SecureHash</span></tt> from a string</li>
-<li><a class="reference external" href="#parseSecureHash,string">parseSecureHash proc</a> for converting a string <tt class="docutils literal"><span class="pre">hash</span></tt> to <tt class="docutils literal"><span class="pre">SecureHash</span></tt></li>
+<ul class="simple"><li><a class="reference external" href="#secureHash,openArray[char]">secureHash プロシージャ</a> は文字列から <tt class="docutils literal"><span class="pre">SecureHash</span></tt>  を生成します</li>
+<li><a class="reference external" href="#parseSecureHash,string">parseSecureHash プロシージャ</a> は文字列 <tt class="docutils literal"><span class="pre">hash</span></tt> を <tt class="docutils literal"><span class="pre">SecureHash</span></tt> へ変換します</li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1015,9 +1015,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2CSecureHash"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">self</span><span class="Other">:</span> <a href="sha1.html#SecureHash"><span class="Identifier">SecureHash</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Returns the string representation of a <tt class="docutils literal"><span class="pre">SecureHash</span></tt>.</p>
+<p><tt class="docutils literal"><span class="pre">SecureHash</span></tt> 形式の文字列を返します。</p>
 <p><strong>関連:</strong></p>
-<ul class="simple"><li><a class="reference external" href="#secureHash,openArray[char]">secureHash proc</a> for generating a <tt class="docutils literal"><span class="pre">SecureHash</span></tt> from a string</li>
+<ul class="simple"><li><a class="reference external" href="#secureHash,openArray[char]">secureHash プロシージャ</a> は文字列から <tt class="docutils literal"><span class="pre">SecureHash</span></tt>  を生成します</li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1032,10 +1032,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#parseSecureHash%2Cstring"><span class="Identifier">parseSecureHash</span></a><span class="Other">(</span><span class="Identifier">hash</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="sha1.html#SecureHash"><span class="Identifier">SecureHash</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Converts a string <tt class="docutils literal"><span class="pre">hash</span></tt> to <tt class="docutils literal"><span class="pre">SecureHash</span></tt>.</p>
+<p>文字列 <tt class="docutils literal"><span class="pre">hash</span></tt> を <tt class="docutils literal"><span class="pre">SecureHash</span></tt> へ変換します。</p>
 <p><strong>関連:</strong></p>
-<ul class="simple"><li><a class="reference external" href="#secureHash,openArray[char]">secureHash proc</a> for generating a <tt class="docutils literal"><span class="pre">SecureHash</span></tt> from a string</li>
-<li><a class="reference external" href="#secureHashFile,string">secureHashFile proc</a> for generating a <tt class="docutils literal"><span class="pre">SecureHash</span></tt> from a file</li>
+<ul class="simple"><li><a class="reference external" href="#secureHash,openArray[char]">secureHash プロシージャ</a> は文字列から <tt class="docutils literal"><span class="pre">SecureHash</span></tt>  を生成します</li>
+<li><a class="reference external" href="#secureHashFile,string">secureHashFile プロシージャ</a> はファイルから <tt class="docutils literal"><span class="pre">SecureHash</span></tt> を生成します</li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1052,10 +1052,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%3D%3D%2CSecureHash%2CSecureHash"><span class="Identifier">`==`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="sha1.html#SecureHash"><span class="Identifier">SecureHash</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Checks if two <tt class="docutils literal"><span class="pre">SecureHash</span></tt> values are identical.
-
+双方の <tt class="docutils literal"><span class="pre">SecureHash</span></tt> 値が同一値であるか確認します。
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">let</span>
   <span class="Identifier">a</span> <span class="Other">=</span> <span class="Identifier">secureHash</span><span class="Other">(</span><span class="StringLit">"Hello World"</span><span class="Other">)</span>

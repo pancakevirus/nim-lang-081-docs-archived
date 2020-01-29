@@ -94,10 +94,26 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>$ proc<ept i="0">&lt;/a0&gt;</ept> for converting MD5Digest to string</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200129T095343Z" creationid="isVowel" creationdate="20200129T095343Z">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>$ プロシージャ<ept i="0">&lt;/a0&gt;</ept> は MD5Digest を文字列へ変換します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>Source<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>Edit<ept i="1">&lt;/a1&gt;</ept></seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T043229Z" creationid="isVowel" creationdate="20200113T043229Z">
         <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>ソース<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>編集<ept i="1">&lt;/a1&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>base64 module<ept i="0">&lt;/a0&gt;</ept> implements a base64 encoder and decoder</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T085428Z" creationid="isVowel" creationdate="20200127T085428Z">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>base64 モジュール<ept i="0">&lt;/a0&gt;</ept> は Base64 エンコーダーとデコーダーの実装</seg>
       </tuv>
     </tu>
     <tu>
@@ -126,6 +142,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>getMD5 proc<ept i="0">&lt;/a0&gt;</ept> which returns a string representation of the <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>MD5Digest<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200129T095310Z" creationid="isVowel" creationdate="20200129T095310Z">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>getMD5 プロシージャ<ept i="0">&lt;/a0&gt;</ept> は <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>MD5Digest<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept> を文字列形式で返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>hashes module<ept i="0">&lt;/a0&gt;</ept> for efficient computations of hash values for diverse Nim types</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200126T031616Z" creationid="isVowel" creationdate="20200125T143559Z">
@@ -138,6 +162,30 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200123T075609Z" creationid="isVowel" creationdate="20200123T075609Z">
         <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>md5 モジュール<ept i="0">&lt;/a0&gt;</ept> MD5 チェックサム・アルゴリズムの実装</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>parseSecureHash proc<ept i="0">&lt;/a0&gt;</ept> for converting a string <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>hash<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept> to <bpt i="3" x="3">&lt;t3&gt;</bpt><bpt i="4" x="4">&lt;s4&gt;</bpt>SecureHash<ept i="4">&lt;/s4&gt;</ept><ept i="3">&lt;/t3&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T091214Z" creationid="isVowel" creationdate="20200127T091214Z">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>parseSecureHash プロシージャ<ept i="0">&lt;/a0&gt;</ept> は文字列 <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>hash<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept> を <bpt i="3" x="3">&lt;t3&gt;</bpt><bpt i="4" x="4">&lt;s4&gt;</bpt>SecureHash<ept i="4">&lt;/s4&gt;</ept><ept i="3">&lt;/t3&gt;</ept> へ変換します</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>secureHash proc<ept i="0">&lt;/a0&gt;</ept> for generating a <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>SecureHash<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept> from a string</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T091325Z" creationid="isVowel" creationdate="20200127T091325Z">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>secureHash プロシージャ<ept i="0">&lt;/a0&gt;</ept> は文字列から <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>SecureHash<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept>  を生成します</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>secureHashFile proc<ept i="0">&lt;/a0&gt;</ept> for generating a <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>SecureHash<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept> from a file</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T090654Z" creationid="isVowel" creationdate="20200127T090654Z">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>secureHashFile プロシージャ<ept i="0">&lt;/a0&gt;</ept> はファイルから <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>SecureHash<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept> を生成します</seg>
       </tuv>
     </tu>
     <tu>
@@ -158,10 +206,26 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>std/sha1 module<ept i="0">&lt;/a0&gt;</ept> for a sha1 encoder and decoder</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T143929Z" creationid="isVowel" creationdate="20200127T143929Z">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>std/sha1 モジュール<ept i="0">&lt;/a0&gt;</ept> は SHA1 エンコーダーとデコーダーの実装</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>tables module<ept i="0">&lt;/a0&gt;</ept> for sorting tables</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T044042Z" creationid="isVowel" creationdate="20200113T044042Z">
         <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>tables モジュール<ept i="0">&lt;/a0&gt;</ept> for sorting tables</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>toMD5 proc<ept i="0">&lt;/a0&gt;</ept> which returns the <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>MD5Digest<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept> of a string</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200129T095528Z" creationid="isVowel" creationdate="20200129T095524Z">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>toMD5 プロシージャ<ept i="0">&lt;/a0&gt;</ept> は文字列の <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>MD5Digest<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept> を返します</seg>
       </tuv>
     </tu>
     <tu>
@@ -324,6 +388,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200122T121340Z" creationid="isVowel" creationdate="20200122T121340Z">
         <seg><bpt i="0" x="0">&lt;s0&gt;</bpt>備考:<ept i="0">&lt;/s0&gt;</ept> このモジュールを使うには <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>packages/docutils/highlite<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept> をインポートしてください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;s0&gt;</bpt>Note:<ept i="0">&lt;/s0&gt;</ept> Import <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>std/sha1<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept> to use this module</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T085629Z" creationid="isVowel" creationdate="20200127T085629Z">
+        <seg><bpt i="0" x="0">&lt;s0&gt;</bpt>備考:<ept i="0">&lt;/s0&gt;</ept> このモジュールを使うには <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>std/sha1<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept> をインポートしてください。</seg>
       </tuv>
     </tu>
     <tu>
@@ -760,6 +832,22 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Checks if two <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>MD5Digest<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> values are identical.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200129T095618Z" creationid="isVowel" creationdate="20200129T095618Z">
+        <seg>双方の <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>MD5Digest<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> 値が同一値であるか確認します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Checks if two <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>SecureHash<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> values are identical.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T092309Z" creationid="isVowel" creationdate="20200127T092209Z">
+        <seg>双方の <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>SecureHash<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> 値が同一値であるか確認します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Closures</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200115T031305Z" creationid="isVowel" creationdate="20200115T031305Z">
@@ -825,6 +913,23 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Computes an MD5 value of <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>s<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> and returns its string representation.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200129T095426Z" creationid="isVowel" creationdate="20200129T095426Z">
+        <seg><bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>s<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> の MD5 値を算出して文字列形式で返します。 
+</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Computes the <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>MD5Digest<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> value for a string <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>s<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200129T095238Z" creationid="isVowel" creationdate="20200129T095238Z">
+        <seg>文字列 <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>s<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> の <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>MD5Digest<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> 値を算出します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Const section</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200115T024452Z" creationid="isVowel" creationdate="20200115T024452Z">
@@ -873,6 +978,22 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Converts a <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>MD5Digest<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> value into its string representation.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200129T095405Z" creationid="isVowel" creationdate="20200129T095405Z">
+        <seg><bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>MD5Digest<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> 値を文字列形式へ変換します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Converts a string <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>hash<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> to <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>SecureHash<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T091759Z" creationid="isVowel" creationdate="20200127T091634Z">
+        <seg>文字列 <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>hash<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> を <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>SecureHash<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> へ変換します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Create a new empty heap.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200123T023155Z" creationid="isVowel" creationdate="20200123T023155Z">
@@ -894,6 +1015,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200122T083333Z" creationid="isVowel" creationdate="20200122T082918Z">
         <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>JavaScript バックエンド<ept i="0">&lt;/a0&gt;</ept> で使えるドキュメント・オブジェクト・モデル (DOM: Document Object Model) の宣言です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Decode a Punycode-encoded string   <bpt i="0" x="0">&lt;a0&gt;</bpt>Source<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>Edit<ept i="1">&lt;/a1&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T081446Z" creationid="isVowel" creationdate="20200127T081446Z">
+        <seg>Punycode エンコード文字列のデコードをします   <bpt i="0" x="0">&lt;a0&gt;</bpt>ソース<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>編集<ept i="1">&lt;/a1&gt;</ept></seg>
       </tuv>
     </tu>
     <tu>
@@ -1026,6 +1155,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Encode a string that may contain Unicode.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T081754Z" creationid="isVowel" creationdate="20200127T081657Z">
+        <seg>Unicode 文字列のエンコードをします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Encodes <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>s<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> into base64 representation.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200125T142846Z" creationid="isVowel" creationdate="20200125T142800Z">
@@ -1142,6 +1279,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T083615Z" creationid="isVowel" creationdate="20200114T083615Z">
         <seg>Extern プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Finishes the <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>MD5Context<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> and stores the result in <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>digest<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200129T095828Z" creationid="isVowel" creationdate="20200129T095828Z">
+        <seg><bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>MD5Context<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> の生成後の結果を <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>digest<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> へ格納します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1263,6 +1408,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T075254Z" creationid="isVowel" creationdate="20200114T075254Z">
         <seg>生成日時: 2019年11月27日 午前09時15分13秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Generated: 2019-11-27 09:15:16 UTC</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T094517Z" creationid="isVowel" creationdate="20200127T094517Z">
+        <seg>生成日時: 2019年11月27日 午前09時15分16秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
@@ -1403,6 +1556,38 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Generated: 2019-11-27 09:16:39 UTC</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T080008Z" creationid="isVowel" creationdate="20200127T080008Z">
+        <seg>生成日時: 2019年11月27日 午前09時16分39秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Generated: 2019-11-27 09:16:43 UTC</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200129T105521Z" creationid="isVowel" creationdate="20200129T105521Z">
+        <seg>生成日時: 2019年11月27日 午前09時16分43秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Generates a <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>SecureHash<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> from a <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>str<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T090200Z" creationid="isVowel" creationdate="20200127T090200Z">
+        <seg><bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>str<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> から <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>SecureHash<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> を生成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Generates a <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>SecureHash<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> from a file.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T090006Z" creationid="isVowel" creationdate="20200127T090000Z">
+        <seg>ファイルから <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>SecureHash<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> を生成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Generics</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200115T063848Z" creationid="isVowel" creationdate="20200115T063848Z">
@@ -1489,6 +1674,22 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T041158Z" creationid="isVowel" creationdate="20200113T041158Z">
         <seg>If ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>If you use <bpt i="0" x="0">&lt;a0&gt;</bpt>toMD5 proc<ept i="0">&lt;/a0&gt;</ept> there's no need to call this function explicitly.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200129T095048Z" creationid="isVowel" creationdate="20200129T095048Z">
+        <seg>この関数は <bpt i="0" x="0">&lt;a0&gt;</bpt>toMD5 プロシージャ<ept i="0">&lt;/a0&gt;</ept> を使うときは明示的に呼び出す必要はありません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Implements a representation of Unicode with the limited ASCII character subset.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T082709Z" creationid="isVowel" creationdate="20200127T082627Z">
+        <seg>ASCII 文字の部分集合に限定した Unicode 形式の実装です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1585,6 +1786,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200118T025050Z" creationid="isVowel" creationdate="20200118T025050Z">
         <seg>Index スイッチ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Initializes a <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>MD5Context<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200129T095644Z" creationid="isVowel" creationdate="20200129T095644Z">
+        <seg><bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>MD5Context<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> を初期化します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1738,6 +1947,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>MD5 checksum of a string, obtained with <bpt i="0" x="0">&lt;a0&gt;</bpt>toMD5 proc<ept i="0">&lt;/a0&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200129T095952Z" creationid="isVowel" creationdate="20200129T095159Z">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>toMD5 プロシージャ<ept i="0">&lt;/a0&gt;</ept> で得られる文字列の MD5 チェックサムです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Macros</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200115T021802Z" creationid="isVowel" creationdate="20200115T021802Z">
@@ -1782,6 +1999,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200115T021730Z" creationid="isVowel" creationdate="20200115T021730Z">
         <seg>Mixin ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Module for computing <bpt i="0" x="0">&lt;a0&gt;</bpt>MD5 checksums<ept i="0">&lt;/a0&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T144715Z" creationid="isVowel" creationdate="20200127T144715Z">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>MD5 チェックサム<ept i="0">&lt;/a0&gt;</ept>の計算で使えるモジュールです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2100,6 +2325,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Prefix is empty.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T083300Z" creationid="isVowel" creationdate="20200127T081606Z">
+        <seg>prefix は空となります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Prepend <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>prefix<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> to the result   <bpt i="2" x="2">&lt;a2&gt;</bpt>Source<ept i="2">&lt;/a2&gt;</ept> <bpt i="3" x="3">&lt;a3&gt;</bpt>Edit<ept i="3">&lt;/a3&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T082338Z" creationid="isVowel" creationdate="20200127T081924Z">
+        <seg>処理後に <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>prefix<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> を先頭に追加します。   <bpt i="2" x="2">&lt;a2&gt;</bpt>ソース<ept i="2">&lt;/a2&gt;</ept> <bpt i="3" x="3">&lt;a3&gt;</bpt>編集<ept i="3">&lt;/a3&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Procedural type</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T042212Z" creationid="isVowel" creationdate="20200113T042212Z">
@@ -2238,8 +2479,24 @@ replacementは「代替手段」を指します。このまま「代替ツール
       <tuv xml:lang="EN-US">
         <seg>Returns the next pseudo random number ranging from 0 to high(uint32)   <bpt i="0" x="0">&lt;a0&gt;</bpt>Source<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>Edit<ept i="1">&lt;/a1&gt;</ept></seg>
       </tuv>
-      <tuv xml:lang="JA" changeid="isVowel" changedate="20200123T043338Z" creationid="isVowel" creationdate="20200123T043338Z">
-        <seg>0 ～ 最大値 (uint32) までの擬似乱数を返します。</seg>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T075322Z" creationid="isVowel" creationdate="20200123T043338Z">
+        <seg>0 ～ 最大値 (uint32) までの擬似乱数を返します。   <bpt i="0" x="0">&lt;a0&gt;</bpt>ソース<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>編集<ept i="1">&lt;/a1&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Returns the string representation of a <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>SecureHash<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T091548Z" creationid="isVowel" creationdate="20200127T091548Z">
+        <seg><bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>SecureHash<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> 形式の文字列を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>SHA-1 (Secure Hash Algorithm 1) is a cryptographic hash function which takes an input and produces a 160-bit (20-byte) hash value known as a message digest.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T093358Z" creationid="isVowel" creationdate="20200127T093032Z">
+        <seg>SHA-1 (Secure Hash Algorithm 1) はメッセージダイジェストとして知られている 160-bit (20-byte) によるハッシュ値の入力と生成を処理する暗号化ハッシュ関数です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2342,6 +2599,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T042150Z" creationid="isVowel" creationdate="20200113T042150Z">
         <seg>スライス</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Source Code Filters</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T094205Z" creationid="isVowel" creationdate="20200127T094205Z">
+        <seg>ソースコードフィルタ</seg>
       </tuv>
     </tu>
     <tu>
@@ -2794,6 +3059,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>This module wraps core JavaScript functions.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200129T111441Z" creationid="isVowel" creationdate="20200129T111441Z">
+        <seg>このモジュールはコア JavaScript 関数のラッパーです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>This proc doesn't raise an exception on error, beware.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200123T072816Z" creationid="isVowel" creationdate="20200123T072816Z">
@@ -2945,11 +3218,43 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
     </tu>
     <tu>
+      <note>Unless はうまく訳せていない気がしますので、あとで検証し直してください。
+
+この unless は接続詞ではなく、前置詞だよね？
+
+旧訳:
+アプリケーションで非常に明確な要件があり JavaScript をターゲットにしないならば、 
+</note>
+      <tuv xml:lang="EN-US">
+        <seg>Unless your application has very specific requirements and solely targets JavaScript, you should be using the relevant functions in the <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>math<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept>, <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>json<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept>, and <bpt i="4" x="4">&lt;t4&gt;</bpt><bpt i="5" x="5">&lt;s5&gt;</bpt>times<ept i="5">&lt;/s5&gt;</ept><ept i="4">&lt;/t4&gt;</ept> stdlib modules instead.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200129T114551Z" creationid="isVowel" creationdate="20200129T112336Z">
+        <seg>アプリケーションで非常に明確な要件があり JavaScript をターゲットにする場合を除き、 stdlib モジュールではなく <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>math<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept>, <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>json<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept>, および <bpt i="4" x="4">&lt;t4&gt;</bpt><bpt i="5" x="5">&lt;s5&gt;</bpt>times<ept i="5">&lt;/s5&gt;</ept><ept i="4">&lt;/t4&gt;</ept> で該当する関数をお使いください。
+</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv xml:lang="EN-US">
         <seg>Unstable API.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200122T093951Z" creationid="isVowel" creationdate="20200122T093943Z">
         <seg>この API は不安定です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Updates the <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>MD5Context<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> with the <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>input<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> data of length <bpt i="4" x="4">&lt;t4&gt;</bpt><bpt i="5" x="5">&lt;s5&gt;</bpt>len<ept i="5">&lt;/s5&gt;</ept><ept i="4">&lt;/t4&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200129T095745Z" creationid="isVowel" creationdate="20200129T095745Z">
+        <seg><bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>input<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> データの長さ <bpt i="4" x="4">&lt;t4&gt;</bpt><bpt i="5" x="5">&lt;s5&gt;</bpt>len<ept i="5">&lt;/s5&gt;</ept><ept i="4">&lt;/t4&gt;</ept> を用いて <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>MD5Context<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> を更新します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Usage</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T094211Z" creationid="isVowel" creationdate="20200127T094211Z">
+        <seg>用法</seg>
       </tuv>
     </tu>
     <tu>
@@ -3446,6 +3751,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>note:: available at compile time</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200129T095452Z" creationid="isVowel" creationdate="20200129T095452Z">
+        <seg>備考:: コンパイル時に利用可能です</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>opens <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>url<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> with the user's default browser.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200123T070436Z" creationid="isVowel" creationdate="20200123T070436Z">
@@ -3677,6 +3990,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>  <bpt i="1" x="1">&lt;a1&gt;</bpt>Source<ept i="1">&lt;/a1&gt;</ept> <bpt i="2" x="2">&lt;a2&gt;</bpt>Edit<ept i="2">&lt;/a2&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T144023Z" creationid="isVowel" creationdate="20200127T144023Z">
+        <seg>  <bpt i="1" x="1">&lt;a1&gt;</bpt>ソース<ept i="1">&lt;/a1&gt;</ept> <bpt i="2" x="2">&lt;a2&gt;</bpt>編集<ept i="2">&lt;/a2&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>  <bpt i="2" x="2">&lt;a2&gt;</bpt>Source<ept i="2">&lt;/a2&gt;</ept> <bpt i="3" x="3">&lt;a3&gt;</bpt>Edit<ept i="3">&lt;/a3&gt;</ept></seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200116T052527Z" creationid="isVowel" creationdate="20200116T052527Z">
@@ -3689,6 +4010,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T023433Z" creationid="isVowel" creationdate="20200113T023433Z">
         <seg>  <bpt i="4" x="4">&lt;a4&gt;</bpt>ソース<ept i="4">&lt;/a4&gt;</ept> <bpt i="5" x="5">&lt;a5&gt;</bpt>編集<ept i="5">&lt;/a5&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>  <bpt i="6" x="6">&lt;a6&gt;</bpt>Source<ept i="6">&lt;/a6&gt;</ept> <bpt i="7" x="7">&lt;a7&gt;</bpt>Edit<ept i="7">&lt;/a7&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T094451Z" creationid="isVowel" creationdate="20200127T094451Z">
+        <seg>  <bpt i="6" x="6">&lt;a6&gt;</bpt>ソース<ept i="6">&lt;/a6&gt;</ept> <bpt i="7" x="7">&lt;a7&gt;</bpt>編集<ept i="7">&lt;/a7&gt;</ept></seg>
       </tuv>
     </tu>
 <!-- Alternative translations -->

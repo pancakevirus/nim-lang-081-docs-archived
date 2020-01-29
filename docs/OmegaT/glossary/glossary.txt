@@ -43,3 +43,12 @@ Syntax sugar	シンタックスシュガー
 anonymous procedures	無名プロシージャ
 procedure types	プロシージャ型
 tree representing	ツリー構造	represent(ing)が何を指しているのか考えること。
+limited	制限された
+subset	サブセット
+subset	部分集合
+identical	同じ	同一値
+checksums	チェックサム
+computing	計算	演算
+encoder	エンコーダー
+decoder	デコーダー
+value	値
