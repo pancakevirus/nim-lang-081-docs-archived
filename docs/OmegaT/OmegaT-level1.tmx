@@ -78,6 +78,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>--ext:EX1|EX2|...</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T040600Z" creationid="isVowel" creationdate="20200130T040600Z">
+        <seg>--ext:拡張子１|拡張子２|...</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>0 (lowest)</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T061036Z" creationid="isVowel" creationdate="20200115T061036Z">
@@ -90,6 +98,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T061059Z" creationid="isVowel" creationdate="20200115T061059Z">
         <seg>10 (最高)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>5*256=1280 Normal+Shift+Ctrl+Alt+Sys   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T051300Z" creationid="isVowel" creationdate="20200130T051300Z">
+        <seg>5*256=1280 Normal+Shift+Ctrl+Alt+Sys   ソース 編集</seg>
       </tuv>
     </tu>
     <tu>
@@ -424,6 +440,42 @@ proc helloWorld*(times: int) =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>var m = newMimetypes()
+assert m.getMimetype("mp4") == "video/mp4"
+assert m.getExt("text/html") == "html"
+## Values can be uppercase too.
+assert m.getMimetype("MP4") == "video/mp4"
+assert m.getExt("TEXT/HTML") == "html"
+## If values are invalid then ``default`` is returned.
+assert m.getMimetype("INVALID") == "text/plain"
+assert m.getExt("INVALID/NONEXISTENT") == "txt"
+assert m.getMimetype("") == "text/plain"
+assert m.getExt("") == "txt"
+## Register new Mimetypes.
+m.register(ext = "fakext", mimetype = "text/fakelang")
+assert m.getMimetype("fakext") == "text/fakelang"
+assert m.getMimetype("FaKeXT") == "text/fakelang"</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T075038Z" creationid="isVowel" creationdate="20200130T074922Z">
+        <seg>var m = newMimetypes()
+assert m.getMimetype("mp4") == "video/mp4"
+assert m.getExt("text/html") == "html"
+## 値には大文字も使えます。
+assert m.getMimetype("MP4") == "video/mp4"
+assert m.getExt("TEXT/HTML") == "html"
+## 不正値ならば ``default`` を返します。
+assert m.getMimetype("INVALID") == "text/plain"
+assert m.getExt("INVALID/NONEXISTENT") == "txt"
+assert m.getMimetype("") == "text/plain"
+assert m.getExt("") == "txt"
+## 新しい Mimetypes を登録します。
+m.register(ext = "fakext", mimetype = "text/fakelang")
+assert m.getMimetype("fakext") == "text/fakelang"
+assert m.getMimetype("FaKeXT") == "text/fakelang"</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>pcDir,                      ## path refers to a directory</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T072004Z" creationid="isVowel" creationdate="20200116T072004Z">
@@ -540,6 +592,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200118T025911Z" creationid="isVowel" creationdate="20200118T025911Z">
         <seg>そのほかのリソース</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Adds mimetype to the mimedb.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T075241Z" creationid="isVowel" creationdate="20200130T075241Z">
+        <seg>mimedb へ mimetype を追加します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -864,6 +924,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Command line switches</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T031738Z" creationid="isVowel" creationdate="20200130T031738Z">
+        <seg>コマンドラインスイッチ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Commands</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T075048Z" creationid="isVowel" creationdate="20200114T075048Z">
@@ -876,6 +944,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041812Z" creationid="isVowel" creationdate="20200113T041812Z">
         <seg>コメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Compile nimgrep with the command:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T040830Z" creationid="isVowel" creationdate="20200130T040800Z">
+        <seg>このコマンドで nimgrep をコンパイルします。</seg>
       </tuv>
     </tu>
     <tu>
@@ -998,6 +1074,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200123T023155Z" creationid="isVowel" creationdate="20200123T023155Z">
         <seg>空のヒープを新規作成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Creates a new Mimetypes database.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T075349Z" creationid="isVowel" creationdate="20200130T075349Z">
+        <seg>新しい Mimetypes データベースを作成します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1125,8 +1209,8 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       <tuv lang="EN-US">
         <seg>Documents: API naming design, Code owners, Contributing, Embedded Stack Trace Profiler (ESTP) User Guide, Hot code reloading, Internals of the Nim Compiler, Nim Backend Integration, Nim Compiler User Guide, Nim Destructors and Move Semantics, Nim DocGen Tools Guide, Nim Documentation Overview, Nim Enhancement Proposal #1 - Standard Library Style Guide, Nim Experimental Features, Nim IDE Integration Guide, Nim IDE Integration Guide, Nim maintenance script, Nim Manual, Nim Standard Library, Nim Tutorial (Part I), Nim Tutorial (Part II), Nim Tutorial (Part III), Nim's Garbage Collector, nimgrep User's manual, niminst User's manual, NimScript, Packaging Nim, Source Code Filters, Tools available with Nim.</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200127T020340Z" creationid="isVowel" creationdate="20200115T064940Z">
-        <seg>ドキュメント: API naming design, Code owners, Contributing, Embedded Stack Trace Profiler (ESTP) User Guide, Hot code reloading, Nim コンパイラの内部構造, Nim バックエンドシステム統合, Nim コンパイラ ユーザガイド, Nim Destructors and Move Semantics, Nim DocGen ツールガイド, Nim ドキュメンテーションの概要, Nim Enhancement Proposal #1 - 標準ライブラリのスタイルガイド, Nim Experimental Features, Nim IDE システム統合ガイド (idetools), Nim IDE システム統合ガイド (nimsuggest), Nim メンテナンス・スクリプト, Nim マニュアル, Nim 標準ライブラリ, Nim チュートリアル（第１部）, Nim チュートリアル（第２部）, Nim チュートリアル（第３部）, Nim's Garbage Collector, nimgrep ユーザーズ・ガイド, niminst ユーザーズ・マニュアル, NimScript, Packaging Nim, ソースコードフィルタ, Tools available with Nim.</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T045012Z" creationid="isVowel" creationdate="20200115T064940Z">
+        <seg>ドキュメント: API 命名仕様書, コードの権利所有者, 寄贈について, Embedded Stack Trace Profiler (ESTP) User Guide, Hot code reloading, Nim コンパイラの内部構造, Nim バックエンドシステム統合, Nim コンパイラ ユーザガイド, Nim Destructors and Move Semantics, Nim DocGen ツールガイド, Nim ドキュメンテーションの概要, Nim 拡張提案書 #1 - 標準ライブラリのスタイルガイド, Nim Experimental Features, Nim IDE システム統合ガイド (idetools), Nim IDE システム統合ガイド (nimsuggest), Nim メンテナンス・スクリプト, Nim マニュアル, Nim 標準ライブラリ, Nim チュートリアル（第１部）, Nim チュートリアル（第２部）, Nim チュートリアル（第３部）, Nim ガベージコレクター, nimgrep ユーザーズ・ガイド, niminst ユーザーズ・マニュアル, NimScript, Packaging Nim, ソースコードフィルタ, Nim で使えるツール.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1229,7 +1313,7 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       <tuv lang="EN-US">
         <seg>Examples:</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200113T043405Z" creationid="isVowel" creationdate="20200113T043405Z">
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T080348Z" creationid="isVowel" creationdate="20200113T043405Z">
         <seg>用例:</seg>
       </tuv>
     </tu>
@@ -1380,194 +1464,178 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:13:23 UTC</seg>
+        <seg>Generated: 2020-01-23 17:25:36 UTC</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200116T045549Z" creationid="isVowel" creationdate="20200116T045549Z">
-        <seg>生成日時: 2019年11月27日 午前09時13分23秒 (UTC)</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:14:28 UTC</seg>
-      </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200115T022127Z" creationid="isVowel" creationdate="20200115T022127Z">
-        <seg>生成日時: 2019年11月27日 午前09時14分28秒 (UTC)</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200129T133242Z" creationid="isVowel" creationdate="20200129T133242Z">
+        <seg>生成日時: 2020年01月23日 午前17時25分36秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:15:11 UTC</seg>
+        <seg>Generated: 2020-01-23 17:27:13 UTC</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200113T035324Z" creationid="isVowel" creationdate="20200113T035324Z">
-        <seg>生成日時: 2019年11月27日 午前09時15分11秒 (UTC)</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:15:13 UTC</seg>
-      </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200114T075254Z" creationid="isVowel" creationdate="20200114T075254Z">
-        <seg>生成日時: 2019年11月27日 午前09時15分13秒 (UTC)</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T031818Z" creationid="isVowel" creationdate="20200130T031818Z">
+        <seg>生成日時: 2020年01月23日 午前17時27分13秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:15:16 UTC</seg>
+        <seg>Generated: 2020-01-23 17:27:14 UTC</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200127T094517Z" creationid="isVowel" creationdate="20200127T094517Z">
-        <seg>生成日時: 2019年11月27日 午前09時15分16秒 (UTC)</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:15:22 UTC</seg>
-      </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200116T054932Z" creationid="isVowel" creationdate="20200116T054932Z">
-        <seg>生成日時: 2019年11月27日 午前09時15分22秒 (UTC)</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T031528Z" creationid="isVowel" creationdate="20200130T031528Z">
+        <seg>生成日時: 2020年01月23日 午前17時27分17秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:15:23 UTC</seg>
+        <seg>Generated: 2020-01-23 17:27:21 UTC</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200122T073350Z" creationid="isVowel" creationdate="20200122T073350Z">
-        <seg>生成日時: 2019年11月27日 午前09時15分23秒 (UTC)</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:15:24 UTC</seg>
-      </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200123T025038Z" creationid="isVowel" creationdate="20200123T025038Z">
-        <seg>生成日時: 2019年11月27日 午前09時15分24秒 (UTC)</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200129T133649Z" creationid="isVowel" creationdate="20200129T133419Z">
+        <seg>生成日時: 2020年01月23日 午前17時27分21秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:15:30 UTC</seg>
+        <seg>Generated: 2020-01-23 17:27:22 UTC</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200123T034631Z" creationid="isVowel" creationdate="20200123T034631Z">
-        <seg>生成日時: 2019年11月27日 午前09時15分30秒 (UTC)</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:15:31 UTC</seg>
-      </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200123T040840Z" creationid="isVowel" creationdate="20200123T040840Z">
-        <seg>生成日時: 2019年11月27日 午前09時15分31秒 (UTC)</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200129T133629Z" creationid="isVowel" creationdate="20200129T133629Z">
+        <seg>生成日時: 2020年01月23日 午前17時27分22秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:15:51 UTC</seg>
+        <seg>Generated: 2020-01-23 17:27:28 UTC</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200123T071701Z" creationid="isVowel" creationdate="20200123T071701Z">
-        <seg>生成日時: 2019年11月27日 午前09時15分51秒 (UTC)</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:16:04 UTC</seg>
-      </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200123T081224Z" creationid="isVowel" creationdate="20200123T081224Z">
-        <seg>生成日時: 2019年11月27日 午前09時16分04秒 (UTC)</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T034323Z" creationid="isVowel" creationdate="20200130T034323Z">
+        <seg>生成日時: 2020年01月23日 午前17時27分28秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:16:05 UTC</seg>
+        <seg>Generated: 2020-01-23 17:27:29 UTC</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200116T063018Z" creationid="isVowel" creationdate="20200116T063018Z">
-        <seg>生成日時: 2019年11月27日 午前09時16分05秒 (UTC)</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:16:15 UTC</seg>
-      </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200127T030732Z" creationid="isVowel" creationdate="20200127T030732Z">
-        <seg>生成日時: 2019年11月27日 午前09時16分15秒 (UTC)</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T033642Z" creationid="isVowel" creationdate="20200130T033642Z">
+        <seg>生成日時: 2020年01月23日 午前17時27分29秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:16:18 UTC</seg>
+        <seg>Generated: 2020-01-23 17:27:47 UTC</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200122T121129Z" creationid="isVowel" creationdate="20200122T121129Z">
-        <seg>生成日時: 2019年11月27日 午前09時16分18秒 (UTC)</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:16:28 UTC</seg>
-      </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200122T112935Z" creationid="isVowel" creationdate="20200122T112914Z">
-        <seg>生成日時: 2019年11月27日 午前09時16分28秒 (UTC)</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200129T133741Z" creationid="isVowel" creationdate="20200129T133741Z">
+        <seg>生成日時: 2020年01月23日 午前17時27分47秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:16:29 UTC</seg>
+        <seg>Generated: 2020-01-23 17:27:57 UTC</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200127T020602Z" creationid="isVowel" creationdate="20200127T020602Z">
-        <seg>生成日時: 2019年11月27日 午前09時16分29秒 (UTC)</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:16:32 UTC</seg>
-      </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200116T070702Z" creationid="isVowel" creationdate="20200116T070702Z">
-        <seg>生成日時: 2019年11月27日 午前09時16分32秒 (UTC)</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T073825Z" creationid="isVowel" creationdate="20200130T073825Z">
+        <seg>生成日時: 2020年01月23日 午前17時27分57秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:16:33 UTC</seg>
+        <seg>Generated: 2020-01-23 17:27:58 UTC</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200123T023246Z" creationid="isVowel" creationdate="20200123T023246Z">
-        <seg>生成日時: 2019年11月27日 午前09時16分33秒 (UTC)</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:16:35 UTC</seg>
-      </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200113T023747Z" creationid="isVowel" creationdate="20200113T023747Z">
-        <seg>生成日時: 2019年11月27日 午前09時16分35秒 (UTC)</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200129T133554Z" creationid="isVowel" creationdate="20200129T133554Z">
+        <seg>生成日時: 2020年01月23日 午前17時27分58秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:16:37 UTC</seg>
+        <seg>Generated: 2020-01-23 17:27:59 UTC</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200123T043350Z" creationid="isVowel" creationdate="20200123T043350Z">
-        <seg>生成日時: 2019年11月27日 午前09時16分37秒 (UTC)</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:16:38 UTC</seg>
-      </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200116T065730Z" creationid="isVowel" creationdate="20200116T065730Z">
-        <seg>生成日時: 2019年11月27日 午前09時16分38秒 (UTC)</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T034244Z" creationid="isVowel" creationdate="20200130T034244Z">
+        <seg>生成日時: 2020年01月23日 午前17時27分59秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:16:39 UTC</seg>
+        <seg>Generated: 2020-01-23 17:28:07 UTC</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200127T080008Z" creationid="isVowel" creationdate="20200127T080008Z">
-        <seg>生成日時: 2019年11月27日 午前09時16分39秒 (UTC)</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T021528Z" creationid="isVowel" creationdate="20200130T021528Z">
+        <seg>生成日時: 2020年01月23日 午前17時28分07秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>Generated: 2019-11-27 09:16:43 UTC</seg>
+        <seg>Generated: 2020-01-23 17:28:20 UTC</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200129T105521Z" creationid="isVowel" creationdate="20200129T105521Z">
-        <seg>生成日時: 2019年11月27日 午前09時16分43秒 (UTC)</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T034025Z" creationid="isVowel" creationdate="20200130T034025Z">
+        <seg>生成日時: 2020年01月23日 午前17時28分20秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:28:23 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T032706Z" creationid="isVowel" creationdate="20200130T032706Z">
+        <seg>生成日時: 2020年01月23日 午前17時28分23秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:28:25 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T034112Z" creationid="isVowel" creationdate="20200130T034112Z">
+        <seg>生成日時: 2020年01月23日 午前17時28分25秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:28:26 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T033733Z" creationid="isVowel" creationdate="20200130T033733Z">
+        <seg>生成日時: 2020年01月23日 午前17時28分26秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:28:27 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T032212Z" creationid="isVowel" creationdate="20200130T032212Z">
+        <seg>生成日時: 2020年01月23日 午前17時28分27秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:28:28 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T032342Z" creationid="isVowel" creationdate="20200130T032342Z">
+        <seg>生成日時: 2020年01月23日 午前17時28分28秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:28:29 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T033114Z" creationid="isVowel" creationdate="20200130T033114Z">
+        <seg>生成日時: 2020年01月23日 午前17時28分29秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:28:30 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T050833Z" creationid="isVowel" creationdate="20200130T050833Z">
+        <seg>生成日時: 2020年01月23日 午前17時28分30秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:28:32 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T031203Z" creationid="isVowel" creationdate="20200130T031203Z">
+        <seg>生成日時: 2020年01月23日 午前17時28分32秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:28:33 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T042917Z" creationid="isVowel" creationdate="20200130T042917Z">
+        <seg>生成日時: 2020年01月23日 午前17時28分33秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
@@ -1802,6 +1870,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T083603Z" creationid="isVowel" creationdate="20200114T083603Z">
         <seg>InjectStmt プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Installation</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T031730Z" creationid="isVowel" creationdate="20200130T031730Z">
+        <seg>インストール</seg>
       </tuv>
     </tu>
     <tu>
@@ -2122,6 +2198,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>Nimgrep is a command line tool for search&amp;replace tasks.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T042157Z" creationid="isVowel" creationdate="20200130T042157Z">
+        <seg>Nimgrep は検索と置換処理ができるコマンドラインツールです。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>ドキュメントを読む限りでは、バージョンの確認方法は、この定数との比較以外は用意されていない。</note>
       <tuv lang="EN-US">
         <seg>No guarantees though.</seg>
@@ -2184,6 +2268,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041707Z" creationid="isVowel" creationdate="20200113T041707Z">
         <seg>演算子</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Options:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T031746Z" creationid="isVowel" creationdate="20200130T031746Z">
+        <seg>オプション:</seg>
       </tuv>
     </tu>
     <tu>
@@ -2852,6 +2944,18 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
     </tu>
     <tu>
+      <note>【参考意訳】
+・most common : 一般によく使われる
+
+</note>
+      <tuv lang="EN-US">
+        <seg>The database will contain the most common mimetypes.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T082031Z" creationid="isVowel" creationdate="20200130T082031Z">
+        <seg>一般によく使われる mimetypes をデータベースに収録してあります。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv lang="EN-US">
         <seg>The first program</seg>
       </tuv>
@@ -3015,6 +3119,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T111850Z" creationid="isVowel" creationdate="20200122T111850Z">
         <seg>このモジュールはスレッドプールへのスレッド作成が得策であるかの判断に用いる補助機能の実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This module implements a mimetypes database</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T073936Z" creationid="isVowel" creationdate="20200130T073936Z">
+        <seg>このモジュールは mimetypes データベースの実装です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3222,8 +3334,13 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
 
 この unless は接続詞ではなく、前置詞だよね？
 
+ロイヤル英文法 (CASIO EX-word XD-D4700 などに収録) によれば、if の代わりに使われることがあるらしい。
+
 旧訳:
 アプリケーションで非常に明確な要件があり JavaScript をターゲットにしないならば、 
+
+メモ:
+機械翻訳の場合、あまり品詞を意識する必要はないが、翻訳メモリなどでは、ちゃんとした品詞解析ソフトの導入を検討するのが重要かもしれない。 OmegaT と連携できるものを探そう。
 </note>
       <tuv lang="EN-US">
         <seg>Unless your application has very specific requirements and solely targets JavaScript, you should be using the relevant functions in the math, json, and times stdlib modules instead.</seg>
@@ -3529,6 +3646,22 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>be case insensitive</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T041537Z" creationid="isVowel" creationdate="20200130T041537Z">
+        <seg>英数大小文字を同一視します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>be style insensitive</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T041630Z" creationid="isVowel" creationdate="20200130T041605Z">
+        <seg>スタイルを同一視します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>boot command</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T075051Z" creationid="isVowel" creationdate="20200114T075051Z">
@@ -3573,6 +3706,12 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T075053Z" creationid="isVowel" creationdate="20200114T075053Z">
         <seg>csource コマンド</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>このブロックは作業対象外です。変更してしまうと、正常に動作しなくなります。</note>
+      <tuv lang="EN-US">
+        <seg>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH4QQQEwksSS9ZWwAAAk1JREFUWMPtll2ITVEUx39nn/O7Y5qR8f05wtCUUr6ZIS++8pEnkZInPImneaCQ5METNdOkeFBKUhMPRIkHKfEuUZSUlGlKPN2TrgfncpvmnntnmlEyq1Z7t89/rf9a6+y99oZxGZf/XeIq61EdtgKXgdXA0xrYAvBjOIF1AI9zvjcC74BSpndrJPkBWDScTF8Aa4E3wDlgHbASaANmVqlcCnwHvgDvgVfAJ+AikAAvgfVZwLnSVZHZaOuKoQi3ZOMi4NkYkpe1p4J7A8BpYAD49hfIy/oqG0+hLomiKP2L5L+1ubn5115S+3OAn4EnwBlgMzCjyt6ZAnQCJ4A7wOs88iRJHvw50HoujuPBoCKwHWiosy8MdfZnAdcHk8dxXFJ3VQbQlCTJvRBCGdRbD4M6uc5glpY3eAihpN5S5w12diSEcCCEcKUO4ljdr15T76ur1FDDLIQQ3qv71EdDOe3Kxj3leRXyk+pxdWnFWod6Wt2bY3de3aSuUHcPBVimHs7mK9WrmeOF6lR1o9qnzskh2ar2qm1qizpfXaPeVGdlmGN5pb09qMxz1Xb1kLqgzn1RyH7JUXW52lr5e/Kqi9qpto7V1atuUzfnARrV7jEib1T76gG2qxdGmXyiekkt1GswPTtek0aBfJp6YySGBfWg2tPQ0FAYgf1stUfdmdcjarbYJEniKIq6gY/Aw+zWHAC+p2labGpqiorFYgGYCEzN7oQdQClN07O1/EfDyGgC0ALMBdYAi4FyK+4H3gLPsxfR1zRNi+NP7nH5J+QntnXe5B5mpfQAAAAASUVORK5CYII=</seg>
       </tuv>
     </tu>
     <tu>
@@ -3625,6 +3764,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082013Z" creationid="isVowel" creationdate="20200114T082013Z">
         <seg>final プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>find the pattern (default)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T041047Z" creationid="isVowel" creationdate="20200130T041047Z">
+        <seg>検索パターン (デフォルト)</seg>
       </tuv>
     </tu>
     <tu>
@@ -3735,6 +3882,22 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>nimgrep User's manual</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T031946Z" creationid="isVowel" creationdate="20200130T031946Z">
+        <seg>nimgrep ユーザーズ・ガイド</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>nimgrep [options] [pattern] [replacement] (file/directory)*</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T041117Z" creationid="isVowel" creationdate="20200130T041117Z">
+        <seg>nimgrep [オプション] [パターン] [置換文字列] (ファイル/ディレクトリ)*</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>noReturn pragma</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082009Z" creationid="isVowel" creationdate="20200114T082009Z">
@@ -3759,10 +3922,34 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>only search the files with the given extension(s)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T040938Z" creationid="isVowel" creationdate="20200130T040710Z">
+        <seg>指定された拡張子に該当するファイルのみ検索対象とします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>opens url with the user's default browser.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200123T070436Z" creationid="isVowel" creationdate="20200123T070436Z">
         <seg>ユーザのデフォルトブラウザで url を開きます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>pattern is a peg</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T041140Z" creationid="isVowel" creationdate="20200130T041140Z">
+        <seg>PEG パターンを使用します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>pattern is a regular expression (default); extended syntax for the regular expression is always turned on</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T041916Z" creationid="isVowel" creationdate="20200130T041241Z">
+        <seg>正規表現パターンを使用します (デフォルト)。正規表現の拡張構文は常時有効です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3807,6 +3994,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>process directories recursively</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T040953Z" creationid="isVowel" creationdate="20200130T040918Z">
+        <seg>ディレクトリを再帰的に処理します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>pure pragma</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082020Z" creationid="isVowel" creationdate="20200114T082020Z">
@@ -3831,6 +4026,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>replace the pattern</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T041054Z" creationid="isVowel" creationdate="20200130T041054Z">
+        <seg>置換パターン</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>returns the number of the processors/cores the machine has.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T054840Z" creationid="isVowel" creationdate="20200116T054840Z">
@@ -3851,6 +4054,22 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082016Z" creationid="isVowel" creationdate="20200114T082016Z">
         <seg>shallow プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>shows the version</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T040932Z" creationid="isVowel" creationdate="20200130T031703Z">
+        <seg>バージョンを表示します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>shows this help</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T040935Z" creationid="isVowel" creationdate="20200130T031642Z">
+        <seg>このヘルプを表示します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3985,6 +4204,22 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
         <seg>  Source Edit</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T073746Z" creationid="isVowel" creationdate="20200114T073746Z">
+        <seg>  ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>  Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T075205Z" creationid="isVowel" creationdate="20200130T075205Z">
+        <seg>  ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>  Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T082852Z" creationid="isVowel" creationdate="20200130T082852Z">
         <seg>  ソース 編集</seg>
       </tuv>
     </tu>
