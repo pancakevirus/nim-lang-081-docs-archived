@@ -563,11 +563,45 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
     </tu>
     <tu>
+      <note>改訳案
+・mimetype と ext を英数小文字へ変換してから mimedb へ登録します。</note>
+      <tuv lang="EN-US">
+        <seg>&lt;t4&gt;&lt;s5&gt;mimetype&lt;/s5&gt;&lt;/t4&gt; and &lt;t6&gt;&lt;s7&gt;ext&lt;/s7&gt;&lt;/t6&gt; are lowercased before registering on &lt;t8&gt;&lt;s9&gt;mimedb&lt;/s9&gt;&lt;/t8&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T112543Z" creationid="isVowel" creationdate="20200130T112339Z">
+        <seg>&lt;t4&gt;&lt;s5&gt;mimetype&lt;/s5&gt;&lt;/t4&gt; と &lt;t6&gt;&lt;s7&gt;ext&lt;/s7&gt;&lt;/t6&gt; は &lt;t8&gt;&lt;s9&gt;mimedb&lt;/s9&gt;&lt;/t8&gt; の登録前に英数小文字へ変換されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv lang="EN-US">
         <seg>&lt;t4&gt;&lt;s5&gt;typ&lt;/s5&gt;&lt;/t4&gt; is the type that will be stored inside the result seq.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T024307Z" creationid="isVowel" creationdate="20200127T023100Z">
         <seg>&lt;t4&gt;&lt;s5&gt;typ&lt;/s5&gt;&lt;/t4&gt; はシーケンスの処理結果へ格納する型です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;t6&gt;&lt;s7&gt;ext&lt;/s7&gt;&lt;/t6&gt; can start with an optional dot which is ignored.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T114228Z" creationid="isVowel" creationdate="20200130T113642Z">
+        <seg> &lt;t6&gt;&lt;s7&gt;ext&lt;/s7&gt;&lt;/t6&gt; の頭文字にドットを付けても無視されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;t6&gt;&lt;s7&gt;mimetype&lt;/s7&gt;&lt;/t6&gt; is lowercased before querying &lt;t8&gt;&lt;s9&gt;mimedb&lt;/s9&gt;&lt;/t8&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T111959Z" creationid="isVowel" creationdate="20200130T111959Z">
+        <seg>&lt;t6&gt;&lt;s7&gt;mimetype&lt;/s7&gt;&lt;/t6&gt; は &lt;t8&gt;&lt;s9&gt;mimedb&lt;/s9&gt;&lt;/t8&gt; の照会前に英数小文字へ変換されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;t8&gt;&lt;s9&gt;ext&lt;/s9&gt;&lt;/t8&gt; is lowercased before querying &lt;t10&gt;&lt;s11&gt;mimedb&lt;/s11&gt;&lt;/t10&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T112637Z" creationid="isVowel" creationdate="20200130T112637Z">
+        <seg>&lt;t8&gt;&lt;s9&gt;ext&lt;/s9&gt;&lt;/t8&gt; は &lt;t10&gt;&lt;s11&gt;mimedb&lt;/s11&gt;&lt;/t10&gt; の照会前に英数小文字へ変換されます。</seg>
       </tuv>
     </tu>
     <tu>
@@ -856,6 +890,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T083619Z" creationid="isVowel" creationdate="20200114T083619Z">
         <seg>Byref プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>C to Nim source converter.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T114650Z" creationid="isVowel" creationdate="20200130T114650Z">
+        <seg>C → Nim ソースコンバータです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1359,6 +1401,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Extensions are returned without the leading dot.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T113035Z" creationid="isVowel" creationdate="20200130T112132Z">
+        <seg>頭文字のドットを取り除いたものを拡張子として返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Extern pragma</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T083615Z" creationid="isVowel" creationdate="20200114T083615Z">
@@ -1712,6 +1762,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:27:32 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T120722Z" creationid="isVowel" creationdate="20200130T120722Z">
+        <seg>生成日時: 2020年01月23日 午前17時27分23秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Generated: 2020-01-23 17:27:47 UTC</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200129T133741Z" creationid="isVowel" creationdate="20200129T133741Z">
@@ -1764,6 +1822,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T032706Z" creationid="isVowel" creationdate="20200130T032706Z">
         <seg>生成日時: 2020年01月23日 午前17時28分23秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:28:24 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T121026Z" creationid="isVowel" creationdate="20200130T121026Z">
+        <seg>生成日時: 2020年01月23日 午前17時28分24秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
@@ -1852,6 +1918,22 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T063848Z" creationid="isVowel" creationdate="20200115T063848Z">
         <seg>ジェネリック</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Gets extension which corresponds to &lt;t0&gt;&lt;s1&gt;mimetype&lt;/s1&gt;&lt;/t0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T113231Z" creationid="isVowel" creationdate="20200130T113231Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;mimetype&lt;/s1&gt;&lt;/t0&gt; と一致する拡張子を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Gets mimetype which corresponds to &lt;t0&gt;&lt;s1&gt;ext&lt;/s1&gt;&lt;/t0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T113333Z" creationid="isVowel" creationdate="20200130T113333Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;ext&lt;/s1&gt;&lt;/t0&gt; と一致する mimetype を返します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2391,6 +2473,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Nim search and replace utility.&lt;br2/&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T114752Z" creationid="isVowel" creationdate="20200130T114752Z">
+        <seg>Nim 製の検索と置換ユーティリティです。&lt;br2/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Nimgrep is a command line tool for search&amp;replace tasks.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T042157Z" creationid="isVowel" creationdate="20200130T042157Z">
@@ -2745,6 +2835,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Returns &lt;t2&gt;&lt;s3&gt;default&lt;/s3&gt;&lt;/t2&gt; if &lt;t4&gt;&lt;s5&gt;ext&lt;/s5&gt;&lt;/t4&gt; could not be found.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T112722Z" creationid="isVowel" creationdate="20200130T112722Z">
+        <seg>&lt;t4&gt;&lt;s5&gt;ext&lt;/s5&gt;&lt;/t4&gt; が見つからないときは &lt;t2&gt;&lt;s3&gt;default&lt;/s3&gt;&lt;/t2&gt; を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns &lt;t2&gt;&lt;s3&gt;default&lt;/s3&gt;&lt;/t2&gt; if &lt;t4&gt;&lt;s5&gt;mimetype&lt;/s5&gt;&lt;/t4&gt; could not be found.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T112225Z" creationid="isVowel" creationdate="20200130T112225Z">
+        <seg>&lt;t4&gt;&lt;s5&gt;mimetype&lt;/s5&gt;&lt;/t4&gt; が見つからないときは &lt;t2&gt;&lt;s3&gt;default&lt;/s3&gt;&lt;/t2&gt; を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Returns the IPv4 broadcast address (255.255.255.255)   &lt;a0&gt;Source&lt;/a0&gt; &lt;a1&gt;Edit&lt;/a1&gt;</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T114230Z" creationid="isVowel" creationdate="20200122T114230Z">
@@ -2845,6 +2951,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T060442Z" creationid="isVowel" creationdate="20200122T060335Z">
         <seg>ソース参照用スイッチ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T121016Z" creationid="isVowel" creationdate="20200130T121016Z">
+        <seg>参考文献:</seg>
       </tuv>
     </tu>
     <tu>
@@ -3431,6 +3545,22 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T011239Z" creationid="isVowel" creationdate="20200127T011239Z">
         <seg>したがって、 3 桁の 8 bit バイト (つまり、合計 24 bit) は Base64 において 4 桁の 6 bit 表現になります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Tools available with Nim</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T115121Z" creationid="isVowel" creationdate="20200130T115020Z">
+        <seg>Nim で使えるツール</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Translates C header files to Nim.&lt;br2/&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T114838Z" creationid="isVowel" creationdate="20200130T114713Z">
+        <seg>C ヘッダファイルを Nim ファイルへ変換します。&lt;br2/&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -4090,6 +4220,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>niminst is a tool to generate an installer for a Nim program.&lt;br2/&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T114914Z" creationid="isVowel" creationdate="20200130T114914Z">
+        <seg>niminst は Nim プログラム用のインストーラ生成ツールです。&lt;br2/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>noReturn pragma</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082009Z" creationid="isVowel" creationdate="20200114T082009Z">
@@ -4429,6 +4567,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T052527Z" creationid="isVowel" creationdate="20200116T052527Z">
         <seg>  &lt;a2&gt;ソース&lt;/a2&gt; &lt;a3&gt;編集&lt;/a3&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>  &lt;a3&gt;Source&lt;/a3&gt; &lt;a4&gt;Edit&lt;/a4&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T120740Z" creationid="isVowel" creationdate="20200130T120740Z">
+        <seg>  &lt;a3&gt;ソース&lt;/a3&gt; &lt;a4&gt;編集&lt;/a4&gt;</seg>
       </tuv>
     </tu>
     <tu>
