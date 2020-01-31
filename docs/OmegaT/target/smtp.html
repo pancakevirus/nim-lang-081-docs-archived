@@ -993,7 +993,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Creates a new MIME compliant message. &nbsp;&nbsp;<a
+MIME 準拠メッセージを新規作成します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/smtp.nim#L95"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L95" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1023,7 +1023,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">,</span> <span class="Identifier">ReadDirEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Creates a new <tt class="docutils literal"><span class="pre">Smtp</span></tt> instance. &nbsp;&nbsp;<a
+新しい <tt class="docutils literal"><span class="pre">Smtp</span></tt> インスタンスを作成します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/smtp.nim#L130"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L130" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1034,7 +1034,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">,</span> <span class="Identifier">ReadDirEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Creates a new <tt class="docutils literal"><span class="pre">AsyncSmtp</span></tt> instance. &nbsp;&nbsp;<a
+新しい <tt class="docutils literal"><span class="pre">AsyncSmtp</span></tt> インスタンスを作成します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/smtp.nim#L145"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L145" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1115,13 +1115,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <a href="asyncfutures.html#Future"><span class="Identifier">Future</span></a><span class="Other">[</span><a href="system.html#void"><span class="Identifier">void</span></a><span class="Other">]</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">FutureError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Sends <tt class="docutils literal"><span class="pre">msg</span></tt> from <tt class="docutils literal"><span class="pre">fromAddr</span></tt> to the addresses specified in <tt class="docutils literal"><span class="pre">toAddrs</span></tt>. Messages may be formed using <tt class="docutils literal"><span class="pre">createMessage</span></tt> by converting the Message into a string.
-&nbsp;&nbsp;<a
+Sends <tt class="docutils literal"><span class="pre">msg</span></tt> from <tt class="docutils literal"><span class="pre">fromAddr</span></tt> to the addresses specified in <tt class="docutils literal"><span class="pre">toAddrs</span></tt>. Messages may be formed using <tt class="docutils literal"><span class="pre">createMessage</span></tt> by converting the Message into a string. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/smtp.nim#L211"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L211" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L211" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="sendMail,Smtp,string,seq[T][string],string"></a>
@@ -1130,13 +1126,9 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">WriteIOEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">TimeEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Sends <tt class="docutils literal"><span class="pre">msg</span></tt> from <tt class="docutils literal"><span class="pre">fromAddr</span></tt> to the addresses specified in <tt class="docutils literal"><span class="pre">toAddrs</span></tt>. Messages may be formed using <tt class="docutils literal"><span class="pre">createMessage</span></tt> by converting the Message into a string.
-&nbsp;&nbsp;<a
+Sends <tt class="docutils literal"><span class="pre">msg</span></tt> from <tt class="docutils literal"><span class="pre">fromAddr</span></tt> to the addresses specified in <tt class="docutils literal"><span class="pre">toAddrs</span></tt>. Messages may be formed using <tt class="docutils literal"><span class="pre">createMessage</span></tt> by converting the Message into a string. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/smtp.nim#L212"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L212" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L212" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="close,AsyncSmtp"></a>
@@ -1144,7 +1136,7 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Disconnects from the SMTP server and closes the socket. &nbsp;&nbsp;<a
+SMTP サーバから切断してソケットを閉じます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/smtp.nim#L230"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L230" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1153,7 +1145,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#close%2CSmtp"><span class="Identifier">close</span></a><span class="Other">(</span><span class="Identifier">smtp</span><span class="Other">:</span> <a href="smtp.html#Smtp"><span class="Identifier">Smtp</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">SslError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Disconnects from the SMTP server and closes the socket. &nbsp;&nbsp;<a
+SMTP サーバから切断してソケットを閉じます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/smtp.nim#L230"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L230" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1173,7 +1165,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 Generated: 2020-01-23 17:27:50 UTC</small>
+        <small>Nim で作成しました。 生成日時: 2020年01月23日 午前17時27分50秒 (UTC)</small>
       </div>
     </div>
   </div>

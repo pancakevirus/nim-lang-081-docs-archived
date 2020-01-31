@@ -500,10 +500,34 @@ assert m.getMimetype("FaKeXT") == "text/fakelang"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Windows,                    ## some version of Windows</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095701Z" creationid="isVowel" creationdate="20200131T095701Z">
+        <seg>Windows,                    ## Windows のバージョン</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>pcLinkToDir                 ## path refers to a symbolic link to a directory</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T072024Z" creationid="isVowel" creationdate="20200116T072024Z">
         <seg>pcLinkToDir                 ## シンボリックリンクによるディレクトリの参照パス</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Clonezilla, SteamOS, Absolute, NixOS, ## NixOS or a Nix build environment</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095623Z" creationid="isVowel" creationdate="20200131T095623Z">
+        <seg>Clonezilla, SteamOS, Absolute, NixOS, ## Unix OS または Unix ビルド環境</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Posix,                      ## some Posix system</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095650Z" creationid="isVowel" creationdate="20200131T095650Z">
+        <seg>Posix,                      ## POSIX システム</seg>
       </tuv>
     </tu>
     <tu>
@@ -520,6 +544,22 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
 # は下記と同じです。
 
 proc pass2(f: proc (x, y: float): float): float =</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>MacOSX,                     ## some version of OSX</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095644Z" creationid="isVowel" creationdate="20200131T095644Z">
+        <seg>MacOSX,                     ## OSX のバージョン</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Linux,                      ## some version of Linux</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095637Z" creationid="isVowel" creationdate="20200131T095637Z">
+        <seg>Linux,                      ## Linux のバージョン</seg>
       </tuv>
     </tu>
     <tu>
@@ -1120,6 +1160,38 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Creates a command in the format of Set-Cookie: key=value; Domain=...; ...   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T154313Z" creationid="isVowel" creationdate="20200130T154313Z">
+        <seg>Set-Cookie: key=value; Domain=...; ... 形式のコマンドを作成します。   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Creates a new AsyncSmtp instance.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T163647Z" creationid="isVowel" creationdate="20200130T163222Z">
+        <seg>新しい AsyncSmtp インスタンスを作成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Creates a new Smtp instance.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T163640Z" creationid="isVowel" creationdate="20200130T163640Z">
+        <seg>新しい Smtp インスタンスを作成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Creates a new MIME compliant message.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T163835Z" creationid="isVowel" creationdate="20200130T163835Z">
+        <seg>MIME 準拠メッセージを新規作成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Creates a new Mimetypes database.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T075349Z" creationid="isVowel" creationdate="20200130T075349Z">
@@ -1225,10 +1297,26 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Disconnects from the SMTP server and closes the socket.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T163046Z" creationid="isVowel" creationdate="20200130T163046Z">
+        <seg>SMTP サーバから切断してソケットを閉じます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Distinct type</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T042217Z" creationid="isVowel" creationdate="20200113T042217Z">
         <seg>特異型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Distro/OS detection.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095131Z" creationid="isVowel" creationdate="20200131T095131Z">
+        <seg>ディストリビューション /  OS を検出します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1432,6 +1520,17 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       </tuv>
     </tu>
     <tu>
+      <note>「Distribution. qualifier」ではなく「Distribution qualifier」では？  原文の誤植のような？
+
+「Distribution. Qualifier ～」かもしれないので、この訳は保留とします。</note>
+      <tuv lang="EN-US">
+        <seg>For convenience the required Distribution. qualifier is added to the enum value.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095440Z" creationid="isVowel" creationdate="20200131T095440Z">
+        <seg>便宜上、 Distribution 型が必要になります。修飾子は列挙型の値に追加されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv lang="EN-US">
         <seg>For statement</seg>
       </tuv>
@@ -1586,6 +1685,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:27:50 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T162532Z" creationid="isVowel" creationdate="20200130T162532Z">
+        <seg>生成日時: 2020年01月23日 午前17時27分50秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Generated: 2020-01-23 17:27:57 UTC</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T073825Z" creationid="isVowel" creationdate="20200130T073825Z">
@@ -1606,6 +1713,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T034244Z" creationid="isVowel" creationdate="20200130T034244Z">
         <seg>生成日時: 2020年01月23日 午前17時27分59秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:28:06 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T154330Z" creationid="isVowel" creationdate="20200130T154330Z">
+        <seg>生成日時: 2020年01月23日 午前17時28分06秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
@@ -2049,6 +2164,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>It is your job to ensure the package name   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095520Z" creationid="isVowel" creationdate="20200131T095520Z">
+        <seg>パッケージ名の遵守は開発者の義務です。   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Iterators</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041721Z" creationid="isVowel" creationdate="20200113T041721Z">
@@ -2061,6 +2184,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T055856Z" creationid="isVowel" creationdate="20200115T055856Z">
         <seg>イテレータと for ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Its primary purpose is to produce output for Nimble packages like:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095723Z" creationid="isVowel" creationdate="20200131T095723Z">
+        <seg>主な用途は Nimble パッケージ出力などを生成することです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2097,6 +2228,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Linux,                      ## some version of Linux</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095808Z" creationid="isVowel" creationdate="20200131T095808Z">
+        <seg>Linux,                      ## Linux のバージョン</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>List comprehension, returns a sequence.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T022028Z" creationid="isVowel" creationdate="20200127T022028Z">
@@ -2109,6 +2248,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200129T095952Z" creationid="isVowel" creationdate="20200129T095159Z">
         <seg>toMD5 プロシージャ で得られる文字列の MD5 チェックサムです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>MacOSX,                     ## some version of OSX</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095803Z" creationid="isVowel" creationdate="20200131T095803Z">
+        <seg>MacOSX,                     ## OSX のバージョン</seg>
       </tuv>
     </tu>
     <tu>
@@ -2483,6 +2630,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Posix,                      ## some Posix system</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095758Z" creationid="isVowel" creationdate="20200131T095758Z">
+        <seg>Posix,                      ## POSIX システム</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Pragmas</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T081958Z" creationid="isVowel" creationdate="20200114T081958Z">
@@ -2603,6 +2758,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Registers 'foreignPackageName' to the internal list of foreign deps.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095528Z" creationid="isVowel" creationdate="20200131T095528Z">
+        <seg>外部パッケージの依存性で使う内部リストに 'foreignPackageName' を登録します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Registers a foreign command to the intern list of commands that can be queried later.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095544Z" creationid="isVowel" creationdate="20200131T095544Z">
+        <seg>後ほど照会可能なコマンドのインターンリストへ外部コマンドを登録します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Regular expressions</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T050404Z" creationid="isVowel" creationdate="20200113T050404Z">
@@ -2671,6 +2842,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T114310Z" creationid="isVowel" creationdate="20200122T114310Z">
         <seg>IPv4  のループバックアドレスを返します (127.0.0.1)   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the distro's native command line to install 'foreignPackageName' and whether it requires root/admin rights.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095537Z" creationid="isVowel" creationdate="20200131T095537Z">
+        <seg>'foreignPackageName' のインストールで使うディストリビューションのネイティブコマンドライン、および root/admin 権限が必要であるかの有無を返します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3043,6 +3222,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The above output could be the result of a code snippet like:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095708Z" creationid="isVowel" creationdate="20200131T095708Z">
+        <seg>上述の出力結果によるコードスニペットは、</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The addr operator</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T081835Z" creationid="isVowel" creationdate="20200114T081835Z">
@@ -3106,6 +3293,14 @@ skipped : スキップする、無視する、読み飛ばす。</note>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041153Z" creationid="isVowel" creationdate="20200113T041153Z">
         <seg>let ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The proc is meant to parse the Cookie header set by a client, not the "Set-Cookie" header set by servers.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T160057Z" creationid="isVowel" creationdate="20200130T155736Z">
+        <seg>このプロシージャはサーバで設定された "Set-Cookie" ヘッダではなく、クライアントで設定された Cookie ヘッダの解析を行います。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3253,6 +3448,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This module implements helper procs for parsing Cookies.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T160303Z" creationid="isVowel" creationdate="20200130T160303Z">
+        <seg>このモジュールは Cookies の解析に用いる補助プロシージャの実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This module implements nice syntactic sugar based on Nim's macro system.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T020943Z" creationid="isVowel" creationdate="20200127T020943Z">
@@ -3265,6 +3468,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T062928Z" creationid="isVowel" creationdate="20200116T054639Z">
         <seg>このモジュールは CPU / コア数を判定するプロシージャの実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This module implements the basics for Linux distribution ("distro") detection and the OS's native package manager.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095727Z" creationid="isVowel" creationdate="20200131T095727Z">
+        <seg>このモジュールは Linux ディストリビューション ("ディストロ") の検出、および OS ネイティブのパッケージマネージャで使う基盤技術の実装です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3353,6 +3564,20 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T011239Z" creationid="isVowel" creationdate="20200127T011239Z">
         <seg>したがって、 3 桁の 8 bit バイト (つまり、合計 24 bit) は Base64 において 4 桁の 6 bit 表現になります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To complete the installation, run:
+
+sudo apt-get libblas-dev
+sudo apt-get libvoodoo</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095718Z" creationid="isVowel" creationdate="20200131T095718Z">
+        <seg>インストールを完了するには、下記のコマンドを実行します。
+
+sudo apt-get libblas-dev
+sudo apt-get libvoodoo</seg>
       </tuv>
     </tu>
     <tu>
@@ -3634,6 +3859,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Windows,                    ## some version of Windows</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095751Z" creationid="isVowel" creationdate="20200131T095751Z">
+        <seg>Windows,                    ## Windows のバージョン</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Word wraps s.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200123T035420Z" creationid="isVowel" creationdate="20200123T034653Z">
@@ -3662,6 +3895,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T050409Z" creationid="isVowel" creationdate="20200113T050409Z">
         <seg>ラッパー</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Writes the list of registered foreign deps to stdout.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095449Z" creationid="isVowel" creationdate="20200131T095449Z">
+        <seg>登録された外部パッケージの依存性リストを標準出力に書き出します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4076,6 +4317,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>parses cookies into a string table.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T154947Z" creationid="isVowel" creationdate="20200130T154947Z">
+        <seg>文字列テーブルに記載された Cookie を解析します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>pattern is a peg</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T041140Z" creationid="isVowel" creationdate="20200130T041140Z">
@@ -4262,8 +4511,8 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       <tuv lang="EN-US">
         <seg>the list of known distributions   Source Edit</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200117T152120Z" creationid="isVowel" creationdate="20200117T152120Z">
-        <seg>the list of known distributions   ソース 編集</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095608Z" creationid="isVowel" creationdate="20200117T152120Z">
+        <seg>上述のリストはディストリビューションとしても知られています。   ソース 編集</seg>
       </tuv>
     </tu>
     <tu>
@@ -4398,6 +4647,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
         <seg>  Source Edit</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T094451Z" creationid="isVowel" creationdate="20200127T094451Z">
+        <seg>  ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>  Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200130T163117Z" creationid="isVowel" creationdate="20200130T163117Z">
         <seg>  ソース 編集</seg>
       </tuv>
     </tu>

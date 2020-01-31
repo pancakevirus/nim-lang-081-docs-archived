@@ -57,3 +57,5 @@ design	仕様書
 design	設計
 design	設計
 design	デザイン
+server	サーバ
+socket	ソケット

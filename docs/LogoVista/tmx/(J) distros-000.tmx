@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmx version="1.4">
+  <header creationtool="Xbench" creationtoolversion="2.8.0" datatype="unknown" segtype="sentence" adminlang="EN-US" srclang="EN" o-tmf="XbenchTM">
+  </header>
+  <body>
+    <tu tuid="21">
+      <tuv xml:lang="EN">
+        <seg>This module implements the basics for Linux distribution ("distro") detection and the OS's native package manager.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>このモジュールは Linux ディストリビューション ("ディストロ") の検出、および OS ネイティブのパッケージマネージャで使う基盤技術の実装です。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="22">
+      <tuv xml:lang="EN">
+        <seg>Its primary purpose is to produce output for Nimble packages like:</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>主な用途は Nimble パッケージ出力などを生成することです。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="23">
+      <tuv xml:lang="EN">
+        <seg>To complete the installation, run:</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>インストールを完了するには、下記のコマンドを実行します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="26">
+      <tuv xml:lang="EN">
+        <seg>The above output could be the result of a code snippet like:</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>上述の出力結果によるコードスニペットは、</seg>
+      </tuv>
+    </tu>
+    <tu tuid="30">
+      <tuv xml:lang="EN">
+        <seg>## some version of Windows</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>## Windows のバージョン</seg>
+      </tuv>
+    </tu>
+    <tu tuid="32">
+      <tuv xml:lang="EN">
+        <seg>## some Posix system</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>## POSIX システム</seg>
+      </tuv>
+    </tu>
+    <tu tuid="34">
+      <tuv xml:lang="EN">
+        <seg>## some version of OSX</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>## OSX のバージョン</seg>
+      </tuv>
+    </tu>
+    <tu tuid="36">
+      <tuv xml:lang="EN">
+        <seg>## some version of Linux</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>## Linux のバージョン</seg>
+      </tuv>
+    </tu>
+    <tu tuid="38">
+      <tuv xml:lang="EN">
+        <seg>## NixOS or a Nix build environment</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>## Unix OS または Unix ビルド環境</seg>
+      </tuv>
+    </tu>
+    <tu tuid="40">
+      <tuv xml:lang="EN">
+        <seg>the list of known distributions</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>上述のリストはディストリビューションとしても知られています。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="44">
+      <tuv xml:lang="EN">
+        <seg>Registers a foreign command to the intern list of commands that can be queried later.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>後ほど照会可能なコマンドのインターンリストへ外部コマンドを登録します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="46">
+      <tuv xml:lang="EN">
+        <seg>Returns the distro's native command line to install 'foreignPackageName' and whether it requires root/admin rights.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>'foreignPackageName' のインストールで使うディストリビューションのネイティブコマンドライン、および root/admin 権限が必要であるかの有無を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="48">
+      <tuv xml:lang="EN">
+        <seg>Registers 'foreignPackageName' to the internal list of foreign deps.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>外部パッケージの依存性で使う内部リストに 'foreignPackageName' を登録します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="49">
+      <tuv xml:lang="EN">
+        <seg>It is your job to ensure the package name</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>パッケージ名の遵守は開発者の義務です。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="51">
+      <tuv xml:lang="EN">
+        <seg>Writes the list of registered foreign deps to stdout.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>登録された外部パッケージの依存性リストを標準出力に書き出します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="53">
+      <tuv xml:lang="EN">
+        <seg>Distro/OS detection.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>ディストリビューション /  OS を検出します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="54">
+      <tuv xml:lang="EN">
+        <seg>For convenience the required Distribution. qualifier is added to the enum value.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>便宜上、 Distribution 型が必要になります。修飾子は列挙型の値に追加されます。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="56">
+      <tuv xml:lang="EN">
+        <seg>Generated: 2020-01-23 17:28:23 UTC</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>生成日時: 2020年01月23日 午前17時28分23秒 (UTC)</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>
