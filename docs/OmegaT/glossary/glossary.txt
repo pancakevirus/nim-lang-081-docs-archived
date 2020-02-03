@@ -59,3 +59,4 @@ design	設計
 design	デザイン
 server	サーバ
 socket	ソケット
+databases	データベース

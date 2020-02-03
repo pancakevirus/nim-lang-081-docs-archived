@@ -134,6 +134,30 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a0&gt;db_mysql&lt;/a0&gt; A higher level MySQL database wrapper.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200203T004624Z" creationid="isVowel" creationdate="20200203T004624Z">
+        <seg>&lt;a0&gt;db_mysql&lt;/a0&gt; 高水準 MySQL データベースのラッパーです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;db_postgres&lt;/a0&gt; A higher level PostgreSQL database wrapper.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200203T004601Z" creationid="isVowel" creationdate="20200203T004601Z">
+        <seg>&lt;a0&gt;db_postgres&lt;/a0&gt; 高水準 PostgreSQL データベースのラッパーです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;db_sqlite&lt;/a0&gt; A higher level SQLite database wrapper.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200203T004650Z" creationid="isVowel" creationdate="20200203T004650Z">
+        <seg>&lt;a0&gt;db_sqlite&lt;/a0&gt; 高水準 SQLite データベースのラッパーです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;a0&gt;decode proc&lt;/a0&gt; for decoding a string</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200123T080842Z" creationid="isVowel" creationdate="20200123T080810Z">
@@ -1196,6 +1220,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T075349Z" creationid="isVowel" creationdate="20200130T075349Z">
         <seg>新しい Mimetypes データベースを作成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Database support</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200203T004520Z" creationid="isVowel" creationdate="20200203T004520Z">
+        <seg>データベースサポート</seg>
       </tuv>
     </tu>
     <tu>
@@ -3434,6 +3466,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041840Z" creationid="isVowel" creationdate="20200113T041840Z">
         <seg>代入ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The current implementation uses PCRE.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200203T004844Z" creationid="isVowel" creationdate="20200203T004844Z">
+        <seg>現在の実装では PCRE を採用しています。</seg>
       </tuv>
     </tu>
     <tu>

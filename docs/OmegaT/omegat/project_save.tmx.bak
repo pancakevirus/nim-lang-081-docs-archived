@@ -134,6 +134,30 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a0&gt;db_mysql&lt;/a0&gt; A higher level MySQL database wrapper.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200203T004624Z" creationid="isVowel" creationdate="20200203T004624Z">
+        <seg>&lt;a0&gt;db_mysql&lt;/a0&gt; 高水準 MySQL データベースのラッパーです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;db_postgres&lt;/a0&gt; A higher level PostgreSQL database wrapper.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200203T004601Z" creationid="isVowel" creationdate="20200203T004601Z">
+        <seg>&lt;a0&gt;db_postgres&lt;/a0&gt; 高水準 PostgreSQL データベースのラッパーです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;db_sqlite&lt;/a0&gt; A higher level SQLite database wrapper.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200203T004650Z" creationid="isVowel" creationdate="20200203T004650Z">
+        <seg>&lt;a0&gt;db_sqlite&lt;/a0&gt; 高水準 SQLite データベースのラッパーです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;a0&gt;decode proc&lt;/a0&gt; for decoding a string</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200123T080842Z" creationid="isVowel" creationdate="20200123T080810Z">
@@ -500,6 +524,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;s13&gt;Windows&lt;/s13&gt;&lt;s14&gt;,&lt;/s14&gt;                    &lt;s15&gt;## some version of Windows&lt;/s15&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095701Z" creationid="isVowel" creationdate="20200131T095701Z">
+        <seg>&lt;s13&gt;Windows&lt;/s13&gt;&lt;s14&gt;,&lt;/s14&gt;                    &lt;s15&gt;## Windows のバージョン&lt;/s15&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;s13&gt;pcLinkToDir&lt;/s13&gt;                 &lt;s14&gt;## path refers to a symbolic link to a directory&lt;/s14&gt;</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T072024Z" creationid="isVowel" creationdate="20200116T072024Z">
@@ -512,6 +544,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200131T095623Z" creationid="isVowel" creationdate="20200131T095623Z">
         <seg>&lt;s155&gt;Clonezilla&lt;/s155&gt;&lt;s156&gt;,&lt;/s156&gt; &lt;s157&gt;SteamOS&lt;/s157&gt;&lt;s158&gt;,&lt;/s158&gt; &lt;s159&gt;Absolute&lt;/s159&gt;&lt;s160&gt;,&lt;/s160&gt; &lt;s161&gt;NixOS&lt;/s161&gt;&lt;s162&gt;,&lt;/s162&gt; &lt;s163&gt;## Unix OS または Unix ビルド環境&lt;/s163&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s16&gt;Posix&lt;/s16&gt;&lt;s17&gt;,&lt;/s17&gt;                      &lt;s18&gt;## some Posix system&lt;/s18&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095650Z" creationid="isVowel" creationdate="20200131T095650Z">
+        <seg>&lt;s16&gt;Posix&lt;/s16&gt;&lt;s17&gt;,&lt;/s17&gt;                      &lt;s18&gt;## POSIX システム&lt;/s18&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -1180,6 +1220,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T075349Z" creationid="isVowel" creationdate="20200130T075349Z">
         <seg>新しい Mimetypes データベースを作成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Database support</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200203T004520Z" creationid="isVowel" creationdate="20200203T004520Z">
+        <seg>データベースサポート</seg>
       </tuv>
     </tu>
     <tu>
@@ -2364,6 +2412,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Its primary purpose is to produce output for Nimble packages like:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095723Z" creationid="isVowel" creationdate="20200131T095723Z">
+        <seg>主な用途は Nimble パッケージ出力などを生成することです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Let statement</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T081623Z" creationid="isVowel" creationdate="20200114T081623Z">
@@ -2396,6 +2452,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Linux,                      ## some version of Linux</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095808Z" creationid="isVowel" creationdate="20200131T095808Z">
+        <seg>Linux,                      ## Linux のバージョン</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>List comprehension, returns a sequence.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T022028Z" creationid="isVowel" creationdate="20200127T022028Z">
@@ -2408,6 +2472,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200129T095952Z" creationid="isVowel" creationdate="20200129T095159Z">
         <seg>&lt;a0&gt;toMD5 プロシージャ&lt;/a0&gt; で得られる文字列の MD5 チェックサムです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>MacOSX,                     ## some version of OSX</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095803Z" creationid="isVowel" creationdate="20200131T095803Z">
+        <seg>MacOSX,                     ## OSX のバージョン</seg>
       </tuv>
     </tu>
     <tu>
@@ -2778,6 +2850,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082154Z" creationid="isVowel" creationdate="20200114T082154Z">
         <seg>PassL プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Posix,                      ## some Posix system</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095758Z" creationid="isVowel" creationdate="20200131T095758Z">
+        <seg>Posix,                      ## POSIX システム</seg>
       </tuv>
     </tu>
     <tu>
@@ -3366,6 +3446,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The above output could be the result of a code snippet like:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095708Z" creationid="isVowel" creationdate="20200131T095708Z">
+        <seg>上述の出力結果によるコードスニペットは、</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The addr operator</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T081835Z" creationid="isVowel" creationdate="20200114T081835Z">
@@ -3608,6 +3696,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This module implements the basics for Linux distribution ("distro") detection and the OS's native package manager.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095727Z" creationid="isVowel" creationdate="20200131T095727Z">
+        <seg>このモジュールは Linux ディストリビューション ("ディストロ") の検出、および OS ネイティブのパッケージマネージャで使う基盤技術の実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This module is a sample.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T045502Z" creationid="isVowel" creationdate="20200116T045502Z">
@@ -3692,6 +3788,20 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T011239Z" creationid="isVowel" creationdate="20200127T011239Z">
         <seg>したがって、 3 桁の 8 bit バイト (つまり、合計 24 bit) は Base64 において 4 桁の 6 bit 表現になります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To complete the installation, run:
+
+sudo apt-get libblas-dev
+sudo apt-get libvoodoo</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095718Z" creationid="isVowel" creationdate="20200131T095718Z">
+        <seg>インストールを完了するには、下記のコマンドを実行します。
+
+sudo apt-get libblas-dev
+sudo apt-get libvoodoo</seg>
       </tuv>
     </tu>
     <tu>
@@ -3969,6 +4079,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041204Z" creationid="isVowel" creationdate="20200113T041204Z">
         <seg>While ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Windows,                    ## some version of Windows</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200131T095751Z" creationid="isVowel" creationdate="20200131T095751Z">
+        <seg>Windows,                    ## Windows のバージョン</seg>
       </tuv>
     </tu>
     <tu>
