@@ -60,3 +60,6 @@ design	デザイン
 server	サーバ
 socket	ソケット
 databases	データベース
+Canonical name	正規名	カノニカルネーム
+Do yourself a favor	いいですか。
+Do yourself a favor	悪いことは言わないから、

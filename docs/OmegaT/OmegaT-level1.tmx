@@ -66,6 +66,42 @@ But the total amount seems to remain pretty much constant for a given task.</not
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg># build from C sources and then using koch
+./build.sh --os $os_type --cpu $cpu_arch
+./bin/nim c koch
+./koch boot -d:release
+
+# optionally generate docs into doc/html
+./koch docs
+
+./koch tools -d:release
+
+# extract files to be really installed
+./install.sh &lt;tempdir&gt;
+
+# also include the tools
+for fn in nimble nimsuggest nimgrep; do cp ./bin/$fn &lt;tempdir&gt;/nim/bin/; done</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T113226Z" creationid="isVowel" creationdate="20200208T110441Z">
+        <seg># C ソースと koch でビルドします
+./build.sh --os $os_type --cpu $cpu_arch
+./bin/nim c koch
+./koch boot -d:release
+
+# オプションのドキュメントを doc/html ディレクトリへ生成します
+./koch docs
+
+./koch tools -d:release
+
+# 実際にインストールするファイルを抽出します
+./install.sh &lt;一時作業用ディレクトリ&gt;
+
+# ツールなども対象となります
+for fn in nimble nimsuggest nimgrep; do cp ./bin/$fn &lt;一時作業用ディレクトリ&gt;/nim/bin/; done</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg># delete any htmldocs/*.idx file before starting
 nim doc --project --index:on --git.url:&lt;url&gt; --git.commit:&lt;tag&gt; &lt;main_filename&gt;.nim
 nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
@@ -118,6 +154,62 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Compiler user guide</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T055028Z" creationid="isVowel" creationdate="20200209T055028Z">
+        <seg>コンパイラのユーザガイド</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>GC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T063336Z" creationid="isVowel" creationdate="20200209T063336Z">
+        <seg>ガベージコレクタ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Index</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T053429Z" creationid="isVowel" creationdate="20200209T053429Z">
+        <seg>索引</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Internal documentation</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T053931Z" creationid="isVowel" creationdate="20200209T053931Z">
+        <seg>コンパイラの内部構造</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Language Manual</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T053842Z" creationid="isVowel" creationdate="20200209T053842Z">
+        <seg>言語マニュアル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Library documentation</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T060741Z" creationid="isVowel" creationdate="20200209T060741Z">
+        <seg>標準ライブラリのドキュメンテーション</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Source code filters</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T061550Z" creationid="isVowel" creationdate="20200209T061550Z">
+        <seg>ソースコードフィルタ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Source Edit</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T043229Z" creationid="isVowel" creationdate="20200113T043229Z">
@@ -126,10 +218,66 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Tools documentation</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T055045Z" creationid="isVowel" creationdate="20200209T055045Z">
+        <seg>ツールのドキュメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Tutorial (part I)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T053406Z" creationid="isVowel" creationdate="20200209T053317Z">
+        <seg>チュートリアル（第１部）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Tutorial (part II)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T053401Z" creationid="isVowel" creationdate="20200209T053328Z">
+        <seg>チュートリアル（第２部）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Tutorial (part III)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T053356Z" creationid="isVowel" creationdate="20200209T053356Z">
+        <seg>チュートリアル（第３部）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>base64 module implements a base64 encoder and decoder</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T085428Z" creationid="isVowel" creationdate="20200127T085428Z">
         <seg>base64 モジュール は Base64 エンコーダーとデコーダーの実装</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>db_mysql A higher level MySQL database wrapper.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200203T004624Z" creationid="isVowel" creationdate="20200203T004624Z">
+        <seg>db_mysql 高水準 MySQL データベースのラッパーです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>db_postgres A higher level PostgreSQL database wrapper.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200203T004601Z" creationid="isVowel" creationdate="20200203T004601Z">
+        <seg>db_postgres 高水準 PostgreSQL データベースのラッパーです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>db_sqlite A higher level SQLite database wrapper.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200203T004650Z" creationid="isVowel" creationdate="20200203T004650Z">
+        <seg>db_sqlite 高水準 SQLite データベースのラッパーです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -174,6 +322,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>iup Wrapper of the IUP GUI library.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T085636Z" creationid="isVowel" creationdate="20200208T085636Z">
+        <seg>iup GUI ライブラリである IUP のラッパーです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>md5 module implements the MD5 checksum algorithm</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200123T075609Z" creationid="isVowel" creationdate="20200123T075609Z">
@@ -182,10 +338,42 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>odbcsql interface to the ODBC driver.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T085506Z" creationid="isVowel" creationdate="20200208T085506Z">
+        <seg>odbcsql ODBC ドライバのインタフェースです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>openssl Wrapper for OpenSSL.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T085444Z" creationid="isVowel" creationdate="20200208T085444Z">
+        <seg>openssl OpenSSL のラッパーです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>parseSecureHash proc for converting a string hash to SecureHash</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T091214Z" creationid="isVowel" creationdate="20200127T091214Z">
         <seg>parseSecureHash プロシージャ は文字列 hash を SecureHash へ変換します</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>pcre Wrapper for the PCRE library.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T085712Z" creationid="isVowel" creationdate="20200208T085712Z">
+        <seg>pcre PCRE ライブラリのラッパーです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>registry Windows registry support.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T085839Z" creationid="isVowel" creationdate="20200208T085839Z">
+        <seg>registry Windows レジストリのサポートです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -258,6 +446,16 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T122042Z" creationid="isVowel" creationdate="20200122T122042Z">
         <seg>廃止予定: v0.20.0 以降で廃止予定:  'initHeapQueue' をお使いください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>「better way to achieve the same」は「このモジュールよりも～のほうが優れています(お勧めです)」に意訳しています。同じ方法は「htmlgen と Karax」を指していますから、このモジュール (htmlgen) で読み替えても大丈夫でしょう。
+</note>
+      <tuv lang="EN-US">
+        <seg>Note: The Karax project (nimble install karax) has a better way to achieve the same, see https://github.com/pragmagic/karax/blob/master/tests/nativehtmlgen.nim for an example.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T042926Z" creationid="isVowel" creationdate="20200209T042926Z">
+        <seg>備考: このモジュールよりも Karax プロジェクト (nimble install karax) のほうが優れています。用例は https://github.com/pragmagic/karax/blob/master/tests/nativehtmlgen.nim を参照してください。</seg>
       </tuv>
     </tu>
     <tu>
@@ -476,6 +674,14 @@ assert m.getMimetype("FaKeXT") == "text/fakelang"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>ai_family*: cint             ## Address family of socket.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T083422Z" creationid="isVowel" creationdate="20200208T083422Z">
+        <seg>ai_family*: cint             ## ソケットのアドレスファミリー。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>pcDir,                      ## path refers to a directory</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T072004Z" creationid="isVowel" creationdate="20200116T072004Z">
@@ -532,6 +738,14 @@ assert m.getMimetype("FaKeXT") == "text/fakelang"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>ai_socktype*: cint           ## Socket type.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T083429Z" creationid="isVowel" creationdate="20200208T083429Z">
+        <seg>ai_socktype*: cint           ## ソケットの種類。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>f(2, 2)
 
 # is the same as:
@@ -564,10 +778,130 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>ai_protocol*: cint           ## Protocol of socket.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T083438Z" creationid="isVowel" creationdate="20200208T083438Z">
+        <seg>ai_protocol*: cint           ## ソケットのプロトコル。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ai_flags*: cint              ## Input flags.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T083527Z" creationid="isVowel" creationdate="20200208T083527Z">
+        <seg>ai_flags*: cint              ## 入力フラグ群。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ai_addrlen*: csize           ## Length of socket address.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T083447Z" creationid="isVowel" creationdate="20200208T083447Z">
+        <seg>ai_addrlen*: csize           ## ソケットのアドレス長。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ai_family*: cint             ## Address family of socket.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T083534Z" creationid="isVowel" creationdate="20200208T083534Z">
+        <seg>ai_family*: cint             ## ソケットのアドレスファミリー。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Index + (Ctrl+F) == Joy</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T061532Z" creationid="isVowel" creationdate="20200209T061532Z">
+        <seg>索引 + (Ctrl+F) == たのしい</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ai_canonname*: cstring       ## Canonical name of service location.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T083455Z" creationid="isVowel" creationdate="20200208T083455Z">
+        <seg>ai_canonname*: cstring       ## サービスロケーションの正規名。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ai_socktype*: cint           ## Socket type.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T083541Z" creationid="isVowel" creationdate="20200208T083541Z">
+        <seg>ai_socktype*: cint           ## ソケットの種類。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ai_addr*: ptr SockAddr        ## Socket address of socket.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T083502Z" creationid="isVowel" creationdate="20200208T083502Z">
+        <seg>ai_addr*: ptr SockAddr        ## ソケットのソケットアドレス。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ai_protocol*: cint           ## Protocol of socket.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T083549Z" creationid="isVowel" creationdate="20200208T083549Z">
+        <seg>ai_protocol*: cint           ## ソケットのプロトコル。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ai_addrlen*: SockLen         ## Length of socket address.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T083555Z" creationid="isVowel" creationdate="20200208T083555Z">
+        <seg>ai_addrlen*: SockLen         ## ソケットのアドレス長。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ai_next*: ptr AddrInfo        ## Pointer to next in list.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T083511Z" creationid="isVowel" creationdate="20200208T083511Z">
+        <seg>ai_next*: ptr AddrInfo        ## 次のリストへのポインタ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ai_flags*: cint              ## Input flags.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T083411Z" creationid="isVowel" creationdate="20200208T083411Z">
+        <seg>ai_flags*: cint              ## 入力フラグ群。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>pcFile,                     ## path refers to a file</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T071931Z" creationid="isVowel" creationdate="20200116T071931Z">
         <seg>pcFile,                     ## ファイルの参照パス</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ai_addr*: ptr SockAddr        ## Socket address of socket.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T083604Z" creationid="isVowel" creationdate="20200208T083604Z">
+        <seg>ai_addr*: ptr SockAddr        ## ケットのソケットアドレス。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ai_canonname*: cstring       ## Canonical name of service location.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T083610Z" creationid="isVowel" creationdate="20200208T083610Z">
+        <seg>ai_canonname*: cstring       ## サービスロケーションの正規名。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ai_next*: ptr AddrInfo        ## Pointer to next in list.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T083620Z" creationid="isVowel" creationdate="20200208T083620Z">
+        <seg>ai_next*: ptr AddrInfo        ## 次のリストへのポインタ。</seg>
       </tuv>
     </tu>
     <tu>
@@ -662,6 +996,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Additional documentation about Nim's GC and how to operate it in a</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T063257Z" creationid="isVowel" creationdate="20200209T063257Z">
+        <seg>Nim のガベージコレクタとリアルタイム環境における制御方法についての</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Additional resources</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200118T025911Z" creationid="isVowel" creationdate="20200118T025911Z">
@@ -700,6 +1042,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200117T043112Z" creationid="isVowel" creationdate="20200117T043112Z">
         <seg>コンパイル終了後、成功すれば Nim コンパイラは bin ディレクトリに生成されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Algorithms</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T085108Z" creationid="isVowel" creationdate="20200208T085108Z">
+        <seg>アルゴリズム</seg>
       </tuv>
     </tu>
     <tu>
@@ -887,6 +1237,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>Build Nim from the released tarball at https://nim-lang.org/install_unix.html It is different from the GitHub sources as it contains Nimble, C sources &amp; other tools.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T112958Z" creationid="isVowel" creationdate="20200208T112958Z">
+        <seg>https://nim-lang.org/install_unix.html で公開されている tarball から Nim をビルドします。なお、 tarball と GitHub で公開されているソースとの違いは Nimble, C ソースと各種ツールを収録していることです。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>あんまり原文の出来が良くない。
 あとで改訳のこと。
 
@@ -938,6 +1296,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T114650Z" creationid="isVowel" creationdate="20200130T114650Z">
         <seg>C → Nim ソースコンバータです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>CANNOT BE int64 BECAUSE OF ALIGNMENT   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T083240Z" creationid="isVowel" creationdate="20200208T083240Z">
+        <seg>アライメントを int64 にすることはできません   ソース 編集</seg>
       </tuv>
     </tu>
     <tu>
@@ -1002,6 +1368,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T083600Z" creationid="isVowel" creationdate="20200114T083600Z">
         <seg>CodegenDecl プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Collections</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T085102Z" creationid="isVowel" creationdate="20200208T085102Z">
+        <seg>コレクション</seg>
       </tuv>
     </tu>
     <tu>
@@ -1136,6 +1510,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Convert the Windows file time timestamp t to FILETIME.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T082936Z" creationid="isVowel" creationdate="20200208T082936Z">
+        <seg>Windows ファイルのタイムスタンプ時刻 t を FILETIME へ変換します</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Converts a MD5Digest value into its string representation.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200129T095405Z" creationid="isVowel" creationdate="20200129T095405Z">
@@ -1148,6 +1530,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T091759Z" creationid="isVowel" creationdate="20200127T091634Z">
         <seg>文字列 hash を SecureHash へ変換します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Core</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T085114Z" creationid="isVowel" creationdate="20200208T085110Z">
+        <seg>コア</seg>
       </tuv>
     </tu>
     <tu>
@@ -1196,6 +1586,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T075349Z" creationid="isVowel" creationdate="20200130T075349Z">
         <seg>新しい Mimetypes データベースを作成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Database support</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200203T004520Z" creationid="isVowel" creationdate="20200203T004520Z">
+        <seg>データベースサポート</seg>
       </tuv>
     </tu>
     <tu>
@@ -1289,6 +1687,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Description of some tools that come with the standard distribution.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T055125Z" creationid="isVowel" creationdate="20200209T055125Z">
+        <seg>標準ディストリビューションに付属のツールについて説明してあります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Discard statement</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041609Z" creationid="isVowel" creationdate="20200113T041609Z">
@@ -1321,6 +1727,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Do yourself a favor and import the module as from htmlgen import nil and then fully qualify the macros.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T042605Z" creationid="isVowel" creationdate="20200209T042605Z">
+        <seg>悪いことは言いません。 from htmlgen import nil でモジュールをインポート後にマクロで完全修飾してください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Document Types</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200118T024109Z" creationid="isVowel" creationdate="20200118T024109Z">
@@ -1339,8 +1753,8 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       <tuv lang="EN-US">
         <seg>Documents: API naming design, Code owners, Contributing, Embedded Stack Trace Profiler (ESTP) User Guide, Hot code reloading, Internals of the Nim Compiler, Nim Backend Integration, Nim Compiler User Guide, Nim Destructors and Move Semantics, Nim DocGen Tools Guide, Nim Documentation Overview, Nim Enhancement Proposal #1 - Standard Library Style Guide, Nim Experimental Features, Nim IDE Integration Guide, Nim IDE Integration Guide, Nim maintenance script, Nim Manual, Nim Standard Library, Nim Tutorial (Part I), Nim Tutorial (Part II), Nim Tutorial (Part III), Nim's Garbage Collector, nimgrep User's manual, niminst User's manual, NimScript, Packaging Nim, Source Code Filters, Tools available with Nim.</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200130T045012Z" creationid="isVowel" creationdate="20200115T064940Z">
-        <seg>ドキュメント: API 命名仕様書, コードの権利所有者, 寄贈について, Embedded Stack Trace Profiler (ESTP) User Guide, Hot code reloading, Nim コンパイラの内部構造, Nim バックエンドシステム統合, Nim コンパイラ ユーザガイド, Nim Destructors and Move Semantics, Nim DocGen ツールガイド, Nim ドキュメンテーションの概要, Nim 拡張提案書 #1 - 標準ライブラリのスタイルガイド, Nim Experimental Features, Nim IDE システム統合ガイド (idetools), Nim IDE システム統合ガイド (nimsuggest), Nim メンテナンス・スクリプト, Nim マニュアル, Nim 標準ライブラリ, Nim チュートリアル（第１部）, Nim チュートリアル（第２部）, Nim チュートリアル（第３部）, Nim ガベージコレクター, nimgrep ユーザーズ・ガイド, niminst ユーザーズ・マニュアル, NimScript, Packaging Nim, ソースコードフィルタ, Nim で使えるツール.</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T065531Z" creationid="isVowel" creationdate="20200115T064940Z">
+        <seg>ドキュメント: API 命名仕様書, コードの権利所有者, 寄贈について, 組み込みスタックトレースプロファイラ (ESTP) ユーザガイド, ホットコードリローディング, Nim コンパイラの内部構造, Nim バックエンドシステム統合, Nim コンパイラ ユーザガイド, Nim デストラクタと Move セマンティクス, Nim DocGen ツールガイド, Nim ドキュメンテーションの概要, Nim 拡張提案書 #1 - 標準ライブラリのスタイルガイド,  Nim の試験的機能, Nim IDE システム統合ガイド (idetools), Nim IDE システム統合ガイド (nimsuggest), Nim メンテナンス・スクリプト, Nim マニュアル, Nim 標準ライブラリ, Nim チュートリアル（第１部）, Nim チュートリアル（第２部）, Nim チュートリアル（第３部）, Nim ガベージコレクター, nimgrep ユーザーズ・ガイド, niminst ユーザーズ・マニュアル, NimScript, Nim のパッケージング, ソースコードフィルタ, Nim で使えるツール.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1357,6 +1771,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T010624Z" creationid="isVowel" creationdate="20200127T010544Z">
         <seg>Base64 の各桁は必ず 6 bit データ表現になります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Each commonly used HTML tag has a corresponding macro that generates a string with its HTML representation.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T043004Z" creationid="isVowel" creationdate="20200209T043004Z">
+        <seg>一般的によく使われる HTML タグ と対応するマクロを使うことで HTML 表記の文字列を生成します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1437,6 +1859,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T043613Z" creationid="isVowel" creationdate="20200113T043613Z">
         <seg>用例:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Examples</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120419Z" creationid="isVowel" creationdate="20200208T120419Z">
+        <seg>用例</seg>
       </tuv>
     </tu>
     <tu>
@@ -1677,6 +2107,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:27:46 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115347Z" creationid="isVowel" creationdate="20200208T115347Z">
+        <seg>生成日時: 2020年01月23日 午前17時27分46秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Generated: 2020-01-23 17:27:47 UTC</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200129T133741Z" creationid="isVowel" creationdate="20200129T133741Z">
@@ -1729,6 +2167,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T021528Z" creationid="isVowel" creationdate="20200130T021528Z">
         <seg>生成日時: 2020年01月23日 午前17時28分07秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:28:19 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T095519Z" creationid="isVowel" creationdate="20200208T095519Z">
+        <seg>生成日時: 2020年01月23日 午前17時28分19秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
@@ -1837,6 +2283,62 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Generates the HTML center element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121157Z" creationid="isVowel" creationdate="20200208T121157Z">
+        <seg>HTML center 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generates the HTML details element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121249Z" creationid="isVowel" creationdate="20200208T121249Z">
+        <seg>HTML details 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generates the HTML dialog element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121301Z" creationid="isVowel" creationdate="20200208T121301Z">
+        <seg>HTML dialog 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generates the HTML marquee element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120047Z" creationid="isVowel" creationdate="20200208T120047Z">
+        <seg>HTML marquee 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generates the HTML picture element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115926Z" creationid="isVowel" creationdate="20200208T115926Z">
+        <seg>HTML picture 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generates the HTML slot element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115705Z" creationid="isVowel" creationdate="20200208T115705Z">
+        <seg>HTML slot 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generates the HTML summary element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115623Z" creationid="isVowel" creationdate="20200208T115623Z">
+        <seg>HTML summary 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Generics</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T063848Z" creationid="isVowel" creationdate="20200115T063848Z">
@@ -1861,6 +2363,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Global configuration files under /etc/nim</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T104411Z" creationid="isVowel" creationdate="20200208T104411Z">
+        <seg>/etc/nim ディレクトリにあるグローバルコンフィギュレーション・ファイル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Grammar</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T023847Z" creationid="isVowel" creationdate="20200115T023847Z">
@@ -1877,6 +2387,38 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>HTML DOM Aria Attributes   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120611Z" creationid="isVowel" creationdate="20200208T120611Z">
+        <seg>HTML DOM Aria 属性   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>HTML DOM Common Attributes   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120624Z" creationid="isVowel" creationdate="20200208T120624Z">
+        <seg>HTML DOM Common 属性   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>HTML DOM Core Attributes   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120554Z" creationid="isVowel" creationdate="20200208T120554Z">
+        <seg>HTML DOM Core 属性   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>HTML DOM Event Attributes   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120928Z" creationid="isVowel" creationdate="20200208T120928Z">
+        <seg>HTML DOM Event 属性   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>HTML anchor generation</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200118T022605Z" creationid="isVowel" creationdate="20200118T022605Z">
@@ -1889,6 +2431,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082137Z" creationid="isVowel" creationdate="20200114T082137Z">
         <seg>Header プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Hints on the build process:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T111108Z" creationid="isVowel" creationdate="20200208T111108Z">
+        <seg>ビルド方法のヒント:</seg>
       </tuv>
     </tu>
     <tu>
@@ -2095,6 +2645,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Internet Protocols and Support</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T085152Z" creationid="isVowel" creationdate="20200208T085152Z">
+        <seg>インターネットプロトコルとサポート</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Introduction</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T080337Z" creationid="isVowel" creationdate="20200113T041743Z">
@@ -2284,6 +2842,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Math libraries</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T085133Z" creationid="isVowel" creationdate="20200208T085133Z">
+        <seg>算術ライブラリ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Meaning</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T055242Z" creationid="isVowel" creationdate="20200115T055242Z">
@@ -2372,6 +2938,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Network Programming and Internet Protocols</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T085235Z" creationid="isVowel" creationdate="20200208T085235Z">
+        <seg>ネットワークプログラミングとインタープロトコル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Nim Compiler User Guide</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200118T031625Z" creationid="isVowel" creationdate="20200118T031625Z">
@@ -2384,6 +2958,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200118T022409Z" creationid="isVowel" creationdate="20200118T022409Z">
         <seg>Nim DocGen ツールガイド</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Nim Documentation Overview</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T053304Z" creationid="isVowel" creationdate="20200209T053304Z">
+        <seg>Nim ドキュメンテーションの概要</seg>
       </tuv>
     </tu>
     <tu>
@@ -2424,6 +3006,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T075017Z" creationid="isVowel" creationdate="20200114T075017Z">
         <seg>Nim メンテナンス・スクリプト</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Nim runs on a wide variety of platforms.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T111334Z" creationid="isVowel" creationdate="20200208T111334Z">
+        <seg>Nim は多種多様なプラットホームで動作します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2509,6 +3099,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Optionally: manpages, documentation, shell completion</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T104923Z" creationid="isVowel" creationdate="20200208T104923Z">
+        <seg>オプション: man ページ、ドキュメンテーション、シェル補完</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Options:</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T031746Z" creationid="isVowel" creationdate="20200130T031746Z">
@@ -2577,6 +3175,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041700Z" creationid="isVowel" creationdate="20200113T041700Z">
         <seg>プロシージャのオーバーロード</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Packaging Nim</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T105734Z" creationid="isVowel" creationdate="20200208T105734Z">
+        <seg>Nim のパッケージング</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Packaging for Linux</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T105944Z" creationid="isVowel" creationdate="20200208T105944Z">
+        <seg>Linux 版のパッケージング</seg>
       </tuv>
     </tu>
     <tu>
@@ -2750,6 +3364,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Read this if you want to hack the compiler.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T053952Z" creationid="isVowel" creationdate="20200209T053952Z">
+        <seg> これはコンパイラをハックしたいときにお読みください。 </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Reference and pointer types</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T042206Z" creationid="isVowel" creationdate="20200113T042206Z">
@@ -2906,6 +3528,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T030638Z" creationid="isVowel" creationdate="20200113T025500Z">
         <seg>区分</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See distros for tools to detect Linux distribution at runtime.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T112032Z" creationid="isVowel" creationdate="20200208T112032Z">
+        <seg>Linux ディストリビューションをツールで検出するには distros を参照してください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See https://github.com/nim-lang/Nim/labels/Installation for installation-related bugs.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T104632Z" creationid="isVowel" creationdate="20200208T104632Z">
+        <seg>インストール関連のバグは https://github.com/nim-lang/Nim/labels/Installation を参照してください。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3068,6 +3706,22 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Support on amd64 and i386 is tested regularly, while less popular platforms are tested by the community.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T111828Z" creationid="isVowel" creationdate="20200208T111828Z">
+        <seg>amd64 と i386 のサポートのテストは定期的に行われています。それ以外のあまり一般的ではないプラットフォームはコミュニティでテストが行われています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Supported architectures</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T111156Z" creationid="isVowel" creationdate="20200208T111141Z">
+        <seg>アーキテクチャのサポート</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Supports IPv4 and v6.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T113832Z" creationid="isVowel" creationdate="20200122T113832Z">
@@ -3114,6 +3768,22 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T043859Z" creationid="isVowel" creationdate="20200113T043859Z">
         <seg>テンプレート</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Tested on these OSes: Linux, Windows, OSX</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T053100Z" creationid="isVowel" creationdate="20200209T051925Z">
+        <seg>テスト済み OS : Linux, Windows, OSX</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The "compiler" directory contains compiler sources and should not be part of the compiler binary package</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T105456Z" creationid="isVowel" creationdate="20200208T105456Z">
+        <seg>"compiler" ディレクトリにはコンパイラのソースがありますが、これはコンパイラのバイナリパッケージへの収録対象ではありません。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3222,6 +3892,54 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The Debian package ships bash and ksh completion and manpages that can be reused.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T110956Z" creationid="isVowel" creationdate="20200208T110951Z">
+        <seg>Debian パッケージには再利用可能な bash と ksh のシェル補完、および man ページが収録されています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Nim compiler supports source code filters as a simple yet powerful builtin templating system.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T063828Z" creationid="isVowel" creationdate="20200209T063828Z">
+        <seg>Nim コンパイラはシンプルだが強力な内蔵型テンプレートシステムとしてソースコードフィルタをサポートしています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Nim manual is a draft that will evolve into a proper specification.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T063044Z" creationid="isVowel" creationdate="20200209T063044Z">
+        <seg>Nim マニュアルは改訂が続けられている草稿段階の公式仕様書です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Nim tutorial part one deals with the basics.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T062159Z" creationid="isVowel" creationdate="20200209T061916Z">
+        <seg>Nim チュートリアル 第１部では基本事項について解説しています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Nim tutorial part three about Nim's macro system.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T061107Z" creationid="isVowel" creationdate="20200209T061107Z">
+        <seg>Nim チュートリアル 第３部では Nim のマクロシステムについて解説しています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The Nim tutorial part two deals with the advanced language constructs.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T062156Z" creationid="isVowel" creationdate="20200209T062147Z">
+        <seg>Nim チュートリアル 第２部では高度な言語構造について解説しています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The above output could be the result of a code snippet like:</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200131T095708Z" creationid="isVowel" creationdate="20200131T095708Z">
@@ -3245,6 +3963,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>The current implementation uses PCRE.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200203T004844Z" creationid="isVowel" creationdate="20200203T004844Z">
+        <seg>現在の実装では PCRE を採用しています。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>【参考意訳】
 ・most common : 一般によく使われる
 
@@ -3258,6 +3984,22 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The documentation consists of several documents:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T060419Z" creationid="isVowel" creationdate="20200209T060419Z">
+        <seg>このようなドキュメンテーションがあります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The expected stdlib location is /usr/lib/nim</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T110344Z" creationid="isVowel" creationdate="20200208T110231Z">
+        <seg>stdlib の所在は /usr/lib/nim にあると仮定します</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The first program</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041751Z" creationid="isVowel" creationdate="20200113T041751Z">
@@ -3266,10 +4008,26 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The following platforms are seldomly tested:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T105553Z" creationid="isVowel" creationdate="20200208T105553Z">
+        <seg>次のプラットホームのテストは全く行われていません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The full output can be seen here: docgen_sample.html.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200119T013032Z" creationid="isVowel" creationdate="20200118T024546Z">
         <seg>完全な出力は docgen_sample.html を参照してください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The generated index.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T061215Z" creationid="isVowel" creationdate="20200209T061215Z">
+        <seg>自動生成の索引です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3285,6 +4043,14 @@ skipped : スキップする、無視する、読み飛ばす。</note>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T014300Z" creationid="isVowel" creationdate="20200125T144905Z">
         <seg>頭文字にあるホワイトスペースは無視します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The internal documentation describes how the compiler is implemented.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T053944Z" creationid="isVowel" creationdate="20200209T053944Z">
+        <seg>コンパイラの内部構造ではコンパイラの実装方法を解説してあります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3312,11 +4078,28 @@ skipped : スキップする、無視する、読み飛ばす。</note>
       </tuv>
     </tu>
     <tu>
+      <note>「ファイルハンドル形式型」や「ファイルハンドルを表す種類」ではおかしいので、 repesenting は省いて「ファイルハンドル型」で良いでしょう。</note>
+      <tuv lang="EN-US">
+        <seg>The type representing a file handle.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T052140Z" creationid="isVowel" creationdate="20200209T052140Z">
+        <seg>ファイルハンドル型。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv lang="EN-US">
         <seg>The unsafeAddr operator</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T081850Z" creationid="isVowel" creationdate="20200114T081850Z">
         <seg>unsafeAddr 演算子</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The user guide lists command line arguments, special features of the compiler, etc.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T060349Z" creationid="isVowel" creationdate="20200209T060349Z">
+        <seg>ユーザーガイドではコマンドライン引数のリスト、コンパイラの特色などを解説しています。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3344,6 +4127,14 @@ skipped : スキップする、無視する、読み飛ばす。</note>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200117T055126Z" creationid="isVowel" creationdate="20200117T054910Z">
         <seg>このコマンドは Nim のテストスイートにおけるメインドライバです。 testament/tester.nim のコンパイル、および実行します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This document describes Nim's standard library.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T060913Z" creationid="isVowel" creationdate="20200209T060913Z">
+        <seg>このドキュメントでは Nim の標準ライブラリについて解説しています。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3440,10 +4231,26 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This module implements a simple XML and HTML code generator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T042958Z" creationid="isVowel" creationdate="20200209T042958Z">
+        <seg>このモジュールはシンプルな XML と HTML のコードジェネレーターの実装です。 </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This module implements a simple proc for opening URLs with the user's default browser.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200123T071848Z" creationid="isVowel" creationdate="20200123T071848Z">
         <seg>このモジュールはユーザのデフォルトブラウザで URL を開くプロシージャの実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This module implements a small wrapper for some needed Win API procedures, so that the Nim compiler does not depend on the huge Windows module.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T083021Z" creationid="isVowel" creationdate="20200208T083021Z">
+        <seg>このモジュールは Nim コンパイラは大規模 Windows モジュールに依存していない関係で必要とされる Windows API プロシージャの小規模ラッパーの実装です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3503,6 +4310,23 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
     </tu>
     <tu>
+      <note>もっと丁寧に訳すなら、「このモジュールは NilAccessError 例外のシグナルハンドラを登録します。登録後にアクセス違反、セグメンテーション違反が起きると NilAccessError 例外へハンドラを差し替えます。」ですかね。</note>
+      <tuv lang="EN-US">
+        <seg>This modules registers a signal handler that turns access violations / segfaults into a NilAccessError exception.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T052931Z" creationid="isVowel" creationdate="20200209T051909Z">
+        <seg>このモジュールはシグナルハンドラを登録するNilAccessErrorことでアクセス違反 (access violations)、セグメンテーション違反 (segfaults) を NilAccessError 例外に差し替えます。 </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This page provide hints on distributing Nim using OS packages.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T111936Z" creationid="isVowel" creationdate="20200208T111936Z">
+        <seg>このページは OS パッケージによる Nim の配布方法についてのヒントを解説しています。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv lang="EN-US">
         <seg>This proc doesn't raise an exception on error, beware.</seg>
       </tuv>
@@ -3536,6 +4360,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Threading</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T085157Z" creationid="isVowel" creationdate="20200208T085157Z">
+        <seg>スレッド</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Threads</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T083638Z" creationid="isVowel" creationdate="20200114T083638Z">
@@ -3564,6 +4396,22 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T011239Z" creationid="isVowel" creationdate="20200127T011239Z">
         <seg>したがって、 3 桁の 8 bit バイト (つまり、合計 24 bit) は Base64 において 4 桁の 6 bit 表現になります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Time handling</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T085122Z" creationid="isVowel" creationdate="20200208T085122Z">
+        <seg>時刻処理</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To be able to catch a NilAccessError all you have to do is to import this module.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T051916Z" creationid="isVowel" creationdate="20200209T051916Z">
+        <seg>NilAccessError を捕らえるには、このモジュールをインポートしてください。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3650,6 +4498,15 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T025553Z" creationid="isVowel" creationdate="20200113T025553Z">
         <seg>型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>この文脈では、 UNIX 依存ではなく UNIX 専用とした方がしっくりくる。</note>
+      <tuv lang="EN-US">
+        <seg>UNIX specific</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T085734Z" creationid="isVowel" creationdate="20200208T085734Z">
+        <seg>UNIX 専用</seg>
       </tuv>
     </tu>
     <tu>
@@ -3827,10 +4684,26 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>What to install:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T110319Z" creationid="isVowel" creationdate="20200208T110319Z">
+        <seg>インストールするもの:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>When expression</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T081816Z" creationid="isVowel" creationdate="20200114T081816Z">
         <seg>When 式</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When installing documentation, .idx files are not required</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T105026Z" creationid="isVowel" creationdate="20200208T105026Z">
+        <seg>ドキュメンテーションのインストール時、 .idx は不要です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3855,6 +4728,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041204Z" creationid="isVowel" creationdate="20200113T041204Z">
         <seg>While ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Windows specific</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T085823Z" creationid="isVowel" creationdate="20200208T085823Z">
+        <seg>Windows 専用</seg>
       </tuv>
     </tu>
     <tu>
@@ -3903,6 +4784,22 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200131T095449Z" creationid="isVowel" creationdate="20200131T095449Z">
         <seg>登録された外部パッケージの依存性リストを標準出力に書き出します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Writes the string:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120851Z" creationid="isVowel" creationdate="20200208T120851Z">
+        <seg>出力文字列:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>XML Processing</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T085922Z" creationid="isVowel" creationdate="20200208T085922Z">
+        <seg>XML の処理</seg>
       </tuv>
     </tu>
     <tu>
@@ -3977,6 +4874,70 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>ai_addr*: ptr SockAddr        ## Socket address of socket.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T082632Z" creationid="isVowel" creationdate="20200208T082632Z">
+        <seg>ai_addr*: ptr SockAddr        ## ソケットのソケットアドレス。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ai_addrlen*: csize           ## Length of socket address.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T082549Z" creationid="isVowel" creationdate="20200208T082549Z">
+        <seg>ai_addrlen*: csize           ## ソケットのアドレス長。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ai_canonname*: cstring       ## Canonical name of service location.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T082559Z" creationid="isVowel" creationdate="20200208T082559Z">
+        <seg>ai_canonname*: cstring       ## サービスロケーションの正規名。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ai_family*: cint             ## Address family of socket.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T082453Z" creationid="isVowel" creationdate="20200208T082453Z">
+        <seg>ai_family*: cint             ## ソケットのアドレスファミリー。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ai_flags*: cint              ## Input flags.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T082442Z" creationid="isVowel" creationdate="20200208T082442Z">
+        <seg>ai_flags*: cint              ## 入力フラグ群。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ai_next*: ptr AddrInfo        ## Pointer to next in list.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T082639Z" creationid="isVowel" creationdate="20200208T082639Z">
+        <seg>ai_next*: ptr AddrInfo        ## 次のリストへのポインタ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ai_protocol*: cint           ## Protocol of socket.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T082541Z" creationid="isVowel" creationdate="20200208T082541Z">
+        <seg>ai_protocol*: cint           ## ソケットのプロトコル。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ai_socktype*: cint           ## Socket type.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T082505Z" creationid="isVowel" creationdate="20200208T082505Z">
+        <seg>ai_socktype*: cint           ## ソケットの種類。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>an alias for 'send'.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T113757Z" creationid="isVowel" creationdate="20200122T113757Z">
@@ -3997,6 +4958,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082023Z" creationid="isVowel" creationdate="20200114T082023Z">
         <seg>asmNoStackFrame プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>asyncdispatch module</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T114428Z" creationid="isVowel" creationdate="20200208T114428Z">
+        <seg>asyncdispatch モジュール</seg>
       </tuv>
     </tu>
     <tu>
@@ -4045,6 +5014,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T054743Z" creationid="isVowel" creationdate="20200115T054743Z">
         <seg>キャリッジリターン</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>channels module</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T114433Z" creationid="isVowel" creationdate="20200208T114433Z">
+        <seg>channels モジュール</seg>
       </tuv>
     </tu>
     <tu>
@@ -4155,6 +5132,886 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>generates the HTML a element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121016Z" creationid="isVowel" creationdate="20200208T121016Z">
+        <seg>HTML a 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML abbr element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121023Z" creationid="isVowel" creationdate="20200208T121023Z">
+        <seg>HTML abbr 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML address element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121029Z" creationid="isVowel" creationdate="20200208T121029Z">
+        <seg>HTML address要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML area element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121035Z" creationid="isVowel" creationdate="20200208T121035Z">
+        <seg>HTML area 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML article element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121040Z" creationid="isVowel" creationdate="20200208T121040Z">
+        <seg>HTML article 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML aside element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121046Z" creationid="isVowel" creationdate="20200208T121046Z">
+        <seg>HTML aside 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML audio element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121052Z" creationid="isVowel" creationdate="20200208T121052Z">
+        <seg>HTML audio 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML b element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121057Z" creationid="isVowel" creationdate="20200208T121057Z">
+        <seg>HTML b 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML base element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121102Z" creationid="isVowel" creationdate="20200208T121102Z">
+        <seg>HTML base 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML bdi element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121108Z" creationid="isVowel" creationdate="20200208T121108Z">
+        <seg>HTML bdi 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML bdo element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121114Z" creationid="isVowel" creationdate="20200208T121114Z">
+        <seg>HTML bdo 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML big element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121119Z" creationid="isVowel" creationdate="20200208T121119Z">
+        <seg>HTML big 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML blockquote element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121124Z" creationid="isVowel" creationdate="20200208T121124Z">
+        <seg>HTML blockquote 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML body element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121130Z" creationid="isVowel" creationdate="20200208T121130Z">
+        <seg>HTML body 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML br element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121136Z" creationid="isVowel" creationdate="20200208T121136Z">
+        <seg>HTML br 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML button element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121142Z" creationid="isVowel" creationdate="20200208T121142Z">
+        <seg>HTML button 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML canvas element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121147Z" creationid="isVowel" creationdate="20200208T121147Z">
+        <seg>HTML canvas 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML caption element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121152Z" creationid="isVowel" creationdate="20200208T121152Z">
+        <seg>HTML caption 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML cite element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121203Z" creationid="isVowel" creationdate="20200208T121203Z">
+        <seg>HTML cite 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML code element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121209Z" creationid="isVowel" creationdate="20200208T121209Z">
+        <seg>HTML code 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML col element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121216Z" creationid="isVowel" creationdate="20200208T121216Z">
+        <seg>HTML col 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML colgroup element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121221Z" creationid="isVowel" creationdate="20200208T121221Z">
+        <seg>HTML colgroup 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML data element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121226Z" creationid="isVowel" creationdate="20200208T121226Z">
+        <seg>HTML data 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML datalist element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121232Z" creationid="isVowel" creationdate="20200208T121232Z">
+        <seg>HTML datalist 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML dd element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121238Z" creationid="isVowel" creationdate="20200208T121238Z">
+        <seg>HTML dd 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML del element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121244Z" creationid="isVowel" creationdate="20200208T121244Z">
+        <seg>HTML del 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML dfn element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121256Z" creationid="isVowel" creationdate="20200208T121256Z">
+        <seg>HTML dfn 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML div element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121307Z" creationid="isVowel" creationdate="20200208T121307Z">
+        <seg>HTML div 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML dl element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121312Z" creationid="isVowel" creationdate="20200208T121312Z">
+        <seg>HTML dl 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML dt element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121317Z" creationid="isVowel" creationdate="20200208T121317Z">
+        <seg>HTML dt 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML em element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121322Z" creationid="isVowel" creationdate="20200208T121322Z">
+        <seg>HTML em 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML embed element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T121330Z" creationid="isVowel" creationdate="20200208T121330Z">
+        <seg>HTML embed 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML fieldset element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120350Z" creationid="isVowel" creationdate="20200208T120350Z">
+        <seg>HTML fieldset 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML figcaption element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120337Z" creationid="isVowel" creationdate="20200208T120337Z">
+        <seg>HTML figcaption 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML figure element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120342Z" creationid="isVowel" creationdate="20200208T120342Z">
+        <seg>HTML figure 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML footer element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120330Z" creationid="isVowel" creationdate="20200208T120330Z">
+        <seg>HTML footer 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML form element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120325Z" creationid="isVowel" creationdate="20200208T120325Z">
+        <seg>HTML form 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML h1 element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120320Z" creationid="isVowel" creationdate="20200208T120320Z">
+        <seg>HTML h1 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML h2 element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120314Z" creationid="isVowel" creationdate="20200208T120314Z">
+        <seg>HTML h2 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML h3 element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120307Z" creationid="isVowel" creationdate="20200208T120307Z">
+        <seg>HTML h3 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML h4 element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120301Z" creationid="isVowel" creationdate="20200208T120301Z">
+        <seg>HTML h4 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML h5 element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120255Z" creationid="isVowel" creationdate="20200208T120255Z">
+        <seg>HTML h5 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML h6 element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120250Z" creationid="isVowel" creationdate="20200208T120250Z">
+        <seg>HTML h6 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML head element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120244Z" creationid="isVowel" creationdate="20200208T120244Z">
+        <seg>HTML head 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML header element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120238Z" creationid="isVowel" creationdate="20200208T120238Z">
+        <seg>HTML header 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML hr element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120223Z" creationid="isVowel" creationdate="20200208T120223Z">
+        <seg>HTML hr 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML html element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120233Z" creationid="isVowel" creationdate="20200208T120233Z">
+        <seg>HTML html 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML i element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120217Z" creationid="isVowel" creationdate="20200208T120217Z">
+        <seg>HTML i 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML iframe element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120211Z" creationid="isVowel" creationdate="20200208T120211Z">
+        <seg>HTML iframe 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML img element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120205Z" creationid="isVowel" creationdate="20200208T120205Z">
+        <seg>HTML img 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML input element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120156Z" creationid="isVowel" creationdate="20200208T120156Z">
+        <seg>HTML input 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML ins element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120150Z" creationid="isVowel" creationdate="20200208T120150Z">
+        <seg>HTML ins 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML kbd element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120144Z" creationid="isVowel" creationdate="20200208T120144Z">
+        <seg>HTML kbd 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML keygen element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120139Z" creationid="isVowel" creationdate="20200208T120139Z">
+        <seg>HTML keygen 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML label element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120132Z" creationid="isVowel" creationdate="20200208T120132Z">
+        <seg>HTML label 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML legend element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120125Z" creationid="isVowel" creationdate="20200208T120125Z">
+        <seg>HTML legend 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML li element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120117Z" creationid="isVowel" creationdate="20200208T120117Z">
+        <seg>HTML li 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML link element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120111Z" creationid="isVowel" creationdate="20200208T120111Z">
+        <seg>HTML link 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML main element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120105Z" creationid="isVowel" creationdate="20200208T120105Z">
+        <seg>HTML main 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML map element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120058Z" creationid="isVowel" creationdate="20200208T120058Z">
+        <seg>HTML map 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML mark element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120053Z" creationid="isVowel" creationdate="20200208T120053Z">
+        <seg>HTML mark 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML meta element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120041Z" creationid="isVowel" creationdate="20200208T120041Z">
+        <seg>HTML meta 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML meter element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120035Z" creationid="isVowel" creationdate="20200208T120035Z">
+        <seg>HTML meter 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML nav element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120029Z" creationid="isVowel" creationdate="20200208T120029Z">
+        <seg>HTML nav 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML noscript element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120023Z" creationid="isVowel" creationdate="20200208T120023Z">
+        <seg>HTML noscript 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML object element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120015Z" creationid="isVowel" creationdate="20200208T120015Z">
+        <seg>HTML object 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML ol element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120003Z" creationid="isVowel" creationdate="20200208T120003Z">
+        <seg>HTML ol 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML optgroup element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115957Z" creationid="isVowel" creationdate="20200208T115957Z">
+        <seg>HTML optgroup 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML option element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115951Z" creationid="isVowel" creationdate="20200208T115951Z">
+        <seg>HTML option 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML output element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115945Z" creationid="isVowel" creationdate="20200208T115945Z">
+        <seg>HTML output 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML p element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115938Z" creationid="isVowel" creationdate="20200208T115938Z">
+        <seg>HTML p 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML param element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115933Z" creationid="isVowel" creationdate="20200208T115933Z">
+        <seg>HTML param 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML pre element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115920Z" creationid="isVowel" creationdate="20200208T115920Z">
+        <seg>HTML pre 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML progress element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115910Z" creationid="isVowel" creationdate="20200208T115910Z">
+        <seg>HTML progress 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML q element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115903Z" creationid="isVowel" creationdate="20200208T115903Z">
+        <seg>HTML q 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML rb element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115858Z" creationid="isVowel" creationdate="20200208T115858Z">
+        <seg>HTML rb 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML rp element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115852Z" creationid="isVowel" creationdate="20200208T115852Z">
+        <seg>HTML rp 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML rt element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115846Z" creationid="isVowel" creationdate="20200208T115846Z">
+        <seg>HTML rt 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML rtc element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115840Z" creationid="isVowel" creationdate="20200208T115840Z">
+        <seg>HTML rtc 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML ruby element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115834Z" creationid="isVowel" creationdate="20200208T115834Z">
+        <seg>HTML ruby 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML s element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115828Z" creationid="isVowel" creationdate="20200208T115828Z">
+        <seg>HTML s 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML samp element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115734Z" creationid="isVowel" creationdate="20200208T115734Z">
+        <seg>HTML samp 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML script element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115725Z" creationid="isVowel" creationdate="20200208T115725Z">
+        <seg>HTML script 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML section element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115719Z" creationid="isVowel" creationdate="20200208T115719Z">
+        <seg>HTML section 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML select element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115711Z" creationid="isVowel" creationdate="20200208T115711Z">
+        <seg>HTML select 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML small element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115659Z" creationid="isVowel" creationdate="20200208T115659Z">
+        <seg>HTML small 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML source element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115653Z" creationid="isVowel" creationdate="20200208T115653Z">
+        <seg>HTML source 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML span element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115647Z" creationid="isVowel" creationdate="20200208T115647Z">
+        <seg>HTML span 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML strong element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115641Z" creationid="isVowel" creationdate="20200208T115641Z">
+        <seg>HTML strong 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML style element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115635Z" creationid="isVowel" creationdate="20200208T115635Z">
+        <seg>HTML style 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML sub element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115629Z" creationid="isVowel" creationdate="20200208T115629Z">
+        <seg>HTML sub 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML sup element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115615Z" creationid="isVowel" creationdate="20200208T115615Z">
+        <seg>HTML sup 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML table element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115608Z" creationid="isVowel" creationdate="20200208T115608Z">
+        <seg>HTML table 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML tbody element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115602Z" creationid="isVowel" creationdate="20200208T115602Z">
+        <seg>HTML tbody 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML td element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115556Z" creationid="isVowel" creationdate="20200208T115556Z">
+        <seg>HTML td 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML template element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115550Z" creationid="isVowel" creationdate="20200208T115550Z">
+        <seg>HTML template 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML textarea element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115543Z" creationid="isVowel" creationdate="20200208T115543Z">
+        <seg>HTML textarea 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML tfoot element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115536Z" creationid="isVowel" creationdate="20200208T115536Z">
+        <seg>HTML tfoot 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML th element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115528Z" creationid="isVowel" creationdate="20200208T115528Z">
+        <seg>HTML th 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML thead element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115522Z" creationid="isVowel" creationdate="20200208T115522Z">
+        <seg>HTML thead 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML time element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115515Z" creationid="isVowel" creationdate="20200208T115515Z">
+        <seg>HTML time 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML title element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115507Z" creationid="isVowel" creationdate="20200208T115507Z">
+        <seg>HTML title 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML tr element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115500Z" creationid="isVowel" creationdate="20200208T115500Z">
+        <seg>HTML tr 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML track element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115452Z" creationid="isVowel" creationdate="20200208T115452Z">
+        <seg>track 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML tt element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115424Z" creationid="isVowel" creationdate="20200208T115424Z">
+        <seg>HTML tt 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML u element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115432Z" creationid="isVowel" creationdate="20200208T115410Z">
+        <seg>HTML u 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML ul element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115437Z" creationid="isVowel" creationdate="20200208T115404Z">
+        <seg>HTML ul 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML var element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115336Z" creationid="isVowel" creationdate="20200208T115336Z">
+        <seg>HTML var 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML video element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115325Z" creationid="isVowel" creationdate="20200208T115325Z">
+        <seg>HTML video 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>generates the HTML wbr element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T115316Z" creationid="isVowel" creationdate="20200208T115316Z">
+        <seg>HTML wbr 要素の生成。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>global pragma</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082114Z" creationid="isVowel" creationdate="20200114T082114Z">
@@ -4211,6 +6068,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082045Z" creationid="isVowel" creationdate="20200114T082045Z">
         <seg>linearScanEnd プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>locks module</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T114431Z" creationid="isVowel" creationdate="20200208T114431Z">
+        <seg>locks モジュール</seg>
       </tuv>
     </tu>
     <tu>
@@ -4405,6 +6270,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>realtime setting.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200209T063300Z" creationid="isVowel" creationdate="20200209T063300Z">
+        <seg>追加ドキュメンテーションです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>register pragma</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082111Z" creationid="isVowel" creationdate="20200114T082111Z">
@@ -4477,6 +6350,30 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>struct addrinfo   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T083749Z" creationid="isVowel" creationdate="20200208T083640Z">
+        <seg>addrinfo 構造体  ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>struct protoent   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T083818Z" creationid="isVowel" creationdate="20200208T083818Z">
+        <seg>protoent 構造体   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>struct servent   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T083735Z" creationid="isVowel" creationdate="20200208T083735Z">
+        <seg>servent 構造体  ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>subsystem</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200117T061631Z" creationid="isVowel" creationdate="20200117T061631Z">
@@ -4526,6 +6423,22 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>threads module</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T114437Z" creationid="isVowel" creationdate="20200208T114437Z">
+        <seg>threads モジュール</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>turn on debugging info recording   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T082831Z" creationid="isVowel" creationdate="20200208T082831Z">
+        <seg>デバッグ情報の記録を開始します   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>typeof operator</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T021850Z" creationid="isVowel" creationdate="20200115T021850Z">
@@ -4538,6 +6451,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082056Z" creationid="isVowel" creationdate="20200114T082056Z">
         <seg>unroll プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>use this procedure to define a new XML tag   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200208T120715Z" creationid="isVowel" creationdate="20200208T120641Z">
+        <seg>このプロシージャは新しい XML タグを定義します   ソース 編集</seg>
       </tuv>
     </tu>
     <tu>

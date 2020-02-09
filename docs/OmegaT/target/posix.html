@@ -1284,14 +1284,14 @@ function main() {
                   ## contacting the service.'><wbr />Servent<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#AddrInfo"
     title='AddrInfo {.importc: "struct addrinfo", pure, final, header: "&lt;netdb.h&gt;".} = object
-  ai_flags*: cint              ## Input flags.
-  ai_family*: cint             ## Address family of socket.
-  ai_socktype*: cint           ## Socket type.
-  ai_protocol*: cint           ## Protocol of socket.
+  ai_flags*: cint              ## 入力フラグ群。
+  ai_family*: cint             ## ソケットのアドレスファミリー。
+  ai_socktype*: cint           ## ソケットの種類。
+  ai_protocol*: cint           ## ソケットのプロトコル。
   ai_addrlen*: SockLen         ## Length of socket address.
-  ai_addr*: ptr SockAddr        ## Socket address of socket.
-  ai_canonname*: cstring       ## Canonical name of service location.
-  ai_next*: ptr AddrInfo        ## Pointer to next in list.'><wbr />Addr<wbr />Info<span class="attachedType"></span></a></li>
+  ai_addr*: ptr SockAddr        ## ソケットのソケットアドレス。
+  ai_canonname*: cstring       ## サービスロケーションの正規名。
+  ai_next*: ptr AddrInfo        ## 次のリストへのポインタ。'><wbr />Addr<wbr />Info<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#TPollfd"
     title='TPollfd {.importc: "struct pollfd", pure, final, header: "&lt;poll.h&gt;".} = object
   fd*: cint                    ## The following descriptor being polled.
@@ -5084,13 +5084,9 @@ class="link-seesrc" target="_blank">Source</a>
   </pre></dt>
 <dd>
 
-
-
-struct protoent
-&nbsp;&nbsp;<a
+protoent 構造体&nbsp; &nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/posix/posix_other.nim#L501"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/posix_other.nim#L501" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/posix_other.nim#L501" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="Servent"></a>
@@ -5106,35 +5102,27 @@ class="link-seesrc" target="_blank">Source</a>
   </pre></dt>
 <dd>
 
-
-
-struct servent
-&nbsp;&nbsp;<a
+servent 構造体&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/posix/posix_other.nim#L509"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/posix_other.nim#L509" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/posix_other.nim#L509" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="AddrInfo"></a>
 <dt><pre><a href="posix.html#AddrInfo"><span class="Identifier">AddrInfo</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">"struct addrinfo"</span><span class="Other">,</span> <span class="Identifier">pure</span><span class="Other">,</span> <span class="Identifier">final</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">"&lt;netdb.h&gt;"</span></span><span class="Other">.}</span></span> <span class="Other">=</span> <span class="Keyword">object</span>
-  <span class="Identifier">ai_flags</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#cint"><span class="Identifier">cint</span></a>              <span class="Comment">## Input flags.</span>
-  <span class="Identifier">ai_family</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#cint"><span class="Identifier">cint</span></a>             <span class="Comment">## Address family of socket.</span>
-  <span class="Identifier">ai_socktype</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#cint"><span class="Identifier">cint</span></a>           <span class="Comment">## Socket type.</span>
-  <span class="Identifier">ai_protocol</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#cint"><span class="Identifier">cint</span></a>           <span class="Comment">## Protocol of socket.</span>
-  <span class="Identifier">ai_addrlen</span><span class="Operator">*</span><span class="Other">:</span> <a href="posix.html#SockLen"><span class="Identifier">SockLen</span></a>         <span class="Comment">## Length of socket address.</span>
-  <span class="Identifier">ai_addr</span><span class="Operator">*</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="posix.html#SockAddr"><span class="Identifier">SockAddr</span></a>        <span class="Comment">## Socket address of socket.</span>
-  <span class="Identifier">ai_canonname</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#cstring"><span class="Identifier">cstring</span></a>       <span class="Comment">## Canonical name of service location.</span>
-  <span class="Identifier">ai_next</span><span class="Operator">*</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="posix.html#AddrInfo"><span class="Identifier">AddrInfo</span></a>        <span class="Comment">## Pointer to next in list.</span>
+  <span class="Identifier">ai_flags</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#cint"><span class="Identifier">cint</span></a>              <span class="Comment">## 入力フラグ群。</span>
+  <span class="Identifier">ai_family</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#cint"><span class="Identifier">cint</span></a>             <span class="Comment">## ソケットのアドレスファミリー。</span>
+  <span class="Identifier">ai_socktype</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#cint"><span class="Identifier">cint</span></a>           <span class="Comment">## ソケットの種類。</span>
+  <span class="Identifier">ai_protocol</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#cint"><span class="Identifier">cint</span></a>           <span class="Comment">## ソケットのプロトコル。</span>
+  <span class="Identifier">ai_addrlen</span><span class="Operator">*</span><span class="Other">:</span> <a href="posix.html#SockLen"><span class="Identifier">SockLen</span></a>         <span class="Comment">## ソケットのアドレス長。</span>
+  <span class="Identifier">ai_addr</span><span class="Operator">*</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="posix.html#SockAddr"><span class="Identifier">SockAddr</span></a>        <span class="Comment">## ケットのソケットアドレス。</span>
+  <span class="Identifier">ai_canonname</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#cstring"><span class="Identifier">cstring</span></a>       <span class="Comment">## サービスロケーションの正規名。</span>
+  <span class="Identifier">ai_next</span><span class="Operator">*</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="posix.html#AddrInfo"><span class="Identifier">AddrInfo</span></a>        <span class="Comment">## 次のリストへのポインタ。</span>
   </pre></dt>
 <dd>
 
-
-
-struct addrinfo
-&nbsp;&nbsp;<a
+addrinfo 構造体&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/posix/posix_other.nim#L520"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/posix_other.nim#L520" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/posix_other.nim#L520" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="TPollfd"></a>
@@ -12130,14 +12118,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 
-
-
-
-Boolean flag that indicates if the system supports nanosecond time resolution in the fields of <tt class="docutils literal"><span class="pre">Stat</span></tt>. Note that the nanosecond based fields (<tt class="docutils literal"><span class="pre">Stat.st_atim</span></tt>, <tt class="docutils literal"><span class="pre">Stat.st_mtim</span></tt> and <tt class="docutils literal"><span class="pre">Stat.st_ctim</span></tt>) can be accessed without checking this flag, because this module defines fallback procs when they are not available.
-&nbsp;&nbsp;<a
+Boolean flag that indicates if the system supports nanosecond time resolution in the fields of <tt class="docutils literal"><span class="pre">Stat</span></tt>. Note that the nanosecond based fields (<tt class="docutils literal"><span class="pre">Stat.st_atim</span></tt>, <tt class="docutils literal"><span class="pre">Stat.st_mtim</span></tt> and <tt class="docutils literal"><span class="pre">Stat.st_ctim</span></tt>) can be accessed without checking this flag, because this module defines fallback procs when they are not available. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/posix/posix.nim#L88"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/posix.nim#L88" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/posix.nim#L88" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="Sockaddr_un_path_length"></a>

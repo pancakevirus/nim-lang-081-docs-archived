@@ -833,7 +833,7 @@ function main() {
     </select>
   </div>
   <ul class="simple simple-toc" id="toc-list">
-<li><a class="reference" id="examples_toc" href="#examples">Examples</a></li>
+<li><a class="reference" id="examples_toc" href="#examples">用例</a></li>
 <li>
   <a class="reference reference-toplevel" href="#6" id="56">インポート</a>
   <ul class="simple simple-toc-section">
@@ -1109,12 +1109,12 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"><p>Do yourself a favor and import the module as <tt class="docutils literal"><span class="pre">from htmlgen import nil</span></tt> and then fully qualify the macros.</p>
-<p><em>Note</em>: The Karax project (<tt class="docutils literal"><span class="pre">nimble install karax</span></tt>) has a better way to achieve the same, see <a class="reference external" href="https://github.com/pragmagic/karax/blob/master/tests/nativehtmlgen.nim">https://github.com/pragmagic/karax/blob/master/tests/nativehtmlgen.nim</a> for an example.</p>
-<p>This module implements a simple <span id="xml_1">XML</span> and <span id="html_1">HTML</span> code generator. Each commonly used HTML tag has a corresponding macro that generates a string with its HTML representation.</p>
+  <p class="module-desc"><p>悪いことは言いません。 <tt class="docutils literal"><span class="pre">from htmlgen import nil</span></tt> でモジュールをインポート後にマクロで完全修飾してください。</p>
+<p><em>備考</em>: このモジュールよりも Karax プロジェクト (<tt class="docutils literal"><span class="pre">nimble install karax</span></tt>) のほうが優れています。用例は <a class="reference external" href="https://github.com/pragmagic/karax/blob/master/tests/nativehtmlgen.nim">https://github.com/pragmagic/karax/blob/master/tests/nativehtmlgen.nim</a> を参照してください。</p>
+<p>このモジュールはシンプルな <span id="xml_1">XML</span> と <span id="html_1">HTML</span> のコードジェネレーターの実装です。 一般的によく使われる HTML タグ と対応するマクロを使うことで HTML 表記の文字列を生成します。</p>
 
-<h1><a class="toc-backref" id="examples" href="#examples">Examples</a></h1><pre class="listing"><span class="Keyword">var</span> <span class="Identifier">nim</span> <span class="Operator">=</span> <span class="StringLit">"Nim"</span>
-<span class="Identifier">echo</span> <span class="Identifier">h1</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">(</span><span class="Identifier">href</span><span class="Operator">=</span><span class="StringLit">"http://nim-lang.org"</span><span class="Punctuation">,</span> <span class="Identifier">nim</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre><p>Writes the string:<pre>
+<h1><a class="toc-backref" id="examples" href="#examples">用例</a></h1><pre class="listing"><span class="Keyword">var</span> <span class="Identifier">nim</span> <span class="Operator">=</span> <span class="StringLit">"Nim"</span>
+<span class="Identifier">echo</span> <span class="Identifier">h1</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">(</span><span class="Identifier">href</span><span class="Operator">=</span><span class="StringLit">"http://nim-lang.org"</span><span class="Punctuation">,</span> <span class="Identifier">nim</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre><p>出力文字列:<pre>
 &lt;h1&gt;&lt;a href="http://nim-lang.org"&gt;Nim&lt;/a&gt;&lt;/h1&gt;</pre>
 </p>
 
@@ -1136,52 +1136,36 @@ function main() {
 <dt><pre><a href="htmlgen.html#coreAttr"><span class="Identifier">coreAttr</span></a> <span class="Other">=</span> <span class="StringLit">" accesskey class contenteditable dir hidden id lang spellcheck style tabindex title translate "</span></pre></dt>
 <dd>
 
-
-
-HTML DOM Core Attributes
-&nbsp;&nbsp;<a
+HTML DOM Core 属性 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L38"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L38" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L38" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="eventAttr"></a>
 <dt><pre><a href="htmlgen.html#eventAttr"><span class="Identifier">eventAttr</span></a> <span class="Other">=</span> <span class="StringLit">"onabort onblur oncancel oncanplay oncanplaythrough onchange onclick oncuechange ondblclick ondurationchange onemptied onended onerror onfocus oninput oninvalid onkeydown onkeypress onkeyup onload onloadeddata onloadedmetadata onloadstart onmousedown onmouseenter onmouseleave onmousemove onmouseout onmouseover onmouseup onmousewheel onpause onplay onplaying onprogress onratechange onreset onresize onscroll onseeked onseeking onselect onshow onstalled onsubmit onsuspend ontimeupdate ontoggle onvolumechange onwaiting "</span></pre></dt>
 <dd>
 
-
-
-HTML DOM Event Attributes
-&nbsp;&nbsp;<a
+HTML DOM Event 属性 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L40"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L40" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L40" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="ariaAttr"></a>
 <dt><pre><a href="htmlgen.html#ariaAttr"><span class="Identifier">ariaAttr</span></a> <span class="Other">=</span> <span class="StringLit">" role "</span></pre></dt>
 <dd>
 
-
-
-HTML DOM Aria Attributes
-&nbsp;&nbsp;<a
+HTML DOM Aria 属性 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L48"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L48" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L48" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="commonAttr"></a>
 <dt><pre><a href="htmlgen.html#commonAttr"><span class="Identifier">commonAttr</span></a> <span class="Other">=</span> <span class="StringLit">" accesskey class contenteditable dir hidden id lang spellcheck style tabindex title translate onabort onblur oncancel oncanplay oncanplaythrough onchange onclick oncuechange ondblclick ondurationchange onemptied onended onerror onfocus oninput oninvalid onkeydown onkeypress onkeyup onload onloadeddata onloadedmetadata onloadstart onmousedown onmouseenter onmouseleave onmousemove onmouseout onmouseover onmouseup onmousewheel onpause onplay onplaying onprogress onratechange onreset onresize onscroll onseeked onseeking onselect onshow onstalled onsubmit onsuspend ontimeupdate ontoggle onvolumechange onwaiting  role "</span></pre></dt>
 <dd>
 
-
-
-HTML DOM Common Attributes
-&nbsp;&nbsp;<a
+HTML DOM Common 属性 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L49"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L49" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L49" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 
@@ -1194,13 +1178,9 @@ class="link-seesrc" target="_blank">Source</a>
                   <span class="Identifier">isLeaf</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-use this procedure to define a new XML tag
-&nbsp;&nbsp;<a
+このプロシージャは新しい XML タグを定義します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L69"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L69" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L69" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 
@@ -1212,7 +1192,7 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">macro</span> <a href="#a.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">a</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">a</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">a</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L113"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L113" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1221,7 +1201,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#abbr.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">abbr</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">abbr</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">abbr</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L118"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L118" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1230,7 +1210,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#address.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">address</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">address</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">address</span></tt>要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L122"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L122" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1239,7 +1219,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#area.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">area</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">area</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">area</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L126"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L126" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1248,7 +1228,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#article.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">article</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">article</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">article</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L131"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L131" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1257,7 +1237,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#aside.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">aside</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">aside</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">aside</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L135"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L135" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1266,7 +1246,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#audio.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">audio</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">audio</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">audio</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L139"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L139" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1275,7 +1255,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#b.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">b</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">b</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">b</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L144"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L144" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1284,7 +1264,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#base.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">base</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">base</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">base</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L148"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L148" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1293,7 +1273,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#bdi.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">bdi</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">bdi</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">bdi</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L152"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L152" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1302,7 +1282,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#bdo.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">bdo</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">bdo</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">bdo</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L156"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L156" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1311,7 +1291,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#big.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">big</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">big</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">big</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L160"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L160" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1320,7 +1300,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#blockquote.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">blockquote</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">blockquote</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">blockquote</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L164"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L164" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1329,7 +1309,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#body.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">body</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">body</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">body</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L168"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L168" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1338,7 +1318,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#br.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">br</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">br</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">br</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L174"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L174" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1347,7 +1327,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#button.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">button</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">button</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">button</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L178"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L178" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1356,7 +1336,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#canvas.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">canvas</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">canvas</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">canvas</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L184"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L184" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1365,7 +1345,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#caption.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">caption</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">caption</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">caption</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L188"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L188" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1374,7 +1354,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#center.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">center</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-Generates the HTML <tt class="docutils literal"><span class="pre">center</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">center</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L192"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L192" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1383,7 +1363,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#cite.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">cite</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">cite</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">cite</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L196"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L196" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1392,7 +1372,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#code.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">code</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">code</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">code</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L200"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L200" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1401,7 +1381,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#col.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">col</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">col</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">col</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L204"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L204" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1410,7 +1390,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#colgroup.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">colgroup</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">colgroup</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">colgroup</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L208"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L208" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1419,7 +1399,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#data.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">data</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">data</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">data</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L212"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L212" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1428,7 +1408,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#datalist.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">datalist</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">datalist</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">datalist</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L216"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L216" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1437,7 +1417,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#dd.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">dd</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">dd</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">dd</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L220"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L220" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1446,7 +1426,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#del.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">del</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">del</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">del</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L224"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L224" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1455,7 +1435,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#details.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">details</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-Generates the HTML <tt class="docutils literal"><span class="pre">details</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">details</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L228"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L228" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1464,7 +1444,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#dfn.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">dfn</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">dfn</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">dfn</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L232"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L232" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1473,7 +1453,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#dialog.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">dialog</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-Generates the HTML <tt class="docutils literal"><span class="pre">dialog</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">dialog</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L236"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L236" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1482,7 +1462,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#div.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">`div`</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">div</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">div</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L240"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L240" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1491,7 +1471,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#dl.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">dl</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">dl</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">dl</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L244"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L244" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1500,7 +1480,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#dt.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">dt</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">dt</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">dt</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L248"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L248" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1509,7 +1489,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#em.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">em</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">em</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">em</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L252"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L252" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1518,7 +1498,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#embed.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">embed</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">embed</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">embed</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L256"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L256" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1527,7 +1507,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#fieldset.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">fieldset</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">fieldset</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">fieldset</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L261"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L261" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1536,7 +1516,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#figure.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">figure</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">figure</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">figure</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L265"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L265" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1545,7 +1525,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#figcaption.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">figcaption</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">figcaption</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">figcaption</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L269"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L269" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1554,7 +1534,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#footer.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">footer</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">footer</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">footer</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L273"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L273" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1563,7 +1543,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#form.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">form</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">form</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">form</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L277"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L277" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1572,7 +1552,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#h1.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">h1</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">h1</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">h1</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L282"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L282" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1581,7 +1561,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#h2.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">h2</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">h2</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">h2</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L286"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L286" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1590,7 +1570,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#h3.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">h3</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">h3</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">h3</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L290"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L290" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1599,7 +1579,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#h4.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">h4</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">h4</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">h4</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L294"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L294" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1608,7 +1588,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#h5.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">h5</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">h5</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">h5</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L298"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L298" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1617,7 +1597,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#h6.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">h6</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">h6</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">h6</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L302"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L302" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1626,7 +1606,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#head.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">head</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">head</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">head</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L306"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L306" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1635,7 +1615,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#header.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">header</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">header</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">header</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L310"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L310" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1644,7 +1624,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#html.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">html</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">html</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">html</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L314"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L314" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1653,7 +1633,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#hr.m"><span class="Identifier">hr</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">hr</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">hr</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L318"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L318" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1662,7 +1642,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#i.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">i</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">i</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">i</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L322"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L322" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1671,7 +1651,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#iframe.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">iframe</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">iframe</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">iframe</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L326"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L326" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1680,7 +1660,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#img.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">img</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">img</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">img</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L331"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L331" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1689,7 +1669,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#input.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">input</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">input</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">input</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L336"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L336" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1698,7 +1678,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#ins.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">ins</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">ins</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">ins</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L344"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L344" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1707,7 +1687,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#kbd.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">kbd</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">kbd</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">kbd</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L348"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L348" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1716,7 +1696,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#keygen.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">keygen</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">keygen</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">keygen</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L352"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L352" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1725,7 +1705,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#label.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">label</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">label</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">label</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L357"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L357" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1734,7 +1714,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#legend.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">legend</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">legend</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">legend</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L361"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L361" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1743,7 +1723,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#li.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">li</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">li</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">li</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L365"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L365" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1752,7 +1732,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#link.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">link</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">link</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">link</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L369"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L369" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1761,7 +1741,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#main.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">main</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">main</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">main</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L374"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L374" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1770,7 +1750,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#map.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">map</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">map</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">map</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L378"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L378" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1779,7 +1759,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#mark.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">mark</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">mark</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">mark</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L382"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L382" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1788,7 +1768,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#marquee.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">marquee</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-Generates the HTML <tt class="docutils literal"><span class="pre">marquee</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">marquee</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L386"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L386" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1797,7 +1777,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#meta.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">meta</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">meta</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">meta</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L392"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L392" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1806,7 +1786,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#meter.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">meter</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">meter</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">meter</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L397"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L397" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1815,7 +1795,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#nav.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">nav</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">nav</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">nav</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L402"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L402" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1824,7 +1804,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#noscript.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">noscript</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">noscript</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">noscript</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L406"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L406" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1833,7 +1813,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#object.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">`object`</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">object</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">object</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L410"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L410" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1842,7 +1822,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#ol.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">ol</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">ol</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">ol</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L415"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L415" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1851,7 +1831,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#optgroup.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">optgroup</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">optgroup</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">optgroup</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L419"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L419" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1860,7 +1840,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#option.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">option</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">option</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">option</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L423"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L423" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1869,7 +1849,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#output.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">output</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">output</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">output</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L428"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L428" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1878,7 +1858,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#p.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">p</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">p</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">p</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L432"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L432" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1887,7 +1867,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#param.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">param</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">param</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">param</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L436"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L436" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1896,7 +1876,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#picture.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">picture</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-Generates the HTML <tt class="docutils literal"><span class="pre">picture</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">picture</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L440"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L440" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1905,7 +1885,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#pre.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">pre</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">pre</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">pre</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L444"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L444" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1914,7 +1894,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#progress.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">progress</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">progress</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">progress</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L448"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L448" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1923,7 +1903,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#q.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">q</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">q</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">q</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L452"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L452" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1932,7 +1912,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#rb.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">rb</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">rb</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">rb</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L456"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L456" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1941,7 +1921,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#rp.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">rp</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">rp</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">rp</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L460"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L460" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1950,7 +1930,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#rt.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">rt</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">rt</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">rt</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L464"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L464" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1959,7 +1939,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#rtc.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">rtc</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">rtc</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">rtc</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L468"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L468" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1968,7 +1948,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#ruby.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">ruby</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">ruby</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">ruby</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L472"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L472" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1977,7 +1957,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#s.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">s</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">s</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">s</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L476"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L476" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1986,7 +1966,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#samp.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">samp</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">samp</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">samp</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L480"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L480" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1995,7 +1975,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#script.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">script</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">script</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">script</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L484"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L484" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2004,7 +1984,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#section.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">section</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">section</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">section</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L489"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L489" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2013,7 +1993,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#select.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">select</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">select</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">select</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L493"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L493" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2022,7 +2002,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#slot.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">slot</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-Generates the HTML <tt class="docutils literal"><span class="pre">slot</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">slot</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L498"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L498" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2031,7 +2011,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#small.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">small</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">small</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">small</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L502"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L502" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2040,7 +2020,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#source.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">source</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">source</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">source</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L506"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L506" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2049,7 +2029,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#span.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">span</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">span</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">span</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L510"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L510" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2058,7 +2038,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#strong.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">strong</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">strong</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">strong</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L514"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L514" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2067,7 +2047,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#style.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">style</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">style</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">style</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L518"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L518" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2076,7 +2056,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#sub.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">sub</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">sub</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">sub</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L522"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L522" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2085,7 +2065,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#summary.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">summary</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-Generates the HTML <tt class="docutils literal"><span class="pre">summary</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">summary</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L526"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L526" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2094,7 +2074,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#sup.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">sup</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">sup</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">sup</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L530"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L530" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2103,7 +2083,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#table.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">table</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">table</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">table</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L534"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L534" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2112,7 +2092,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#tbody.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">tbody</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">tbody</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">tbody</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L538"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L538" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2121,7 +2101,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#td.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">td</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">td</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">td</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L542"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L542" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2130,7 +2110,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#template.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">`template`</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">template</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">template</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L546"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L546" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2139,7 +2119,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#textarea.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">textarea</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">textarea</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">textarea</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L550"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L550" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2148,7 +2128,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#tfoot.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">tfoot</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">tfoot</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">tfoot</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L556"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L556" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2157,7 +2137,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#th.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">th</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">th</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">th</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L560"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L560" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2166,7 +2146,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#thead.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">thead</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">thead</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">thead</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L565"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L565" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2175,7 +2155,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#time.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">time</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">time</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">time</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L569"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L569" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2184,7 +2164,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#title.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">title</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">title</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">title</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L573"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L573" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2193,7 +2173,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#tr.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">tr</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">tr</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">tr</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L577"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L577" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2202,7 +2182,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#track.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">track</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">track</span></tt> element. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">track</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L581"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L581" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2211,7 +2191,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#tt.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">tt</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">tt</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">tt</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L586"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L586" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2220,7 +2200,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#u.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">u</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">u</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">u</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L590"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L590" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2229,7 +2209,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#ul.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">ul</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">ul</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">ul</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L594"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L594" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2238,7 +2218,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#var.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">`var`</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">var</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">var</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L598"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L598" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2247,7 +2227,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#video.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">video</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">video</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">video</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L602"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L602" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2256,7 +2236,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#wbr.m%2Cvarargs%5Buntyped%5D"><span class="Identifier">wbr</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-generates the HTML <tt class="docutils literal"><span class="pre">wbr</span></tt> element. &nbsp;&nbsp;<a
+HTML <tt class="docutils literal"><span class="pre">wbr</span></tt> 要素の生成。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlgen.nim#L607"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlgen.nim#L607" class="link-seesrc" target="_blank" >編集</a>
 
@@ -2271,7 +2251,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 Generated: 2020-01-23 17:27:46 UTC</small>
+        <small>Nim で作成しました。 生成日時: 2020年01月23日 午前17時27分46秒 (UTC)</small>
       </div>
     </div>
   </div>

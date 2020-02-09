@@ -13,7 +13,12 @@ Nim のライセンスに準ずるものとします。ただし、翻訳物にも著作権があります。
 作業記録
 --------
 対象バージョン : Nim 1.0.6
-作業対象ファイル : 完了: 25 - 合計 : 181 = 残り : 156
+作業対象ファイル : 完了: 36 - 合計 : 181 = 残り : 145
+
+
+Jan : 31
+Feb : 28 (Current: 05)
+
 
 仮訳完了:
 	base64.html
@@ -41,6 +46,18 @@ Nim のライセンスに準ずるものとします。ただし、翻訳物にも著作権があります。
 	time_t.html
 	util.html
 	wordwrap.html
+	linenoise.html
+	termios.html
+	winlean.html
+	mysql.html
+	sqlite3.html
+	odbcsql.html
+	packaging.html
+	htmlgen.html
+	segfaults.html
+	overview.html
+	theindex.html
+
 
 翻訳活動への参加方法
 --------------------
@@ -49,10 +66,15 @@ Nim のライセンスに準ずるものとします。ただし、翻訳物にも著作権があります。
 * OmegaT (4.3.1 以降。ただし安定版のみ)                 : https://www.omegat.org/
 * Okapi Framework (6.038 以降)                          : https://okapiframework.org/
 * Rogrus Global Goldpan TBX/TMX Editor (3.3 以降)       : https://logrusglobal.com/goldpan.html
-* BusyBox                                               : 
-* WinMerge                                              : 
-* Totorise Git                                          : 
-* Xbench                                                : 
+* WinMerge                                              : https://winmerge.org/
+* BusyBox                                               : https://www.busybox.net/
+* TortoiseGit                                           : https://tortoisegit.org/
+* Xbench                                                : https://www.xbench.net/
+* Anchovy                                               : https://www.maxprograms.com/products/anchovy.html
+
+
+
+辞書の指定は後ほど。
 
 
 翻訳活動への参加方法 (注意点)
@@ -67,11 +89,20 @@ Nim のライセンスに準ずるものとします。ただし、翻訳物にも著作権があります。
 
 対応可能ファイル形式
 --------------------
-* OmegaT
-* tmx
-* LogoVista コリャ英和！  一発翻訳 (krydoc)
 
-それ以外の形式につきましてはご相談ください。
+
+推奨形式:
+* OmegaT プロジェクト
+* TSV (UTF-8 エンコーディング)
+* tmx
+
+
+対応可能形式:
+* FUJITSU ATLUS 翻訳 2004 以降
+* LogoVista コリャ英和！  一発翻訳 2009 以降
+* TOSHBA The翻訳 V10 以降
+
+それ以外につきましてはご相談ください。
 
 
 寄贈者
@@ -140,7 +171,7 @@ krydoc → tmx ファイルへの変換方法については、こちらがお勧めです。
 
 ※いまのところ、コリャ英和シリーズには TSV, CSV ファイルのインポート機能がないので
    手軽に (tmx → krydoc) へ戻す方法はありません。  gawk で TSV ファイルのフィールドを切り出して
-   SrcText と TrgText を krydoc ファイルへ圧縮し直す方法も考えられますが、動作保証はありません。
+   SrcText と TrgText を krydoc ファイルへ圧縮し直す方法も考えられますが、動作保証はありません (おそらく不明な翻訳エンジンエラーになると思います)。
 
 
 LogoVista コリャ英和！  一発翻訳 2020 - ファイル翻訳の不具合
@@ -153,9 +184,23 @@ LogoVista コリャ英和！  一発翻訳 2020 - ファイル翻訳の不具合
 - net.html
 - openssl.html
 - os.html
+- pcre.html
+- posix.html
+- postgres.html
+- sqlite3.html
+- system.html
+- tables.html
+- termios.html
+- theindex.html
+- times.html
+- winlean.html
 
-解決策として、これらのファイルはウェブブラウザから開き、ページ全体をコピー、その後に翻訳エディタへ張り付けて下さい。
-(manual.htmlは処理に時間がかかりますので、ファイルを分割して処理してください)
+解決策として、
+
+・これらのファイルはウェブブラウザから開き、ページ全体をコピー、その後に翻訳エディタへ張り付けて下さい。
+・また、翻訳エディタで直接読み込み (レイアウトビューモードで)。
+
+なお、 manual.htmlは処理に時間がかかりますので、テキストを分割して処理することをお勧めします。
 
 誤って処理対象としてしまった場合はタスクマネージャーを起動して
 
@@ -163,8 +208,13 @@ LogoVista コリャ英和！  一発翻訳 2020 - ファイル翻訳の不具合
 ・E to J 翻訳エンジン エンジンモジュール (32ビット)
 ・翻訳エンジン ロケータモジュール (32ビット)
 
-の順に強制終了してください。もし、そのあとに異常動作を起こすときは、
-コリャ英和関連のアプリを全て終了し %temp% フォルダを開いてテンポラリファイルをすべて削除してください。
+の順に強制終了してください。または、 taskkillコマンドでも構いません。
+
+taskkill /F /IM K21Grinder.exe
+taskkill /F /IM K21EJTranslationEngine.exe
+taskkill /F /IM K21TranslationEngineLocator.exe
+
+そのあとに異常動作を起こすときは、コリャ英和関連のアプリを全て終了し %temp% フォルダを開いてテンポラリファイルをすべて削除してください。
 
 また、翻訳エディタとファイル翻訳の併用は避けてください（環境によっては併用すると動作不良の原因となります）。
 
