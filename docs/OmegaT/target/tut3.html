@@ -17,7 +17,7 @@
 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600' rel='stylesheet' type='text/css'/>
 
 
-<title>Nim Tutorial (Part III)</title>
+<title>チュートリアル（第３部）</title>
 <style type="text/css" >
 /*
 Stylesheet for use with Docutils/rst2html.
@@ -805,7 +805,7 @@ function main() {
 <body onload="main()">
 <div class="document" id="documentId">
   <div class="container">
-    <h1 class="title">Nim Tutorial (Part III)</h1>
+    <h1 class="title">チュートリアル（第３部）</h1>
     <div class="row">
   <div class="three columns">
   <div id="global-links">
@@ -834,14 +834,14 @@ function main() {
 <li><a class="reference" id="introduction-code-blocks-as-arguments_toc" href="#introduction-code-blocks-as-arguments">Code Blocks as Arguments</a></li>
 <li><a class="reference" id="introduction-the-syntax-tree_toc" href="#introduction-the-syntax-tree">The Syntax Tree</a></li>
 <li><a class="reference" id="introduction-custom-semantic-checking_toc" href="#introduction-custom-semantic-checking">Custom Semantic Checking</a></li>
-<li><a class="reference" id="introduction-generating-code_toc" href="#introduction-generating-code">Generating Code</a></li>
+<li><a class="reference" id="introduction-generating-code_toc" href="#introduction-generating-code">コードの生成</a></li>
 <li><a class="reference" id="introduction-building-your-first-macro_toc" href="#introduction-building-your-first-macro">Building Your First Macro</a></li>
-<li><a class="reference" id="introduction-with-power-comes-responsibility_toc" href="#introduction-with-power-comes-responsibility">With Power Comes Responsibility</a></li>
+<li><a class="reference" id="introduction-with-power-comes-responsibility_toc" href="#introduction-with-power-comes-responsibility">大いなる力には責任が伴う</a></li>
 <li><a class="reference" id="introduction-limitations_toc" href="#introduction-limitations">Limitations</a></li>
 </ul><li><a class="reference" id="more-examples_toc" href="#more-examples">More Examples</a></li>
 <ul class="simple"><li><a class="reference" id="more-examples-strformat_toc" href="#more-examples-strformat">Strformat</a></li>
-<li><a class="reference" id="more-examples-ast-pattern-matching_toc" href="#more-examples-ast-pattern-matching">Ast Pattern Matching</a></li>
-<li><a class="reference" id="more-examples-opengl-sandbox_toc" href="#more-examples-opengl-sandbox">OpenGL Sandbox</a></li>
+<li><a class="reference" id="more-examples-ast-pattern-matching_toc" href="#more-examples-ast-pattern-matching">AST パターンマッチング</a></li>
+<li><a class="reference" id="more-examples-opengl-sandbox_toc" href="#more-examples-opengl-sandbox">OpenGL サンドボックス</a></li>
 </ul>
 </ul>
 
@@ -852,8 +852,8 @@ function main() {
   <p class="module-desc"><table class="docinfo" frame="void" rules="none"><col class="docinfo-name" /><col class="docinfo-content" /><tbody valign="top"><tr><th class="docinfo-name">作成者:</th><td>  Arne Döring</td></tr>
 <tr><th class="docinfo-name">バージョン:</th><td>  1.0.6</td></tr>
 </tbody></table>
-<h1><a class="toc-backref" id="introduction" href="#introduction">はじめに</a></h1><blockquote><p>"With Great Power Comes Great Responsibility." -- Spider Man's Uncle</p></blockquote>
-<p>This document is a tutorial about Nim's macro system. A macro is a function that is executed at compile time and transforms a Nim syntax tree into a different tree.</p>
+<h1><a class="toc-backref" id="introduction" href="#introduction">はじめに</a></h1><blockquote><p>"大いなる力には大いなる責任が伴う。" -- スパイダーマンの叔父</p></blockquote>
+<p>このドキュメントは Nim のマクロシステムのチュートリアルです。A macro is a function that is executed at compile time and transforms a Nim syntax tree into a different tree.</p>
 <p>Examples of things that can be implemented in macros:</p>
 <ul class="simple"><li>An assert macro that prints both sides of a comparison operator, if the assertion fails. <tt class="docutils literal"><span class="pre">myAssert(a == b)</span></tt> is converted to <tt class="docutils literal"><span class="pre">if a != b: quit($a " != " $b)</span></tt></li>
 <li>A debug macro that prints the value and the name of the symbol. <tt class="docutils literal"><span class="pre">myDebugEcho(a)</span></tt> is converted to <tt class="docutils literal"><span class="pre">echo "a: ", a</span></tt></li>
@@ -903,7 +903,7 @@ function main() {
 <h2><a class="toc-backref" id="introduction-custom-semantic-checking" href="#introduction-custom-semantic-checking">Custom Semantic Checking</a></h2><p>The first thing that a macro should do with its arguments is to check if the argument is in the correct form. Not every type of wrong input needs to be caught here, but anything that could cause a crash during macro evaluation should be caught and create a nice error message. <tt class="docutils literal"><span class="pre">macros.expectKind</span></tt> and <tt class="docutils literal"><span class="pre">macros.expectLen</span></tt> are a good start. If the checks need to be more complex, arbitrary error messages can be created with the <tt class="docutils literal"><span class="pre">macros.error</span></tt> proc.</p>
 <pre class="listing"><span class="Keyword">macro</span> <span class="Identifier">myAssert</span><span class="Punctuation">(</span><span class="Identifier">arg</span><span class="Punctuation">:</span> <span class="Identifier">untyped</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">untyped</span> <span class="Operator">=</span>
   <span class="Identifier">arg</span><span class="Operator">.</span><span class="Identifier">expectKind</span> <span class="Identifier">nnkInfix</span></pre>
-<h2><a class="toc-backref" id="introduction-generating-code" href="#introduction-generating-code">Generating Code</a></h2><p>There are two ways to generate the code. Either by creating the syntax tree with expressions that contain a lot of calls to <tt class="docutils literal"><span class="pre">newTree</span></tt> and <tt class="docutils literal"><span class="pre">newLit</span></tt>, or with <tt class="docutils literal"><span class="pre">quote do:</span></tt> expressions. The first option offers the best low level control for the syntax tree generation, but the second option is much less verbose. If you choose to create the syntax tree with calls to <tt class="docutils literal"><span class="pre">newTree</span></tt> and <tt class="docutils literal"><span class="pre">newLit</span></tt> the macro <tt class="docutils literal"><span class="pre">macros.dumpAstGen</span></tt> can help you with the verbosity. <tt class="docutils literal"><span class="pre">quote do:</span></tt> allows you to write the code that you want to generate literally, backticks are used to insert code from <tt class="docutils literal"><span class="pre">NimNode</span></tt> symbols into the generated expression. This means that you can't use backticks within <tt class="docutils literal"><span class="pre">quote do:</span></tt> for anything else than injecting symbols.  Make sure to inject only symbols of type <tt class="docutils literal"><span class="pre">NimNode</span></tt> into the generated syntax tree. You can use <tt class="docutils literal"><span class="pre">newLit</span></tt> to convert arbitrary values into expressions trees of type <tt class="docutils literal"><span class="pre">NimNode</span></tt> so that it is safe to inject them into the tree.</p>
+<h2><a class="toc-backref" id="introduction-generating-code" href="#introduction-generating-code">コードの生成</a></h2><p>There are two ways to generate the code. Either by creating the syntax tree with expressions that contain a lot of calls to <tt class="docutils literal"><span class="pre">newTree</span></tt> and <tt class="docutils literal"><span class="pre">newLit</span></tt>, or with <tt class="docutils literal"><span class="pre">quote do:</span></tt> expressions. The first option offers the best low level control for the syntax tree generation, but the second option is much less verbose. If you choose to create the syntax tree with calls to <tt class="docutils literal"><span class="pre">newTree</span></tt> and <tt class="docutils literal"><span class="pre">newLit</span></tt> the macro <tt class="docutils literal"><span class="pre">macros.dumpAstGen</span></tt> can help you with the verbosity. <tt class="docutils literal"><span class="pre">quote do:</span></tt> allows you to write the code that you want to generate literally, backticks are used to insert code from <tt class="docutils literal"><span class="pre">NimNode</span></tt> symbols into the generated expression. This means that you can't use backticks within <tt class="docutils literal"><span class="pre">quote do:</span></tt> for anything else than injecting symbols.  Make sure to inject only symbols of type <tt class="docutils literal"><span class="pre">NimNode</span></tt> into the generated syntax tree. You can use <tt class="docutils literal"><span class="pre">newLit</span></tt> to convert arbitrary values into expressions trees of type <tt class="docutils literal"><span class="pre">NimNode</span></tt> so that it is safe to inject them into the tree.</p>
 <pre class="listing"><span class="Keyword">import</span> <span class="Identifier">macros</span>
 
 <span class="Keyword">type</span>
@@ -960,7 +960,7 @@ function main() {
 <span class="Identifier">myAssert</span><span class="Punctuation">(</span><span class="Identifier">a</span> <span class="Operator">==</span> <span class="Identifier">b</span><span class="Punctuation">)</span></pre><p>This is the code that will be generated. To debug what the macro actually generated, the statement <tt class="docutils literal"><span class="pre">echo result.repr</span></tt> can be used, in the last line of the macro. It is also the statement that has been used to get this output.</p>
 <pre class="listing"><span class="Keyword">if</span> <span class="Keyword">not</span> <span class="Punctuation">(</span><span class="Identifier">a</span> <span class="Operator">!=</span> <span class="Identifier">b</span><span class="Punctuation">)</span><span class="Punctuation">:</span>
   <span class="Keyword">raise</span> <span class="Identifier">newException</span><span class="Punctuation">(</span><span class="Identifier">AssertionError</span><span class="Punctuation">,</span> <span class="Operator">$</span><span class="Identifier">a</span> <span class="Operator">&amp;</span> <span class="StringLit">" != "</span> <span class="Operator">&amp;</span> <span class="Operator">$</span><span class="Identifier">b</span><span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="introduction-with-power-comes-responsibility" href="#introduction-with-power-comes-responsibility">With Power Comes Responsibility</a></h2><p>Macros are very powerful. A good advice is to use them as little as possible, but as much as necessary. Macros can change the semantics of expressions, making the code incomprehensible for anybody who does not know exactly what the macro does with it. So whenever a macro is not necessary and the same logic can be implemented using templates or generics, it is probably better not to use a macro. And when a macro is used for something, the macro should better have a well written documentation. For all the people who claim to write only perfectly self-explanatory code: when it comes to macros, the implementation is not enough for documentation.</p>
+<h2><a class="toc-backref" id="introduction-with-power-comes-responsibility" href="#introduction-with-power-comes-responsibility">大いなる力には責任が伴う</a></h2><p>マクロは計り知れないほど強力なものです。A good advice is to use them as little as possible, but as much as necessary. Macros can change the semantics of expressions, making the code incomprehensible for anybody who does not know exactly what the macro does with it. So whenever a macro is not necessary and the same logic can be implemented using templates or generics, it is probably better not to use a macro. And when a macro is used for something, the macro should better have a well written documentation. For all the people who claim to write only perfectly self-explanatory code: when it comes to macros, the implementation is not enough for documentation.</p>
 
 <h2><a class="toc-backref" id="introduction-limitations" href="#introduction-limitations">Limitations</a></h2><p>Since macros are evaluated in the compiler in the NimVM, macros share all the limitations of the NimVM. They have to be implemented in pure Nim code. Macros can start external processes on the shell, but they cannot call C functions except from those that are built in the compiler.</p>
 
@@ -969,11 +969,11 @@ function main() {
 <h2><a class="toc-backref" id="more-examples-strformat" href="#more-examples-strformat">Strformat</a></h2><p>In the Nim standard library, the <tt class="docutils literal"><span class="pre">strformat</span></tt> library provides a macro that parses a string literal at compile time. Parsing a string in a macro like here is generally not recommended. The parsed AST cannot have type information, and parsing implemented on the VM is generally not very fast. Working on AST nodes is almost always the recommended way. But still <tt class="docutils literal"><span class="pre">strformat</span></tt> is a good example for a practical use case for a macro that is slightly more complex than the <tt class="docutils literal"><span class="pre">assert</span></tt> macro.</p>
 <p><a class="reference external" href="https://github.com/nim-lang/Nim/blob/5845716df8c96157a047c2bd6bcdd795a7a2b9b1/lib/pure/strformat.nim#L280">Strformat</a></p>
 
-<h2><a class="toc-backref" id="more-examples-ast-pattern-matching" href="#more-examples-ast-pattern-matching">Ast Pattern Matching</a></h2><p>Ast Pattern Matching is a macro library to aid in writing complex macros. This can be seen as a good example of how to repurpose the Nim syntax tree with new semantics.</p>
-<p><a class="reference external" href="https://github.com/krux02/ast-pattern-matching">Ast Pattern Matching</a></p>
+<h2><a class="toc-backref" id="more-examples-ast-pattern-matching" href="#more-examples-ast-pattern-matching">AST パターンマッチング</a></h2><p>Ast Pattern Matching is a macro library to aid in writing complex macros. This can be seen as a good example of how to repurpose the Nim syntax tree with new semantics.</p>
+<p><a class="reference external" href="https://github.com/krux02/ast-pattern-matching">AST パターンマッチング</a></p>
 
-<h2><a class="toc-backref" id="more-examples-opengl-sandbox" href="#more-examples-opengl-sandbox">OpenGL Sandbox</a></h2><p>This project has a working Nim to GLSL compiler written entirely in macros. It scans recursively though all used function symbols to compile them so that cross library functions can be executed on the GPU.</p>
-<p><a class="reference external" href="https://github.com/krux02/opengl-sandbox">OpenGL Sandbox</a> </p>
+<h2><a class="toc-backref" id="more-examples-opengl-sandbox" href="#more-examples-opengl-sandbox">OpenGL サンドボックス</a></h2><p>This project has a working Nim to GLSL compiler written entirely in macros. It scans recursively though all used function symbols to compile them so that cross library functions can be executed on the GPU.</p>
+<p><a class="reference external" href="https://github.com/krux02/opengl-sandbox">OpenGL サンドボックス</a> </p>
 </p>
   
   </div>

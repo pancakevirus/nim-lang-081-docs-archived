@@ -1080,7 +1080,7 @@ function main() {
 <p>The language constructs are explained using an extended BNF, in which <tt class="docutils literal"><span class="pre">(a)*</span></tt> means 0 or more <tt class="docutils literal"><span class="pre">a</span></tt>'s, <tt class="docutils literal"><span class="pre">a+</span></tt> means 1 or more <tt class="docutils literal"><span class="pre">a</span></tt>'s, and <tt class="docutils literal"><span class="pre">(a)?</span></tt> means an optional <em>a</em>. Parentheses may be used to group elements.</p>
 <p><tt class="docutils literal"><span class="pre">&amp;</span></tt> is the lookahead operator; <tt class="docutils literal"><span class="pre">&amp;a</span></tt> means that an <tt class="docutils literal"><span class="pre">a</span></tt> is expected but not consumed. It will be consumed in the following rule.</p>
 <p>The <tt class="docutils literal"><span class="pre">|</span></tt>, <tt class="docutils literal"><span class="pre">/</span></tt> symbols are used to mark alternatives and have the lowest precedence. <tt class="docutils literal"><span class="pre">/</span></tt> is the ordered choice that requires the parser to try the alternatives in the given order. <tt class="docutils literal"><span class="pre">/</span></tt> is often used to ensure the grammar is not ambiguous.</p>
-<p>Non-terminals start with a lowercase letter, abstract terminal symbols are in UPPERCASE. Verbatim terminal symbols (including keywords) are quoted with <tt class="docutils literal"><span class="pre">'</span></tt>. An example:<pre>
+<p>Non-terminals start with a lowercase letter, abstract terminal symbols are in UPPERCASE. Verbatim terminal symbols (including keywords) are quoted with <tt class="docutils literal"><span class="pre">'</span></tt>. 用例:<pre>
 ifStmt = 'if' expr ':' stmts ('elif' expr ':' stmts)* ('else' stmts)?</pre>
 </p>
 <p>The binary <tt class="docutils literal"><span class="pre">^*</span></tt> operator is used as a shorthand for 0 or more occurrences separated by its second argument; likewise <tt class="docutils literal"><span class="pre">^+</span></tt> means 1 or more occurrences: <tt class="docutils literal"><span class="pre">a ^+ b</span></tt> is short for <tt class="docutils literal"><span class="pre">a (b a)*</span></tt> and <tt class="docutils literal"><span class="pre">a ^* b</span></tt> is short for <tt class="docutils literal"><span class="pre">(a (b a)*)?</span></tt>. 用例:<pre>
@@ -1929,7 +1929,7 @@ ord(Direction.west) == 3</pre>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">student</span> <span class="Operator">=</span> <span class="Identifier">Student</span><span class="Punctuation">(</span><span class="Identifier">name</span><span class="Punctuation">:</span> <span class="StringLit">"Anton"</span><span class="Punctuation">,</span> <span class="Identifier">age</span><span class="Punctuation">:</span> <span class="DecNumber">5</span><span class="Punctuation">,</span> <span class="Identifier">id</span><span class="Punctuation">:</span> <span class="DecNumber">3</span><span class="Punctuation">)</span></pre><p>Note that, unlike tuples, objects require the field names along with their values. For a <tt class="docutils literal"><span class="pre">ref object</span></tt> type <tt class="docutils literal"><span class="pre">system.new</span></tt> is invoked implicitly.</p>
 
 <h2><a class="toc-backref" id="types-object-variants" href="#types-object-variants">Object variants</a></h2><p>Often an object hierarchy is overkill in certain situations where simple variant types are needed. Object variants are tagged unions discriminated via a enumerated type used for runtime type flexibility, mirroring the concepts of <em>sum types</em> and <em>algebraic data types (ADTs)</em> as found in other languages.</p>
-<p>An example:</p>
+<p>用例:</p>
 <pre class="listing"><span class="Comment"># This is an example how an abstract syntax tree could be modelled in Nim</span>
 <span class="Keyword">type</span>
   <span class="Identifier">NodeKind</span> <span class="Operator">=</span> <span class="Keyword">enum</span>  <span class="Comment"># the different node types</span>
@@ -1993,7 +1993,7 @@ ord(Direction.west) == 3</pre>
 <span class="Identifier">z</span> <span class="Operator">=</span> <span class="Identifier">Node</span><span class="Punctuation">(</span><span class="Identifier">kind</span><span class="Punctuation">:</span> <span class="Identifier">unknownKindBounded</span><span class="Punctuation">,</span> <span class="Identifier">leftOp</span><span class="Punctuation">:</span> <span class="Identifier">Node</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">rightOp</span><span class="Punctuation">:</span> <span class="Identifier">Node</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre>
 <h2><a class="toc-backref" id="types-set-type" href="#types-set-type">Set type</a></h2>The set type models the mathematical notion of a set. The set's basetype can only be an ordinal type of a certain size, namely:<ul class="simple"><li><tt class="docutils literal"><span class="pre">int8</span></tt>-<tt class="docutils literal"><span class="pre">int16</span></tt></li>
 <li><tt class="docutils literal"><span class="pre">uint8</span></tt>/<tt class="docutils literal"><span class="pre">byte</span></tt>-<tt class="docutils literal"><span class="pre">uint16</span></tt></li>
-<li><tt class="docutils literal"><span class="pre">char</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">文字</span></tt></li>
 <li><tt class="docutils literal"><span class="pre">enum</span></tt></li>
 </ul>
 <p>or equivalent. For signed integers the set's base type is defined to be in the range <tt class="docutils literal"><span class="pre">0 .. MaxSetElements-1</span></tt> where <tt class="docutils literal"><span class="pre">MaxSetElements</span></tt> is currently always 2^16.</p>
@@ -2526,7 +2526,7 @@ return "ambiguous"</pre>
 <table border="1" class="docutils"><tr><th>型</th><th>default value</th></tr>
 <tr><td>any integer type</td><td>0</td></tr>
 <tr><td>any float</td><td>0.0</td></tr>
-<tr><td>char</td><td>'\0'</td></tr>
+<tr><td>文字</td><td>'\0'</td></tr>
 <tr><td>bool</td><td>false</td></tr>
 <tr><td>ref or pointer type</td><td>nil</td></tr>
 <tr><td>procedural type</td><td>nil</td></tr>

@@ -858,7 +858,7 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc">Profiling support for Nim. This is an embedded profiler that requires <tt class="docutils literal"><span class="pre">--profiler:on</span></tt>. You only need to import this module to get a profiling report at program exit.Timer support for the realtime GC. Based on <a class="reference external" href="https://github.com/jckarter/clay/blob/master/compiler/hirestimer.cpp">https://github.com/jckarter/clay/blob/master/compiler/hirestimer.cpp</a></p>
+  <p class="module-desc">Nim で使えるプロファイリングのサポートです。これは組み込み型のプロファイラであり、必要な時は <tt class="docutils literal"><span class="pre">--profiler:on</span></tt> オプションを指定します。プログラム終了後にプロファイリング・レポートを得るには、このモジュールをインポートしてください。 リアルタイム・ガベージコレクターはタイマーをサポートしています。<a class="reference external" href="https://github.com/jckarter/clay/blob/master/compiler/hirestimer.cpp">https://github.com/jckarter/clay/blob/master/compiler/hirestimer.cpp</a> をベースにしています。</p>
   <div class="section" id="6">
 <h1><a class="toc-backref" href="#6">インポート</a></h1>
 <dl class="item">
@@ -871,7 +871,7 @@ function main() {
 <dt><pre><span class="Keyword">proc</span> <a href="#setSamplingFrequency%2Cint"><span class="Identifier">setSamplingFrequency</span></a><span class="Other">(</span><span class="Identifier">intervalInUs</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-set this to change the sampling frequency. Default value is 5ms. Set it to 0 to disable time based profiling; it uses an imprecise instruction count measure instead then. &nbsp;&nbsp;<a
+これはサンプリング周波数の設定を変更します。 デフォルト値は 5ms です。タイムベース・プロファイリングを無効化するには 0 を設定してください。無効時はインストラクションカウントの計測が不正確になります。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/nimprof.nim#L61"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/nimprof.nim#L61" class="link-seesrc" target="_blank" >編集</a>
 
@@ -906,7 +906,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 Generated: 2020-01-23 17:28:09 UTC</small>
+        <small>Nim で作成しました。 生成日時: 2020年01月23日 午前17時28分09秒 (UTC)</small>
       </div>
     </div>
   </div>

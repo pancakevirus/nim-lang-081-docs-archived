@@ -17,7 +17,7 @@
 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600' rel='stylesheet' type='text/css'/>
 
 
-<title>nimgrep ユーザーズ・ガイド</title>
+<title>nimgrep ユーザーズ・マニュアル</title>
 <style type="text/css" >
 /*
 Stylesheet for use with Docutils/rst2html.
@@ -805,16 +805,16 @@ function main() {
 <body onload="main()">
 <div class="document" id="documentId">
   <div class="container">
-    <h1 class="title">nimgrep ユーザーズ・ガイド</h1>
+    <h1 class="title">nimgrep ユーザーズ・マニュアル</h1>
     <table class="docinfo" frame="void" rules="none"><col class="docinfo-name" /><col class="docinfo-content" /><tbody valign="top"><tr><th class="docinfo-name">作成者:</th><td> アンドレアス・ルンプフ</td></tr>
 <tr><th class="docinfo-name">バージョン:</th><td>  0.9</td></tr>
-</tbody></table><p>Nimgrep は検索と置換処理ができるコマンドラインツールです。It can search for regex or peg patterns and can search whole directories at once. User confirmation for every single replace operation can be requested.</p>
-<p>Nimgrep has particularly good support for Nim's eccentric <em>style insensitivity</em>. Apart from that it is a generic text manipulation tool.</p>
+</tbody></table><p>Nimgrep は検索と置換処理ができるコマンドラインツールです。正規表現、または PEG パターンでの検索とディレクトリ全体の一括検索ができます。ユーザにファイルごとに置換処理を行うかどうかの確認も可能です。</p>
+<p>Nimgrep の特筆すべき点は Nim の<em>エキセントリック・スタイルの影響を受けない</em>ことです。また、一般的なテキスト処理ツールでもあります。</p>
 
 <h1 id="installation">インストール</h1><p>このコマンドで nimgrep をコンパイルします。<pre>
 nim c -d:release tools/nimgrep.nim</pre>
 </p>
-<p>And copy the executable somewhere in your <tt class="docutils literal"><span class="pre">$PATH</span></tt>.</p>
+<p><tt class="docutils literal"><span class="pre">$PATH</span></tt> の通ったディレクトリへ実行可能ファイルをコピーしてください。</p>
 
 <h1 id="command-line-switches">コマンドラインスイッチ</h1><dl class="docutils"><dt>用法:</dt>
 <dd>nimgrep [オプション] [パターン] [置換文字列] (ファイル/ディレクトリ)*</dd>
@@ -829,11 +829,11 @@ nim c -d:release tools/nimgrep.nim</pre>
 </tr>
 <tr><th align="left">--recursive</th><td align="left">ディレクトリを再帰的に処理します。</td>
 </tr>
-<tr><th align="left">--confirm</th><td align="left">confirm each occurrence/replacement; there is a chance to abort any time without touching the file</td>
+<tr><th align="left">--confirm</th><td align="left">ファイルごとに検索結果と置換処理の確認を行います。ファイルを変更せずに処理をいつでも中止することができます。</td>
 </tr>
-<tr><th align="left">--stdin</th><td align="left">read pattern from stdin (to avoid the shell's confusing quoting rules)</td>
+<tr><th align="left">--stdin</th><td align="left">標準入力からパターンを読み取ります (紛らわしいシェルのクォート処理ルール対策)。</td>
 </tr>
-<tr><th align="left">--word, -w</th><td align="left">the match should have word boundaries (buggy for pegs!)</td>
+<tr><th align="left">--word, -w</th><td align="left">単語の境界に一致させます (PEG ではバグだらけです！)</td>
 </tr>
 <tr><th align="left">--ignoreCase, -i</th><td align="left">英数大小文字を同一視します。</td>
 </tr>
@@ -841,7 +841,7 @@ nim c -d:release tools/nimgrep.nim</pre>
 </tr>
 <tr><th align="left">--ext:拡張子１|拡張子２|...</th><td align="left">指定された拡張子に該当するファイルのみ検索対象とします。</td>
 </tr>
-<tr><th align="left">--verbose</th><td align="left">be verbose: list every processed file</td>
+<tr><th align="left">--verbose</th><td align="left">詳細表示: 処理済みファイルのリストを表示します。</td>
 </tr>
 <tr><th align="left">--help, -h</th><td align="left">このヘルプを表示します。</td>
 </tr>

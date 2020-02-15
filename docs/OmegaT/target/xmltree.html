@@ -846,11 +846,11 @@ function main() {
     title="XmlNode = ref XmlNodeObj"><wbr />Xml<wbr />Node<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#XmlNodeKind"
     title="XmlNodeKind = enum
-  xnText,                     ## a text element
-  xnElement,                  ## an element with 0 or more children
-  xnCData,                    ## a CDATA node
-  xnEntity,                   ## an entity (like ``&amp;thing;``)
-  xnComment                   ## an XML comment"><wbr />Xml<wbr />Node<wbr />Kind<span class="attachedType"></span></a></li>
+  xnText,                     ## text 要素
+  xnElement,                  ## 0 個以上の子要素
+  xnCData,                    ## CDATA ノード
+  xnEntity,                   ## エンティティ (``&amp;thing;`` など)
+  xnComment                   ## XML コメント"><wbr />Xml<wbr />Node<wbr />Kind<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#XmlAttributes"
     title="XmlAttributes = StringTableRef"><wbr />Xml<wbr />Attributes<span class="attachedType"></span></a></li>
 
@@ -966,26 +966,26 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc">A simple XML tree generator.<pre class="listing"><span class="Keyword">import</span> <span class="Identifier">xmltree</span>
+  <p class="module-desc">シンプルな XML ツリージェネレーターです。<pre class="listing"><span class="Keyword">import</span> <span class="Identifier">xmltree</span>
 
 <span class="Keyword">var</span> <span class="Identifier">g</span> <span class="Operator">=</span> <span class="Identifier">newElement</span><span class="Punctuation">(</span><span class="StringLit">"myTag"</span><span class="Punctuation">)</span>
-<span class="Identifier">g</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newText</span><span class="Punctuation">(</span><span class="StringLit">"some text"</span><span class="Punctuation">)</span>
-<span class="Identifier">g</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newComment</span><span class="Punctuation">(</span><span class="StringLit">"this is comment"</span><span class="Punctuation">)</span>
+<span class="Identifier">g</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newText</span><span class="Punctuation">(</span><span class="StringLit">"テキスト"</span><span class="Punctuation">)</span>
+<span class="Identifier">g</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newComment</span><span class="Punctuation">(</span><span class="StringLit">"これはコメントです"</span><span class="Punctuation">)</span>
 
 <span class="Keyword">var</span> <span class="Identifier">h</span> <span class="Operator">=</span> <span class="Identifier">newElement</span><span class="Punctuation">(</span><span class="StringLit">"secondTag"</span><span class="Punctuation">)</span>
-<span class="Identifier">h</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newEntity</span><span class="Punctuation">(</span><span class="StringLit">"some entity"</span><span class="Punctuation">)</span>
+<span class="Identifier">h</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newEntity</span><span class="Punctuation">(</span><span class="StringLit">"エンティティ"</span><span class="Punctuation">)</span>
 
-<span class="Keyword">let</span> <span class="Identifier">att</span> <span class="Operator">=</span> <span class="Punctuation">{</span><span class="StringLit">"key1"</span><span class="Punctuation">:</span> <span class="StringLit">"first value"</span><span class="Punctuation">,</span> <span class="StringLit">"key2"</span><span class="Punctuation">:</span> <span class="StringLit">"second value"</span><span class="Punctuation">}</span><span class="Operator">.</span><span class="Identifier">toXmlAttributes</span>
+<span class="Keyword">let</span> <span class="Identifier">att</span> <span class="Operator">=</span> <span class="Punctuation">{</span><span class="StringLit">"key1"</span><span class="Punctuation">:</span> <span class="StringLit">"第一値"</span><span class="Punctuation">,</span> <span class="StringLit">"key2"</span><span class="Punctuation">:</span> <span class="StringLit">"第二値"</span><span class="Punctuation">}</span><span class="Operator">.</span><span class="Identifier">toXmlAttributes</span>
 <span class="Keyword">let</span> <span class="Identifier">k</span> <span class="Operator">=</span> <span class="Identifier">newXmlTree</span><span class="Punctuation">(</span><span class="StringLit">"treeTag"</span><span class="Punctuation">,</span> <span class="Punctuation">[</span><span class="Identifier">g</span><span class="Punctuation">,</span> <span class="Identifier">h</span><span class="Punctuation">]</span><span class="Punctuation">,</span> <span class="Identifier">att</span><span class="Punctuation">)</span>
 
 <span class="Identifier">echo</span> <span class="Identifier">k</span>
-<span class="Comment"># &lt;treeTag key2="second value" key1="first value"&gt;</span>
-<span class="Comment">#   &lt;myTag&gt;some text&lt;!-- this is comment --&gt;&lt;/myTag&gt;</span>
-<span class="Comment">#   &lt;secondTag&gt;&amp;some entity;&lt;/secondTag&gt;</span>
+<span class="Comment"># &lt;treeTag key2="第二値" key1="第一値"&gt;</span>
+<span class="Comment">#   &lt;myTag&gt;テキスト&lt;!-- これはコメントです --&gt;&lt;/myTag&gt;</span>
+<span class="Comment">#   &lt;secondTag&gt;&amp;エンティティ;&lt;/secondTag&gt;</span>
 <span class="Comment"># &lt;/treeTag&gt;</span></pre><p><strong>関連:</strong></p>
-<ul class="simple"><li><a class="reference external" href="xmlparser.html">xmlparser module</a> for high-level XML parsing</li>
-<li><a class="reference external" href="parsexml.html">parsexml module</a> for low-level XML parsing</li>
-<li><a class="reference external" href="htmlgen.html">htmlgen module</a> for html code generator</li>
+<ul class="simple"><li><a class="reference external" href="xmlparser.html">xmlparser モジュール</a> は高水準の XML 構文解析器です</li>
+<li><a class="reference external" href="parsexml.html">parsexml モジュール</a> は低水準の XML 構文解析器です</li>
+<li><a class="reference external" href="htmlgen.html">htmlgen モジュール</a> は html コードジェネレーターです</li>
 </ul>
 </p>
   <div class="section" id="6">
@@ -1000,8 +1000,8 @@ function main() {
 <dt><pre><a href="xmltree.html#XmlNode"><span class="Identifier">XmlNode</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Identifier">XmlNodeObj</span></pre></dt>
 <dd>
 
-<p>An XML tree consisting of XML nodes.</p>
-<p>Use <a class="reference external" href="#newXmlTree,string,openArray[XmlNode],XmlAttributes">newXmlTree proc</a> for creating a new tree.</p>
+<p>XML ノードで構成された XML ツリーです。</p>
+<p>新しいツリーを作成するには <a class="reference external" href="#newXmlTree,string,openArray[XmlNode],XmlAttributes">newXmlTree プロシージャ</a> を使います。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/xmltree.nim#L40"
@@ -1010,14 +1010,14 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </dd>
 <a id="XmlNodeKind"></a>
 <dt><pre><a href="xmltree.html#XmlNodeKind"><span class="Identifier">XmlNodeKind</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
-  <span class="Identifier">xnText</span><span class="Other">,</span>                     <span class="Comment">## a text element</span>
-  <span class="Identifier">xnElement</span><span class="Other">,</span>                  <span class="Comment">## an element with 0 or more children</span>
-  <span class="Identifier">xnCData</span><span class="Other">,</span>                    <span class="Comment">## a CDATA node</span>
-  <span class="Identifier">xnEntity</span><span class="Other">,</span>                   <span class="Comment">## an entity (like ``&amp;thing;``)</span>
-  <span class="Identifier">xnComment</span>                   <span class="Comment">## an XML comment</span></pre></dt>
+  <span class="Identifier">xnText</span><span class="Other">,</span>                     <span class="Comment">## text 要素</span>
+  <span class="Identifier">xnElement</span><span class="Other">,</span>                  <span class="Comment">## 0 個以上の子要素</span>
+  <span class="Identifier">xnCData</span><span class="Other">,</span>                    <span class="Comment">## CDATA ノード</span>
+  <span class="Identifier">xnEntity</span><span class="Other">,</span>                   <span class="Comment">## エンティティ (``&amp;thing;`` など)</span>
+  <span class="Identifier">xnComment</span>                   <span class="Comment">## XML コメント</span></pre></dt>
 <dd>
 
-Different kinds of XML nodes. &nbsp;&nbsp;<a
+各種 XML ノードです。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/xmltree.nim#L45"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/xmltree.nim#L45" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1026,8 +1026,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="xmltree.html#XmlAttributes"><span class="Identifier">XmlAttributes</span></a> <span class="Other">=</span> <a href="strtabs.html#StringTableRef"><span class="Identifier">StringTableRef</span></a></pre></dt>
 <dd>
 
-<p>An alias for a string to string mapping.</p>
-<p>Use <a class="reference external" href="#toXmlAttributes,varargs[tuple[string,string]]">toXmlAttributes proc</a> to create <tt class="docutils literal"><span class="pre">XmlAttributes</span></tt>.</p>
+<p>文字列マッピングの文字列エイリアスです。</p>
+<p><tt class="docutils literal"><span class="pre">XmlAttributes</span></tt> を作成するには <a class="reference external" href="#toXmlAttributes,varargs[tuple[string,string]]">toXmlAttributes プロシージャ</a> を使います。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/xmltree.nim#L52"
@@ -1043,7 +1043,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="xmltree.html#xmlHeader"><span class="Identifier">xmlHeader</span></a> <span class="Other">=</span> <span class="StringLit">"<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n"</span></pre></dt>
 <dd>
 
-Header to use for complete XML output. &nbsp;&nbsp;<a
+XML の完成出力で使うヘッダです。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/xmltree.nim#L68"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/xmltree.nim#L68" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1057,10 +1057,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#newElement%2Cstring"><span class="Identifier">newElement</span></a><span class="Other">(</span><span class="Identifier">tag</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="xmltree.html#XmlNode"><span class="Identifier">XmlNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Creates a new <tt class="docutils literal"><span class="pre">XmlNode</span></tt> of kind <tt class="docutils literal"><span class="pre">xnElement</span></tt> with the given <tt class="docutils literal"><span class="pre">tag</span></tt>.</p>
+<p>指定された <tt class="docutils literal"><span class="pre">tag</span></tt> で <tt class="docutils literal"><span class="pre">xnElement</span></tt> と同種の <tt class="docutils literal"><span class="pre">XmlNode</span></tt> を新規作成します。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#newXmlTree,string,openArray[XmlNode],XmlAttributes">newXmlTree proc</a></li>
-<li><a class="reference external" href="#&lt;&gt;.m,untyped">&lt;&gt; macro</a></li>
+<ul class="simple"><li><a class="reference external" href="#newXmlTree,string,openArray[XmlNode],XmlAttributes">newXmlTree プロシージャ</a></li>
+<li><a class="reference external" href="#&lt;&gt;.m,untyped">&lt;&gt; マクロ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1077,10 +1077,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#newText%2Cstring"><span class="Identifier">newText</span></a><span class="Other">(</span><span class="Identifier">text</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="xmltree.html#XmlNode"><span class="Identifier">XmlNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Creates a new <tt class="docutils literal"><span class="pre">XmlNode</span></tt> of kind <tt class="docutils literal"><span class="pre">xnText</span></tt> with the text <tt class="docutils literal"><span class="pre">text</span></tt>.
-
+テキスト <tt class="docutils literal"><span class="pre">text</span></tt> で <tt class="docutils literal"><span class="pre">xnText</span></tt> と同種の <tt class="docutils literal"><span class="pre">XmlNode</span></tt> を新規作成します。
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">b</span> <span class="Other">=</span> <span class="Identifier">newText</span><span class="Other">(</span><span class="StringLit">"my text"</span><span class="Other">)</span>
 <span class="Identifier">assert</span> <span class="Identifier">b</span><span class="Other">.</span><span class="Identifier">kind</span> <span class="Operator">==</span> <span class="Identifier">xnText</span>
@@ -1094,10 +1091,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#newComment%2Cstring"><span class="Identifier">newComment</span></a><span class="Other">(</span><span class="Identifier">comment</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="xmltree.html#XmlNode"><span class="Identifier">XmlNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Creates a new <tt class="docutils literal"><span class="pre">XmlNode</span></tt> of kind <tt class="docutils literal"><span class="pre">xnComment</span></tt> with the text <tt class="docutils literal"><span class="pre">comment</span></tt>.
-
+テキスト <tt class="docutils literal"><span class="pre">comment</span></tt> で <tt class="docutils literal"><span class="pre">xnComment</span></tt> と同種の <tt class="docutils literal"><span class="pre">XmlNode</span></tt> を新規作成します。
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">c</span> <span class="Other">=</span> <span class="Identifier">newComment</span><span class="Other">(</span><span class="StringLit">"my comment"</span><span class="Other">)</span>
 <span class="Identifier">assert</span> <span class="Identifier">c</span><span class="Other">.</span><span class="Identifier">kind</span> <span class="Operator">==</span> <span class="Identifier">xnComment</span>
@@ -1111,10 +1105,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#newCData%2Cstring"><span class="Identifier">newCData</span></a><span class="Other">(</span><span class="Identifier">cdata</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="xmltree.html#XmlNode"><span class="Identifier">XmlNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Creates a new <tt class="docutils literal"><span class="pre">XmlNode</span></tt> of kind <tt class="docutils literal"><span class="pre">xnCData</span></tt> with the text <tt class="docutils literal"><span class="pre">cdata</span></tt>.
-
+テキスト <tt class="docutils literal"><span class="pre">cdata</span></tt> で <tt class="docutils literal"><span class="pre">xnCData</span></tt> と同種の <tt class="docutils literal"><span class="pre">XmlNode</span></tt> を新規作成します。
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">d</span> <span class="Other">=</span> <span class="Identifier">newCData</span><span class="Other">(</span><span class="StringLit">"my cdata"</span><span class="Other">)</span>
 <span class="Identifier">assert</span> <span class="Identifier">d</span><span class="Other">.</span><span class="Identifier">kind</span> <span class="Operator">==</span> <span class="Identifier">xnCData</span>
@@ -1128,10 +1119,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#newEntity%2Cstring"><span class="Identifier">newEntity</span></a><span class="Other">(</span><span class="Identifier">entity</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="xmltree.html#XmlNode"><span class="Identifier">XmlNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Creates a new <tt class="docutils literal"><span class="pre">XmlNode</span></tt> of kind <tt class="docutils literal"><span class="pre">xnEntity</span></tt> with the text <tt class="docutils literal"><span class="pre">entity</span></tt>.
-
+テキスト <tt class="docutils literal"><span class="pre">entity</span></tt> で <tt class="docutils literal"><span class="pre">xnEntity</span></tt> と同種の <tt class="docutils literal"><span class="pre">XmlNode</span></tt> を新規作成します。
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">e</span> <span class="Other">=</span> <span class="Identifier">newEntity</span><span class="Other">(</span><span class="StringLit">"my entity"</span><span class="Other">)</span>
 <span class="Identifier">assert</span> <span class="Identifier">e</span><span class="Other">.</span><span class="Identifier">kind</span> <span class="Operator">==</span> <span class="Identifier">xnEntity</span>
@@ -1146,23 +1134,23 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                <span class="Identifier">attributes</span><span class="Other">:</span> <a href="xmltree.html#XmlAttributes"><span class="Identifier">XmlAttributes</span></a> <span class="Other">=</span> <span class="Keyword">nil</span><span class="Other">)</span><span class="Other">:</span> <a href="xmltree.html#XmlNode"><span class="Identifier">XmlNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Creates a new XML tree with <tt class="docutils literal"><span class="pre">tag</span></tt>, <tt class="docutils literal"><span class="pre">children</span></tt> and <tt class="docutils literal"><span class="pre">attributes</span></tt>.</p>
+<p> <tt class="docutils literal"><span class="pre">tag</span></tt>, <tt class="docutils literal"><span class="pre">children</span></tt> および <tt class="docutils literal"><span class="pre">attributes</span></tt> で XML ツリーを新規作成します。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#newElement,string">newElement proc</a></li>
-<li><a class="reference external" href="#&lt;&gt;.m,untyped">&lt;&gt; macro</a></li>
+<ul class="simple"><li><a class="reference external" href="#newElement,string">newElement プロシージャ</a></li>
+<li><a class="reference external" href="#&lt;&gt;.m,untyped">&lt;&gt; マクロ</a></li>
 </ul>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">g</span> <span class="Operator">=</span> <span class="Identifier">newElement</span><span class="Punctuation">(</span><span class="StringLit">"myTag"</span><span class="Punctuation">)</span>
-<span class="Identifier">g</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newText</span><span class="Punctuation">(</span><span class="StringLit">"some text"</span><span class="Punctuation">)</span>
-<span class="Identifier">g</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newComment</span><span class="Punctuation">(</span><span class="StringLit">"this is comment"</span><span class="Punctuation">)</span>
+<span class="Identifier">g</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newText</span><span class="Punctuation">(</span><span class="StringLit">"テキスト"</span><span class="Punctuation">)</span>
+<span class="Identifier">g</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newComment</span><span class="Punctuation">(</span><span class="StringLit">"これはコメントです"</span><span class="Punctuation">)</span>
 <span class="Keyword">var</span> <span class="Identifier">h</span> <span class="Operator">=</span> <span class="Identifier">newElement</span><span class="Punctuation">(</span><span class="StringLit">"secondTag"</span><span class="Punctuation">)</span>
-<span class="Identifier">h</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newEntity</span><span class="Punctuation">(</span><span class="StringLit">"some entity"</span><span class="Punctuation">)</span>
-<span class="Keyword">let</span> <span class="Identifier">att</span> <span class="Operator">=</span> <span class="Punctuation">{</span><span class="StringLit">"key1"</span><span class="Punctuation">:</span> <span class="StringLit">"first value"</span><span class="Punctuation">,</span> <span class="StringLit">"key2"</span><span class="Punctuation">:</span> <span class="StringLit">"second value"</span><span class="Punctuation">}</span><span class="Operator">.</span><span class="Identifier">toXmlAttributes</span>
+<span class="Identifier">h</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newEntity</span><span class="Punctuation">(</span><span class="StringLit">"エンティティ"</span><span class="Punctuation">)</span>
+<span class="Keyword">let</span> <span class="Identifier">att</span> <span class="Operator">=</span> <span class="Punctuation">{</span><span class="StringLit">"key1"</span><span class="Punctuation">:</span> <span class="StringLit">"第一値"</span><span class="Punctuation">,</span> <span class="StringLit">"key2"</span><span class="Punctuation">:</span> <span class="StringLit">"第二値"</span><span class="Punctuation">}</span><span class="Operator">.</span><span class="Identifier">toXmlAttributes</span>
 <span class="Keyword">let</span> <span class="Identifier">k</span> <span class="Operator">=</span> <span class="Identifier">newXmlTree</span><span class="Punctuation">(</span><span class="StringLit">"treeTag"</span><span class="Punctuation">,</span> <span class="Punctuation">[</span><span class="Identifier">g</span><span class="Punctuation">,</span> <span class="Identifier">h</span><span class="Punctuation">]</span><span class="Punctuation">,</span> <span class="Identifier">att</span><span class="Punctuation">)</span>
 
 <span class="Identifier">echo</span> <span class="Identifier">k</span>
-<span class="Comment">## &lt;treeTag key2="second value" key1="first value"&gt;</span>
-<span class="Comment">##   &lt;myTag&gt;some text&lt;!-- this is comment --&gt;&lt;/myTag&gt;</span>
-<span class="Comment">##   &lt;secondTag&gt;&amp;some entity;&lt;/secondTag&gt;</span>
+<span class="Comment">## &lt;treeTag key2="第二値" key1="第一値"&gt;</span>
+<span class="Comment">##   &lt;myTag&gt;テキスト&lt;!-- これはコメントです --&gt;&lt;/myTag&gt;</span>
+<span class="Comment">##   &lt;secondTag&gt;&amp;エンティティ;&lt;/secondTag&gt;</span>
 <span class="Comment">## &lt;/treeTag&gt;</span></pre>
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/xmltree.nim#L132"
@@ -1176,10 +1164,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Gets the associated text with the node <tt class="docutils literal"><span class="pre">n</span></tt>.</p>
 <p><tt class="docutils literal"><span class="pre">n</span></tt> can be a CDATA, Text, comment, or entity node.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#text=,XmlNode,string">text= proc</a> for text setter</li>
-<li><a class="reference external" href="#tag,XmlNode">tag proc</a> for tag getter</li>
-<li><a class="reference external" href="#tag=,XmlNode,string">tag= proc</a> for tag setter</li>
-<li><a class="reference external" href="#innerText,XmlNode">innerText proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#text=,XmlNode,string">text= プロシージャ</a> は text の setter です</li>
+<li><a class="reference external" href="#tag,XmlNode">tag プロシージャ</a> は tag の getter です</li>
+<li><a class="reference external" href="#tag=,XmlNode,string">tag= プロシージャ</a> は tag の setter です</li>
+<li><a class="reference external" href="#innerText,XmlNode">innerText プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1198,9 +1186,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Sets the associated text with the node <tt class="docutils literal"><span class="pre">n</span></tt>.</p>
 <p><tt class="docutils literal"><span class="pre">n</span></tt> can be a CDATA, Text, comment, or entity node.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#text,XmlNode">text proc</a> for text getter</li>
-<li><a class="reference external" href="#tag,XmlNode">tag proc</a> for tag getter</li>
-<li><a class="reference external" href="#tag=,XmlNode,string">tag= proc</a> for tag setter</li>
+<ul class="simple"><li><a class="reference external" href="#text,XmlNode">text プロシージャ</a> は text の getter です</li>
+<li><a class="reference external" href="#tag,XmlNode">tag プロシージャ</a> は tag の getter です</li>
+<li><a class="reference external" href="#tag=,XmlNode,string">tag= プロシージャ</a> は tag の setter です</li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1220,10 +1208,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Gets the tag name of <tt class="docutils literal"><span class="pre">n</span></tt>.</p>
 <p><tt class="docutils literal"><span class="pre">n</span></tt> has to be an <tt class="docutils literal"><span class="pre">xnElement</span></tt> node.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#text,XmlNode">text proc</a> for text getter</li>
-<li><a class="reference external" href="#text=,XmlNode,string">text= proc</a> for text setter</li>
-<li><a class="reference external" href="#tag=,XmlNode,string">tag= proc</a> for tag setter</li>
-<li><a class="reference external" href="#innerText,XmlNode">innerText proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#text,XmlNode">text プロシージャ</a> は text の getter です</li>
+<li><a class="reference external" href="#text=,XmlNode,string">text= プロシージャ</a> は text の setter です</li>
+<li><a class="reference external" href="#tag=,XmlNode,string">tag= プロシージャ</a> は tag の setter です</li>
+<li><a class="reference external" href="#innerText,XmlNode">innerText プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1243,9 +1231,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Sets the tag name of <tt class="docutils literal"><span class="pre">n</span></tt>.</p>
 <p><tt class="docutils literal"><span class="pre">n</span></tt> has to be an <tt class="docutils literal"><span class="pre">xnElement</span></tt> node.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#text,XmlNode">text proc</a> for text getter</li>
-<li><a class="reference external" href="#text=,XmlNode,string">text= proc</a> for text setter</li>
-<li><a class="reference external" href="#tag,XmlNode">tag proc</a> for tag getter</li>
+<ul class="simple"><li><a class="reference external" href="#text,XmlNode">text プロシージャ</a> は text の getter です</li>
+<li><a class="reference external" href="#text=,XmlNode,string">text= プロシージャ</a> は text の setter です</li>
+<li><a class="reference external" href="#tag,XmlNode">tag プロシージャ</a> は tag の getter です</li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1445,24 +1433,24 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 Recursively clear all children of an XmlNode.<pre class="listing"><span class="Keyword">var</span> <span class="Identifier">g</span> <span class="Operator">=</span> <span class="Identifier">newElement</span><span class="Punctuation">(</span><span class="StringLit">"myTag"</span><span class="Punctuation">)</span>
-<span class="Identifier">g</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newText</span><span class="Punctuation">(</span><span class="StringLit">"some text"</span><span class="Punctuation">)</span>
-<span class="Identifier">g</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newComment</span><span class="Punctuation">(</span><span class="StringLit">"this is comment"</span><span class="Punctuation">)</span>
+<span class="Identifier">g</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newText</span><span class="Punctuation">(</span><span class="StringLit">"テキスト"</span><span class="Punctuation">)</span>
+<span class="Identifier">g</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newComment</span><span class="Punctuation">(</span><span class="StringLit">"これはコメントです"</span><span class="Punctuation">)</span>
 
 <span class="Keyword">var</span> <span class="Identifier">h</span> <span class="Operator">=</span> <span class="Identifier">newElement</span><span class="Punctuation">(</span><span class="StringLit">"secondTag"</span><span class="Punctuation">)</span>
-<span class="Identifier">h</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newEntity</span><span class="Punctuation">(</span><span class="StringLit">"some entity"</span><span class="Punctuation">)</span>
+<span class="Identifier">h</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newEntity</span><span class="Punctuation">(</span><span class="StringLit">"エンティティ"</span><span class="Punctuation">)</span>
 
-<span class="Keyword">let</span> <span class="Identifier">att</span> <span class="Operator">=</span> <span class="Punctuation">{</span><span class="StringLit">"key1"</span><span class="Punctuation">:</span> <span class="StringLit">"first value"</span><span class="Punctuation">,</span> <span class="StringLit">"key2"</span><span class="Punctuation">:</span> <span class="StringLit">"second value"</span><span class="Punctuation">}</span><span class="Operator">.</span><span class="Identifier">toXmlAttributes</span>
+<span class="Keyword">let</span> <span class="Identifier">att</span> <span class="Operator">=</span> <span class="Punctuation">{</span><span class="StringLit">"key1"</span><span class="Punctuation">:</span> <span class="StringLit">"第一値"</span><span class="Punctuation">,</span> <span class="StringLit">"key2"</span><span class="Punctuation">:</span> <span class="StringLit">"第二値"</span><span class="Punctuation">}</span><span class="Operator">.</span><span class="Identifier">toXmlAttributes</span>
 <span class="Keyword">var</span> <span class="Identifier">k</span> <span class="Operator">=</span> <span class="Identifier">newXmlTree</span><span class="Punctuation">(</span><span class="StringLit">"treeTag"</span><span class="Punctuation">,</span> <span class="Punctuation">[</span><span class="Identifier">g</span><span class="Punctuation">,</span> <span class="Identifier">h</span><span class="Punctuation">]</span><span class="Punctuation">,</span> <span class="Identifier">att</span><span class="Punctuation">)</span>
 
 <span class="Identifier">echo</span> <span class="Identifier">k</span>
-<span class="Comment">## &lt;treeTag key2="second value" key1="first value"&gt;</span>
-<span class="Comment">##   &lt;myTag&gt;some text&lt;!-- this is comment --&gt;&lt;/myTag&gt;</span>
-<span class="Comment">##   &lt;secondTag&gt;&amp;some entity;&lt;/secondTag&gt;</span>
+<span class="Comment">## &lt;treeTag key2="第二値" key1="第一値"&gt;</span>
+<span class="Comment">##   &lt;myTag&gt;テキスト&lt;!-- これはコメントです --&gt;&lt;/myTag&gt;</span>
+<span class="Comment">##   &lt;secondTag&gt;&amp;エンティティ;&lt;/secondTag&gt;</span>
 <span class="Comment">## &lt;/treeTag&gt;</span>
 
 <span class="Identifier">clear</span><span class="Punctuation">(</span><span class="Identifier">k</span><span class="Punctuation">)</span>
 <span class="Identifier">echo</span> <span class="Identifier">k</span>
-<span class="Comment">## &lt;treeTag key2="second value" key1="first value" /&gt;</span></pre>
+<span class="Comment">## &lt;treeTag key2="第二値" key1="第一値" /&gt;</span></pre>
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/xmltree.nim#L364"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/xmltree.nim#L364" class="link-seesrc" target="_blank" >編集</a>
@@ -1493,9 +1481,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Gets the attributes belonging to <tt class="docutils literal"><span class="pre">n</span></tt>.</p>
 <p>Returns <tt class="docutils literal"><span class="pre">nil</span></tt> if attributes have not been initialised for this node.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#attrs=,XmlNode,XmlAttributes">attrs= proc</a> for XmlAttributes setter</li>
-<li><a class="reference external" href="#attrsLen,XmlNode">attrsLen proc</a> for number of attributes</li>
-<li><a class="reference external" href="#attr,XmlNode,string">attr proc</a> for finding an attribute</li>
+<ul class="simple"><li><a class="reference external" href="#attrs=,XmlNode,XmlAttributes">attrs= プロシージャ</a> は XmlAttributes の setter です</li>
+<li><a class="reference external" href="#attrsLen,XmlNode">attrsLen プロシージャ</a> は 属性の個数を返します</li>
+<li><a class="reference external" href="#attr,XmlNode,string">attr プロシージャ</a> は属性を検索します</li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1515,9 +1503,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Sets the attributes belonging to <tt class="docutils literal"><span class="pre">n</span></tt>.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#attrs,XmlNode">attrs proc</a> for XmlAttributes getter</li>
-<li><a class="reference external" href="#attrsLen,XmlNode">attrsLen proc</a> for number of attributes</li>
-<li><a class="reference external" href="#attr,XmlNode,string">attr proc</a> for finding an attribute</li>
+<ul class="simple"><li><a class="reference external" href="#attrs,XmlNode">attrs プロシージャ</a> は XmlAttributes の getter です</li>
+<li><a class="reference external" href="#attrsLen,XmlNode">attrsLen プロシージャ</a> は 属性の個数を返します</li>
+<li><a class="reference external" href="#attr,XmlNode,string">attr プロシージャ</a> は属性を検索します</li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1537,9 +1525,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Returns the number of <tt class="docutils literal"><span class="pre">n</span></tt>'s attributes.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#attrs,XmlNode">attrs proc</a> for XmlAttributes getter</li>
-<li><a class="reference external" href="#attrs=,XmlNode,XmlAttributes">attrs= proc</a> for XmlAttributes setter</li>
-<li><a class="reference external" href="#attr,XmlNode,string">attr proc</a> for finding an attribute</li>
+<ul class="simple"><li><a class="reference external" href="#attrs,XmlNode">attrs プロシージャ</a> は XmlAttributes の getter です</li>
+<li><a class="reference external" href="#attrs=,XmlNode,XmlAttributes">attrs= プロシージャ</a> は XmlAttributes の setter です</li>
+<li><a class="reference external" href="#attr,XmlNode,string">attr プロシージャ</a> は属性を検索します</li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1559,9 +1547,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Finds the first attribute of <tt class="docutils literal"><span class="pre">n</span></tt> with a name of <tt class="docutils literal"><span class="pre">name</span></tt>. Returns "" on failure.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#attrs,XmlNode">attrs proc</a> for XmlAttributes getter</li>
-<li><a class="reference external" href="#attrs=,XmlNode,XmlAttributes">attrs= proc</a> for XmlAttributes setter</li>
-<li><a class="reference external" href="#attrsLen,XmlNode">attrsLen proc</a> for number of attributes</li>
+<ul class="simple"><li><a class="reference external" href="#attrs,XmlNode">attrs プロシージャ</a> は XmlAttributes の getter です</li>
+<li><a class="reference external" href="#attrs=,XmlNode,XmlAttributes">attrs= プロシージャ</a> は XmlAttributes の setter です</li>
+<li><a class="reference external" href="#attrsLen,XmlNode">attrsLen プロシージャ</a> は 属性の個数を返します</li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1579,8 +1567,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#clientData%2CXmlNode"><span class="Identifier">clientData</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="xmltree.html#XmlNode"><span class="Identifier">XmlNode</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Gets the client data of <tt class="docutils literal"><span class="pre">n</span></tt>.</p>
-<p>The client data field is used by the HTML parser and generator.</p>
+<p><tt class="docutils literal"><span class="pre">n</span></tt> のクライアントデータを取得します。</p>
+<p>クライアントのデータフィールドは HTML パーザーとジェネレーターで使います。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/xmltree.nim#L510"
@@ -1591,8 +1579,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#clientData%3D%2CXmlNode%2Cint"><span class="Identifier">clientData=</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="xmltree.html#XmlNode"><span class="Identifier">XmlNode</span></a><span class="Other">;</span> <span class="Identifier">data</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Sets the client data of <tt class="docutils literal"><span class="pre">n</span></tt>.</p>
-<p>The client data field is used by the HTML parser and generator.</p>
+<p><tt class="docutils literal"><span class="pre">n</span></tt> のクライアントデータを設定します。</p>
+<p>クライアントのデータフィールドは HTML パーザーとジェネレーターで使います。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/xmltree.nim#L516"
@@ -1603,7 +1591,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#addEscaped%2Cstring%2Cstring"><span class="Identifier">addEscaped</span></a><span class="Other">(</span><span class="Identifier">result</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-The same as <a class="reference external" href="#escape,string">result.add(escape(s))</a>, but more efficient. &nbsp;&nbsp;<a
+<a class="reference external" href="#escape,string">result.add(escape(s))</a> と同じですが、こちらのほうが効率的です。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/xmltree.nim#L522"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/xmltree.nim#L522" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1612,15 +1600,15 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#escape%2Cstring"><span class="Identifier">escape</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Escapes <tt class="docutils literal"><span class="pre">s</span></tt> for inclusion into an XML document.</p>
-<p>Escapes these characters:</p>
-<table border="1" class="docutils"><tr><th>char</th><th>is converted to</th></tr>
+<p>XML ドキュメントへ挿入するために <tt class="docutils literal"><span class="pre">s</span></tt> をエスケープします。</p>
+<p>エスケープ対象の文字:</p>
+<table border="1" class="docutils"><tr><th>文字</th><th>変換先</th></tr>
 <tr><td><tt class="docutils literal"><span class="pre">&lt;</span></tt></td><td><tt class="docutils literal"><span class="pre">&amp;lt;</span></tt></td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">&gt;</span></tt></td><td><tt class="docutils literal"><span class="pre">&amp;gt;</span></tt></td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">&amp;</span></tt></td><td><tt class="docutils literal"><span class="pre">&amp;amp;</span></tt></td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">"</span></tt></td><td><tt class="docutils literal"><span class="pre">&amp;quot;</span></tt></td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">'</span></tt></td><td><tt class="docutils literal"><span class="pre">&amp;apos;</span></tt></td></tr>
-</table><p>You can also use <a class="reference external" href="#addEscaped,string,string">addEscaped proc</a>.</p>
+</table><p><a class="reference external" href="#addEscaped,string,string">addEscaped プロシージャ</a> も使えます。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/xmltree.nim#L533"
@@ -1761,20 +1749,20 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Iterates over all direct children of <tt class="docutils literal"><span class="pre">n</span></tt>.</p>
 <p><strong>用例:</strong></p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">g</span> <span class="Operator">=</span> <span class="Identifier">newElement</span><span class="Punctuation">(</span><span class="StringLit">"myTag"</span><span class="Punctuation">)</span>
-<span class="Identifier">g</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newText</span><span class="Punctuation">(</span><span class="StringLit">"some text"</span><span class="Punctuation">)</span>
-<span class="Identifier">g</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newComment</span><span class="Punctuation">(</span><span class="StringLit">"this is comment"</span><span class="Punctuation">)</span>
+<span class="Identifier">g</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newText</span><span class="Punctuation">(</span><span class="StringLit">"テキスト"</span><span class="Punctuation">)</span>
+<span class="Identifier">g</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newComment</span><span class="Punctuation">(</span><span class="StringLit">"これはコメントです"</span><span class="Punctuation">)</span>
 
 <span class="Keyword">var</span> <span class="Identifier">h</span> <span class="Operator">=</span> <span class="Identifier">newElement</span><span class="Punctuation">(</span><span class="StringLit">"secondTag"</span><span class="Punctuation">)</span>
-<span class="Identifier">h</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newEntity</span><span class="Punctuation">(</span><span class="StringLit">"some entity"</span><span class="Punctuation">)</span>
+<span class="Identifier">h</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newEntity</span><span class="Punctuation">(</span><span class="StringLit">"エンティティ"</span><span class="Punctuation">)</span>
 <span class="Identifier">g</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">h</span>
 
-<span class="Identifier">assert</span> <span class="Operator">$</span><span class="Identifier">g</span> <span class="Operator">==</span> <span class="StringLit">"&lt;myTag&gt;some text&lt;!-- this is comment --&gt;&lt;secondTag&gt;&amp;some entity;&lt;/secondTag&gt;&lt;/myTag&gt;"</span>
-<span class="Keyword">for</span> <span class="Identifier">x</span> <span class="Keyword">in</span> <span class="Identifier">g</span><span class="Punctuation">:</span> <span class="Comment"># the same as `for x in items(g):`</span>
+<span class="Identifier">assert</span> <span class="Operator">$</span><span class="Identifier">g</span> <span class="Operator">==</span> <span class="StringLit">"&lt;myTag&gt;テキスト&lt;!-- これはコメントです --&gt;&lt;secondTag&gt;&amp;エンティティ;&lt;/secondTag&gt;&lt;/myTag&gt;"</span>
+<span class="Keyword">for</span> <span class="Identifier">x</span> <span class="Keyword">in</span> <span class="Identifier">g</span><span class="Punctuation">:</span> <span class="Comment"># `for x in items(g):` と同じです</span>
   <span class="Identifier">echo</span> <span class="Identifier">x</span>
 
-<span class="Comment"># some text</span>
-<span class="Comment"># &lt;!-- this is comment --&gt;</span>
-<span class="Comment"># &lt;secondTag&gt;&amp;some entity;&lt;![CDATA[some cdata]]&gt;&lt;/secondTag&gt;</span></pre>
+<span class="Comment"># テキスト</span>
+<span class="Comment"># &lt;!-- これはコメントです --&gt;</span>
+<span class="Comment"># &lt;secondTag&gt;&amp;エンティティ;&lt;![CDATA[some cdata]]&gt;&lt;/secondTag&gt;</span></pre>
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/xmltree.nim#L394"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/xmltree.nim#L394" class="link-seesrc" target="_blank" >編集</a>
@@ -1798,10 +1786,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#%3C%3E.m%2Cuntyped"><span class="Identifier">`&lt;&gt;`</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-
-
-Constructor macro for XML. Example usage:<pre class="listing"><span class="Operator">&lt;&gt;</span><span class="Identifier">a</span><span class="Punctuation">(</span><span class="Identifier">href</span><span class="Operator">=</span><span class="StringLit">"http://nim-lang.org"</span><span class="Punctuation">,</span> <span class="Identifier">newText</span><span class="Punctuation">(</span><span class="StringLit">"Nim rules."</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre><p>Produces an XML tree for:<pre>
-&lt;a href="http://nim-lang.org"&gt;Nim rules.&lt;/a&gt;</pre>
+XML のコンストラクタ・マクロです。 用例:<pre class="listing"><span class="Operator">&lt;&gt;</span><span class="Identifier">a</span><span class="Punctuation">(</span><span class="Identifier">href</span><span class="Operator">=</span><span class="StringLit">"http://nim-lang.org"</span><span class="Punctuation">,</span> <span class="Identifier">newText</span><span class="Punctuation">(</span><span class="StringLit">"Nim のルール。"</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre><p>生成される XML ツリーは、<pre>
+&lt;a href="http://nim-lang.org"&gt;Nim のルール。&lt;/a&gt;</pre>
 </p>
 
 &nbsp;&nbsp;<a
@@ -1819,7 +1805,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 Generated: 2020-01-23 17:27:54 UTC</small>
+        <small>Nim で作成しました。 生成日時: 2020年01月23日 午前17時27分54秒 (UTC)</small>
       </div>
     </div>
   </div>

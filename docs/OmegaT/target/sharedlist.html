@@ -882,7 +882,7 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"><p>Shared list support.</p>
+  <p class="module-desc"><p>共有リストのサポート。</p>
 <p>この API は不安定です。</p>
 </p>
   <div class="section" id="6">
@@ -900,13 +900,9 @@ function main() {
 </pre></dt>
 <dd>
 
-
-
-generic shared list
-&nbsp;&nbsp;<a
+汎用共有リスト &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/collections/sharedlist.nim#L28"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/sharedlist.nim#L28" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/sharedlist.nim#L28" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 
@@ -918,7 +914,7 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#iterAndMutate%2CSharedList%5BA%5D%2Cproc%28A%29"><span class="Identifier">iterAndMutate</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="sharedlist.html#SharedList"><span class="Identifier">SharedList</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">action</span><span class="Other">:</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Identifier">A</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a><span class="Other">)</span></pre></dt>
 <dd>
 
-iterates over the list. If 'action' returns true, the current item is removed from the list. &nbsp;&nbsp;<a
+リストをイテレートします。'action' で true が返されたときは、リストから現在のアイテムを削除します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/collections/sharedlist.nim#L37"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/sharedlist.nim#L37" class="link-seesrc" target="_blank" >編集</a>
 
@@ -967,11 +963,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#initSharedList"><span class="Identifier">initSharedList</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">]</span><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="sharedlist.html#SharedList"><span class="Identifier">SharedList</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">deprecated</span><span class="Other">:</span> <span class="StringLit">"use \'init\' instead"</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
   <div class="deprecation-message">
-    <b>Deprecated:</b> use 'init' instead
-  
+    <b>廃止予定:</b> 'init' をお使いください。
   </div>
 
-This is not posix compliant, may introduce undefined behavior. &nbsp;&nbsp;<a
+これは POSIX 規格に準拠していないため、未定義動作が起きる場合があります。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/collections/sharedlist.nim#L97"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/sharedlist.nim#L97" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1001,7 +996,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 Generated: 2020-01-23 17:28:02 UTC</small>
+        <small>Nim で作成しました。 生成日時: 2020年01月23日 午前17時28分02秒 (UTC)</small>
       </div>
     </div>
   </div>

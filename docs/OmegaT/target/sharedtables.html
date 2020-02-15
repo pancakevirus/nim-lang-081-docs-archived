@@ -971,7 +971,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ol>
 <p>The <tt class="docutils literal"><span class="pre">mapper</span></tt> can can modify <tt class="docutils literal"><span class="pre">val</span></tt> and <tt class="docutils literal"><span class="pre">pairExists</span></tt> values to change the mapping of the key or delete it from the table. When adding a value, make sure to set <tt class="docutils literal"><span class="pre">pairExists</span></tt> to <tt class="docutils literal"><span class="pre">true</span></tt> along with modifying the <tt class="docutils literal"><span class="pre">val</span></tt>.</p>
 <p>The operation is performed atomically and other operations on the table will be blocked while the <tt class="docutils literal"><span class="pre">mapper</span></tt> is invoked, so it should be short and simple.</p>
-<p>Example usage:</p>
+<p>用例:</p>
 <pre class="listing"><span class="Comment"># If value exists, decrement it.</span>
 <span class="Comment"># If it becomes zero or less, delete the key</span>
 <span class="Identifier">t</span><span class="Operator">.</span><span class="Identifier">withKey</span><span class="Punctuation">(</span><span class="DecNumber">1'i64</span><span class="Punctuation">)</span> <span class="Keyword">do</span> <span class="Punctuation">(</span><span class="Identifier">k</span><span class="Punctuation">:</span> <span class="Identifier">int64</span><span class="Punctuation">,</span> <span class="Identifier">v</span><span class="Punctuation">:</span> <span class="Keyword">var</span> <span class="Identifier">int</span><span class="Punctuation">,</span> <span class="Identifier">pairExists</span><span class="Punctuation">:</span> <span class="Keyword">var</span> <span class="Identifier">bool</span><span class="Punctuation">)</span><span class="Punctuation">:</span>
@@ -1039,11 +1039,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">deprecated</span><span class="Other">:</span> <span class="StringLit">"use \'init\' instead"</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
   <div class="deprecation-message">
-    <b>Deprecated:</b> use 'init' instead
-  
+    <b>廃止予定:</b> 'init' をお使いください。
   </div>
 
-This is not posix compliant, may introduce undefined behavior. &nbsp;&nbsp;<a
+これは POSIX 規格に準拠していないため、未定義動作が起きる場合があります。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/collections/sharedtables.nim#L226"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/sharedtables.nim#L226" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1098,7 +1097,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 Generated: 2020-01-23 17:28:02 UTC</small>
+        <small>Nim で作成しました。 生成日時: 2020年01月23日 午前17時28分02秒 (UTC)</small>
       </div>
     </div>
   </div>

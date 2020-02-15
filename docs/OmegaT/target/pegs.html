@@ -836,7 +836,7 @@ function main() {
 <li><a class="reference" id="peg-syntax-and-semantics_toc" href="#peg-syntax-and-semantics">PEG syntax and semantics</a></li>
 <ul class="simple"><li><a class="reference" id="peg-syntax-and-semantics-builtminusin-macros_toc" href="#peg-syntax-and-semantics-builtminusin-macros">Built-in macros</a></li>
 <li><a class="reference" id="peg-syntax-and-semantics-supported-peg-grammar_toc" href="#peg-syntax-and-semantics-supported-peg-grammar">Supported PEG grammar</a></li>
-<li><a class="reference" id="peg-syntax-and-semantics-examples_toc" href="#peg-syntax-and-semantics-examples">Examples</a></li>
+<li><a class="reference" id="peg-syntax-and-semantics-examples_toc" href="#peg-syntax-and-semantics-examples">用例</a></li>
 <li><a class="reference" id="peg-syntax-and-semantics-peg-vs-regular-expression_toc" href="#peg-syntax-and-semantics-peg-vs-regular-expression">PEG vs regular expression</a></li>
 <li><a class="reference" id="peg-syntax-and-semantics-peg-construction_toc" href="#peg-syntax-and-semantics-peg-construction">PEG construction</a></li>
 </ul><li>
@@ -1209,7 +1209,7 @@ expr &lt;- seqExpr (ig "/" expr)*</pre>
 <p><strong>Note</strong>: As a special syntactic extension if the whole PEG is only a single expression, identifiers are not interpreted as non-terminals, but are interpreted as verbatim string:</p>
 <pre class="listing"><span class="Identifier">abc</span> <span class="Operator">=~</span> <span class="RawData">peg"abc"</span> <span class="Comment"># is true</span></pre><p>So it is not necessary to write <tt class="docutils literal"><span class="pre">peg" 'abc' "</span></tt> in the above example.</p>
 
-<h2><a class="toc-backref" id="peg-syntax-and-semantics-examples" href="#peg-syntax-and-semantics-examples">Examples</a></h2><p>Check if <tt class="docutils literal"><span class="pre">s</span></tt> matches Nim's "while" keyword:</p>
+<h2><a class="toc-backref" id="peg-syntax-and-semantics-examples" href="#peg-syntax-and-semantics-examples">用例</a></h2><p>Check if <tt class="docutils literal"><span class="pre">s</span></tt> matches Nim's "while" keyword:</p>
 <pre class="listing"><span class="Identifier">s</span> <span class="Operator">=~</span> <span class="RawData">peg" y'while'"</span></pre><p>Exchange (key, val)-pairs:</p>
 <pre class="listing"><span class="StringLit">"key: val; key2: val2"</span><span class="Operator">.</span><span class="Identifier">replacef</span><span class="Punctuation">(</span><span class="RawData">peg"{\ident} \s* ':' \s* {\ident}"</span><span class="Punctuation">,</span> <span class="StringLit">"$2: $1"</span><span class="Punctuation">)</span></pre><p>Determine the <tt class="docutils literal"><span class="pre">#include</span></tt>'ed files of a C file:</p>
 <pre class="listing"><span class="Keyword">for</span> <span class="Identifier">line</span> <span class="Keyword">in</span> <span class="Identifier">lines</span><span class="Punctuation">(</span><span class="StringLit">"myfile.c"</span><span class="Punctuation">)</span><span class="Punctuation">:</span>

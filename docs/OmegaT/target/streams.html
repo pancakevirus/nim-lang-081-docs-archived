@@ -834,8 +834,8 @@ function main() {
   </div>
   <ul class="simple simple-toc" id="toc-list">
 <li><a class="reference" id="basic-usage_toc" href="#basic-usage">基本の用法</a></li>
-<ul class="simple"><li><a class="reference" id="basic-usage-stringstream-example_toc" href="#basic-usage-stringstream-example">StringStream example</a></li>
-<li><a class="reference" id="basic-usage-filestream-example_toc" href="#basic-usage-filestream-example">FileStream example</a></li>
+<ul class="simple"><li><a class="reference" id="basic-usage-stringstream-example_toc" href="#basic-usage-stringstream-example">StringStream の用例</a></li>
+<li><a class="reference" id="basic-usage-filestream-example_toc" href="#basic-usage-filestream-example">FileStream  の用例</a></li>
 </ul><li><a class="reference" id="see-also_toc" href="#see-also">関連</a></li>
 <li>
   <a class="reference reference-toplevel" href="#7" id="57">型</a>
@@ -1007,12 +1007,12 @@ function main() {
 <p>Other modules may provide other implementations for this standard stream interface.</p>
 
 <h1><a class="toc-backref" id="basic-usage" href="#basic-usage">基本の用法</a></h1><p>The basic flow of using this module is:</p>
-<ol class="simple"><li>Open input stream</li>
-<li>Read or write stream</li>
-<li>Close stream</li>
+<ol class="simple"><li>入力ストリームを開く</li>
+<li>ストリームの読み書き</li>
+<li>ストリームを閉じる</li>
 </ol>
 
-<h2><a class="toc-backref" id="basic-usage-stringstream-example" href="#basic-usage-stringstream-example">StringStream example</a></h2><pre class="listing"><span class="Keyword">import</span> <span class="Identifier">streams</span>
+<h2><a class="toc-backref" id="basic-usage-stringstream-example" href="#basic-usage-stringstream-example">StringStream の用例</a></h2><pre class="listing"><span class="Keyword">import</span> <span class="Identifier">streams</span>
 
 <span class="Keyword">var</span> <span class="Identifier">strm</span> <span class="Operator">=</span> <span class="Identifier">newStringStream</span><span class="Punctuation">(</span><span class="LongStringLit">"""The first line
 the second line
@@ -1029,7 +1029,7 @@ the third line"""</span><span class="Punctuation">)</span>
 <span class="Comment"># the third line</span>
 
 <span class="Identifier">strm</span><span class="Operator">.</span><span class="Identifier">close</span><span class="Punctuation">(</span><span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="basic-usage-filestream-example" href="#basic-usage-filestream-example">FileStream example</a></h2><p>Write file stream example:</p>
+<h2><a class="toc-backref" id="basic-usage-filestream-example" href="#basic-usage-filestream-example">FileStream  の用例</a></h2><p>Write file stream example:</p>
 <pre class="listing"><span class="Keyword">import</span> <span class="Identifier">streams</span>
 
 <span class="Keyword">var</span> <span class="Identifier">strm</span> <span class="Operator">=</span> <span class="Identifier">newFileStream</span><span class="Punctuation">(</span><span class="StringLit">"somefile.txt"</span><span class="Punctuation">,</span> <span class="Identifier">fmWrite</span><span class="Punctuation">)</span>
@@ -1101,7 +1101,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </pre></dt>
 <dd>
 
-<p>Stream interface that supports writing or reading.</p>
+<p>読み書きをサポートしたストリームインタフェースです。</p>
 <p><strong>Note:</strong></p>
 <ul class="simple"><li>That these fields here shouldn't be used directly. They are accessible so that a stream implementation can override them.</li>
 </ul>
@@ -1116,7 +1116,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 <p>A stream that encapsulates a string.</p>
-<p><strong>Note:</strong> Not available for JS backend.</p>
+<p><strong>備考:</strong> JavaScript バックエンドでは利用できません。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/streams.nim#L1005"
@@ -1131,8 +1131,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </pre></dt>
 <dd>
 
-<p>A string stream object.</p>
-<p><strong>Note:</strong> Not available for JS backend.</p>
+<p>文字列ストリームのオブジェクトです。</p>
+<p><strong>備考:</strong> JavaScript バックエンドでは利用できません。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/streams.nim#L1009"
@@ -1144,7 +1144,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 <p>A stream that encapsulates a <tt class="docutils literal"><span class="pre">File</span></tt>.</p>
-<p><strong>Note:</strong> Not available for JS backend.</p>
+<p><strong>備考:</strong> JavaScript バックエンドでは利用できません。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/streams.nim#L1107"
@@ -1157,8 +1157,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </pre></dt>
 <dd>
 
-<p>A file stream object.</p>
-<p><strong>Note:</strong> Not available for JS backend.</p>
+<p>ファイルストリームのオブジェクトです。</p>
+<p><strong>備考:</strong> JavaScript バックエンドでは利用できません。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/streams.nim#L1111"
@@ -1325,7 +1325,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 <p>Reads all available data.</p>
-<p><strong>Note:</strong> Not available for JS backend.</p>
+<p><strong>備考:</strong> JavaScript バックエンドでは利用できません。</p>
 
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">strm</span> <span class="Other">=</span> <span class="Identifier">newStringStream</span><span class="Other">(</span><span class="StringLit">"The first line\nthe second line\nthe third line"</span><span class="Other">)</span>
@@ -2317,7 +2317,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 <p>Creates a new stream from the string <tt class="docutils literal"><span class="pre">s</span></tt>.</p>
-<p><strong>Note:</strong> Not available for JS backend.</p>
+<p><strong>備考:</strong> JavaScript バックエンドでは利用できません。</p>
 <p>関連:</p>
 <ul class="simple"><li><a class="reference external" href="#newFileStream,File">newFileStream proc</a> creates a file stream from opened File.</li>
 <li><a class="reference external" href="#newFileStream,string,FileMode,int">newFileStream proc</a>  creates a file stream from the file name and the mode.</li>
@@ -2339,29 +2339,29 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#newFileStream%2CFile"><span class="Identifier">newFileStream</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="io.html#File"><span class="Identifier">File</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">owned</span> <span class="Identifier">FileStream</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Creates a new stream from the file <tt class="docutils literal"><span class="pre">f</span></tt>.</p>
-<p><strong>Note:</strong> Not available for JS backend.</p>
+<p>新しいストリームをファイル <tt class="docutils literal"><span class="pre">f</span></tt> から作成します。</p>
+<p><strong>備考:</strong> JavaScript バックエンドでは利用できません。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#newStringStream,string">newStringStream proc</a> creates a new stream from string.</li>
+<ul class="simple"><li><a class="reference external" href="#newStringStream,string">newStringStream プロシージャ</a> は新しいストリームを文字列から作成します。</li>
 <li><a class="reference external" href="#newFileStream,string,FileMode,int">newFileStream proc</a> is the same as using <a class="reference external" href="io.html#open,File,string,FileMode,int">open proc</a> on Examples.</li>
 <li><a class="reference external" href="#openFileStream,string,FileMode,int">openFileStream proc</a> creates a file stream from the file name and the mode.</li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
-<pre class="listing"><span class="Comment">## Input (somefile.txt):</span>
-<span class="Comment">## The first line</span>
-<span class="Comment">## the second line</span>
-<span class="Comment">## the third line</span>
+<pre class="listing"><span class="Comment">## 入力 (somefile.txt):</span>
+<span class="Comment">## 一行目</span>
+<span class="Comment">## 二行目</span>
+<span class="Comment">## 三行目</span>
 <span class="Keyword">var</span> <span class="Identifier">f</span><span class="Other">:</span> <span class="Identifier">File</span>
 <span class="Keyword">if</span> <span class="Identifier">open</span><span class="Other">(</span><span class="Identifier">f</span><span class="Other">,</span> <span class="StringLit">"somefile.txt"</span><span class="Other">,</span> <span class="Identifier">fmRead</span><span class="Other">,</span> <span class="Operator">-</span><span class="DecNumber">1</span><span class="Other">)</span><span class="Other">:</span>
   <span class="Keyword">var</span> <span class="Identifier">strm</span> <span class="Other">=</span> <span class="Identifier">newFileStream</span><span class="Other">(</span><span class="Identifier">f</span><span class="Other">)</span>
   <span class="Keyword">var</span> <span class="Identifier">line</span> <span class="Other">=</span> <span class="StringLit">""</span>
   <span class="Keyword">while</span> <span class="Identifier">strm</span><span class="Other">.</span><span class="Identifier">readLine</span><span class="Other">(</span><span class="Identifier">line</span><span class="Other">)</span><span class="Other">:</span>
     <span class="Identifier">echo</span> <span class="Identifier">line</span>
-  <span class="Comment">## Output:</span>
-  <span class="Comment">## The first line</span>
-  <span class="Comment">## the second line</span>
-  <span class="Comment">## the third line</span>
+  <span class="Comment">## 出力:</span>
+  <span class="Comment">## 一行目</span>
+  <span class="Comment">## 二行目</span>
+  <span class="Comment">## 三行目</span>
   <span class="Identifier">strm</span><span class="Other">.</span><span class="Identifier">close</span><span class="Other">(</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/streams.nim#L1144"
@@ -2374,13 +2374,13 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 <p>Creates a new stream from the file named <tt class="docutils literal"><span class="pre">filename</span></tt> with the mode <tt class="docutils literal"><span class="pre">mode</span></tt>.</p>
-<p>If the file cannot be opened, <tt class="docutils literal"><span class="pre">nil</span></tt> is returned. See the <a class="reference external" href="io.html">io module</a> for a list of available <a class="reference external" href="io.html#FileMode">FileMode enums</a>.</p>
+<p>ファイルが開けないときは、 <tt class="docutils literal"><span class="pre">nil</span></tt> を返します。See the <a class="reference external" href="io.html">io module</a> for a list of available <a class="reference external" href="io.html#FileMode">FileMode enums</a>.</p>
 <p><strong>Note:</strong></p>
 <ul class="simple"><li><strong>This function returns nil in case of failure.</strong> To prevent unexpected behavior and ensure proper error handling, use <a class="reference external" href="#openFileStream,string,FileMode,int">openFileStream proc</a> instead.</li>
-<li>Not available for JS backend.</li>
+<li>JavaScript バックエンドでは利用できません。</li>
 </ul>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#newStringStream,string">newStringStream proc</a> creates a new stream from string.</li>
+<ul class="simple"><li><a class="reference external" href="#newStringStream,string">newStringStream プロシージャ</a> は新しいストリームを文字列から作成します。</li>
 <li><a class="reference external" href="#newFileStream,File">newFileStream proc</a> creates a file stream from opened File.</li>
 <li><a class="reference external" href="#openFileStream,string,FileMode,int">openFileStream proc</a> creates a file stream from the file name and the mode.</li>
 </ul>
@@ -2410,23 +2410,23 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 <p>Creates a new stream from the file named <tt class="docutils literal"><span class="pre">filename</span></tt> with the mode <tt class="docutils literal"><span class="pre">mode</span></tt>. If the file cannot be opened, an IO exception is raised.</p>
-<p><strong>Note:</strong> Not available for JS backend.</p>
+<p><strong>備考:</strong> JavaScript バックエンドでは利用できません。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#newStringStream,string">newStringStream proc</a> creates a new stream from string.</li>
+<ul class="simple"><li><a class="reference external" href="#newStringStream,string">newStringStream プロシージャ</a> は新しいストリームを文字列から作成します。</li>
 <li><a class="reference external" href="#newFileStream,File">newFileStream proc</a> creates a file stream from opened File.</li>
 <li><a class="reference external" href="#newFileStream,string,FileMode,int">newFileStream proc</a>  creates a file stream from the file name and the mode.</li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">try</span><span class="Other">:</span>
-  <span class="Comment">## Input (somefile.txt):</span>
-  <span class="Comment">## The first line</span>
-  <span class="Comment">## the second line</span>
-  <span class="Comment">## the third line</span>
+  <span class="Comment">## 入力 (somefile.txt):</span>
+  <span class="Comment">## 一行目</span>
+  <span class="Comment">## 二行目</span>
+  <span class="Comment">## 三行目</span>
   <span class="Keyword">var</span> <span class="Identifier">strm</span> <span class="Other">=</span> <span class="Identifier">openFileStream</span><span class="Other">(</span><span class="StringLit">"somefile.txt"</span><span class="Other">)</span>
   <span class="Identifier">echo</span> <span class="Identifier">strm</span><span class="Other">.</span><span class="Identifier">readLine</span><span class="Other">(</span><span class="Other">)</span>
-  <span class="Comment">## Output:</span>
-  <span class="Comment">## The first line</span>
+  <span class="Comment">## 出力:</span>
+  <span class="Comment">## 一行目</span>
   <span class="Identifier">strm</span><span class="Other">.</span><span class="Identifier">close</span><span class="Other">(</span><span class="Other">)</span>
 <span class="Keyword">except</span><span class="Other">:</span>
   <span class="Identifier">stderr</span><span class="Other">.</span><span class="Identifier">write</span> <span class="Identifier">getCurrentExceptionMsg</span><span class="Other">(</span><span class="Other">)</span></pre>
@@ -2473,7 +2473,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 Generated: 2020-01-23 17:27:42 UTC</small>
+        <small>Nim で作成しました。 生成日時: 2020年01月23日 午前17時27分42秒 (UTC)</small>
       </div>
     </div>
   </div>
