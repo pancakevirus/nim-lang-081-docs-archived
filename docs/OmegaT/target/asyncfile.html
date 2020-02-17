@@ -892,7 +892,7 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc">This module implements asynchronous file reading and writing.<pre class="listing"><span class="Keyword">import</span> <span class="Identifier">asyncfile</span><span class="Punctuation">,</span> <span class="Identifier">asyncdispatch</span><span class="Punctuation">,</span> <span class="Identifier">os</span>
+  <p class="module-desc">このモジュールは非同期によるファイル読み書き機能の実装です。<pre class="listing"><span class="Keyword">import</span> <span class="Identifier">asyncfile</span><span class="Punctuation">,</span> <span class="Identifier">asyncdispatch</span><span class="Punctuation">,</span> <span class="Identifier">os</span>
 
 <span class="Keyword">proc</span> <span class="Identifier">main</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">async</span><span class="Operator">.</span><span class="Punctuation">}</span> <span class="Operator">=</span>
   <span class="Keyword">var</span> <span class="Identifier">file</span> <span class="Operator">=</span> <span class="Identifier">openAsync</span><span class="Punctuation">(</span><span class="Identifier">getTempDir</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Operator">/</span> <span class="StringLit">"foobar.txt"</span><span class="Punctuation">,</span> <span class="Identifier">fmReadWrite</span><span class="Punctuation">)</span>
@@ -933,7 +933,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#getFileSize%2CAsyncFile"><span class="Identifier">getFileSize</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="asyncfile.html#AsyncFile"><span class="Identifier">AsyncFile</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int64"><span class="Identifier">int64</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">OSError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Retrieves the specified file's size. &nbsp;&nbsp;<a
+指定されたファイルのサイズを取得します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L72"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L72" class="link-seesrc" target="_blank" >編集</a>
 
@@ -943,7 +943,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                                         <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Creates <tt class="docutils literal"><span class="pre">AsyncFile</span></tt> with a previously opened file descriptor <tt class="docutils literal"><span class="pre">fd</span></tt>. &nbsp;&nbsp;<a
+以前に開いたファイルディスクリプタ <tt class="docutils literal"><span class="pre">fd</span></tt> で <tt class="docutils literal"><span class="pre">AsyncFile</span></tt> を作成します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L86"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L86" class="link-seesrc" target="_blank" >編集</a>
 
@@ -953,7 +953,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Opens a file specified by the path in <tt class="docutils literal"><span class="pre">filename</span></tt> using the specified FileMode <tt class="docutils literal"><span class="pre">mode</span></tt> asynchronously. &nbsp;&nbsp;<a
+ファイルモード (FileMode) <tt class="docutils literal"><span class="pre">mode</span></tt> で指定されたパスにある <tt class="docutils literal"><span class="pre">filename</span></tt> のファイルを非同期で開きます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L92"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L92" class="link-seesrc" target="_blank" >編集</a>
 
@@ -963,8 +963,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">FutureError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Read <tt class="docutils literal"><span class="pre">size</span></tt> bytes from the specified file asynchronously starting at the current position of the file pointer.</p>
-<p>If the file pointer is past the end of the file then zero is returned and no bytes are read into <tt class="docutils literal"><span class="pre">buf</span></tt></p>
+<p>ファイルポインタの現在位置を始点として指定されたファイルから  <tt class="docutils literal"><span class="pre">size</span></tt> バイトを非同期で読み取ります。</p>
+<p>ファイルポインタがファイル終端を超えたならば 0 を返し、バイトを <tt class="docutils literal"><span class="pre">buf</span></tt> へ読み込みません。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L126"
@@ -976,8 +976,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">FutureError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Read <tt class="docutils literal"><span class="pre">size</span></tt> bytes from the specified file asynchronously starting at the current position of the file pointer.</p>
-<p>If the file pointer is past the end of the file then an empty string is returned.</p>
+<p>ファイルポインタの現在位置を始点として指定されたファイルから  <tt class="docutils literal"><span class="pre">size</span></tt> バイトを非同期で読み取ります。</p>
+<p>ファイルポインタがファイル終端を超えたならば空文字列を返します。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L204"
@@ -989,7 +989,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">FutureError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Reads a single line from the specified file asynchronously. &nbsp;&nbsp;<a
+指定されたファイルから一行を非同期で読み取ります。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L299"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L299" class="link-seesrc" target="_blank" >編集</a>
 
@@ -998,7 +998,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#getFilePos%2CAsyncFile"><span class="Identifier">getFilePos</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="asyncfile.html#AsyncFile"><span class="Identifier">AsyncFile</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int64"><span class="Identifier">int64</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Retrieves the current position of the file pointer that is used to read from the specified file. The file's first byte has the index zero. &nbsp;&nbsp;<a
+指定されたファイルの読み取りで使われるファイルポインタの現在位置を取得します。ファイルの先頭バイト位置はインデックス 0 です。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L312"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L312" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1007,7 +1007,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#setFilePos%2CAsyncFile%2Cint64"><span class="Identifier">setFilePos</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="asyncfile.html#AsyncFile"><span class="Identifier">AsyncFile</span></a><span class="Other">;</span> <span class="Identifier">pos</span><span class="Other">:</span> <a href="system.html#int64"><span class="Identifier">int64</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Sets the position of the file pointer that is used for read/write operations. The file's first byte has the index zero. &nbsp;&nbsp;<a
+読み書き処理で使われるファイルポインタの位置を設定します。ファイルの先頭バイト位置はインデックス 0 です。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L318"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L318" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1017,7 +1017,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">FutureError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Reads all data from the specified file. &nbsp;&nbsp;<a
+指定されたファイルにあるデータをすべて読み取ります。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L327"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L327" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1027,8 +1027,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">FutureError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Writes <tt class="docutils literal"><span class="pre">size</span></tt> bytes from <tt class="docutils literal"><span class="pre">buf</span></tt> to the file specified asynchronously.</p>
-<p>The returned Future will complete once all data has been written to the specified file.</p>
+<p><span class="pre">buf</span></tt> から <tt class="docutils literal"><span class="pre">size</span></tt> バイトを指定されたファイルへ非同期で書き込みます。</p>
+<p>指定されたファイルへの全データ一括書き込み完了後に Future が返されます。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L336"
@@ -1040,8 +1040,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">FutureError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Writes <tt class="docutils literal"><span class="pre">data</span></tt> to the file specified asynchronously.</p>
-<p>The returned Future will complete once all data has been written to the specified file.</p>
+<p>指定されたファイルに <tt class="docutils literal"><span class="pre">data</span></tt> を非同期で書き込みます。</p>
+<p>指定されたファイルへの全データ一括書き込み完了後に Future が返されます。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L406"
@@ -1052,7 +1052,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#setFileSize%2CAsyncFile%2Cint64"><span class="Identifier">setFileSize</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="asyncfile.html#AsyncFile"><span class="Identifier">AsyncFile</span></a><span class="Other">;</span> <span class="Identifier">length</span><span class="Other">:</span> <a href="system.html#int64"><span class="Identifier">int64</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">OSError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Set a file length. &nbsp;&nbsp;<a
+ファイルの長さを設定します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L481"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L481" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1061,7 +1061,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#close%2CAsyncFile"><span class="Identifier">close</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <a href="asyncfile.html#AsyncFile"><span class="Identifier">AsyncFile</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Closes the file specified. &nbsp;&nbsp;<a
+指定されたファイルを閉じます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L498"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L498" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1071,8 +1071,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">FutureError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Reads data from the specified future stream until it is completed. The data which is read is written to the file immediately and freed from memory.</p>
-<p>This procedure is perfect for saving streamed data to a file without wasting memory.</p>
+<p>読み終えるまで指定された先行ストリーム (FutureStream) からデータを読み取ります。読み取られたデータは直ちにファイルへ書き込みを行い、メモリから削除されます。</p>
+<p>このプロシージャはメモリを無駄にせずにストリーム形式のデータをファイルへ保存するのに理想的です。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L508"
@@ -1084,7 +1084,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">FutureError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Writes data to the specified future stream as the file is read. &nbsp;&nbsp;<a
+ファイルから読み取りを行い、指定された先行ストリーム (FutureStream) へデータを書き込みます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L522"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L522" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1099,7 +1099,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 Generated: 2020-01-23 17:28:21 UTC</small>
+        <small>Nim で作成しました。 生成日時: 2020年01月23日 午前17時28分21秒 (UTC)</small>
       </div>
     </div>
   </div>

@@ -186,10 +186,26 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Documentation generator&lt;/a0&gt;&lt;br1/&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T073028Z" creationid="isVowel" creationdate="20200217T073028Z">
+        <seg>&lt;a0&gt;ドキュメンテーションジェネレータ&lt;/a0&gt;&lt;br1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;a0&gt;GC&lt;/a0&gt;&lt;br1/&gt;</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200209T063336Z" creationid="isVowel" creationdate="20200209T063336Z">
         <seg>&lt;a0&gt;ガベージコレクタ&lt;/a0&gt;&lt;br1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Hot code reloading&lt;/a0&gt;&lt;br1/&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T072957Z" creationid="isVowel" creationdate="20200217T072957Z">
+        <seg>&lt;a0&gt;ホットコード・リローディング&lt;/a0&gt;&lt;br1/&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -222,6 +238,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200209T060741Z" creationid="isVowel" creationdate="20200209T060741Z">
         <seg>&lt;a0&gt;標準ライブラリのドキュメンテーション&lt;/a0&gt;&lt;br1/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;Nimsuggest for IDE support&lt;/a0&gt;&lt;br1/&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T072912Z" creationid="isVowel" creationdate="20200217T072912Z">
+        <seg>&lt;a0&gt;Nimsuggest の IDE サポート&lt;/a0&gt;&lt;br1/&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -1401,6 +1425,22 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;t1&gt;&lt;s2&gt;nimpretty&lt;/s2&gt;&lt;/t1&gt; is a Nim source code beautifier, to format code according to the official style guide.&lt;br3/&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T072740Z" creationid="isVowel" creationdate="20200217T072740Z">
+        <seg>&lt;t1&gt;&lt;s2&gt;nimpretty&lt;/s2&gt;&lt;/t1&gt; は Nim ソースコードの整美ツールであり、公式スタイルガイドに従ってコードを整形します。&lt;br3/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;t1&gt;&lt;s2&gt;testament&lt;/s2&gt;&lt;/t1&gt; is an advanced automatic &lt;e3&gt;unittests runner&lt;/e3&gt; for Nim tests, is used for the development of Nim itself, offers process isolation for your tests, it can generate statistics about test cases, supports multiple targets (C, JS, etc), &lt;a4&gt;simulated Dry-Runs&lt;/a4&gt;, has logging, can generate HTML reports, skip tests from a file and more, so can be useful to run your tests, even the most complex ones.&lt;br5/&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T073158Z" creationid="isVowel" creationdate="20200217T072716Z">
+        <seg>&lt;t1&gt;&lt;s2&gt;testament&lt;/s2&gt;&lt;/t1&gt; は Nim のテストで採用されている先進的な&lt;e3&gt;自動ユニット・テスト実行ツール&lt;/e3&gt;であり、 Nim の開発で採用されています。テストの単独処理、テストケースに関する統計情報の生成、各種ターゲットのサポート (C, JavaScript など)、&lt;a4&gt;模擬試験のシミュレーション (Dry-Run)&lt;/a4&gt;、ログの収集、 HTML 形式によるレポートの生成、ファイルによるテストのスキップなどの機能があり、非常に複雑なテスト処理でさえも、実用に耐えます。&lt;br5/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>1. 原文は機械翻訳を通したような雰囲気があるので、あまりよくありません。改訳時に意味を壊さない程度に「使います」を省いた方が良いかもしれません。
 
 2. 以前は「&lt;t3&gt;&lt;s4&gt;koch&lt;/s4&gt;&lt;/t3&gt; は、主に Nim コンパイラのビルドで使いますが、それ以外の作業にも使います。」と直訳していました。
@@ -1935,6 +1975,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Closes the file specified.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T025551Z" creationid="isVowel" creationdate="20200217T025551Z">
+        <seg>指定されたファイルを閉じます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Closures</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T031305Z" creationid="isVowel" creationdate="20200115T031305Z">
@@ -2141,6 +2189,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200123T023155Z" creationid="isVowel" creationdate="20200123T023155Z">
         <seg>空のヒープを新規作成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Creates &lt;t0&gt;&lt;s1&gt;AsyncFile&lt;/s1&gt;&lt;/t0&gt; with a previously opened file descriptor &lt;t2&gt;&lt;s3&gt;fd&lt;/s3&gt;&lt;/t2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T021951Z" creationid="isVowel" creationdate="20200217T021951Z">
+        <seg>以前に開いたファイルディスクリプタ &lt;t2&gt;&lt;s3&gt;fd&lt;/s3&gt;&lt;/t2&gt; で &lt;t0&gt;&lt;s1&gt;AsyncFile&lt;/s1&gt;&lt;/t0&gt; を作成します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3195,6 +3251,14 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:28:21 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T025542Z" creationid="isVowel" creationdate="20200217T025536Z">
+        <seg>生成日時: 2020年01月23日 午前17時28分21秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Generated: 2020-01-23 17:28:23 UTC</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T032706Z" creationid="isVowel" creationdate="20200130T032706Z">
@@ -3537,6 +3601,22 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T181850Z" creationid="isVowel" creationdate="20200212T181850Z">
         <seg>ファイルが開けないときは、 &lt;t0&gt;&lt;s1&gt;nil&lt;/s1&gt;&lt;/t0&gt; を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If the file pointer is past the end of the file then an empty string is returned.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T025135Z" creationid="isVowel" creationdate="20200217T025135Z">
+        <seg>ファイルポインタがファイル終端を超えたならば空文字列を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If the file pointer is past the end of the file then zero is returned and no bytes are read into &lt;t0&gt;&lt;s1&gt;buf&lt;/s1&gt;&lt;/t0&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T023740Z" creationid="isVowel" creationdate="20200217T023740Z">
+        <seg>ファイルポインタがファイル終端を超えたならば 0 を返し、バイトを &lt;t0&gt;&lt;s1&gt;buf&lt;/s1&gt;&lt;/t0&gt; へ読み込みません。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4232,6 +4312,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Opens a file specified by the path in &lt;t0&gt;&lt;s1&gt;filename&lt;/s1&gt;&lt;/t0&gt; using the specified FileMode &lt;t2&gt;&lt;s3&gt;mode&lt;/s3&gt;&lt;/t2&gt; asynchronously.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T023703Z" creationid="isVowel" creationdate="20200217T023703Z">
+        <seg>ファイルモード (FileMode) &lt;t2&gt;&lt;s3&gt;mode&lt;/s3&gt;&lt;/t2&gt; で指定されたパスにある &lt;t0&gt;&lt;s1&gt;filename&lt;/s1&gt;&lt;/t0&gt; のファイルを非同期で開きます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Operators</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041707Z" creationid="isVowel" creationdate="20200113T041707Z">
@@ -4547,6 +4635,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Read &lt;t0&gt;&lt;s1&gt;size&lt;/s1&gt;&lt;/t0&gt; bytes from the specified file asynchronously starting at the current position of the file pointer.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T024600Z" creationid="isVowel" creationdate="20200217T024537Z">
+        <seg>ファイルポインタの現在位置を始点として指定されたファイルから  &lt;t0&gt;&lt;s1&gt;size&lt;/s1&gt;&lt;/t0&gt; バイトを非同期で読み取ります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Read or write stream</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T182307Z" creationid="isVowel" creationdate="20200212T182307Z">
@@ -4559,6 +4655,39 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200209T053952Z" creationid="isVowel" creationdate="20200209T053952Z">
         <seg> これはコンパイラをハックしたいときにお読みください。 &lt;br2/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Reads a single line from the specified file asynchronously.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T025107Z" creationid="isVowel" creationdate="20200217T025107Z">
+        <seg>指定されたファイルから一行を非同期で読み取ります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Reads all data from the specified file.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T032821Z" creationid="isVowel" creationdate="20200217T032821Z">
+        <seg>指定されたファイルにあるデータをすべて読み取ります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>直訳で future stream は未来ストリームです。ただ、これでは変ですから「先行きストリーム」→「先行ストリーム」としています。本文翻訳時点では機能が未だわかってないので、もしかしたら future はキャッシュ (先読み) のことを指すのかもしれません。
+
+この future stream は、一般的なプログラミング言語では、あまり見かけない表現のようです。
+
+(当方は検証しながら訳すのではなく全部訳して終えてから検証する人です)
+
+【参考文献】
+・研究社   新英和中辞典 : 先行き
+</note>
+      <tuv lang="EN-US">
+        <seg>Reads data from the specified future stream until it is completed.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T031012Z" creationid="isVowel" creationdate="20200217T031012Z">
+        <seg>読み終えるまで指定された先行ストリーム (FutureStream) からデータを読み取ります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4607,6 +4736,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041258Z" creationid="isVowel" creationdate="20200113T041258Z">
         <seg>Result 変数</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Retrieves the current position of the file pointer that is used to read from the specified file.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T033222Z" creationid="isVowel" creationdate="20200217T033222Z">
+        <seg>指定されたファイルの読み取りで使われるファイルポインタの現在位置を取得します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Retrieves the specified file's size.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T021725Z" creationid="isVowel" creationdate="20200217T021725Z">
+        <seg>指定されたファイルのサイズを取得します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4679,6 +4824,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T091548Z" creationid="isVowel" creationdate="20200127T091548Z">
         <seg>&lt;t0&gt;&lt;s1&gt;SecureHash&lt;/s1&gt;&lt;/t0&gt; 形式の文字列を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the thread handle of &lt;t0&gt;&lt;s1&gt;t&lt;/s1&gt;&lt;/t0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200216T163016Z" creationid="isVowel" creationdate="20200216T163016Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;t&lt;/s1&gt;&lt;/t0&gt; のスレッドハンドルを返します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4787,6 +4940,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Set a file length.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T025750Z" creationid="isVowel" creationdate="20200217T025750Z">
+        <seg>ファイルの長さを設定します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Set it to 0 to disable time based profiling; it uses an imprecise instruction count measure instead then.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200213T051625Z" creationid="isVowel" creationdate="20200213T051625Z">
@@ -4807,6 +4968,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200215T095827Z" creationid="isVowel" creationdate="20200215T095827Z">
         <seg>&lt;t0&gt;&lt;s1&gt;n&lt;/s1&gt;&lt;/t0&gt; のクライアントデータを設定します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Sets the position of the file pointer that is used for read/write operations.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T033449Z" creationid="isVowel" creationdate="20200217T033449Z">
+        <seg>読み書き処理で使われるファイルポインタの位置を設定します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5019,6 +5188,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The "Hot code reloading" feature is built into the compiler but has its own document explaining how it works.&lt;br2/&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T073254Z" creationid="isVowel" creationdate="20200217T073007Z">
+        <seg>「ホットコード・リローディング」機能はコンパイラに内蔵されています。このドキュメンテーションでは、この機能に関する動作の仕組みを解説しています。&lt;br2/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The "compiler" directory contains compiler sources and should not be part of the compiler binary package</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T105456Z" creationid="isVowel" creationdate="20200208T105456Z">
@@ -5203,6 +5380,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The builtin document generator &lt;t2&gt;&lt;s3&gt;nim doc&lt;/s3&gt;&lt;/t2&gt; generates HTML documentation from &lt;t4&gt;&lt;s5&gt;.nim&lt;/s5&gt;&lt;/t4&gt; source files.&lt;br6/&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T073108Z" creationid="isVowel" creationdate="20200217T073108Z">
+        <seg>内蔵型ドキュメントジェネレータ &lt;t2&gt;&lt;s3&gt;nim doc&lt;/s3&gt;&lt;/t2&gt; は &lt;t4&gt;&lt;s5&gt;.nim&lt;/s5&gt;&lt;/t4&gt; ソースファイルから HTML ドキュメンテーションを生成します。&lt;br6/&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The client data field is used by the HTML parser and generator.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200215T095628Z" creationid="isVowel" creationdate="20200215T095628Z">
@@ -5215,6 +5400,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200203T004844Z" creationid="isVowel" creationdate="20200203T004844Z">
         <seg>現在の実装では PCRE を採用しています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The data which is read is written to the file immediately and freed from memory.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T031633Z" creationid="isVowel" creationdate="20200217T031633Z">
+        <seg>読み取られたデータは直ちにファイルへ書き込みを行い、メモリから削除されます。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5243,6 +5436,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T110344Z" creationid="isVowel" creationdate="20200208T110231Z">
         <seg>stdlib の所在は /usr/lib/nim にあると仮定します</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The file's first byte has the index zero.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T040508Z" creationid="isVowel" creationdate="20200217T033309Z">
+        <seg>ファイルの先頭バイト位置はインデックス 0 です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5331,6 +5532,30 @@ skipped : スキップする、無視する、読み飛ばす。</note>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T160057Z" creationid="isVowel" creationdate="20200130T155736Z">
         <seg>このプロシージャはサーバで設定された "Set-Cookie" ヘッダではなく、クライアントで設定された Cookie ヘッダの解析を行います。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The returned Future will complete once all data has been written to the specified file.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T035438Z" creationid="isVowel" creationdate="20200217T035438Z">
+        <seg>指定されたファイルへの全データ一括書き込み完了後に Future が返されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The same as &lt;a0&gt;result.add(escape(s))&lt;/a0&gt;, but more efficient.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200215T112338Z" creationid="isVowel" creationdate="20200215T112338Z">
+        <seg>&lt;a0&gt;result.add(escape(s))&lt;/a0&gt; と同じですが、こちらのほうが効率的です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The standard distribution ships with the following tools:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T072948Z" creationid="isVowel" creationdate="20200217T072948Z">
+        <seg>標準ディストリビューションには下記のツールを収録しています。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5543,6 +5768,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This module implements asynchronous file reading and writing.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T021651Z" creationid="isVowel" creationdate="20200217T021651Z">
+        <seg>このモジュールは非同期によるファイル読み書き機能の実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This module implements helper procs for parsing Cookies.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T160303Z" creationid="isVowel" creationdate="20200130T160303Z">
@@ -5656,6 +5889,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This procedure is perfect for saving streamed data to a file without wasting memory.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T031715Z" creationid="isVowel" creationdate="20200217T031715Z">
+        <seg>このプロシージャはメモリを無駄にせずにストリーム形式のデータをファイルへ保存するのに理想的です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This traverses the whole string to find the binary zero end marker!</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T171117Z" creationid="isVowel" creationdate="20200212T170944Z">
@@ -5708,6 +5949,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T011239Z" creationid="isVowel" creationdate="20200127T011239Z">
         <seg>したがって、 3 桁の 8 bit バイト (つまり、合計 24 bit) は Base64 において 4 桁の 6 bit 表現になります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Through the &lt;t2&gt;&lt;s3&gt;nimsuggest&lt;/s3&gt;&lt;/t2&gt; tool, any IDE can query a &lt;t4&gt;&lt;s5&gt;.nim&lt;/s5&gt;&lt;/t4&gt; source file and obtain useful information like definition of symbols or suggestions for completion.&lt;br6/&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T072925Z" creationid="isVowel" creationdate="20200217T072854Z">
+        <seg>&lt;t2&gt;&lt;s3&gt;nimsuggest&lt;/s3&gt;&lt;/t2&gt; ツールにより、 &lt;t4&gt;&lt;s5&gt;.nim&lt;/s5&gt;&lt;/t4&gt; ソースファイルの照会をすることでシンボルの定義、またはの自動補完の提案など有益な情報を IDE で得られます。&lt;br6/&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -6124,6 +6373,30 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T050409Z" creationid="isVowel" creationdate="20200113T050409Z">
         <seg>ラッパー</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Writes &lt;t0&gt;&lt;s1&gt;data&lt;/s1&gt;&lt;/t0&gt; to the file specified asynchronously.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T034751Z" creationid="isVowel" creationdate="20200217T034751Z">
+        <seg>指定されたファイルに &lt;t0&gt;&lt;s1&gt;data&lt;/s1&gt;&lt;/t0&gt; を非同期で書き込みます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Writes &lt;t0&gt;&lt;s1&gt;size&lt;/s1&gt;&lt;/t0&gt; bytes from &lt;t2&gt;&lt;s3&gt;buf&lt;/s3&gt;&lt;/t2&gt; to the file specified asynchronously.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T034612Z" creationid="isVowel" creationdate="20200217T034612Z">
+        <seg>&lt;s3&gt;buf&lt;/s3&gt;&lt;/t2&gt; から &lt;t0&gt;&lt;s1&gt;size&lt;/s1&gt;&lt;/t0&gt; バイトを指定されたファイルへ非同期で書き込みます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Writes data to the specified future stream as the file is read.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T035035Z" creationid="isVowel" creationdate="20200217T035035Z">
+        <seg>ファイルから読み取りを行い、指定された先行ストリーム (FutureStream) へデータを書き込みます。</seg>
       </tuv>
     </tu>
     <tu>
