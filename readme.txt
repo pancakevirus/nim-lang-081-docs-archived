@@ -13,16 +13,18 @@ Nim のライセンスに準ずるものとします。ただし、翻訳物にも著作権があります。
 作業記録
 --------
 対象バージョン : Nim 1.0.6
-作業対象ファイル : 完了: 44 - 合計 : 181 = 残り : 138
-
+作業対象ファイル : 完了: 47 - 合計 : 181 = 残り : 134
 
 Jan : 31
-Feb : 29 (Current: 13)
-Mar : 31
+Feb : 29 (Current: 16 / 13)  → 60
+Mar : 31 (Current:  0 / 31)  → 91
+Apr : 
 
 Feb の目標 : 80 ～ 120 (前半～中盤)
 
 仮訳完了:
+	asyncfile.html
+	asynchttpserver.html
 	base64.html
 	browsers.html
 	cookies.html
@@ -32,41 +34,42 @@ Feb の目標 : 80 ～ 120 (前半～中盤)
 	docgen_sample.html
 	dom.html
 	endians.html
+	highlite.html
+	htmlgen.html
 	iup.html
 	jsconsole.html
 	jscore.html
 	koch.html
+	linenoise.html
 	md5.html
 	mersenne.html
 	mimetypes.html
+	mysql.html
+	nimgrep.html
+	nimprof.html
 	nimtracker.html
+	odbcsql.html
 	oswalkdir.html
+	overview.html
+	packaging.html
 	punycode.html
 	registry.html
-	sha1.html
-	sugar.html
-	time_t.html
-	util.html
-	wordwrap.html
-	linenoise.html
-	termios.html
-	winlean.html
-	mysql.html
-	sqlite3.html
-	odbcsql.html
-	packaging.html
-	htmlgen.html
 	segfaults.html
-	overview.html
-	theindex.html
-	highlite.html
+	sha1.html
 	sharedlist.html
-	nimgrep.html
-	widestrs.html
-	nimprof.html
-	xmlparser.html
-	asyncfile.html
+	sqlite3.html
+	sugar.html
+	termios.html
+	theindex.html
+	time_t.html
 	tools.html
+	util.html
+	varints.html
+	volatile.html
+	widestrs.html
+	winlean.html
+	wordwrap.html
+	xmlparser.html
 
 
 翻訳活動への参加方法
@@ -189,6 +192,20 @@ krydoc → tmx ファイルへの変換方法については、こちらがお勧めです。
 ※いまのところ、コリャ英和シリーズには TSV, CSV ファイルのインポート機能がないので
    手軽に (tmx → krydoc) へ戻す方法はありません。  gawk で TSV ファイルのフィールドを切り出して
    SrcText と TrgText を krydoc ファイルへ圧縮し直す方法も考えられますが、動作保証はありません (おそらく不明な翻訳エンジンエラーになると思います)。
+
+
+LogoVista コリャ英和！  一発翻訳 2020 - 翻訳の不具合
+------------------------------------------------------------
+Twitter (@isvowel) でも書いていますが...。
+このソフトはバグが...。
+
+- apis.html
+	should return an int with the < 0 == 0 or > 0 semantics; for a bool result use sameXYZ
+	→翻訳できず原文が返されるだけでなく、グループ指定ができなくなる。他社製ソフトなら問題ない。
+
+- for : 辞書の問題で、for の訳文が誤訳である「賛成の」になってしまう (おまけに、訳出禁止にできない)。
+
+- iterator : 辞書によっては「アイテレータ」と誤訳されてしまう。
 
 
 LogoVista コリャ英和！  一発翻訳 2020 - ファイル翻訳の不具合

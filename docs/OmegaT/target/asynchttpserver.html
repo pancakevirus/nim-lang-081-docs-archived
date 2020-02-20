@@ -850,14 +850,14 @@ function main() {
   headers*: HttpHeaders
   protocol*: tuple[orig: string, major, minor: int]
   url*: Uri
-  hostname*: string            ## The hostname of the client that made the request.
+  hostname*: string            ## リクエストをしたクライアントのホスト名。
   body*: string"><wbr />Request<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#AsyncHttpServer"
     title="AsyncHttpServer = ref object
   socket: AsyncSocket
   reuseAddr: bool
   reusePort: bool
-  maxBody: int                 ## The maximum content-length that will be read for the body."><wbr />Async<wbr />Http<wbr />Server<span class="attachedType"></span></a></li>
+  maxBody: int                 ## body (本文) を読み込んだときの最大コンテンツ長です。"><wbr />Async<wbr />Http<wbr />Server<span class="attachedType"></span></a></li>
 
   </ul>
 </li>
@@ -893,10 +893,11 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"><p>This module implements a high performance asynchronous HTTP server.</p>
-<p>This HTTP server has not been designed to be used in production, but for testing applications locally. Because of this, when deploying your application you should use a reverse proxy (for example nginx) instead of allowing users to connect directly to this server.</p>
+  <p class="module-desc"><p>このモジュールは高性能な非同期型 HTTP サーバの実装です。</p>
+<p>この HTTP サーバは本番環境での運用を想定した設計ではなく、ローカル環境でのアプリケーションテスト用に設計してあります。このため、アプリケーションのデプロイ時は、このサーバへのユーザ接続を禁止してリバースプロクシ (nginx など) をお使いください。
+</p>
 
-<h1><a class="toc-backref" id="basic-usage" href="#basic-usage">基本の用法</a></h1><p>This example will create an HTTP server on port 8080. The server will respond to all requests with a <tt class="docutils literal"><span class="pre">200 OK</span></tt> response code and "Hello World" as the response body.</p>
+<h1><a class="toc-backref" id="basic-usage" href="#basic-usage">基本の用法</a></h1><p>この用例ではポート 8080 を使って HTTP サーバを作成します。このサーバは、すべてのリクエストにレスポンスコ―ド <tt class="docutils literal"><span class="pre">200 OK</span></tt>を、 本文 (body) は "Hello World" で応答します。</p>
 <pre class="listing"><span class="Keyword">import</span> <span class="Identifier">asynchttpserver</span><span class="Punctuation">,</span> <span class="Identifier">asyncdispatch</span>
 
 <span class="Keyword">var</span> <span class="Identifier">server</span> <span class="Operator">=</span> <span class="Identifier">newAsyncHttpServer</span><span class="Punctuation">(</span><span class="Punctuation">)</span>
@@ -919,7 +920,7 @@ function main() {
   <span class="Identifier">headers</span><span class="Operator">*</span><span class="Other">:</span> <a href="httpcore.html#HttpHeaders"><span class="Identifier">HttpHeaders</span></a>
   <span class="Identifier">protocol</span><span class="Operator">*</span><span class="Other">:</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">orig</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">,</span> <span class="Identifier">major</span><span class="Other">,</span> <span class="Identifier">minor</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a><span class="Other">]</span>
   <span class="Identifier">url</span><span class="Operator">*</span><span class="Other">:</span> <a href="uri.html#Uri"><span class="Identifier">Uri</span></a>
-  <span class="Identifier">hostname</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a>            <span class="Comment">## The hostname of the client that made the request.</span>
+  <span class="Identifier">hostname</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a>            <span class="Comment">## リクエストをしたクライアントのホスト名。</span>
   <span class="Identifier">body</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a>
 </pre></dt>
 <dd>
@@ -935,7 +936,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
   <span class="Identifier">socket</span><span class="Other">:</span> <a href="asyncnet.html#AsyncSocket"><span class="Identifier">AsyncSocket</span></a>
   <span class="Identifier">reuseAddr</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a>
   <span class="Identifier">reusePort</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a>
-  <span class="Identifier">maxBody</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a>                 <span class="Comment">## The maximum content-length that will be read for the body.</span>
+  <span class="Identifier">maxBody</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a>                 <span class="Comment">## body (本文) を読み込んだときの最大コンテンツ長です。</span>
   </pre></dt>
 <dd>
 
@@ -955,7 +956,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Creates a new <tt class="docutils literal"><span class="pre">AsyncHttpServer</span></tt> instance. &nbsp;&nbsp;<a
+新しい <tt class="docutils literal"><span class="pre">AsyncHttpServer</span></tt> インスタンスを作成します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asynchttpserver.nim#L62"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asynchttpserver.nim#L62" class="link-seesrc" target="_blank" >編集</a>
 
@@ -965,7 +966,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">FutureError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Sends the specified headers to the requesting client. &nbsp;&nbsp;<a
+リクエスト側のクライアントへ指定されたヘッダを送信します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asynchttpserver.nim#L74"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asynchttpserver.nim#L74" class="link-seesrc" target="_blank" >編集</a>
 
@@ -975,8 +976,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <a href="system.html#void"><span class="Identifier">void</span></a><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">FutureError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Responds to the request with the specified <tt class="docutils literal"><span class="pre">HttpCode</span></tt>, headers and content.</p>
-<p>This procedure will <strong>not</strong> close the client socket.</p>
+<p>指定された <tt class="docutils literal"><span class="pre">HttpCode</span></tt>、ヘッダとコンテンツでリクエストに応答します。</p>
+<p>このプロシージャはクライアントのソケットを<strong>閉じません</strong>。</p>
 <p>用例:</p>
 <pre class="listing"><span class="Keyword">import</span> <span class="Identifier">json</span>
 <span class="Keyword">proc</span> <span class="Identifier">handler</span><span class="Punctuation">(</span><span class="Identifier">req</span><span class="Punctuation">:</span> <span class="Identifier">Request</span><span class="Punctuation">)</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">async</span><span class="Operator">.</span><span class="Punctuation">}</span> <span class="Operator">=</span>
@@ -998,8 +999,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Starts the process of listening for incoming HTTP connections on the specified address and port.</p>
-<p>When a request is made by a client the specified callback will be called.</p>
+<p>HTTP 接続で指定されたアドレスとポートの着信待ち受け処理を開始します。</p>
+<p>クライアントによるリクエスト時は指定されたコールバックが呼び出されます。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asynchttpserver.nim#L301"
@@ -1011,7 +1012,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                                    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Terminates the async http server instance. &nbsp;&nbsp;<a
+非同期 http サーバのインスタンスを終了します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asynchttpserver.nim#L320"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asynchttpserver.nim#L320" class="link-seesrc" target="_blank" >編集</a>
 

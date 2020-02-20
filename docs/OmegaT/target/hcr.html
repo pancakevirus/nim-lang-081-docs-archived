@@ -17,7 +17,7 @@
 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600' rel='stylesheet' type='text/css'/>
 
 
-<title>Hot code reloading</title>
+<title>ホットコード・リローディング</title>
 <style type="text/css" >
 /*
 Stylesheet for use with Docutils/rst2html.
@@ -805,7 +805,7 @@ function main() {
 <body onload="main()">
 <div class="document" id="documentId">
   <div class="container">
-    <h1 class="title">Hot code reloading</h1>
+    <h1 class="title">ホットコード・リローディング</h1>
     <p>The <span id="hotcodereloading_1">hotCodeReloading</span> option enables special compilation mode where changes in the code can be applied automatically to a running program. The code reloading happens at the granularity of an individual module. When a module is reloaded, any newly added global variables will be initialized, but all other top-level code appearing in the module won't be re-executed and the state of all existing global variables will be preserved.</p>
 
 <h1 id="basic-workflow">Basic workflow</h1><p>Currently hot code reloading does not work for the main module itself, so we have to use a helper module where the major logic we want to change during development resides.</p>
@@ -894,7 +894,7 @@ discard renderer.setRenderDrawColor(255, 255, 128, 0)</pre>
 nim c --hotcodereloading:on mymain.nim</pre>
 <p>Now give the <tt class="docutils literal"><span class="pre">mymain</span></tt> SDL window the focus, press F9 and watch the updated version of the program.</p>
 
-<h1 id="reloading-api">Reloading API</h1><p>One can use the special event handlers <tt class="docutils literal"><span class="pre">beforeCodeReload</span></tt> and <tt class="docutils literal"><span class="pre">afterCodeReload</span></tt> to reset the state of a particular variable or to force the execution of certain statements:</p>
+<h1 id="reloading-api">API のリロード</h1><p>One can use the special event handlers <tt class="docutils literal"><span class="pre">beforeCodeReload</span></tt> and <tt class="docutils literal"><span class="pre">afterCodeReload</span></tt> to reset the state of a particular variable or to force the execution of certain statements:</p>
 <pre class="listing"><span class="Keyword">var</span>
  <span class="Identifier">settings</span> <span class="Operator">=</span> <span class="Identifier">initTable</span><span class="Punctuation">[</span><span class="Identifier">string</span><span class="Punctuation">,</span> <span class="Identifier">string</span><span class="Punctuation">]</span><span class="Punctuation">(</span><span class="Punctuation">)</span>
  <span class="Identifier">lastReload</span><span class="Punctuation">:</span> <span class="Identifier">Time</span>
@@ -917,12 +917,12 @@ nim c --hotcodereloading:on mymain.nim</pre>
 <p>It's expected that most projects will implement the reloading with a suitable build-system triggered IPC notification mechanism, but a polling solution is also possible through the provided <span id="hasanymodulechanged_1">hasAnyModuleChanged()</span> API.</p>
 <p>In order to access <tt class="docutils literal"><span class="pre">beforeCodeReload</span></tt>, <tt class="docutils literal"><span class="pre">afterCodeReload</span></tt>, <tt class="docutils literal"><span class="pre">hasModuleChanged</span></tt> or <tt class="docutils literal"><span class="pre">hasAnyModuleChanged</span></tt> one must import the <span id="hotcodereloading_2">hotcodereloading</span> module.</p>
 
-<h1 id="native-code-targets">Native code targets</h1><p>Native projects using the hot code reloading option will be implicitly compiled with the <tt class="docutils literal"><span class="pre">-d:useNimRtl</span></tt> option and they will depend on both the <tt class="docutils literal"><span class="pre">nimrtl</span></tt> library and the <tt class="docutils literal"><span class="pre">nimhcr</span></tt> library which implements the hot code reloading run-time.</p>
+<h1 id="native-code-targets">ネイティブコードのターゲット</h1><p>Native projects using the hot code reloading option will be implicitly compiled with the <tt class="docutils literal"><span class="pre">-d:useNimRtl</span></tt> option and they will depend on both the <tt class="docutils literal"><span class="pre">nimrtl</span></tt> library and the <tt class="docutils literal"><span class="pre">nimhcr</span></tt> library which implements the hot code reloading run-time.</p>
 <p>All modules of the project will be compiled to separate dynamic link libraries placed in the <tt class="docutils literal"><span class="pre">nimcache</span></tt> directory. Please note that during the execution of the program, the hot code reloading run-time will load only copies of these libraries in order to not interfere with any newly issued build commands.</p>
 <p>The main module of the program is considered non-reloadable. Please note that procs from reloadable modules should not appear in the call stack of program while <tt class="docutils literal"><span class="pre">performCodeReload</span></tt> is being called. Thus, the main module is a suitable place for implementing a program loop capable of calling <tt class="docutils literal"><span class="pre">performCodeReload</span></tt>.</p>
 <p>Please note that reloading won't be possible when any of the type definitions in the program has been changed. When closure iterators are used (directly or through async code), the reloaded refinitions will affect only newly created instances. Existing iterator instancess will execute their original code to completion.</p>
 
-<h1 id="javascript-target">JavaScript target</h1><p>Once your code is compiled for hot reloading, the <tt class="docutils literal"><span class="pre">nim-livereload</span></tt> NPM package provides a convenient solution for implementing the actual reloading in the browser using a framework such as <a class="reference external" href="http://livereload.com/">LiveReload</a> or <a class="reference external" href="https://browsersync.io/">BrowserSync</a>.  </p>
+<h1 id="javascript-target">JavaScript のターゲット</h1><p>Once your code is compiled for hot reloading, the <tt class="docutils literal"><span class="pre">nim-livereload</span></tt> NPM package provides a convenient solution for implementing the actual reloading in the browser using a framework such as <a class="reference external" href="http://livereload.com/">LiveReload</a> or <a class="reference external" href="https://browsersync.io/">BrowserSync</a>.  </p>
 
 
 

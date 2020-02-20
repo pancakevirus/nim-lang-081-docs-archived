@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE tmx SYSTEM "tmx11.dtd">
 <tmx version="1.1">
-  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="4.3.0_0_e0e1b4cc" segtype="sentence" srclang="EN-US"/>
+  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="4.3.2_0_6a661c5e" segtype="sentence" srclang="EN-US"/>
   <body>
 <!-- Default translations -->
     <tu>
@@ -410,6 +410,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a0&gt;htmlgen&lt;/a0&gt; This module implements a simple XML and HTML code generator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T141106Z" creationid="isVowel" creationdate="20200217T141106Z">
+        <seg>&lt;a0&gt;htmlgen&lt;/a0&gt; このモジュールはシンプルな XML と HTML のコードジェネレーターの実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;a0&gt;iup&lt;/a0&gt; Wrapper of the IUP GUI library.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T085636Z" creationid="isVowel" creationdate="20200208T085636Z">
@@ -620,6 +628,46 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;s0&gt;# Be sure to compile with --threads:on.&lt;/s0&gt;
+&lt;s1&gt;# The channels and threads modules are part of system and should not be&lt;/s1&gt;
+&lt;s2&gt;# imported.&lt;/s2&gt;
+&lt;s3&gt;import&lt;/s3&gt; &lt;s4&gt;os&lt;/s4&gt;
+
+&lt;s5&gt;# Channels can either be:&lt;/s5&gt;
+&lt;s6&gt;#  - declared at the module level, or&lt;/s6&gt;
+&lt;s7&gt;#  - passed to procedures by ptr (raw pointer) -- see note on safety.&lt;/s7&gt;
+&lt;s8&gt;#&lt;/s8&gt;
+&lt;s9&gt;# For simplicity, in this example a channel is declared at module scope.&lt;/s9&gt;
+&lt;s10&gt;# Channels are generic, and they include support for passing objects between&lt;/s10&gt;
+&lt;s11&gt;# threads.&lt;/s11&gt;
+&lt;s12&gt;# Note that objects passed through channels will be deeply copied.&lt;/s12&gt;
+&lt;s13&gt;var&lt;/s13&gt; &lt;s14&gt;chan&lt;/s14&gt;&lt;s15&gt;:&lt;/s15&gt; &lt;s16&gt;Channel&lt;/s16&gt;&lt;s17&gt;[&lt;/s17&gt;&lt;s18&gt;string&lt;/s18&gt;&lt;s19&gt;]&lt;/s19&gt;
+
+&lt;s20&gt;# This proc will be run in another thread using the threads module.&lt;/s20&gt;
+&lt;s21&gt;proc&lt;/s21&gt; &lt;s22&gt;firstWorker&lt;/s22&gt;&lt;s23&gt;(&lt;/s23&gt;&lt;s24&gt;)&lt;/s24&gt; &lt;s25&gt;=&lt;/s25&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200218T075453Z" creationid="isVowel" creationdate="20200218T075453Z">
+        <seg>&lt;s0&gt;# 必ず --threads:on を付けてコンパイルしてください。&lt;/s0&gt;
+&lt;s1&gt;# channels と threads モジュールは system モジュールの一部であるため&lt;/s1&gt;
+&lt;s2&gt;# インポートしないでください。&lt;/s2&gt;
+&lt;s3&gt;import&lt;/s3&gt; &lt;s4&gt;os&lt;/s4&gt;
+
+&lt;s5&gt;# Channels can either be:&lt;/s5&gt;
+&lt;s6&gt;#  - declared at the module level, or&lt;/s6&gt;
+&lt;s7&gt;#  - passed to procedures by ptr (raw pointer) -- see note on safety.&lt;/s7&gt;
+&lt;s8&gt;#&lt;/s8&gt;
+&lt;s9&gt;# For simplicity, in this example a channel is declared at module scope.&lt;/s9&gt;
+&lt;s10&gt;# Channels are generic, and they include support for passing objects between&lt;/s10&gt;
+&lt;s11&gt;# threads.&lt;/s11&gt;
+&lt;s12&gt;# Note that objects passed through channels will be deeply copied.&lt;/s12&gt;
+&lt;s13&gt;var&lt;/s13&gt; &lt;s14&gt;chan&lt;/s14&gt;&lt;s15&gt;:&lt;/s15&gt; &lt;s16&gt;Channel&lt;/s16&gt;&lt;s17&gt;[&lt;/s17&gt;&lt;s18&gt;string&lt;/s18&gt;&lt;s19&gt;]&lt;/s19&gt;
+
+&lt;s20&gt;# This proc will be run in another thread using the threads module.&lt;/s20&gt;
+&lt;s21&gt;proc&lt;/s21&gt; &lt;s22&gt;firstWorker&lt;/s22&gt;&lt;s23&gt;(&lt;/s23&gt;&lt;s24&gt;)&lt;/s24&gt; &lt;s25&gt;=&lt;/s25&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;s0&gt;# Module A&lt;/s0&gt;
 &lt;s1&gt;type&lt;/s1&gt;</seg>
       </tuv>
@@ -776,6 +824,22 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; Channels are designed for the &lt;t1&gt;&lt;s2&gt;Thread&lt;/s2&gt;&lt;/t1&gt; type.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200218T075622Z" creationid="isVowel" creationdate="20200218T075622Z">
+        <seg>&lt;s0&gt;備考:&lt;/s0&gt; Channels are designed for the &lt;t1&gt;&lt;s2&gt;Thread&lt;/s2&gt;&lt;/t1&gt; type.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; Channels cannot be passed between threads.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200218T075627Z" creationid="isVowel" creationdate="20200218T075627Z">
+        <seg>&lt;s0&gt;備考:&lt;/s0&gt; Channels cannot be passed between threads.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;s0&gt;Note:&lt;/s0&gt; Import &lt;t1&gt;&lt;s2&gt;packages/docutils/highlite&lt;/s2&gt;&lt;/t1&gt; to use this module</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T121340Z" creationid="isVowel" creationdate="20200122T121340Z">
@@ -800,6 +864,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; The current implementation of message passing does not work with cyclic data structures.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200218T075624Z" creationid="isVowel" creationdate="20200218T075624Z">
+        <seg>&lt;s0&gt;備考:&lt;/s0&gt; The current implementation of message passing does not work with cyclic data structures.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;s0&gt;Note&lt;/s0&gt;: The experimental features of Nim are covered &lt;a1&gt;here&lt;/a1&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T062340Z" creationid="isVowel" creationdate="20200122T062340Z">
@@ -812,6 +884,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T050656Z" creationid="isVowel" creationdate="20200115T050656Z">
         <seg>&lt;s0&gt;備考&lt;/s0&gt;: このドキュメントは草稿段階です！</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Note&lt;/s0&gt;: This is part of the system module.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200218T075610Z" creationid="isVowel" creationdate="20200218T075610Z">
+        <seg>&lt;s0&gt;備考&lt;/s0&gt;: This is part of the system module.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1114,6 +1194,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;s17&gt;maxBody&lt;/s17&gt;&lt;s18&gt;:&lt;/s18&gt; &lt;a19&gt;&lt;s20&gt;int&lt;/s20&gt;&lt;/a19&gt;                 &lt;s21&gt;## The maximum content-length that will be read for the body.&lt;/s21&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200219T110839Z" creationid="isVowel" creationdate="20200219T110839Z">
+        <seg>&lt;s17&gt;maxBody&lt;/s17&gt;&lt;s18&gt;:&lt;/s18&gt; &lt;a19&gt;&lt;s20&gt;int&lt;/s20&gt;&lt;/a19&gt;                 &lt;s21&gt;## body (本文) を読み込んだときの最大コンテンツ長です。&lt;/s21&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;s19&gt;## Output:&lt;/s19&gt;</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T175639Z" creationid="isVowel" creationdate="20200212T175639Z">
@@ -1246,6 +1334,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T083549Z" creationid="isVowel" creationdate="20200208T083549Z">
         <seg>&lt;s41&gt;ai_protocol&lt;/s41&gt;&lt;s42&gt;*&lt;/s42&gt;&lt;s43&gt;:&lt;/s43&gt; &lt;a44&gt;&lt;s45&gt;cint&lt;/s45&gt;&lt;/a44&gt;           &lt;s46&gt;## ソケットのプロトコル。&lt;/s46&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s41&gt;hostname&lt;/s41&gt;&lt;s42&gt;*&lt;/s42&gt;&lt;s43&gt;:&lt;/s43&gt; &lt;a44&gt;&lt;s45&gt;string&lt;/s45&gt;&lt;/a44&gt;            &lt;s46&gt;## The hostname of the client that made the request.&lt;/s46&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200219T110718Z" creationid="isVowel" creationdate="20200219T110718Z">
+        <seg>&lt;s41&gt;hostname&lt;/s41&gt;&lt;s42&gt;*&lt;/s42&gt;&lt;s43&gt;:&lt;/s43&gt; &lt;a44&gt;&lt;s45&gt;string&lt;/s45&gt;&lt;/a44&gt;            &lt;s46&gt;## リクエストをしたクライアントのホスト名。&lt;/s46&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -1524,6 +1620,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A variable length integer encoding implementation inspired by SQLite.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200218T063919Z" creationid="isVowel" creationdate="20200218T063919Z">
+        <seg>SQLite に着想を得た可変長整数エンコーディングの実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>API symbols</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T070447Z" creationid="isVowel" creationdate="20200115T070447Z">
@@ -1781,6 +1885,15 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T045553Z" creationid="isVowel" creationdate="20200113T045402Z">
         <seg>基本の用法</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Because of this, when deploying your application you should use a reverse proxy (for example nginx) instead of allowing users to connect directly to this server.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200219T110624Z" creationid="isVowel" creationdate="20200219T110624Z">
+        <seg>このため、アプリケーションのデプロイ時は、このサーバへのユーザ接続を禁止してリバースプロクシ (nginx など) をお使いください。
+</seg>
       </tuv>
     </tu>
     <tu>
@@ -2209,6 +2322,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Creates a new &lt;t0&gt;&lt;s1&gt;AsyncHttpServer&lt;/s1&gt;&lt;/t0&gt; instance.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200219T110917Z" creationid="isVowel" creationdate="20200219T110917Z">
+        <seg>新しい &lt;t0&gt;&lt;s1&gt;AsyncHttpServer&lt;/s1&gt;&lt;/t0&gt; インスタンスを作成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Creates a new &lt;t0&gt;&lt;s1&gt;AsyncSmtp&lt;/s1&gt;&lt;/t0&gt; instance.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T163647Z" creationid="isVowel" creationdate="20200130T163222Z">
@@ -2501,8 +2622,8 @@ will を「予定」と意訳する。</note>
       <tuv lang="EN-US">
         <seg>Documents: &lt;a0&gt;API naming design&lt;/a0&gt;, &lt;a1&gt;Code owners&lt;/a1&gt;, &lt;a2&gt;Contributing&lt;/a2&gt;, &lt;a3&gt;Embedded Stack Trace Profiler (ESTP) User Guide&lt;/a3&gt;, &lt;a4&gt;Hot code reloading&lt;/a4&gt;, &lt;a5&gt;Internals of the Nim Compiler&lt;/a5&gt;, &lt;a6&gt;Nim Backend Integration&lt;/a6&gt;, &lt;a7&gt;Nim Compiler User Guide&lt;/a7&gt;, &lt;a8&gt;Nim Destructors and Move Semantics&lt;/a8&gt;, &lt;a9&gt;Nim DocGen Tools Guide&lt;/a9&gt;, &lt;a10&gt;Nim Documentation Overview&lt;/a10&gt;, &lt;a11&gt;Nim Enhancement Proposal #1 - Standard Library Style Guide&lt;/a11&gt;, &lt;a12&gt;Nim Experimental Features&lt;/a12&gt;, &lt;a13&gt;Nim IDE Integration Guide&lt;/a13&gt;, &lt;a14&gt;Nim IDE Integration Guide&lt;/a14&gt;, &lt;a15&gt;Nim maintenance script&lt;/a15&gt;, &lt;a16&gt;Nim Manual&lt;/a16&gt;, &lt;a17&gt;Nim Standard Library&lt;/a17&gt;, &lt;a18&gt;Nim Tutorial (Part I)&lt;/a18&gt;, &lt;a19&gt;Nim Tutorial (Part II)&lt;/a19&gt;, &lt;a20&gt;Nim Tutorial (Part III)&lt;/a20&gt;, &lt;a21&gt;Nim's Garbage Collector&lt;/a21&gt;, &lt;a22&gt;nimgrep User's manual&lt;/a22&gt;, &lt;a23&gt;niminst User's manual&lt;/a23&gt;, &lt;a24&gt;NimScript&lt;/a24&gt;, &lt;a25&gt;Packaging Nim&lt;/a25&gt;, &lt;a26&gt;Source Code Filters&lt;/a26&gt;, &lt;a27&gt;Tools available with Nim&lt;/a27&gt;.</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200212T155625Z" creationid="isVowel" creationdate="20200115T064940Z">
-        <seg>ドキュメント: &lt;a0&gt;API 命名仕様書&lt;/a0&gt;, &lt;a1&gt;コードの権利所有者&lt;/a1&gt;, &lt;a2&gt;寄贈について&lt;/a2&gt;, &lt;a3&gt;組み込みスタックトレースプロファイラ (ESTP) ユーザガイド&lt;/a3&gt;, &lt;a4&gt;ホットコードリローディング&lt;/a4&gt;, &lt;a5&gt;Nim コンパイラの内部構造&lt;/a5&gt;, &lt;a6&gt;Nim バックエンドシステム統合&lt;/a6&gt;, &lt;a7&gt;Nim コンパイラ ユーザガイド&lt;/a7&gt;, &lt;a8&gt;Nim デストラクタと Move セマンティクス&lt;/a8&gt;, &lt;a9&gt;Nim DocGen ツールガイド&lt;/a9&gt;, &lt;a10&gt;Nim ドキュメンテーションの概要&lt;/a10&gt;, &lt;a11&gt;Nim 拡張提案書 #1 - 標準ライブラリのスタイルガイド&lt;/a11&gt;, &lt;a12&gt; Nim の試験的機能&lt;/a12&gt;, &lt;a13&gt;Nim IDE システム統合ガイド (idetools)&lt;/a13&gt;, &lt;a14&gt;Nim IDE システム統合ガイド (nimsuggest)&lt;/a14&gt;, &lt;a15&gt;Nim メンテナンス・スクリプト&lt;/a15&gt;, &lt;a16&gt;Nim マニュアル&lt;/a16&gt;, &lt;a17&gt;Nim 標準ライブラリ&lt;/a17&gt;, &lt;a18&gt;Nim チュートリアル（第１部）&lt;/a18&gt;, &lt;a19&gt;Nim チュートリアル（第２部）&lt;/a19&gt;, &lt;a20&gt;Nim チュートリアル（第３部）&lt;/a20&gt;, &lt;a21&gt;Nim ガベージコレクター&lt;/a21&gt;, &lt;a22&gt;nimgrep ユーザーズ・マニュアル&lt;/a22&gt;, &lt;a23&gt;niminst ユーザーズ・マニュアル&lt;/a23&gt;, &lt;a24&gt;NimScript&lt;/a24&gt;, &lt;a25&gt;Nim のパッケージング&lt;/a25&gt;, &lt;a26&gt;ソースコードフィルタ&lt;/a26&gt;, &lt;a27&gt;Nim で使えるツール&lt;/a27&gt;.</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200217T074221Z" creationid="isVowel" creationdate="20200115T064940Z">
+        <seg>ドキュメント: &lt;a0&gt;API 命名仕様書&lt;/a0&gt;, &lt;a1&gt;コードの権利所有者&lt;/a1&gt;, &lt;a2&gt;寄贈について&lt;/a2&gt;, &lt;a3&gt;組み込みスタックトレースプロファイラ (ESTP) ユーザガイド&lt;/a3&gt;, &lt;a4&gt;ホットコード・リローディング&lt;/a4&gt;, &lt;a5&gt;Nim コンパイラの内部構造&lt;/a5&gt;, &lt;a6&gt;Nim バックエンドシステム統合&lt;/a6&gt;, &lt;a7&gt;Nim コンパイラ ユーザガイド&lt;/a7&gt;, &lt;a8&gt;Nim デストラクタと Move セマンティクス&lt;/a8&gt;, &lt;a9&gt;Nim DocGen ツールガイド&lt;/a9&gt;, &lt;a10&gt;Nim ドキュメンテーションの概要&lt;/a10&gt;, &lt;a11&gt;Nim 拡張提案書 #1 - 標準ライブラリのスタイルガイド&lt;/a11&gt;, &lt;a12&gt; Nim の試験的機能&lt;/a12&gt;, &lt;a13&gt;Nim IDE システム統合ガイド (idetools)&lt;/a13&gt;, &lt;a14&gt;Nim IDE システム統合ガイド (nimsuggest)&lt;/a14&gt;, &lt;a15&gt;Nim メンテナンス・スクリプト&lt;/a15&gt;, &lt;a16&gt;Nim マニュアル&lt;/a16&gt;, &lt;a17&gt;Nim 標準ライブラリ&lt;/a17&gt;, &lt;a18&gt;Nim チュートリアル（第１部）&lt;/a18&gt;, &lt;a19&gt;Nim チュートリアル（第２部）&lt;/a19&gt;, &lt;a20&gt;Nim チュートリアル（第３部）&lt;/a20&gt;, &lt;a21&gt;Nim ガベージコレクター&lt;/a21&gt;, &lt;a22&gt;nimgrep ユーザーズ・マニュアル&lt;/a22&gt;, &lt;a23&gt;niminst ユーザーズ・マニュアル&lt;/a23&gt;, &lt;a24&gt;NimScript&lt;/a24&gt;, &lt;a25&gt;Nim のパッケージング&lt;/a25&gt;, &lt;a26&gt;ソースコードフィルタ&lt;/a26&gt;, &lt;a27&gt;Nim で使えるツール&lt;/a27&gt;.</seg>
       </tuv>
     </tu>
     <tu>
@@ -2627,6 +2748,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200214T102323Z" creationid="isVowel" creationdate="20200214T102323Z">
         <seg>構文解析エラーの発生時に &lt;t4&gt;&lt;s5&gt;errors&lt;/s5&gt;&lt;/t4&gt; シーケンスへ追加します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Example</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200218T075517Z" creationid="isVowel" creationdate="20200218T075517Z">
+        <seg>用例</seg>
       </tuv>
     </tu>
     <tu>
@@ -3075,6 +3204,14 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:27:15 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T010837Z" creationid="isVowel" creationdate="20200220T010837Z">
+        <seg>生成日時: 2020年01月23日 午前17時27分15秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Generated: 2020-01-23 17:27:16 UTC</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T170628Z" creationid="isVowel" creationdate="20200212T170628Z">
@@ -3355,6 +3492,22 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Generates a volatile load of the value stored in the container &lt;t0&gt;&lt;s1&gt;src&lt;/s1&gt;&lt;/t0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200218T035942Z" creationid="isVowel" creationdate="20200218T035942Z">
+        <seg>コンテナ &lt;t0&gt;&lt;s1&gt;src&lt;/s1&gt;&lt;/t0&gt; に格納された値をロードする volatile を生成します。 </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generates a volatile store into the container &lt;t0&gt;&lt;s1&gt;dest&lt;/s1&gt;&lt;/t0&gt; of the value &lt;t2&gt;&lt;s3&gt;val&lt;/s3&gt;&lt;/t2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200218T040636Z" creationid="isVowel" creationdate="20200218T040636Z">
+        <seg>コンテナ  &lt;t0&gt;&lt;s1&gt;dest&lt;/s1&gt;&lt;/t0&gt; へ値 &lt;t2&gt;&lt;s3&gt;val&lt;/s3&gt;&lt;/t2&gt; を格納する volatile を生成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Generates the HTML &lt;t0&gt;&lt;s1&gt;center&lt;/s1&gt;&lt;/t0&gt; element.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T121157Z" creationid="isVowel" creationdate="20200208T121157Z">
@@ -3535,6 +3688,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T111108Z" creationid="isVowel" creationdate="20200208T111108Z">
         <seg>ビルド方法のヒント:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Hot code reloading</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T012152Z" creationid="isVowel" creationdate="20200220T012152Z">
+        <seg>ホットコード・リローディング</seg>
       </tuv>
     </tu>
     <tu>
@@ -3898,6 +4059,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>JavaScript target</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T012108Z" creationid="isVowel" creationdate="20200220T012042Z">
+        <seg>JavaScript のターゲット</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Let statement</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T081623Z" creationid="isVowel" creationdate="20200114T081623Z">
@@ -4100,6 +4269,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Native code targets</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T012102Z" creationid="isVowel" creationdate="20200220T012057Z">
+        <seg>ネイティブコードのターゲット</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Network Programming and Internet Protocols</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T085235Z" creationid="isVowel" creationdate="20200208T085235Z">
@@ -4244,6 +4421,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T181901Z" creationid="isVowel" creationdate="20200212T181901Z">
         <seg>JavaScript バックエンドでは利用できません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note that this only effects code generation on &lt;t2&gt;&lt;s3&gt;C&lt;/s3&gt;&lt;/t2&gt; like backends   &lt;a4&gt;Source&lt;/a4&gt; &lt;a5&gt;Edit&lt;/a5&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200218T040246Z" creationid="isVowel" creationdate="20200218T040022Z">
+        <seg>注意点として &lt;t2&gt;&lt;s3&gt;C&lt;/s3&gt;&lt;/t2&gt; などのバックエンドではコード生成に限り影響があります。   &lt;a4&gt;ソース&lt;/a4&gt; &lt;a5&gt;編集&lt;/a5&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note that this only effects code generation on &lt;t4&gt;&lt;s5&gt;C&lt;/s5&gt;&lt;/t4&gt; like backends   &lt;a6&gt;Source&lt;/a6&gt; &lt;a7&gt;Edit&lt;/a7&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200218T040735Z" creationid="isVowel" creationdate="20200218T040735Z">
+        <seg>注意点として &lt;t4&gt;&lt;s5&gt;C&lt;/s5&gt;&lt;/t4&gt; などのバックエンドではコード生成に限り影響があります。   &lt;a6&gt;ソース&lt;/a6&gt; &lt;a7&gt;編集&lt;/a7&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -4732,6 +4925,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Reloading API</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T012123Z" creationid="isVowel" creationdate="20200220T012123Z">
+        <seg>API のリロード</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Responds to the request with the specified &lt;t0&gt;&lt;s1&gt;HttpCode&lt;/s1&gt;&lt;/t0&gt;, headers and content.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200219T111014Z" creationid="isVowel" creationdate="20200219T111014Z">
+        <seg>指定された &lt;t0&gt;&lt;s1&gt;HttpCode&lt;/s1&gt;&lt;/t0&gt;、ヘッダとコンテンツでリクエストに応答します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Result variable</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041258Z" creationid="isVowel" creationdate="20200113T041258Z">
@@ -4820,6 +5029,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Returns the number of bytes used.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200218T064057Z" creationid="isVowel" creationdate="20200218T064057Z">
+        <seg>使用したバイト数を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Returns the string representation of a &lt;t0&gt;&lt;s1&gt;SecureHash&lt;/s1&gt;&lt;/t0&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T091548Z" creationid="isVowel" creationdate="20200127T091548Z">
@@ -4840,6 +5057,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T093358Z" creationid="isVowel" creationdate="20200127T093032Z">
         <seg>SHA-1 (Secure Hash Algorithm 1) はメッセージダイジェストとして知られている 160-bit (20-byte) によるハッシュ値の入力と生成を処理する暗号化ハッシュ関数です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Sample output</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200218T075546Z" creationid="isVowel" creationdate="20200218T075546Z">
+        <seg>出力例</seg>
       </tuv>
     </tu>
     <tu>
@@ -4928,6 +5153,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T121016Z" creationid="isVowel" creationdate="20200130T121016Z">
         <seg>参考文献:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Sends the specified headers to the requesting client.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200219T110933Z" creationid="isVowel" creationdate="20200219T110933Z">
+        <seg>リクエスト側のクライアントへ指定されたヘッダを送信します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5030,6 +5263,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T023409Z" creationid="isVowel" creationdate="20200113T023409Z">
         <seg>標準ライブラリ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Starts the process of listening for incoming HTTP connections on the specified address and port.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200219T111208Z" creationid="isVowel" creationdate="20200219T111208Z">
+        <seg>HTTP 接続で指定されたアドレスとポートの着信待ち受け処理を開始します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5176,6 +5417,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T043859Z" creationid="isVowel" creationdate="20200113T043859Z">
         <seg>テンプレート</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Terminates the async http server instance.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200219T111241Z" creationid="isVowel" creationdate="20200219T111241Z">
+        <seg>非同期 http サーバのインスタンスを終了します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5380,6 +5629,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The buffer z must be at least 9 characters long to accommodate the largest possible varint.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200218T064353Z" creationid="isVowel" creationdate="20200218T064353Z">
+        <seg>バッファ z は最大利用可能 varint を扱うために最低でも 9 文字になります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The builtin document generator &lt;t2&gt;&lt;s3&gt;nim doc&lt;/s3&gt;&lt;/t2&gt; generates HTML documentation from &lt;t4&gt;&lt;s5&gt;.nim&lt;/s5&gt;&lt;/t4&gt; source files.&lt;br6/&gt;</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200217T073108Z" creationid="isVowel" creationdate="20200217T073108Z">
@@ -5552,6 +5809,14 @@ skipped : スキップする、無視する、読み飛ばす。</note>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The server will respond to all requests with a &lt;t0&gt;&lt;s1&gt;200 OK&lt;/s1&gt;&lt;/t0&gt; response code and "Hello World" as the response body.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200219T110651Z" creationid="isVowel" creationdate="20200219T110651Z">
+        <seg>このサーバは、すべてのリクエストにレスポンスコ―ド &lt;t0&gt;&lt;s1&gt;200 OK&lt;/s1&gt;&lt;/t0&gt;を、 本文 (body) は "Hello World" で応答します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The standard distribution ships with the following tools:</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200217T072948Z" creationid="isVowel" creationdate="20200217T072948Z">
@@ -5608,6 +5873,14 @@ skipped : スキップする、無視する、読み飛ばす。</note>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T034913Z" creationid="isVowel" creationdate="20200115T074331Z">
         <seg>&lt;e1&gt;koch&lt;/e1&gt; の由来はドイツ語であり、日本語で&lt;e2&gt;料理人&lt;/e2&gt;の意味です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This HTTP server has not been designed to be used in production, but for testing applications locally.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200219T110602Z" creationid="isVowel" creationdate="20200219T110602Z">
+        <seg>この HTTP サーバは本番環境での運用を想定した設計ではなく、ローカル環境でのアプリケーションテスト用に設計してあります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5688,6 +5961,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This example will create an HTTP server on port 8080.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200219T110631Z" creationid="isVowel" creationdate="20200219T110631Z">
+        <seg>この用例ではポート 8080 を使って HTTP サーバを作成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This is an embedded profiler that requires &lt;t0&gt;&lt;s1&gt;--profiler:on&lt;/s1&gt;&lt;/t0&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200213T051448Z" creationid="isVowel" creationdate="20200213T051448Z">
@@ -5712,6 +5993,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This module contains code for generating volatile loads and stores, which are useful in embedded and systems programming.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200218T041319Z" creationid="isVowel" creationdate="20200218T035630Z">
+        <seg>このモジュールは組み込み機器とシステム・プログラミングで便利な volatile  のロードと格納処理を生成するコードを収録してあります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This module contains helpers that deal with different byte orders (&lt;s0&gt;endian&lt;/s0&gt;).</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T031106Z" creationid="isVowel" creationdate="20200127T031106Z">
@@ -5732,6 +6021,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T111850Z" creationid="isVowel" creationdate="20200122T111850Z">
         <seg>このモジュールはスレッドプールへのスレッド作成が得策であるかの判断に用いる補助機能の実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This module implements a high performance asynchronous HTTP server.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200219T110555Z" creationid="isVowel" creationdate="20200219T110555Z">
+        <seg>このモジュールは高性能な非同期型 HTTP サーバの実装です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5893,6 +6190,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200217T031715Z" creationid="isVowel" creationdate="20200217T031715Z">
         <seg>このプロシージャはメモリを無駄にせずにストリーム形式のデータをファイルへ保存するのに理想的です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This procedure will &lt;s0&gt;not&lt;/s0&gt; close the client socket.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200219T111045Z" creationid="isVowel" creationdate="20200219T111045Z">
+        <seg>このプロシージャはクライアントのソケットを&lt;s0&gt;閉じません&lt;/s0&gt;。</seg>
       </tuv>
     </tu>
     <tu>
@@ -6281,6 +6586,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>When a request is made by a client the specified callback will be called.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200219T111223Z" creationid="isVowel" creationdate="20200219T111223Z">
+        <seg>クライアントによるリクエスト時は指定されたコールバックが呼び出されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>When expression</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T081816Z" creationid="isVowel" creationdate="20200114T081816Z">
@@ -6373,6 +6686,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T050409Z" creationid="isVowel" creationdate="20200113T050409Z">
         <seg>ラッパー</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Write a varint into z.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200218T064114Z" creationid="isVowel" creationdate="20200218T064114Z">
+        <seg>varint へ z を書き込みます。</seg>
       </tuv>
     </tu>
     <tu>
@@ -7712,6 +8033,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>hostname*: string            ## The hostname of the client that made the request.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200219T110234Z" creationid="isVowel" creationdate="20200219T110234Z">
+        <seg>hostname*: string            ## リクエストをしたクライアントのホスト名。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>このブロックは作業対象外です。変更してしまうと、正常に動作しなくなります。</note>
       <tuv lang="EN-US">
         <seg>https://fonts.googleapis.com/css?family=Lato:400,600,900</seg>
@@ -7791,6 +8120,14 @@ sudo apt-get libvoodoo</seg>
       <note>すっきりしないので、改訳してください。</note>
       <tuv lang="EN-US">
         <seg>manual_experimental.html</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>maxBody: int                 ## The maximum content-length that will be read for the body.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200219T110416Z" creationid="isVowel" creationdate="20200219T110416Z">
+        <seg>maxBody: int                 ## body (本文) を読み込んだときの最大コンテンツ長です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -8167,6 +8504,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T163022Z" creationid="isVowel" creationdate="20200212T163022Z">
         <seg>単語の境界に一致させます (PEG ではバグだらけです！)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>the maximal number of bytes a varint can take   &lt;a0&gt;Source&lt;/a0&gt; &lt;a1&gt;Edit&lt;/a1&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200218T064005Z" creationid="isVowel" creationdate="20200218T064005Z">
+        <seg>varint で扱える最大バイト数です。   &lt;a0&gt;ソース&lt;/a0&gt; &lt;a1&gt;変数&lt;/a1&gt;</seg>
       </tuv>
     </tu>
     <tu>

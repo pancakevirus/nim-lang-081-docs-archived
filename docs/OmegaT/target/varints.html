@@ -862,7 +862,7 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"><p>A variable length integer encoding implementation inspired by SQLite.</p>
+  <p class="module-desc"><p>SQLite に着想を得た可変長整数エンコーディングの実装です。</p>
 <p>この API は不安定です。</p>
 </p>
   <div class="section" id="10">
@@ -872,13 +872,9 @@ function main() {
 <dt><pre><a href="varints.html#maxVarIntLen"><span class="Identifier">maxVarIntLen</span></a> <span class="Other">=</span> <span class="DecNumber">9</span></pre></dt>
 <dd>
 
-
-
-the maximal number of bytes a varint can take
-&nbsp;&nbsp;<a
+varint で扱える最大バイト数です。 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/std/varints.nim#L16"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/std/varints.nim#L16" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/std/varints.nim#L16" class="link-seesrc" target="_blank" >変数</a>
 
 </dd>
 
@@ -900,7 +896,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#writeVu64%2CopenArray%5Bbyte%5D%2Cuint64"><span class="Identifier">writeVu64</span></a><span class="Other">(</span><span class="Identifier">z</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="system.html#openArray"><span class="Identifier">openArray</span></a><span class="Other">[</span><a href="system.html#byte"><span class="Identifier">byte</span></a><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">x</span><span class="Other">:</span> <a href="system.html#uint64"><span class="Identifier">uint64</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Write a varint into z. The buffer z must be at least 9 characters long to accommodate the largest possible varint. Returns the number of bytes used. &nbsp;&nbsp;<a
+varint へ z を書き込みます。バッファ z は最大利用可能 varint を扱うために最低でも 9 文字になります。使用したバイト数を返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/std/varints.nim#L57"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/std/varints.nim#L57" class="link-seesrc" target="_blank" >編集</a>
 
