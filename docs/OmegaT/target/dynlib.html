@@ -834,7 +834,7 @@ function main() {
   </div>
   <ul class="simple simple-toc" id="toc-list">
 <li><a class="reference" id="examples_toc" href="#examples">用例</a></li>
-<ul class="simple"><li><a class="reference" id="examples-loading-a-simple-c-function_toc" href="#examples-loading-a-simple-c-function">Loading a simple C function</a></li>
+<ul class="simple"><li><a class="reference" id="examples-loading-a-simple-c-function_toc" href="#examples-loading-a-simple-c-function">C 関数のロード</a></li>
 </ul><li>
   <a class="reference reference-toplevel" href="#6" id="56">インポート</a>
   <ul class="simple simple-toc-section">
@@ -878,10 +878,9 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc">This module implements the ability to access symbols from shared libraries. On POSIX this uses the <tt class="docutils literal"><span class="pre">dlsym</span></tt> mechanism, on Windows <tt class="docutils literal"><span class="pre">LoadLibrary</span></tt>.
-
+  <p class="module-desc">このモジュールは共有ライブラリからシンボルへアクセスする機能の実装です。このモジュールは POSIX では <tt class="docutils literal"><span class="pre">dlsym</span></tt> 機構を、 Windows では <tt class="docutils literal"><span class="pre">LoadLibrary</span></tt> 関数を使います。
 <h1><a class="toc-backref" id="examples" href="#examples">用例</a></h1>
-<h2><a class="toc-backref" id="examples-loading-a-simple-c-function" href="#examples-loading-a-simple-c-function">Loading a simple C function</a></h2><p>The following example demonstrates loading a function called 'greet' from a library that is determined at runtime based upon a language choice. If the library fails to load or the function 'greet' is not found, it quits with a failure error code.</p>
+<h2><a class="toc-backref" id="examples-loading-a-simple-c-function" href="#examples-loading-a-simple-c-function">C 関数のロード</a></h2><p>この用例は実行時に言語の選出に基づいて決定されたライブラリから 'greet' 関数をロードします。ライブラリのロードに失敗、または 'greet' 関数がみつからないときは失敗のエラーコードを返して終了します。</p>
 <pre class="listing"><span class="Keyword">import</span> <span class="Identifier">dynlib</span>
 
 <span class="Keyword">type</span>
@@ -922,13 +921,9 @@ function main() {
 <dt><pre><a href="dynlib.html#LibHandle"><span class="Identifier">LibHandle</span></a> <span class="Other">=</span> <a href="system.html#pointer"><span class="Identifier">pointer</span></a></pre></dt>
 <dd>
 
-
-
-a handle to a dynamically loaded library
-&nbsp;&nbsp;<a
+動的ロードライブラリのハンドルです &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/dynlib.nim#L60"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/dynlib.nim#L60" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/dynlib.nim#L60" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 
@@ -941,7 +936,7 @@ class="link-seesrc" target="_blank">Source</a>
                                        <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-raises an <tt class="docutils literal"><span class="pre">EInvalidLibrary</span></tt> exception. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">EInvalidLibrary</span></tt> 例外を発生させます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/dynlib.nim#L73"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/dynlib.nim#L73" class="link-seesrc" target="_blank" >編集</a>
 
@@ -951,7 +946,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">LibraryError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-retrieves the address of a procedure/variable from <tt class="docutils literal"><span class="pre">lib</span></tt>. Raises <tt class="docutils literal"><span class="pre">EInvalidLibrary</span></tt> if the symbol could not be found. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">lib</span></tt> からプロシージャ / 変数のアドレスを取得します。シンボルがみつからないときは <tt class="docutils literal"><span class="pre">EInvalidLibrary</span></tt> 例外を発生させます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/dynlib.nim#L81"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/dynlib.nim#L81" class="link-seesrc" target="_blank" >編集</a>
 
@@ -960,7 +955,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#libCandidates%2Cstring%2Cseq%5BT%5D%5Bstring%5D"><span class="Identifier">libCandidates</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">dest</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="system.html#seq"><span class="Identifier">seq</span></a><span class="Other">[</span><a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">]</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-given a library name pattern <tt class="docutils literal"><span class="pre">s</span></tt> write possible library names to <tt class="docutils literal"><span class="pre">dest</span></tt>. &nbsp;&nbsp;<a
+指定されたライブラリ名のパターン <tt class="docutils literal"><span class="pre">s</span></tt> に一致した利用可能なライブラリ名を <tt class="docutils literal"><span class="pre">dest</span></tt> へ出力します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/dynlib.nim#L87"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/dynlib.nim#L87" class="link-seesrc" target="_blank" >編集</a>
 
@@ -970,7 +965,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-loads a library with name matching <tt class="docutils literal"><span class="pre">pattern</span></tt>, similar to what <tt class="docutils literal"><span class="pre">dlimport</span></tt> pragma does. Returns nil if the library could not be loaded. Warning: this proc uses the GC and so cannot be used to load the GC. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">dlimport</span></tt> プラグマと同様に、 <tt class="docutils literal"><span class="pre">pattern</span></tt> と一致する名前のライブラリをロードします。ライブラリがロードできないときは nil を返します。警告: このプロシージャはガベージコレクターを使用しているため、ガベージコレクターのロードには使えません。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/dynlib.nim#L99"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/dynlib.nim#L99" class="link-seesrc" target="_blank" >編集</a>
 
@@ -980,7 +975,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-loads a library from <tt class="docutils literal"><span class="pre">path</span></tt>. Returns nil if the library could not be loaded. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">path</span></tt> からライブラリをロードします。ライブラリがロードできないときは nil を返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/dynlib.nim#L169"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/dynlib.nim#L169" class="link-seesrc" target="_blank" >編集</a>
 
@@ -989,7 +984,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#loadLib"><span class="Identifier">loadLib</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="dynlib.html#LibHandle"><span class="Identifier">LibHandle</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-gets the handle from the current executable. Returns nil if the library could not be loaded. &nbsp;&nbsp;<a
+現在の実行可能ファイルからハンドルを取得します。ライブラリがロードできないときは nil を返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/dynlib.nim#L171"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/dynlib.nim#L171" class="link-seesrc" target="_blank" >編集</a>
 
@@ -998,20 +993,16 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#unloadLib%2CLibHandle"><span class="Identifier">unloadLib</span></a><span class="Other">(</span><span class="Identifier">lib</span><span class="Other">:</span> <a href="dynlib.html#LibHandle"><span class="Identifier">LibHandle</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-unloads the library <tt class="docutils literal"><span class="pre">lib</span></tt>
-&nbsp;&nbsp;<a
+ライブラリ <tt class="docutils literal"><span class="pre">lib</span></tt> をアンロードします &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/dynlib.nim#L173"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/dynlib.nim#L173" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/dynlib.nim#L173" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="symAddr,LibHandle,cstring"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#symAddr%2CLibHandle%2Ccstring"><span class="Identifier">symAddr</span></a><span class="Other">(</span><span class="Identifier">lib</span><span class="Other">:</span> <a href="dynlib.html#LibHandle"><span class="Identifier">LibHandle</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <a href="system.html#cstring"><span class="Identifier">cstring</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#pointer"><span class="Identifier">pointer</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-retrieves the address of a procedure/variable from <tt class="docutils literal"><span class="pre">lib</span></tt>. Returns nil if the symbol could not be found. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">lib</span></tt> からプロシージャ / 変数のアドレスを取得します。シンボルが見つからないときは nil を返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/dynlib.nim#L175"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/dynlib.nim#L175" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1026,7 +1017,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 Generated: 2020-01-23 17:27:34 UTC</small>
+        <small>Nim で作成しました。 生成日時: 2020年01月23日 午前17時27分37秒 (UTC)</small>
       </div>
     </div>
   </div>

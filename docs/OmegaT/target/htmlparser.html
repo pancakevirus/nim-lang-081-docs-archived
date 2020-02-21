@@ -833,7 +833,7 @@ function main() {
     </select>
   </div>
   <ul class="simple simple-toc" id="toc-list">
-<li><a class="reference" id="examplecolon-transforming-hyperlinks_toc" href="#examplecolon-transforming-hyperlinks">Example: Transforming hyperlinks</a></li>
+<li><a class="reference" id="examplecolon-transforming-hyperlinks_toc" href="#examplecolon-transforming-hyperlinks">用例: ハイパーリンクの変換</a></li>
 <li>
   <a class="reference reference-toplevel" href="#6" id="56">インポート</a>
   <ul class="simple simple-toc-section">
@@ -845,130 +845,130 @@ function main() {
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#HtmlTag"
     title="HtmlTag = enum
-  tagUnknown,                 ## unknown HTML element
-  tagA,                       ## the HTML ``a`` element
-  tagAbbr,                    ## the deprecated HTML ``abbr`` element
-  tagAcronym,                 ## the HTML ``acronym`` element
-  tagAddress,                 ## the HTML ``address`` element
-  tagApplet,                  ## the deprecated HTML ``applet`` element
-  tagArea,                    ## the HTML ``area`` element
-  tagArticle,                 ## the HTML ``article`` element
-  tagAside,                   ## the HTML ``aside`` element
-  tagAudio,                   ## the HTML ``audio`` element
-  tagB,                       ## the HTML ``b`` element
-  tagBase,                    ## the HTML ``base`` element
-  tagBdi,                     ## the HTML ``bdi`` element
-  tagBdo,                     ## the deprecated HTML ``dbo`` element
-  tagBasefont,                ## the deprecated HTML ``basefont`` element
-  tagBig,                     ## the HTML ``big`` element
-  tagBlockquote,              ## the HTML ``blockquote`` element
-  tagBody,                    ## the HTML ``body`` element
-  tagBr,                      ## the HTML ``br`` element
-  tagButton,                  ## the HTML ``button`` element
-  tagCanvas,                  ## the HTML ``canvas`` element
-  tagCaption,                 ## the HTML ``caption`` element
-  tagCenter,                  ## the deprecated HTML ``center`` element
-  tagCite,                    ## the HTML ``cite`` element
-  tagCode,                    ## the HTML ``code`` element
-  tagCol,                     ## the HTML ``col`` element
-  tagColgroup,                ## the HTML ``colgroup`` element
-  tagCommand,                 ## the HTML ``command`` element
-  tagDatalist,                ## the HTML ``datalist`` element
-  tagDd,                      ## the HTML ``dd`` element
-  tagDel,                     ## the HTML ``del`` element
-  tagDetails,                 ## the HTML ``details`` element
-  tagDfn,                     ## the HTML ``dfn`` element
-  tagDialog,                  ## the HTML ``dialog`` element
-  tagDiv,                     ## the HTML ``div`` element
-  tagDir,                     ## the deprecated HTLM ``dir`` element
-  tagDl,                      ## the HTML ``dl`` element
-  tagDt,                      ## the HTML ``dt`` element
-  tagEm,                      ## the HTML ``em`` element
-  tagEmbed,                   ## the HTML ``embed`` element
-  tagFieldset,                ## the HTML ``fieldset`` element
-  tagFigcaption,              ## the HTML ``figcaption`` element
-  tagFigure,                  ## the HTML ``figure`` element
-  tagFont,                    ## the deprecated HTML ``font`` element
-  tagFooter,                  ## the HTML ``footer`` element
-  tagForm,                    ## the HTML ``form`` element
-  tagFrame,                   ## the HTML ``frame`` element
-  tagFrameset,                ## the deprecated HTML ``frameset`` element
-  tagH1,                      ## the HTML ``h1`` element
-  tagH2,                      ## the HTML ``h2`` element
-  tagH3,                      ## the HTML ``h3`` element
-  tagH4,                      ## the HTML ``h4`` element
-  tagH5,                      ## the HTML ``h5`` element
-  tagH6,                      ## the HTML ``h6`` element
-  tagHead,                    ## the HTML ``head`` element
-  tagHeader,                  ## the HTML ``header`` element
-  tagHgroup,                  ## the HTML ``hgroup`` element
-  tagHtml,                    ## the HTML ``html`` element
-  tagHr,                      ## the HTML ``hr`` element
-  tagI,                       ## the HTML ``i`` element
-  tagIframe,                  ## the deprecated HTML ``iframe`` element
-  tagImg,                     ## the HTML ``img`` element
-  tagInput,                   ## the HTML ``input`` element
-  tagIns,                     ## the HTML ``ins`` element
-  tagIsindex,                 ## the deprecated HTML ``isindex`` element
-  tagKbd,                     ## the HTML ``kbd`` element
-  tagKeygen,                  ## the HTML ``keygen`` element
-  tagLabel,                   ## the HTML ``label`` element
-  tagLegend,                  ## the HTML ``legend`` element
-  tagLi,                      ## the HTML ``li`` element
-  tagLink,                    ## the HTML ``link`` element
-  tagMap,                     ## the HTML ``map`` element
-  tagMark,                    ## the HTML ``mark`` element
-  tagMenu,                    ## the deprecated HTML ``menu`` element
-  tagMeta,                    ## the HTML ``meta`` element
-  tagMeter,                   ## the HTML ``meter`` element
-  tagNav,                     ## the HTML ``nav`` element
-  tagNobr,                    ## the deprecated HTML ``nobr`` element
-  tagNoframes,                ## the deprecated HTML ``noframes`` element
-  tagNoscript,                ## the HTML ``noscript`` element
-  tagObject,                  ## the HTML ``object`` element
-  tagOl,                      ## the HTML ``ol`` element
-  tagOptgroup,                ## the HTML ``optgroup`` element
-  tagOption,                  ## the HTML ``option`` element
-  tagOutput,                  ## the HTML ``output`` element
-  tagP,                       ## the HTML ``p`` element
-  tagParam,                   ## the HTML ``param`` element
-  tagPre,                     ## the HTML ``pre`` element
-  tagProgress,                ## the HTML ``progress`` element
-  tagQ,                       ## the HTML ``q`` element
-  tagRp,                      ## the HTML ``rp`` element
-  tagRt,                      ## the HTML ``rt`` element
-  tagRuby,                    ## the HTML ``ruby`` element
-  tagS,                       ## the deprecated HTML ``s`` element
-  tagSamp,                    ## the HTML ``samp`` element
-  tagScript,                  ## the HTML ``script`` element
-  tagSection,                 ## the HTML ``section`` element
-  tagSelect,                  ## the HTML ``select`` element
-  tagSmall,                   ## the HTML ``small`` element
-  tagSource,                  ## the HTML ``source`` element
-  tagSpan,                    ## the HTML ``span`` element
-  tagStrike,                  ## the deprecated HTML ``strike`` element
-  tagStrong,                  ## the HTML ``strong`` element
-  tagStyle,                   ## the HTML ``style`` element
-  tagSub,                     ## the HTML ``sub`` element
-  tagSummary,                 ## the HTML ``summary`` element
-  tagSup,                     ## the HTML ``sup`` element
-  tagTable,                   ## the HTML ``table`` element
-  tagTbody,                   ## the HTML ``tbody`` element
-  tagTd,                      ## the HTML ``td`` element
-  tagTextarea,                ## the HTML ``textarea`` element
-  tagTfoot,                   ## the HTML ``tfoot`` element
-  tagTh,                      ## the HTML ``th`` element
-  tagThead,                   ## the HTML ``thead`` element
-  tagTime,                    ## the HTML ``time`` element
-  tagTitle,                   ## the HTML ``title`` element
-  tagTr,                      ## the HTML ``tr`` element
-  tagTrack,                   ## the HTML ``track`` element
-  tagTt,                      ## the HTML ``tt`` element
-  tagU,                       ## the deprecated HTML ``u`` element
-  tagUl,                      ## the HTML ``ul`` element
-  tagVar,                     ## the HTML ``var`` element
-  tagVideo,                   ## the HTML ``video`` element
-  tagWbr                      ## the HTML ``wbr`` element"><wbr />Html<wbr />Tag<span class="attachedType"></span></a></li>
+  tagUnknown,                 ## 未知の HTML 要素
+  tagA,                       ## HTML ``a`` 要素
+  tagAbbr,                    ## 廃止予定の HTML ``abbr`` 要素
+  tagAcronym,                 ## HTML ``acronym`` 要素
+  tagAddress,                 ## HTML ``address`` 要素
+  tagApplet,                  ## 廃止予定の HTML ``applet`` 要素
+  tagArea,                    ## HTML ``area`` 要素
+  tagArticle,                 ## HTML ``article`` 要素
+  tagAside,                   ## HTML ``aside`` 要素
+  tagAudio,                   ## HTML ``audio`` 要素
+  tagB,                       ## HTML ``b`` 要素
+  tagBase,                    ## HTML ``base`` 要素
+  tagBdi,                     ## HTML ``bdi`` 要素
+  tagBdo,                     ## 廃止予定の HTML ``dbo`` 要素
+  tagBasefont,                ## 廃止予定の HTML ``basefont`` 要素
+  tagBig,                     ## HTML ``big`` 要素
+  tagBlockquote,              ## HTML ``blockquote`` 要素
+  tagBody,                    ## HTML ``body`` 要素
+  tagBr,                      ## HTML ``br`` 要素
+  tagButton,                  ## HTML ``button`` 要素
+  tagCanvas,                  ## HTML ``canvas`` 要素
+  tagCaption,                 ## HTML ``caption`` 要素
+  tagCenter,                  ## 廃止予定の HTML ``center`` 要素
+  tagCite,                    ## HTML ``cite`` 要素
+  tagCode,                    ## HTML ``code`` 要素
+  tagCol,                     ## HTML ``col`` 要素
+  tagColgroup,                ## HTML ``colgroup`` 要素
+  tagCommand,                 ## HTML ``command`` 要素
+  tagDatalist,                ## HTML ``datalist`` 要素
+  tagDd,                      ## HTML ``dd`` 要素
+  tagDel,                     ## HTML ``del`` 要素
+  tagDetails,                 ## HTML ``details`` 要素
+  tagDfn,                     ## HTML ``dfn`` 要素
+  tagDialog,                  ## HTML ``dialog`` 要素
+  tagDiv,                     ## HTML ``div`` 要素
+  tagDir,                     ## 廃止予定の HTML ``dir`` 要素
+  tagDl,                      ## HTML ``dl`` 要素
+  tagDt,                      ## HTML ``dt`` 要素
+  tagEm,                      ## HTML ``em`` 要素
+  tagEmbed,                   ## HTML ``embed`` 要素
+  tagFieldset,                ## HTML ``fieldset`` 要素
+  tagFigcaption,              ## HTML ``figcaption`` 要素
+  tagFigure,                  ## HTML ``figure`` 要素
+  tagFont,                    ## 廃止予定の HTML ``font`` 要素
+  tagFooter,                  ## HTML ``footer`` 要素
+  tagForm,                    ## HTML ``form`` 要素
+  tagFrame,                   ## HTML ``frame`` 要素
+  tagFrameset,                ## 廃止予定の HTML ``frameset`` 要素
+  tagH1,                      ## HTML ``h1`` 要素
+  tagH2,                      ## HTML ``h2`` 要素
+  tagH3,                      ## HTML ``h3`` 要素
+  tagH4,                      ## HTML ``h4`` 要素
+  tagH5,                      ## HTML ``h5`` 要素
+  tagH6,                      ## HTML ``h6`` 要素
+  tagHead,                    ## HTML ``head`` 要素
+  tagHeader,                  ## HTML ``header`` 要素
+  tagHgroup,                  ## HTML ``hgroup`` 要素
+  tagHtml,                    ## HTML ``html`` 要素
+  tagHr,                      ## HTML ``hr`` 要素
+  tagI,                       ## HTML ``i`` 要素
+  tagIframe,                  ## 廃止予定の HTML ``iframe`` 要素
+  tagImg,                     ## HTML ``img`` 要素
+  tagInput,                   ## HTML ``input`` 要素
+  tagIns,                     ## HTML ``ins`` 要素
+  tagIsindex,                 ## 廃止予定の HTML ``isindex`` 要素
+  tagKbd,                     ## HTML ``kbd`` 要素
+  tagKeygen,                  ## HTML ``keygen`` 要素
+  tagLabel,                   ## HTML ``label`` 要素
+  tagLegend,                  ## HTML ``legend`` 要素
+  tagLi,                      ## HTML ``li`` 要素
+  tagLink,                    ## HTML ``link`` 要素
+  tagMap,                     ## HTML ``map`` 要素
+  tagMark,                    ## HTML ``mark`` 要素
+  tagMenu,                    ## 廃止予定の HTML ``menu`` 要素
+  tagMeta,                    ## HTML ``meta`` 要素
+  tagMeter,                   ## HTML ``meter`` 要素
+  tagNav,                     ## HTML ``nav`` 要素
+  tagNobr,                    ## 廃止予定の HTML ``nobr`` 要素
+  tagNoframes,                ## 廃止予定の HTML ``noframes`` 要素
+  tagNoscript,                ## HTML ``noscript`` 要素
+  tagObject,                  ## HTML ``object`` 要素
+  tagOl,                      ## HTML ``ol`` 要素
+  tagOptgroup,                ## HTML ``optgroup`` 要素
+  tagOption,                  ## HTML ``option`` 要素
+  tagOutput,                  ## HTML ``output`` 要素
+  tagP,                       ## HTML ``p`` 要素
+  tagParam,                   ## HTML ``param`` 要素
+  tagPre,                     ## HTML ``pre`` 要素
+  tagProgress,                ## HTML ``progress`` 要素
+  tagQ,                       ## HTML ``q`` 要素
+  tagRp,                      ## HTML ``rp`` 要素
+  tagRt,                      ## HTML ``rt`` 要素
+  tagRuby,                    ## HTML ``ruby`` 要素
+  tagS,                       ## 廃止予定の HTML ``s`` 要素
+  tagSamp,                    ## HTML ``samp`` 要素
+  tagScript,                  ## HTML ``script`` 要素
+  tagSection,                 ## HTML ``section`` 要素
+  tagSelect,                  ## HTML ``select`` 要素
+  tagSmall,                   ## HTML ``small`` 要素
+  tagSource,                  ## HTML ``source`` 要素
+  tagSpan,                    ## HTML ``span`` 要素
+  tagStrike,                  ## 廃止予定の HTML ``strike`` 要素
+  tagStrong,                  ## HTML ``strong`` 要素
+  tagStyle,                   ## HTML ``style`` 要素
+  tagSub,                     ## HTML ``sub`` 要素
+  tagSummary,                 ## HTML ``summary`` 要素
+  tagSup,                     ## HTML ``sup`` 要素
+  tagTable,                   ## HTML ``table`` 要素
+  tagTbody,                   ## HTML ``tbody`` 要素
+  tagTd,                      ## HTML ``td`` 要素
+  tagTextarea,                ## HTML ``textarea`` 要素
+  tagTfoot,                   ## HTML ``tfoot`` 要素
+  tagTh,                      ## HTML ``th`` 要素
+  tagThead,                   ## HTML ``thead`` 要素
+  tagTime,                    ## HTML ``time`` 要素
+  tagTitle,                   ## HTML ``title`` 要素
+  tagTr,                      ## HTML ``tr`` 要素
+  tagTrack,                   ## HTML ``track`` 要素
+  tagTt,                      ## HTML ``tt`` 要素
+  tagU,                       ## 廃止予定の HTML ``u`` 要素
+  tagUl,                      ## HTML ``ul`` 要素
+  tagVar,                     ## HTML ``var`` 要素
+  tagVideo,                   ## HTML ``video`` 要素
+  tagWbr                      ## HTML ``wbr`` 要素"><wbr />Html<wbr />Tag<span class="attachedType"></span></a></li>
 
   </ul>
 </li>
@@ -1041,17 +1041,17 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"><p><strong>NOTE</strong>: The behaviour might change in future versions as it is not clear what "<em>wild</em> HTML the real world uses" really implies.</p>
-<p>It can be used to parse a wild HTML document and output it as valid XHTML document (well, if you are lucky):</p>
-<pre class="listing"><span class="Identifier">echo</span> <span class="Identifier">loadHtml</span><span class="Punctuation">(</span><span class="StringLit">"mydirty.html"</span><span class="Punctuation">)</span></pre><p>Every tag in the resulting tree is in lower case.</p>
-<p><strong>Note:</strong> The resulting <tt class="docutils literal"><span class="pre">XmlNode</span></tt> already uses the <tt class="docutils literal"><span class="pre">clientData</span></tt> field, so it cannot be used by clients of this library.</p>
+  <p class="module-desc"><p><strong>備考</strong>: 「実世界で使われている<em>野良</em> HTML」の意味が本当に明確ではないので、将来のバージョンで動作が変更される場合があります。</p>
+<p>野良 HTML ドキュメントの構文解析を行い、有効な XHTML  ドキュメントへの変換・出力にも使えます (運がよければ):</p>
+<pre class="listing"><span class="Identifier">echo</span> <span class="Identifier">loadHtml</span><span class="Punctuation">(</span><span class="StringLit">"mydirty.html"</span><span class="Punctuation">)</span></pre><p>ツリーにある全タグは小文字になります。</p>
+<p><strong>備考:</strong> <tt class="docutils literal"><span class="pre">XmlNode</span></tt> の結果として既存の <tt class="docutils literal"><span class="pre">clientData</span></tt> フィールドを使うため、このライブラリのクライアントで <tt class="docutils literal"><span class="pre">clientData</span></tt> フィールドは使えません。</p>
 
-<h1><a class="toc-backref" id="examplecolon-transforming-hyperlinks" href="#examplecolon-transforming-hyperlinks">Example: Transforming hyperlinks</a></h1><p>This code demonstrates how you can iterate over all the tags in an HTML file and write back the modified version. In this case we look for hyperlinks ending with the extension <tt class="docutils literal"><span class="pre">.rst</span></tt> and convert them to <tt class="docutils literal"><span class="pre">.html</span></tt>.</p>
+<h1><a class="toc-backref" id="examplecolon-transforming-hyperlinks" href="#examplecolon-transforming-hyperlinks">用例: ハイパーリンクの変換</a></h1><p>このコードでは HTML ファイルにある全タグのイテレート、および変換版の書き戻しかたを説明しています。この用例では、拡張子 <tt class="docutils literal"><span class="pre">.rst</span></tt> で終わるファイルからハイパーリンクを探して <tt class="docutils literal"><span class="pre">.html</span></tt> へ変換します。</p>
 <pre class="listing"><span class="Keyword">import</span> <span class="Identifier">htmlparser</span>
-<span class="Keyword">import</span> <span class="Identifier">xmltree</span>  <span class="Comment"># To use '$' for XmlNode</span>
-<span class="Keyword">import</span> <span class="Identifier">strtabs</span>  <span class="Comment"># To access XmlAttributes</span>
-<span class="Keyword">import</span> <span class="Identifier">os</span>       <span class="Comment"># To use splitFile</span>
-<span class="Keyword">import</span> <span class="Identifier">strutils</span> <span class="Comment"># To use cmpIgnoreCase</span>
+<span class="Keyword">import</span> <span class="Identifier">xmltree</span>  <span class="Comment"># XmlNode で '$' を使用</span>
+<span class="Keyword">import</span> <span class="Identifier">strtabs</span>  <span class="Comment"># XmlAttributes へのアクセス</span>
+<span class="Keyword">import</span> <span class="Identifier">os</span>       <span class="Comment"># splitFile で使用</span>
+<span class="Keyword">import</span> <span class="Identifier">strutils</span> <span class="Comment"># cmpIgnoreCase で使用</span>
 
 <span class="Keyword">proc</span> <span class="Identifier">transformHyperlinks</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Operator">=</span>
   <span class="Keyword">let</span> <span class="Identifier">html</span> <span class="Operator">=</span> <span class="Identifier">loadHtml</span><span class="Punctuation">(</span><span class="StringLit">"input.html"</span><span class="Punctuation">)</span>
@@ -1073,139 +1073,135 @@ function main() {
 <dl class="item">
 <a id="HtmlTag"></a>
 <dt><pre><a href="htmlparser.html#HtmlTag"><span class="Identifier">HtmlTag</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
-  <span class="Identifier">tagUnknown</span><span class="Other">,</span>                 <span class="Comment">## unknown HTML element</span>
-  <span class="Identifier">tagA</span><span class="Other">,</span>                       <span class="Comment">## the HTML ``a`` element</span>
-  <span class="Identifier">tagAbbr</span><span class="Other">,</span>                    <span class="Comment">## the deprecated HTML ``abbr`` element</span>
-  <span class="Identifier">tagAcronym</span><span class="Other">,</span>                 <span class="Comment">## the HTML ``acronym`` element</span>
-  <span class="Identifier">tagAddress</span><span class="Other">,</span>                 <span class="Comment">## the HTML ``address`` element</span>
-  <span class="Identifier">tagApplet</span><span class="Other">,</span>                  <span class="Comment">## the deprecated HTML ``applet`` element</span>
-  <span class="Identifier">tagArea</span><span class="Other">,</span>                    <span class="Comment">## the HTML ``area`` element</span>
-  <span class="Identifier">tagArticle</span><span class="Other">,</span>                 <span class="Comment">## the HTML ``article`` element</span>
-  <span class="Identifier">tagAside</span><span class="Other">,</span>                   <span class="Comment">## the HTML ``aside`` element</span>
-  <span class="Identifier">tagAudio</span><span class="Other">,</span>                   <span class="Comment">## the HTML ``audio`` element</span>
-  <span class="Identifier">tagB</span><span class="Other">,</span>                       <span class="Comment">## the HTML ``b`` element</span>
-  <span class="Identifier">tagBase</span><span class="Other">,</span>                    <span class="Comment">## the HTML ``base`` element</span>
-  <span class="Identifier">tagBdi</span><span class="Other">,</span>                     <span class="Comment">## the HTML ``bdi`` element</span>
-  <span class="Identifier">tagBdo</span><span class="Other">,</span>                     <span class="Comment">## the deprecated HTML ``dbo`` element</span>
-  <span class="Identifier">tagBasefont</span><span class="Other">,</span>                <span class="Comment">## the deprecated HTML ``basefont`` element</span>
-  <span class="Identifier">tagBig</span><span class="Other">,</span>                     <span class="Comment">## the HTML ``big`` element</span>
-  <span class="Identifier">tagBlockquote</span><span class="Other">,</span>              <span class="Comment">## the HTML ``blockquote`` element</span>
-  <span class="Identifier">tagBody</span><span class="Other">,</span>                    <span class="Comment">## the HTML ``body`` element</span>
-  <span class="Identifier">tagBr</span><span class="Other">,</span>                      <span class="Comment">## the HTML ``br`` element</span>
-  <span class="Identifier">tagButton</span><span class="Other">,</span>                  <span class="Comment">## the HTML ``button`` element</span>
-  <span class="Identifier">tagCanvas</span><span class="Other">,</span>                  <span class="Comment">## the HTML ``canvas`` element</span>
-  <span class="Identifier">tagCaption</span><span class="Other">,</span>                 <span class="Comment">## the HTML ``caption`` element</span>
-  <span class="Identifier">tagCenter</span><span class="Other">,</span>                  <span class="Comment">## the deprecated HTML ``center`` element</span>
-  <span class="Identifier">tagCite</span><span class="Other">,</span>                    <span class="Comment">## the HTML ``cite`` element</span>
-  <span class="Identifier">tagCode</span><span class="Other">,</span>                    <span class="Comment">## the HTML ``code`` element</span>
-  <span class="Identifier">tagCol</span><span class="Other">,</span>                     <span class="Comment">## the HTML ``col`` element</span>
-  <span class="Identifier">tagColgroup</span><span class="Other">,</span>                <span class="Comment">## the HTML ``colgroup`` element</span>
-  <span class="Identifier">tagCommand</span><span class="Other">,</span>                 <span class="Comment">## the HTML ``command`` element</span>
-  <span class="Identifier">tagDatalist</span><span class="Other">,</span>                <span class="Comment">## the HTML ``datalist`` element</span>
-  <span class="Identifier">tagDd</span><span class="Other">,</span>                      <span class="Comment">## the HTML ``dd`` element</span>
-  <span class="Identifier">tagDel</span><span class="Other">,</span>                     <span class="Comment">## the HTML ``del`` element</span>
-  <span class="Identifier">tagDetails</span><span class="Other">,</span>                 <span class="Comment">## the HTML ``details`` element</span>
-  <span class="Identifier">tagDfn</span><span class="Other">,</span>                     <span class="Comment">## the HTML ``dfn`` element</span>
-  <span class="Identifier">tagDialog</span><span class="Other">,</span>                  <span class="Comment">## the HTML ``dialog`` element</span>
-  <span class="Identifier">tagDiv</span><span class="Other">,</span>                     <span class="Comment">## the HTML ``div`` element</span>
-  <span class="Identifier">tagDir</span><span class="Other">,</span>                     <span class="Comment">## the deprecated HTLM ``dir`` element</span>
-  <span class="Identifier">tagDl</span><span class="Other">,</span>                      <span class="Comment">## the HTML ``dl`` element</span>
-  <span class="Identifier">tagDt</span><span class="Other">,</span>                      <span class="Comment">## the HTML ``dt`` element</span>
-  <span class="Identifier">tagEm</span><span class="Other">,</span>                      <span class="Comment">## the HTML ``em`` element</span>
-  <span class="Identifier">tagEmbed</span><span class="Other">,</span>                   <span class="Comment">## the HTML ``embed`` element</span>
-  <span class="Identifier">tagFieldset</span><span class="Other">,</span>                <span class="Comment">## the HTML ``fieldset`` element</span>
-  <span class="Identifier">tagFigcaption</span><span class="Other">,</span>              <span class="Comment">## the HTML ``figcaption`` element</span>
-  <span class="Identifier">tagFigure</span><span class="Other">,</span>                  <span class="Comment">## the HTML ``figure`` element</span>
-  <span class="Identifier">tagFont</span><span class="Other">,</span>                    <span class="Comment">## the deprecated HTML ``font`` element</span>
-  <span class="Identifier">tagFooter</span><span class="Other">,</span>                  <span class="Comment">## the HTML ``footer`` element</span>
-  <span class="Identifier">tagForm</span><span class="Other">,</span>                    <span class="Comment">## the HTML ``form`` element</span>
-  <span class="Identifier">tagFrame</span><span class="Other">,</span>                   <span class="Comment">## the HTML ``frame`` element</span>
-  <span class="Identifier">tagFrameset</span><span class="Other">,</span>                <span class="Comment">## the deprecated HTML ``frameset`` element</span>
-  <span class="Identifier">tagH1</span><span class="Other">,</span>                      <span class="Comment">## the HTML ``h1`` element</span>
-  <span class="Identifier">tagH2</span><span class="Other">,</span>                      <span class="Comment">## the HTML ``h2`` element</span>
-  <span class="Identifier">tagH3</span><span class="Other">,</span>                      <span class="Comment">## the HTML ``h3`` element</span>
-  <span class="Identifier">tagH4</span><span class="Other">,</span>                      <span class="Comment">## the HTML ``h4`` element</span>
-  <span class="Identifier">tagH5</span><span class="Other">,</span>                      <span class="Comment">## the HTML ``h5`` element</span>
-  <span class="Identifier">tagH6</span><span class="Other">,</span>                      <span class="Comment">## the HTML ``h6`` element</span>
-  <span class="Identifier">tagHead</span><span class="Other">,</span>                    <span class="Comment">## the HTML ``head`` element</span>
-  <span class="Identifier">tagHeader</span><span class="Other">,</span>                  <span class="Comment">## the HTML ``header`` element</span>
-  <span class="Identifier">tagHgroup</span><span class="Other">,</span>                  <span class="Comment">## the HTML ``hgroup`` element</span>
-  <span class="Identifier">tagHtml</span><span class="Other">,</span>                    <span class="Comment">## the HTML ``html`` element</span>
-  <span class="Identifier">tagHr</span><span class="Other">,</span>                      <span class="Comment">## the HTML ``hr`` element</span>
-  <span class="Identifier">tagI</span><span class="Other">,</span>                       <span class="Comment">## the HTML ``i`` element</span>
-  <span class="Identifier">tagIframe</span><span class="Other">,</span>                  <span class="Comment">## the deprecated HTML ``iframe`` element</span>
-  <span class="Identifier">tagImg</span><span class="Other">,</span>                     <span class="Comment">## the HTML ``img`` element</span>
-  <span class="Identifier">tagInput</span><span class="Other">,</span>                   <span class="Comment">## the HTML ``input`` element</span>
-  <span class="Identifier">tagIns</span><span class="Other">,</span>                     <span class="Comment">## the HTML ``ins`` element</span>
-  <span class="Identifier">tagIsindex</span><span class="Other">,</span>                 <span class="Comment">## the deprecated HTML ``isindex`` element</span>
-  <span class="Identifier">tagKbd</span><span class="Other">,</span>                     <span class="Comment">## the HTML ``kbd`` element</span>
-  <span class="Identifier">tagKeygen</span><span class="Other">,</span>                  <span class="Comment">## the HTML ``keygen`` element</span>
-  <span class="Identifier">tagLabel</span><span class="Other">,</span>                   <span class="Comment">## the HTML ``label`` element</span>
-  <span class="Identifier">tagLegend</span><span class="Other">,</span>                  <span class="Comment">## the HTML ``legend`` element</span>
-  <span class="Identifier">tagLi</span><span class="Other">,</span>                      <span class="Comment">## the HTML ``li`` element</span>
-  <span class="Identifier">tagLink</span><span class="Other">,</span>                    <span class="Comment">## the HTML ``link`` element</span>
-  <span class="Identifier">tagMap</span><span class="Other">,</span>                     <span class="Comment">## the HTML ``map`` element</span>
-  <span class="Identifier">tagMark</span><span class="Other">,</span>                    <span class="Comment">## the HTML ``mark`` element</span>
-  <span class="Identifier">tagMenu</span><span class="Other">,</span>                    <span class="Comment">## the deprecated HTML ``menu`` element</span>
-  <span class="Identifier">tagMeta</span><span class="Other">,</span>                    <span class="Comment">## the HTML ``meta`` element</span>
-  <span class="Identifier">tagMeter</span><span class="Other">,</span>                   <span class="Comment">## the HTML ``meter`` element</span>
-  <span class="Identifier">tagNav</span><span class="Other">,</span>                     <span class="Comment">## the HTML ``nav`` element</span>
-  <span class="Identifier">tagNobr</span><span class="Other">,</span>                    <span class="Comment">## the deprecated HTML ``nobr`` element</span>
-  <span class="Identifier">tagNoframes</span><span class="Other">,</span>                <span class="Comment">## the deprecated HTML ``noframes`` element</span>
-  <span class="Identifier">tagNoscript</span><span class="Other">,</span>                <span class="Comment">## the HTML ``noscript`` element</span>
-  <span class="Identifier">tagObject</span><span class="Other">,</span>                  <span class="Comment">## the HTML ``object`` element</span>
-  <span class="Identifier">tagOl</span><span class="Other">,</span>                      <span class="Comment">## the HTML ``ol`` element</span>
-  <span class="Identifier">tagOptgroup</span><span class="Other">,</span>                <span class="Comment">## the HTML ``optgroup`` element</span>
-  <span class="Identifier">tagOption</span><span class="Other">,</span>                  <span class="Comment">## the HTML ``option`` element</span>
-  <span class="Identifier">tagOutput</span><span class="Other">,</span>                  <span class="Comment">## the HTML ``output`` element</span>
-  <span class="Identifier">tagP</span><span class="Other">,</span>                       <span class="Comment">## the HTML ``p`` element</span>
-  <span class="Identifier">tagParam</span><span class="Other">,</span>                   <span class="Comment">## the HTML ``param`` element</span>
-  <span class="Identifier">tagPre</span><span class="Other">,</span>                     <span class="Comment">## the HTML ``pre`` element</span>
-  <span class="Identifier">tagProgress</span><span class="Other">,</span>                <span class="Comment">## the HTML ``progress`` element</span>
-  <span class="Identifier">tagQ</span><span class="Other">,</span>                       <span class="Comment">## the HTML ``q`` element</span>
-  <span class="Identifier">tagRp</span><span class="Other">,</span>                      <span class="Comment">## the HTML ``rp`` element</span>
-  <span class="Identifier">tagRt</span><span class="Other">,</span>                      <span class="Comment">## the HTML ``rt`` element</span>
-  <span class="Identifier">tagRuby</span><span class="Other">,</span>                    <span class="Comment">## the HTML ``ruby`` element</span>
-  <span class="Identifier">tagS</span><span class="Other">,</span>                       <span class="Comment">## the deprecated HTML ``s`` element</span>
-  <span class="Identifier">tagSamp</span><span class="Other">,</span>                    <span class="Comment">## the HTML ``samp`` element</span>
-  <span class="Identifier">tagScript</span><span class="Other">,</span>                  <span class="Comment">## the HTML ``script`` element</span>
-  <span class="Identifier">tagSection</span><span class="Other">,</span>                 <span class="Comment">## the HTML ``section`` element</span>
-  <span class="Identifier">tagSelect</span><span class="Other">,</span>                  <span class="Comment">## the HTML ``select`` element</span>
-  <span class="Identifier">tagSmall</span><span class="Other">,</span>                   <span class="Comment">## the HTML ``small`` element</span>
-  <span class="Identifier">tagSource</span><span class="Other">,</span>                  <span class="Comment">## the HTML ``source`` element</span>
-  <span class="Identifier">tagSpan</span><span class="Other">,</span>                    <span class="Comment">## the HTML ``span`` element</span>
-  <span class="Identifier">tagStrike</span><span class="Other">,</span>                  <span class="Comment">## the deprecated HTML ``strike`` element</span>
-  <span class="Identifier">tagStrong</span><span class="Other">,</span>                  <span class="Comment">## the HTML ``strong`` element</span>
-  <span class="Identifier">tagStyle</span><span class="Other">,</span>                   <span class="Comment">## the HTML ``style`` element</span>
-  <span class="Identifier">tagSub</span><span class="Other">,</span>                     <span class="Comment">## the HTML ``sub`` element</span>
-  <span class="Identifier">tagSummary</span><span class="Other">,</span>                 <span class="Comment">## the HTML ``summary`` element</span>
-  <span class="Identifier">tagSup</span><span class="Other">,</span>                     <span class="Comment">## the HTML ``sup`` element</span>
-  <span class="Identifier">tagTable</span><span class="Other">,</span>                   <span class="Comment">## the HTML ``table`` element</span>
-  <span class="Identifier">tagTbody</span><span class="Other">,</span>                   <span class="Comment">## the HTML ``tbody`` element</span>
-  <span class="Identifier">tagTd</span><span class="Other">,</span>                      <span class="Comment">## the HTML ``td`` element</span>
-  <span class="Identifier">tagTextarea</span><span class="Other">,</span>                <span class="Comment">## the HTML ``textarea`` element</span>
-  <span class="Identifier">tagTfoot</span><span class="Other">,</span>                   <span class="Comment">## the HTML ``tfoot`` element</span>
-  <span class="Identifier">tagTh</span><span class="Other">,</span>                      <span class="Comment">## the HTML ``th`` element</span>
-  <span class="Identifier">tagThead</span><span class="Other">,</span>                   <span class="Comment">## the HTML ``thead`` element</span>
-  <span class="Identifier">tagTime</span><span class="Other">,</span>                    <span class="Comment">## the HTML ``time`` element</span>
-  <span class="Identifier">tagTitle</span><span class="Other">,</span>                   <span class="Comment">## the HTML ``title`` element</span>
-  <span class="Identifier">tagTr</span><span class="Other">,</span>                      <span class="Comment">## the HTML ``tr`` element</span>
-  <span class="Identifier">tagTrack</span><span class="Other">,</span>                   <span class="Comment">## the HTML ``track`` element</span>
-  <span class="Identifier">tagTt</span><span class="Other">,</span>                      <span class="Comment">## the HTML ``tt`` element</span>
-  <span class="Identifier">tagU</span><span class="Other">,</span>                       <span class="Comment">## the deprecated HTML ``u`` element</span>
-  <span class="Identifier">tagUl</span><span class="Other">,</span>                      <span class="Comment">## the HTML ``ul`` element</span>
-  <span class="Identifier">tagVar</span><span class="Other">,</span>                     <span class="Comment">## the HTML ``var`` element</span>
-  <span class="Identifier">tagVideo</span><span class="Other">,</span>                   <span class="Comment">## the HTML ``video`` element</span>
-  <span class="Identifier">tagWbr</span>                      <span class="Comment">## the HTML ``wbr`` element</span></pre></dt>
+  <span class="Identifier">tagUnknown</span><span class="Other">,</span>                 <span class="Comment">## 未知の HTML 要素</span>
+  <span class="Identifier">tagA</span><span class="Other">,</span>                       <span class="Comment">## HTML ``a`` 要素</span>
+  <span class="Identifier">tagAbbr</span><span class="Other">,</span>                    <span class="Comment">## 廃止予定の HTML ``abbr`` 要素</span>
+  <span class="Identifier">tagAcronym</span><span class="Other">,</span>                 <span class="Comment">## HTML ``acronym`` 要素</span>
+  <span class="Identifier">tagAddress</span><span class="Other">,</span>                 <span class="Comment">## HTML ``address`` 要素</span>
+  <span class="Identifier">tagApplet</span><span class="Other">,</span>                  <span class="Comment">## 廃止予定の HTML ``applet`` 要素</span>
+  <span class="Identifier">tagArea</span><span class="Other">,</span>                    <span class="Comment">## HTML ``area`` 要素</span>
+  <span class="Identifier">tagArticle</span><span class="Other">,</span>                 <span class="Comment">## HTML ``article`` 要素</span>
+  <span class="Identifier">tagAside</span><span class="Other">,</span>                   <span class="Comment">## HTML ``aside`` 要素</span>
+  <span class="Identifier">tagAudio</span><span class="Other">,</span>                   <span class="Comment">## HTML ``audio`` 要素</span>
+  <span class="Identifier">tagB</span><span class="Other">,</span>                       <span class="Comment">## HTML ``b`` 要素</span>
+  <span class="Identifier">tagBase</span><span class="Other">,</span>                    <span class="Comment">## HTML ``base`` 要素</span>
+  <span class="Identifier">tagBdi</span><span class="Other">,</span>                     <span class="Comment">## HTML ``bdi`` 要素</span>
+  <span class="Identifier">tagBdo</span><span class="Other">,</span>                     <span class="Comment">## 廃止予定の HTML ``dbo`` 要素</span>
+  <span class="Identifier">tagBasefont</span><span class="Other">,</span>                <span class="Comment">## 廃止予定の HTML ``basefont`` 要素</span>
+  <span class="Identifier">tagBig</span><span class="Other">,</span>                     <span class="Comment">## HTML ``big`` 要素</span>
+  <span class="Identifier">tagBlockquote</span><span class="Other">,</span>              <span class="Comment">## HTML ``blockquote`` 要素</span>
+  <span class="Identifier">tagBody</span><span class="Other">,</span>                    <span class="Comment">## HTML ``body`` 要素</span>
+  <span class="Identifier">tagBr</span><span class="Other">,</span>                      <span class="Comment">## HTML ``br`` 要素</span>
+  <span class="Identifier">tagButton</span><span class="Other">,</span>                  <span class="Comment">## HTML ``button`` 要素</span>
+  <span class="Identifier">tagCanvas</span><span class="Other">,</span>                  <span class="Comment">## HTML ``canvas`` 要素</span>
+  <span class="Identifier">tagCaption</span><span class="Other">,</span>                 <span class="Comment">## HTML ``caption`` 要素</span>
+  <span class="Identifier">tagCenter</span><span class="Other">,</span>                  <span class="Comment">## 廃止予定の HTML ``center`` 要素</span>
+  <span class="Identifier">tagCite</span><span class="Other">,</span>                    <span class="Comment">## HTML ``cite`` 要素</span>
+  <span class="Identifier">tagCode</span><span class="Other">,</span>                    <span class="Comment">## HTML ``code`` 要素</span>
+  <span class="Identifier">tagCol</span><span class="Other">,</span>                     <span class="Comment">## HTML ``col`` 要素</span>
+  <span class="Identifier">tagColgroup</span><span class="Other">,</span>                <span class="Comment">## HTML ``colgroup`` 要素</span>
+  <span class="Identifier">tagCommand</span><span class="Other">,</span>                 <span class="Comment">## HTML ``command`` 要素</span>
+  <span class="Identifier">tagDatalist</span><span class="Other">,</span>                <span class="Comment">## HTML ``datalist`` 要素</span>
+  <span class="Identifier">tagDd</span><span class="Other">,</span>                      <span class="Comment">## HTML ``dd`` 要素</span>
+  <span class="Identifier">tagDel</span><span class="Other">,</span>                     <span class="Comment">## HTML ``del`` 要素</span>
+  <span class="Identifier">tagDetails</span><span class="Other">,</span>                 <span class="Comment">## HTML ``details`` 要素</span>
+  <span class="Identifier">tagDfn</span><span class="Other">,</span>                     <span class="Comment">## HTML ``dfn`` 要素</span>
+  <span class="Identifier">tagDialog</span><span class="Other">,</span>                  <span class="Comment">## HTML ``dialog`` 要素</span>
+  <span class="Identifier">tagDiv</span><span class="Other">,</span>                     <span class="Comment">## HTML ``div`` 要素</span>
+  <span class="Identifier">tagDir</span><span class="Other">,</span>                     <span class="Comment">## 廃止予定の HTML ``dir`` 要素</span>
+  <span class="Identifier">tagDl</span><span class="Other">,</span>                      <span class="Comment">## HTML ``dl`` 要素</span>
+  <span class="Identifier">tagDt</span><span class="Other">,</span>                      <span class="Comment">## HTML ``dt`` 要素</span>
+  <span class="Identifier">tagEm</span><span class="Other">,</span>                      <span class="Comment">## HTML ``em`` 要素</span>
+  <span class="Identifier">tagEmbed</span><span class="Other">,</span>                   <span class="Comment">## HTML ``embed`` 要素</span>
+  <span class="Identifier">tagFieldset</span><span class="Other">,</span>                <span class="Comment">## HTML ``fieldset`` 要素</span>
+  <span class="Identifier">tagFigcaption</span><span class="Other">,</span>              <span class="Comment">## HTML ``figcaption`` 要素</span>
+  <span class="Identifier">tagFigure</span><span class="Other">,</span>                  <span class="Comment">## HTML ``figure`` 要素</span>
+  <span class="Identifier">tagFont</span><span class="Other">,</span>                    <span class="Comment">## 廃止予定の HTML ``font`` 要素</span>
+  <span class="Identifier">tagFooter</span><span class="Other">,</span>                  <span class="Comment">## HTML ``footer`` 要素</span>
+  <span class="Identifier">tagForm</span><span class="Other">,</span>                    <span class="Comment">## HTML ``form`` 要素</span>
+  <span class="Identifier">tagFrame</span><span class="Other">,</span>                   <span class="Comment">## HTML ``frame`` 要素</span>
+  <span class="Identifier">tagFrameset</span><span class="Other">,</span>                <span class="Comment">## 廃止予定の HTML ``frameset`` 要素</span>
+  <span class="Identifier">tagH1</span><span class="Other">,</span>                      <span class="Comment">## HTML ``h1`` 要素</span>
+  <span class="Identifier">tagH2</span><span class="Other">,</span>                      <span class="Comment">## HTML ``h2`` 要素</span>
+  <span class="Identifier">tagH3</span><span class="Other">,</span>                      <span class="Comment">## HTML ``h3`` 要素</span>
+  <span class="Identifier">tagH4</span><span class="Other">,</span>                      <span class="Comment">## HTML ``h4`` 要素</span>
+  <span class="Identifier">tagH5</span><span class="Other">,</span>                      <span class="Comment">## HTML ``h5`` 要素</span>
+  <span class="Identifier">tagH6</span><span class="Other">,</span>                      <span class="Comment">## HTML ``h6`` 要素</span>
+  <span class="Identifier">tagHead</span><span class="Other">,</span>                    <span class="Comment">## HTML ``head`` 要素</span>
+  <span class="Identifier">tagHeader</span><span class="Other">,</span>                  <span class="Comment">## HTML ``header`` 要素</span>
+  <span class="Identifier">tagHgroup</span><span class="Other">,</span>                  <span class="Comment">## HTML ``hgroup`` 要素</span>
+  <span class="Identifier">tagHtml</span><span class="Other">,</span>                    <span class="Comment">## HTML ``html`` 要素</span>
+  <span class="Identifier">tagHr</span><span class="Other">,</span>                      <span class="Comment">## HTML ``hr`` 要素</span>
+  <span class="Identifier">tagI</span><span class="Other">,</span>                       <span class="Comment">## HTML ``i`` 要素</span>
+  <span class="Identifier">tagIframe</span><span class="Other">,</span>                  <span class="Comment">## 廃止予定の HTML ``iframe`` 要素</span>
+  <span class="Identifier">tagImg</span><span class="Other">,</span>                     <span class="Comment">## HTML ``img`` 要素</span>
+  <span class="Identifier">tagInput</span><span class="Other">,</span>                   <span class="Comment">## HTML ``input`` 要素</span>
+  <span class="Identifier">tagIns</span><span class="Other">,</span>                     <span class="Comment">## HTML ``ins`` 要素</span>
+  <span class="Identifier">tagIsindex</span><span class="Other">,</span>                 <span class="Comment">## 廃止予定の HTML ``isindex`` 要素</span>
+  <span class="Identifier">tagKbd</span><span class="Other">,</span>                     <span class="Comment">## HTML ``kbd`` 要素</span>
+  <span class="Identifier">tagKeygen</span><span class="Other">,</span>                  <span class="Comment">## HTML ``keygen`` 要素</span>
+  <span class="Identifier">tagLabel</span><span class="Other">,</span>                   <span class="Comment">## HTML ``label`` 要素</span>
+  <span class="Identifier">tagLegend</span><span class="Other">,</span>                  <span class="Comment">## HTML ``legend`` 要素</span>
+  <span class="Identifier">tagLi</span><span class="Other">,</span>                      <span class="Comment">## HTML ``li`` 要素</span>
+  <span class="Identifier">tagLink</span><span class="Other">,</span>                    <span class="Comment">## HTML ``link`` 要素</span>
+  <span class="Identifier">tagMap</span><span class="Other">,</span>                     <span class="Comment">## HTML ``map`` 要素</span>
+  <span class="Identifier">tagMark</span><span class="Other">,</span>                    <span class="Comment">## HTML ``mark`` 要素</span>
+  <span class="Identifier">tagMenu</span><span class="Other">,</span>                    <span class="Comment">## 廃止予定の HTML ``menu`` 要素</span>
+  <span class="Identifier">tagMeta</span><span class="Other">,</span>                    <span class="Comment">## HTML ``meta`` 要素</span>
+  <span class="Identifier">tagMeter</span><span class="Other">,</span>                   <span class="Comment">## HTML ``meter`` 要素</span>
+  <span class="Identifier">tagNav</span><span class="Other">,</span>                     <span class="Comment">## HTML ``nav`` 要素</span>
+  <span class="Identifier">tagNobr</span><span class="Other">,</span>                    <span class="Comment">## 廃止予定の HTML ``nobr`` 要素</span>
+  <span class="Identifier">tagNoframes</span><span class="Other">,</span>                <span class="Comment">## 廃止予定の HTML ``noframes`` 要素</span>
+  <span class="Identifier">tagNoscript</span><span class="Other">,</span>                <span class="Comment">## HTML ``noscript`` 要素</span>
+  <span class="Identifier">tagObject</span><span class="Other">,</span>                  <span class="Comment">## HTML ``object`` 要素</span>
+  <span class="Identifier">tagOl</span><span class="Other">,</span>                      <span class="Comment">## HTML ``ol`` 要素</span>
+  <span class="Identifier">tagOptgroup</span><span class="Other">,</span>                <span class="Comment">## HTML ``optgroup`` 要素</span>
+  <span class="Identifier">tagOption</span><span class="Other">,</span>                  <span class="Comment">## HTML ``option`` 要素</span>
+  <span class="Identifier">tagOutput</span><span class="Other">,</span>                  <span class="Comment">## HTML ``output`` 要素</span>
+  <span class="Identifier">tagP</span><span class="Other">,</span>                       <span class="Comment">## HTML ``p`` 要素</span>
+  <span class="Identifier">tagParam</span><span class="Other">,</span>                   <span class="Comment">## HTML ``param`` 要素</span>
+  <span class="Identifier">tagPre</span><span class="Other">,</span>                     <span class="Comment">## HTML ``pre`` 要素</span>
+  <span class="Identifier">tagProgress</span><span class="Other">,</span>                <span class="Comment">## HTML ``progress`` 要素</span>
+  <span class="Identifier">tagQ</span><span class="Other">,</span>                       <span class="Comment">## HTML ``q`` 要素</span>
+  <span class="Identifier">tagRp</span><span class="Other">,</span>                      <span class="Comment">## HTML ``rp`` 要素</span>
+  <span class="Identifier">tagRt</span><span class="Other">,</span>                      <span class="Comment">## HTML ``rt`` 要素</span>
+  <span class="Identifier">tagRuby</span><span class="Other">,</span>                    <span class="Comment">## HTML ``ruby`` 要素</span>
+  <span class="Identifier">tagS</span><span class="Other">,</span>                       <span class="Comment">## 廃止予定の HTML ``s`` 要素</span>
+  <span class="Identifier">tagSamp</span><span class="Other">,</span>                    <span class="Comment">## HTML ``samp`` 要素</span>
+  <span class="Identifier">tagScript</span><span class="Other">,</span>                  <span class="Comment">## HTML ``script`` 要素</span>
+  <span class="Identifier">tagSection</span><span class="Other">,</span>                 <span class="Comment">## HTML ``section`` 要素</span>
+  <span class="Identifier">tagSelect</span><span class="Other">,</span>                  <span class="Comment">## HTML ``select`` 要素</span>
+  <span class="Identifier">tagSmall</span><span class="Other">,</span>                   <span class="Comment">## HTML ``small`` 要素</span>
+  <span class="Identifier">tagSource</span><span class="Other">,</span>                  <span class="Comment">## HTML ``source`` 要素</span>
+  <span class="Identifier">tagSpan</span><span class="Other">,</span>                    <span class="Comment">## HTML ``span`` 要素</span>
+  <span class="Identifier">tagStrike</span><span class="Other">,</span>                  <span class="Comment">## 廃止予定の HTML ``strike`` 要素</span>
+  <span class="Identifier">tagStrong</span><span class="Other">,</span>                  <span class="Comment">## HTML ``strong`` 要素</span>
+  <span class="Identifier">tagStyle</span><span class="Other">,</span>                   <span class="Comment">## HTML ``style`` 要素</span>
+  <span class="Identifier">tagSub</span><span class="Other">,</span>                     <span class="Comment">## HTML ``sub`` 要素</span>
+  <span class="Identifier">tagSummary</span><span class="Other">,</span>                 <span class="Comment">## HTML ``summary`` 要素</span>
+  <span class="Identifier">tagSup</span><span class="Other">,</span>                     <span class="Comment">## HTML ``sup`` 要素</span>
+  <span class="Identifier">tagTable</span><span class="Other">,</span>                   <span class="Comment">## HTML ``table`` 要素</span>
+  <span class="Identifier">tagTbody</span><span class="Other">,</span>                   <span class="Comment">## HTML ``tbody`` 要素</span>
+  <span class="Identifier">tagTd</span><span class="Other">,</span>                      <span class="Comment">## HTML ``td`` 要素</span>
+  <span class="Identifier">tagTextarea</span><span class="Other">,</span>                <span class="Comment">## HTML ``textarea`` 要素</span>
+  <span class="Identifier">tagTfoot</span><span class="Other">,</span>                   <span class="Comment">## HTML ``tfoot`` 要素</span>
+  <span class="Identifier">tagTh</span><span class="Other">,</span>                      <span class="Comment">## HTML ``th`` 要素</span>
+  <span class="Identifier">tagThead</span><span class="Other">,</span>                   <span class="Comment">## HTML ``thead`` 要素</span>
+  <span class="Identifier">tagTime</span><span class="Other">,</span>                    <span class="Comment">## HTML ``time`` 要素</span>
+  <span class="Identifier">tagTitle</span><span class="Other">,</span>                   <span class="Comment">## HTML ``title`` 要素</span>
+  <span class="Identifier">tagTr</span><span class="Other">,</span>                      <span class="Comment">## HTML ``tr`` 要素</span>
+  <span class="Identifier">tagTrack</span><span class="Other">,</span>                   <span class="Comment">## HTML ``track`` 要素</span>
+  <span class="Identifier">tagTt</span><span class="Other">,</span>                      <span class="Comment">## HTML ``tt`` 要素</span>
+  <span class="Identifier">tagU</span><span class="Other">,</span>                       <span class="Comment">## 廃止予定の HTML ``u`` 要素</span>
+  <span class="Identifier">tagUl</span><span class="Other">,</span>                      <span class="Comment">## HTML ``ul`` 要素</span>
+  <span class="Identifier">tagVar</span><span class="Other">,</span>                     <span class="Comment">## HTML ``var`` 要素</span>
+  <span class="Identifier">tagVideo</span><span class="Other">,</span>                   <span class="Comment">## HTML ``video`` 要素</span>
+  <span class="Identifier">tagWbr</span>                      <span class="Comment">## HTML ``wbr`` 要素</span></pre></dt>
 <dd>
 
-
-
-list of all supported HTML tags; order will always be alphabetically
-&nbsp;&nbsp;<a
+リストに記載されている HTML タグはすべてサポートしています。また、整列順はアルファベット順です &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlparser.nim#L55"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlparser.nim#L55" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlparser.nim#L55" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 
@@ -1284,7 +1280,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#htmlTag%2CXmlNode"><span class="Identifier">htmlTag</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="xmltree.html#XmlNode"><span class="Identifier">XmlNode</span></a><span class="Other">)</span><span class="Other">:</span> <a href="htmlparser.html#HtmlTag"><span class="Identifier">HtmlTag</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Gets <tt class="docutils literal"><span class="pre">n</span></tt>'s tag as a <tt class="docutils literal"><span class="pre">HtmlTag</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">n</span></tt> のタグを <tt class="docutils literal"><span class="pre">HtmlTag</span></tt> として取得します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlparser.nim#L353"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlparser.nim#L353" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1293,7 +1289,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#htmlTag%2Cstring"><span class="Identifier">htmlTag</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="htmlparser.html#HtmlTag"><span class="Identifier">HtmlTag</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Converts <tt class="docutils literal"><span class="pre">s</span></tt> to a <tt class="docutils literal"><span class="pre">HtmlTag</span></tt>. If <tt class="docutils literal"><span class="pre">s</span></tt> is no HTML tag, <tt class="docutils literal"><span class="pre">tagUnknown</span></tt> is returned. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">s</span></tt> を <tt class="docutils literal"><span class="pre">HtmlTag</span></tt> へ変換します。<tt class="docutils literal"><span class="pre">s</span></tt> が HTML タグでなければ、 <tt class="docutils literal"><span class="pre">tagUnknown</span></tt> が返されます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlparser.nim#L359"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlparser.nim#L359" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1302,10 +1298,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#runeToEntity%2CRune"><span class="Identifier">runeToEntity</span></a><span class="Other">(</span><span class="Identifier">rune</span><span class="Other">:</span> <a href="unicode.html#Rune"><span class="Identifier">Rune</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-converts a Rune to its numeric HTML entity equivalent.
-
+ルーン文字を数値 HTML エンティティへ等価変換します。
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">import</span>
   <span class="Identifier">unicode</span>
@@ -1323,10 +1316,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#entityToRune%2Cstring"><span class="Identifier">entityToRune</span></a><span class="Other">(</span><span class="Identifier">entity</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="unicode.html#Rune"><span class="Identifier">Rune</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Converts an HTML entity name like <tt class="docutils literal"><span class="pre">&amp;Uuml;</span></tt> or values like <tt class="docutils literal"><span class="pre">&amp;#220;</span></tt> or <tt class="docutils literal"><span class="pre">&amp;#x000DC;</span></tt> to its UTF-8 equivalent. Rune(0) is returned if the entity name is unknown.
-
+<tt class="docutils literal"><span class="pre">&amp;Uuml;</span></tt> などの HTML エンティティ名、または <tt class="docutils literal"><span class="pre">&amp;#220;</span></tt> や <tt class="docutils literal"><span class="pre">&amp;#x000DC;</span></tt> などの値を UTF-8 へ等価変換します。未知のエンティティ名ならば Rune(0) が返されます。
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">import</span>
   <span class="Identifier">unicode</span>
@@ -1346,10 +1336,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#entityToUtf8%2Cstring"><span class="Identifier">entityToUtf8</span></a><span class="Other">(</span><span class="Identifier">entity</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Converts an HTML entity name like <tt class="docutils literal"><span class="pre">&amp;Uuml;</span></tt> or values like <tt class="docutils literal"><span class="pre">&amp;#220;</span></tt> or <tt class="docutils literal"><span class="pre">&amp;#x000DC;</span></tt> to its UTF-8 equivalent. "" is returned if the entity name is unknown. The HTML parser already converts entities to UTF-8.
-
+<tt class="docutils literal"><span class="pre">&amp;Uuml;</span></tt> などの HTML エンティティ名、または <tt class="docutils literal"><span class="pre">&amp;#220;</span></tt> や <tt class="docutils literal"><span class="pre">&amp;#x000DC;</span></tt> などの値を UTF-8 へ等価変換します。未知のエンティティ名ならば "" が返されます。HTML 構文解析器は既存のエンティティを UTF-8 へ変換します。
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">const</span>
   <span class="Identifier">sigma</span> <span class="Other">=</span> <span class="StringLit">"Σ"</span>
@@ -1377,7 +1364,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">RootEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-ストリーム <tt class="docutils literal"><span class="pre">s</span></tt> から XML の構文解析を行い、 <tt class="docutils literal"><span class="pre">XmlNode</span></tt> を返します。構文解析エラーの発生時に <tt class="docutils literal"><span class="pre">errors</span></tt> シーケンスへ追加します。&nbsp;&nbsp;<a
+ストリーム <tt class="docutils literal"><span class="pre">s</span></tt> から HTML の構文解析を行い、 <tt class="docutils literal"><span class="pre">XmlNode</span></tt> を返します。構文解析エラーの発生時に <tt class="docutils literal"><span class="pre">errors</span></tt> シーケンスへ追加します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlparser.nim#L2013"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlparser.nim#L2013" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1387,7 +1374,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">RootEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Parses the HTML from stream <tt class="docutils literal"><span class="pre">s</span></tt> and returns a <tt class="docutils literal"><span class="pre">XmlNode</span></tt>. All parsing errors are ignored. &nbsp;&nbsp;<a
+ストリーム <tt class="docutils literal"><span class="pre">s</span></tt> から HTML の構文解析を行い、 <tt class="docutils literal"><span class="pre">XmlNode</span></tt> を返します。構文解析エラーは一切無視します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlparser.nim#L2038"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlparser.nim#L2038" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1397,7 +1384,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">RootEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Parses the HTML from string <tt class="docutils literal"><span class="pre">html</span></tt> and returns a <tt class="docutils literal"><span class="pre">XmlNode</span></tt>. All parsing errors are ignored. &nbsp;&nbsp;<a
+文字列  <tt class="docutils literal"><span class="pre">html</span></tt> から HTML の構文解析を行い、 <tt class="docutils literal"><span class="pre">XmlNode</span></tt> を返します。構文解析エラーは一切無視します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlparser.nim#L2044"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlparser.nim#L2044" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1408,7 +1395,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">RootEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Loads and parses HTML from file specified by <tt class="docutils literal"><span class="pre">path</span></tt>, and returns a <tt class="docutils literal"><span class="pre">XmlNode</span></tt>. 構文解析エラーの発生時に <tt class="docutils literal"><span class="pre">errors</span></tt> シーケンスへ追加します。&nbsp;&nbsp;<a
+指定されたファイルの  <tt class="docutils literal"><span class="pre">path</span></tt> から HTML のロードと構文解析を行い、 <tt class="docutils literal"><span class="pre">XmlNode</span></tt> を返します。構文解析エラーの発生時に <tt class="docutils literal"><span class="pre">errors</span></tt> シーケンスへ追加します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlparser.nim#L2049"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlparser.nim#L2049" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1418,7 +1405,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">RootEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Loads and parses HTML from file specified by <tt class="docutils literal"><span class="pre">path</span></tt>, and returns a <tt class="docutils literal"><span class="pre">XmlNode</span></tt>. All parsing errors are ignored. &nbsp;&nbsp;<a
+指定されたファイルの  <tt class="docutils literal"><span class="pre">path</span></tt> から HTML のロードと構文解析を行い、 <tt class="docutils literal"><span class="pre">XmlNode</span></tt> を返します。構文解析エラーは一切無視します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/htmlparser.nim#L2057"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/htmlparser.nim#L2057" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1433,7 +1420,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 Generated: 2020-01-23 17:27:55 UTC</small>
+        <small>Nim で作成しました。 生成日時: 2020年01月23日 午前17時27分55秒 (UTC)</small>
       </div>
     </div>
   </div>

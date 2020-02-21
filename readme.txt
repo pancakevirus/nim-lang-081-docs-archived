@@ -13,10 +13,10 @@ Nim のライセンスに準ずるものとします。ただし、翻訳物にも著作権があります。
 作業記録
 --------
 対象バージョン : Nim 1.0.6
-作業対象ファイル : 完了: 47 - 合計 : 181 = 残り : 134
+作業対象ファイル : 完了: 51 - 合計 : 181 = 残り : 130
 
 Jan : 31
-Feb : 29 (Current: 16 / 13)  → 60
+Feb : 29 (Current: 19 / 10)  → 60
 Mar : 31 (Current:  0 / 31)  → 91
 Apr : 
 
@@ -70,6 +70,10 @@ Feb の目標 : 80 ～ 120 (前半～中盤)
 	winlean.html
 	wordwrap.html
 	xmlparser.html
+	codeowners.html
+	htmlparser.html
+	dynlib.html
+	chains.html
 
 
 翻訳活動への参加方法

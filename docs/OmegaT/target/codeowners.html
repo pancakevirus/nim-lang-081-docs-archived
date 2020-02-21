@@ -17,7 +17,7 @@
 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600' rel='stylesheet' type='text/css'/>
 
 
-<title>Code owners</title>
+<title>コードの権利所有者</title>
 <style type="text/css" >
 /*
 Stylesheet for use with Docutils/rst2html.
@@ -805,34 +805,34 @@ function main() {
 <body onload="main()">
 <div class="document" id="documentId">
   <div class="container">
-    <h1 class="title">Code owners</h1>
+    <h1 class="title">コードの権利所有者</h1>
     
-<h1 id="subsystems-and-code-owners">Subsystems and code owners</h1><p><em>Note</em>: This list is incomplete, in doubt dom96 is responsible for the standard library, araq is responsible for the compiler.</p>
+<h1 id="subsystems-and-code-owners">サブシステムとコードの権利所有者</h1><p><em>備考</em>: このリストは未完成です。標準ライブラリの責務 は dom96 にあるか疑問ですが、コンパイラの責務は araq にあります。</p>
 
-<h2 id="compiler">コンパイラ</h2><table border="1" class="docutils"><tr><th>サブシステム</th><th>owner(s)</th></tr>
-<tr><td>Parsing, Lexing</td><td>araq</td></tr>
-<tr><td>Renderer</td><td>cooldome, araq</td></tr>
-<tr><td>Order of passes</td><td>cooldome</td></tr>
-<tr><td>Semantic Checking</td><td>araq</td></tr>
-<tr><td>Virtual machine</td><td>jangko, GULPF, araq</td></tr>
-<tr><td>Sempass2: effects  </td><td>tracking     cooldome, araq</td></tr>
-<tr><td>type system, concepts</td><td>zahary</td></tr>
+<h2 id="compiler">コンパイラ</h2><table border="1" class="docutils"><tr><th>サブシステム</th><th>権利所有者</th></tr>
+<tr><td>構文解析器、字句解析器</td><td>araq</td></tr>
+<tr><td>レンダラ</td><td>cooldome, araq</td></tr>
+<tr><td>パスのオーダー</td><td>cooldome</td></tr>
+<tr><td>セマンティクス検査</td><td>araq</td></tr>
+<tr><td>仮想マシン</td><td>jangko, GULPF, araq</td></tr>
+<tr><td>Sempass2: エフェクト </td><td>トラッキングは cooldome, araq</td></tr>
+<tr><td>型システム、概念</td><td>zahary</td></tr>
 <tr><td>transf</td><td>cooldome, araq</td></tr>
-<tr><td>semfold constant  </td><td>folding       araq</td></tr>
-<tr><td>template instantiation</td><td>zahary, araq</td></tr>
-<tr><td>term rewriting macros</td><td>cooldome, araq</td></tr>
-<tr><td>closure interators</td><td>yglukhov, araq</td></tr>
-<tr><td>lambda lifting</td><td>yglukhov, araq</td></tr>
-<tr><td>c, cpp codegen</td><td>lemonboy, araq</td></tr>
-<tr><td>js codegen</td><td>yglukhov, lemonboy</td></tr>
-<tr><td>alias analysis</td><td>araq</td></tr>
-<tr><td>dfa, writetracking</td><td>araq</td></tr>
-<tr><td>parallel,  </td><td>multithreading       araq</td></tr>
-<tr><td>incremental</td><td>araq</td></tr>
-<tr><td>sizeof computations</td><td>krux02</td></tr>
+<tr><td>semfold 定数 </td><td>フォルディングは araq</td></tr>
+<tr><td>テンプレートのインスタンス化</td><td>zahary, araq</td></tr>
+<tr><td>項の再書き換えマクロ</td><td>cooldome, araq</td></tr>
+<tr><td>クロージャ―のイテレータ</td><td>yglukhov, araq</td></tr>
+<tr><td>ラムダのリフト</td><td>yglukhov, araq</td></tr>
+<tr><td>c, cpp コード生成</td><td>lemonboy, araq</td></tr>
+<tr><td>js コード生成</td><td>yglukhov, lemonboy</td></tr>
+<tr><td>エイリアス分析</td><td>araq</td></tr>
+<tr><td>決定性有限オートマトン (DFA)、ライト・トラッキング</td><td>araq</td></tr>
+<tr><td>並列処理、 </td><td>マルチスレッドは araq</td></tr>
+<tr><td>インクリメンタル</td><td>araq</td></tr>
+<tr><td>sizeof の計算</td><td>krux02</td></tr>
 <tr><td>例外処理</td><td>cooldome, araq</td></tr>
 </table>
-<h2 id="standard-library">標準ライブラリ</h2><table border="1" class="docutils"><tr><th>サブシステム</th><th>owner(s)</th></tr>
+<h2 id="standard-library">標準ライブラリ</h2><table border="1" class="docutils"><tr><th>サブシステム</th><th>権利所有者</th></tr>
 <tr><td>async</td><td>dom96</td></tr>
 <tr><td>strutils</td><td>araq</td></tr>
 <tr><td>sequtils</td><td>dom96, araq</td></tr>
@@ -842,10 +842,10 @@ function main() {
 <tr><td>nre</td><td>flaviu</td></tr>
 <tr><td>math, fenv</td><td>krux02, cooldome</td></tr>
 <tr><td>io</td><td>dom96</td></tr>
-<tr><td>garbage collector</td><td>araq</td></tr>
-<tr><td>Go garbage collector</td><td>stefantalpalaru</td></tr>
-<tr><td>coroutines</td><td>Rokas Kupstys</td></tr>
-<tr><td>collections</td><td>GULPF</td></tr>
+<tr><td>ガーベジ・コレクター</td><td>araq</td></tr>
+<tr><td>Go ガーベジ・コレクター</td><td>stefantalpalaru</td></tr>
+<tr><td>コルーチン</td><td>Rokas Kupstys (ロカス・クプスタイス)</td></tr>
+<tr><td>コレクション</td><td>GULPF</td></tr>
 <tr><td>parseopt</td><td>araq</td></tr>
 <tr><td>json</td><td>dom96</td></tr>
 </table>

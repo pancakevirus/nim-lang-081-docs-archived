@@ -5,6 +5,14 @@
   <body>
 <!-- Default translations -->
     <tu>
+      <tuv lang="EN-US">
+        <seg>"" is returned if the entity name is unknown.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T025253Z" creationid="isVowel" creationdate="20200221T025253Z">
+        <seg>未知のエンティティ名ならば "" が返されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>この引用句はロバートさんの発言だから英語から日本語へ翻訳するときhは一人称の「I (私は)」を省いて構わない。付けるなら、「私に言わせるならば、偉大なる料理人こそ心より尊敬する芸術家だ」あたりでしょう。
 
 truly は心より～の意味もあります。
@@ -196,8 +204,8 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       <tuv lang="EN-US">
         <seg>GC</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200209T063336Z" creationid="isVowel" creationdate="20200209T063336Z">
-        <seg>ガベージコレクタ</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T034658Z" creationid="isVowel" creationdate="20200209T063336Z">
+        <seg>ガベージコレクター</seg>
       </tuv>
     </tu>
     <tu>
@@ -620,6 +628,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Note: This list is incomplete, in doubt dom96 is responsible for the standard library, araq is responsible for the compiler.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T093855Z" creationid="isVowel" creationdate="20200220T091352Z">
+        <seg>備考: このリストは未完成です。標準ライブラリの責務 は dom96 にあるか疑問ですが、コンパイラの責務は araq にあります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>assignment operator (like +=, *=)</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T060832Z" creationid="isVowel" creationdate="20200115T060832Z">
@@ -824,6 +840,14 @@ proc helloWorld*(times: int) =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>NOTE: The behaviour might change in future versions as it is not clear what "wild HTML the real world uses" really implies.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T083851Z" creationid="isVowel" creationdate="20200221T075935Z">
+        <seg>備考: 「実世界で使われている野良 HTML」の意味が曖昧なため、将来のバージョンで振る舞いが変更される場合があります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Note: Channels are designed for the Thread type.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200218T075622Z" creationid="isVowel" creationdate="20200218T075622Z">
@@ -872,6 +896,14 @@ proc helloWorld*(times: int) =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Note: The resulting XmlNode already uses the clientData field, so it cannot be used by clients of this library.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T081402Z" creationid="isVowel" creationdate="20200221T081306Z">
+        <seg>備考: XmlNode の結果として既存の clientData フィールドを使うため、このライブラリのクライアントで clientData フィールドは使えません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Note: The experimental features of Nim are covered here.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T062340Z" creationid="isVowel" creationdate="20200122T062340Z">
@@ -900,6 +932,26 @@ proc helloWorld*(times: int) =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200123T031540Z" creationid="isVowel" creationdate="20200123T031540Z">
         <seg>エスケープ [ESC]</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>import htmlparser
+import xmltree  # To use '$' for XmlNode
+import strtabs  # To access XmlAttributes
+import os       # To use splitFile
+import strutils # To use cmpIgnoreCase
+
+proc transformHyperlinks() =</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T083541Z" creationid="isVowel" creationdate="20200221T083541Z">
+        <seg>import htmlparser
+import xmltree  # XmlNode で '$' を使用
+import strtabs  # XmlAttributes へのアクセス
+import os       # splitFile で使用
+import strutils # cmpIgnoreCase で使用
+
+proc transformHyperlinks() =</seg>
       </tuv>
     </tu>
     <tu>
@@ -1082,6 +1134,38 @@ assert m.getMimetype("FaKeXT") == "text/fakelang"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>tagDfn,                     ## the HTML ``dfn`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagDfn,                     ## HTML ``dfn`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagDialog,                  ## the HTML ``dialog`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagDialog,                  ## HTML ``dialog`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagDiv,                     ## the HTML ``div`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagDiv,                     ## HTML ``div`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagDir,                     ## the deprecated HTLM ``dir`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031226Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagDir,                     ## 廃止予定の HTML ``dir`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>ai_family*: cint             ## Address family of socket.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T083422Z" creationid="isVowel" creationdate="20200208T083422Z">
@@ -1098,6 +1182,14 @@ assert m.getMimetype("FaKeXT") == "text/fakelang"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>tagAbbr,                    ## the deprecated HTML ``abbr`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031156Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagAbbr,                    ## 廃止予定の HTML ``abbr`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>xnCData,                    ## a CDATA node</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200213T060148Z" creationid="isVowel" creationdate="20200213T060148Z">
@@ -1106,10 +1198,90 @@ assert m.getMimetype("FaKeXT") == "text/fakelang"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>tagDl,                      ## the HTML ``dl`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagDl,                      ## HTML ``dl`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagDt,                      ## the HTML ``dt`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagDt,                      ## HTML ``dt`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagEm,                      ## the HTML ``em`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagEm,                      ## HTML ``em`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagEmbed,                   ## the HTML ``embed`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagEmbed,                   ## HTML ``embed`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagFieldset,                ## the HTML ``fieldset`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagFieldset,                ## HTML ``fieldset`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagFigcaption,              ## the HTML ``figcaption`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagFigcaption,              ## HTML ``figcaption`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>## Takes an integer and outputs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200119T012434Z" creationid="isVowel" creationdate="20200119T012434Z">
         <seg>## "hello world!" の出力回数を</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagFigure,                  ## the HTML ``figure`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagFigure,                  ## HTML ``figure`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagFont,                    ## the deprecated HTML ``font`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031230Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagFont,                    ## 廃止予定の HTML ``font`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagFooter,                  ## the HTML ``footer`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagFooter,                  ## HTML ``footer`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagForm,                    ## the HTML ``form`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagForm,                    ## HTML ``form`` 要素</seg>
       </tuv>
     </tu>
     <tu>
@@ -1138,6 +1310,14 @@ assert m.getMimetype("FaKeXT") == "text/fakelang"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>tagAcronym,                 ## the HTML ``acronym`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagAcronym,                 ## HTML ``acronym`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>xnEntity,                   ## an entity (like ``&amp;thing;``)</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200213T060459Z" creationid="isVowel" creationdate="20200213T060130Z">
@@ -1146,10 +1326,90 @@ assert m.getMimetype("FaKeXT") == "text/fakelang"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>tagFrame,                   ## the HTML ``frame`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagFrame,                   ## HTML ``frame`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagFrameset,                ## the deprecated HTML ``frameset`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031234Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagFrameset,                ## 廃止予定の HTML ``frameset`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagH1,                      ## the HTML ``h1`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagH1,                      ## HTML ``h1`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagH2,                      ## the HTML ``h2`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagH2,                      ## HTML ``h2`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagH3,                      ## the HTML ``h3`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagH3,                      ## HTML ``h3`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Clonezilla, SteamOS, Absolute, NixOS, ## NixOS or a Nix build environment</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200131T095623Z" creationid="isVowel" creationdate="20200131T095623Z">
         <seg>Clonezilla, SteamOS, Absolute, NixOS, ## Unix OS または Unix ビルド環境</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagH4,                      ## the HTML ``h4`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagH4,                      ## HTML ``h4`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagH5,                      ## the HTML ``h5`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagH5,                      ## HTML ``h5`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagH6,                      ## the HTML ``h6`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagH6,                      ## HTML ``h6`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagHead,                    ## the HTML ``head`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagHead,                    ## HTML ``head`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagHeader,                  ## the HTML ``header`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagHeader,                  ## HTML ``header`` 要素</seg>
       </tuv>
     </tu>
     <tu>
@@ -1186,6 +1446,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>tagAddress,                 ## the HTML ``address`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagAddress,                 ## HTML ``address`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>xnComment                   ## an XML comment</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200213T060115Z" creationid="isVowel" creationdate="20200213T060115Z">
@@ -1194,10 +1462,90 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>tagHgroup,                  ## the HTML ``hgroup`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagHgroup,                  ## HTML ``hgroup`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagHtml,                    ## the HTML ``html`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagHtml,                    ## HTML ``html`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagHr,                      ## the HTML ``hr`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagHr,                      ## HTML ``hr`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>maxBody: int                 ## The maximum content-length that will be read for the body.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200219T110839Z" creationid="isVowel" creationdate="20200219T110839Z">
         <seg>maxBody: int                 ## body (本文) を読み込んだときの最大コンテンツ長です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagI,                       ## the HTML ``i`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagI,                       ## HTML ``i`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagIframe,                  ## the deprecated HTML ``iframe`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031239Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagIframe,                  ## 廃止予定の HTML ``iframe`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagImg,                     ## the HTML ``img`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagImg,                     ## HTML ``img`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagInput,                   ## the HTML ``input`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagInput,                   ## HTML ``input`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagIns,                     ## the HTML ``ins`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagIns,                     ## HTML ``ins`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagIsindex,                 ## the deprecated HTML ``isindex`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031243Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagIsindex,                 ## 廃止予定の HTML ``isindex`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagKbd,                     ## the HTML ``kbd`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagKbd,                     ## HTML ``kbd`` 要素</seg>
       </tuv>
     </tu>
     <tu>
@@ -1218,10 +1566,98 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>tagApplet,                  ## the deprecated HTML ``applet`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031201Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagApplet,                  ## 廃止予定の HTML ``applet`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagKeygen,                  ## the HTML ``keygen`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagKeygen,                  ## HTML ``keygen`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagLabel,                   ## the HTML ``label`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagLabel,                   ## HTML ``label`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagLegend,                  ## the HTML ``legend`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagLegend,                  ## HTML ``legend`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>## The first line</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T175736Z" creationid="isVowel" creationdate="20200212T175736Z">
         <seg>## 一行目</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagLi,                      ## the HTML ``li`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagLi,                      ## HTML ``li`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagLink,                    ## the HTML ``link`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagLink,                    ## HTML ``link`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagMap,                     ## the HTML ``map`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagMap,                     ## HTML ``map`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagMark,                    ## the HTML ``mark`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagMark,                    ## HTML ``mark`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagMenu,                    ## the deprecated HTML ``menu`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031249Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagMenu,                    ## 廃止予定の HTML ``menu`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagMeta,                    ## the HTML ``meta`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagMeta,                    ## HTML ``meta`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagMeter,                   ## the HTML ``meter`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagMeter,                   ## HTML ``meter`` 要素</seg>
       </tuv>
     </tu>
     <tu>
@@ -1242,10 +1678,154 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>tagArea,                    ## the HTML ``area`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagArea,                    ## HTML ``area`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagNav,                     ## the HTML ``nav`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagNav,                     ## HTML ``nav`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagNobr,                    ## the deprecated HTML ``nobr`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031254Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagNobr,                    ## 廃止予定の HTML ``nobr`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagNoframes,                ## the deprecated HTML ``noframes`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031306Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagNoframes,                ## 廃止予定の HTML ``noframes`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>ai_flags*: cint              ## Input flags.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T083527Z" creationid="isVowel" creationdate="20200208T083527Z">
         <seg>ai_flags*: cint              ## 入力フラグ群。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagNoscript,                ## the HTML ``noscript`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagNoscript,                ## HTML ``noscript`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagObject,                  ## the HTML ``object`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagObject,                  ## HTML ``object`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagOl,                      ## the HTML ``ol`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagOl,                      ## HTML ``ol`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagOptgroup,                ## the HTML ``optgroup`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagOptgroup,                ## HTML ``optgroup`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagOption,                  ## the HTML ``option`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagOption,                  ## HTML ``option`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagOutput,                  ## the HTML ``output`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagOutput,                  ## HTML ``output`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagP,                       ## the HTML ``p`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagP,                       ## HTML ``p`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagArticle,                 ## the HTML ``article`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagArticle,                 ## HTML ``article`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagParam,                   ## the HTML ``param`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagParam,                   ## HTML ``param`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagPre,                     ## the HTML ``pre`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagPre,                     ## HTML ``pre`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagProgress,                ## the HTML ``progress`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagProgress,                ## HTML ``progress`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagQ,                       ## the HTML ``q`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagQ,                       ## HTML ``q`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagRp,                      ## the HTML ``rp`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagRp,                      ## HTML ``rp`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagRt,                      ## the HTML ``rt`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagRt,                      ## HTML ``rt`` 要素</seg>
       </tuv>
     </tu>
     <tu>
@@ -1258,10 +1838,74 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>tagRuby,                    ## the HTML ``ruby`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagRuby,                    ## HTML ``ruby`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagS,                       ## the deprecated HTML ``s`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031313Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagS,                       ## 廃止予定の HTML ``s`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagSamp,                    ## the HTML ``samp`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagSamp,                    ## HTML ``samp`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagScript,                  ## the HTML ``script`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagScript,                  ## HTML ``script`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>ai_addrlen*: csize           ## Length of socket address.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T083447Z" creationid="isVowel" creationdate="20200208T083447Z">
         <seg>ai_addrlen*: csize           ## ソケットのアドレス長。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagAside,                   ## the HTML ``aside`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagAside,                   ## HTML ``aside`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagSection,                 ## the HTML ``section`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagSection,                 ## HTML ``section`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagSelect,                  ## the HTML ``select`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagSelect,                  ## HTML ``select`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagSmall,                   ## the HTML ``small`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagSmall,                   ## HTML ``small`` 要素</seg>
       </tuv>
     </tu>
     <tu>
@@ -1290,10 +1934,186 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>tagSource,                  ## the HTML ``source`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagSource,                  ## HTML ``source`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagSpan,                    ## the HTML ``span`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagSpan,                    ## HTML ``span`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagStrike,                  ## the deprecated HTML ``strike`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031316Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagStrike,                  ## 廃止予定の HTML ``strike`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagStrong,                  ## the HTML ``strong`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagStrong,                  ## HTML ``strong`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagStyle,                   ## the HTML ``style`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagStyle,                   ## HTML ``style`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagSub,                     ## the HTML ``sub`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagSub,                     ## HTML ``sub`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagSummary,                 ## the HTML ``summary`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagSummary,                 ## HTML ``summary`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagAudio,                   ## the HTML ``audio`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagAudio,                   ## HTML ``audio`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagSup,                     ## the HTML ``sup`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagSup,                     ## HTML ``sup`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagTable,                   ## the HTML ``table`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagTable,                   ## HTML ``table`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagTbody,                   ## the HTML ``tbody`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagTbody,                   ## HTML ``tbody`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagTd,                      ## the HTML ``td`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagTd,                      ## HTML ``td`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagTextarea,                ## the HTML ``textarea`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagTextarea,                ## HTML ``textarea`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagTfoot,                   ## the HTML ``tfoot`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagTfoot,                   ## HTML ``tfoot`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagTh,                      ## the HTML ``th`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagTh,                      ## HTML ``th`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagThead,                   ## the HTML ``thead`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagThead,                   ## HTML ``thead`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagTime,                    ## the HTML ``time`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagTime,                    ## HTML ``time`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagTitle,                   ## the HTML ``title`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagTitle,                   ## HTML ``title`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>ai_canonname*: cstring       ## Canonical name of service location.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T083455Z" creationid="isVowel" creationdate="20200208T083455Z">
         <seg>ai_canonname*: cstring       ## サービスロケーションの正規名。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagB,                       ## the HTML ``b`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagB,                       ## HTML ``b`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagTr,                      ## the HTML ``tr`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagTr,                      ## HTML ``tr`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagTrack,                   ## the HTML ``track`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagTrack,                   ## HTML ``track`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagTt,                      ## the HTML ``tt`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagTt,                      ## HTML ``tt`` 要素</seg>
       </tuv>
     </tu>
     <tu>
@@ -1314,6 +2134,54 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>tagU,                       ## the deprecated HTML ``u`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031322Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagU,                       ## 廃止予定の HTML ``u`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagUl,                      ## the HTML ``ul`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagUl,                      ## HTML ``ul`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagVar,                     ## the HTML ``var`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagVar,                     ## HTML ``var`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagVideo,                   ## the HTML ``video`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagVideo,                   ## HTML ``video`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagWbr                      ## the HTML ``wbr`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagWbr                      ## HTML ``wbr`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagBase,                    ## the HTML ``base`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagBase,                    ## HTML ``base`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>## The first line</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T175710Z" creationid="isVowel" creationdate="20200212T175710Z">
@@ -1326,6 +2194,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T083502Z" creationid="isVowel" creationdate="20200208T083502Z">
         <seg>ai_addr*: ptr SockAddr        ## ソケットのソケットアドレス。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagBdi,                     ## the HTML ``bdi`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagBdi,                     ## HTML ``bdi`` 要素</seg>
       </tuv>
     </tu>
     <tu>
@@ -1362,6 +2238,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>tagBdo,                     ## the deprecated HTML ``dbo`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031209Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagBdo,                     ## 廃止予定の HTML ``dbo`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>## the second line</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T181742Z" creationid="isVowel" creationdate="20200212T181742Z">
@@ -1378,6 +2262,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>tagBasefont,                ## the deprecated HTML ``basefont`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031212Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagBasefont,                ## 廃止予定の HTML ``basefont`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>ai_addrlen*: SockLen         ## Length of socket address.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T083555Z" creationid="isVowel" creationdate="20200208T083555Z">
@@ -1390,6 +2282,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T083511Z" creationid="isVowel" creationdate="20200208T083511Z">
         <seg>ai_next*: ptr AddrInfo        ## 次のリストへのポインタ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagBig,                     ## the HTML ``big`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagBig,                     ## HTML ``big`` 要素</seg>
       </tuv>
     </tu>
     <tu>
@@ -1418,6 +2318,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>tagUnknown,                 ## unknown HTML element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031425Z" creationid="isVowel" creationdate="20200221T031425Z">
+        <seg>tagUnknown,                 ## 未知の HTML 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>xnText,                     ## a text element</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200213T060055Z" creationid="isVowel" creationdate="20200213T060055Z">
@@ -1442,10 +2350,50 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>tagBlockquote,              ## the HTML ``blockquote`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagBlockquote,              ## HTML ``blockquote`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>ai_addr*: ptr SockAddr        ## Socket address of socket.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T083604Z" creationid="isVowel" creationdate="20200208T083604Z">
         <seg>ai_addr*: ptr SockAddr        ## ケットのソケットアドレス。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagBody,                    ## the HTML ``body`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagBody,                    ## HTML ``body`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagBr,                      ## the HTML ``br`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagBr,                      ## HTML ``br`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>## This type contains a description of a person</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T015752Z" creationid="isVowel" creationdate="20200221T015726Z">
+        <seg>## この型には person の説明があります</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>## `numValues` stores the number of values</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T015747Z" creationid="isVowel" creationdate="20200221T015747Z">
+        <seg>## `numValues` には数値を格納します</seg>
       </tuv>
     </tu>
     <tu>
@@ -1474,10 +2422,66 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>tagButton,                  ## the HTML ``button`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagButton,                  ## HTML ``button`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagCanvas,                  ## the HTML ``canvas`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagCanvas,                  ## HTML ``canvas`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>ai_next*: ptr AddrInfo        ## Pointer to next in list.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T083620Z" creationid="isVowel" creationdate="20200208T083620Z">
         <seg>ai_next*: ptr AddrInfo        ## 次のリストへのポインタ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagCaption,                 ## the HTML ``caption`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagCaption,                 ## HTML ``caption`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagCenter,                  ## the deprecated HTML ``center`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031217Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagCenter,                  ## 廃止予定の HTML ``center`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagCite,                    ## the HTML ``cite`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagCite,                    ## HTML ``cite`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagCode,                    ## the HTML ``code`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagCode,                    ## HTML ``code`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagCol,                     ## the HTML ``col`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagCol,                     ## HTML ``col`` 要素</seg>
       </tuv>
     </tu>
     <tu>
@@ -1498,6 +2502,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>tagA,                       ## the HTML ``a`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagA,                       ## HTML ``a`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>xnElement,                  ## an element with 0 or more children</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200213T060455Z" creationid="isVowel" creationdate="20200213T060455Z">
@@ -1506,10 +2518,58 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>tagColgroup,                ## the HTML ``colgroup`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagColgroup,                ## HTML ``colgroup`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>echo toknizr.kind # All the kinds of tokens can be processed here.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200211T130834Z" creationid="isVowel" creationdate="20200211T130821Z">
         <seg>echo toknizr.kind # ここでトークン全種を処理します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagCommand,                 ## the HTML ``command`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagCommand,                 ## HTML ``command`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagDatalist,                ## the HTML ``datalist`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagDatalist,                ## HTML ``datalist`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagDd,                      ## the HTML ``dd`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagDd,                      ## HTML ``dd`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagDel,                     ## the HTML ``del`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagDel,                     ## HTML ``del`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagDetails,                 ## the HTML ``details`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagDetails,                 ## HTML ``details`` 要素</seg>
       </tuv>
     </tu>
     <tu>
@@ -1646,8 +2706,8 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       <tuv lang="EN-US">
         <seg>Additional documentation about Nim's GC and how to operate it in a</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200209T063257Z" creationid="isVowel" creationdate="20200209T063257Z">
-        <seg>Nim のガベージコレクタとリアルタイム環境における制御方法についての</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T034700Z" creationid="isVowel" creationdate="20200209T063257Z">
+        <seg>Nim のガベージコレクターとリアルタイム環境における制御方法についての</seg>
       </tuv>
     </tu>
     <tu>
@@ -1698,6 +2758,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T085108Z" creationid="isVowel" creationdate="20200208T085108Z">
         <seg>アルゴリズム</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>All parsing errors are ignored.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T021433Z" creationid="isVowel" creationdate="20200221T021433Z">
+        <seg>構文解析エラーは一切無視します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2104,6 +3172,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Code owners</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091249Z" creationid="isVowel" creationdate="20200220T091249Z">
+        <seg>コードの権利所有者</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>CodegenDecl pragma</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T083600Z" creationid="isVowel" creationdate="20200114T083600Z">
@@ -2274,6 +3350,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Converts s to a HtmlTag.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T023702Z" creationid="isVowel" creationdate="20200221T023702Z">
+        <seg>s を HtmlTag へ変換します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Converts a MD5Digest value into its string representation.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200129T095405Z" creationid="isVowel" creationdate="20200129T095405Z">
@@ -2286,6 +3370,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T091759Z" creationid="isVowel" creationdate="20200127T091634Z">
         <seg>文字列 hash を SecureHash へ変換します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Converts an HTML entity name like &amp;Uuml; or values like &amp;#220; or &amp;#x000DC; to its UTF-8 equivalent.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T024741Z" creationid="isVowel" creationdate="20200221T024741Z">
+        <seg>&amp;Uuml; などの HTML エンティティ名、または &amp;#220; や &amp;#x000DC; などの値を UTF-8 へ等価変換します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2752,6 +3844,14 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Every tag in the resulting tree is in lower case.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T080546Z" creationid="isVowel" creationdate="20200221T080546Z">
+        <seg>ツリーにある全タグは小文字になります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Example</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200218T075517Z" creationid="isVowel" creationdate="20200218T075517Z">
@@ -2780,6 +3880,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200213T053305Z" creationid="isVowel" creationdate="20200213T053305Z">
         <seg>用例: Lifting Procs</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Example: Transforming hyperlinks</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T022906Z" creationid="isVowel" creationdate="20200221T022906Z">
+        <seg>用例: ハイパーリンクの変換</seg>
       </tuv>
     </tu>
     <tu>
@@ -3068,6 +4176,30 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:27:34 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T034133Z" creationid="isVowel" creationdate="20200221T034133Z">
+        <seg>生成日時: 2020年01月23日 午前17時27分37秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:27:39 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030653Z" creationid="isVowel" creationdate="20200221T030653Z">
+        <seg>生成日時: 2020年01月23日 午前17時27分39秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:27:41 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T065458Z" creationid="isVowel" creationdate="20200220T065458Z">
+        <seg>生成日時: 2020年01月23日 午前17時27分41秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Generated: 2020-01-23 17:27:42 UTC</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T175615Z" creationid="isVowel" creationdate="20200212T175615Z">
@@ -3112,6 +4244,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200215T070717Z" creationid="isVowel" creationdate="20200215T070717Z">
         <seg>生成日時: 2020年01月23日 午前17時27分54秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:27:55 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T023117Z" creationid="isVowel" creationdate="20200221T023117Z">
+        <seg>生成日時: 2020年01月23日 午前17時27分55秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
@@ -3380,10 +4520,26 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Generation of HTML documents is done via the doc command.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T014956Z" creationid="isVowel" creationdate="20200221T014956Z">
+        <seg>HTML ドキュメンドは doc コマンドで生成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Generics</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T063848Z" creationid="isVowel" creationdate="20200115T063848Z">
         <seg>ジェネリック</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Gets n's tag as a HtmlTag.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T023827Z" creationid="isVowel" creationdate="20200221T023827Z">
+        <seg>n のタグを HtmlTag として取得します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3416,6 +4572,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T104411Z" creationid="isVowel" creationdate="20200208T104411Z">
         <seg>/etc/nim ディレクトリにあるグローバルコンフィギュレーション・ファイル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Go garbage collector</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091945Z" creationid="isVowel" creationdate="20200220T091945Z">
+        <seg>Go ガーベジ・コレクター</seg>
       </tuv>
     </tu>
     <tu>
@@ -3536,6 +4700,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>If s is no HTML tag, tagUnknown is returned.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T023633Z" creationid="isVowel" creationdate="20200221T023539Z">
+        <seg>s が HTML タグでなければ、 tagUnknown が返されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>1.「meaninful」は「meaningful」のスペルミスです。この訳では「有意義な」としていますけど、省いたり、「詳しいエラー内容」と言い換えたり、または「有効な～」や「重要な～」としてもいいと思います。改訳を考えた方が良いでしょう。
 
 2. 「検証用に収集した有意義なエラーの出力後」は冗長なので「エラーの詳細を出力後」へ改訳。
@@ -3586,6 +4758,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200217T023740Z" creationid="isVowel" creationdate="20200217T023740Z">
         <seg>ファイルポインタがファイル終端を超えたならば 0 を返し、バイトを buf へ読み込みません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If the library fails to load or the function 'greet' is not found, it quits with a failure error code.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T084134Z" creationid="isVowel" creationdate="20200221T084134Z">
+        <seg>ライブラリのロードに失敗、または 'greet' 関数がみつからないときは失敗のエラーコードを返して終了します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3650,6 +4830,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T075138Z" creationid="isVowel" creationdate="20200114T075138Z">
         <seg>インポート</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In this case we look for hyperlinks ending with the extension .rst and convert them to .html.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T083336Z" creationid="isVowel" creationdate="20200221T083017Z">
+        <seg>この用例では、拡張子 .rst で終わるファイルからハイパーリンクを探して .html へ変換します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3813,6 +5001,14 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>It can be used to parse a wild HTML document and output it as valid XHTML document (well, if you are lucky):</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T080452Z" creationid="isVowel" creationdate="20200221T080452Z">
+        <seg>野良 HTML ドキュメントの構文解析を行い、有効な XHTML  ドキュメントへの変換・出力にも使えます (運がよければ):</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>It can search for regex or peg patterns and can search whole directories at once.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T162536Z" creationid="isVowel" creationdate="20200212T162536Z">
@@ -3919,6 +5115,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T022028Z" creationid="isVowel" creationdate="20200127T022028Z">
         <seg>リストを解読して、シーケンスを返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Loading a simple C function</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T084029Z" creationid="isVowel" creationdate="20200221T084029Z">
+        <seg>C 関数のロード</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Loads and parses HTML from file specified by path, and returns a XmlNode.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T021658Z" creationid="isVowel" creationdate="20200221T021658Z">
+        <seg>指定されたファイルの  path から HTML のロードと構文解析を行い、 XmlNode を返します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4281,6 +5493,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>On POSIX this uses the dlsym mechanism, on Windows LoadLibrary.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T084114Z" creationid="isVowel" creationdate="20200221T084114Z">
+        <seg>このモジュールは POSIX では dlsym 機構を、 Windows では LoadLibrary 関数を使います。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>On posix, this is an alias to posix.Time.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T023657Z" creationid="isVowel" creationdate="20200113T023657Z">
@@ -4349,6 +5569,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T023959Z" creationid="isVowel" creationdate="20200115T023959Z">
         <seg>評価順序</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Order of passes</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091434Z" creationid="isVowel" creationdate="20200220T091434Z">
+        <seg>パスのオーダー</seg>
       </tuv>
     </tu>
     <tu>
@@ -4441,10 +5669,27 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Parses the HTML from stream s and returns a XmlNode.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T021603Z" creationid="isVowel" creationdate="20200221T021603Z">
+        <seg>ストリーム s から HTML の構文解析を行い、 XmlNode を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Parses the HTML from string html and returns a XmlNode.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T021610Z" creationid="isVowel" creationdate="20200221T021526Z">
+        <seg>文字列  html から HTML の構文解析を行い、 XmlNode を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>原文は誤植があり、正確な処理対象は XML ではなく HTML です。</note>
+      <tuv lang="EN-US">
         <seg>Parses the XML from stream s and returns a XmlNode.</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200214T075527Z" creationid="isVowel" creationdate="20200214T075527Z">
-        <seg>ストリーム s から XML の構文解析を行い、 XmlNode を返します。</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T021954Z" creationid="isVowel" creationdate="20200214T075527Z">
+        <seg>ストリーム s から HTML の構文解析を行い、 XmlNode を返します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4453,6 +5698,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200214T075443Z" creationid="isVowel" creationdate="20200214T075443Z">
         <seg>文字列  str から XML の構文解析を行い、 XmlNode を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Parsing, Lexing</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091403Z" creationid="isVowel" creationdate="20200220T091403Z">
+        <seg>構文解析器、字句解析器</seg>
       </tuv>
     </tu>
     <tu>
@@ -4636,6 +5889,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Raises EInvalidLibrary if the symbol could not be found.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T084310Z" creationid="isVowel" creationdate="20200221T084310Z">
+        <seg>シンボルがみつからないときは EInvalidLibrary 例外を発生させます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Read size bytes from the specified file asynchronously starting at the current position of the file pointer.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200217T024600Z" creationid="isVowel" creationdate="20200217T024537Z">
@@ -4741,6 +6002,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Renderer</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091411Z" creationid="isVowel" creationdate="20200220T091411Z">
+        <seg>レンダラ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Responds to the request with the specified HttpCode, headers and content.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200219T111014Z" creationid="isVowel" creationdate="20200219T111014Z">
@@ -4805,6 +6074,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Returns nil if the library could not be loaded.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T084429Z" creationid="isVowel" creationdate="20200221T084429Z">
+        <seg>ライブラリがロードできないときは nil を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns nil if the symbol could not be found.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T084607Z" creationid="isVowel" creationdate="20200221T084607Z">
+        <seg>シンボルが見つからないときは nil を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Returns the IPv4 broadcast address (255.255.255.255)   Source Edit</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T114230Z" creationid="isVowel" creationdate="20200122T114230Z">
@@ -4857,6 +6142,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200216T163016Z" creationid="isVowel" creationdate="20200216T163016Z">
         <seg>t のスレッドハンドルを返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Rokas Kupstys</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T092413Z" creationid="isVowel" creationdate="20200220T092413Z">
+        <seg>Rokas Kupstys (ロカス・クプスタイス)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Rune(0) is returned if the entity name is unknown.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T025019Z" creationid="isVowel" creationdate="20200221T025019Z">
+        <seg>未知のエンティティ名ならば Rune(0) が返されます。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4961,6 +6262,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T121016Z" creationid="isVowel" creationdate="20200130T121016Z">
         <seg>参考文献:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Semantic Checking</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091442Z" creationid="isVowel" creationdate="20200220T091442Z">
+        <seg>セマンティクス検査</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Sempass2: effects</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091458Z" creationid="isVowel" creationdate="20200220T091458Z">
+        <seg>Sempass2: エフェクト</seg>
       </tuv>
     </tu>
     <tu>
@@ -5163,6 +6480,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Subsystems and code owners</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091332Z" creationid="isVowel" creationdate="20200220T091332Z">
+        <seg>サブシステムとコードの権利所有者</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Support on amd64 and i386 is tested regularly, while less popular platforms are tested by the community.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T111828Z" creationid="isVowel" creationdate="20200208T111828Z">
@@ -5217,6 +6542,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T051856Z" creationid="isVowel" creationdate="20200116T051208Z">
         <seg>"hello world!" の出力回数を整数で指定します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Template based implementation of singly and doubly linked lists.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T092043Z" creationid="isVowel" creationdate="20200221T092043Z">
+        <seg>単方向・双方向リストのテンプレートベースによる実装です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5373,6 +6706,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The HTML parser already converts entities to UTF-8.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T025224Z" creationid="isVowel" creationdate="20200221T025224Z">
+        <seg>HTML 構文解析器は既存のエンティティを UTF-8 へ変換します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The Nim compiler supports source code filters as a simple yet powerful builtin templating system.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200209T063828Z" creationid="isVowel" creationdate="20200209T063828Z">
@@ -5521,6 +6862,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The following example demonstrates loading a function called 'greet' from a library that is determined at runtime based upon a language choice.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T084124Z" creationid="isVowel" creationdate="20200221T084124Z">
+        <seg>この用例は実行時に言語の選出に基づいて決定されたライブラリから 'greet' 関数をロードします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The following platforms are seldomly tested:</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T105553Z" creationid="isVowel" creationdate="20200208T105553Z">
@@ -5531,8 +6880,8 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       <tuv lang="EN-US">
         <seg>The full output can be seen here: docgen_sample.html.</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200119T013032Z" creationid="isVowel" creationdate="20200118T024546Z">
-        <seg>完全な出力は docgen_sample.html を参照してください。</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T014743Z" creationid="isVowel" creationdate="20200118T024546Z">
+        <seg>完全版の出力は docgen_sample.html を参照してください。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5577,10 +6926,26 @@ skipped : スキップする、無視する、読み飛ばす。</note>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The involved types should have 'prev' or 'next' fields and the list header should have 'head' or 'tail' fields.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T092237Z" creationid="isVowel" creationdate="20200221T092237Z">
+        <seg>関連する型は 'prev' または 'next' フィールド、およびリストのヘッダは 'head' または 'tail' フィールドにしてください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The let statement</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041153Z" creationid="isVowel" creationdate="20200113T041153Z">
         <seg>let ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The output for HTML and LaTeX comes from the config/nimdoc.cfg and config/nimdoc.tex.cfg configuration files.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T013933Z" creationid="isVowel" creationdate="20200221T013933Z">
+        <seg>HTML と LaTeX の出力時、config/nimdoc.cfg と config/nimdoc.tex.cfg をコンフィギュレーション・ファイルとして参照します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5689,6 +7054,14 @@ skipped : スキップする、無視する、読み飛ばす。</note>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200219T110602Z" creationid="isVowel" creationdate="20200219T110602Z">
         <seg>この HTTP サーバは本番環境での運用を想定した設計ではなく、ローカル環境でのアプリケーションテスト用に設計してあります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This code demonstrates how you can iterate over all the tags in an HTML file and write back the modified version.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T082804Z" creationid="isVowel" creationdate="20200221T082804Z">
+        <seg>このコードでは HTML ファイルにある全タグのイテレート、および変換版の書き戻しかたを説明しています。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5913,6 +7286,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This module implements the ability to access symbols from shared libraries.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T084051Z" creationid="isVowel" creationdate="20200221T084051Z">
+        <seg>このモジュールは共有ライブラリからシンボルへアクセスする機能の実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This module implements the basics for Linux distribution ("distro") detection and the OS's native package manager.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200131T095727Z" creationid="isVowel" creationdate="20200131T095727Z">
@@ -6014,6 +7395,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T171117Z" creationid="isVowel" creationdate="20200212T170944Z">
         <seg>これはバイナリのゼロ終端記号を検出するために文字列全体を横断します！</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This type contains a description of a person</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T020243Z" creationid="isVowel" creationdate="20200221T020243Z">
+        <seg>この型には person の説明があります</seg>
       </tuv>
     </tu>
     <tu>
@@ -6370,6 +7759,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Virtual machine</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091449Z" creationid="isVowel" creationdate="20200220T091449Z">
+        <seg>仮想マシン</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Void context</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T024708Z" creationid="isVowel" creationdate="20200115T024708Z">
@@ -6382,6 +7779,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082133Z" creationid="isVowel" creationdate="20200114T082133Z">
         <seg>Volatile プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Warning: this proc uses the GC and so cannot be used to load the GC.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T084440Z" creationid="isVowel" creationdate="20200221T084440Z">
+        <seg>警告: このプロシージャはガベージコレクターを使用しているため、ガベージコレクターのロードには使えません。</seg>
       </tuv>
     </tu>
     <tu>
@@ -6577,11 +7982,28 @@ sudo apt-get libvoodoo</seg>
       </tuv>
     </tu>
     <tu>
+      <note>「look」を「見栄え、見た目、外観、スタイル」ではなく「表情」と意訳したのは、「表情」のほうが「風景（シーン）」が浮かぶからです。</note>
+      <tuv lang="EN-US">
+        <seg>You can add and modify these files to your project to change the look of docgen output.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T013815Z" creationid="isVowel" creationdate="20200221T013815Z">
+        <seg>前述のファイルをプロジェクトへ追加・修正すると docgen で出力したドキュメンテーションの表情を変更できます。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv lang="EN-US">
         <seg>You can also use addEscaped proc.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200215T111855Z" creationid="isVowel" creationdate="20200215T094854Z">
         <seg>addEscaped プロシージャ も使えます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can import the packages/docutils/rstgen module in your programs if you want to reuse the compiler's documentation generation procs.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T014014Z" creationid="isVowel" creationdate="20200221T014014Z">
+        <seg>コンパイラに搭載されているドキュメント生成ツールのプロシージャを再利用したいときは、プログラムで packages/docutils/rstgen モジュール をインポートします。</seg>
       </tuv>
     </tu>
     <tu>
@@ -6636,6 +8058,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200123T040802Z" creationid="isVowel" creationdate="20200123T040802Z">
         <seg>ザハリー・カラジョフ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>a handle to a dynamically loaded library   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T084207Z" creationid="isVowel" creationdate="20200221T084207Z">
+        <seg>動的ロードライブラリのハンドルです   ソース 編集</seg>
       </tuv>
     </tu>
     <tu>
@@ -6708,6 +8138,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T082505Z" creationid="isVowel" creationdate="20200208T082505Z">
         <seg>ai_socktype*: cint           ## ソケットの種類。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>alias analysis</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091732Z" creationid="isVowel" creationdate="20200220T091732Z">
+        <seg>エイリアス分析</seg>
       </tuv>
     </tu>
     <tu>
@@ -6792,6 +8230,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>c, cpp codegen</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091706Z" creationid="isVowel" creationdate="20200220T091706Z">
+        <seg>c, cpp コード生成</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>carriage return</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T054743Z" creationid="isVowel" creationdate="20200115T054743Z">
@@ -6812,6 +8258,22 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200215T094715Z" creationid="isVowel" creationdate="20200215T094715Z">
         <seg>文字</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>closure interators</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091652Z" creationid="isVowel" creationdate="20200220T091652Z">
+        <seg>クロージャ―のイテレータ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>collections</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T092000Z" creationid="isVowel" creationdate="20200220T092000Z">
+        <seg>コレクション</seg>
       </tuv>
     </tu>
     <tu>
@@ -6848,6 +8310,22 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>converts a Rune to its numeric HTML entity equivalent.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T024050Z" creationid="isVowel" creationdate="20200221T024050Z">
+        <seg>ルーン文字を数値 HTML エンティティへ等価変換します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>coroutines</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091951Z" creationid="isVowel" creationdate="20200220T091951Z">
+        <seg>コルーチン</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>csource command</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T075053Z" creationid="isVowel" creationdate="20200114T075053Z">
@@ -6872,6 +8350,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082001Z" creationid="isVowel" creationdate="20200114T082001Z">
         <seg>deprecated プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>dfa, writetracking</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T093006Z" creationid="isVowel" creationdate="20200220T091807Z">
+        <seg>決定性有限オートマトン (DFA)、ライト・トラッキング</seg>
       </tuv>
     </tu>
     <tu>
@@ -6930,10 +8416,26 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>folding araq</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091632Z" creationid="isVowel" creationdate="20200220T091632Z">
+        <seg>フォルディングは araq</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>form feed</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T055040Z" creationid="isVowel" creationdate="20200115T055040Z">
         <seg>フォームフィード</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>garbage collector</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091943Z" creationid="isVowel" creationdate="20200220T091943Z">
+        <seg>ガーベジ・コレクター</seg>
       </tuv>
     </tu>
     <tu>
@@ -7826,6 +9328,22 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>gets the handle from the current executable.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T084515Z" creationid="isVowel" creationdate="20200221T084515Z">
+        <seg>現在の実行可能ファイルからハンドルを取得します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>given a library name pattern s write possible library names to dest.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T084343Z" creationid="isVowel" creationdate="20200221T084343Z">
+        <seg>指定されたライブラリ名のパターン s に一致した利用可能なライブラリ名を dest へ出力します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>global pragma</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082114Z" creationid="isVowel" creationdate="20200114T082114Z">
@@ -7878,6 +9396,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>incremental</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091901Z" creationid="isVowel" creationdate="20200220T091901Z">
+        <seg>インクリメンタル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>innerText proc</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200214T073621Z" creationid="isVowel" creationdate="20200214T073621Z">
@@ -7902,6 +9428,22 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>js codegen</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091721Z" creationid="isVowel" creationdate="20200220T091721Z">
+        <seg>js コード生成</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>lambda lifting</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091659Z" creationid="isVowel" creationdate="20200220T091659Z">
+        <seg>ラムダのリフト</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>line pragma</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082039Z" creationid="isVowel" creationdate="20200114T082039Z">
@@ -7914,6 +9456,30 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082045Z" creationid="isVowel" creationdate="20200114T082045Z">
         <seg>linearScanEnd プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>list of all supported HTML tags; order will always be alphabetically   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T081946Z" creationid="isVowel" creationdate="20200221T081946Z">
+        <seg>リストに記載されている HTML タグはすべてサポートしています。また、整列順はアルファベット順です   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>loads a library from path.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T084506Z" creationid="isVowel" creationdate="20200221T084506Z">
+        <seg>path からライブラリをロードします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>loads a library with name matching pattern, similar to what dlimport pragma does.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T084422Z" creationid="isVowel" creationdate="20200221T084422Z">
+        <seg>dlimport プラグマと同様に、 pattern と一致する名前のライブラリをロードします。</seg>
       </tuv>
     </tu>
     <tu>
@@ -7936,6 +9502,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200219T110416Z" creationid="isVowel" creationdate="20200219T110416Z">
         <seg>maxBody: int                 ## body (本文) を読み込んだときの最大コンテンツ長です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>multithreading araq</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091854Z" creationid="isVowel" creationdate="20200220T091854Z">
+        <seg>マルチスレッドは araq</seg>
       </tuv>
     </tu>
     <tu>
@@ -8052,6 +9626,22 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>owner(s)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091358Z" creationid="isVowel" creationdate="20200220T091358Z">
+        <seg>権利所有者</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>parallel,</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091814Z" creationid="isVowel" creationdate="20200220T091814Z">
+        <seg>並列処理、</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>parses cookies into a string table.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T154947Z" creationid="isVowel" creationdate="20200130T154947Z">
@@ -8140,6 +9730,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>raises an EInvalidLibrary exception.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T084225Z" creationid="isVowel" creationdate="20200221T084225Z">
+        <seg>EInvalidLibrary 例外を発生させます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>read pattern from stdin (to avoid the shell's confusing quoting rules)</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T163016Z" creationid="isVowel" creationdate="20200212T163016Z">
@@ -8172,6 +9770,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>retrieves the address of a procedure/variable from lib.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T084247Z" creationid="isVowel" creationdate="20200221T084247Z">
+        <seg>lib からプロシージャ / 変数のアドレスを取得します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>returns the length of a widestring.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T170802Z" creationid="isVowel" creationdate="20200212T170802Z">
@@ -8192,6 +9798,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T023815Z" creationid="isVowel" creationdate="20200127T023815Z">
         <seg>type T = distinct A を反転します。これは再帰的処理を行います。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>semfold constant</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091621Z" creationid="isVowel" creationdate="20200220T091621Z">
+        <seg>semfold 定数</seg>
       </tuv>
     </tu>
     <tu>
@@ -8232,6 +9846,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T113311Z" creationid="isVowel" creationdate="20200122T113311Z">
         <seg>size of a buffered socket's buffer   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>sizeof computations</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091907Z" creationid="isVowel" creationdate="20200220T091907Z">
+        <seg>sizeof の計算</seg>
       </tuv>
     </tu>
     <tu>
@@ -8284,10 +9906,1018 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>tagA,                       ## the HTML ``a`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T021125Z" creationid="isVowel" creationdate="20200221T021125Z">
+        <seg>tagA,                       ## HTML ``a`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagAbbr,                    ## the deprecated HTML ``abbr`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T022924Z" creationid="isVowel" creationdate="20200221T022924Z">
+        <seg>tagAbbr,                    ## 廃止予定の HTML ``abbr`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagAcronym,                 ## the HTML ``acronym`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T022929Z" creationid="isVowel" creationdate="20200221T022929Z">
+        <seg>tagAcronym,                 ## HTML ``acronym`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagAddress,                 ## the HTML ``address`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagAddress,                 ## HTML ``address`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagApplet,                  ## the deprecated HTML ``applet`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031031Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagApplet,                  ## 廃止予定の HTML ``applet`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagArea,                    ## the HTML ``area`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagArea,                    ## HTML ``area`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagArticle,                 ## the HTML ``article`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagArticle,                 ## HTML ``article`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagAside,                   ## the HTML ``aside`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagAside,                   ## HTML ``aside`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagAudio,                   ## the HTML ``audio`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagAudio,                   ## HTML ``audio`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagB,                       ## the HTML ``b`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagB,                       ## HTML ``b`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagBase,                    ## the HTML ``base`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagBase,                    ## HTML ``base`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagBasefont,                ## the deprecated HTML ``basefont`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031015Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagBasefont,                ## 廃止予定の HTML ``basefont`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagBdi,                     ## the HTML ``bdi`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagBdi,                     ## HTML ``bdi`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagBdo,                     ## the deprecated HTML ``dbo`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031012Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagBdo,                     ## 廃止予定の HTML ``dbo`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagBig,                     ## the HTML ``big`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagBig,                     ## HTML ``big`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagBlockquote,              ## the HTML ``blockquote`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagBlockquote,              ## HTML ``blockquote`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagBody,                    ## the HTML ``body`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagBody,                    ## HTML ``body`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagBr,                      ## the HTML ``br`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagBr,                      ## HTML ``br`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagButton,                  ## the HTML ``button`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagButton,                  ## HTML ``button`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagCanvas,                  ## the HTML ``canvas`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagCanvas,                  ## HTML ``canvas`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagCaption,                 ## the HTML ``caption`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagCaption,                 ## HTML ``caption`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagCenter,                  ## the deprecated HTML ``center`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031045Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagCenter,                  ## 廃止予定の HTML ``center`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagCite,                    ## the HTML ``cite`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagCite,                    ## HTML ``cite`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagCode,                    ## the HTML ``code`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagCode,                    ## HTML ``code`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagCol,                     ## the HTML ``col`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagCol,                     ## HTML ``col`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagColgroup,                ## the HTML ``colgroup`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagColgroup,                ## HTML ``colgroup`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagCommand,                 ## the HTML ``command`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagCommand,                 ## HTML ``command`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagDatalist,                ## the HTML ``datalist`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagDatalist,                ## HTML ``datalist`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagDd,                      ## the HTML ``dd`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagDd,                      ## HTML ``dd`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagDel,                     ## the HTML ``del`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagDel,                     ## HTML ``del`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagDetails,                 ## the HTML ``details`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagDetails,                 ## HTML ``details`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagDfn,                     ## the HTML ``dfn`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagDfn,                     ## HTML ``dfn`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagDialog,                  ## the HTML ``dialog`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagDialog,                  ## HTML ``dialog`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagDir,                     ## the deprecated HTLM ``dir`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031059Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagDir,                     ## 廃止予定の HTML ``dir`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagDiv,                     ## the HTML ``div`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagDiv,                     ## HTML ``div`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagDl,                      ## the HTML ``dl`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagDl,                      ## HTML ``dl`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagDt,                      ## the HTML ``dt`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagDt,                      ## HTML ``dt`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagEm,                      ## the HTML ``em`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagEm,                      ## HTML ``em`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagEmbed,                   ## the HTML ``embed`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagEmbed,                   ## HTML ``embed`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagFieldset,                ## the HTML ``fieldset`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagFieldset,                ## HTML ``fieldset`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagFigcaption,              ## the HTML ``figcaption`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagFigcaption,              ## HTML ``figcaption`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagFigure,                  ## the HTML ``figure`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagFigure,                  ## HTML ``figure`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagFont,                    ## the deprecated HTML ``font`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031106Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagFont,                    ## 廃止予定の HTML ``font`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagFooter,                  ## the HTML ``footer`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagFooter,                  ## HTML ``footer`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagForm,                    ## the HTML ``form`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagForm,                    ## HTML ``form`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagFrame,                   ## the HTML ``frame`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagFrame,                   ## HTML ``frame`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagFrameset,                ## the deprecated HTML ``frameset`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031110Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagFrameset,                ## 廃止予定の HTML ``frameset`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagH1,                      ## the HTML ``h1`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagH1,                      ## HTML ``h1`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagH2,                      ## the HTML ``h2`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagH2,                      ## HTML ``h2`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagH3,                      ## the HTML ``h3`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagH3,                      ## HTML ``h3`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagH4,                      ## the HTML ``h4`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagH4,                      ## HTML ``h4`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagH5,                      ## the HTML ``h5`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagH5,                      ## HTML ``h5`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagH6,                      ## the HTML ``h6`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagH6,                      ## HTML ``h6`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagHead,                    ## the HTML ``head`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagHead,                    ## HTML ``head`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagHeader,                  ## the HTML ``header`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagHeader,                  ## HTML ``header`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagHgroup,                  ## the HTML ``hgroup`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagHgroup,                  ## HTML ``hgroup`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagHr,                      ## the HTML ``hr`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagHr,                      ## HTML ``hr`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagHtml,                    ## the HTML ``html`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagHtml,                    ## HTML ``html`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagI,                       ## the HTML ``i`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagI,                       ## HTML ``i`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagIframe,                  ## the deprecated HTML ``iframe`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031115Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagIframe,                  ## 廃止予定の HTML ``iframe`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagImg,                     ## the HTML ``img`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagImg,                     ## HTML ``img`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagInput,                   ## the HTML ``input`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagInput,                   ## HTML ``input`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagIns,                     ## the HTML ``ins`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagIns,                     ## HTML ``ins`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagIsindex,                 ## the deprecated HTML ``isindex`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031117Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagIsindex,                 ## 廃止予定の HTML ``isindex`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagKbd,                     ## the HTML ``kbd`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagKbd,                     ## HTML ``kbd`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagKeygen,                  ## the HTML ``keygen`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagKeygen,                  ## HTML ``keygen`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagLabel,                   ## the HTML ``label`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagLabel,                   ## HTML ``label`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagLegend,                  ## the HTML ``legend`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagLegend,                  ## HTML ``legend`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagLi,                      ## the HTML ``li`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagLi,                      ## HTML ``li`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagLink,                    ## the HTML ``link`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagLink,                    ## HTML ``link`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagMap,                     ## the HTML ``map`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagMap,                     ## HTML ``map`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagMark,                    ## the HTML ``mark`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagMark,                    ## HTML ``mark`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagMenu,                    ## the deprecated HTML ``menu`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031121Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagMenu,                    ## 廃止予定の HTML ``menu`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagMeta,                    ## the HTML ``meta`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagMeta,                    ## HTML ``meta`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagMeter,                   ## the HTML ``meter`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagMeter,                   ## HTML ``meter`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagNav,                     ## the HTML ``nav`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagNav,                     ## HTML ``nav`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagNobr,                    ## the deprecated HTML ``nobr`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031123Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagNobr,                    ## 廃止予定の HTML ``nobr`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagNoframes,                ## the deprecated HTML ``noframes`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031128Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagNoframes,                ## 廃止予定の HTML ``noframes`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagNoscript,                ## the HTML ``noscript`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagNoscript,                ## HTML ``noscript`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagObject,                  ## the HTML ``object`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagObject,                  ## HTML ``object`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagOl,                      ## the HTML ``ol`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagOl,                      ## HTML ``ol`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagOptgroup,                ## the HTML ``optgroup`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagOptgroup,                ## HTML ``optgroup`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagOption,                  ## the HTML ``option`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagOption,                  ## HTML ``option`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagOutput,                  ## the HTML ``output`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagOutput,                  ## HTML ``output`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagP,                       ## the HTML ``p`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagP,                       ## HTML ``p`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagParam,                   ## the HTML ``param`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagParam,                   ## HTML ``param`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagPre,                     ## the HTML ``pre`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagPre,                     ## HTML ``pre`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagProgress,                ## the HTML ``progress`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagProgress,                ## HTML ``progress`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagQ,                       ## the HTML ``q`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagQ,                       ## HTML ``q`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagRp,                      ## the HTML ``rp`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagRp,                      ## HTML ``rp`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagRt,                      ## the HTML ``rt`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagRt,                      ## HTML ``rt`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagRuby,                    ## the HTML ``ruby`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagRuby,                    ## HTML ``ruby`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagS,                       ## the deprecated HTML ``s`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T031134Z" creationid="isVowel" creationdate="20200221T030547Z">
+        <seg>tagS,                       ## 廃止予定の HTML ``s`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagSamp,                    ## the HTML ``samp`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagSamp,                    ## HTML ``samp`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagScript,                  ## the HTML ``script`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagScript,                  ## HTML ``script`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagSection,                 ## the HTML ``section`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagSection,                 ## HTML ``section`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagSelect,                  ## the HTML ``select`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
+        <seg>tagSelect,                  ## HTML ``select`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagSmall,                   ## the HTML ``small`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T023032Z" creationid="isVowel" creationdate="20200221T023026Z">
+        <seg>tagSmall,                   ## HTML ``small`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagSource,                  ## the HTML ``source`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T023021Z" creationid="isVowel" creationdate="20200221T023018Z">
+        <seg>tagSource,                  ## HTML ``source`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagSpan,                    ## the HTML ``span`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T023100Z" creationid="isVowel" creationdate="20200221T023012Z">
+        <seg>tagSpan,                    ## HTML ``span`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagStrike,                  ## the deprecated HTML ``strike`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T023057Z" creationid="isVowel" creationdate="20200221T023008Z">
+        <seg>tagStrike,                  ## 廃止予定の HTML ``strike`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagStrong,                  ## the HTML ``strong`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T023047Z" creationid="isVowel" creationdate="20200221T023003Z">
+        <seg>tagStrong,                  ## HTML ``strong`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagStyle,                   ## the HTML ``style`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T023044Z" creationid="isVowel" creationdate="20200221T023001Z">
+        <seg>tagStyle,                   ## HTML ``style`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagSub,                     ## the HTML ``sub`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T023041Z" creationid="isVowel" creationdate="20200221T022959Z">
+        <seg>tagSub,                     ## HTML ``sub`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagSummary,                 ## the HTML ``summary`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T023038Z" creationid="isVowel" creationdate="20200221T022956Z">
+        <seg>tagSummary,                 ## HTML ``summary`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagSup,                     ## the HTML ``sup`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T022953Z" creationid="isVowel" creationdate="20200221T022953Z">
+        <seg>tagSup,                     ## HTML ``sup`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagTable,                   ## the HTML ``table`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T022947Z" creationid="isVowel" creationdate="20200221T022947Z">
+        <seg>tagTable,                   ## HTML ``table`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagTbody,                   ## the HTML ``tbody`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T021334Z" creationid="isVowel" creationdate="20200221T021334Z">
+        <seg>tagTbody,                   ## HTML ``tbody`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagTd,                      ## the HTML ``td`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T021329Z" creationid="isVowel" creationdate="20200221T021329Z">
+        <seg>tagTd,                      ## HTML ``td`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagTextarea,                ## the HTML ``textarea`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T021324Z" creationid="isVowel" creationdate="20200221T021324Z">
+        <seg>tagTextarea,                ## HTML ``textarea`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagTfoot,                   ## the HTML ``tfoot`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T021319Z" creationid="isVowel" creationdate="20200221T021319Z">
+        <seg>tagTfoot,                   ## HTML ``tfoot`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagTh,                      ## the HTML ``th`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T021312Z" creationid="isVowel" creationdate="20200221T021312Z">
+        <seg>tagTh,                      ## HTML ``th`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagThead,                   ## the HTML ``thead`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T021306Z" creationid="isVowel" creationdate="20200221T021306Z">
+        <seg>tagThead,                   ## HTML ``thead`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagTime,                    ## the HTML ``time`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T021301Z" creationid="isVowel" creationdate="20200221T021301Z">
+        <seg>tagTime,                    ## HTML ``time`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagTitle,                   ## the HTML ``title`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T021257Z" creationid="isVowel" creationdate="20200221T021257Z">
+        <seg>tagTitle,                   ## HTML ``title`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagTr,                      ## the HTML ``tr`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T021252Z" creationid="isVowel" creationdate="20200221T021252Z">
+        <seg>tagTr,                      ## HTML ``tr`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagTrack,                   ## the HTML ``track`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T021247Z" creationid="isVowel" creationdate="20200221T021247Z">
+        <seg>tagTrack,                   ## HTML ``track`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagTt,                      ## the HTML ``tt`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T021242Z" creationid="isVowel" creationdate="20200221T021242Z">
+        <seg>tagTt,                      ## HTML ``tt`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagU,                       ## the deprecated HTML ``u`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T021235Z" creationid="isVowel" creationdate="20200221T021235Z">
+        <seg>tagU,                       ## 廃止予定の HTML ``u`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagUl,                      ## the HTML ``ul`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T021218Z" creationid="isVowel" creationdate="20200221T021218Z">
+        <seg>tagUl,                      ## HTML ``ul`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagUnknown,                 ## unknown HTML element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T021112Z" creationid="isVowel" creationdate="20200221T021112Z">
+        <seg>tagUnknown,                 ## 未知の HTML 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagVar,                     ## the HTML ``var`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T021212Z" creationid="isVowel" creationdate="20200221T021212Z">
+        <seg>tagVar,                     ## HTML ``var`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagVideo,                   ## the HTML ``video`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T021205Z" creationid="isVowel" creationdate="20200221T021205Z">
+        <seg>tagVideo,                   ## HTML ``video`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tagWbr                      ## the HTML ``wbr`` element</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T021200Z" creationid="isVowel" creationdate="20200221T021200Z">
+        <seg>tagWbr                      ## HTML ``wbr`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>temp command</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T075055Z" creationid="isVowel" creationdate="20200114T075055Z">
         <seg>temp コマンド</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>template instantiation</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091638Z" creationid="isVowel" creationdate="20200220T091638Z">
+        <seg>テンプレートのインスタンス化</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>term rewriting macros</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091645Z" creationid="isVowel" creationdate="20200220T091645Z">
+        <seg>項の再書き換えマクロ</seg>
       </tuv>
     </tu>
     <tu>
@@ -8341,6 +10971,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>tracking cooldome, araq</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091507Z" creationid="isVowel" creationdate="20200220T091507Z">
+        <seg>トラッキングは cooldome, araq</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>turn on debugging info recording   Source Edit</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T082831Z" creationid="isVowel" creationdate="20200208T082831Z">
@@ -8349,10 +10987,26 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>type system, concepts</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200220T091606Z" creationid="isVowel" creationdate="20200220T091557Z">
+        <seg>型システム、概念</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>typeof operator</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200115T021850Z" creationid="isVowel" creationdate="20200115T021850Z">
         <seg>typeof 演算子</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>unloads the library lib   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200221T084549Z" creationid="isVowel" creationdate="20200221T084549Z">
+        <seg>ライブラリ lib をアンロードします   ソース 編集</seg>
       </tuv>
     </tu>
     <tu>
