@@ -12,13 +12,22 @@ Nim のライセンスに準ずるものとします。ただし、翻訳物にも著作権があります。
 
 作業記録
 --------
-対象バージョン : Nim 1.0.6
-作業対象ファイル : 完了: 51 - 合計 : 181 = 残り : 130
+対象バージョン   : Nim 1.0.6
+作業対象ファイル : 完了: 57 - 合計 : 181 = 残り : 124
 
-Jan : 31
-Feb : 29 (Current: 19 / 10)  → 60
-Mar : 31 (Current:  0 / 31)  → 91
-Apr : 
+Jan : 31 
+Feb : 29 (Current: 25 /  4)  →  60 - 181 = 121
+Mar : 31 (Current:  0 / 31)  →  91 - 181 =  90
+Apr : 30 (Current:  0 / 30)  → 121 - 181 =  60
+May : 31 (Current:  0 / 31)  → 121 - 181 =  30
+Jun : 
+Jul : 
+Aug : 
+Sep : 
+Oct : 
+Nov : 
+Dec : 
+
 
 Feb の目標 : 80 ～ 120 (前半～中盤)
 
@@ -27,15 +36,19 @@ Feb の目標 : 80 ～ 120 (前半～中盤)
 	asynchttpserver.html
 	base64.html
 	browsers.html
+	chains.html
+	codeowners.html
 	cookies.html
 	cpuinfo.html
 	cpuload.html
 	distros.html
 	docgen_sample.html
 	dom.html
+	dynlib.html
 	endians.html
 	highlite.html
 	htmlgen.html
+	htmlparser.html
 	iup.html
 	jsconsole.html
 	jscore.html
@@ -70,15 +83,18 @@ Feb の目標 : 80 ～ 120 (前半～中盤)
 	winlean.html
 	wordwrap.html
 	xmlparser.html
-	codeowners.html
-	htmlparser.html
-	dynlib.html
-	chains.html
+	xmltree.html
+	rtarrays.html
+	rdstdin.html
+	asyncftpclient.html
+	rst.html
+	rlocks.html
 
 
 翻訳活動への参加方法
 --------------------
-1. 事前にツール (OSDN, OmegaT, TMX/TBX Editor, Git など) の使いかたを理解してくださるようお願いします。
+事前にツール (OSDN, OmegaT, TMX/TBX Editor, Git など) の使いかたを理解してくださるようお願いします。
+これらは、すべてフリーソフトウェア (寄付歓迎、開発協力歓迎も対象) です。
 
 * OmegaT (4.3.1 以降。ただし安定版のみ)                 : https://www.omegat.org/
 * Okapi Framework (6.038 以降)                          : https://okapiframework.org/
@@ -90,8 +106,17 @@ Feb の目標 : 80 ～ 120 (前半～中盤)
 * Anchovy                                               : https://www.maxprograms.com/products/anchovy.html
 
 
+その他
+・WinMerge は新旧バージョンの比較と変更箇所の検出に使います。
+・パソコンのメモリは 4 ～ 8GB (Windows機) ほど必要です。 OmegaT だけで 1.2GB ほど消費します。
 
-辞書の指定は後ほど。
+
+共通辞書の指定
+--------------
+こればかりは、フリーソフトウェアで良いものがないので、きちんと正規品を購入してください。
+
+後ほど。
+
 
 
 翻訳活動への参加方法 (注意点)

@@ -903,8 +903,8 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"><p>This module implements a <span id="restructuredtext_1">reStructuredText</span> parser. A large subset is implemented. Some features of the <span id="markdown_1">markdown</span> wiki syntax are also supported.</p>
-<p><strong>Note:</strong> Import <tt class="docutils literal"><span class="pre">packages/docutils/rst</span></tt> to use this module</p>
+  <p class="module-desc"><p>このモジュールは <span id="restructuredtext_1">reStructuredText</span> パーサーの実装です。大規模サブセットを実装してあります。<span id="markdown_1">markdown</span> Wiki シンタックスの一部機能もサポートしています。</p>
+<p><strong>備考:</strong> このモジュールを使うには <tt class="docutils literal"><span class="pre">packages/docutils/rst</span></tt> をインポートしてください。</p>
 </p>
   <div class="section" id="6">
 <h1><a class="toc-backref" href="#6">インポート</a></h1>
@@ -916,21 +916,17 @@ function main() {
 <dl class="item">
 <a id="RstParseOption"></a>
 <dt><pre><a href="rst.html#RstParseOption"><span class="Identifier">RstParseOption</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
-  <span class="Identifier">roSkipPounds</span><span class="Other">,</span>               <span class="Comment">## skip ``#`` at line beginning (documentation</span>
-               <span class="Comment">## embedded in Nim comments)</span>
-  <span class="Identifier">roSupportSmilies</span><span class="Other">,</span>           <span class="Comment">## make the RST parser support smilies like ``:)``</span>
-  <span class="Identifier">roSupportRawDirective</span><span class="Other">,</span>      <span class="Comment">## support the ``raw`` directive (don't support</span>
-                        <span class="Comment">## it for sandboxing)</span>
-  <span class="Identifier">roSupportMarkdown</span>           <span class="Comment">## support additional features of markdown</span></pre></dt>
+  <span class="Identifier">roSkipPounds</span><span class="Other">,</span>               <span class="Comment">## ``#`` で始まる行は読み飛します</span>
+               <span class="Comment">##  (Nim コメントによる埋め込みドキュメンテーション)</span>
+  <span class="Identifier">roSupportSmilies</span><span class="Other">,</span>           <span class="Comment">## ``:)`` などの顔文字を RST パーサーでサポート可能にします</span>
+  <span class="Identifier">roSupportRawDirective</span><span class="Other">,</span>      <span class="Comment">## ``raw`` ディレクティブのサポート</span>
+                        <span class="Comment">## (サンドボックス化はサポートしていません)</span>
+  <span class="Identifier">roSupportMarkdown</span>           <span class="Comment">## markdown に関する追加機能のサポート</span></pre></dt>
 <dd>
 
-
-
-options for the RST parser
-&nbsp;&nbsp;<a
+RST パーサーのオプション &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/packages/docutils/rst.nim#L20"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/packages/docutils/rst.nim#L20" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/packages/docutils/rst.nim#L20" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="RstParseOptions"></a>
@@ -961,13 +957,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
   <span class="Identifier">mwUnknownSubstitution</span><span class="Other">,</span> <span class="Identifier">mwUnsupportedLanguage</span><span class="Other">,</span> <span class="Identifier">mwUnsupportedField</span></pre></dt>
 <dd>
 
-
-
-the possible messages
-&nbsp;&nbsp;<a
+利用可能メッセージ &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/packages/docutils/rst.nim#L35"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/packages/docutils/rst.nim#L35" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/packages/docutils/rst.nim#L35" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="MsgHandler"></a>
@@ -975,13 +967,9 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">closure</span><span class="Other">,</span> <span class="Identifier">gcsafe</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-what to do in case of an error
-&nbsp;&nbsp;<a
+エラー発生時の処理内容 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/packages/docutils/rst.nim#L47"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/packages/docutils/rst.nim#L47" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/packages/docutils/rst.nim#L47" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="FindFileHandler"></a>
@@ -1013,7 +1001,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#whichMsgClass%2CMsgKind"><span class="Identifier">whichMsgClass</span></a><span class="Other">(</span><span class="Identifier">k</span><span class="Other">:</span> <a href="rst.html#MsgKind"><span class="Identifier">MsgKind</span></a><span class="Other">)</span><span class="Other">:</span> <a href="rst.html#MsgClass"><span class="Identifier">MsgClass</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-returns which message class <tt class="docutils literal"><span class="pre">k</span></tt> belongs to. &nbsp;&nbsp;<a
+メッセージクラス <tt class="docutils literal"><span class="pre">k</span></tt> の所属先を返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/packages/docutils/rst.nim#L299"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/packages/docutils/rst.nim#L299" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1064,8 +1052,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#getFieldValue%2CPRstNode"><span class="Identifier">getFieldValue</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="rstast.html#PRstNode"><span class="Identifier">PRstNode</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Returns the value of a specific <tt class="docutils literal"><span class="pre">rnField</span></tt> node.</p>
-<p>This proc will assert if the node is not of the expected type. The empty string will be returned as a minimum. Any value in the rst will be stripped form leading/trailing whitespace.</p>
+<p>指定された <tt class="docutils literal"><span class="pre">rnField</span></tt> ノードの値を返します。</p>
+<p>このプロシージャはノートが想定された型ではない場合にアラートを行います。空文字列は最小値として返されます。rst の値は先頭・末尾のホワイトスペースを除去した形式です。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/packages/docutils/rst.nim#L985"
@@ -1115,7 +1103,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 Generated: 2020-01-23 17:28:11 UTC</small>
+        <small>Nim で作成しました。 生成日時: 2020年01月23日 午前17時28分11秒 (UTC)</small>
       </div>
     </div>
   </div>
