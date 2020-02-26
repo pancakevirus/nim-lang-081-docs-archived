@@ -1096,7 +1096,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                              <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Writes a value to the file <tt class="docutils literal"><span class="pre">f</span></tt>. May throw an IO exception. &nbsp;&nbsp;<a
+Writes a value to the file <tt class="docutils literal"><span class="pre">f</span></tt>. IO 例外が投げられます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L178"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L178" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1192,13 +1192,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-reads a line of text from the file <tt class="docutils literal"><span class="pre">f</span></tt> into <tt class="docutils literal"><span class="pre">line</span></tt>. May throw an IO exception. A line of text may be delimited by <tt class="docutils literal"><span class="pre">LF</span></tt> or <tt class="docutils literal"><span class="pre">CRLF</span></tt>. The newline character(s) are not part of the returned string. Returns <tt class="docutils literal"><span class="pre">false</span></tt> if the end of the file has been reached, <tt class="docutils literal"><span class="pre">true</span></tt> otherwise. If <tt class="docutils literal"><span class="pre">false</span></tt> is returned <tt class="docutils literal"><span class="pre">line</span></tt> contains no new data.
-&nbsp;&nbsp;<a
+reads a line of text from the file <tt class="docutils literal"><span class="pre">f</span></tt> into <tt class="docutils literal"><span class="pre">line</span></tt>. IO 例外が投げられます。A line of text may be delimited by <tt class="docutils literal"><span class="pre">LF</span></tt> or <tt class="docutils literal"><span class="pre">CRLF</span></tt>. 改行文字は返された文字列の一部ではありません。Returns <tt class="docutils literal"><span class="pre">false</span></tt> if the end of the file has been reached, <tt class="docutils literal"><span class="pre">true</span></tt> otherwise. If <tt class="docutils literal"><span class="pre">false</span></tt> is returned <tt class="docutils literal"><span class="pre">line</span></tt> contains no new data. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L291"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L291" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">Source</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L291" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="readLine,File"></a>
@@ -1206,7 +1202,7 @@ class="link-seesrc" target="_blank">Source</a>
                                     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-reads a line of text from the file <tt class="docutils literal"><span class="pre">f</span></tt>. May throw an IO exception. A line of text may be delimited by <tt class="docutils literal"><span class="pre">LF</span></tt> or <tt class="docutils literal"><span class="pre">CRLF</span></tt>. The newline character(s) are not part of the returned string. &nbsp;&nbsp;<a
+reads a line of text from the file <tt class="docutils literal"><span class="pre">f</span></tt>. IO 例外が投げられます。A line of text may be delimited by <tt class="docutils literal"><span class="pre">LF</span></tt> or <tt class="docutils literal"><span class="pre">CRLF</span></tt>. 改行文字は返された文字列の一部ではありません。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L338"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L338" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1312,7 +1308,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-writes the values <tt class="docutils literal"><span class="pre">x</span></tt> to <tt class="docutils literal"><span class="pre">f</span></tt> and then writes "\n". May throw an IO exception. &nbsp;&nbsp;<a
+writes the values <tt class="docutils literal"><span class="pre">x</span></tt> to <tt class="docutils literal"><span class="pre">f</span></tt> and then writes "\n". IO 例外が投げられます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L444"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L444" class="link-seesrc" target="_blank" >編集</a>
 

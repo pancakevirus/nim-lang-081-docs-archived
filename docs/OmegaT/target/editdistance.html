@@ -856,7 +856,7 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc">This module implements an algorithm to compute the <span id="edit-distance_1">edit distance</span> between two Unicode strings.</p>
+  <p class="module-desc">このモジュールは二区間にある Unicode  文字列の<span id="edit-distance_1">編集距離</span>を求めるためのアルゴリズムの実装です。</p>
   <div class="section" id="6">
 <h1><a class="toc-backref" href="#6">インポート</a></h1>
 <dl class="item">
@@ -869,8 +869,8 @@ function main() {
 <dt><pre><span class="Keyword">proc</span> <a href="#editDistance%2Cstring%2Cstring"><span class="Identifier">editDistance</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Returns the unicode-rune edit distance between <tt class="docutils literal"><span class="pre">a</span></tt> and <tt class="docutils literal"><span class="pre">b</span></tt>.</p>
-<p>This uses the <span id="levenshtein_1">Levenshtein</span> distance algorithm with only a linear memory overhead.</p>
+<p>Unicode ルーン文字における <tt class="docutils literal"><span class="pre">a</span></tt> から <tt class="docutils literal"><span class="pre">b</span></tt> までの編集距離を返します。</p>
+<p>これは<span id="levenshtein_1">レーベンシュタイン</span>距離のアルゴリズムを使うため線形メモリによるオーバーヘッドが伴います。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/std/editdistance.nim#L15"
@@ -881,8 +881,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#editDistanceAscii%2Cstring%2Cstring"><span class="Identifier">editDistanceAscii</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Returns the edit distance between <tt class="docutils literal"><span class="pre">a</span></tt> and <tt class="docutils literal"><span class="pre">b</span></tt>.</p>
-<p>This uses the <span id="levenshtein_2">Levenshtein</span> distance algorithm with only a linear memory overhead.</p>
+<p><tt class="docutils literal"><span class="pre">a</span></tt> から <tt class="docutils literal"><span class="pre">b</span></tt> までの編集距離を返します。</p>
+<p>これは<span id="levenshtein_2">レーベンシュタイン</span>距離のアルゴリズムを使うため線形メモリによるオーバーヘッドが伴います。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/std/editdistance.nim#L179"
@@ -899,7 +899,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 Generated: 2020-01-23 17:27:26 UTC</small>
+        <small>Nim で作成しました。 生成日時: 2020年01月23日 午前17時27分26秒 (UTC)</small>
       </div>
     </div>
   </div>

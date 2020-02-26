@@ -837,7 +837,7 @@ function main() {
 <ul class="simple"><li><a class="reference" id="basic-usage-table_toc" href="#basic-usage-table">Table</a></li>
 <li><a class="reference" id="basic-usage-orderedtable_toc" href="#basic-usage-orderedtable">OrderedTable</a></li>
 <li><a class="reference" id="basic-usage-counttable_toc" href="#basic-usage-counttable">CountTable</a></li>
-<li><a class="reference" id="basic-usage-hashing_toc" href="#basic-usage-hashing">Hashing</a></li>
+<li><a class="reference" id="basic-usage-hashing_toc" href="#basic-usage-hashing">ハッシュ</a></li>
 </ul><li><a class="reference" id="see-also_toc" href="#see-also">関連</a></li>
 <li>
   <a class="reference reference-toplevel" href="#6" id="56">インポート</a>
@@ -1275,7 +1275,7 @@ function main() {
 <span class="Identifier">echo</span> <span class="Identifier">letterFrequencies</span>
 <span class="Comment"># output: {'a': 5, 'b': 2, 'c': 1, 'd': 1, 'r': 2}</span></pre><hr />
 
-<h2><a class="toc-backref" id="basic-usage-hashing" href="#basic-usage-hashing">Hashing</a></h2><p>If you are using simple standard types like <tt class="docutils literal"><span class="pre">int</span></tt> or <tt class="docutils literal"><span class="pre">string</span></tt> for the keys of the table you won't have any problems, but as soon as you try to use a more complex object as a key you will be greeted by a strange compiler error:</p>
+<h2><a class="toc-backref" id="basic-usage-hashing" href="#basic-usage-hashing">ハッシュ</a></h2><p>If you are using simple standard types like <tt class="docutils literal"><span class="pre">int</span></tt> or <tt class="docutils literal"><span class="pre">string</span></tt> for the keys of the table you won't have any problems, but as soon as you try to use a more complex object as a key you will be greeted by a strange compiler error:</p>
 <blockquote><p>Error: type mismatch: got (Person) but expected one of: hashes.hash(x: openArray[A]): Hash hashes.hash(x: int): Hash hashes.hash(x: float): Hash …</p></blockquote>
 <p>What is happening here is that the types used for table keys require to have a <tt class="docutils literal"><span class="pre">hash()</span></tt> proc which will convert them to a <a class="reference external" href="hashes.html#Hash">Hash</a> value, and the compiler is listing all the hash functions it knows. Additionally there has to be a <tt class="docutils literal"><span class="pre">==</span></tt> operator that provides the same semantics as its corresponding <tt class="docutils literal"><span class="pre">hash</span></tt> proc.</p>
 <p>After you add <tt class="docutils literal"><span class="pre">hash</span></tt> and <tt class="docutils literal"><span class="pre">==</span></tt> for your custom type everything will work. Currently, however, <tt class="docutils literal"><span class="pre">hash</span></tt> for objects is not defined, whereas <tt class="docutils literal"><span class="pre">system.==</span></tt> for objects does exist and performs a "deep" comparison (every field is compared) which is usually what you want. So in the following example implementing only <tt class="docutils literal"><span class="pre">hash</span></tt> suffices:</p>
