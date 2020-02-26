@@ -130,6 +130,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>## the document or the section</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T093957Z" creationid="isVowel" creationdate="20200226T093957Z">
+        <seg>## ドキュメント、またはセクション</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>--ext:EX1|EX2|...</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200130T040600Z" creationid="isVowel" creationdate="20200130T040600Z">
@@ -683,6 +691,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>re<ept i="0">&lt;/a0&gt;</ept> This module contains procedures and operators for handling regular expressions.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T100516Z" creationid="isVowel" creationdate="20200226T100516Z">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>re<ept i="0">&lt;/a0&gt;</ept> このモジュールには正規表現処理のプロシージャと演算子があります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>registry<ept i="0">&lt;/a0&gt;</ept> Windows registry support.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200208T085839Z" creationid="isVowel" creationdate="20200208T085839Z">
@@ -1158,6 +1174,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200225T034429Z" creationid="isVowel" creationdate="20200225T034429Z">
         <seg><bpt i="0" x="0">&lt;s0&gt;</bpt>備考:<ept i="0">&lt;/s0&gt;</ept> このモジュールを使うには <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>packages/docutils/rst<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept> をインポートしてください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;s0&gt;</bpt>Note:<ept i="0">&lt;/s0&gt;</ept> Import <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>packages/docutils/rstast<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept> to use this module</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T094157Z" creationid="isVowel" creationdate="20200226T094157Z">
+        <seg><bpt i="0" x="0">&lt;s0&gt;</bpt>備考:<ept i="0">&lt;/s0&gt;</ept> このモジュールを使うには <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>packages/docutils/rstast<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept> をインポートしてください。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1714,6 +1738,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg><bpt i="15" x="15">&lt;s15&gt;</bpt>kind<ept i="15">&lt;/s15&gt;</ept><bpt i="16" x="16">&lt;s16&gt;</bpt>*<ept i="16">&lt;/s16&gt;</ept><bpt i="17" x="17">&lt;s17&gt;</bpt>:<ept i="17">&lt;/s17&gt;</ept> <bpt i="18" x="18">&lt;a18&gt;</bpt><bpt i="19" x="19">&lt;s19&gt;</bpt>RstNodeKind<ept i="19">&lt;/s19&gt;</ept><ept i="18">&lt;/a18&gt;</ept>           <bpt i="20" x="20">&lt;s20&gt;</bpt>## the node's kind<ept i="20">&lt;/s20&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T094310Z" creationid="isVowel" creationdate="20200226T094310Z">
+        <seg><bpt i="15" x="15">&lt;s15&gt;</bpt>kind<ept i="15">&lt;/s15&gt;</ept><bpt i="16" x="16">&lt;s16&gt;</bpt>*<ept i="16">&lt;/s16&gt;</ept><bpt i="17" x="17">&lt;s17&gt;</bpt>:<ept i="17">&lt;/s17&gt;</ept> <bpt i="18" x="18">&lt;a18&gt;</bpt><bpt i="19" x="19">&lt;s19&gt;</bpt>RstNodeKind<ept i="19">&lt;/s19&gt;</ept><ept i="18">&lt;/a18&gt;</ept>           <bpt i="20" x="20">&lt;s20&gt;</bpt>## ノードの種類<ept i="20">&lt;/s20&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg><bpt i="15" x="15">&lt;s15&gt;</bpt>roSupportMarkdown<ept i="15">&lt;/s15&gt;</ept>           <bpt i="16" x="16">&lt;s16&gt;</bpt>## support additional features of markdown<ept i="16">&lt;/s16&gt;</ept></seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200225T040050Z" creationid="isVowel" creationdate="20200225T040050Z">
@@ -1986,6 +2018,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg><bpt i="21" x="21">&lt;s21&gt;</bpt>text<ept i="21">&lt;/s21&gt;</ept><bpt i="22" x="22">&lt;s22&gt;</bpt>*<ept i="22">&lt;/s22&gt;</ept><bpt i="23" x="23">&lt;s23&gt;</bpt>:<ept i="23">&lt;/s23&gt;</ept> <bpt i="24" x="24">&lt;s24&gt;</bpt>string<ept i="24">&lt;/s24&gt;</ept>                <bpt i="25" x="25">&lt;s25&gt;</bpt>## valid for leafs in the AST; and the title of<ept i="25">&lt;/s25&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T094320Z" creationid="isVowel" creationdate="20200226T094320Z">
+        <seg><bpt i="21" x="21">&lt;s21&gt;</bpt>text<ept i="21">&lt;/s21&gt;</ept><bpt i="22" x="22">&lt;s22&gt;</bpt>*<ept i="22">&lt;/s22&gt;</ept><bpt i="23" x="23">&lt;s23&gt;</bpt>:<ept i="23">&lt;/s23&gt;</ept> <bpt i="24" x="24">&lt;s24&gt;</bpt>string<ept i="24">&lt;/s24&gt;</ept>                <bpt i="25" x="25">&lt;s25&gt;</bpt>## 有効な構文抽象木 (AST) のリーフ、およびタイトル<ept i="25">&lt;/s25&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg><bpt i="220" x="220">&lt;s220&gt;</bpt>tagMark<ept i="220">&lt;/s220&gt;</ept><bpt i="221" x="221">&lt;s221&gt;</bpt>,<ept i="221">&lt;/s221&gt;</ept>                    <bpt i="222" x="222">&lt;s222&gt;</bpt>## the HTML ``mark`` element<ept i="222">&lt;/s222&gt;</ept></seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
@@ -2170,6 +2210,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg><bpt i="26" x="26">&lt;s26&gt;</bpt>## the document or the section<ept i="26">&lt;/s26&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T094327Z" creationid="isVowel" creationdate="20200226T094327Z">
+        <seg><bpt i="26" x="26">&lt;s26&gt;</bpt>## ドキュメント、またはセクション<ept i="26">&lt;/s26&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg><bpt i="271" x="271">&lt;s271&gt;</bpt>tagQ<ept i="271">&lt;/s271&gt;</ept><bpt i="272" x="272">&lt;s272&gt;</bpt>,<ept i="272">&lt;/s272&gt;</ept>                       <bpt i="273" x="273">&lt;s273&gt;</bpt>## the HTML ``q`` element<ept i="273">&lt;/s273&gt;</ept></seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
@@ -2190,6 +2238,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
         <seg><bpt i="277" x="277">&lt;s277&gt;</bpt>tagRt<ept i="277">&lt;/s277&gt;</ept><bpt i="278" x="278">&lt;s278&gt;</bpt>,<ept i="278">&lt;/s278&gt;</ept>                      <bpt i="279" x="279">&lt;s279&gt;</bpt>## HTML ``rt`` 要素<ept i="279">&lt;/s279&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="27" x="27">&lt;s27&gt;</bpt>level<ept i="27">&lt;/s27&gt;</ept><bpt i="28" x="28">&lt;s28&gt;</bpt>*<ept i="28">&lt;/s28&gt;</ept><bpt i="29" x="29">&lt;s29&gt;</bpt>:<ept i="29">&lt;/s29&gt;</ept> <bpt i="30" x="30">&lt;s30&gt;</bpt>int<ept i="30">&lt;/s30&gt;</ept>                  <bpt i="31" x="31">&lt;s31&gt;</bpt>## valid for some node kinds<ept i="31">&lt;/s31&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T094340Z" creationid="isVowel" creationdate="20200226T094340Z">
+        <seg><bpt i="27" x="27">&lt;s27&gt;</bpt>level<ept i="27">&lt;/s27&gt;</ept><bpt i="28" x="28">&lt;s28&gt;</bpt>*<ept i="28">&lt;/s28&gt;</ept><bpt i="29" x="29">&lt;s29&gt;</bpt>:<ept i="29">&lt;/s29&gt;</ept> <bpt i="30" x="30">&lt;s30&gt;</bpt>int<ept i="30">&lt;/s30&gt;</ept>                  <bpt i="31" x="31">&lt;s31&gt;</bpt>## 有効なノードの種類<ept i="31">&lt;/s31&gt;</ept></seg>
       </tuv>
     </tu>
     <tu>
@@ -2382,6 +2438,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
         <seg><bpt i="328" x="328">&lt;s328&gt;</bpt>tagTbody<ept i="328">&lt;/s328&gt;</ept><bpt i="329" x="329">&lt;s329&gt;</bpt>,<ept i="329">&lt;/s329&gt;</ept>                   <bpt i="330" x="330">&lt;s330&gt;</bpt>## HTML ``tbody`` 要素<ept i="330">&lt;/s330&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="32" x="32">&lt;s32&gt;</bpt>sons<ept i="32">&lt;/s32&gt;</ept><bpt i="33" x="33">&lt;s33&gt;</bpt>*<ept i="33">&lt;/s33&gt;</ept><bpt i="34" x="34">&lt;s34&gt;</bpt>:<ept i="34">&lt;/s34&gt;</ept> <bpt i="35" x="35">&lt;a35&gt;</bpt><bpt i="36" x="36">&lt;s36&gt;</bpt>RstNodeSeq<ept i="36">&lt;/s36&gt;</ept><ept i="35">&lt;/a35&gt;</ept>            <bpt i="37" x="37">&lt;s37&gt;</bpt>## the node's sons<ept i="37">&lt;/s37&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T094351Z" creationid="isVowel" creationdate="20200226T094351Z">
+        <seg><bpt i="32" x="32">&lt;s32&gt;</bpt>sons<ept i="32">&lt;/s32&gt;</ept><bpt i="33" x="33">&lt;s33&gt;</bpt>*<ept i="33">&lt;/s33&gt;</ept><bpt i="34" x="34">&lt;s34&gt;</bpt>:<ept i="34">&lt;/s34&gt;</ept> <bpt i="35" x="35">&lt;a35&gt;</bpt><bpt i="36" x="36">&lt;s36&gt;</bpt>RstNodeSeq<ept i="36">&lt;/s36&gt;</ept><ept i="35">&lt;/a35&gt;</ept>            <bpt i="37" x="37">&lt;s37&gt;</bpt>## ノードの息子ら<ept i="37">&lt;/s37&gt;</ept></seg>
       </tuv>
     </tu>
     <tu>
@@ -3601,6 +3665,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
     </tu>
     <tu>
+      <tuv xml:lang="EN-US">
+        <seg>But you an also define the symbol <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>--define:noUnidecodeTable<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> during compile time and use the <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>loadUnidecodeTable<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> proc to initialize this module.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T150519Z" creationid="isVowel" creationdate="20200226T150519Z">
+        <seg>デフォルト以外のリソースを使うときは、このモジュールを <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>loadUnidecodeTable<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> プロシージャで初期化してから、コンパイル処理時に <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>--define:noUnidecodeTable<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> シンボルを定義してください。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>あんまり原文の出来が良くない。
 あとで改訳のこと。
 
@@ -4768,6 +4840,14 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Finds the sequence of ASCII characters that is the closest approximation to the UTF-8 string <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>s<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T150652Z" creationid="isVowel" creationdate="20200226T150652Z">
+        <seg>UTF-8 文字列 <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>s<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> に最も近い近似 ASCII 文字のシーケンスを検索します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Finishes the <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>MD5Context<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> and stores the result in <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>digest<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept>.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200129T095828Z" creationid="isVowel" creationdate="20200129T095828Z">
@@ -4791,6 +4871,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200131T095440Z" creationid="isVowel" creationdate="20200131T095440Z">
         <seg>便宜上、 <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>Distribution<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> 型が必要になります。修飾子は列挙型の値に追加されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>For example, the closest to string "Äußerst" in ASCII is "Ausserst".</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T150216Z" creationid="isVowel" creationdate="20200226T150216Z">
+        <seg>例えば、文字列 "Äußerst" に最も近い ASCII は "Ausserst" です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5555,6 +5643,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
     </tu>
     <tu>
+      <tuv xml:lang="EN-US">
+        <seg>However a human reader will probably still be able to guess what original string was meant from the context.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T150254Z" creationid="isVowel" creationdate="20200226T150254Z">
+        <seg>とはいえ人力をもってすれば、文脈より原文の文字列の意味を推測することはできるでしょう。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>以前の訳は「nre.nim 専用の内部処理で使うファイルです。」
 
 「For use only by ～」は「でのみ使用」ですが「～専用」と訳してもいいこともあります。
@@ -6017,6 +6113,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200131T095520Z" creationid="isVowel" creationdate="20200131T095520Z">
         <seg>パッケージ名の遵守は開発者の義務です。   <bpt i="0" x="0">&lt;a0&gt;</bpt>ソース<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>編集<ept i="1">&lt;/a1&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>It provides a single proc that does Unicode to ASCII transliterations: It finds the sequence of ASCII characters that is the closest approximation to the Unicode string.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T150209Z" creationid="isVowel" creationdate="20200226T150153Z">
+        <seg>これにより Unicode を ASCII へ翻字を行うプロシージャを使えます。つまり Unicode 文字列に最も近い近似 ASCII 文字のシーケンスを検索します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -7270,6 +7374,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Results in: "Bei Jing"</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T150716Z" creationid="isVowel" creationdate="20200226T150704Z">
+        <seg>結果は "Bei Jing" です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Retrieves <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>file<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept>.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200224T045528Z" creationid="isVowel" creationdate="20200224T041256Z">
@@ -7796,6 +7908,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>So this is a strictly one-way transformation.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T150248Z" creationid="isVowel" creationdate="20200226T150248Z">
+        <seg>厳密に言えば不可逆変換です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Some features of the <bpt i="1" x="1">&lt;s1&gt;</bpt>markdown<ept i="1">&lt;/s1&gt;</ept> wiki syntax are also supported.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200225T034312Z" creationid="isVowel" creationdate="20200225T034312Z">
@@ -7808,6 +7928,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T055025Z" creationid="isVowel" creationdate="20200226T055025Z">
         <seg>markdown Wiki シンタックスの一部機能もサポートしています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Some information is lost in this transformation, of course, since several Unicode strings can be transformed in the same ASCII representation.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T150241Z" creationid="isVowel" creationdate="20200226T150241Z">
+        <seg>無論、この変換処理では何種類かの Unicode 文字列は類似の ASCII 表記へ変換されてしまうため一部情報が欠落します。 </seg>
       </tuv>
     </tu>
     <tu>
@@ -8370,6 +8498,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>The generated HTML for some of these wrappers is so huge that it is not contained in the distribution.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T100254Z" creationid="isVowel" creationdate="20200226T100254Z">
+        <seg>ラッパー用に生成された HTML ドキュメントは巨大なためディストリビューションには収録していません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>The generated index.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200209T061215Z" creationid="isVowel" creationdate="20200209T061215Z">
@@ -8392,7 +8528,8 @@ skipped : スキップする、無視する、読み飛ばす。</note>
       </tuv>
     </tu>
     <tu>
-      <note>nested は「併用」または「サブ言語化」では？</note>
+      <note>nested は「併用」または「サブ言語化」では？　あるいは「組み込む」のほうがいいと思います。
+</note>
       <tuv xml:lang="EN-US">
         <seg>The interface supports one language nested in another.</seg>
       </tuv>
@@ -8690,6 +8827,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>This is only required if the module was compiled with the <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>--define:noUnidecodeTable<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> switch.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T150615Z" creationid="isVowel" creationdate="20200226T150615Z">
+        <seg>この関数は <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>--define:noUnidecodeTable<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> スイッチでモジュールをコンパイルしたときに限り使います。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>This is only used for speed hacks.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200222T152035Z" creationid="isVowel" creationdate="20200222T152035Z">
@@ -8802,6 +8947,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>This module implements an AST for the <bpt i="0" x="0">&lt;s0&gt;</bpt>reStructuredText<ept i="0">&lt;/s0&gt;</ept> parser.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T094113Z" creationid="isVowel" creationdate="20200226T094113Z">
+        <seg>このモジュールは <bpt i="0" x="0">&lt;s0&gt;</bpt>reStructuredText<ept i="0">&lt;/s0&gt;</ept> パーサーにおける構文抽象木 (AST) の実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>This module implements an algorithm to compute the <bpt i="0" x="0">&lt;s0&gt;</bpt>edit distance<ept i="0">&lt;/s0&gt;</ept> between two Unicode strings.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T045126Z" creationid="isVowel" creationdate="20200226T045126Z">
@@ -8881,11 +9034,28 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
     </tu>
     <tu>
+      <note>「このモジュールは Text::Unidecode を元(お手本？)に開発された Python の Unidecode をベースしています」かな？　後で事実関係を調べてみます。</note>
+      <tuv xml:lang="EN-US">
+        <seg>This module is based on Python's Unidecode module by Tomaz Solc, which in turn is based on the <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>Text::Unidecode<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> Perl module by Sean M. Burke (<bpt i="2" x="2">&lt;a2&gt;</bpt>http://search.cpan.org/~sburke/Text-Unidecode-0.04/lib/Text/Unidecode.pm<ept i="2">&lt;/a2&gt;</ept> ).</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T150145Z" creationid="isVowel" creationdate="20200226T150145Z">
+        <seg>このモジュールはトマシュ・ソルクによる Python の Unidecode モジュールをベースにしています。また、ショーン・Ｍ・バークによる Perl の <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>Text::Unidecode<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> モジュール (<bpt i="2" x="2">&lt;a2&gt;</bpt>http://search.cpan.org/~sburke/Text-Unidecode-0.04/lib/Text/Unidecode.pm<ept i="2">&lt;/a2&gt;</ept>) もベースにしています。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv xml:lang="EN-US">
         <seg>This module is experimental and its interface may change.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200123T041230Z" creationid="isVowel" creationdate="20200123T041100Z">
         <seg>このモジュールは実験的なものであり、インタフェースは変更されることがあります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>This module needs the data file "unidecode.dat" to work: This file is embedded as a resource into your application by default.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T150318Z" creationid="isVowel" creationdate="20200226T150303Z">
+        <seg>このモジュールの動作にはデータファイル "unidecode.dat" が必要です。このファイルはデフォルトのリソースとしてアプリケーションに組み込まれています。</seg>
       </tuv>
     </tu>
     <tu>
@@ -8911,6 +9081,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200212T171930Z" creationid="isVowel" creationdate="20200209T051909Z">
         <seg>このモジュールはシグナルハンドラを登録することでアクセス違反 (access violations)、セグメンテーション違反 (segfaults) を <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>NilAccessError<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> 例外に差し替えます。 </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>This needs to be called by the main thread before any thread can make a call to <bpt i="4" x="4">&lt;t4&gt;</bpt><bpt i="5" x="5">&lt;s5&gt;</bpt>unidecode<ept i="5">&lt;/s5&gt;</ept><ept i="4">&lt;/t4&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T150633Z" creationid="isVowel" creationdate="20200226T150633Z">
+        <seg>いかなるスレッドであろうと <bpt i="4" x="4">&lt;t4&gt;</bpt><bpt i="5" x="5">&lt;s5&gt;</bpt>unidecode<ept i="5">&lt;/s5&gt;</ept><ept i="4">&lt;/t4&gt;</ept> の呼び出し前に、この関数をメインスレッドで必ず呼び出してください。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9563,6 +9741,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Writes the given RST node as JSON that is in the form</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T094644Z" creationid="isVowel" creationdate="20200226T094644Z">
+        <seg>指定された RST ノードを JSON 形式として出力します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Writes the list of registered foreign deps to stdout.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200131T095449Z" creationid="isVowel" creationdate="20200131T095449Z">
@@ -9651,6 +9837,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200117T060027Z" creationid="isVowel" creationdate="20200117T060027Z">
         <seg><bpt i="5" x="5">&lt;t5&gt;</bpt><bpt i="6" x="6">&lt;s6&gt;</bpt>test<ept i="6">&lt;/s6&gt;</ept><ept i="5">&lt;/t5&gt;</ept> コマンドにオプションを指定すると、テスターへ転送します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>You can then find them on the website.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T100330Z" creationid="isVowel" creationdate="20200226T100330Z">
+        <seg>ドキュメントはウェブサイトに掲載してあります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9790,6 +9984,22 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200220T091732Z" creationid="isVowel" creationdate="20200220T091732Z">
         <seg>エイリアス分析</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>an RST node   <bpt i="0" x="0">&lt;a0&gt;</bpt>Source<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>Edit<ept i="1">&lt;/a1&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T094255Z" creationid="isVowel" creationdate="20200226T094255Z">
+        <seg>RST ノード   <bpt i="0" x="0">&lt;a0&gt;</bpt>ソース<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>編集<ept i="1">&lt;/a1&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>an RST node's description   <bpt i="0" x="0">&lt;a0&gt;</bpt>Source<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>Edit<ept i="1">&lt;/a1&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T094421Z" creationid="isVowel" creationdate="20200226T094421Z">
+        <seg>RST ノードの内容   <bpt i="0" x="0">&lt;a0&gt;</bpt>ソース<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>編集<ept i="1">&lt;/a1&gt;</ept></seg>
       </tuv>
     </tu>
     <tu>
@@ -11096,10 +11306,26 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>kind*: RstNodeKind           ## the node's kind</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T093905Z" creationid="isVowel" creationdate="20200226T093905Z">
+        <seg>kind*: RstNodeKind           ## ノードの種類</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>lambda lifting</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200220T091659Z" creationid="isVowel" creationdate="20200220T091659Z">
         <seg>ラムダのリフト</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>level*: int                  ## valid for some node kinds</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T094010Z" creationid="isVowel" creationdate="20200226T094010Z">
+        <seg>level*: int                  ## 有効なノードの種類</seg>
       </tuv>
     </tu>
     <tu>
@@ -11140,6 +11366,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200221T084422Z" creationid="isVowel" creationdate="20200221T084422Z">
         <seg><bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>dlimport<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> プラグマと同様に、 <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>pattern<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> と一致する名前のライブラリをロードします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>loads the datafile that <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>unidecode<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> to work.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T150546Z" creationid="isVowel" creationdate="20200226T150546Z">
+        <seg><bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>unidecode<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> で使う datafile をロードします。</seg>
       </tuv>
     </tu>
     <tu>
@@ -11430,6 +11664,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>renders <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>n<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> into its string representation and appends to <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>result<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T094603Z" creationid="isVowel" creationdate="20200226T094603Z">
+        <seg><bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>n<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> を文字列形式に翻訳して <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>result<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> へ追加します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>replace the pattern</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200130T041054Z" creationid="isVowel" creationdate="20200130T041054Z">
@@ -11530,6 +11772,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200220T091907Z" creationid="isVowel" creationdate="20200220T091907Z">
         <seg>sizeof の計算</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>sons*: RstNodeSeq            ## the node's sons</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T094022Z" creationid="isVowel" creationdate="20200226T094022Z">
+        <seg>sons*: RstNodeSeq            ## ノードの息子ら</seg>
       </tuv>
     </tu>
     <tu>
@@ -12614,6 +12864,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>text*: string                ## valid for leafs in the AST; and the title of</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T093925Z" creationid="isVowel" creationdate="20200226T093925Z">
+        <seg>text*: string                ## 有効な構文抽象木 (AST) のリーフ、およびタイトル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>the list of known distributions   <bpt i="0" x="0">&lt;a0&gt;</bpt>Source<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>Edit<ept i="1">&lt;/a1&gt;</ept></seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200131T095608Z" creationid="isVowel" creationdate="20200117T152120Z">
@@ -12642,6 +12900,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200225T034040Z" creationid="isVowel" creationdate="20200225T034040Z">
         <seg>利用可能メッセージ   <bpt i="0" x="0">&lt;a0&gt;</bpt>ソース<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>編集<ept i="1">&lt;/a1&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>the possible node kinds of an PRstNode   <bpt i="0" x="0">&lt;a0&gt;</bpt>Source<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>Edit<ept i="1">&lt;/a1&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T094227Z" creationid="isVowel" creationdate="20200226T094227Z">
+        <seg>PRstNode で利用可能なノードの種類   <bpt i="0" x="0">&lt;a0&gt;</bpt>ソース<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>編集<ept i="1">&lt;/a1&gt;</ept></seg>
       </tuv>
     </tu>
     <tu>

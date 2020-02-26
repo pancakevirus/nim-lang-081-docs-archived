@@ -15,10 +15,11 @@ Nim のライセンスに準ずるものとします。ただし、翻訳物にも著作権があります。
 作業記録
 --------
 対象バージョン   : Nim 1.0.6
-作業対象ファイル : 完了: 58 - 合計 : 181 = 残り : 123
+作業対象ファイル : 完了: 60 - 合計 : 181 = 残り : 121
+序盤戦終了 : 2020/02/27 (Done: 60)
 
-Jan : 31 
-Feb : 29 (Current: 27 /  2)  →  60 - 181 = 121
+Jan : 31 (Current: 31 / 31)  →  31 - 181 = 150 : Achieved!!!
+Feb : 29 (Current: 28 / 28)  →  60 - 181 = 121 : Achieved!!!
 Mar : 31 (Current:  0 / 31)  →  91 - 181 =  90
 Apr : 30 (Current:  0 / 30)  → 121 - 181 =  60
 May : 31 (Current:  0 / 31)  → 121 - 181 =  30
@@ -91,6 +92,9 @@ Dec :
 	xmlparser.html
 	xmltree.html
 	editdistance.html
+	rstast.html
+	unidecode.html
+
 
 翻訳活動への参加方法
 --------------------

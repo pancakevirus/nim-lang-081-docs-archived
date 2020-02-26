@@ -130,6 +130,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>## the document or the section</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T093957Z" creationid="isVowel" creationdate="20200226T093957Z">
+        <seg>## ドキュメント、またはセクション</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>--ext:EX1|EX2|...</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T040600Z" creationid="isVowel" creationdate="20200130T040600Z">
@@ -683,6 +691,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a0&gt;re&lt;/a0&gt; This module contains procedures and operators for handling regular expressions.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T100516Z" creationid="isVowel" creationdate="20200226T100516Z">
+        <seg>&lt;a0&gt;re&lt;/a0&gt; このモジュールには正規表現処理のプロシージャと演算子があります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;a0&gt;registry&lt;/a0&gt; Windows registry support.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T085839Z" creationid="isVowel" creationdate="20200208T085839Z">
@@ -1158,6 +1174,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200225T034429Z" creationid="isVowel" creationdate="20200225T034429Z">
         <seg>&lt;s0&gt;備考:&lt;/s0&gt; このモジュールを使うには &lt;t1&gt;&lt;s2&gt;packages/docutils/rst&lt;/s2&gt;&lt;/t1&gt; をインポートしてください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;Note:&lt;/s0&gt; Import &lt;t1&gt;&lt;s2&gt;packages/docutils/rstast&lt;/s2&gt;&lt;/t1&gt; to use this module</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T094157Z" creationid="isVowel" creationdate="20200226T094157Z">
+        <seg>&lt;s0&gt;備考:&lt;/s0&gt; このモジュールを使うには &lt;t1&gt;&lt;s2&gt;packages/docutils/rstast&lt;/s2&gt;&lt;/t1&gt; をインポートしてください。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1714,6 +1738,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;s15&gt;kind&lt;/s15&gt;&lt;s16&gt;*&lt;/s16&gt;&lt;s17&gt;:&lt;/s17&gt; &lt;a18&gt;&lt;s19&gt;RstNodeKind&lt;/s19&gt;&lt;/a18&gt;           &lt;s20&gt;## the node's kind&lt;/s20&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T094310Z" creationid="isVowel" creationdate="20200226T094310Z">
+        <seg>&lt;s15&gt;kind&lt;/s15&gt;&lt;s16&gt;*&lt;/s16&gt;&lt;s17&gt;:&lt;/s17&gt; &lt;a18&gt;&lt;s19&gt;RstNodeKind&lt;/s19&gt;&lt;/a18&gt;           &lt;s20&gt;## ノードの種類&lt;/s20&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;s15&gt;roSupportMarkdown&lt;/s15&gt;           &lt;s16&gt;## support additional features of markdown&lt;/s16&gt;</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200225T040050Z" creationid="isVowel" creationdate="20200225T040050Z">
@@ -1986,6 +2018,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;s21&gt;text&lt;/s21&gt;&lt;s22&gt;*&lt;/s22&gt;&lt;s23&gt;:&lt;/s23&gt; &lt;s24&gt;string&lt;/s24&gt;                &lt;s25&gt;## valid for leafs in the AST; and the title of&lt;/s25&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T094320Z" creationid="isVowel" creationdate="20200226T094320Z">
+        <seg>&lt;s21&gt;text&lt;/s21&gt;&lt;s22&gt;*&lt;/s22&gt;&lt;s23&gt;:&lt;/s23&gt; &lt;s24&gt;string&lt;/s24&gt;                &lt;s25&gt;## 有効な構文抽象木 (AST) のリーフ、およびタイトル&lt;/s25&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;s220&gt;tagMark&lt;/s220&gt;&lt;s221&gt;,&lt;/s221&gt;                    &lt;s222&gt;## the HTML ``mark`` element&lt;/s222&gt;</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
@@ -2170,6 +2210,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;s26&gt;## the document or the section&lt;/s26&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T094327Z" creationid="isVowel" creationdate="20200226T094327Z">
+        <seg>&lt;s26&gt;## ドキュメント、またはセクション&lt;/s26&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;s271&gt;tagQ&lt;/s271&gt;&lt;s272&gt;,&lt;/s272&gt;                       &lt;s273&gt;## the HTML ``q`` element&lt;/s273&gt;</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
@@ -2190,6 +2238,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
         <seg>&lt;s277&gt;tagRt&lt;/s277&gt;&lt;s278&gt;,&lt;/s278&gt;                      &lt;s279&gt;## HTML ``rt`` 要素&lt;/s279&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s27&gt;level&lt;/s27&gt;&lt;s28&gt;*&lt;/s28&gt;&lt;s29&gt;:&lt;/s29&gt; &lt;s30&gt;int&lt;/s30&gt;                  &lt;s31&gt;## valid for some node kinds&lt;/s31&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T094340Z" creationid="isVowel" creationdate="20200226T094340Z">
+        <seg>&lt;s27&gt;level&lt;/s27&gt;&lt;s28&gt;*&lt;/s28&gt;&lt;s29&gt;:&lt;/s29&gt; &lt;s30&gt;int&lt;/s30&gt;                  &lt;s31&gt;## 有効なノードの種類&lt;/s31&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -2382,6 +2438,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
         <seg>&lt;s328&gt;tagTbody&lt;/s328&gt;&lt;s329&gt;,&lt;/s329&gt;                   &lt;s330&gt;## HTML ``tbody`` 要素&lt;/s330&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s32&gt;sons&lt;/s32&gt;&lt;s33&gt;*&lt;/s33&gt;&lt;s34&gt;:&lt;/s34&gt; &lt;a35&gt;&lt;s36&gt;RstNodeSeq&lt;/s36&gt;&lt;/a35&gt;            &lt;s37&gt;## the node's sons&lt;/s37&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T094351Z" creationid="isVowel" creationdate="20200226T094351Z">
+        <seg>&lt;s32&gt;sons&lt;/s32&gt;&lt;s33&gt;*&lt;/s33&gt;&lt;s34&gt;:&lt;/s34&gt; &lt;a35&gt;&lt;s36&gt;RstNodeSeq&lt;/s36&gt;&lt;/a35&gt;            &lt;s37&gt;## ノードの息子ら&lt;/s37&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -3601,6 +3665,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>But you an also define the symbol &lt;t0&gt;&lt;s1&gt;--define:noUnidecodeTable&lt;/s1&gt;&lt;/t0&gt; during compile time and use the &lt;t2&gt;&lt;s3&gt;loadUnidecodeTable&lt;/s3&gt;&lt;/t2&gt; proc to initialize this module.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T150519Z" creationid="isVowel" creationdate="20200226T150519Z">
+        <seg>デフォルト以外のリソースを使うときは、このモジュールを &lt;t2&gt;&lt;s3&gt;loadUnidecodeTable&lt;/s3&gt;&lt;/t2&gt; プロシージャで初期化してから、コンパイル処理時に &lt;t0&gt;&lt;s1&gt;--define:noUnidecodeTable&lt;/s1&gt;&lt;/t0&gt; シンボルを定義してください。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>あんまり原文の出来が良くない。
 あとで改訳のこと。
 
@@ -4768,6 +4840,14 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Finds the sequence of ASCII characters that is the closest approximation to the UTF-8 string &lt;t0&gt;&lt;s1&gt;s&lt;/s1&gt;&lt;/t0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T150652Z" creationid="isVowel" creationdate="20200226T150652Z">
+        <seg>UTF-8 文字列 &lt;t0&gt;&lt;s1&gt;s&lt;/s1&gt;&lt;/t0&gt; に最も近い近似 ASCII 文字のシーケンスを検索します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Finishes the &lt;t0&gt;&lt;s1&gt;MD5Context&lt;/s1&gt;&lt;/t0&gt; and stores the result in &lt;t2&gt;&lt;s3&gt;digest&lt;/s3&gt;&lt;/t2&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200129T095828Z" creationid="isVowel" creationdate="20200129T095828Z">
@@ -4791,6 +4871,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200131T095440Z" creationid="isVowel" creationdate="20200131T095440Z">
         <seg>便宜上、 &lt;t0&gt;&lt;s1&gt;Distribution&lt;/s1&gt;&lt;/t0&gt; 型が必要になります。修飾子は列挙型の値に追加されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For example, the closest to string "Äußerst" in ASCII is "Ausserst".</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T150216Z" creationid="isVowel" creationdate="20200226T150216Z">
+        <seg>例えば、文字列 "Äußerst" に最も近い ASCII は "Ausserst" です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5747,6 +5835,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>However a human reader will probably still be able to guess what original string was meant from the context.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T150254Z" creationid="isVowel" creationdate="20200226T150254Z">
+        <seg>とはいえ人力をもってすれば、文脈より原文の文字列の意味を推測することはできるでしょう。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>以前の訳は「nre.nim 専用の内部処理で使うファイルです。」
 
 「For use only by ～」は「でのみ使用」ですが「～専用」と訳してもいいこともあります。
@@ -6209,6 +6305,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200131T095520Z" creationid="isVowel" creationdate="20200131T095520Z">
         <seg>パッケージ名の遵守は開発者の義務です。   &lt;a0&gt;ソース&lt;/a0&gt; &lt;a1&gt;編集&lt;/a1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It provides a single proc that does Unicode to ASCII transliterations: It finds the sequence of ASCII characters that is the closest approximation to the Unicode string.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T150209Z" creationid="isVowel" creationdate="20200226T150153Z">
+        <seg>これにより Unicode を ASCII へ翻字を行うプロシージャを使えます。つまり Unicode 文字列に最も近い近似 ASCII 文字のシーケンスを検索します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -7462,6 +7566,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Results in: "Bei Jing"</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T150716Z" creationid="isVowel" creationdate="20200226T150704Z">
+        <seg>結果は "Bei Jing" です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Retrieves &lt;t0&gt;&lt;s1&gt;file&lt;/s1&gt;&lt;/t0&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200224T045528Z" creationid="isVowel" creationdate="20200224T041256Z">
@@ -7988,6 +8100,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>So this is a strictly one-way transformation.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T150248Z" creationid="isVowel" creationdate="20200226T150248Z">
+        <seg>厳密に言えば不可逆変換です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Some features of the &lt;s1&gt;markdown&lt;/s1&gt; wiki syntax are also supported.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200225T034312Z" creationid="isVowel" creationdate="20200225T034312Z">
@@ -8000,6 +8120,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200226T055025Z" creationid="isVowel" creationdate="20200226T055025Z">
         <seg>markdown Wiki シンタックスの一部機能もサポートしています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Some information is lost in this transformation, of course, since several Unicode strings can be transformed in the same ASCII representation.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T150241Z" creationid="isVowel" creationdate="20200226T150241Z">
+        <seg>無論、この変換処理では何種類かの Unicode 文字列は類似の ASCII 表記へ変換されてしまうため一部情報が欠落します。 </seg>
       </tuv>
     </tu>
     <tu>
@@ -8562,6 +8690,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The generated HTML for some of these wrappers is so huge that it is not contained in the distribution.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T100254Z" creationid="isVowel" creationdate="20200226T100254Z">
+        <seg>ラッパー用に生成された HTML ドキュメントは巨大なためディストリビューションには収録していません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The generated index.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200209T061215Z" creationid="isVowel" creationdate="20200209T061215Z">
@@ -8584,7 +8720,8 @@ skipped : スキップする、無視する、読み飛ばす。</note>
       </tuv>
     </tu>
     <tu>
-      <note>nested は「併用」または「サブ言語化」では？</note>
+      <note>nested は「併用」または「サブ言語化」では？　あるいは「組み込む」のほうがいいと思います。
+</note>
       <tuv lang="EN-US">
         <seg>The interface supports one language nested in another.</seg>
       </tuv>
@@ -8882,6 +9019,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This is only required if the module was compiled with the &lt;t2&gt;&lt;s3&gt;--define:noUnidecodeTable&lt;/s3&gt;&lt;/t2&gt; switch.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T150615Z" creationid="isVowel" creationdate="20200226T150615Z">
+        <seg>この関数は &lt;t2&gt;&lt;s3&gt;--define:noUnidecodeTable&lt;/s3&gt;&lt;/t2&gt; スイッチでモジュールをコンパイルしたときに限り使います。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This is only used for speed hacks.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200222T152035Z" creationid="isVowel" creationdate="20200222T152035Z">
@@ -8994,6 +9139,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This module implements an AST for the &lt;s0&gt;reStructuredText&lt;/s0&gt; parser.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T094113Z" creationid="isVowel" creationdate="20200226T094113Z">
+        <seg>このモジュールは &lt;s0&gt;reStructuredText&lt;/s0&gt; パーサーにおける構文抽象木 (AST) の実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This module implements an algorithm to compute the &lt;s0&gt;edit distance&lt;/s0&gt; between two Unicode strings.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200226T045126Z" creationid="isVowel" creationdate="20200226T045126Z">
@@ -9073,11 +9226,28 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
     </tu>
     <tu>
+      <note>「このモジュールは Text::Unidecode を元(お手本？)に開発された Python の Unidecode をベースしています」かな？　後で事実関係を調べてみます。</note>
+      <tuv lang="EN-US">
+        <seg>This module is based on Python's Unidecode module by Tomaz Solc, which in turn is based on the &lt;t0&gt;&lt;s1&gt;Text::Unidecode&lt;/s1&gt;&lt;/t0&gt; Perl module by Sean M. Burke (&lt;a2&gt;http://search.cpan.org/~sburke/Text-Unidecode-0.04/lib/Text/Unidecode.pm&lt;/a2&gt; ).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T150145Z" creationid="isVowel" creationdate="20200226T150145Z">
+        <seg>このモジュールはトマシュ・ソルクによる Python の Unidecode モジュールをベースにしています。また、ショーン・Ｍ・バークによる Perl の &lt;t0&gt;&lt;s1&gt;Text::Unidecode&lt;/s1&gt;&lt;/t0&gt; モジュール (&lt;a2&gt;http://search.cpan.org/~sburke/Text-Unidecode-0.04/lib/Text/Unidecode.pm&lt;/a2&gt;) もベースにしています。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv lang="EN-US">
         <seg>This module is experimental and its interface may change.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200123T041230Z" creationid="isVowel" creationdate="20200123T041100Z">
         <seg>このモジュールは実験的なものであり、インタフェースは変更されることがあります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This module needs the data file "unidecode.dat" to work: This file is embedded as a resource into your application by default.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T150318Z" creationid="isVowel" creationdate="20200226T150303Z">
+        <seg>このモジュールの動作にはデータファイル "unidecode.dat" が必要です。このファイルはデフォルトのリソースとしてアプリケーションに組み込まれています。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9103,6 +9273,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T171930Z" creationid="isVowel" creationdate="20200209T051909Z">
         <seg>このモジュールはシグナルハンドラを登録することでアクセス違反 (access violations)、セグメンテーション違反 (segfaults) を &lt;t0&gt;&lt;s1&gt;NilAccessError&lt;/s1&gt;&lt;/t0&gt; 例外に差し替えます。 </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This needs to be called by the main thread before any thread can make a call to &lt;t4&gt;&lt;s5&gt;unidecode&lt;/s5&gt;&lt;/t4&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T150633Z" creationid="isVowel" creationdate="20200226T150633Z">
+        <seg>いかなるスレッドであろうと &lt;t4&gt;&lt;s5&gt;unidecode&lt;/s5&gt;&lt;/t4&gt; の呼び出し前に、この関数をメインスレッドで必ず呼び出してください。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9755,6 +9933,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Writes the given RST node as JSON that is in the form</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T094644Z" creationid="isVowel" creationdate="20200226T094644Z">
+        <seg>指定された RST ノードを JSON 形式として出力します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Writes the list of registered foreign deps to stdout.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200131T095449Z" creationid="isVowel" creationdate="20200131T095449Z">
@@ -9843,6 +10029,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200117T060027Z" creationid="isVowel" creationdate="20200117T060027Z">
         <seg>&lt;t5&gt;&lt;s6&gt;test&lt;/s6&gt;&lt;/t5&gt; コマンドにオプションを指定すると、テスターへ転送します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can then find them on the website.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T100330Z" creationid="isVowel" creationdate="20200226T100330Z">
+        <seg>ドキュメントはウェブサイトに掲載してあります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9982,6 +10176,22 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200220T091732Z" creationid="isVowel" creationdate="20200220T091732Z">
         <seg>エイリアス分析</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>an RST node   &lt;a0&gt;Source&lt;/a0&gt; &lt;a1&gt;Edit&lt;/a1&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T094255Z" creationid="isVowel" creationdate="20200226T094255Z">
+        <seg>RST ノード   &lt;a0&gt;ソース&lt;/a0&gt; &lt;a1&gt;編集&lt;/a1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>an RST node's description   &lt;a0&gt;Source&lt;/a0&gt; &lt;a1&gt;Edit&lt;/a1&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T094421Z" creationid="isVowel" creationdate="20200226T094421Z">
+        <seg>RST ノードの内容   &lt;a0&gt;ソース&lt;/a0&gt; &lt;a1&gt;編集&lt;/a1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -11288,10 +11498,26 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>kind*: RstNodeKind           ## the node's kind</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T093905Z" creationid="isVowel" creationdate="20200226T093905Z">
+        <seg>kind*: RstNodeKind           ## ノードの種類</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>lambda lifting</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200220T091659Z" creationid="isVowel" creationdate="20200220T091659Z">
         <seg>ラムダのリフト</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>level*: int                  ## valid for some node kinds</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T094010Z" creationid="isVowel" creationdate="20200226T094010Z">
+        <seg>level*: int                  ## 有効なノードの種類</seg>
       </tuv>
     </tu>
     <tu>
@@ -11332,6 +11558,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T084422Z" creationid="isVowel" creationdate="20200221T084422Z">
         <seg>&lt;t2&gt;&lt;s3&gt;dlimport&lt;/s3&gt;&lt;/t2&gt; プラグマと同様に、 &lt;t0&gt;&lt;s1&gt;pattern&lt;/s1&gt;&lt;/t0&gt; と一致する名前のライブラリをロードします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>loads the datafile that &lt;t0&gt;&lt;s1&gt;unidecode&lt;/s1&gt;&lt;/t0&gt; to work.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T150546Z" creationid="isVowel" creationdate="20200226T150546Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;unidecode&lt;/s1&gt;&lt;/t0&gt; で使う datafile をロードします。</seg>
       </tuv>
     </tu>
     <tu>
@@ -11622,6 +11856,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>renders &lt;t0&gt;&lt;s1&gt;n&lt;/s1&gt;&lt;/t0&gt; into its string representation and appends to &lt;t2&gt;&lt;s3&gt;result&lt;/s3&gt;&lt;/t2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T094603Z" creationid="isVowel" creationdate="20200226T094603Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;n&lt;/s1&gt;&lt;/t0&gt; を文字列形式に翻訳して &lt;t2&gt;&lt;s3&gt;result&lt;/s3&gt;&lt;/t2&gt; へ追加します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>replace the pattern</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T041054Z" creationid="isVowel" creationdate="20200130T041054Z">
@@ -11722,6 +11964,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200220T091907Z" creationid="isVowel" creationdate="20200220T091907Z">
         <seg>sizeof の計算</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>sons*: RstNodeSeq            ## the node's sons</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T094022Z" creationid="isVowel" creationdate="20200226T094022Z">
+        <seg>sons*: RstNodeSeq            ## ノードの息子ら</seg>
       </tuv>
     </tu>
     <tu>
@@ -12806,6 +13056,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>text*: string                ## valid for leafs in the AST; and the title of</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T093925Z" creationid="isVowel" creationdate="20200226T093925Z">
+        <seg>text*: string                ## 有効な構文抽象木 (AST) のリーフ、およびタイトル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>the list of known distributions   &lt;a0&gt;Source&lt;/a0&gt; &lt;a1&gt;Edit&lt;/a1&gt;</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200131T095608Z" creationid="isVowel" creationdate="20200117T152120Z">
@@ -12834,6 +13092,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200225T034040Z" creationid="isVowel" creationdate="20200225T034040Z">
         <seg>利用可能メッセージ   &lt;a0&gt;ソース&lt;/a0&gt; &lt;a1&gt;編集&lt;/a1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>the possible node kinds of an PRstNode   &lt;a0&gt;Source&lt;/a0&gt; &lt;a1&gt;Edit&lt;/a1&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200226T094227Z" creationid="isVowel" creationdate="20200226T094227Z">
+        <seg>PRstNode で利用可能なノードの種類   &lt;a0&gt;ソース&lt;/a0&gt; &lt;a1&gt;編集&lt;/a1&gt;</seg>
       </tuv>
     </tu>
     <tu>

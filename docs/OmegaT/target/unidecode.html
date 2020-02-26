@@ -856,10 +856,10 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"><p>This module is based on Python's Unidecode module by Tomaz Solc, which in turn is based on the <tt class="docutils literal"><span class="pre">Text::Unidecode</span></tt> Perl module by Sean M. Burke (<a class="reference external" href="http://search.cpan.org/~sburke/Text-Unidecode-0.04/lib/Text/Unidecode.pm">http://search.cpan.org/~sburke/Text-Unidecode-0.04/lib/Text/Unidecode.pm</a> ).</p>
-<p>It provides a single proc that does Unicode to ASCII transliterations: It finds the sequence of ASCII characters that is the closest approximation to the Unicode string.</p>
-<p>For example, the closest to string "Äußerst" in ASCII is "Ausserst". Some information is lost in this transformation, of course, since several Unicode strings can be transformed in the same ASCII representation. So this is a strictly one-way transformation. However a human reader will probably still be able to guess what original string was meant from the context.</p>
-<p>This module needs the data file "unidecode.dat" to work: This file is embedded as a resource into your application by default. But you an also define the symbol <tt class="docutils literal"><span class="pre">--define:noUnidecodeTable</span></tt> during compile time and use the <tt class="docutils literal"><span class="pre">loadUnidecodeTable</span></tt> proc to initialize this module.</p>
+  <p class="module-desc"><p>このモジュールはトマシュ・ソルクによる Python の Unidecode モジュールをベースにしています。また、ショーン・Ｍ・バークによる Perl の <tt class="docutils literal"><span class="pre">Text::Unidecode</span></tt> モジュール (<a class="reference external" href="http://search.cpan.org/~sburke/Text-Unidecode-0.04/lib/Text/Unidecode.pm">http://search.cpan.org/~sburke/Text-Unidecode-0.04/lib/Text/Unidecode.pm</a>) もベースにしています。</p>
+<p>これにより Unicode を ASCII へ翻字を行うプロシージャを使えます。つまり Unicode 文字列に最も近い近似 ASCII 文字のシーケンスを検索します。</p>
+<p>例えば、文字列 "Äußerst" に最も近い ASCII は "Ausserst" です。無論、この変換処理では何種類かの Unicode 文字列は類似の ASCII 表記へ変換されてしまうため一部情報が欠落します。 厳密に言えば不可逆変換です。とはいえ人力をもってすれば、文脈より原文の文字列の意味を推測することはできるでしょう。</p>
+<p>このモジュールの動作にはデータファイル "unidecode.dat" が必要です。このファイルはデフォルトのリソースとしてアプリケーションに組み込まれています。デフォルト以外のリソースを使うときは、このモジュールを <tt class="docutils literal"><span class="pre">loadUnidecodeTable</span></tt> プロシージャで初期化してから、コンパイル処理時に <tt class="docutils literal"><span class="pre">--define:noUnidecodeTable</span></tt> シンボルを定義してください。</p>
 </p>
   <div class="section" id="6">
 <h1><a class="toc-backref" href="#6">インポート</a></h1>
@@ -873,7 +873,7 @@ function main() {
 <dt><pre><span class="Keyword">proc</span> <a href="#loadUnidecodeTable%2Cstring"><span class="Identifier">loadUnidecodeTable</span></a><span class="Other">(</span><span class="Identifier">datafile</span> <span class="Other">=</span> <span class="StringLit">"unidecode.dat"</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-loads the datafile that <tt class="docutils literal"><span class="pre">unidecode</span></tt> to work. This is only required if the module was compiled with the <tt class="docutils literal"><span class="pre">--define:noUnidecodeTable</span></tt> switch. This needs to be called by the main thread before any thread can make a call to <tt class="docutils literal"><span class="pre">unidecode</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">unidecode</span></tt> で使う datafile をロードします。この関数は <tt class="docutils literal"><span class="pre">--define:noUnidecodeTable</span></tt> スイッチでモジュールをコンパイルしたときに限り使います。いかなるスレッドであろうと <tt class="docutils literal"><span class="pre">unidecode</span></tt> の呼び出し前に、この関数をメインスレッドで必ず呼び出してください。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/unidecode/unidecode.nim#L40"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/unidecode/unidecode.nim#L40" class="link-seesrc" target="_blank" >編集</a>
 
@@ -882,10 +882,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#unidecode%2Cstring"><span class="Identifier">unidecode</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Finds the sequence of ASCII characters that is the closest approximation to the UTF-8 string <tt class="docutils literal"><span class="pre">s</span></tt>.</p>
+<p>UTF-8 文字列 <tt class="docutils literal"><span class="pre">s</span></tt> に最も近い近似 ASCII 文字のシーケンスを検索します。</p>
 <p>用例:</p>
 <blockquote><p>unidecode("北京")</p></blockquote>
-<p>Results in: "Bei Jing"  </p>
+<p>結果は "Bei Jing" です。 </p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/unidecode/unidecode.nim#L52"
