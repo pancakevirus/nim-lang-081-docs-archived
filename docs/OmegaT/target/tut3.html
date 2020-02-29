@@ -840,7 +840,7 @@ function main() {
 <li><a class="reference" id="introduction-limitations_toc" href="#introduction-limitations">Limitations</a></li>
 </ul><li><a class="reference" id="more-examples_toc" href="#more-examples">More Examples</a></li>
 <ul class="simple"><li><a class="reference" id="more-examples-strformat_toc" href="#more-examples-strformat">Strformat</a></li>
-<li><a class="reference" id="more-examples-ast-pattern-matching_toc" href="#more-examples-ast-pattern-matching">AST パターンマッチング</a></li>
+<li><a class="reference" id="more-examples-ast-pattern-matching_toc" href="#more-examples-ast-pattern-matching">構文抽象木 (AST) パターンマッチング</a></li>
 <li><a class="reference" id="more-examples-opengl-sandbox_toc" href="#more-examples-opengl-sandbox">OpenGL サンドボックス</a></li>
 </ul>
 </ul>
@@ -969,8 +969,8 @@ function main() {
 <h2><a class="toc-backref" id="more-examples-strformat" href="#more-examples-strformat">Strformat</a></h2><p>In the Nim standard library, the <tt class="docutils literal"><span class="pre">strformat</span></tt> library provides a macro that parses a string literal at compile time. Parsing a string in a macro like here is generally not recommended. The parsed AST cannot have type information, and parsing implemented on the VM is generally not very fast. Working on AST nodes is almost always the recommended way. But still <tt class="docutils literal"><span class="pre">strformat</span></tt> is a good example for a practical use case for a macro that is slightly more complex than the <tt class="docutils literal"><span class="pre">assert</span></tt> macro.</p>
 <p><a class="reference external" href="https://github.com/nim-lang/Nim/blob/5845716df8c96157a047c2bd6bcdd795a7a2b9b1/lib/pure/strformat.nim#L280">Strformat</a></p>
 
-<h2><a class="toc-backref" id="more-examples-ast-pattern-matching" href="#more-examples-ast-pattern-matching">AST パターンマッチング</a></h2><p>Ast Pattern Matching is a macro library to aid in writing complex macros. This can be seen as a good example of how to repurpose the Nim syntax tree with new semantics.</p>
-<p><a class="reference external" href="https://github.com/krux02/ast-pattern-matching">AST パターンマッチング</a></p>
+<h2><a class="toc-backref" id="more-examples-ast-pattern-matching" href="#more-examples-ast-pattern-matching">構文抽象木 (AST) パターンマッチング</a></h2><p>Ast Pattern Matching is a macro library to aid in writing complex macros. This can be seen as a good example of how to repurpose the Nim syntax tree with new semantics.</p>
+<p><a class="reference external" href="https://github.com/krux02/ast-pattern-matching">構文抽象木 (AST) パターンマッチング</a></p>
 
 <h2><a class="toc-backref" id="more-examples-opengl-sandbox" href="#more-examples-opengl-sandbox">OpenGL サンドボックス</a></h2><p>This project has a working Nim to GLSL compiler written entirely in macros. It scans recursively though all used function symbols to compile them so that cross library functions can be executed on the GPU.</p>
 <p><a class="reference external" href="https://github.com/krux02/opengl-sandbox">OpenGL サンドボックス</a> </p>

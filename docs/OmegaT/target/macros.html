@@ -833,7 +833,7 @@ function main() {
     </select>
   </div>
   <ul class="simple simple-toc" id="toc-list">
-<li><a class="reference" id="the-ast-in-nim_toc" href="#the-ast-in-nim">The AST in Nim</a></li>
+<li><a class="reference" id="the-ast-in-nim_toc" href="#the-ast-in-nim">Nim の構文抽象木 (AST)</a></li>
 <li><a class="reference" id="leaf-nodesslashatoms_toc" href="#leaf-nodesslashatoms">Leaf nodes/Atoms</a></li>
 <li><a class="reference" id="callsslashexpressions_toc" href="#callsslashexpressions">Calls/expressions</a></li>
 <ul class="simple"><li><a class="reference" id="callsslashexpressions-command-call_toc" href="#callsslashexpressions-command-call">Command call</a></li>
@@ -844,8 +844,8 @@ function main() {
 <li><a class="reference" id="callsslashexpressions-call-with-named-arguments_toc" href="#callsslashexpressions-call-with-named-arguments">Call with named arguments</a></li>
 <li><a class="reference" id="callsslashexpressions-call-with-raw-string-literal_toc" href="#callsslashexpressions-call-with-raw-string-literal">Call with raw string literal</a></li>
 <li><a class="reference" id="callsslashexpressions-dereference-operator_toc" href="#callsslashexpressions-dereference-operator">Dereference operator <tt class="docutils literal"><span class="pre">[]</span></tt></a></li>
-<li><a class="reference" id="callsslashexpressions-addr-operator_toc" href="#callsslashexpressions-addr-operator">Addr operator</a></li>
-<li><a class="reference" id="callsslashexpressions-cast-operator_toc" href="#callsslashexpressions-cast-operator">Cast operator</a></li>
+<li><a class="reference" id="callsslashexpressions-addr-operator_toc" href="#callsslashexpressions-addr-operator">Addr 演算子</a></li>
+<li><a class="reference" id="callsslashexpressions-cast-operator_toc" href="#callsslashexpressions-cast-operator">Cast 演算子</a></li>
 <li><a class="reference" id="callsslashexpressions-object-access-operator-dot_toc" href="#callsslashexpressions-object-access-operator-dot">Object access operator <tt class="docutils literal"><span class="pre">.</span></tt></a></li>
 <li><a class="reference" id="callsslashexpressions-array-access-operator_toc" href="#callsslashexpressions-array-access-operator">Array access operator <tt class="docutils literal"><span class="pre">[]</span></tt></a></li>
 <li><a class="reference" id="callsslashexpressions-parentheses_toc" href="#callsslashexpressions-parentheses">Parentheses</a></li>
@@ -855,10 +855,10 @@ function main() {
 <li><a class="reference" id="callsslashexpressions-if-expression_toc" href="#callsslashexpressions-if-expression">If 式</a></li>
 <li><a class="reference" id="callsslashexpressions-documentation-comments_toc" href="#callsslashexpressions-documentation-comments">ドキュメンテーションのコメント</a></li>
 <li><a class="reference" id="callsslashexpressions-pragmas_toc" href="#callsslashexpressions-pragmas">プラグマ</a></li>
-</ul><li><a class="reference" id="statements_toc" href="#statements">Statements</a></li>
+</ul><li><a class="reference" id="statements_toc" href="#statements">ステートメント</a></li>
 <ul class="simple"><li><a class="reference" id="statements-if-statement_toc" href="#statements-if-statement">If ステートメント</a></li>
 <li><a class="reference" id="statements-when-statement_toc" href="#statements-when-statement">When ステートメント</a></li>
-<li><a class="reference" id="statements-assignment_toc" href="#statements-assignment">Assignment</a></li>
+<li><a class="reference" id="statements-assignment_toc" href="#statements-assignment">代入</a></li>
 <li><a class="reference" id="statements-statement-list_toc" href="#statements-statement-list">Statement list</a></li>
 <li><a class="reference" id="statements-case-statement_toc" href="#statements-case-statement">Case ステートメント</a></li>
 <li><a class="reference" id="statements-while-statement_toc" href="#statements-while-statement">While ステートメント</a></li>
@@ -870,22 +870,22 @@ function main() {
 <li><a class="reference" id="statements-continue-statement_toc" href="#statements-continue-statement">Continue ステートメント</a></li>
 <li><a class="reference" id="statements-break-statement_toc" href="#statements-break-statement">Break ステートメント</a></li>
 <li><a class="reference" id="statements-block-statement_toc" href="#statements-block-statement">Block ステートメント</a></li>
-<li><a class="reference" id="statements-asm-statement_toc" href="#statements-asm-statement">Asm statement</a></li>
-<li><a class="reference" id="statements-import-section_toc" href="#statements-import-section">Import section</a></li>
+<li><a class="reference" id="statements-asm-statement_toc" href="#statements-asm-statement">Asm ステートメント</a></li>
+<li><a class="reference" id="statements-import-section_toc" href="#statements-import-section">Import セクション</a></li>
 <li><a class="reference" id="statements-from-statement_toc" href="#statements-from-statement">From ステートメント</a></li>
 <li><a class="reference" id="statements-export-statement_toc" href="#statements-export-statement">Export ステートメント</a></li>
 <li><a class="reference" id="statements-include-statement_toc" href="#statements-include-statement">Include ステートメント</a></li>
-<li><a class="reference" id="statements-var-section_toc" href="#statements-var-section">Var section</a></li>
-<li><a class="reference" id="statements-let-section_toc" href="#statements-let-section">Let section</a></li>
+<li><a class="reference" id="statements-var-section_toc" href="#statements-var-section">Var セクション</a></li>
+<li><a class="reference" id="statements-let-section_toc" href="#statements-let-section">Let セクション</a></li>
 <li><a class="reference" id="statements-const-section_toc" href="#statements-const-section">Const セクション</a></li>
-<li><a class="reference" id="statements-type-section_toc" href="#statements-type-section">Type section</a></li>
+<li><a class="reference" id="statements-type-section_toc" href="#statements-type-section">Type セクション</a></li>
 <li><a class="reference" id="statements-mixin-statement_toc" href="#statements-mixin-statement">Mixin ステートメント</a></li>
 <li><a class="reference" id="statements-bind-statement_toc" href="#statements-bind-statement">Bind ステートメント</a></li>
-<li><a class="reference" id="statements-procedure-declaration_toc" href="#statements-procedure-declaration">Procedure declaration</a></li>
-<li><a class="reference" id="statements-iterator-declaration_toc" href="#statements-iterator-declaration">Iterator declaration</a></li>
-<li><a class="reference" id="statements-converter-declaration_toc" href="#statements-converter-declaration">Converter declaration</a></li>
-<li><a class="reference" id="statements-template-declaration_toc" href="#statements-template-declaration">Template declaration</a></li>
-<li><a class="reference" id="statements-macro-declaration_toc" href="#statements-macro-declaration">Macro declaration</a></li>
+<li><a class="reference" id="statements-procedure-declaration_toc" href="#statements-procedure-declaration">プロシージャ宣言</a></li>
+<li><a class="reference" id="statements-iterator-declaration_toc" href="#statements-iterator-declaration">イテレータ宣言</a></li>
+<li><a class="reference" id="statements-converter-declaration_toc" href="#statements-converter-declaration">コンバータ宣言</a></li>
+<li><a class="reference" id="statements-template-declaration_toc" href="#statements-template-declaration">テンプレート宣言</a></li>
+<li><a class="reference" id="statements-macro-declaration_toc" href="#statements-macro-declaration">マクロ宣言</a></li>
 </ul><li><a class="reference" id="special-node-kinds_toc" href="#special-node-kinds">Special node kinds</a></li>
 <li>
   <a class="reference reference-toplevel" href="#7" id="57">型</a>
@@ -1361,7 +1361,7 @@ function main() {
 <li><a class="reference external" href="manual.html#macros">macros section in Nim manual</a></li>
 </ul>
 
-<h1><a class="toc-backref" id="the-ast-in-nim" href="#the-ast-in-nim">The AST in Nim</a></h1><p>This section describes how the AST is modelled with Nim's type system. The AST consists of nodes (<tt class="docutils literal"><span class="pre">NimNode</span></tt>) with a variable number of children. Each node has a field named <tt class="docutils literal"><span class="pre">kind</span></tt> which describes what the node contains:</p>
+<h1><a class="toc-backref" id="the-ast-in-nim" href="#the-ast-in-nim">Nim の構文抽象木 (AST)</a></h1><p>This section describes how the AST is modelled with Nim's type system. The AST consists of nodes (<tt class="docutils literal"><span class="pre">NimNode</span></tt>) with a variable number of children. Each node has a field named <tt class="docutils literal"><span class="pre">kind</span></tt> which describes what the node contains:</p>
 <pre class="listing"><span class="Keyword">type</span>
   <span class="Identifier">NimNodeKind</span> <span class="Operator">=</span> <span class="Keyword">enum</span>     <span class="Comment">## kind of a node; only explanatory</span>
     <span class="Identifier">nnkNone</span><span class="Punctuation">,</span>             <span class="Comment">## invalid node kind</span>
@@ -1413,29 +1413,29 @@ function main() {
 </table><p>Identifiers are <tt class="docutils literal"><span class="pre">nnkIdent</span></tt> nodes. After the name lookup pass these nodes get transferred into <tt class="docutils literal"><span class="pre">nnkSym</span></tt> nodes.</p>
 
 <h1><a class="toc-backref" id="callsslashexpressions" href="#callsslashexpressions">Calls/expressions</a></h1>
-<h2><a class="toc-backref" id="callsslashexpressions-command-call" href="#callsslashexpressions-command-call">Command call</a></h2><p>Concrete syntax:</p>
-<pre class="listing"><span class="Identifier">echo</span> <span class="StringLit">"abc"</span><span class="Punctuation">,</span> <span class="StringLit">"xyz"</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="callsslashexpressions-command-call" href="#callsslashexpressions-command-call">Command call</a></h2><p>具象構文:</p>
+<pre class="listing"><span class="Identifier">echo</span> <span class="StringLit">"abc"</span><span class="Punctuation">,</span> <span class="StringLit">"xyz"</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkCommand</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"echo"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkStrLit</span><span class="Punctuation">(</span><span class="StringLit">"abc"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkStrLit</span><span class="Punctuation">(</span><span class="StringLit">"xyz"</span><span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="callsslashexpressions-call-with" href="#callsslashexpressions-call-with">Call with <tt class="docutils literal"><span class="pre">()</span></tt></a></h2><p>Concrete syntax:</p>
-<pre class="listing"><span class="Identifier">echo</span><span class="Punctuation">(</span><span class="StringLit">"abc"</span><span class="Punctuation">,</span> <span class="StringLit">"xyz"</span><span class="Punctuation">)</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="callsslashexpressions-call-with" href="#callsslashexpressions-call-with">Call with <tt class="docutils literal"><span class="pre">()</span></tt></a></h2><p>具象構文:</p>
+<pre class="listing"><span class="Identifier">echo</span><span class="Punctuation">(</span><span class="StringLit">"abc"</span><span class="Punctuation">,</span> <span class="StringLit">"xyz"</span><span class="Punctuation">)</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkCall</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"echo"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkStrLit</span><span class="Punctuation">(</span><span class="StringLit">"abc"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkStrLit</span><span class="Punctuation">(</span><span class="StringLit">"xyz"</span><span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="callsslashexpressions-infix-operator-call" href="#callsslashexpressions-infix-operator-call">Infix operator call</a></h2><p>Concrete syntax:</p>
-<pre class="listing"><span class="StringLit">"abc"</span> <span class="Operator">&amp;</span> <span class="StringLit">"xyz"</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="callsslashexpressions-infix-operator-call" href="#callsslashexpressions-infix-operator-call">Infix operator call</a></h2><p>具象構文:</p>
+<pre class="listing"><span class="StringLit">"abc"</span> <span class="Operator">&amp;</span> <span class="StringLit">"xyz"</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkInfix</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"&amp;"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkStrLit</span><span class="Punctuation">(</span><span class="StringLit">"abc"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkStrLit</span><span class="Punctuation">(</span><span class="StringLit">"xyz"</span><span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre><p>Note that with multiple infix operators, the command is parsed by operator precedence.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="DecNumber">5</span> <span class="Operator">+</span> <span class="DecNumber">3</span> <span class="Operator">*</span> <span class="DecNumber">4</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="DecNumber">5</span> <span class="Operator">+</span> <span class="DecNumber">3</span> <span class="Operator">*</span> <span class="DecNumber">4</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkInfix</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"+"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkIntLit</span><span class="Punctuation">(</span><span class="DecNumber">5</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
@@ -1445,8 +1445,8 @@ function main() {
     <span class="Identifier">nnkIntLit</span><span class="Punctuation">(</span><span class="DecNumber">4</span><span class="Punctuation">)</span>
   <span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre><p>As a side note, if you choose to use infix operators in a prefix form, the AST behaves as a <a class="reference external" href="#callsslashexpressions-call-with">parenthetical function call</a> with <tt class="docutils literal"><span class="pre">nnkAccQuoted</span></tt>, as follows:</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Punctuation">`</span><span class="Operator">+</span><span class="Punctuation">`</span><span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="DecNumber">4</span><span class="Punctuation">)</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Punctuation">`</span><span class="Operator">+</span><span class="Punctuation">`</span><span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="DecNumber">4</span><span class="Punctuation">)</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkCall</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkAccQuoted</span><span class="Punctuation">(</span>
     <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"+"</span><span class="Punctuation">)</span>
@@ -1454,21 +1454,21 @@ function main() {
   <span class="Identifier">nnkIntLit</span><span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkIntLit</span><span class="Punctuation">(</span><span class="DecNumber">4</span><span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="callsslashexpressions-prefix-operator-call" href="#callsslashexpressions-prefix-operator-call">Prefix operator call</a></h2><p>Concrete syntax:</p>
-<pre class="listing"><span class="Operator">?</span> <span class="StringLit">"xyz"</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="callsslashexpressions-prefix-operator-call" href="#callsslashexpressions-prefix-operator-call">Prefix operator call</a></h2><p>具象構文:</p>
+<pre class="listing"><span class="Operator">?</span> <span class="StringLit">"xyz"</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkPrefix</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"?"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkStrLit</span><span class="Punctuation">(</span><span class="StringLit">"abc"</span><span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre>
 <h2><a class="toc-backref" id="callsslashexpressions-postfix-operator-call" href="#callsslashexpressions-postfix-operator-call">Postfix operator call</a></h2><p><strong>Note:</strong> There are no postfix operators in Nim. However, the <tt class="docutils literal"><span class="pre">nnkPostfix</span></tt> node is used for the <em>asterisk export marker</em> <tt class="docutils literal"><span class="pre">*</span></tt>:</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Identifier">identifier</span><span class="Operator">*</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Identifier">identifier</span><span class="Operator">*</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkPostfix</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"*"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"identifier"</span><span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="callsslashexpressions-call-with-named-arguments" href="#callsslashexpressions-call-with-named-arguments">Call with named arguments</a></h2><p>Concrete syntax:</p>
-<pre class="listing"><span class="Identifier">writeLine</span><span class="Punctuation">(</span><span class="Identifier">file</span><span class="Operator">=</span><span class="Identifier">stdout</span><span class="Punctuation">,</span> <span class="StringLit">"hallo"</span><span class="Punctuation">)</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="callsslashexpressions-call-with-named-arguments" href="#callsslashexpressions-call-with-named-arguments">Call with named arguments</a></h2><p>具象構文:</p>
+<pre class="listing"><span class="Identifier">writeLine</span><span class="Punctuation">(</span><span class="Identifier">file</span><span class="Operator">=</span><span class="Identifier">stdout</span><span class="Punctuation">,</span> <span class="StringLit">"hallo"</span><span class="Punctuation">)</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkCall</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"writeLine"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkExprEqExpr</span><span class="Punctuation">(</span>
@@ -1478,49 +1478,49 @@ function main() {
   <span class="Identifier">nnkStrLit</span><span class="Punctuation">(</span><span class="StringLit">"hallo"</span><span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre>
 <h2><a class="toc-backref" id="callsslashexpressions-call-with-raw-string-literal" href="#callsslashexpressions-call-with-raw-string-literal">Call with raw string literal</a></h2><p>This is used, for example, in the <tt class="docutils literal"><span class="pre">bindSym</span></tt> examples <a class="reference external" href="manual.html#macros-bindsym">here</a> and with <tt class="docutils literal"><span class="pre">re"some regexp"</span></tt> in the regular expression module.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="RawData">echo"abc"</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="RawData">echo"abc"</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkCallStrLit</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"echo"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkRStrLit</span><span class="Punctuation">(</span><span class="StringLit">"hello"</span><span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="callsslashexpressions-dereference-operator" href="#callsslashexpressions-dereference-operator">Dereference operator <tt class="docutils literal"><span class="pre">[]</span></tt></a></h2><p>Concrete syntax:</p>
-<pre class="listing"><span class="Identifier">x</span><span class="Punctuation">[</span><span class="Punctuation">]</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="callsslashexpressions-dereference-operator" href="#callsslashexpressions-dereference-operator">Dereference operator <tt class="docutils literal"><span class="pre">[]</span></tt></a></h2><p>具象構文:</p>
+<pre class="listing"><span class="Identifier">x</span><span class="Punctuation">[</span><span class="Punctuation">]</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkDerefExpr</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"x"</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="callsslashexpressions-addr-operator" href="#callsslashexpressions-addr-operator">Addr operator</a></h2><p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">addr</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">)</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="callsslashexpressions-addr-operator" href="#callsslashexpressions-addr-operator">Addr 演算子</a></h2><p>具象構文:</p>
+<pre class="listing"><span class="Keyword">addr</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">)</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkAddr</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"x"</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="callsslashexpressions-cast-operator" href="#callsslashexpressions-cast-operator">Cast operator</a></h2><p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">cast</span><span class="Punctuation">[</span><span class="Identifier">T</span><span class="Punctuation">]</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">)</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="callsslashexpressions-cast-operator" href="#callsslashexpressions-cast-operator">Cast 演算子</a></h2><p>具象構文:</p>
+<pre class="listing"><span class="Keyword">cast</span><span class="Punctuation">[</span><span class="Identifier">T</span><span class="Punctuation">]</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">)</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkCast</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"T"</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"x"</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="callsslashexpressions-object-access-operator-dot" href="#callsslashexpressions-object-access-operator-dot">Object access operator <tt class="docutils literal"><span class="pre">.</span></tt></a></h2><p>Concrete syntax:</p>
-<pre class="listing"><span class="Identifier">x</span><span class="Operator">.</span><span class="Identifier">y</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="callsslashexpressions-object-access-operator-dot" href="#callsslashexpressions-object-access-operator-dot">Object access operator <tt class="docutils literal"><span class="pre">.</span></tt></a></h2><p>具象構文:</p>
+<pre class="listing"><span class="Identifier">x</span><span class="Operator">.</span><span class="Identifier">y</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkDotExpr</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"x"</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"y"</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre><p>If you use Nim's flexible calling syntax (as in <tt class="docutils literal"><span class="pre">x.len()</span></tt>), the result is the same as above but wrapped in an <tt class="docutils literal"><span class="pre">nnkCall</span></tt>.</p>
 
-<h2><a class="toc-backref" id="callsslashexpressions-array-access-operator" href="#callsslashexpressions-array-access-operator">Array access operator <tt class="docutils literal"><span class="pre">[]</span></tt></a></h2><p>Concrete syntax:</p>
-<pre class="listing"><span class="Identifier">x</span><span class="Punctuation">[</span><span class="Identifier">y</span><span class="Punctuation">]</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="callsslashexpressions-array-access-operator" href="#callsslashexpressions-array-access-operator">Array access operator <tt class="docutils literal"><span class="pre">[]</span></tt></a></h2><p>具象構文:</p>
+<pre class="listing"><span class="Identifier">x</span><span class="Punctuation">[</span><span class="Identifier">y</span><span class="Punctuation">]</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkBracketExpr</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"x"</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"y"</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre>
 <h2><a class="toc-backref" id="callsslashexpressions-parentheses" href="#callsslashexpressions-parentheses">Parentheses</a></h2><p>Parentheses for affecting operator precedence or tuple construction are built with the <tt class="docutils literal"><span class="pre">nnkPar</span></tt> node.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Punctuation">(</span><span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Punctuation">(</span><span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkPar</span><span class="Punctuation">(</span><span class="Identifier">nnkIntLit</span><span class="Punctuation">(</span><span class="DecNumber">1</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">nnkIntLit</span><span class="Punctuation">(</span><span class="DecNumber">2</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">nnkPar</span><span class="Punctuation">(</span><span class="Identifier">nnkIntLit</span><span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">)</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre>
 <h2><a class="toc-backref" id="callsslashexpressions-curly-braces" href="#callsslashexpressions-curly-braces">Curly braces</a></h2><p>Curly braces are used as the set constructor.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Punctuation">{</span><span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">}</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Punctuation">{</span><span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">}</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkCurly</span><span class="Punctuation">(</span><span class="Identifier">nnkIntLit</span><span class="Punctuation">(</span><span class="DecNumber">1</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">nnkIntLit</span><span class="Punctuation">(</span><span class="DecNumber">2</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">nnkIntLit</span><span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre><p>When used as a table constructor, the syntax is different.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Punctuation">{</span><span class="Identifier">a</span><span class="Punctuation">:</span> <span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="Identifier">b</span><span class="Punctuation">:</span> <span class="DecNumber">5</span><span class="Punctuation">}</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Punctuation">{</span><span class="Identifier">a</span><span class="Punctuation">:</span> <span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="Identifier">b</span><span class="Punctuation">:</span> <span class="DecNumber">5</span><span class="Punctuation">}</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkTableConstr</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkExprColonExpr</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"a"</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">nnkIntLit</span><span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">)</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkExprColonExpr</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"b"</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">nnkIntLit</span><span class="Punctuation">(</span><span class="DecNumber">5</span><span class="Punctuation">)</span><span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre>
 <h2><a class="toc-backref" id="callsslashexpressions-brackets" href="#callsslashexpressions-brackets">Brackets</a></h2><p>Brackets are used as the array constructor.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Punctuation">[</span><span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">]</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Punctuation">[</span><span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">]</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkBracket</span><span class="Punctuation">(</span><span class="Identifier">nnkIntLit</span><span class="Punctuation">(</span><span class="DecNumber">1</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">nnkIntLit</span><span class="Punctuation">(</span><span class="DecNumber">2</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">nnkIntLit</span><span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre>
 <h2><a class="toc-backref" id="callsslashexpressions-ranges" href="#callsslashexpressions-ranges">Ranges</a></h2><p>Ranges occur in set constructors, case statement branches, or array slices. Internally, the node kind <tt class="docutils literal"><span class="pre">nnkRange</span></tt> is used, but when constructing the AST, construction with <tt class="docutils literal"><span class="pre">..</span></tt> as an infix operator should be used instead.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="FloatNumber">1.</span><span class="Operator">.</span><span class="DecNumber">3</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="FloatNumber">1.</span><span class="Operator">.</span><span class="DecNumber">3</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkInfix</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">".."</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkIntLit</span><span class="Punctuation">(</span><span class="DecNumber">1</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
@@ -1545,34 +1545,34 @@ function main() {
                 <span class="Comment"># 3</span>
                 <span class="Comment"># 3</span></pre>
 <h2><a class="toc-backref" id="callsslashexpressions-if-expression" href="#callsslashexpressions-if-expression">If 式</a></h2><p>The representation of the <tt class="docutils literal"><span class="pre">if</span></tt> expression is subtle, but easy to traverse.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">if</span> <span class="Identifier">cond1</span><span class="Punctuation">:</span> <span class="Identifier">expr1</span> <span class="Keyword">elif</span> <span class="Identifier">cond2</span><span class="Punctuation">:</span> <span class="Identifier">expr2</span> <span class="Keyword">else</span><span class="Punctuation">:</span> <span class="Identifier">expr3</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Keyword">if</span> <span class="Identifier">cond1</span><span class="Punctuation">:</span> <span class="Identifier">expr1</span> <span class="Keyword">elif</span> <span class="Identifier">cond2</span><span class="Punctuation">:</span> <span class="Identifier">expr2</span> <span class="Keyword">else</span><span class="Punctuation">:</span> <span class="Identifier">expr3</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkIfExpr</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkElifExpr</span><span class="Punctuation">(</span><span class="Identifier">cond1</span><span class="Punctuation">,</span> <span class="Identifier">expr1</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkElifExpr</span><span class="Punctuation">(</span><span class="Identifier">cond2</span><span class="Punctuation">,</span> <span class="Identifier">expr2</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkElseExpr</span><span class="Punctuation">(</span><span class="Identifier">expr3</span><span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre>
 <h2><a class="toc-backref" id="callsslashexpressions-documentation-comments" href="#callsslashexpressions-documentation-comments">ドキュメンテーションのコメント</a></h2><p>Double-hash (<tt class="docutils literal"><span class="pre">##</span></tt>) comments in the code actually have their own format, using <tt class="docutils literal"><span class="pre">strVal</span></tt> to get and set the comment text. Single-hash (<tt class="docutils literal"><span class="pre">#</span></tt>) comments are ignored.</p>
-<p>Concrete syntax:</p>
+<p>具象構文:</p>
 <pre class="listing"><span class="Comment">## This is a comment</span>
 <span class="Comment">## This is part of the first comment</span>
 <span class="Identifier">stmt1</span>
-<span class="Comment">## Yet another</span></pre><p>AST:</p>
+<span class="Comment">## Yet another</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkCommentStmt</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Comment"># only appears once for the first two lines!</span>
 <span class="Identifier">stmt1</span>
 <span class="Identifier">nnkCommentStmt</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Comment"># another nnkCommentStmt because there is another comment</span>
                  <span class="Comment"># (separate from the first)</span></pre>
 <h2><a class="toc-backref" id="callsslashexpressions-pragmas" href="#callsslashexpressions-pragmas">プラグマ</a></h2><p>One of Nim's cool features is pragmas, which allow fine-tuning of various aspects of the language. They come in all types, such as adorning procs and objects, but the standalone <tt class="docutils literal"><span class="pre">emit</span></tt> pragma shows the basics with the AST.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">emit</span><span class="Punctuation">:</span> <span class="StringLit">"#include &lt;stdio.h&gt;"</span><span class="Operator">.</span><span class="Punctuation">}</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">emit</span><span class="Punctuation">:</span> <span class="StringLit">"#include &lt;stdio.h&gt;"</span><span class="Operator">.</span><span class="Punctuation">}</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkPragma</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkExprColonExpr</span><span class="Punctuation">(</span>
     <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"emit"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
     <span class="Identifier">nnkStrLit</span><span class="Punctuation">(</span><span class="StringLit">"#include &lt;stdio.h&gt;"</span><span class="Punctuation">)</span> <span class="Comment"># the "argument"</span>
   <span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre><p>As many <tt class="docutils literal"><span class="pre">nnkIdent</span></tt> appear as there are pragmas between <tt class="docutils literal"><span class="pre">{..}</span></tt>. Note that the declaration of new pragmas is essentially the same:</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">pragma</span><span class="Punctuation">:</span> <span class="Identifier">cdeclRename</span><span class="Punctuation">,</span> <span class="Identifier">cdecl</span><span class="Operator">.</span><span class="Punctuation">}</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">pragma</span><span class="Punctuation">:</span> <span class="Identifier">cdeclRename</span><span class="Punctuation">,</span> <span class="Identifier">cdecl</span><span class="Operator">.</span><span class="Punctuation">}</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkPragma</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkExprColonExpr</span><span class="Punctuation">(</span>
     <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"pragma"</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Comment"># this is always first when declaring a new pragma</span>
@@ -1580,9 +1580,9 @@ function main() {
   <span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"cdecl"</span><span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre>
-<h1><a class="toc-backref" id="statements" href="#statements">Statements</a></h1>
+<h1><a class="toc-backref" id="statements" href="#statements">ステートメント</a></h1>
 <h2><a class="toc-backref" id="statements-if-statement" href="#statements-if-statement">If ステートメント</a></h2><p>The representation of the if statement is subtle, but easy to traverse. If there is no <tt class="docutils literal"><span class="pre">else</span></tt> branch, no <tt class="docutils literal"><span class="pre">nnkElse</span></tt> child exists.</p>
-<p>Concrete syntax:</p>
+<p>具象構文:</p>
 <pre class="listing"><span class="Keyword">if</span> <span class="Identifier">cond1</span><span class="Punctuation">:</span>
   <span class="Identifier">stmt1</span>
 <span class="Keyword">elif</span> <span class="Identifier">cond2</span><span class="Punctuation">:</span>
@@ -1590,7 +1590,7 @@ function main() {
 <span class="Keyword">elif</span> <span class="Identifier">cond3</span><span class="Punctuation">:</span>
   <span class="Identifier">stmt3</span>
 <span class="Keyword">else</span><span class="Punctuation">:</span>
-  <span class="Identifier">stmt4</span></pre><p>AST:</p>
+  <span class="Identifier">stmt4</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkIfStmt</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkElifBranch</span><span class="Punctuation">(</span><span class="Identifier">cond1</span><span class="Punctuation">,</span> <span class="Identifier">stmt1</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkElifBranch</span><span class="Punctuation">(</span><span class="Identifier">cond2</span><span class="Punctuation">,</span> <span class="Identifier">stmt2</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
@@ -1599,16 +1599,16 @@ function main() {
 <span class="Punctuation">)</span></pre>
 <h2><a class="toc-backref" id="statements-when-statement" href="#statements-when-statement">When ステートメント</a></h2><p>Like the <tt class="docutils literal"><span class="pre">if</span></tt> statement, but the root has the kind <tt class="docutils literal"><span class="pre">nnkWhenStmt</span></tt>.</p>
 
-<h2><a class="toc-backref" id="statements-assignment" href="#statements-assignment">Assignment</a></h2><p>Concrete syntax:</p>
-<pre class="listing"><span class="Identifier">x</span> <span class="Operator">=</span> <span class="DecNumber">42</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="statements-assignment" href="#statements-assignment">代入</a></h2><p>具象構文:</p>
+<pre class="listing"><span class="Identifier">x</span> <span class="Operator">=</span> <span class="DecNumber">42</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkAsgn</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"x"</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">nnkIntLit</span><span class="Punctuation">(</span><span class="DecNumber">42</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre><p>This is not the syntax for assignment when combined with <tt class="docutils literal"><span class="pre">var</span></tt>, <tt class="docutils literal"><span class="pre">let</span></tt>, or <tt class="docutils literal"><span class="pre">const</span></tt>.</p>
 
-<h2><a class="toc-backref" id="statements-statement-list" href="#statements-statement-list">Statement list</a></h2><p>Concrete syntax:</p>
+<h2><a class="toc-backref" id="statements-statement-list" href="#statements-statement-list">Statement list</a></h2><p>具象構文:</p>
 <pre class="listing"><span class="Identifier">stmt1</span>
 <span class="Identifier">stmt2</span>
-<span class="Identifier">stmt3</span></pre><p>AST:</p>
+<span class="Identifier">stmt3</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkStmtList</span><span class="Punctuation">(</span><span class="Identifier">stmt1</span><span class="Punctuation">,</span> <span class="Identifier">stmt2</span><span class="Punctuation">,</span> <span class="Identifier">stmt3</span><span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="statements-case-statement" href="#statements-case-statement">Case ステートメント</a></h2><p>Concrete syntax:</p>
+<h2><a class="toc-backref" id="statements-case-statement" href="#statements-case-statement">Case ステートメント</a></h2><p>具象構文:</p>
 <pre class="listing"><span class="Keyword">case</span> <span class="Identifier">expr1</span>
 <span class="Keyword">of</span> <span class="Identifier">expr2</span><span class="Punctuation">,</span> <span class="Identifier">expr3</span><span class="Operator">..</span><span class="Identifier">expr4</span><span class="Punctuation">:</span>
   <span class="Identifier">stmt1</span>
@@ -1617,7 +1617,7 @@ function main() {
 <span class="Keyword">elif</span> <span class="Identifier">cond1</span><span class="Punctuation">:</span>
   <span class="Identifier">stmt3</span>
 <span class="Keyword">else</span><span class="Punctuation">:</span>
-  <span class="Identifier">stmt4</span></pre><p>AST:</p>
+  <span class="Identifier">stmt4</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkCaseStmt</span><span class="Punctuation">(</span>
   <span class="Identifier">expr1</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkOfBranch</span><span class="Punctuation">(</span><span class="Identifier">expr2</span><span class="Punctuation">,</span> <span class="Identifier">nnkRange</span><span class="Punctuation">(</span><span class="Identifier">expr3</span><span class="Punctuation">,</span> <span class="Identifier">expr4</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">stmt1</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
@@ -1626,15 +1626,15 @@ function main() {
   <span class="Identifier">nnkElse</span><span class="Punctuation">(</span><span class="Identifier">stmt4</span><span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre><p>The <tt class="docutils literal"><span class="pre">nnkElifBranch</span></tt> and <tt class="docutils literal"><span class="pre">nnkElse</span></tt> parts may be missing.</p>
 
-<h2><a class="toc-backref" id="statements-while-statement" href="#statements-while-statement">While ステートメント</a></h2><p>Concrete syntax:</p>
+<h2><a class="toc-backref" id="statements-while-statement" href="#statements-while-statement">While ステートメント</a></h2><p>具象構文:</p>
 <pre class="listing"><span class="Keyword">while</span> <span class="Identifier">expr1</span><span class="Punctuation">:</span>
-  <span class="Identifier">stmt1</span></pre><p>AST:</p>
+  <span class="Identifier">stmt1</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkWhileStmt</span><span class="Punctuation">(</span><span class="Identifier">expr1</span><span class="Punctuation">,</span> <span class="Identifier">stmt1</span><span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="statements-for-statement" href="#statements-for-statement">For ステートメント</a></h2><p>Concrete syntax:</p>
+<h2><a class="toc-backref" id="statements-for-statement" href="#statements-for-statement">For ステートメント</a></h2><p>具象構文:</p>
 <pre class="listing"><span class="Keyword">for</span> <span class="Identifier">ident1</span><span class="Punctuation">,</span> <span class="Identifier">ident2</span> <span class="Keyword">in</span> <span class="Identifier">expr1</span><span class="Punctuation">:</span>
-  <span class="Identifier">stmt1</span></pre><p>AST:</p>
+  <span class="Identifier">stmt1</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkForStmt</span><span class="Punctuation">(</span><span class="Identifier">ident1</span><span class="Punctuation">,</span> <span class="Identifier">ident2</span><span class="Punctuation">,</span> <span class="Identifier">expr1</span><span class="Punctuation">,</span> <span class="Identifier">stmt1</span><span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="statements-try-statement" href="#statements-try-statement">Try ステートメント</a></h2><p>Concrete syntax:</p>
+<h2><a class="toc-backref" id="statements-try-statement" href="#statements-try-statement">Try ステートメント</a></h2><p>具象構文:</p>
 <pre class="listing"><span class="Keyword">try</span><span class="Punctuation">:</span>
   <span class="Identifier">stmt1</span>
 <span class="Keyword">except</span> <span class="Identifier">e1</span><span class="Punctuation">,</span> <span class="Identifier">e2</span><span class="Punctuation">:</span>
@@ -1644,7 +1644,7 @@ function main() {
 <span class="Keyword">except</span><span class="Punctuation">:</span>
   <span class="Identifier">stmt4</span>
 <span class="Keyword">finally</span><span class="Punctuation">:</span>
-  <span class="Identifier">stmt5</span></pre><p>AST:</p>
+  <span class="Identifier">stmt5</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkTryStmt</span><span class="Punctuation">(</span>
   <span class="Identifier">stmt1</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkExceptBranch</span><span class="Punctuation">(</span><span class="Identifier">e1</span><span class="Punctuation">,</span> <span class="Identifier">e2</span><span class="Punctuation">,</span> <span class="Identifier">stmt2</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
@@ -1652,41 +1652,41 @@ function main() {
   <span class="Identifier">nnkExceptBranch</span><span class="Punctuation">(</span><span class="Identifier">stmt4</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkFinally</span><span class="Punctuation">(</span><span class="Identifier">stmt5</span><span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="statements-return-statement" href="#statements-return-statement">Return ステートメント</a></h2><p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">return</span> <span class="Identifier">expr1</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="statements-return-statement" href="#statements-return-statement">Return ステートメント</a></h2><p>具象構文:</p>
+<pre class="listing"><span class="Keyword">return</span> <span class="Identifier">expr1</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkReturnStmt</span><span class="Punctuation">(</span><span class="Identifier">expr1</span><span class="Punctuation">)</span></pre>
 <h2><a class="toc-backref" id="statements-yield-statement" href="#statements-yield-statement">Yield ステートメント</a></h2><p>Like <tt class="docutils literal"><span class="pre">return</span></tt>, but with <tt class="docutils literal"><span class="pre">nnkYieldStmt</span></tt> kind.</p>
 <pre class="listing"><span class="Identifier">nnkYieldStmt</span><span class="Punctuation">(</span><span class="Identifier">expr1</span><span class="Punctuation">)</span></pre>
 <h2><a class="toc-backref" id="statements-discard-statement" href="#statements-discard-statement">Discard ステートメント</a></h2><p>Like <tt class="docutils literal"><span class="pre">return</span></tt>, but with <tt class="docutils literal"><span class="pre">nnkDiscardStmt</span></tt> kind.</p>
 <pre class="listing"><span class="Identifier">nnkDiscardStmt</span><span class="Punctuation">(</span><span class="Identifier">expr1</span><span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="statements-continue-statement" href="#statements-continue-statement">Continue ステートメント</a></h2><p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">continue</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="statements-continue-statement" href="#statements-continue-statement">Continue ステートメント</a></h2><p>具象構文:</p>
+<pre class="listing"><span class="Keyword">continue</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkContinueStmt</span><span class="Punctuation">(</span><span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="statements-break-statement" href="#statements-break-statement">Break ステートメント</a></h2><p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">break</span> <span class="Identifier">otherLocation</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="statements-break-statement" href="#statements-break-statement">Break ステートメント</a></h2><p>具象構文:</p>
+<pre class="listing"><span class="Keyword">break</span> <span class="Identifier">otherLocation</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkBreakStmt</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"otherLocation"</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre><p>If <tt class="docutils literal"><span class="pre">break</span></tt> is used without a jump-to location, <tt class="docutils literal"><span class="pre">nnkEmpty</span></tt> replaces <tt class="docutils literal"><span class="pre">nnkIdent</span></tt>.</p>
 
-<h2><a class="toc-backref" id="statements-block-statement" href="#statements-block-statement">Block ステートメント</a></h2><p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">block</span> <span class="Identifier">name</span><span class="Punctuation">:</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="statements-block-statement" href="#statements-block-statement">Block ステートメント</a></h2><p>具象構文:</p>
+<pre class="listing"><span class="Keyword">block</span> <span class="Identifier">name</span><span class="Punctuation">:</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkBlockStmt</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"name"</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">nnkStmtList</span><span class="Punctuation">(</span><span class="Operator">...</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre><p>A <tt class="docutils literal"><span class="pre">block</span></tt> doesn't need an name, in which case <tt class="docutils literal"><span class="pre">nnkEmpty</span></tt> is used.</p>
 
-<h2><a class="toc-backref" id="statements-asm-statement" href="#statements-asm-statement">Asm statement</a></h2><p>Concrete syntax:</p>
+<h2><a class="toc-backref" id="statements-asm-statement" href="#statements-asm-statement">Asm ステートメント</a></h2><p>具象構文:</p>
 <pre class="listing"><span class="Keyword">asm</span> <span class="LongStringLit">"""
   some asm
-"""</span></pre><p>AST:</p>
+"""</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkAsmStmt</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkEmpty</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Comment"># for pragmas</span>
   <span class="Identifier">nnkTripleStrLit</span><span class="Punctuation">(</span><span class="StringLit">"some asm"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
 <span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="statements-import-section" href="#statements-import-section">Import section</a></h2><p>Nim's <tt class="docutils literal"><span class="pre">import</span></tt> statement actually takes different variations depending on what keywords are present. Let's start with the simplest form.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">import</span> <span class="Identifier">math</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="statements-import-section" href="#statements-import-section">Import セクション</a></h2><p>Nim's <tt class="docutils literal"><span class="pre">import</span></tt> statement actually takes different variations depending on what keywords are present. Let's start with the simplest form.</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Keyword">import</span> <span class="Identifier">math</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkImportStmt</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"math"</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre><p>With <tt class="docutils literal"><span class="pre">except</span></tt>, we get <tt class="docutils literal"><span class="pre">nnkImportExceptStmt</span></tt>.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">import</span> <span class="Identifier">math</span> <span class="Keyword">except</span> <span class="Identifier">pow</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Keyword">import</span> <span class="Identifier">math</span> <span class="Keyword">except</span> <span class="Identifier">pow</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkImportExceptStmt</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"math"</span><span class="Punctuation">)</span><span class="Punctuation">,</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"pow"</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre><p>Note that <tt class="docutils literal"><span class="pre">import math as m</span></tt> does not use a different node; rather, we use <tt class="docutils literal"><span class="pre">nnkImportStmt</span></tt> with <tt class="docutils literal"><span class="pre">as</span></tt> as an infix operator.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">import</span> <span class="Identifier">strutils</span> <span class="Keyword">as</span> <span class="Identifier">su</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Keyword">import</span> <span class="Identifier">strutils</span> <span class="Keyword">as</span> <span class="Identifier">su</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkImportStmt</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkInfix</span><span class="Punctuation">(</span>
     <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"as"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
@@ -1695,23 +1695,23 @@ function main() {
   <span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre>
 <h2><a class="toc-backref" id="statements-from-statement" href="#statements-from-statement">From ステートメント</a></h2><p>If we use <tt class="docutils literal"><span class="pre">from ... import</span></tt>, the result is different, too.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">from</span> <span class="Identifier">math</span> <span class="Keyword">import</span> <span class="Identifier">pow</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Keyword">from</span> <span class="Identifier">math</span> <span class="Keyword">import</span> <span class="Identifier">pow</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkFromStmt</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"math"</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"pow"</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre><p>Using <tt class="docutils literal"><span class="pre">from math as m import pow</span></tt> works identically to the <tt class="docutils literal"><span class="pre">as</span></tt> modifier with the <tt class="docutils literal"><span class="pre">import</span></tt> statement, but wrapped in <tt class="docutils literal"><span class="pre">nnkFromStmt</span></tt>.</p>
 
 <h2><a class="toc-backref" id="statements-export-statement" href="#statements-export-statement">Export ステートメント</a></h2><p>When you are making an imported module accessible by modules that import yours, the <tt class="docutils literal"><span class="pre">export</span></tt> syntax is pretty straightforward.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">export</span> <span class="Identifier">unsigned</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Keyword">export</span> <span class="Identifier">unsigned</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkExportStmt</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"unsigned"</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre><p>Similar to the <tt class="docutils literal"><span class="pre">import</span></tt> statement, the AST is different for <tt class="docutils literal"><span class="pre">export ... except</span></tt>.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">export</span> <span class="Identifier">math</span> <span class="Keyword">except</span> <span class="Identifier">pow</span> <span class="Comment"># we're going to implement our own exponentiation</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Keyword">export</span> <span class="Identifier">math</span> <span class="Keyword">except</span> <span class="Identifier">pow</span> <span class="Comment"># we're going to implement our own exponentiation</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkExportExceptStmt</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"math"</span><span class="Punctuation">)</span><span class="Punctuation">,</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"pow"</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre>
 <h2><a class="toc-backref" id="statements-include-statement" href="#statements-include-statement">Include ステートメント</a></h2><p>Like a plain <tt class="docutils literal"><span class="pre">import</span></tt> statement but with <tt class="docutils literal"><span class="pre">nnkIncludeStmt</span></tt>.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">include</span> <span class="Identifier">blocks</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Keyword">include</span> <span class="Identifier">blocks</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkIncludeStmt</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"blocks"</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="statements-var-section" href="#statements-var-section">Var section</a></h2><p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">var</span> <span class="Identifier">a</span> <span class="Operator">=</span> <span class="DecNumber">3</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="statements-var-section" href="#statements-var-section">Var セクション</a></h2><p>具象構文:</p>
+<pre class="listing"><span class="Keyword">var</span> <span class="Identifier">a</span> <span class="Operator">=</span> <span class="DecNumber">3</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkVarSection</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkIdentDefs</span><span class="Punctuation">(</span>
     <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"a"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
@@ -1721,9 +1721,9 @@ function main() {
 <span class="Punctuation">)</span></pre><p>Note that either the second or third (or both) parameters above must exist, as the compiler needs to know the type somehow (which it can infer from the given assignment).</p>
 <p>This is not the same AST for all uses of <tt class="docutils literal"><span class="pre">var</span></tt>. See <a class="reference external" href="macros.html#statements-procedure-declaration">Procedure declaration</a> for details.</p>
 
-<h2><a class="toc-backref" id="statements-let-section" href="#statements-let-section">Let section</a></h2><p>This is equivalent to <tt class="docutils literal"><span class="pre">var</span></tt>, but with <tt class="docutils literal"><span class="pre">nnkLetSection</span></tt> rather than <tt class="docutils literal"><span class="pre">nnkVarSection</span></tt>.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">a</span> <span class="Operator">=</span> <span class="DecNumber">3</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="statements-let-section" href="#statements-let-section">Let セクション</a></h2><p>This is equivalent to <tt class="docutils literal"><span class="pre">var</span></tt>, but with <tt class="docutils literal"><span class="pre">nnkLetSection</span></tt> rather than <tt class="docutils literal"><span class="pre">nnkVarSection</span></tt>.</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">a</span> <span class="Operator">=</span> <span class="DecNumber">3</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkLetSection</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkIdentDefs</span><span class="Punctuation">(</span>
     <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"a"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
@@ -1731,8 +1731,8 @@ function main() {
     <span class="Identifier">nnkIntLit</span><span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="statements-const-section" href="#statements-const-section">Const セクション</a></h2><p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">const</span> <span class="Identifier">a</span> <span class="Operator">=</span> <span class="DecNumber">3</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="statements-const-section" href="#statements-const-section">Const セクション</a></h2><p>具象構文:</p>
+<pre class="listing"><span class="Keyword">const</span> <span class="Identifier">a</span> <span class="Operator">=</span> <span class="DecNumber">3</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkConstSection</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkConstDef</span><span class="Punctuation">(</span> <span class="Comment"># not nnkConstDefs!</span>
     <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"a"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
@@ -1740,9 +1740,9 @@ function main() {
     <span class="Identifier">nnkIntLit</span><span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Comment"># required in a const declaration!</span>
   <span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="statements-type-section" href="#statements-type-section">Type section</a></h2><p>Starting with the simplest case, a <tt class="docutils literal"><span class="pre">type</span></tt> section appears much like <tt class="docutils literal"><span class="pre">var</span></tt> and <tt class="docutils literal"><span class="pre">const</span></tt>.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">type</span> <span class="Identifier">A</span> <span class="Operator">=</span> <span class="Identifier">int</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="statements-type-section" href="#statements-type-section">Type セクション</a></h2><p>Starting with the simplest case, a <tt class="docutils literal"><span class="pre">type</span></tt> section appears much like <tt class="docutils literal"><span class="pre">var</span></tt> and <tt class="docutils literal"><span class="pre">const</span></tt>.</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Keyword">type</span> <span class="Identifier">A</span> <span class="Operator">=</span> <span class="Identifier">int</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkTypeSection</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkTypeDef</span><span class="Punctuation">(</span>
     <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"A"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
@@ -1750,8 +1750,8 @@ function main() {
     <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"int"</span><span class="Punctuation">)</span>
   <span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre><p>Declaring <tt class="docutils literal"><span class="pre">distinct</span></tt> types is similar, with the last <tt class="docutils literal"><span class="pre">nnkIdent</span></tt> wrapped in <tt class="docutils literal"><span class="pre">nnkDistinctTy</span></tt>.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">type</span> <span class="Identifier">MyInt</span> <span class="Operator">=</span> <span class="Keyword">distinct</span> <span class="Identifier">int</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Keyword">type</span> <span class="Identifier">MyInt</span> <span class="Operator">=</span> <span class="Keyword">distinct</span> <span class="Identifier">int</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Comment"># ...</span>
 <span class="Identifier">nnkTypeDef</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"MyInt"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
@@ -1760,8 +1760,8 @@ function main() {
     <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"int"</span><span class="Punctuation">)</span>
   <span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre><p>If a type section uses generic parameters, they are treated here:</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">type</span> <span class="Identifier">A</span><span class="Punctuation">[</span><span class="Identifier">T</span><span class="Punctuation">]</span> <span class="Operator">=</span> <span class="Identifier">expr1</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Keyword">type</span> <span class="Identifier">A</span><span class="Punctuation">[</span><span class="Identifier">T</span><span class="Punctuation">]</span> <span class="Operator">=</span> <span class="Identifier">expr1</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkTypeSection</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkTypeDef</span><span class="Punctuation">(</span>
     <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"A"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
@@ -1776,8 +1776,8 @@ function main() {
     <span class="Identifier">expr1</span><span class="Punctuation">,</span>
   <span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre><p>Note that not all <tt class="docutils literal"><span class="pre">nnkTypeDef</span></tt> utilize <tt class="docutils literal"><span class="pre">nnkIdent</span></tt> as their their parameter. One of the most common uses of type declarations is to work with objects.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">type</span> <span class="Identifier">IO</span> <span class="Operator">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">RootObj</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Keyword">type</span> <span class="Identifier">IO</span> <span class="Operator">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">RootObj</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Comment"># ...</span>
 <span class="Identifier">nnkTypeDef</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"IO"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
@@ -1790,14 +1790,14 @@ function main() {
     <span class="Identifier">nnkEmpty</span><span class="Punctuation">(</span><span class="Punctuation">)</span>
   <span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre><p>Nim's object syntax is rich. Let's take a look at an involved example in its entirety to see some of the complexities.</p>
-<p>Concrete syntax:</p>
+<p>具象構文:</p>
 <pre class="listing"><span class="Keyword">type</span> <span class="Identifier">Obj</span><span class="Punctuation">[</span><span class="Identifier">T</span><span class="Punctuation">]</span> <span class="Operator">=</span> <span class="Keyword">object</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">inheritable</span><span class="Operator">.</span><span class="Punctuation">}</span>
   <span class="Identifier">name</span><span class="Punctuation">:</span> <span class="Identifier">string</span>
   <span class="Keyword">case</span> <span class="Identifier">isFat</span><span class="Punctuation">:</span> <span class="Identifier">bool</span>
   <span class="Keyword">of</span> <span class="Identifier">true</span><span class="Punctuation">:</span>
     <span class="Identifier">m</span><span class="Punctuation">:</span> <span class="Identifier">array</span><span class="Punctuation">[</span><span class="DecNumber">100_000</span><span class="Punctuation">,</span> <span class="Identifier">T</span><span class="Punctuation">]</span>
   <span class="Keyword">of</span> <span class="Identifier">false</span><span class="Punctuation">:</span>
-    <span class="Identifier">m</span><span class="Punctuation">:</span> <span class="Identifier">array</span><span class="Punctuation">[</span><span class="DecNumber">10</span><span class="Punctuation">,</span> <span class="Identifier">T</span><span class="Punctuation">]</span></pre><p>AST:</p>
+    <span class="Identifier">m</span><span class="Punctuation">:</span> <span class="Identifier">array</span><span class="Punctuation">[</span><span class="DecNumber">10</span><span class="Punctuation">,</span> <span class="Identifier">T</span><span class="Punctuation">]</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Comment"># ...</span>
 <span class="Identifier">nnkObjectTy</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkPragma</span><span class="Punctuation">(</span>
@@ -1846,17 +1846,17 @@ function main() {
     <span class="Punctuation">)</span>
   <span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre><p>Using an <tt class="docutils literal"><span class="pre">enum</span></tt> is similar to using an <tt class="docutils literal"><span class="pre">object</span></tt>.</p>
-<p>Concrete syntax:</p>
+<p>具象構文:</p>
 <pre class="listing"><span class="Keyword">type</span> <span class="Identifier">X</span> <span class="Operator">=</span> <span class="Keyword">enum</span>
-  <span class="Identifier">First</span></pre><p>AST:</p>
+  <span class="Identifier">First</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Comment"># ...</span>
 <span class="Identifier">nnkEnumTy</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkEmpty</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"First"</span><span class="Punctuation">)</span> <span class="Comment"># you need at least one nnkIdent or the compiler complains</span>
 <span class="Punctuation">)</span></pre><p>The usage of <tt class="docutils literal"><span class="pre">concept</span></tt> (experimental) is similar to objects.</p>
-<p>Concrete syntax:</p>
+<p>具象構文:</p>
 <pre class="listing"><span class="Keyword">type</span> <span class="Identifier">Con</span> <span class="Operator">=</span> <span class="Keyword">concept</span> <span class="Identifier">x</span><span class="Punctuation">,</span><span class="Identifier">y</span><span class="Punctuation">,</span><span class="Identifier">z</span>
-  <span class="Punctuation">(</span><span class="Identifier">x</span> <span class="Operator">&amp;</span> <span class="Identifier">y</span> <span class="Operator">&amp;</span> <span class="Identifier">z</span><span class="Punctuation">)</span> <span class="Keyword">is</span> <span class="Identifier">string</span></pre><p>AST:</p>
+  <span class="Punctuation">(</span><span class="Identifier">x</span> <span class="Operator">&amp;</span> <span class="Identifier">y</span> <span class="Operator">&amp;</span> <span class="Identifier">z</span><span class="Punctuation">)</span> <span class="Keyword">is</span> <span class="Identifier">string</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Comment"># ...</span>
 <span class="Identifier">nnkTypeClassTy</span><span class="Punctuation">(</span> <span class="Comment"># note this isn't nnkConceptTy!</span>
   <span class="Identifier">nnkArglist</span><span class="Punctuation">(</span>
@@ -1864,8 +1864,8 @@ function main() {
   <span class="Punctuation">)</span>
   <span class="Comment"># ...</span>
 <span class="Punctuation">)</span></pre><p>Static types, like <tt class="docutils literal"><span class="pre">static[int]</span></tt>, use <tt class="docutils literal"><span class="pre">nnkIdent</span></tt> wrapped in <tt class="docutils literal"><span class="pre">nnkStaticTy</span></tt>.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">type</span> <span class="Identifier">A</span><span class="Punctuation">[</span><span class="Identifier">T</span><span class="Punctuation">:</span> <span class="Keyword">static</span><span class="Punctuation">[</span><span class="Identifier">int</span><span class="Punctuation">]</span><span class="Punctuation">]</span> <span class="Operator">=</span> <span class="Keyword">object</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Keyword">type</span> <span class="Identifier">A</span><span class="Punctuation">[</span><span class="Identifier">T</span><span class="Punctuation">:</span> <span class="Keyword">static</span><span class="Punctuation">[</span><span class="Identifier">int</span><span class="Punctuation">]</span><span class="Punctuation">]</span> <span class="Operator">=</span> <span class="Keyword">object</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Comment"># ... within nnkGenericParams</span>
 <span class="Identifier">nnkIdentDefs</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"T"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
@@ -1889,8 +1889,8 @@ function main() {
 <tr><td><tt class="docutils literal"><span class="pre">iterator</span></tt></td><td><tt class="docutils literal"><span class="pre">nnkIteratorTy</span></tt></td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">object</span></tt></td><td><tt class="docutils literal"><span class="pre">nnkObjectTy</span></tt></td></tr>
 </table><p>Take special care when declaring types as <tt class="docutils literal"><span class="pre">proc</span></tt>. The behavior is similar to <tt class="docutils literal"><span class="pre">Procedure declaration</span></tt>, below, but does not treat <tt class="docutils literal"><span class="pre">nnkGenericParams</span></tt>. Generic parameters are treated in the type, not the <tt class="docutils literal"><span class="pre">proc</span></tt> itself.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">type</span> <span class="Identifier">MyProc</span><span class="Punctuation">[</span><span class="Identifier">T</span><span class="Punctuation">]</span> <span class="Operator">=</span> <span class="Keyword">proc</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">:</span> <span class="Identifier">T</span><span class="Punctuation">)</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Keyword">type</span> <span class="Identifier">MyProc</span><span class="Punctuation">[</span><span class="Identifier">T</span><span class="Punctuation">]</span> <span class="Operator">=</span> <span class="Keyword">proc</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">:</span> <span class="Identifier">T</span><span class="Punctuation">)</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Comment"># ...</span>
 <span class="Identifier">nnkTypeDef</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"MyProc"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
@@ -1904,15 +1904,15 @@ function main() {
   <span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre><p>The same syntax applies to <tt class="docutils literal"><span class="pre">iterator</span></tt> (with <tt class="docutils literal"><span class="pre">nnkIteratorTy</span></tt>), but <em>does not</em> apply to <tt class="docutils literal"><span class="pre">converter</span></tt> or <tt class="docutils literal"><span class="pre">template</span></tt>.</p>
 
-<h2><a class="toc-backref" id="statements-mixin-statement" href="#statements-mixin-statement">Mixin ステートメント</a></h2><p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">mixin</span> <span class="Identifier">x</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="statements-mixin-statement" href="#statements-mixin-statement">Mixin ステートメント</a></h2><p>具象構文:</p>
+<pre class="listing"><span class="Keyword">mixin</span> <span class="Identifier">x</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkMixinStmt</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"x"</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="statements-bind-statement" href="#statements-bind-statement">Bind ステートメント</a></h2><p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">bind</span> <span class="Identifier">x</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="statements-bind-statement" href="#statements-bind-statement">Bind ステートメント</a></h2><p>具象構文:</p>
+<pre class="listing"><span class="Keyword">bind</span> <span class="Identifier">x</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkBindStmt</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"x"</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="statements-procedure-declaration" href="#statements-procedure-declaration">Procedure declaration</a></h2><p>Let's take a look at a procedure with a lot of interesting aspects to get a feel for how procedure calls are broken down.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">hello</span><span class="Operator">*</span><span class="Punctuation">[</span><span class="Identifier">T</span><span class="Punctuation">:</span> <span class="Identifier">SomeInteger</span><span class="Punctuation">]</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">:</span> <span class="Identifier">int</span> <span class="Operator">=</span> <span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="Identifier">y</span><span class="Punctuation">:</span> <span class="Identifier">float32</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">int</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">inline</span><span class="Operator">.</span><span class="Punctuation">}</span> <span class="Operator">=</span> <span class="Keyword">discard</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="statements-procedure-declaration" href="#statements-procedure-declaration">プロシージャ宣言</a></h2><p>Let's take a look at a procedure with a lot of interesting aspects to get a feel for how procedure calls are broken down.</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">hello</span><span class="Operator">*</span><span class="Punctuation">[</span><span class="Identifier">T</span><span class="Punctuation">:</span> <span class="Identifier">SomeInteger</span><span class="Punctuation">]</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">:</span> <span class="Identifier">int</span> <span class="Operator">=</span> <span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="Identifier">y</span><span class="Punctuation">:</span> <span class="Identifier">float32</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">int</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">inline</span><span class="Operator">.</span><span class="Punctuation">}</span> <span class="Operator">=</span> <span class="Keyword">discard</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkProcDef</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkPostfix</span><span class="Punctuation">(</span><span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"*"</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"hello"</span><span class="Punctuation">)</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Comment"># the exported proc name</span>
   <span class="Identifier">nnkEmpty</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Comment"># patterns for term rewriting in templates and macros (not procs)</span>
@@ -1938,8 +1938,8 @@ function main() {
   <span class="Identifier">nnkEmpty</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Comment"># reserved slot for future use</span>
   <span class="Identifier">nnkStmtList</span><span class="Punctuation">(</span><span class="Identifier">nnkDiscardStmt</span><span class="Punctuation">(</span><span class="Identifier">nnkEmpty</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">)</span><span class="Punctuation">)</span> <span class="Comment"># the meat of the proc</span>
 <span class="Punctuation">)</span></pre><p>There is another consideration. Nim has flexible type identification for its procs. Even though <tt class="docutils literal"><span class="pre">proc(a: int, b: int)</span></tt> and <tt class="docutils literal"><span class="pre">proc(a, b: int)</span></tt> are equivalent in the code, the AST is a little different for the latter.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">proc</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">,</span> <span class="Identifier">b</span><span class="Punctuation">:</span> <span class="Identifier">int</span><span class="Punctuation">)</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Keyword">proc</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">,</span> <span class="Identifier">b</span><span class="Punctuation">:</span> <span class="Identifier">int</span><span class="Punctuation">)</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Comment"># ...AST as above...</span>
 <span class="Identifier">nnkFormalParams</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkEmpty</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Comment"># no return here</span>
@@ -1951,32 +1951,32 @@ function main() {
   <span class="Punctuation">)</span>
 <span class="Punctuation">)</span><span class="Punctuation">,</span>
 <span class="Comment"># ...</span></pre><p>When a procedure uses the special <tt class="docutils literal"><span class="pre">var</span></tt> type return variable, the result is different from that of a var section.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">hello</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Keyword">var</span> <span class="Identifier">int</span></pre><p>AST:</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">hello</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Keyword">var</span> <span class="Identifier">int</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Comment"># ...</span>
 <span class="Identifier">nnkFormalParams</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkVarTy</span><span class="Punctuation">(</span>
     <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"int"</span><span class="Punctuation">)</span>
   <span class="Punctuation">)</span>
 <span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="statements-iterator-declaration" href="#statements-iterator-declaration">Iterator declaration</a></h2><p>The syntax for iterators is similar to procs, but with <tt class="docutils literal"><span class="pre">nnkIteratorDef</span></tt> replacing <tt class="docutils literal"><span class="pre">nnkProcDef</span></tt>.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">iterator</span> <span class="Identifier">nonsense</span><span class="Punctuation">[</span><span class="Identifier">T</span><span class="Punctuation">]</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">:</span> <span class="Identifier">seq</span><span class="Punctuation">[</span><span class="Identifier">T</span><span class="Punctuation">]</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">float</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">closure</span><span class="Operator">.</span><span class="Punctuation">}</span> <span class="Operator">=</span> <span class="Operator">...</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="statements-iterator-declaration" href="#statements-iterator-declaration">イテレータ宣言</a></h2><p>The syntax for iterators is similar to procs, but with <tt class="docutils literal"><span class="pre">nnkIteratorDef</span></tt> replacing <tt class="docutils literal"><span class="pre">nnkProcDef</span></tt>.</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Keyword">iterator</span> <span class="Identifier">nonsense</span><span class="Punctuation">[</span><span class="Identifier">T</span><span class="Punctuation">]</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">:</span> <span class="Identifier">seq</span><span class="Punctuation">[</span><span class="Identifier">T</span><span class="Punctuation">]</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">float</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">closure</span><span class="Operator">.</span><span class="Punctuation">}</span> <span class="Operator">=</span> <span class="Operator">...</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkIteratorDef</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"nonsense"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkEmpty</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Operator">...</span>
 <span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="statements-converter-declaration" href="#statements-converter-declaration">Converter declaration</a></h2><p>A converter is similar to a proc.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">converter</span> <span class="Identifier">toBool</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">:</span> <span class="Identifier">float</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">bool</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="statements-converter-declaration" href="#statements-converter-declaration">コンバータ宣言</a></h2><p>A converter is similar to a proc.</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Keyword">converter</span> <span class="Identifier">toBool</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">:</span> <span class="Identifier">float</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">bool</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkConverterDef</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"toBool"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Comment"># ...</span>
 <span class="Punctuation">)</span></pre>
-<h2><a class="toc-backref" id="statements-template-declaration" href="#statements-template-declaration">Template declaration</a></h2><p>Templates (as well as macros, as we'll see) have a slightly expanded AST when compared to procs and iterators. The reason for this is [term-rewriting macros](manual.html#term-rewriting-macros). Notice the <tt class="docutils literal"><span class="pre">nnkEmpty()</span></tt> as the second argument to <tt class="docutils literal"><span class="pre">nnkProcDef</span></tt> and <tt class="docutils literal"><span class="pre">nnkIteratorDef</span></tt> above? That's where the term-rewriting macros go.</p>
-<p>Concrete syntax:</p>
-<pre class="listing"><span class="Keyword">template</span> <span class="Identifier">optOpt</span><span class="Punctuation">{</span><span class="Identifier">expr1</span><span class="Punctuation">}</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">:</span> <span class="Identifier">int</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">int</span></pre><p>AST:</p>
+<h2><a class="toc-backref" id="statements-template-declaration" href="#statements-template-declaration">テンプレート宣言</a></h2><p>Templates (as well as macros, as we'll see) have a slightly expanded AST when compared to procs and iterators. The reason for this is [term-rewriting macros](manual.html#term-rewriting-macros). Notice the <tt class="docutils literal"><span class="pre">nnkEmpty()</span></tt> as the second argument to <tt class="docutils literal"><span class="pre">nnkProcDef</span></tt> and <tt class="docutils literal"><span class="pre">nnkIteratorDef</span></tt> above? That's where the term-rewriting macros go.</p>
+<p>具象構文:</p>
+<pre class="listing"><span class="Keyword">template</span> <span class="Identifier">optOpt</span><span class="Punctuation">{</span><span class="Identifier">expr1</span><span class="Punctuation">}</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">:</span> <span class="Identifier">int</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">int</span></pre><p>構文抽象木 (AST):</p>
 <pre class="listing"><span class="Identifier">nnkTemplateDef</span><span class="Punctuation">(</span>
   <span class="Identifier">nnkIdent</span><span class="Punctuation">(</span><span class="StringLit">"optOpt"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
   <span class="Identifier">nnkStmtList</span><span class="Punctuation">(</span> <span class="Comment"># instead of nnkEmpty()</span>
@@ -1985,7 +1985,7 @@ function main() {
   <span class="Comment"># follows like a proc or iterator</span>
 <span class="Punctuation">)</span></pre><p>If the template does not have types for its parameters, the type identifiers inside <tt class="docutils literal"><span class="pre">nnkFormalParams</span></tt> just becomes <tt class="docutils literal"><span class="pre">nnkEmpty</span></tt>.</p>
 
-<h2><a class="toc-backref" id="statements-macro-declaration" href="#statements-macro-declaration">Macro declaration</a></h2><p>Macros behave like templates, but <tt class="docutils literal"><span class="pre">nnkTemplateDef</span></tt> is replaced with <tt class="docutils literal"><span class="pre">nnkMacroDef</span></tt>.</p>
+<h2><a class="toc-backref" id="statements-macro-declaration" href="#statements-macro-declaration">マクロ宣言</a></h2><p>Macros behave like templates, but <tt class="docutils literal"><span class="pre">nnkTemplateDef</span></tt> is replaced with <tt class="docutils literal"><span class="pre">nnkMacroDef</span></tt>.</p>
 
 <h1><a class="toc-backref" id="special-node-kinds" href="#special-node-kinds">Special node kinds</a></h1><p>There are several node kinds that are used for semantic checking or code generation. These are accessible from this module, but should not be used. Other node kinds are especially designed to make AST manipulations easier. These are explained here.</p>
 <p>To be written.  </p>
@@ -3910,7 +3910,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Accepts a block of nim code and prints the parsed abstract syntax tree using the <tt class="docutils literal"><span class="pre">treeRepr</span></tt> proc. Printing is done <em>at compile time</em>.</p>
 <p>You can use this as a tool to explore the Nim's abstract syntax tree and to discover what kind of nodes must be created to represent a certain expression/statement.</p>
-<p>For example:</p>
+<p>用例:</p>
 <pre class="listing"><span class="Identifier">dumpTree</span><span class="Punctuation">:</span>
   <span class="Identifier">echo</span> <span class="StringLit">"Hello, World!"</span></pre><p>出力:</p>
 <pre class="listing"><span class="Identifier">StmtList</span>
@@ -3929,7 +3929,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Accepts a block of nim code and prints the parsed abstract syntax tree using the <tt class="docutils literal"><span class="pre">lispRepr</span></tt> proc. Printing is done <em>at compile time</em>.</p>
 <p>You can use this as a tool to explore the Nim's abstract syntax tree and to discover what kind of nodes must be created to represent a certain expression/statement.</p>
-<p>For example:</p>
+<p>用例:</p>
 <pre class="listing"><span class="Identifier">dumpLisp</span><span class="Punctuation">:</span>
   <span class="Identifier">echo</span> <span class="StringLit">"Hello, World!"</span></pre><p>出力:</p>
 <pre class="listing"><span class="Punctuation">(</span><span class="Identifier">StmtList</span>
@@ -3948,7 +3948,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Accepts a block of nim code and prints the parsed abstract syntax tree using the <tt class="docutils literal"><span class="pre">astGenRepr</span></tt> proc. Printing is done <em>at compile time</em>.</p>
 <p>You can use this as a tool to write macros quicker by writing example outputs and then copying the snippets into the macro for modification.</p>
-<p>For example:</p>
+<p>用例:</p>
 <pre class="listing"><span class="Identifier">dumpAstGen</span><span class="Punctuation">:</span>
   <span class="Identifier">echo</span> <span class="StringLit">"Hello, World!"</span></pre><p>出力:</p>
 <pre class="listing"><span class="Identifier">nnkStmtList</span><span class="Operator">.</span><span class="Identifier">newTree</span><span class="Punctuation">(</span>
@@ -4112,7 +4112,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 Generated: 2020-01-23 17:27:18 UTC</small>
+        <small>Nim で作成しました。 生成日時: 2020年01月23日 午前17時27分18秒 (UTC)</small>
       </div>
     </div>
   </div>

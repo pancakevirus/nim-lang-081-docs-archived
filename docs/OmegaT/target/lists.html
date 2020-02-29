@@ -833,9 +833,9 @@ function main() {
     </select>
   </div>
   <ul class="simple simple-toc" id="toc-list">
-<li><a class="reference" id="basic-usage_toc" href="#basic-usage">Basic Usage</a></li>
-<ul class="simple"><li><a class="reference" id="basic-usage-lists_toc" href="#basic-usage-lists">Lists</a></li>
-<li><a class="reference" id="basic-usage-rings_toc" href="#basic-usage-rings">Rings</a></li>
+<li><a class="reference" id="basic-usage_toc" href="#basic-usage">基本の用法</a></li>
+<ul class="simple"><li><a class="reference" id="basic-usage-lists_toc" href="#basic-usage-lists">リスト</a></li>
+<li><a class="reference" id="basic-usage-rings_toc" href="#basic-usage-rings">リング</a></li>
 </ul><li><a class="reference" id="see-also_toc" href="#see-also">関連</a></li>
 <li>
   <a class="reference reference-toplevel" href="#7" id="57">型</a>
@@ -964,15 +964,15 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc">Implementation of:<ul class="simple"><li><a class="reference external" href="#SinglyLinkedList">singly linked lists</a></li>
-<li><a class="reference external" href="#DoublyLinkedList">doubly linked lists</a></li>
-<li><a class="reference external" href="#SinglyLinkedRing">singly linked rings</a> (circular lists)</li>
-<li><a class="reference external" href="#DoublyLinkedRing">doubly linked rings</a> (circular lists)</li>
+  <p class="module-desc">Implementation of:<ul class="simple"><li><a class="reference external" href="#SinglyLinkedList">単方向連結リスト</a></li>
+<li><a class="reference external" href="#DoublyLinkedList">双方向連結リスト</a></li>
+<li><a class="reference external" href="#SinglyLinkedRing">単方向連結リング</a> (環状リスト)</li>
+<li><a class="reference external" href="#DoublyLinkedRing">双方向連結リング</a> (環状リスト)</li>
 </ul>
 
-<h1><a class="toc-backref" id="basic-usage" href="#basic-usage">Basic Usage</a></h1><p>Because it makes no sense to do otherwise, the <tt class="docutils literal"><span class="pre">next</span></tt> and <tt class="docutils literal"><span class="pre">prev</span></tt> pointers are not hidden from you and can be manipulated directly for efficiency.</p>
+<h1><a class="toc-backref" id="basic-usage" href="#basic-usage">基本の用法</a></h1><p>Because it makes no sense to do otherwise, the <tt class="docutils literal"><span class="pre">next</span></tt> and <tt class="docutils literal"><span class="pre">prev</span></tt> pointers are not hidden from you and can be manipulated directly for efficiency.</p>
 
-<h2><a class="toc-backref" id="basic-usage-lists" href="#basic-usage-lists">Lists</a></h2><pre class="listing"><span class="Keyword">import</span> <span class="Identifier">lists</span>
+<h2><a class="toc-backref" id="basic-usage-lists" href="#basic-usage-lists">リスト</a></h2><pre class="listing"><span class="Keyword">import</span> <span class="Identifier">lists</span>
 
 <span class="Keyword">var</span>
   <span class="Identifier">l</span> <span class="Operator">=</span> <span class="Identifier">initDoublyLinkedList</span><span class="Punctuation">[</span><span class="Identifier">int</span><span class="Punctuation">]</span><span class="Punctuation">(</span><span class="Punctuation">)</span>
@@ -990,7 +990,7 @@ function main() {
 <span class="Identifier">assert</span> <span class="Identifier">c</span><span class="Operator">.</span><span class="Identifier">next</span><span class="Operator">.</span><span class="Identifier">next</span> <span class="Operator">==</span> <span class="Identifier">b</span>
 <span class="Identifier">assert</span> <span class="Identifier">c</span><span class="Operator">.</span><span class="Identifier">prev</span> <span class="Operator">==</span> <span class="Keyword">nil</span>
 <span class="Identifier">assert</span> <span class="Identifier">b</span><span class="Operator">.</span><span class="Identifier">next</span> <span class="Operator">==</span> <span class="Keyword">nil</span></pre>
-<h2><a class="toc-backref" id="basic-usage-rings" href="#basic-usage-rings">Rings</a></h2><pre class="listing"><span class="Keyword">import</span> <span class="Identifier">lists</span>
+<h2><a class="toc-backref" id="basic-usage-rings" href="#basic-usage-rings">リング</a></h2><pre class="listing"><span class="Keyword">import</span> <span class="Identifier">lists</span>
 
 <span class="Keyword">var</span>
   <span class="Identifier">l</span> <span class="Operator">=</span> <span class="Identifier">initSinglyLinkedRing</span><span class="Punctuation">[</span><span class="Identifier">int</span><span class="Punctuation">]</span><span class="Punctuation">(</span><span class="Punctuation">)</span>
@@ -1729,8 +1729,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Yields every value of <tt class="docutils literal"><span class="pre">L</span></tt>.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#mitems.i,SomeLinkedList[T]">mitems iterator</a></li>
-<li><a class="reference external" href="#nodes.i,SomeLinkedList[T]">nodes iterator</a></li>
+<ul class="simple"><li><a class="reference external" href="#mitems.i,SomeLinkedList[T]">mitems イテレータ</a></li>
+<li><a class="reference external" href="#nodes.i,SomeLinkedList[T]">nodes イテレータ</a></li>
 </ul>
 <p><strong>用例:</strong></p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">a</span> <span class="Operator">=</span> <span class="Identifier">initSinglyLinkedList</span><span class="Punctuation">[</span><span class="Identifier">int</span><span class="Punctuation">]</span><span class="Punctuation">(</span><span class="Punctuation">)</span>
@@ -1754,8 +1754,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Yields every value of <tt class="docutils literal"><span class="pre">L</span></tt>.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#mitems.i,SomeLinkedRing[T]">mitems iterator</a></li>
-<li><a class="reference external" href="#nodes.i,SomeLinkedRing[T]">nodes iterator</a></li>
+<ul class="simple"><li><a class="reference external" href="#mitems.i,SomeLinkedRing[T]">mitems イテレータ</a></li>
+<li><a class="reference external" href="#nodes.i,SomeLinkedRing[T]">nodes イテレータ</a></li>
 </ul>
 <p><strong>用例:</strong></p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">a</span> <span class="Operator">=</span> <span class="Identifier">initSinglyLinkedRing</span><span class="Punctuation">[</span><span class="Identifier">int</span><span class="Punctuation">]</span><span class="Punctuation">(</span><span class="Punctuation">)</span>
@@ -1779,8 +1779,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Yields every value of <tt class="docutils literal"><span class="pre">L</span></tt> so that you can modify it.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#items.i,SomeLinkedList[T]">items iterator</a></li>
-<li><a class="reference external" href="#nodes.i,SomeLinkedList[T]">nodes iterator</a></li>
+<ul class="simple"><li><a class="reference external" href="#items.i,SomeLinkedList[T]">items イテレータ</a></li>
+<li><a class="reference external" href="#nodes.i,SomeLinkedList[T]">nodes イテレータ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1802,8 +1802,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Yields every value of <tt class="docutils literal"><span class="pre">L</span></tt> so that you can modify it.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#items.i,SomeLinkedRing[T]">items iterator</a></li>
-<li><a class="reference external" href="#nodes.i,SomeLinkedRing[T]">nodes iterator</a></li>
+<ul class="simple"><li><a class="reference external" href="#items.i,SomeLinkedRing[T]">items イテレータ</a></li>
+<li><a class="reference external" href="#nodes.i,SomeLinkedRing[T]">nodes イテレータ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1825,8 +1825,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Iterates over every node of <tt class="docutils literal"><span class="pre">x</span></tt>. Removing the current node from the list during traversal is supported.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#items.i,SomeLinkedList[T]">items iterator</a></li>
-<li><a class="reference external" href="#mitems.i,SomeLinkedList[T]">mitems iterator</a></li>
+<ul class="simple"><li><a class="reference external" href="#items.i,SomeLinkedList[T]">items イテレータ</a></li>
+<li><a class="reference external" href="#mitems.i,SomeLinkedList[T]">mitems イテレータ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1851,8 +1851,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Iterates over every node of <tt class="docutils literal"><span class="pre">x</span></tt>. Removing the current node from the list during traversal is supported.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#items.i,SomeLinkedRing[T]">items iterator</a></li>
-<li><a class="reference external" href="#mitems.i,SomeLinkedRing[T]">mitems iterator</a></li>
+<ul class="simple"><li><a class="reference external" href="#items.i,SomeLinkedRing[T]">items イテレータ</a></li>
+<li><a class="reference external" href="#mitems.i,SomeLinkedRing[T]">mitems イテレータ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>

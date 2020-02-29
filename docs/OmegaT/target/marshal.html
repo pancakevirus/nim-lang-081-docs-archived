@@ -862,8 +862,8 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"><p>This module contains procs for <span id="serialization_1">serialization</span> and <span id="deserialization_1">deserialization</span> of arbitrary Nim data structures. The serialization format uses <span id="json_1">JSON</span>.</p>
-<p><strong>Restriction</strong>: For objects their type is <strong>not</strong> serialized. This means essentially that it does not work if the object has some other runtime type than its compiletime type.</p>
+  <p class="module-desc"><p>このモジュールは任意 Nim データ構造の<span id="serialization_1">シリアライゼーション</span> (serialization)、および<span id="deserialization_1">デシリアライゼーション</span> (deserialization) で使えるプロシージャです。シリアライゼーション形式は <span id="json_1">JSON</span> です。</p>
+<p><strong>制限事項</strong>: オブジェクトでは型のシリアライズが<strong>行われません</strong>。つまり、この関数はオブジェクトが compiletime 型とは別のランタイム型ならば基本的に動作しません。</p>
 
 <h1><a class="toc-backref" id="basic-usage" href="#basic-usage">基本の用法</a></h1><pre class="listing"><span class="Keyword">type</span>
   <span class="Identifier">A</span> <span class="Operator">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <span class="Identifier">RootObj</span>
@@ -876,19 +876,19 @@ function main() {
 
 <span class="Identifier">new</span><span class="Punctuation">(</span><span class="Identifier">b</span><span class="Punctuation">)</span>
 <span class="Identifier">a</span> <span class="Operator">=</span> <span class="Identifier">b</span>
-<span class="Identifier">echo</span><span class="Punctuation">(</span><span class="Operator">$$</span><span class="Identifier">a</span><span class="Punctuation">[</span><span class="Punctuation">]</span><span class="Punctuation">)</span> <span class="Comment"># produces "{}", not "{f: 0}"</span>
+<span class="Identifier">echo</span><span class="Punctuation">(</span><span class="Operator">$$</span><span class="Identifier">a</span><span class="Punctuation">[</span><span class="Punctuation">]</span><span class="Punctuation">)</span> <span class="Comment"># "{f: 0}" ではなく、 "{}" を生成します。</span>
 
-<span class="Comment"># unmarshal</span>
+<span class="Comment"># アンマーシャル</span>
 <span class="Keyword">let</span> <span class="Identifier">c</span> <span class="Operator">=</span> <span class="Identifier">to</span><span class="Punctuation">[</span><span class="Identifier">B</span><span class="Punctuation">]</span><span class="Punctuation">(</span><span class="LongStringLit">"""{"f": 2}"""</span><span class="Punctuation">)</span>
 <span class="Identifier">assert</span> <span class="Identifier">typeof</span><span class="Punctuation">(</span><span class="Identifier">c</span><span class="Punctuation">)</span> <span class="Keyword">is</span> <span class="Identifier">B</span>
 <span class="Identifier">assert</span> <span class="Identifier">c</span><span class="Operator">.</span><span class="Identifier">f</span> <span class="Operator">==</span> <span class="DecNumber">2</span>
 
-<span class="Comment"># marshal</span>
+<span class="Comment"># マーシャル</span>
 <span class="Keyword">let</span> <span class="Identifier">s</span> <span class="Operator">=</span> <span class="Operator">$$</span><span class="Identifier">c</span>
-<span class="Identifier">assert</span> <span class="Identifier">s</span> <span class="Operator">==</span> <span class="LongStringLit">"""{"f": 2}"""</span></pre><p><strong>Note</strong>: The <tt class="docutils literal"><span class="pre">to</span></tt> and <tt class="docutils literal"><span class="pre">$$</span></tt> operations are available at compile-time!</p>
+<span class="Identifier">assert</span> <span class="Identifier">s</span> <span class="Operator">==</span> <span class="LongStringLit">"""{"f": 2}"""</span></pre><p><strong>備考</strong>: <tt class="docutils literal"><span class="pre">to</span></tt> と <tt class="docutils literal"><span class="pre">$$</span></tt> 演算子はコンパイル時に利用可能です！</p>
 
-<h1><a class="toc-backref" id="see-also" href="#see-also">関連</a></h1><ul class="simple"><li><a class="reference external" href="streams.html">streams module</a></li>
-<li><a class="reference external" href="json.html">json module</a></li>
+<h1><a class="toc-backref" id="see-also" href="#see-also">関連</a></h1><ul class="simple"><li><a class="reference external" href="streams.html">streams モジュール</a></li>
+<li><a class="reference external" href="json.html">json モジュール</a></li>
 </ul>
 </p>
   <div class="section" id="6">
@@ -903,10 +903,7 @@ function main() {
 <dt><pre><span class="Keyword">proc</span> <a href="#load%2CStream%2CT"><span class="Identifier">load</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="streams.html#Stream"><span class="Identifier">Stream</span></a><span class="Other">;</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">T</span><span class="Other">)</span></pre></dt>
 <dd>
 
-
-
-Loads <tt class="docutils literal"><span class="pre">data</span></tt> from the stream <tt class="docutils literal"><span class="pre">s</span></tt>. Raises <tt class="docutils literal"><span class="pre">IOError</span></tt> in case of an error.
-
+ストリーム <tt class="docutils literal"><span class="pre">s</span></tt> から <tt class="docutils literal"><span class="pre">data</span></tt> をロードします。エラーが起きたときは <tt class="docutils literal"><span class="pre">IOError</span></tt> を発生します。 
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">import</span>
   <span class="Identifier">marshal</span><span class="Other">,</span> <span class="Identifier">streams</span>
@@ -924,10 +921,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#store%2CStream%2CT"><span class="Identifier">store</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="streams.html#Stream"><span class="Identifier">Stream</span></a><span class="Other">;</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span></pre></dt>
 <dd>
 
-
-
-Stores <tt class="docutils literal"><span class="pre">data</span></tt> into the stream <tt class="docutils literal"><span class="pre">s</span></tt>. Raises <tt class="docutils literal"><span class="pre">IOError</span></tt> in case of an error.
-
+<tt class="docutils literal"><span class="pre">s</span></tt> をストリーム <tt class="docutils literal"><span class="pre">data</span></tt> へ格納します。エラーが起きたときは <tt class="docutils literal"><span class="pre">IOError</span></tt> を発生します。 
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">import</span>
   <span class="Identifier">marshal</span><span class="Other">,</span> <span class="Identifier">streams</span>
@@ -946,8 +940,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%24%2CT"><span class="Identifier">`$$`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a></pre></dt>
 <dd>
 
-<p>Returns a string representation of <tt class="docutils literal"><span class="pre">x</span></tt> (serialization, marshalling).</p>
-<p><strong>Note:</strong> to serialize <tt class="docutils literal"><span class="pre">x</span></tt> to JSON use <tt class="docutils literal"><span class="pre">$(%x)</span></tt> from the <tt class="docutils literal"><span class="pre">json</span></tt> module.</p>
+<p><tt class="docutils literal"><span class="pre">x</span></tt> の文字列表記を返します (シリアライゼーション、マーシャリング)。</p>
+<p><strong>備考:</strong> JSON から <tt class="docutils literal"><span class="pre">x</span></tt> へシリアライズするには <tt class="docutils literal"><span class="pre">json</span></tt> モジュールの <tt class="docutils literal"><span class="pre">$(%x)</span></tt> をお使いください。</p>
 
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">type</span>
@@ -956,7 +950,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">bar</span><span class="Other">:</span> <span class="Identifier">string</span>
 
 <span class="Keyword">let</span> <span class="Identifier">x</span> <span class="Other">=</span> <span class="Identifier">Foo</span><span class="Other">(</span><span class="Identifier">id</span><span class="Other">:</span> <span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">bar</span><span class="Other">:</span> <span class="StringLit">"baz"</span><span class="Other">)</span>
-<span class="Comment">## serialize:</span>
+<span class="Comment">## シリアライズ:</span>
 <span class="Keyword">let</span> <span class="Identifier">y</span> <span class="Other">=</span> <span class="Operator">$$</span><span class="Identifier">x</span>
 <span class="Identifier">assert</span> <span class="Identifier">y</span> <span class="Operator">==</span> <span class="StringLit">"""{"id": 1, "bar": "baz"}"""</span></pre>
 &nbsp;&nbsp;<a
@@ -968,10 +962,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#to%2Cstring"><span class="Identifier">to</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">data</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span></pre></dt>
 <dd>
 
-
-
-Reads data and transforms it to a type <tt class="docutils literal"><span class="pre">T</span></tt> (deserialization, unmarshalling).
-
+データを読み取って <tt class="docutils literal"><span class="pre">T</span></tt> 型へ変換します (デシリアライゼーション、アンマーシャリング)。
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">type</span>
   <span class="Identifier">Foo</span> <span class="Other">=</span> <span class="Keyword">object</span>
@@ -980,7 +971,7 @@ Reads data and transforms it to a type <tt class="docutils literal"><span class=
 
 <span class="Keyword">let</span> <span class="Identifier">y</span> <span class="Other">=</span> <span class="StringLit">"""{"id": 1, "bar": "baz"}"""</span>
 <span class="Identifier">assert</span> <span class="Identifier">typeof</span><span class="Other">(</span><span class="Identifier">y</span><span class="Other">)</span> <span class="Keyword">is</span> <span class="Identifier">string</span>
-<span class="Comment">## deserialize to type 'Foo':</span>
+<span class="Comment">## 'Foo' 型へのデシリアライズ:</span>
 <span class="Keyword">let</span> <span class="Identifier">z</span> <span class="Other">=</span> <span class="Identifier">to</span><span class="Other">[</span><span class="Identifier">Foo</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">y</span><span class="Other">)</span>
 <span class="Identifier">assert</span> <span class="Identifier">typeof</span><span class="Other">(</span><span class="Identifier">z</span><span class="Other">)</span> <span class="Keyword">is</span> <span class="Identifier">Foo</span>
 <span class="Identifier">assert</span> <span class="Identifier">z</span><span class="Other">.</span><span class="Identifier">id</span> <span class="Operator">==</span> <span class="DecNumber">1</span>
@@ -1000,7 +991,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 Generated: 2020-01-23 17:27:20 UTC</small>
+        <small>Nim で作成しました。  生成日時: 2020年01月23日 午前17時27分20秒 (UTC)</small>
       </div>
     </div>
   </div>

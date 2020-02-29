@@ -828,7 +828,7 @@ function main() {
   <ul class="simple simple-toc" id="toc-list">
 <li><a class="reference" id="nimble_toc" href="#nimble">Nimble</a></li>
 <li><a class="reference" id="pure-libraries_toc" href="#pure-libraries">純血ライブラリ</a></li>
-<ul class="simple"><li><a class="reference" id="pure-libraries-automatic-imports_toc" href="#pure-libraries-automatic-imports">混血ライブラリ</a></li>
+<ul class="simple"><li><a class="reference" id="pure-libraries-automatic-imports_toc" href="#pure-libraries-automatic-imports">自動インポート</a></li>
 <li><a class="reference" id="pure-libraries-core_toc" href="#pure-libraries-core">コア</a></li>
 <li><a class="reference" id="pure-libraries-algorithms_toc" href="#pure-libraries-algorithms">アルゴリズム</a></li>
 <li><a class="reference" id="pure-libraries-collections_toc" href="#pure-libraries-collections">コレクション</a></li>
@@ -871,7 +871,7 @@ function main() {
 <h1><a class="toc-backref" id="nimble" href="#nimble">Nimble</a></h1><p>Nim の標準ライブラリは基本機能のみ網羅しています。サードパーティ製パッケージのリストは <a class="reference external" href="https://nimble.directory/">https://nimble.directory/</a> をご確認ください。</p>
 
 <h1><a class="toc-backref" id="pure-libraries" href="#pure-libraries">純血ライブラリ</a></h1>
-<h2><a class="toc-backref" id="pure-libraries-automatic-imports" href="#pure-libraries-automatic-imports">混血ライブラリ</a></h2><ul class="simple"><li><a class="reference external" href="system.html">system</a> Basic procs and operators that every program needs. It also provides IO facilities for reading and writing text and binary files. It is imported implicitly by the compiler. Do not import it directly. It relies on compiler magic to work.</li>
+<h2><a class="toc-backref" id="pure-libraries-automatic-imports" href="#pure-libraries-automatic-imports">自動インポート</a></h2><ul class="simple"><li><a class="reference external" href="system.html">system</a> Basic procs and operators that every program needs. It also provides IO facilities for reading and writing text and binary files. It is imported implicitly by the compiler. Do not import it directly. It relies on compiler magic to work.</li>
 <li><a class="reference external" href="threads.html">threads</a> Basic Nim thread support. <strong>備考</strong>: これは system モジュールの一部です。明示的にインポートしないでください。<tt class="docutils literal"><span class="pre">--threads:on</span></tt> で有効になります。</li>
 <li><a class="reference external" href="channels.html">channels</a> Nim message passing support for threads. <strong>備考</strong>: これは system モジュールの一部です。明示的にインポートしないでください。<tt class="docutils literal"><span class="pre">--threads:on</span></tt> で有効になります。</li>
 </ul>
@@ -880,7 +880,7 @@ function main() {
 <li><a class="reference external" href="cpuinfo.html">cpuinfo</a> このモジュールは CPU / コア数を判定するプロシージャの実装です。</li>
 <li><a class="reference external" href="endians.html">endians</a> このモジュールは異種バイトオーダーの処理に用いる補助機能の実装です。</li>
 <li><a class="reference external" href="lenientops.html">lenientops</a> Provides binary operators for mixed integer/float expressions for convenience.</li>
-<li><a class="reference external" href="locks.html">locks</a> Locks and condition variables for Nim.</li>
+<li><a class="reference external" href="locks.html">locks</a>  Nim におけるロックと状態変数です。</li>
 <li><a class="reference external" href="macros.html">macros</a> Contains the AST API and documentation of Nim for writing macros.</li>
 <li><a class="reference external" href="rlocks.html">rlocks</a> Nim における再入可能ロック (Reentrant lock) のサポートです。</li>
 <li><a class="reference external" href="typeinfo.html">typeinfo</a> Provides (unsafe) access to Nim's run time type information.</li>
@@ -906,7 +906,7 @@ function main() {
 
 <h2><a class="toc-backref" id="pure-libraries-string-handling" href="#pure-libraries-string-handling">文字列処理</a></h2><ul class="simple"><li><a class="reference external" href="cstrutils.html">cstrutils</a> Utilities for <tt class="docutils literal"><span class="pre">cstring</span></tt> handling.</li>
 <li><a class="reference external" href="editdistance.html">std/editdistance</a> このモジュールは二区間にある Unicode  文字列の編集距離を求めるためのアルゴリズムを収録しています。</li>
-<li><a class="reference external" href="encodings.html">encodings</a> Converts between different character encodings. On UNIX, this uses the <tt class="docutils literal"><span class="pre">iconv</span></tt> library, on Windows the Windows API.</li>
+<li><a class="reference external" href="encodings.html">encodings</a> 異種文字エンコーディング間での変換を行います。このモジュールは UNIX では <tt class="docutils literal"><span class="pre">iconv</span></tt> ライブラリを、Windows では Windows API を使います。</li>
 <li><a class="reference external" href="parseutils.html">parseutils</a> This module contains helpers for parsing tokens, numbers, identifiers, etc.</li>
 <li><a class="reference external" href="pegs.html">pegs</a> This module contains procedures and operators for handling PEGs.</li>
 <li><a class="reference external" href="punycode.html">punycode</a> ASCII 文字の部分集合に限定した Unicode 形式の実装です。</li>
@@ -917,7 +917,7 @@ function main() {
 <li><a class="reference external" href="strtabs.html">strtabs</a> The <tt class="docutils literal"><span class="pre">strtabs</span></tt> module implements an efficient hash table that is a mapping from strings to strings. Supports a case-sensitive, case-insensitive and style-insensitive modes.</li>
 <li><a class="reference external" href="strutils.html">strutils</a> This module contains common string handling operations like changing case of a string, splitting a string into substrings, searching for substrings, replacing substrings.</li>
 <li><a class="reference external" href="unicode.html">unicode</a> This module provides support to handle the Unicode UTF-8 encoding.</li>
-<li><a class="reference external" href="unidecode.html">unidecode</a> It provides a single proc that does Unicode to ASCII transliterations. Python の Unidecode モジュールをベースにしています。</li>
+<li><a class="reference external" href="unidecode.html">unidecode</a> Unicode から ASCII へ翻字を行うプロシージャです。Python の Unidecode モジュールをベースにしています。</li>
 <li><a class="reference external" href="wordwrap.html">std/wordwrap</a> このモジュールは Unicode 文字列で使えるワードラップ・アルゴリズムの実装です。</li>
 </ul>
 

@@ -458,6 +458,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>doubly linked rings<ept i="0">&lt;/a0&gt;</ept> (circular lists)</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T063230Z" creationid="isVowel" creationdate="20200227T063230Z">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>双方向連結リング<ept i="0">&lt;/a0&gt;</ept> (環状リスト)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>encode proc<ept i="0">&lt;/a0&gt;</ept> for encoding a string</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200123T080835Z" creationid="isVowel" creationdate="20200123T080746Z">
@@ -470,6 +478,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200123T081155Z" creationid="isVowel" creationdate="20200123T081051Z">
         <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>encode プロシージャ<ept i="0">&lt;/a0&gt;</ept> は無蓋配列のエンコードをします</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>encodings<ept i="0">&lt;/a0&gt;</ept> Converts between different character encodings.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T054635Z" creationid="isVowel" creationdate="20200227T054635Z">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>encodings<ept i="0">&lt;/a0&gt;</ept> 異種文字エンコーディング間での変換を行います。</seg>
       </tuv>
     </tu>
     <tu>
@@ -542,6 +558,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T080219Z" creationid="isVowel" creationdate="20200226T080219Z">
         <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>jscore<ept i="0">&lt;/a0&gt;</ept> コア JavaScript 関数のラッパーです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>locks<ept i="0">&lt;/a0&gt;</ept> Locks and condition variables for Nim.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T060916Z" creationid="isVowel" creationdate="20200227T060009Z">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>locks<ept i="0">&lt;/a0&gt;</ept>  Nim におけるロックと状態変数です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -747,6 +771,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>singly linked rings<ept i="0">&lt;/a0&gt;</ept> (circular lists)</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T063234Z" creationid="isVowel" creationdate="20200227T063137Z">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>単方向連結リング<ept i="0">&lt;/a0&gt;</ept> (環状リスト)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>smtp<ept i="0">&lt;/a0&gt;</ept> This module implement a simple SMTP client.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T084840Z" creationid="isVowel" creationdate="20200226T084840Z">
@@ -848,6 +880,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200129T095528Z" creationid="isVowel" creationdate="20200129T095524Z">
         <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>toMD5 プロシージャ<ept i="0">&lt;/a0&gt;</ept> は文字列の <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>MD5Digest<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept> を返します</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>unidecode<ept i="0">&lt;/a0&gt;</ept> It provides a single proc that does Unicode to ASCII transliterations.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T054847Z" creationid="isVowel" creationdate="20200227T054847Z">
+        <seg><bpt i="0" x="0">&lt;a0&gt;</bpt>unidecode<ept i="0">&lt;/a0&gt;</ept> Unicode から ASCII へ翻字を行うプロシージャです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1226,6 +1266,22 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;s0&gt;</bpt>Note:<ept i="0">&lt;/s0&gt;</ept> to serialize <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>x<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept> to JSON use <bpt i="3" x="3">&lt;t3&gt;</bpt><bpt i="4" x="4">&lt;s4&gt;</bpt>$(%x)<ept i="4">&lt;/s4&gt;</ept><ept i="3">&lt;/t3&gt;</ept> from the <bpt i="5" x="5">&lt;t5&gt;</bpt><bpt i="6" x="6">&lt;s6&gt;</bpt>json<ept i="6">&lt;/s6&gt;</ept><ept i="5">&lt;/t5&gt;</ept> module.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200228T060703Z" creationid="isVowel" creationdate="20200228T060703Z">
+        <seg><bpt i="0" x="0">&lt;s0&gt;</bpt>備考:<ept i="0">&lt;/s0&gt;</ept> JSON から <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>x<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept> へシリアライズするには <bpt i="5" x="5">&lt;t5&gt;</bpt><bpt i="6" x="6">&lt;s6&gt;</bpt>json<ept i="6">&lt;/s6&gt;</ept><ept i="5">&lt;/t5&gt;</ept> モジュールの <bpt i="3" x="3">&lt;t3&gt;</bpt><bpt i="4" x="4">&lt;s4&gt;</bpt>$(%x)<ept i="4">&lt;/s4&gt;</ept><ept i="3">&lt;/t3&gt;</ept> をお使いください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;s0&gt;</bpt>Note<ept i="0">&lt;/s0&gt;</ept>: The <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>to<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept> and <bpt i="3" x="3">&lt;t3&gt;</bpt><bpt i="4" x="4">&lt;s4&gt;</bpt>$$<ept i="4">&lt;/s4&gt;</ept><ept i="3">&lt;/t3&gt;</ept> operations are available at compile-time!</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200228T060248Z" creationid="isVowel" creationdate="20200228T060248Z">
+        <seg><bpt i="0" x="0">&lt;s0&gt;</bpt>備考<ept i="0">&lt;/s0&gt;</ept>: <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>to<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept> と <bpt i="3" x="3">&lt;t3&gt;</bpt><bpt i="4" x="4">&lt;s4&gt;</bpt>$$<ept i="4">&lt;/s4&gt;</ept><ept i="3">&lt;/t3&gt;</ept> 演算子はコンパイル時に利用可能です！</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg><bpt i="0" x="0">&lt;s0&gt;</bpt>Note<ept i="0">&lt;/s0&gt;</ept>: The experimental features of Nim are covered <bpt i="1" x="1">&lt;a1&gt;</bpt>here<ept i="1">&lt;/a1&gt;</ept>.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200122T062340Z" creationid="isVowel" creationdate="20200122T062340Z">
@@ -1246,6 +1302,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200218T075610Z" creationid="isVowel" creationdate="20200218T075610Z">
         <seg><bpt i="0" x="0">&lt;s0&gt;</bpt>備考<ept i="0">&lt;/s0&gt;</ept>: This is part of the system module.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;s0&gt;</bpt>Restriction<ept i="0">&lt;/s0&gt;</ept>: For objects their type is <bpt i="1" x="1">&lt;s1&gt;</bpt>not<ept i="1">&lt;/s1&gt;</ept> serialized.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200228T060120Z" creationid="isVowel" creationdate="20200228T060120Z">
+        <seg><bpt i="0" x="0">&lt;s0&gt;</bpt>制限事項<ept i="0">&lt;/s0&gt;</ept>: オブジェクトでは型のシリアライズが<bpt i="1" x="1">&lt;s1&gt;</bpt>行われません<ept i="1">&lt;/s1&gt;</ept>。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1858,6 +1922,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg><bpt i="17" x="17">&lt;s17&gt;</bpt># `f` will be a value of a type such as `Option[T]`<ept i="17">&lt;/s17&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200229T082749Z" creationid="isVowel" creationdate="20200229T082749Z">
+        <seg><bpt i="17" x="17">&lt;s17&gt;</bpt># `f` は `Option[T]` などの型の値です。<ept i="17">&lt;/s17&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg><bpt i="17" x="17">&lt;s17&gt;</bpt>maxBody<ept i="17">&lt;/s17&gt;</ept><bpt i="18" x="18">&lt;s18&gt;</bpt>:<ept i="18">&lt;/s18&gt;</ept> <bpt i="19" x="19">&lt;a19&gt;</bpt><bpt i="20" x="20">&lt;s20&gt;</bpt>int<ept i="20">&lt;/s20&gt;</ept><ept i="19">&lt;/a19&gt;</ept>                 <bpt i="21" x="21">&lt;s21&gt;</bpt>## The maximum content-length that will be read for the body.<ept i="21">&lt;/s21&gt;</ept></seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200219T110839Z" creationid="isVowel" creationdate="20200219T110839Z">
@@ -1886,6 +1958,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
         <seg><bpt i="187" x="187">&lt;s187&gt;</bpt>tagImg<ept i="187">&lt;/s187&gt;</ept><bpt i="188" x="188">&lt;s188&gt;</bpt>,<ept i="188">&lt;/s188&gt;</ept>                     <bpt i="189" x="189">&lt;s189&gt;</bpt>## HTML ``img`` 要素<ept i="189">&lt;/s189&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="18" x="18">&lt;s18&gt;</bpt># `MatchedGenericType` will become the `Option` type<ept i="18">&lt;/s18&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200229T082902Z" creationid="isVowel" creationdate="20200229T082902Z">
+        <seg><bpt i="18" x="18">&lt;s18&gt;</bpt># `MatchedGenericType` は `Option` 型となります。<ept i="18">&lt;/s18&gt;</ept></seg>
       </tuv>
     </tu>
     <tu>
@@ -1942,6 +2022,40 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200131T095644Z" creationid="isVowel" creationdate="20200131T095644Z">
         <seg><bpt i="19" x="19">&lt;s19&gt;</bpt>MacOSX<ept i="19">&lt;/s19&gt;</ept><bpt i="20" x="20">&lt;s20&gt;</bpt>,<ept i="20">&lt;/s20&gt;</ept>                     <bpt i="21" x="21">&lt;s21&gt;</bpt>## OSX のバージョン<ept i="21">&lt;/s21&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="19" x="19">&lt;s19&gt;</bpt>b<ept i="19">&lt;/s19&gt;</ept><bpt i="20" x="20">&lt;s20&gt;</bpt>:<ept i="20">&lt;/s20&gt;</ept> <bpt i="21" x="21">&lt;s21&gt;</bpt>ref<ept i="21">&lt;/s21&gt;</ept> <bpt i="22" x="22">&lt;s22&gt;</bpt>B<ept i="22">&lt;/s22&gt;</ept>
+
+<bpt i="23" x="23">&lt;s23&gt;</bpt>new<ept i="23">&lt;/s23&gt;</ept><bpt i="24" x="24">&lt;s24&gt;</bpt>(<ept i="24">&lt;/s24&gt;</ept><bpt i="25" x="25">&lt;s25&gt;</bpt>b<ept i="25">&lt;/s25&gt;</ept><bpt i="26" x="26">&lt;s26&gt;</bpt>)<ept i="26">&lt;/s26&gt;</ept>
+<bpt i="27" x="27">&lt;s27&gt;</bpt>a<ept i="27">&lt;/s27&gt;</ept> <bpt i="28" x="28">&lt;s28&gt;</bpt>=<ept i="28">&lt;/s28&gt;</ept> <bpt i="29" x="29">&lt;s29&gt;</bpt>b<ept i="29">&lt;/s29&gt;</ept>
+<bpt i="30" x="30">&lt;s30&gt;</bpt>echo<ept i="30">&lt;/s30&gt;</ept><bpt i="31" x="31">&lt;s31&gt;</bpt>(<ept i="31">&lt;/s31&gt;</ept><bpt i="32" x="32">&lt;s32&gt;</bpt>$$<ept i="32">&lt;/s32&gt;</ept><bpt i="33" x="33">&lt;s33&gt;</bpt>a<ept i="33">&lt;/s33&gt;</ept><bpt i="34" x="34">&lt;s34&gt;</bpt>[<ept i="34">&lt;/s34&gt;</ept><bpt i="35" x="35">&lt;s35&gt;</bpt>]<ept i="35">&lt;/s35&gt;</ept><bpt i="36" x="36">&lt;s36&gt;</bpt>)<ept i="36">&lt;/s36&gt;</ept> <bpt i="37" x="37">&lt;s37&gt;</bpt># produces "{}", not "{f: 0}"<ept i="37">&lt;/s37&gt;</ept>
+
+<bpt i="38" x="38">&lt;s38&gt;</bpt># unmarshal<ept i="38">&lt;/s38&gt;</ept>
+<bpt i="39" x="39">&lt;s39&gt;</bpt>let<ept i="39">&lt;/s39&gt;</ept> <bpt i="40" x="40">&lt;s40&gt;</bpt>c<ept i="40">&lt;/s40&gt;</ept> <bpt i="41" x="41">&lt;s41&gt;</bpt>=<ept i="41">&lt;/s41&gt;</ept> <bpt i="42" x="42">&lt;s42&gt;</bpt>to<ept i="42">&lt;/s42&gt;</ept><bpt i="43" x="43">&lt;s43&gt;</bpt>[<ept i="43">&lt;/s43&gt;</ept><bpt i="44" x="44">&lt;s44&gt;</bpt>B<ept i="44">&lt;/s44&gt;</ept><bpt i="45" x="45">&lt;s45&gt;</bpt>]<ept i="45">&lt;/s45&gt;</ept><bpt i="46" x="46">&lt;s46&gt;</bpt>(<ept i="46">&lt;/s46&gt;</ept><bpt i="47" x="47">&lt;s47&gt;</bpt>"""{"f": 2}"""<ept i="47">&lt;/s47&gt;</ept><bpt i="48" x="48">&lt;s48&gt;</bpt>)<ept i="48">&lt;/s48&gt;</ept>
+<bpt i="49" x="49">&lt;s49&gt;</bpt>assert<ept i="49">&lt;/s49&gt;</ept> <bpt i="50" x="50">&lt;s50&gt;</bpt>typeof<ept i="50">&lt;/s50&gt;</ept><bpt i="51" x="51">&lt;s51&gt;</bpt>(<ept i="51">&lt;/s51&gt;</ept><bpt i="52" x="52">&lt;s52&gt;</bpt>c<ept i="52">&lt;/s52&gt;</ept><bpt i="53" x="53">&lt;s53&gt;</bpt>)<ept i="53">&lt;/s53&gt;</ept> <bpt i="54" x="54">&lt;s54&gt;</bpt>is<ept i="54">&lt;/s54&gt;</ept> <bpt i="55" x="55">&lt;s55&gt;</bpt>B<ept i="55">&lt;/s55&gt;</ept>
+<bpt i="56" x="56">&lt;s56&gt;</bpt>assert<ept i="56">&lt;/s56&gt;</ept> <bpt i="57" x="57">&lt;s57&gt;</bpt>c<ept i="57">&lt;/s57&gt;</ept><bpt i="58" x="58">&lt;s58&gt;</bpt>.<ept i="58">&lt;/s58&gt;</ept><bpt i="59" x="59">&lt;s59&gt;</bpt>f<ept i="59">&lt;/s59&gt;</ept> <bpt i="60" x="60">&lt;s60&gt;</bpt>==<ept i="60">&lt;/s60&gt;</ept> <bpt i="61" x="61">&lt;s61&gt;</bpt>2<ept i="61">&lt;/s61&gt;</ept>
+
+<bpt i="62" x="62">&lt;s62&gt;</bpt># marshal<ept i="62">&lt;/s62&gt;</ept>
+<bpt i="63" x="63">&lt;s63&gt;</bpt>let<ept i="63">&lt;/s63&gt;</ept> <bpt i="64" x="64">&lt;s64&gt;</bpt>s<ept i="64">&lt;/s64&gt;</ept> <bpt i="65" x="65">&lt;s65&gt;</bpt>=<ept i="65">&lt;/s65&gt;</ept> <bpt i="66" x="66">&lt;s66&gt;</bpt>$$<ept i="66">&lt;/s66&gt;</ept><bpt i="67" x="67">&lt;s67&gt;</bpt>c<ept i="67">&lt;/s67&gt;</ept>
+<bpt i="68" x="68">&lt;s68&gt;</bpt>assert<ept i="68">&lt;/s68&gt;</ept> <bpt i="69" x="69">&lt;s69&gt;</bpt>s<ept i="69">&lt;/s69&gt;</ept> <bpt i="70" x="70">&lt;s70&gt;</bpt>==<ept i="70">&lt;/s70&gt;</ept> <bpt i="71" x="71">&lt;s71&gt;</bpt>"""{"f": 2}"""<ept i="71">&lt;/s71&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200228T060217Z" creationid="isVowel" creationdate="20200228T060217Z">
+        <seg><bpt i="19" x="19">&lt;s19&gt;</bpt>b<ept i="19">&lt;/s19&gt;</ept><bpt i="20" x="20">&lt;s20&gt;</bpt>:<ept i="20">&lt;/s20&gt;</ept> <bpt i="21" x="21">&lt;s21&gt;</bpt>ref<ept i="21">&lt;/s21&gt;</ept> <bpt i="22" x="22">&lt;s22&gt;</bpt>B<ept i="22">&lt;/s22&gt;</ept>
+
+<bpt i="23" x="23">&lt;s23&gt;</bpt>new<ept i="23">&lt;/s23&gt;</ept><bpt i="24" x="24">&lt;s24&gt;</bpt>(<ept i="24">&lt;/s24&gt;</ept><bpt i="25" x="25">&lt;s25&gt;</bpt>b<ept i="25">&lt;/s25&gt;</ept><bpt i="26" x="26">&lt;s26&gt;</bpt>)<ept i="26">&lt;/s26&gt;</ept>
+<bpt i="27" x="27">&lt;s27&gt;</bpt>a<ept i="27">&lt;/s27&gt;</ept> <bpt i="28" x="28">&lt;s28&gt;</bpt>=<ept i="28">&lt;/s28&gt;</ept> <bpt i="29" x="29">&lt;s29&gt;</bpt>b<ept i="29">&lt;/s29&gt;</ept>
+<bpt i="30" x="30">&lt;s30&gt;</bpt>echo<ept i="30">&lt;/s30&gt;</ept><bpt i="31" x="31">&lt;s31&gt;</bpt>(<ept i="31">&lt;/s31&gt;</ept><bpt i="32" x="32">&lt;s32&gt;</bpt>$$<ept i="32">&lt;/s32&gt;</ept><bpt i="33" x="33">&lt;s33&gt;</bpt>a<ept i="33">&lt;/s33&gt;</ept><bpt i="34" x="34">&lt;s34&gt;</bpt>[<ept i="34">&lt;/s34&gt;</ept><bpt i="35" x="35">&lt;s35&gt;</bpt>]<ept i="35">&lt;/s35&gt;</ept><bpt i="36" x="36">&lt;s36&gt;</bpt>)<ept i="36">&lt;/s36&gt;</ept> <bpt i="37" x="37">&lt;s37&gt;</bpt># "{f: 0}" ではなく、 "{}" を生成します。<ept i="37">&lt;/s37&gt;</ept>
+
+<bpt i="38" x="38">&lt;s38&gt;</bpt># アンマーシャル<ept i="38">&lt;/s38&gt;</ept>
+<bpt i="39" x="39">&lt;s39&gt;</bpt>let<ept i="39">&lt;/s39&gt;</ept> <bpt i="40" x="40">&lt;s40&gt;</bpt>c<ept i="40">&lt;/s40&gt;</ept> <bpt i="41" x="41">&lt;s41&gt;</bpt>=<ept i="41">&lt;/s41&gt;</ept> <bpt i="42" x="42">&lt;s42&gt;</bpt>to<ept i="42">&lt;/s42&gt;</ept><bpt i="43" x="43">&lt;s43&gt;</bpt>[<ept i="43">&lt;/s43&gt;</ept><bpt i="44" x="44">&lt;s44&gt;</bpt>B<ept i="44">&lt;/s44&gt;</ept><bpt i="45" x="45">&lt;s45&gt;</bpt>]<ept i="45">&lt;/s45&gt;</ept><bpt i="46" x="46">&lt;s46&gt;</bpt>(<ept i="46">&lt;/s46&gt;</ept><bpt i="47" x="47">&lt;s47&gt;</bpt>"""{"f": 2}"""<ept i="47">&lt;/s47&gt;</ept><bpt i="48" x="48">&lt;s48&gt;</bpt>)<ept i="48">&lt;/s48&gt;</ept>
+<bpt i="49" x="49">&lt;s49&gt;</bpt>assert<ept i="49">&lt;/s49&gt;</ept> <bpt i="50" x="50">&lt;s50&gt;</bpt>typeof<ept i="50">&lt;/s50&gt;</ept><bpt i="51" x="51">&lt;s51&gt;</bpt>(<ept i="51">&lt;/s51&gt;</ept><bpt i="52" x="52">&lt;s52&gt;</bpt>c<ept i="52">&lt;/s52&gt;</ept><bpt i="53" x="53">&lt;s53&gt;</bpt>)<ept i="53">&lt;/s53&gt;</ept> <bpt i="54" x="54">&lt;s54&gt;</bpt>is<ept i="54">&lt;/s54&gt;</ept> <bpt i="55" x="55">&lt;s55&gt;</bpt>B<ept i="55">&lt;/s55&gt;</ept>
+<bpt i="56" x="56">&lt;s56&gt;</bpt>assert<ept i="56">&lt;/s56&gt;</ept> <bpt i="57" x="57">&lt;s57&gt;</bpt>c<ept i="57">&lt;/s57&gt;</ept><bpt i="58" x="58">&lt;s58&gt;</bpt>.<ept i="58">&lt;/s58&gt;</ept><bpt i="59" x="59">&lt;s59&gt;</bpt>f<ept i="59">&lt;/s59&gt;</ept> <bpt i="60" x="60">&lt;s60&gt;</bpt>==<ept i="60">&lt;/s60&gt;</ept> <bpt i="61" x="61">&lt;s61&gt;</bpt>2<ept i="61">&lt;/s61&gt;</ept>
+
+<bpt i="62" x="62">&lt;s62&gt;</bpt># マーシャル<ept i="62">&lt;/s62&gt;</ept>
+<bpt i="63" x="63">&lt;s63&gt;</bpt>let<ept i="63">&lt;/s63&gt;</ept> <bpt i="64" x="64">&lt;s64&gt;</bpt>s<ept i="64">&lt;/s64&gt;</ept> <bpt i="65" x="65">&lt;s65&gt;</bpt>=<ept i="65">&lt;/s65&gt;</ept> <bpt i="66" x="66">&lt;s66&gt;</bpt>$$<ept i="66">&lt;/s66&gt;</ept><bpt i="67" x="67">&lt;s67&gt;</bpt>c<ept i="67">&lt;/s67&gt;</ept>
+<bpt i="68" x="68">&lt;s68&gt;</bpt>assert<ept i="68">&lt;/s68&gt;</ept> <bpt i="69" x="69">&lt;s69&gt;</bpt>s<ept i="69">&lt;/s69&gt;</ept> <bpt i="70" x="70">&lt;s70&gt;</bpt>==<ept i="70">&lt;/s70&gt;</ept> <bpt i="71" x="71">&lt;s71&gt;</bpt>"""{"f": 2}"""<ept i="71">&lt;/s71&gt;</ept></seg>
       </tuv>
     </tu>
     <tu>
@@ -2962,6 +3076,48 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg><bpt i="7" x="7">&lt;s7&gt;</bpt>bar<ept i="7">&lt;/s7&gt;</ept><bpt i="8" x="8">&lt;s8&gt;</bpt>:<ept i="8">&lt;/s8&gt;</ept> <bpt i="9" x="9">&lt;s9&gt;</bpt>string<ept i="9">&lt;/s9&gt;</ept>
+
+<bpt i="10" x="10">&lt;s10&gt;</bpt>let<ept i="10">&lt;/s10&gt;</ept> <bpt i="11" x="11">&lt;s11&gt;</bpt>x<ept i="11">&lt;/s11&gt;</ept> <bpt i="12" x="12">&lt;s12&gt;</bpt>=<ept i="12">&lt;/s12&gt;</ept> <bpt i="13" x="13">&lt;s13&gt;</bpt>Foo<ept i="13">&lt;/s13&gt;</ept><bpt i="14" x="14">&lt;s14&gt;</bpt>(<ept i="14">&lt;/s14&gt;</ept><bpt i="15" x="15">&lt;s15&gt;</bpt>id<ept i="15">&lt;/s15&gt;</ept><bpt i="16" x="16">&lt;s16&gt;</bpt>:<ept i="16">&lt;/s16&gt;</ept> <bpt i="17" x="17">&lt;s17&gt;</bpt>1<ept i="17">&lt;/s17&gt;</ept><bpt i="18" x="18">&lt;s18&gt;</bpt>,<ept i="18">&lt;/s18&gt;</ept> <bpt i="19" x="19">&lt;s19&gt;</bpt>bar<ept i="19">&lt;/s19&gt;</ept><bpt i="20" x="20">&lt;s20&gt;</bpt>:<ept i="20">&lt;/s20&gt;</ept> <bpt i="21" x="21">&lt;s21&gt;</bpt>"baz"<ept i="21">&lt;/s21&gt;</ept><bpt i="22" x="22">&lt;s22&gt;</bpt>)<ept i="22">&lt;/s22&gt;</ept>
+<bpt i="23" x="23">&lt;s23&gt;</bpt>## serialize:<ept i="23">&lt;/s23&gt;</ept>
+<bpt i="24" x="24">&lt;s24&gt;</bpt>let<ept i="24">&lt;/s24&gt;</ept> <bpt i="25" x="25">&lt;s25&gt;</bpt>y<ept i="25">&lt;/s25&gt;</ept> <bpt i="26" x="26">&lt;s26&gt;</bpt>=<ept i="26">&lt;/s26&gt;</ept> <bpt i="27" x="27">&lt;s27&gt;</bpt>$$<ept i="27">&lt;/s27&gt;</ept><bpt i="28" x="28">&lt;s28&gt;</bpt>x<ept i="28">&lt;/s28&gt;</ept>
+<bpt i="29" x="29">&lt;s29&gt;</bpt>assert<ept i="29">&lt;/s29&gt;</ept> <bpt i="30" x="30">&lt;s30&gt;</bpt>y<ept i="30">&lt;/s30&gt;</ept> <bpt i="31" x="31">&lt;s31&gt;</bpt>==<ept i="31">&lt;/s31&gt;</ept> <bpt i="32" x="32">&lt;s32&gt;</bpt>"""{"id": 1, "bar": "baz"}"""<ept i="32">&lt;/s32&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200228T060723Z" creationid="isVowel" creationdate="20200228T060723Z">
+        <seg><bpt i="7" x="7">&lt;s7&gt;</bpt>bar<ept i="7">&lt;/s7&gt;</ept><bpt i="8" x="8">&lt;s8&gt;</bpt>:<ept i="8">&lt;/s8&gt;</ept> <bpt i="9" x="9">&lt;s9&gt;</bpt>string<ept i="9">&lt;/s9&gt;</ept>
+
+<bpt i="10" x="10">&lt;s10&gt;</bpt>let<ept i="10">&lt;/s10&gt;</ept> <bpt i="11" x="11">&lt;s11&gt;</bpt>x<ept i="11">&lt;/s11&gt;</ept> <bpt i="12" x="12">&lt;s12&gt;</bpt>=<ept i="12">&lt;/s12&gt;</ept> <bpt i="13" x="13">&lt;s13&gt;</bpt>Foo<ept i="13">&lt;/s13&gt;</ept><bpt i="14" x="14">&lt;s14&gt;</bpt>(<ept i="14">&lt;/s14&gt;</ept><bpt i="15" x="15">&lt;s15&gt;</bpt>id<ept i="15">&lt;/s15&gt;</ept><bpt i="16" x="16">&lt;s16&gt;</bpt>:<ept i="16">&lt;/s16&gt;</ept> <bpt i="17" x="17">&lt;s17&gt;</bpt>1<ept i="17">&lt;/s17&gt;</ept><bpt i="18" x="18">&lt;s18&gt;</bpt>,<ept i="18">&lt;/s18&gt;</ept> <bpt i="19" x="19">&lt;s19&gt;</bpt>bar<ept i="19">&lt;/s19&gt;</ept><bpt i="20" x="20">&lt;s20&gt;</bpt>:<ept i="20">&lt;/s20&gt;</ept> <bpt i="21" x="21">&lt;s21&gt;</bpt>"baz"<ept i="21">&lt;/s21&gt;</ept><bpt i="22" x="22">&lt;s22&gt;</bpt>)<ept i="22">&lt;/s22&gt;</ept>
+<bpt i="23" x="23">&lt;s23&gt;</bpt>## シリアライズ:<ept i="23">&lt;/s23&gt;</ept>
+<bpt i="24" x="24">&lt;s24&gt;</bpt>let<ept i="24">&lt;/s24&gt;</ept> <bpt i="25" x="25">&lt;s25&gt;</bpt>y<ept i="25">&lt;/s25&gt;</ept> <bpt i="26" x="26">&lt;s26&gt;</bpt>=<ept i="26">&lt;/s26&gt;</ept> <bpt i="27" x="27">&lt;s27&gt;</bpt>$$<ept i="27">&lt;/s27&gt;</ept><bpt i="28" x="28">&lt;s28&gt;</bpt>x<ept i="28">&lt;/s28&gt;</ept>
+<bpt i="29" x="29">&lt;s29&gt;</bpt>assert<ept i="29">&lt;/s29&gt;</ept> <bpt i="30" x="30">&lt;s30&gt;</bpt>y<ept i="30">&lt;/s30&gt;</ept> <bpt i="31" x="31">&lt;s31&gt;</bpt>==<ept i="31">&lt;/s31&gt;</ept> <bpt i="32" x="32">&lt;s32&gt;</bpt>"""{"id": 1, "bar": "baz"}"""<ept i="32">&lt;/s32&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="7" x="7">&lt;s7&gt;</bpt>bar<ept i="7">&lt;/s7&gt;</ept><bpt i="8" x="8">&lt;s8&gt;</bpt>:<ept i="8">&lt;/s8&gt;</ept> <bpt i="9" x="9">&lt;s9&gt;</bpt>string<ept i="9">&lt;/s9&gt;</ept>
+
+<bpt i="10" x="10">&lt;s10&gt;</bpt>let<ept i="10">&lt;/s10&gt;</ept> <bpt i="11" x="11">&lt;s11&gt;</bpt>y<ept i="11">&lt;/s11&gt;</ept> <bpt i="12" x="12">&lt;s12&gt;</bpt>=<ept i="12">&lt;/s12&gt;</ept> <bpt i="13" x="13">&lt;s13&gt;</bpt>"""{"id": 1, "bar": "baz"}"""<ept i="13">&lt;/s13&gt;</ept>
+<bpt i="14" x="14">&lt;s14&gt;</bpt>assert<ept i="14">&lt;/s14&gt;</ept> <bpt i="15" x="15">&lt;s15&gt;</bpt>typeof<ept i="15">&lt;/s15&gt;</ept><bpt i="16" x="16">&lt;s16&gt;</bpt>(<ept i="16">&lt;/s16&gt;</ept><bpt i="17" x="17">&lt;s17&gt;</bpt>y<ept i="17">&lt;/s17&gt;</ept><bpt i="18" x="18">&lt;s18&gt;</bpt>)<ept i="18">&lt;/s18&gt;</ept> <bpt i="19" x="19">&lt;s19&gt;</bpt>is<ept i="19">&lt;/s19&gt;</ept> <bpt i="20" x="20">&lt;s20&gt;</bpt>string<ept i="20">&lt;/s20&gt;</ept>
+<bpt i="21" x="21">&lt;s21&gt;</bpt>## deserialize to type 'Foo':<ept i="21">&lt;/s21&gt;</ept>
+<bpt i="22" x="22">&lt;s22&gt;</bpt>let<ept i="22">&lt;/s22&gt;</ept> <bpt i="23" x="23">&lt;s23&gt;</bpt>z<ept i="23">&lt;/s23&gt;</ept> <bpt i="24" x="24">&lt;s24&gt;</bpt>=<ept i="24">&lt;/s24&gt;</ept> <bpt i="25" x="25">&lt;s25&gt;</bpt>to<ept i="25">&lt;/s25&gt;</ept><bpt i="26" x="26">&lt;s26&gt;</bpt>[<ept i="26">&lt;/s26&gt;</ept><bpt i="27" x="27">&lt;s27&gt;</bpt>Foo<ept i="27">&lt;/s27&gt;</ept><bpt i="28" x="28">&lt;s28&gt;</bpt>]<ept i="28">&lt;/s28&gt;</ept><bpt i="29" x="29">&lt;s29&gt;</bpt>(<ept i="29">&lt;/s29&gt;</ept><bpt i="30" x="30">&lt;s30&gt;</bpt>y<ept i="30">&lt;/s30&gt;</ept><bpt i="31" x="31">&lt;s31&gt;</bpt>)<ept i="31">&lt;/s31&gt;</ept>
+<bpt i="32" x="32">&lt;s32&gt;</bpt>assert<ept i="32">&lt;/s32&gt;</ept> <bpt i="33" x="33">&lt;s33&gt;</bpt>typeof<ept i="33">&lt;/s33&gt;</ept><bpt i="34" x="34">&lt;s34&gt;</bpt>(<ept i="34">&lt;/s34&gt;</ept><bpt i="35" x="35">&lt;s35&gt;</bpt>z<ept i="35">&lt;/s35&gt;</ept><bpt i="36" x="36">&lt;s36&gt;</bpt>)<ept i="36">&lt;/s36&gt;</ept> <bpt i="37" x="37">&lt;s37&gt;</bpt>is<ept i="37">&lt;/s37&gt;</ept> <bpt i="38" x="38">&lt;s38&gt;</bpt>Foo<ept i="38">&lt;/s38&gt;</ept>
+<bpt i="39" x="39">&lt;s39&gt;</bpt>assert<ept i="39">&lt;/s39&gt;</ept> <bpt i="40" x="40">&lt;s40&gt;</bpt>z<ept i="40">&lt;/s40&gt;</ept><bpt i="41" x="41">&lt;s41&gt;</bpt>.<ept i="41">&lt;/s41&gt;</ept><bpt i="42" x="42">&lt;s42&gt;</bpt>id<ept i="42">&lt;/s42&gt;</ept> <bpt i="43" x="43">&lt;s43&gt;</bpt>==<ept i="43">&lt;/s43&gt;</ept> <bpt i="44" x="44">&lt;s44&gt;</bpt>1<ept i="44">&lt;/s44&gt;</ept>
+<bpt i="45" x="45">&lt;s45&gt;</bpt>assert<ept i="45">&lt;/s45&gt;</ept> <bpt i="46" x="46">&lt;s46&gt;</bpt>z<ept i="46">&lt;/s46&gt;</ept><bpt i="47" x="47">&lt;s47&gt;</bpt>.<ept i="47">&lt;/s47&gt;</ept><bpt i="48" x="48">&lt;s48&gt;</bpt>bar<ept i="48">&lt;/s48&gt;</ept> <bpt i="49" x="49">&lt;s49&gt;</bpt>==<ept i="49">&lt;/s49&gt;</ept> <bpt i="50" x="50">&lt;s50&gt;</bpt>"baz"<ept i="50">&lt;/s50&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200228T060827Z" creationid="isVowel" creationdate="20200228T060827Z">
+        <seg><bpt i="7" x="7">&lt;s7&gt;</bpt>bar<ept i="7">&lt;/s7&gt;</ept><bpt i="8" x="8">&lt;s8&gt;</bpt>:<ept i="8">&lt;/s8&gt;</ept> <bpt i="9" x="9">&lt;s9&gt;</bpt>string<ept i="9">&lt;/s9&gt;</ept>
+
+<bpt i="10" x="10">&lt;s10&gt;</bpt>let<ept i="10">&lt;/s10&gt;</ept> <bpt i="11" x="11">&lt;s11&gt;</bpt>y<ept i="11">&lt;/s11&gt;</ept> <bpt i="12" x="12">&lt;s12&gt;</bpt>=<ept i="12">&lt;/s12&gt;</ept> <bpt i="13" x="13">&lt;s13&gt;</bpt>"""{"id": 1, "bar": "baz"}"""<ept i="13">&lt;/s13&gt;</ept>
+<bpt i="14" x="14">&lt;s14&gt;</bpt>assert<ept i="14">&lt;/s14&gt;</ept> <bpt i="15" x="15">&lt;s15&gt;</bpt>typeof<ept i="15">&lt;/s15&gt;</ept><bpt i="16" x="16">&lt;s16&gt;</bpt>(<ept i="16">&lt;/s16&gt;</ept><bpt i="17" x="17">&lt;s17&gt;</bpt>y<ept i="17">&lt;/s17&gt;</ept><bpt i="18" x="18">&lt;s18&gt;</bpt>)<ept i="18">&lt;/s18&gt;</ept> <bpt i="19" x="19">&lt;s19&gt;</bpt>is<ept i="19">&lt;/s19&gt;</ept> <bpt i="20" x="20">&lt;s20&gt;</bpt>string<ept i="20">&lt;/s20&gt;</ept>
+<bpt i="21" x="21">&lt;s21&gt;</bpt>## 'Foo' 型へのデシリアライズ:<ept i="21">&lt;/s21&gt;</ept>
+<bpt i="22" x="22">&lt;s22&gt;</bpt>let<ept i="22">&lt;/s22&gt;</ept> <bpt i="23" x="23">&lt;s23&gt;</bpt>z<ept i="23">&lt;/s23&gt;</ept> <bpt i="24" x="24">&lt;s24&gt;</bpt>=<ept i="24">&lt;/s24&gt;</ept> <bpt i="25" x="25">&lt;s25&gt;</bpt>to<ept i="25">&lt;/s25&gt;</ept><bpt i="26" x="26">&lt;s26&gt;</bpt>[<ept i="26">&lt;/s26&gt;</ept><bpt i="27" x="27">&lt;s27&gt;</bpt>Foo<ept i="27">&lt;/s27&gt;</ept><bpt i="28" x="28">&lt;s28&gt;</bpt>]<ept i="28">&lt;/s28&gt;</ept><bpt i="29" x="29">&lt;s29&gt;</bpt>(<ept i="29">&lt;/s29&gt;</ept><bpt i="30" x="30">&lt;s30&gt;</bpt>y<ept i="30">&lt;/s30&gt;</ept><bpt i="31" x="31">&lt;s31&gt;</bpt>)<ept i="31">&lt;/s31&gt;</ept>
+<bpt i="32" x="32">&lt;s32&gt;</bpt>assert<ept i="32">&lt;/s32&gt;</ept> <bpt i="33" x="33">&lt;s33&gt;</bpt>typeof<ept i="33">&lt;/s33&gt;</ept><bpt i="34" x="34">&lt;s34&gt;</bpt>(<ept i="34">&lt;/s34&gt;</ept><bpt i="35" x="35">&lt;s35&gt;</bpt>z<ept i="35">&lt;/s35&gt;</ept><bpt i="36" x="36">&lt;s36&gt;</bpt>)<ept i="36">&lt;/s36&gt;</ept> <bpt i="37" x="37">&lt;s37&gt;</bpt>is<ept i="37">&lt;/s37&gt;</ept> <bpt i="38" x="38">&lt;s38&gt;</bpt>Foo<ept i="38">&lt;/s38&gt;</ept>
+<bpt i="39" x="39">&lt;s39&gt;</bpt>assert<ept i="39">&lt;/s39&gt;</ept> <bpt i="40" x="40">&lt;s40&gt;</bpt>z<ept i="40">&lt;/s40&gt;</ept><bpt i="41" x="41">&lt;s41&gt;</bpt>.<ept i="41">&lt;/s41&gt;</ept><bpt i="42" x="42">&lt;s42&gt;</bpt>id<ept i="42">&lt;/s42&gt;</ept> <bpt i="43" x="43">&lt;s43&gt;</bpt>==<ept i="43">&lt;/s43&gt;</ept> <bpt i="44" x="44">&lt;s44&gt;</bpt>1<ept i="44">&lt;/s44&gt;</ept>
+<bpt i="45" x="45">&lt;s45&gt;</bpt>assert<ept i="45">&lt;/s45&gt;</ept> <bpt i="46" x="46">&lt;s46&gt;</bpt>z<ept i="46">&lt;/s46&gt;</ept><bpt i="47" x="47">&lt;s47&gt;</bpt>.<ept i="47">&lt;/s47&gt;</ept><bpt i="48" x="48">&lt;s48&gt;</bpt>bar<ept i="48">&lt;/s48&gt;</ept> <bpt i="49" x="49">&lt;s49&gt;</bpt>==<ept i="49">&lt;/s49&gt;</ept> <bpt i="50" x="50">&lt;s50&gt;</bpt>"baz"<ept i="50">&lt;/s50&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg><bpt i="7" x="7">&lt;s7&gt;</bpt>errors<ept i="7">&lt;/s7&gt;</ept><bpt i="8" x="8">&lt;s8&gt;</bpt>*<ept i="8">&lt;/s8&gt;</ept><bpt i="9" x="9">&lt;s9&gt;</bpt>:<ept i="9">&lt;/s9&gt;</ept> <bpt i="10" x="10">&lt;a10&gt;</bpt><bpt i="11" x="11">&lt;s11&gt;</bpt>seq<ept i="11">&lt;/s11&gt;</ept><ept i="10">&lt;/a10&gt;</ept><bpt i="12" x="12">&lt;s12&gt;</bpt>[<ept i="12">&lt;/s12&gt;</ept><bpt i="13" x="13">&lt;a13&gt;</bpt><bpt i="14" x="14">&lt;s14&gt;</bpt>string<ept i="14">&lt;/s14&gt;</ept><ept i="13">&lt;/a13&gt;</ept><bpt i="15" x="15">&lt;s15&gt;</bpt>]<ept i="15">&lt;/s15&gt;</ept>         <bpt i="16" x="16">&lt;s16&gt;</bpt>## All detected parsing errors.<ept i="16">&lt;/s16&gt;</ept></seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200214T102526Z" creationid="isVowel" creationdate="20200214T075121Z">
@@ -3098,6 +3254,22 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>seq[int].genericHead<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> will be just <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>seq<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200229T082225Z" creationid="isVowel" creationdate="20200229T082225Z">
+        <seg><bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>seq[int].genericHead<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> は <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>seq<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> になります</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>seq[int].genericHead[float]<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> will be <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>seq[float]<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200229T082236Z" creationid="isVowel" creationdate="20200229T082236Z">
+        <seg><bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>seq[int].genericHead[float]<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> は <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>seq[float]<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> になります</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg><bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>nimpretty<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept> is a Nim source code beautifier, to format code according to the official style guide.<ph x="3">&lt;br3/&gt;</ph></seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200217T072740Z" creationid="isVowel" creationdate="20200217T072740Z">
@@ -3176,6 +3348,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200130T112637Z" creationid="isVowel" creationdate="20200130T112637Z">
         <seg><bpt i="8" x="8">&lt;t8&gt;</bpt><bpt i="9" x="9">&lt;s9&gt;</bpt>ext<ept i="9">&lt;/s9&gt;</ept><ept i="8">&lt;/t8&gt;</ept> は <bpt i="10" x="10">&lt;t10&gt;</bpt><bpt i="11" x="11">&lt;s11&gt;</bpt>mimedb<ept i="11">&lt;/s11&gt;</ept><ept i="10">&lt;/t10&gt;</ept> の照会前に英数小文字へ変換されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>A compile-time error will be produced if the supplied type is not generic.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200229T081815Z" creationid="isVowel" creationdate="20200229T081815Z">
+        <seg>指定された型がジェネリック型でなければコンパイル時エラーが起こります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3260,6 +3440,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>AST:</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T064359Z" creationid="isVowel" creationdate="20200227T064236Z">
+        <seg>構文抽象木 (AST):</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>About this document</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T090432Z" creationid="isVowel" creationdate="20200114T090432Z">
@@ -3268,10 +3456,26 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Accepts an instantiated generic type and returns its uninstantiated form.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200229T082211Z" creationid="isVowel" creationdate="20200229T082211Z">
+        <seg>インスタンス化したジェネリック型を用いてアンインスタンス形式を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Acquires the given lock and then executes the code.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200225T093317Z" creationid="isVowel" creationdate="20200225T093210Z">
         <seg>指定されたロックの取得後にコードを実行します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Acquires the given lock, executes the statements in body and releases the lock after the statements finish executing.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T060901Z" creationid="isVowel" creationdate="20200227T060802Z">
+        <seg>指定されたロックの取得後に、ステートメント本体の実行、および実行完了後にロックを開放します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3296,6 +3500,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200118T025911Z" creationid="isVowel" creationdate="20200118T025911Z">
         <seg>そのほかのリソース</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Addr operator</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T065029Z" creationid="isVowel" creationdate="20200227T065029Z">
+        <seg>Addr 演算子</seg>
       </tuv>
     </tu>
     <tu>
@@ -3362,6 +3574,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200208T085108Z" creationid="isVowel" creationdate="20200208T085108Z">
         <seg>アルゴリズム</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Alias for system.`$`(t) since Nim v0.20.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200229T080529Z" creationid="isVowel" creationdate="20200229T080529Z">
+        <seg>system モジュールのエイリアスです。 Nim v0.20 以降では `$`(t) です。 </seg>
       </tuv>
     </tu>
     <tu>
@@ -3481,10 +3701,26 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Asm statement</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T065119Z" creationid="isVowel" creationdate="20200227T065119Z">
+        <seg>Asm ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Assembler statement</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T081740Z" creationid="isVowel" creationdate="20200114T081740Z">
         <seg>Assembler ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Assignment</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T065104Z" creationid="isVowel" creationdate="20200227T065104Z">
+        <seg>代入</seg>
       </tuv>
     </tu>
     <tu>
@@ -3499,8 +3735,8 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       <tuv xml:lang="EN-US">
         <seg>Ast Pattern Matching</seg>
       </tuv>
-      <tuv xml:lang="JA" changeid="isVowel" changedate="20200212T111205Z" creationid="isVowel" creationdate="20200212T111205Z">
-        <seg>AST パターンマッチング</seg>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T064344Z" creationid="isVowel" creationdate="20200212T111205Z">
+        <seg>構文抽象木 (AST) パターンマッチング</seg>
       </tuv>
     </tu>
     <tu>
@@ -3531,8 +3767,8 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       <tuv xml:lang="EN-US">
         <seg>Automatic imports</seg>
       </tuv>
-      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T070721Z" creationid="isVowel" creationdate="20200226T070721Z">
-        <seg>混血ライブラリ</seg>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T171003Z" creationid="isVowel" creationdate="20200226T070721Z">
+        <seg>自動インポート</seg>
       </tuv>
     </tu>
     <tu>
@@ -3565,6 +3801,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T060149Z" creationid="isVowel" creationdate="20200226T060149Z">
         <seg>Python の Unidecode モジュールをベースにしています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Basic Usage</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T063007Z" creationid="isVowel" creationdate="20200227T063007Z">
+        <seg>基本の用法</seg>
       </tuv>
     </tu>
     <tu>
@@ -3748,6 +3992,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T041201Z" creationid="isVowel" creationdate="20200113T041201Z">
         <seg>Case ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Cast operator</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T065034Z" creationid="isVowel" creationdate="20200227T065034Z">
+        <seg>Cast 演算子</seg>
       </tuv>
     </tu>
     <tu>
@@ -3962,6 +4214,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Concrete syntax:</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T064145Z" creationid="isVowel" creationdate="20200227T064145Z">
+        <seg>具象構文:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Connect to the FTP server specified by <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>ftp<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept>.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200224T043926Z" creationid="isVowel" creationdate="20200224T043926Z">
@@ -4042,6 +4302,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Converter declaration</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T074521Z" creationid="isVowel" creationdate="20200227T074521Z">
+        <seg>コンバータ宣言</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Converts <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>n<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> into its string representation.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200223T171241Z" creationid="isVowel" creationdate="20200223T171241Z">
@@ -4086,6 +4354,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200221T024741Z" creationid="isVowel" creationdate="20200221T024741Z">
         <seg><bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>&amp;Uuml;<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> などの HTML エンティティ名、または <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>&amp;#220;<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> や <bpt i="4" x="4">&lt;t4&gt;</bpt><bpt i="5" x="5">&lt;s5&gt;</bpt>&amp;#x000DC;<ept i="5">&lt;/s5&gt;</ept><ept i="4">&lt;/t4&gt;</ept> などの値を UTF-8 へ等価変換します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Converts between different character encodings.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T053111Z" creationid="isVowel" creationdate="20200227T053111Z">
+        <seg>異種文字エンコーディング間での変換を行います。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4883,6 +5159,14 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>For example:</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200229T081108Z" creationid="isVowel" creationdate="20200229T081108Z">
+        <seg>用例:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>For statement</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T041206Z" creationid="isVowel" creationdate="20200113T041206Z">
@@ -5016,6 +5300,22 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200212T170628Z" creationid="isVowel" creationdate="20200212T170628Z">
         <seg>生成日時: 2020年01月23日 午前17時27分16秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Generated: 2020-01-23 17:27:18 UTC</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T064439Z" creationid="isVowel" creationdate="20200227T064439Z">
+        <seg>生成日時: 2020年01月23日 午前17時27分18秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Generated: 2020-01-23 17:27:20 UTC</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200228T060838Z" creationid="isVowel" creationdate="20200228T060838Z">
+        <seg> 生成日時: 2020年01月23日 午前17時27分20秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
@@ -5176,6 +5476,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200211T132041Z" creationid="isVowel" creationdate="20200211T132041Z">
         <seg>生成日時: 2020年01月23日 午前17時28分02秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Generated: 2020-01-23 17:28:04 UTC</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T054207Z" creationid="isVowel" creationdate="20200227T054207Z">
+        <seg>生成日時: 2020年01月23日 午前17時28分04秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
@@ -5806,6 +6114,14 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>If true, the UI's code-page is returned, if false, the Console's code-page is returned.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T053325Z" creationid="isVowel" creationdate="20200227T053325Z">
+        <seg>true ならば UI のコードページを、 false ならばコンソールのコードページが返されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>If you use <bpt i="0" x="0">&lt;a0&gt;</bpt>toMD5 proc<ept i="0">&lt;/a0&gt;</ept> there's no need to call this function explicitly.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200129T095048Z" creationid="isVowel" creationdate="20200129T095048Z">
@@ -5818,6 +6134,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T082709Z" creationid="isVowel" creationdate="20200127T082627Z">
         <seg>ASCII 文字の部分集合に限定した Unicode 形式の実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Import section</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T065125Z" creationid="isVowel" creationdate="20200227T065125Z">
+        <seg>Import セクション</seg>
       </tuv>
     </tu>
     <tu>
@@ -5960,6 +6284,14 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Initializes the given condition variable.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T060303Z" creationid="isVowel" creationdate="20200227T060303Z">
+        <seg>指定された状態変数を初期化します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Initializes the given lock.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200225T092948Z" creationid="isVowel" creationdate="20200225T092948Z">
@@ -6079,6 +6411,22 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>It assumed that <bpt i="4" x="4">&lt;t4&gt;</bpt><bpt i="5" x="5">&lt;s5&gt;</bpt>s<ept i="5">&lt;/s5&gt;</ept><ept i="4">&lt;/t4&gt;</ept> is in <bpt i="6" x="6">&lt;t6&gt;</bpt><bpt i="7" x="7">&lt;s7&gt;</bpt>srcEncoding<ept i="7">&lt;/s7&gt;</ept><ept i="6">&lt;/t6&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T054043Z" creationid="isVowel" creationdate="20200227T054043Z">
+        <seg><bpt i="4" x="4">&lt;t4&gt;</bpt><bpt i="5" x="5">&lt;s5&gt;</bpt>s<ept i="5">&lt;/s5&gt;</ept><ept i="4">&lt;/t4&gt;</ept> は <bpt i="6" x="6">&lt;t6&gt;</bpt><bpt i="7" x="7">&lt;s7&gt;</bpt>srcEncoding<ept i="7">&lt;/s7&gt;</ept><ept i="6">&lt;/t6&gt;</ept> であると想定しています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>It assumed that <bpt i="6" x="6">&lt;t6&gt;</bpt><bpt i="7" x="7">&lt;s7&gt;</bpt>s<ept i="7">&lt;/s7&gt;</ept><ept i="6">&lt;/t6&gt;</ept> is in <bpt i="8" x="8">&lt;t8&gt;</bpt><bpt i="9" x="9">&lt;s9&gt;</bpt>srcEncoding<ept i="9">&lt;/s9&gt;</ept><ept i="8">&lt;/t8&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T053908Z" creationid="isVowel" creationdate="20200227T053908Z">
+        <seg><bpt i="7" x="7">&lt;s7&gt;</bpt>s<ept i="7">&lt;/s7&gt;</ept><it pos="end" x="6">&lt;/t6&gt;</it> は <bpt i="8" x="8">&lt;t8&gt;</bpt><bpt i="9" x="9">&lt;s9&gt;</bpt>srcEncoding<ept i="9">&lt;/s9&gt;</ept><ept i="8">&lt;/t8&gt;</ept> であると想定しています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>It can be used to parse a wild HTML document and output it as valid XHTML document (well, if you are lucky):</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200221T080452Z" creationid="isVowel" creationdate="20200221T080452Z">
@@ -6119,8 +6467,8 @@ replacementは「代替手段」を指します。このまま「代替ツール
       <tuv xml:lang="EN-US">
         <seg>It provides a single proc that does Unicode to ASCII transliterations: It finds the sequence of ASCII characters that is the closest approximation to the Unicode string.</seg>
       </tuv>
-      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T150209Z" creationid="isVowel" creationdate="20200226T150153Z">
-        <seg>これにより Unicode を ASCII へ翻字を行うプロシージャを使えます。つまり Unicode 文字列に最も近い近似 ASCII 文字のシーケンスを検索します。</seg>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T054920Z" creationid="isVowel" creationdate="20200226T150153Z">
+        <seg>これは Unicode から ASCII へ翻字を行うプロシージャです。つまり Unicode 文字列に最も近い近似 ASCII 文字のシーケンスを検索します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -6145,6 +6493,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200223T172040Z" creationid="isVowel" creationdate="20200223T172040Z">
         <seg><bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>n<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> にあるすべての子らにイテレートを行い条件に一致する <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>tag<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Iterator declaration</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T074536Z" creationid="isVowel" creationdate="20200227T074529Z">
+        <seg>イテレータ宣言</seg>
       </tuv>
     </tu>
     <tu>
@@ -6177,6 +6533,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200220T012108Z" creationid="isVowel" creationdate="20200220T012042Z">
         <seg>JavaScript のターゲット</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Let section</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T065135Z" creationid="isVowel" creationdate="20200227T065135Z">
+        <seg>Let セクション</seg>
       </tuv>
     </tu>
     <tu>
@@ -6229,6 +6593,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Lists</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T062934Z" creationid="isVowel" creationdate="20200227T062934Z">
+        <seg>リスト</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Lists all files in <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>dir<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept>.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200224T041421Z" creationid="isVowel" creationdate="20200224T041421Z">
@@ -6241,6 +6613,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200221T084029Z" creationid="isVowel" creationdate="20200221T084029Z">
         <seg>C 関数のロード</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Loads <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>data<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> from the stream <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>s<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200228T060405Z" creationid="isVowel" creationdate="20200228T060405Z">
+        <seg>ストリーム <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>s<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> から <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>data<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> をロードします。</seg>
       </tuv>
     </tu>
     <tu>
@@ -6273,6 +6653,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200131T095803Z" creationid="isVowel" creationdate="20200131T095803Z">
         <seg>MacOSX,                     ## OSX のバージョン</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Macro declaration</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T074504Z" creationid="isVowel" creationdate="20200227T074504Z">
+        <seg>マクロ宣言</seg>
       </tuv>
     </tu>
     <tu>
@@ -6527,6 +6915,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Nim condition variable   <bpt i="0" x="0">&lt;a0&gt;</bpt>Source<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>Edit<ept i="1">&lt;/a1&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T060237Z" creationid="isVowel" creationdate="20200227T060237Z">
+        <seg>Nim の状態変数です   <bpt i="0" x="0">&lt;a0&gt;</bpt>ソース<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>編集<ept i="1">&lt;/a1&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Nim file input</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200118T023236Z" creationid="isVowel" creationdate="20200118T023213Z">
@@ -6539,6 +6935,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200225T092916Z" creationid="isVowel" creationdate="20200225T092916Z">
         <seg>再入可能な Nim のロックです   <bpt i="0" x="0">&lt;a0&gt;</bpt>ソース<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>編集<ept i="1">&lt;/a1&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Nim lock; whether this is re-entrant or not is unspecified!</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T060150Z" creationid="isVowel" creationdate="20200227T060150Z">
+        <seg>Nim のロックです。これは再入可能、または未指定であるかどうかの判定に使います！</seg>
       </tuv>
     </tu>
     <tu>
@@ -6761,6 +7165,30 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>On UNIX, this uses the <bpt i="0" x="0">&lt;s0&gt;</bpt>iconv<ept i="0">&lt;/s0&gt;</ept> library, on Windows the Windows API.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T053140Z" creationid="isVowel" creationdate="20200227T053140Z">
+        <seg>このモジュールは UNIX では <bpt i="0" x="0">&lt;s0&gt;</bpt>iconv<ept i="0">&lt;/s0&gt;</ept> ライブラリを、Windows では Windows API を使います。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>On UNIX, this uses the <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>iconv<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept> library, on Windows the Windows API.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T054655Z" creationid="isVowel" creationdate="20200227T054655Z">
+        <seg>このモジュールは UNIX では <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>iconv<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept> ライブラリを、Windows では Windows API を使います。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>On Unix, always "UTF-8" is returned.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T053252Z" creationid="isVowel" creationdate="20200227T053252Z">
+        <seg>Unix では、必ず "UTF-8" が返されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>On Windows <bpt i="1" x="1">&lt;t1&gt;</bpt><bpt i="2" x="2">&lt;s2&gt;</bpt>system.readLine<ept i="2">&lt;/s2&gt;</ept><ept i="1">&lt;/t1&gt;</ept> is used.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200224T033625Z" creationid="isVowel" creationdate="20200224T033625Z">
@@ -6861,6 +7289,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200118T025526Z" creationid="isVowel" creationdate="20200118T025510Z">
         <seg>そのほかのドキュメント入力形式</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Other languages name a type like these <bpt i="0" x="0">&lt;s0&gt;</bpt>blob<ept i="0">&lt;/s0&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200229T084255Z" creationid="isVowel" creationdate="20200229T084255Z">
+        <seg>そのほかの言語において、この型の名前は <bpt i="0" x="0">&lt;s0&gt;</bpt>blob<ept i="0">&lt;/s0&gt;</ept> などがあります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -7091,6 +7527,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Procedure declaration</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T074551Z" creationid="isVowel" creationdate="20200227T074541Z">
+        <seg>プロシージャ宣言</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Procedures</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T041315Z" creationid="isVowel" creationdate="20200113T041315Z">
@@ -7197,6 +7641,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Raises <bpt i="4" x="4">&lt;t4&gt;</bpt><bpt i="5" x="5">&lt;s5&gt;</bpt>IOError<ept i="5">&lt;/s5&gt;</ept><ept i="4">&lt;/t4&gt;</ept> if it cannot fulfill the request.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T053601Z" creationid="isVowel" creationdate="20200227T053601Z">
+        <seg>リクエストを満たせないときは <bpt i="4" x="4">&lt;t4&gt;</bpt><bpt i="5" x="5">&lt;s5&gt;</bpt>IOError<ept i="5">&lt;/s5&gt;</ept><ept i="4">&lt;/t4&gt;</ept> が発生します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Raises <bpt i="4" x="4">&lt;t4&gt;</bpt><bpt i="5" x="5">&lt;s5&gt;</bpt>IOError<ept i="5">&lt;/s5&gt;</ept><ept i="4">&lt;/t4&gt;</ept> in case of an error.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200228T060426Z" creationid="isVowel" creationdate="20200228T060426Z">
+        <seg>エラーが起きたときは <bpt i="4" x="4">&lt;t4&gt;</bpt><bpt i="5" x="5">&lt;s5&gt;</bpt>IOError<ept i="5">&lt;/s5&gt;</ept><ept i="4">&lt;/t4&gt;</ept> を発生します。 </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Read <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>size<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> bytes from the specified file asynchronously starting at the current position of the file pointer.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200217T024600Z" creationid="isVowel" creationdate="20200217T024537Z">
@@ -7257,6 +7717,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200217T032821Z" creationid="isVowel" creationdate="20200217T032821Z">
         <seg>指定されたファイルにあるデータをすべて読み取ります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Reads data and transforms it to a type <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>T<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> (deserialization, unmarshalling).</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200228T060749Z" creationid="isVowel" creationdate="20200228T060749Z">
+        <seg>データを読み取って <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>T<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> 型へ変換します (デシリアライゼーション、アンマーシャリング)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -7422,6 +7890,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Return true for named tuples, false for any other type.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200229T081040Z" creationid="isVowel" creationdate="20200229T081040Z">
+        <seg>名前付きタプルならば true を、それ以外の型ならば false を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Returns "" on failure.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200223T091227Z" creationid="isVowel" creationdate="20200223T091227Z">
@@ -7502,6 +7978,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Returns a string representation of <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>x<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> (serialization, marshalling).</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200228T060557Z" creationid="isVowel" creationdate="20200228T060557Z">
+        <seg><bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>x<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> の文字列表記を返します (シリアライゼーション、マーシャリング)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Returns nil if the library could not be loaded.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200221T084429Z" creationid="isVowel" creationdate="20200221T084429Z">
@@ -7550,6 +8034,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Returns the arity of the given type.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200229T080855Z" creationid="isVowel" creationdate="20200229T080855Z">
+        <seg>指定された型のアリティを返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Returns the current working directory.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200224T043857Z" creationid="isVowel" creationdate="20200224T043857Z">
@@ -7570,6 +8062,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T045450Z" creationid="isVowel" creationdate="20200226T045450Z">
         <seg><bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>a<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> から <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>b<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> までの編集距離を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Returns the name of the given type.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200229T080338Z" creationid="isVowel" creationdate="20200229T080338Z">
+        <seg>指定された型の名前を返します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -7650,6 +8150,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200225T041125Z" creationid="isVowel" creationdate="20200225T041125Z">
         <seg>指定された <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>rnField<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> ノードの値を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Rings</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T062941Z" creationid="isVowel" creationdate="20200227T062941Z">
+        <seg>リング</seg>
       </tuv>
     </tu>
     <tu>
@@ -7972,6 +8480,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Statements</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T065056Z" creationid="isVowel" creationdate="20200227T065056Z">
+        <seg>ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Statements and expressions</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200115T051602Z" creationid="isVowel" creationdate="20200115T051602Z">
@@ -7992,6 +8508,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200114T081654Z" creationid="isVowel" creationdate="20200114T081654Z">
         <seg>Static ステートメント/式</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Stores <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>data<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> into the stream <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>s<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200228T060528Z" creationid="isVowel" creationdate="20200228T060528Z">
+        <seg><bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>s<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> をストリーム <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>data<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> へ格納します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -8122,6 +8646,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200221T092043Z" creationid="isVowel" creationdate="20200221T092043Z">
         <seg>単方向・双方向リストのテンプレートベースによる実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Template declaration</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T074513Z" creationid="isVowel" creationdate="20200227T074513Z">
+        <seg>テンプレート宣言</seg>
       </tuv>
     </tu>
     <tu>
@@ -8270,6 +8802,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>The <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>uiApp<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> parameter is Windows specific.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T053309Z" creationid="isVowel" creationdate="20200227T053309Z">
+        <seg><bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>uiApp<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> パラメータは Windows 専用です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>The <bpt i="4" x="4">&lt;t4&gt;</bpt><bpt i="5" x="5">&lt;s5&gt;</bpt>EvRetr<ept i="5">&lt;/s5&gt;</ept><ept i="4">&lt;/t4&gt;</ept> event is passed to the specified <bpt i="6" x="6">&lt;t6&gt;</bpt><bpt i="7" x="7">&lt;s7&gt;</bpt>handleEvent<ept i="7">&lt;/s7&gt;</ept><ept i="6">&lt;/t6&gt;</ept> function when the download is finished.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200224T041127Z" creationid="isVowel" creationdate="20200224T041127Z">
@@ -8282,6 +8822,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200224T041007Z" creationid="isVowel" creationdate="20200224T041007Z">
         <seg>アップロードが完了すると指定された <bpt i="6" x="6">&lt;t6&gt;</bpt><bpt i="7" x="7">&lt;s7&gt;</bpt>handleEvent<ept i="7">&lt;/s7&gt;</ept><ept i="6">&lt;/t6&gt;</ept> 関数 に <bpt i="4" x="4">&lt;t4&gt;</bpt><bpt i="5" x="5">&lt;s5&gt;</bpt>EvStore<ept i="5">&lt;/s5&gt;</ept><ept i="4">&lt;/t4&gt;</ept> イベントが渡されます。 なお、イベントの <bpt i="8" x="8">&lt;t8&gt;</bpt><bpt i="9" x="9">&lt;s9&gt;</bpt>filename<ept i="9">&lt;/s9&gt;</ept><ept i="8">&lt;/t8&gt;</ept> フィールドは <bpt i="10" x="10">&lt;t10&gt;</bpt><bpt i="11" x="11">&lt;s11&gt;</bpt>file<ept i="11">&lt;/s11&gt;</ept><ept i="10">&lt;/t10&gt;</ept> と同じです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>The AST in Nim</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T074651Z" creationid="isVowel" creationdate="20200227T074651Z">
+        <seg>Nim の構文抽象木 (AST)</seg>
       </tuv>
     </tu>
     <tu>
@@ -8635,6 +9183,14 @@ skipped : スキップする、無視する、読み飛ばす。</note>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>The serialization format uses <bpt i="2" x="2">&lt;s2&gt;</bpt>JSON<ept i="2">&lt;/s2&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200228T060041Z" creationid="isVowel" creationdate="20200228T060041Z">
+        <seg>シリアライゼーション形式は <bpt i="2" x="2">&lt;s2&gt;</bpt>JSON<ept i="2">&lt;/s2&gt;</ept> です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>The server will respond to all requests with a <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>200 OK<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> response code and "Hello World" as the response body.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200219T110651Z" creationid="isVowel" creationdate="20200219T110651Z">
@@ -8843,6 +9399,30 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>This is the number of "type" components or the number of generic parameters a given type <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>t<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> has.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200229T081718Z" creationid="isVowel" creationdate="20200229T081718Z">
+        <seg>これは "type" のコンポーネント数、または指定された型 <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>t<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> で扱う一般的なパラメータ数です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>This means essentially that it does not work if the object has some other runtime type than its compiletime type.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200228T060127Z" creationid="isVowel" creationdate="20200228T060127Z">
+        <seg>つまり、この関数はオブジェクトが compiletime 型とは別のランタイム型ならば基本的に動作しません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>This module contains Nim's support for locks and condition vars.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T060130Z" creationid="isVowel" creationdate="20200227T060130Z">
+        <seg>このモジュールは Nim におけるロックと状態変数に関するサポートです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>This module contains Nim's support for reentrant locks.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200225T092845Z" creationid="isVowel" creationdate="20200225T092845Z">
@@ -8879,6 +9459,22 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T031106Z" creationid="isVowel" creationdate="20200127T031106Z">
         <seg>このモジュールは異種バイトオーダー (<bpt i="0" x="0">&lt;s0&gt;</bpt>エンディアン<ept i="0">&lt;/s0&gt;</ept>) の処理に用いる補助機能の実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>This module contains procs for <bpt i="0" x="0">&lt;s0&gt;</bpt>serialization<ept i="0">&lt;/s0&gt;</ept> and <bpt i="1" x="1">&lt;s1&gt;</bpt>deserialization<ept i="1">&lt;/s1&gt;</ept> of arbitrary Nim data structures.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200228T061005Z" creationid="isVowel" creationdate="20200228T060027Z">
+        <seg>このモジュールは任意 Nim データ構造の<bpt i="0" x="0">&lt;s0&gt;</bpt>シリアライゼーション<ept i="0">&lt;/s0&gt;</ept> (serialization)、および<bpt i="1" x="1">&lt;s1&gt;</bpt>デシリアライゼーション<ept i="1">&lt;/s1&gt;</ept> (deserialization) で使えるプロシージャです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>This module defines compile-time reflection procs for working with types.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200229T080324Z" creationid="isVowel" creationdate="20200229T080324Z">
+        <seg>このモジュールは型機能によるコンパイル時リフレクション処理用のプロシージャ定義です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9034,12 +9630,13 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
     </tu>
     <tu>
-      <note>「このモジュールは Text::Unidecode を元(お手本？)に開発された Python の Unidecode をベースしています」かな？　後で事実関係を調べてみます。</note>
+      <note>turn は「変わる」の意味。転じて port (移植) としても使われる。「in trun 」としないこと。
+</note>
       <tuv xml:lang="EN-US">
         <seg>This module is based on Python's Unidecode module by Tomaz Solc, which in turn is based on the <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>Text::Unidecode<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> Perl module by Sean M. Burke (<bpt i="2" x="2">&lt;a2&gt;</bpt>http://search.cpan.org/~sburke/Text-Unidecode-0.04/lib/Text/Unidecode.pm<ept i="2">&lt;/a2&gt;</ept> ).</seg>
       </tuv>
-      <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T150145Z" creationid="isVowel" creationdate="20200226T150145Z">
-        <seg>このモジュールはトマシュ・ソルクによる Python の Unidecode モジュールをベースにしています。また、ショーン・Ｍ・バークによる Perl の <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>Text::Unidecode<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> モジュール (<bpt i="2" x="2">&lt;a2&gt;</bpt>http://search.cpan.org/~sburke/Text-Unidecode-0.04/lib/Text/Unidecode.pm<ept i="2">&lt;/a2&gt;</ept>) もベースにしています。</seg>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200229T073153Z" creationid="isVowel" creationdate="20200226T150145Z">
+        <seg>このモジュールはショーン・Ｍ・バーク原作の Perl 版 <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>Text::Unidecode<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> モジュール (<bpt i="2" x="2">&lt;a2&gt;</bpt>http://search.cpan.org/~sburke/Text-Unidecode-0.04/lib/Text/Unidecode.pm<ept i="2">&lt;/a2&gt;</ept>) の Python 移植版であるトマシュ・ソルク作の Unidecode モジュールをベースにしています。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9089,6 +9686,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200226T150633Z" creationid="isVowel" creationdate="20200226T150633Z">
         <seg>いかなるスレッドであろうと <bpt i="4" x="4">&lt;t4&gt;</bpt><bpt i="5" x="5">&lt;s5&gt;</bpt>unidecode<ept i="5">&lt;/s5&gt;</ept><ept i="4">&lt;/t4&gt;</ept> の呼び出し前に、この関数をメインスレッドで必ず呼び出してください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>This opens a converter, uses it and closes it again and is thus more convenient but also likely less efficient than re-using a converter.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T054104Z" creationid="isVowel" creationdate="20200227T054104Z">
+        <seg>これでコンバータを開き、使用後に閉じることを再び行うのは割と使いやすいとはいえ、恐らくコンバータの使い回しよりも効率性は劣ります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9153,6 +9758,22 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200224T034316Z" creationid="isVowel" creationdate="20200224T034316Z">
         <seg>Windows のコンソールでは必要な機能が用意されているため、これで十分です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>This trait is similar to <bpt i="0" x="0">&lt;a0&gt;</bpt>genericHead<ept i="0">&lt;/a0&gt;</ept>, but instead of producing error for non-generic types, it will just return them unmodified.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200229T084524Z" creationid="isVowel" creationdate="20200229T083446Z">
+        <seg>このトレイトは <bpt i="0" x="0">&lt;a0&gt;</bpt>genericHead<ept i="0">&lt;/a0&gt;</ept> と似ていますが、違いとしては非ジェネリック型ではエラーが起きない代わりに、無変更のものを返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>This trait returns true iff the type <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>t<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> is safe to use for <bpt i="2" x="2">&lt;s2&gt;</bpt>copyMem<ept i="2">&lt;/s2&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200229T084334Z" creationid="isVowel" creationdate="20200229T084334Z">
+        <seg>このトレイは <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>t<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept>  型を <bpt i="2" x="2">&lt;s2&gt;</bpt>copyMem<ept i="2">&lt;/s2&gt;</ept> で安全に使えるならば true を返します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9335,6 +9956,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200113T042033Z" creationid="isVowel" creationdate="20200113T042033Z">
         <seg>型変換</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Type section</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T065143Z" creationid="isVowel" creationdate="20200227T065143Z">
+        <seg>Type セクション</seg>
       </tuv>
     </tu>
     <tu>
@@ -9529,6 +10158,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200115T063704Z" creationid="isVowel" creationdate="20200115T063704Z">
         <seg>Var 返値型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Var section</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T065132Z" creationid="isVowel" creationdate="20200227T065132Z">
+        <seg>Var セクション</seg>
       </tuv>
     </tu>
     <tu>
@@ -10164,6 +10801,22 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>converts <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>s<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> to <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>destEncoding<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> that was given to the converter <bpt i="4" x="4">&lt;t4&gt;</bpt><bpt i="5" x="5">&lt;s5&gt;</bpt>c<ept i="5">&lt;/s5&gt;</ept><ept i="4">&lt;/t4&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T053813Z" creationid="isVowel" creationdate="20200227T053813Z">
+        <seg>指定されたコンバータ <bpt i="4" x="4">&lt;t4&gt;</bpt><bpt i="5" x="5">&lt;s5&gt;</bpt>c<ept i="5">&lt;/s5&gt;</ept><ept i="4">&lt;/t4&gt;</ept> で <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>s<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> を <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>destEncoding<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> へ変換します。 </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>converts <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>s<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> to <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>destEncoding<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T054010Z" creationid="isVowel" creationdate="20200227T054010Z">
+        <seg><bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>s<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> を <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>destEncoding<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> へ変換します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>converts a Rune to its numeric HTML entity equivalent.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200221T024050Z" creationid="isVowel" creationdate="20200221T024050Z">
@@ -10223,6 +10876,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
     </tu>
     <tu>
+      <tuv xml:lang="EN-US">
+        <seg>doubly linked lists</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T063119Z" creationid="isVowel" creationdate="20200227T063119Z">
+        <seg>双方向連結リスト</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>このブロックは作業対象外です。変更してしまうと、正常に動作しなくなります。</note>
       <tuv xml:lang="EN-US">
         <seg>en</seg>
@@ -10242,6 +10903,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200214T102518Z" creationid="isVowel" creationdate="20200214T075134Z">
         <seg>errors*: seq[string]         ## 検出された構文解析エラー。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>exception that is raised for encoding errors   <bpt i="0" x="0">&lt;a0&gt;</bpt>Source<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>Edit<ept i="1">&lt;/a1&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T053209Z" creationid="isVowel" creationdate="20200227T053209Z">
+        <seg>エンコーディングエラー発生時の例外   <bpt i="0" x="0">&lt;a0&gt;</bpt>ソース<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>編集<ept i="1">&lt;/a1&gt;</ept></seg>
       </tuv>
     </tu>
     <tu>
@@ -10290,6 +10959,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200115T055040Z" creationid="isVowel" creationdate="20200115T055040Z">
         <seg>フォームフィード</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>frees the resources the converter <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>c<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> holds.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T053715Z" creationid="isVowel" creationdate="20200227T053715Z">
+        <seg>コンバータ <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>c<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> が取得しているリソースを開放します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -11290,6 +11967,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>items iterator</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T063547Z" creationid="isVowel" creationdate="20200227T063547Z">
+        <seg>items イテレータ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>iterates over the list.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200211T131735Z" creationid="isVowel" creationdate="20200211T131735Z">
@@ -11302,6 +11987,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200220T091721Z" creationid="isVowel" creationdate="20200220T091721Z">
         <seg>js コード生成</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>json module</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200228T060302Z" creationid="isVowel" creationdate="20200228T060302Z">
+        <seg>json モジュール</seg>
       </tuv>
     </tu>
     <tu>
@@ -11396,6 +12089,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200219T110416Z" creationid="isVowel" creationdate="20200219T110416Z">
         <seg>maxBody: int                 ## body (本文) を読み込んだときの最大コンテンツ長です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>mitems iterator</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T063559Z" creationid="isVowel" creationdate="20200227T063559Z">
+        <seg>mitems イテレータ</seg>
       </tuv>
     </tu>
     <tu>
@@ -11496,6 +12197,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>nodes iterator</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T063549Z" creationid="isVowel" creationdate="20200227T063549Z">
+        <seg>nodes イテレータ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>note:: available at compile time</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200129T095452Z" creationid="isVowel" creationdate="20200129T095452Z">
@@ -11516,6 +12225,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200123T070436Z" creationid="isVowel" creationdate="20200123T070436Z">
         <seg>ユーザのデフォルトブラウザで <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>url<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> を開きます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>opens a converter that can convert from <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>srcEncoding<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> to <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>destEncoding<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T053442Z" creationid="isVowel" creationdate="20200227T053442Z">
+        <seg>コンバータを開いて <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>srcEncoding<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> から <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>destEncoding<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> へ変換します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -11688,6 +12405,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>retrieves the current encoding.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T053246Z" creationid="isVowel" creationdate="20200227T053246Z">
+        <seg>現在のエンコーディングを取得します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>returns the length of a widestring.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200212T170802Z" creationid="isVowel" creationdate="20200212T170802Z">
@@ -11728,6 +12453,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>sends a signal to the condition variable <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>cond<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T060527Z" creationid="isVowel" creationdate="20200227T060527Z">
+        <seg>状態変数 <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>cond<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> にシグナルを送信します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>set this to change the sampling frequency.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200213T051558Z" creationid="isVowel" creationdate="20200213T051558Z">
@@ -11760,6 +12493,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>singly linked lists</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T063106Z" creationid="isVowel" creationdate="20200227T063106Z">
+        <seg>単方向連結リスト</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>size of a buffered socket's buffer   <bpt i="0" x="0">&lt;a0&gt;</bpt>Source<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>Edit<ept i="1">&lt;/a1&gt;</ept></seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200122T113311Z" creationid="isVowel" creationdate="20200122T113311Z">
@@ -11788,6 +12529,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200122T113348Z" creationid="isVowel" creationdate="20200122T113348Z">
         <seg>stores an arbitrary IP address   <bpt i="0" x="0">&lt;a0&gt;</bpt>ソース<ept i="0">&lt;/a0&gt;</ept> <bpt i="1" x="1">&lt;a1&gt;</bpt>編集<ept i="1">&lt;/a1&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>streams module</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200228T060300Z" creationid="isVowel" creationdate="20200228T060300Z">
+        <seg>streams モジュール</seg>
       </tuv>
     </tu>
     <tu>
@@ -12993,10 +13742,34 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>utf-16BE, utf-32 conversions not supported on windows   <bpt i="10" x="10">&lt;a10&gt;</bpt>Source<ept i="10">&lt;/a10&gt;</ept> <bpt i="11" x="11">&lt;a11&gt;</bpt>Edit<ept i="11">&lt;/a11&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T053928Z" creationid="isVowel" creationdate="20200227T053928Z">
+        <seg>Windows において utf-16BE, utf-32 の変換はサポートしていません。  <bpt i="10" x="10">&lt;a10&gt;</bpt>ソース<ept i="10">&lt;/a10&gt;</ept> <bpt i="11" x="11">&lt;a11&gt;</bpt>編集<ept i="11">&lt;/a11&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>utf-16BE, utf-32 conversions not supported on windows   <bpt i="8" x="8">&lt;a8&gt;</bpt>Source<ept i="8">&lt;/a8&gt;</ept> <bpt i="9" x="9">&lt;a9&gt;</bpt>Edit<ept i="9">&lt;/a9&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T054155Z" creationid="isVowel" creationdate="20200227T054120Z">
+        <seg>Windows において utf-16BE, utf-32 の変換はサポートしていません。  <bpt i="8" x="8">&lt;a8&gt;</bpt>ソース<ept i="8">&lt;/a8&gt;</ept> <bpt i="9" x="9">&lt;a9&gt;</bpt>編集<ept i="9">&lt;/a9&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>vertical tabulator</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200115T055001Z" creationid="isVowel" creationdate="20200115T055001Z">
         <seg>垂直タブ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>waits on the condition variable <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>cond<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200227T060438Z" creationid="isVowel" creationdate="20200227T060438Z">
+        <seg>状態変数 <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>cond<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> を待機します。</seg>
       </tuv>
     </tu>
     <tu>

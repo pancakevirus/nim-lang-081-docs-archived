@@ -864,7 +864,7 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"><p>This module defines compile-time reflection procs for working with types.</p>
+  <p class="module-desc"><p>このモジュールは型機能によるコンパイル時リフレクション処理用のプロシージャ定義です。</p>
 <p>この API は不安定です。</p>
 </p>
   <div class="section" id="12">
@@ -874,8 +874,8 @@ function main() {
 <dt><pre><span class="Keyword">proc</span> <a href="#name%2Ctypedesc"><span class="Identifier">name</span></a><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <a href="system.html#typedesc"><span class="Identifier">typedesc</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"TypeTrait"</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Returns the name of the given type.</p>
-<p>Alias for system.`$`(t) since Nim v0.20.</p>
+<p>指定された型の名前を返します。</p>
+<p>system モジュールのエイリアスです。 Nim v0.20 以降では `$`(t) です。 </p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/typetraits.nim#L18"
@@ -886,10 +886,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#arity%2Ctypedesc"><span class="Identifier">arity</span></a><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <a href="system.html#typedesc"><span class="Identifier">typedesc</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"TypeTrait"</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Returns the arity of the given type. This is the number of "type" components or the number of generic parameters a given type <tt class="docutils literal"><span class="pre">t</span></tt> has.
-
+指定された型のアリティを返します。これは "type" のコンポーネント数、または指定された型 <tt class="docutils literal"><span class="pre">t</span></tt> で扱う一般的なパラメータ数です。
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Identifier">assert</span> <span class="Identifier">arity</span><span class="Other">(</span><span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">string</span><span class="Other">]</span><span class="Other">)</span> <span class="Operator">==</span> <span class="DecNumber">1</span>
 <span class="Identifier">assert</span> <span class="Identifier">arity</span><span class="Other">(</span><span class="Identifier">array</span><span class="Other">[</span><span class="DecNumber">3</span><span class="Other">,</span> <span class="Identifier">int</span><span class="Other">]</span><span class="Other">)</span> <span class="Operator">==</span> <span class="DecNumber">2</span>
@@ -903,12 +900,12 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#genericHead%2Ctypedesc"><span class="Identifier">genericHead</span></a><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <a href="system.html#typedesc"><span class="Identifier">typedesc</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#typedesc"><span class="Identifier">typedesc</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"TypeTrait"</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Accepts an instantiated generic type and returns its uninstantiated form.</p>
-<p>For example:</p>
-<ul class="simple"><li><tt class="docutils literal"><span class="pre">seq[int].genericHead</span></tt> will be just <tt class="docutils literal"><span class="pre">seq</span></tt></li>
-<li><tt class="docutils literal"><span class="pre">seq[int].genericHead[float]</span></tt> will be <tt class="docutils literal"><span class="pre">seq[float]</span></tt></li>
+<p>インスタンス化したジェネリック型を用いてアンインスタンス形式を返します。</p>
+<p>用例:</p>
+<ul class="simple"><li><tt class="docutils literal"><span class="pre">seq[int].genericHead</span></tt> は <tt class="docutils literal"><span class="pre">seq</span></tt> になります</li>
+<li><tt class="docutils literal"><span class="pre">seq[int].genericHead[float]</span></tt> は <tt class="docutils literal"><span class="pre">seq[float]</span></tt> になります</li>
 </ul>
-<p>A compile-time error will be produced if the supplied type is not generic.</p>
+<p>指定された型がジェネリック型でなければコンパイル時エラーが起こります。</p>
 <p>関連:</p>
 <ul class="simple"><li><a class="reference external" href="#stripGenericParams,typedesc">stripGenericParams</a></li>
 </ul>
@@ -916,8 +913,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <pre class="listing"><span class="Keyword">type</span>
   <span class="Identifier">Functor</span><span class="Punctuation">[</span><span class="Identifier">A</span><span class="Punctuation">]</span> <span class="Operator">=</span> <span class="Keyword">concept</span> <span class="Identifier">f</span>
     <span class="Keyword">type</span> <span class="Identifier">MatchedGenericType</span> <span class="Operator">=</span> <span class="Identifier">genericHead</span><span class="Punctuation">(</span><span class="Identifier">f</span><span class="Operator">.</span><span class="Keyword">type</span><span class="Punctuation">)</span>
-      <span class="Comment"># `f` will be a value of a type such as `Option[T]`</span>
-      <span class="Comment"># `MatchedGenericType` will become the `Option` type</span></pre>
+      <span class="Comment"># `f` は `Option[T]` などの型の値です。</span>
+      <span class="Comment"># `MatchedGenericType` は `Option` 型となります。</span></pre>
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/typetraits.nim#L31"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/typetraits.nim#L31" class="link-seesrc" target="_blank" >編集</a>
@@ -927,7 +924,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#stripGenericParams%2Ctypedesc"><span class="Identifier">stripGenericParams</span></a><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <a href="system.html#typedesc"><span class="Identifier">typedesc</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#typedesc"><span class="Identifier">typedesc</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"TypeTrait"</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-This trait is similar to <a class="reference external" href="#genericHead,typedesc">genericHead</a>, but instead of producing error for non-generic types, it will just return them unmodified. &nbsp;&nbsp;<a
+このトレイトは <a class="reference external" href="#genericHead,typedesc">genericHead</a> と似ていますが、違いとしては非ジェネリック型ではエラーが起きない代わりに、無変更のものを返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/typetraits.nim#L55"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/typetraits.nim#L55" class="link-seesrc" target="_blank" >編集</a>
 
@@ -936,8 +933,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#supportsCopyMem%2Ctypedesc"><span class="Identifier">supportsCopyMem</span></a><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <a href="system.html#typedesc"><span class="Identifier">typedesc</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"TypeTrait"</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>This trait returns true iff the type <tt class="docutils literal"><span class="pre">t</span></tt> is safe to use for <span id="copymem_1">copyMem</span>.</p>
-<p>Other languages name a type like these <span id="blob_1">blob</span>.</p>
+<p>このトレイは <tt class="docutils literal"><span class="pre">t</span></tt>  型を <span id="copymem_1">copyMem</span> で安全に使えるならば true を返します。</p>
+<p>そのほかの言語において、この型の名前は <span id="blob_1">blob</span> などがあります。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/typetraits.nim#L60"
@@ -948,7 +945,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#isNamedTuple%2Ctypedesc"><span class="Identifier">isNamedTuple</span></a><span class="Other">(</span><span class="Identifier">T</span><span class="Other">:</span> <a href="system.html#typedesc"><span class="Identifier">typedesc</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a></pre></dt>
 <dd>
 
-Return true for named tuples, false for any other type. &nbsp;&nbsp;<a
+名前付きタプルならば true を、それ以外の型ならば false を返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/typetraits.nim#L66"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/typetraits.nim#L66" class="link-seesrc" target="_blank" >編集</a>
 
@@ -968,7 +965,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 Generated: 2020-01-23 17:27:20 UTC</small>
+        <small>Nim で作成しました。  生成日時: 2020年01月23日 午前17時27分20秒 (UTC)</small>
       </div>
     </div>
   </div>

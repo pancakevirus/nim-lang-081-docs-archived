@@ -856,8 +856,8 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"><p>このモジュールはトマシュ・ソルクによる Python の Unidecode モジュールをベースにしています。また、ショーン・Ｍ・バークによる Perl の <tt class="docutils literal"><span class="pre">Text::Unidecode</span></tt> モジュール (<a class="reference external" href="http://search.cpan.org/~sburke/Text-Unidecode-0.04/lib/Text/Unidecode.pm">http://search.cpan.org/~sburke/Text-Unidecode-0.04/lib/Text/Unidecode.pm</a>) もベースにしています。</p>
-<p>これにより Unicode を ASCII へ翻字を行うプロシージャを使えます。つまり Unicode 文字列に最も近い近似 ASCII 文字のシーケンスを検索します。</p>
+  <p class="module-desc"><p>このモジュールはショーン・Ｍ・バーク原作の Perl 版 <tt class="docutils literal"><span class="pre">Text::Unidecode</span></tt> モジュール (<a class="reference external" href="http://search.cpan.org/~sburke/Text-Unidecode-0.04/lib/Text/Unidecode.pm">http://search.cpan.org/~sburke/Text-Unidecode-0.04/lib/Text/Unidecode.pm</a>) の Python 移植版であるトマシュ・ソルク作の Unidecode モジュールをベースにしています。</p>
+<p>これは Unicode から ASCII へ翻字を行うプロシージャです。つまり Unicode 文字列に最も近い近似 ASCII 文字のシーケンスを検索します。</p>
 <p>例えば、文字列 "Äußerst" に最も近い ASCII は "Ausserst" です。無論、この変換処理では何種類かの Unicode 文字列は類似の ASCII 表記へ変換されてしまうため一部情報が欠落します。 厳密に言えば不可逆変換です。とはいえ人力をもってすれば、文脈より原文の文字列の意味を推測することはできるでしょう。</p>
 <p>このモジュールの動作にはデータファイル "unidecode.dat" が必要です。このファイルはデフォルトのリソースとしてアプリケーションに組み込まれています。デフォルト以外のリソースを使うときは、このモジュールを <tt class="docutils literal"><span class="pre">loadUnidecodeTable</span></tt> プロシージャで初期化してから、コンパイル処理時に <tt class="docutils literal"><span class="pre">--define:noUnidecodeTable</span></tt> シンボルを定義してください。</p>
 </p>
