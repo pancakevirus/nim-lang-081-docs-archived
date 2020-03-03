@@ -1,0 +1,1640 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+  <header
+    creationtool="Xbench"
+    creationtoolversion="2.8.0"
+    datatype="unknown"
+    segtype="sentence"
+    adminlang="EN-US"
+    srclang="EN"
+    o-tmf="XbenchTM"
+  >
+  </header>
+  <body>
+    <tu tuid="1">
+      <tuv xml:lang="EN">
+        <seg>complex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>complex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="2">
+      <tuv xml:lang="EN">
+        <seg>Manual</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>マニュアル</seg>
+      </tuv>
+    </tu>
+    <tu tuid="3">
+      <tuv xml:lang="EN">
+        <seg>Standard library</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>標準ライブラリ</seg>
+      </tuv>
+    </tu>
+    <tu tuid="4">
+      <tuv xml:lang="EN">
+        <seg>Index</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>インデックス</seg>
+      </tuv>
+    </tu>
+    <tu tuid="5">
+      <tuv xml:lang="EN">
+        <seg>Search:</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>検索：</seg>
+      </tuv>
+    </tu>
+    <tu tuid="6">
+      <tuv xml:lang="EN">
+        <seg>Group by:</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>分類:</seg>
+      </tuv>
+    </tu>
+    <tu tuid="7">
+      <tuv xml:lang="EN">
+        <seg>Section</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>セクション</seg>
+      </tuv>
+    </tu>
+    <tu tuid="8">
+      <tuv xml:lang="EN">
+        <seg>Type</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>型</seg>
+      </tuv>
+    </tu>
+    <tu tuid="9">
+      <tuv xml:lang="EN">
+        <seg>Imports</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>インポート</seg>
+      </tuv>
+    </tu>
+    <tu tuid="10">
+      <tuv xml:lang="EN">
+        <seg>Types</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>タイプ</seg>
+      </tuv>
+    </tu>
+    <tu tuid="11">
+      <tuv xml:lang="EN">
+        <seg>Complex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>Complex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="12">
+      <tuv xml:lang="EN">
+        <seg>Complex64</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>Complex64</seg>
+      </tuv>
+    </tu>
+    <tu tuid="13">
+      <tuv xml:lang="EN">
+        <seg>Complex32</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>Complex32</seg>
+      </tuv>
+    </tu>
+    <tu tuid="14">
+      <tuv xml:lang="EN">
+        <seg>Procs</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>プロシージャ</seg>
+      </tuv>
+    </tu>
+    <tu tuid="15">
+      <tuv xml:lang="EN">
+        <seg>complexComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>complexComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="16">
+      <tuv xml:lang="EN">
+        <seg>complex32Complex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>complex32Complex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="17">
+      <tuv xml:lang="EN">
+        <seg>complex64Complex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>complex64Complex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="18">
+      <tuv xml:lang="EN">
+        <seg>absComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>absComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="19">
+      <tuv xml:lang="EN">
+        <seg>abs2Complex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>abs2Complex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="20">
+      <tuv xml:lang="EN">
+        <seg>conjugateComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>conjugateComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="21">
+      <tuv xml:lang="EN">
+        <seg>invComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>invComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="22">
+      <tuv xml:lang="EN">
+        <seg>`==`</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>`==`</seg>
+      </tuv>
+    </tu>
+    <tu tuid="23">
+      <tuv xml:lang="EN">
+        <seg>`+`</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>`+`</seg>
+      </tuv>
+    </tu>
+    <tu tuid="24">
+      <tuv xml:lang="EN">
+        <seg>`-`</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>`-`</seg>
+      </tuv>
+    </tu>
+    <tu tuid="25">
+      <tuv xml:lang="EN">
+        <seg>`/`</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>`/`</seg>
+      </tuv>
+    </tu>
+    <tu tuid="26">
+      <tuv xml:lang="EN">
+        <seg>`/`</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu tuid="27">
+      <tuv xml:lang="EN">
+        <seg>`*`</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>`*`</seg>
+      </tuv>
+    </tu>
+    <tu tuid="28">
+      <tuv xml:lang="EN">
+        <seg>`+=`</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>`+=`</seg>
+      </tuv>
+    </tu>
+    <tu tuid="29">
+      <tuv xml:lang="EN">
+        <seg>`-=`</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>`-=`</seg>
+      </tuv>
+    </tu>
+    <tu tuid="30">
+      <tuv xml:lang="EN">
+        <seg>`*=`</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>`*=`</seg>
+      </tuv>
+    </tu>
+    <tu tuid="31">
+      <tuv xml:lang="EN">
+        <seg>`/=`</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>`/=`</seg>
+      </tuv>
+    </tu>
+    <tu tuid="32">
+      <tuv xml:lang="EN">
+        <seg>sqrtComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>sqrtComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="33">
+      <tuv xml:lang="EN">
+        <seg>expComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>expComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="34">
+      <tuv xml:lang="EN">
+        <seg>lnComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>lnComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="35">
+      <tuv xml:lang="EN">
+        <seg>log10Complex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>log10Complex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="36">
+      <tuv xml:lang="EN">
+        <seg>log2Complex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>log2Complex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="37">
+      <tuv xml:lang="EN">
+        <seg>powComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>powComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="38">
+      <tuv xml:lang="EN">
+        <seg>sinComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>sinComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="39">
+      <tuv xml:lang="EN">
+        <seg>arcsinComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>arcsinComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="40">
+      <tuv xml:lang="EN">
+        <seg>cosComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>cosComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="41">
+      <tuv xml:lang="EN">
+        <seg>arccosComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>arccosComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="42">
+      <tuv xml:lang="EN">
+        <seg>tanComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>tanComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="43">
+      <tuv xml:lang="EN">
+        <seg>arctanComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>arctanComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="44">
+      <tuv xml:lang="EN">
+        <seg>cotComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>cotComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="45">
+      <tuv xml:lang="EN">
+        <seg>arccotComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>arccotComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="46">
+      <tuv xml:lang="EN">
+        <seg>secComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>secComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="47">
+      <tuv xml:lang="EN">
+        <seg>arcsecComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>arcsecComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="48">
+      <tuv xml:lang="EN">
+        <seg>cscComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>cscComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="49">
+      <tuv xml:lang="EN">
+        <seg>arccscComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>arccscComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="50">
+      <tuv xml:lang="EN">
+        <seg>sinhComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>sinhComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="51">
+      <tuv xml:lang="EN">
+        <seg>arcsinhComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>arcsinhComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="52">
+      <tuv xml:lang="EN">
+        <seg>coshComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>coshComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="53">
+      <tuv xml:lang="EN">
+        <seg>arccoshComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>arccoshComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="54">
+      <tuv xml:lang="EN">
+        <seg>tanhComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>tanhComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="55">
+      <tuv xml:lang="EN">
+        <seg>arctanhComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>arctanhComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="56">
+      <tuv xml:lang="EN">
+        <seg>sechComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>sechComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="57">
+      <tuv xml:lang="EN">
+        <seg>arcsechComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>arcsechComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="58">
+      <tuv xml:lang="EN">
+        <seg>cschComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>cschComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="59">
+      <tuv xml:lang="EN">
+        <seg>arccschComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>arccschComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="60">
+      <tuv xml:lang="EN">
+        <seg>cothComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>cothComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="61">
+      <tuv xml:lang="EN">
+        <seg>arccothComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>arccothComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="62">
+      <tuv xml:lang="EN">
+        <seg>phaseComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>phaseComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="63">
+      <tuv xml:lang="EN">
+        <seg>polarComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>polarComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="64">
+      <tuv xml:lang="EN">
+        <seg>rectComplex</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>rectComplex</seg>
+      </tuv>
+    </tu>
+    <tu tuid="65">
+      <tuv xml:lang="EN">
+        <seg>`$`</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>`$`</seg>
+      </tuv>
+    </tu>
+    <tu tuid="66">
+      <tuv xml:lang="EN">
+        <seg>Templates</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>テンプレート</seg>
+      </tuv>
+    </tu>
+    <tu tuid="67">
+      <tuv xml:lang="EN">
+        <seg>imComplex32</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>imComplex32</seg>
+      </tuv>
+    </tu>
+    <tu tuid="68">
+      <tuv xml:lang="EN">
+        <seg>imComplex64</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>imComplex64</seg>
+      </tuv>
+    </tu>
+    <tu tuid="69">
+      <tuv xml:lang="EN">
+        <seg>This module implements complex numbers.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>このモジュールは複素数の実装です。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="70">
+      <tuv xml:lang="EN">
+        <seg>Complex numbers are currently implemented as generic on a 64-bit or 32-bit float.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>現在、複素数は一般的な 64-bit または 32-bit float として実装されています。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="71">
+      <tuv xml:lang="EN">
+        <seg>math</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>math</seg>
+      </tuv>
+    </tu>
+    <tu tuid="72">
+      <tuv xml:lang="EN">
+        <seg>Types</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>型</seg>
+      </tuv>
+    </tu>
+    <tu tuid="73">
+      <tuv xml:lang="EN">
+        <seg>Complex[T] = object   re*, im*: T</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>Complex[T] = object   re*, im*: T</seg>
+      </tuv>
+    </tu>
+    <tu tuid="74">
+      <tuv xml:lang="EN">
+        <seg>## A complex number, consisting of a real and an imaginary part.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>## 実数部と虚数部から構成される複素数です。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="75">
+      <tuv xml:lang="EN">
+        <seg>Source Edit</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu tuid="76">
+      <tuv xml:lang="EN">
+        <seg>Complex64 = Complex[float64]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>Complex64 = Complex[float64]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="77">
+      <tuv xml:lang="EN">
+        <seg>Alias for a pair of 64-bit floats.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>64-bit float ペアのエイリアスです。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="78">
+      <tuv xml:lang="EN">
+        <seg>Complex32 = Complex[float32]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>Complex32 = Complex[float32]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="79">
+      <tuv xml:lang="EN">
+        <seg>Alias for a pair of 32-bit floats.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>32-bit float ペアのエイリアスです。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="80">
+      <tuv xml:lang="EN">
+        <seg>proc complex[T: SomeFloat](re: T; im: T = 0.0): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc complex[T: SomeFloat](re: T; im: T = 0.0): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="81">
+      <tuv xml:lang="EN">
+        <seg>proc complex32(re: float32; im: float32 = 0.0): Complex[float32] {...}{.raises: [], tags: [].}</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc complex32(re: float32; im: float32 = 0.0): Complex[float32] {...}{.raises: [], tags: [].}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="82">
+      <tuv xml:lang="EN">
+        <seg>proc complex64(re: float64; im: float64 = 0.0): Complex[float64] {...}{.raises: [], tags: [].}</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc complex64(re: float64; im: float64 = 0.0): Complex[float64] {...}{.raises: [], tags: [].}</seg>
+      </tuv>
+    </tu>
+    <tu tuid="83">
+      <tuv xml:lang="EN">
+        <seg>proc abs[T](z: Complex[T]): T</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc abs[T](z: Complex[T]): T</seg>
+      </tuv>
+    </tu>
+    <tu tuid="84">
+      <tuv xml:lang="EN">
+        <seg>Return the distance from (0,0) to z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>(0,0) から z までの距離を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="85">
+      <tuv xml:lang="EN">
+        <seg>proc abs2[T](z: Complex[T]):T</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc abs2[T](z: Complex[T]):T</seg>
+      </tuv>
+    </tu>
+    <tu tuid="86">
+      <tuv xml:lang="EN">
+        <seg>Return the squared distance from (0,0) to z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>(0,0) から z までの平方距離を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="87">
+      <tuv xml:lang="EN">
+        <seg>proc conjugate[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc conjugate[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="88">
+      <tuv xml:lang="EN">
+        <seg>Conjugate of complex number z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>共役複素数 z です。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="89">
+      <tuv xml:lang="EN">
+        <seg>proc inv[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc inv[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="90">
+      <tuv xml:lang="EN">
+        <seg>Multiplicative inverse of complex number z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>複素数 z の逆数です。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="91">
+      <tuv xml:lang="EN">
+        <seg>proc `==`[T](x, y: Complex[T]): bool</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc `==`[T](x, y: Complex[T]): bool</seg>
+      </tuv>
+    </tu>
+    <tu tuid="92">
+      <tuv xml:lang="EN">
+        <seg>Compare two complex numbers x and y for equality.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>複素数 x と y が等しいか比較します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="93">
+      <tuv xml:lang="EN">
+        <seg>proc `+`[T](x: T; y: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc `+`[T](x: T; y: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="94">
+      <tuv xml:lang="EN">
+        <seg>Add a real number to a complex number.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>複素数へ実数を加算します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="95">
+      <tuv xml:lang="EN">
+        <seg>proc `+`[T](x: Complex[T]; y: T): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc `+`[T](x: Complex[T]; y: T): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="96">
+      <tuv xml:lang="EN">
+        <seg>Add a complex number to a real number.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>実数へ複素数を加算します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="97">
+      <tuv xml:lang="EN">
+        <seg>proc `+`[T](x, y: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc `+`[T](x, y: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="98">
+      <tuv xml:lang="EN">
+        <seg>Add two complex numbers.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>複素数同士を加算します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="99">
+      <tuv xml:lang="EN">
+        <seg>proc `-`[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc `-`[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="100">
+      <tuv xml:lang="EN">
+        <seg>Unary minus for complex numbers.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>複素数で使う単項マイナス。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="101">
+      <tuv xml:lang="EN">
+        <seg>proc `-`[T](x: T; y: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc `-`[T](x: T; y: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="102">
+      <tuv xml:lang="EN">
+        <seg>Subtract a complex number from a real number.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>実数から複素数を減算します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="103">
+      <tuv xml:lang="EN">
+        <seg>proc `-`[T](x: Complex[T]; y: T): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc `-`[T](x: Complex[T]; y: T): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="104">
+      <tuv xml:lang="EN">
+        <seg>Subtract a real number from a complex number.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>複素数から実数を減算します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="105">
+      <tuv xml:lang="EN">
+        <seg>proc `-`[T](x, y: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc `-`[T](x, y: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="106">
+      <tuv xml:lang="EN">
+        <seg>Subtract two complex numbers.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>複素数同士を減算します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="107">
+      <tuv xml:lang="EN">
+        <seg>proc `/`[T](x: Complex[T]; y: T): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc `/`[T](x: Complex[T]; y: T): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="108">
+      <tuv xml:lang="EN">
+        <seg>Divide complex number x by real number y.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>複素数 x を実数 y で除算します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="109">
+      <tuv xml:lang="EN">
+        <seg>proc `/`[T](x: T; y: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc `/`[T](x: T; y: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="110">
+      <tuv xml:lang="EN">
+        <seg>Divide real number x by complex number y.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>実数 x を複素数 y で除算します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="111">
+      <tuv xml:lang="EN">
+        <seg>proc `/`[T](x, y: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc `/`[T](x, y: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="112">
+      <tuv xml:lang="EN">
+        <seg>Divide x by y.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>x を y で除算します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="113">
+      <tuv xml:lang="EN">
+        <seg>proc `*`[T](x: T; y: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc `*`[T](x: T; y: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="114">
+      <tuv xml:lang="EN">
+        <seg>Multiply a real number and a complex number.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>実数と複素数を乗算します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="115">
+      <tuv xml:lang="EN">
+        <seg>proc `*`[T](x: Complex[T]; y: T): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc `*`[T](x: Complex[T]; y: T): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="116">
+      <tuv xml:lang="EN">
+        <seg>Multiply a complex number with a real number.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>実数で複素数を乗算します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="117">
+      <tuv xml:lang="EN">
+        <seg>proc `*`[T](x, y: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc `*`[T](x, y: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="118">
+      <tuv xml:lang="EN">
+        <seg>Multiply x with y.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>y で x を乗算します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="119">
+      <tuv xml:lang="EN">
+        <seg>proc `+=`[T](x: var Complex[T]; y: Complex[T])</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc `+=`[T](x: var Complex[T]; y: Complex[T])</seg>
+      </tuv>
+    </tu>
+    <tu tuid="120">
+      <tuv xml:lang="EN">
+        <seg>Add y to x.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>x に y を加算します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="121">
+      <tuv xml:lang="EN">
+        <seg>proc `-=`[T](x: var Complex[T]; y: Complex[T])</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc `-=`[T](x: var Complex[T]; y: Complex[T])</seg>
+      </tuv>
+    </tu>
+    <tu tuid="122">
+      <tuv xml:lang="EN">
+        <seg>Subtract y from x.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>x から y を減算します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="123">
+      <tuv xml:lang="EN">
+        <seg>proc `*=`[T](x: var Complex[T]; y: Complex[T])</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc `*=`[T](x: var Complex[T]; y: Complex[T])</seg>
+      </tuv>
+    </tu>
+    <tu tuid="124">
+      <tuv xml:lang="EN">
+        <seg>Multiply y to x.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>x に y を乗算します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="125">
+      <tuv xml:lang="EN">
+        <seg>proc `/=`[T](x: var Complex[T]; y: Complex[T])</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc `/=`[T](x: var Complex[T]; y: Complex[T])</seg>
+      </tuv>
+    </tu>
+    <tu tuid="126">
+      <tuv xml:lang="EN">
+        <seg>Divide x by y in place.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>x を y の桁で除算します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="127">
+      <tuv xml:lang="EN">
+        <seg>proc sqrt[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc sqrt[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="128">
+      <tuv xml:lang="EN">
+        <seg>Square root for a complex number z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>複素数 z の平方根です。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="129">
+      <tuv xml:lang="EN">
+        <seg>proc exp[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc exp[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="130">
+      <tuv xml:lang="EN">
+        <seg>e raised to the power z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z 乗で e を累乗します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="131">
+      <tuv xml:lang="EN">
+        <seg>proc ln[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc ln[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="132">
+      <tuv xml:lang="EN">
+        <seg>Returns the natural log of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>自然対数 z を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="133">
+      <tuv xml:lang="EN">
+        <seg>proc log10[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc log10[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="134">
+      <tuv xml:lang="EN">
+        <seg>Returns the log base 10 of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>10 を底とする常用対数 z を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="135">
+      <tuv xml:lang="EN">
+        <seg>proc log2[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc log2[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="136">
+      <tuv xml:lang="EN">
+        <seg>Returns the log base 2 of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>2 を底とする対数 z を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="137">
+      <tuv xml:lang="EN">
+        <seg>proc pow[T](x, y: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc pow[T](x, y: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="138">
+      <tuv xml:lang="EN">
+        <seg>x raised to the power y.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>y 乗で x を累乗します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="139">
+      <tuv xml:lang="EN">
+        <seg>proc pow[T](x: Complex[T]; y: T): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc pow[T](x: Complex[T]; y: T): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="140">
+      <tuv xml:lang="EN">
+        <seg>Complex number x raised to the power y.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>複素数 x を y 乗で累乗します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="141">
+      <tuv xml:lang="EN">
+        <seg>proc sin[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc sin[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="142">
+      <tuv xml:lang="EN">
+        <seg>Returns the sine of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の正弦を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="143">
+      <tuv xml:lang="EN">
+        <seg>proc arcsin[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc arcsin[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="144">
+      <tuv xml:lang="EN">
+        <seg>Returns the inverse sine of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の逆正弦を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="145">
+      <tuv xml:lang="EN">
+        <seg>proc cos[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc cos[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="146">
+      <tuv xml:lang="EN">
+        <seg>Returns the cosine of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の余弦を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="147">
+      <tuv xml:lang="EN">
+        <seg>proc arccos[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc arccos[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="148">
+      <tuv xml:lang="EN">
+        <seg>Returns the inverse cosine of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の逆余弦を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="149">
+      <tuv xml:lang="EN">
+        <seg>proc tan[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc tan[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="150">
+      <tuv xml:lang="EN">
+        <seg>Returns the tangent of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の正接を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="151">
+      <tuv xml:lang="EN">
+        <seg>proc arctan[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc arctan[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="152">
+      <tuv xml:lang="EN">
+        <seg>Returns the inverse tangent of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の逆正接を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="153">
+      <tuv xml:lang="EN">
+        <seg>proc cot[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc cot[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="154">
+      <tuv xml:lang="EN">
+        <seg>Returns the cotangent of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の余接を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="155">
+      <tuv xml:lang="EN">
+        <seg>proc arccot[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc arccot[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="156">
+      <tuv xml:lang="EN">
+        <seg>Returns the inverse cotangent of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の逆余接を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="157">
+      <tuv xml:lang="EN">
+        <seg>proc sec[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc sec[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="158">
+      <tuv xml:lang="EN">
+        <seg>Returns the secant of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の正割を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="159">
+      <tuv xml:lang="EN">
+        <seg>proc arcsec[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc arcsec[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="160">
+      <tuv xml:lang="EN">
+        <seg>Returns the inverse secant of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の逆正割を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="161">
+      <tuv xml:lang="EN">
+        <seg>proc csc[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc csc[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="162">
+      <tuv xml:lang="EN">
+        <seg>Returns the cosecant of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の余割を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="163">
+      <tuv xml:lang="EN">
+        <seg>proc arccsc[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc arccsc[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="164">
+      <tuv xml:lang="EN">
+        <seg>Returns the inverse cosecant of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の逆余割を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="165">
+      <tuv xml:lang="EN">
+        <seg>proc sinh[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc sinh[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="166">
+      <tuv xml:lang="EN">
+        <seg>Returns the hyperbolic sine of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の双曲線正弦を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="167">
+      <tuv xml:lang="EN">
+        <seg>proc arcsinh[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc arcsinh[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="168">
+      <tuv xml:lang="EN">
+        <seg>Returns the inverse hyperbolic sine of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の逆双曲線正弦を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="169">
+      <tuv xml:lang="EN">
+        <seg>proc cosh[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc cosh[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="170">
+      <tuv xml:lang="EN">
+        <seg>Returns the hyperbolic cosine of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の双曲線余弦を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="171">
+      <tuv xml:lang="EN">
+        <seg>proc arccosh[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc arccosh[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="172">
+      <tuv xml:lang="EN">
+        <seg>Returns the inverse hyperbolic cosine of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の逆双曲線余弦を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="173">
+      <tuv xml:lang="EN">
+        <seg>proc tanh[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc tanh[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="174">
+      <tuv xml:lang="EN">
+        <seg>Returns the hyperbolic tangent of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の双曲線正接を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="175">
+      <tuv xml:lang="EN">
+        <seg>proc arctanh[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc arctanh[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="176">
+      <tuv xml:lang="EN">
+        <seg>Returns the inverse hyperbolic tangent of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の逆双曲線正接を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="177">
+      <tuv xml:lang="EN">
+        <seg>proc sech[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc sech[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="178">
+      <tuv xml:lang="EN">
+        <seg>Returns the hyperbolic secant of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の双曲線正割を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="179">
+      <tuv xml:lang="EN">
+        <seg>proc arcsech[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc arcsech[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="180">
+      <tuv xml:lang="EN">
+        <seg>Returns the inverse hyperbolic secant of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の逆双曲線正割を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="181">
+      <tuv xml:lang="EN">
+        <seg>proc csch[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc csch[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="182">
+      <tuv xml:lang="EN">
+        <seg>Returns the hyperbolic cosecant of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の双曲線余割を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="183">
+      <tuv xml:lang="EN">
+        <seg>proc arccsch[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc arccsch[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="184">
+      <tuv xml:lang="EN">
+        <seg>Returns the inverse hyperbolic cosecant of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の逆双曲線余割を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="185">
+      <tuv xml:lang="EN">
+        <seg>proc coth[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc coth[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="186">
+      <tuv xml:lang="EN">
+        <seg>Returns the hyperbolic cotangent of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の双曲線余接を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="187">
+      <tuv xml:lang="EN">
+        <seg>proc arccoth[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc arccoth[T](z: Complex[T]): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="188">
+      <tuv xml:lang="EN">
+        <seg>Returns the inverse hyperbolic cotangent of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の逆双曲線余接を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="189">
+      <tuv xml:lang="EN">
+        <seg>proc phase[T](z: Complex[T]): T</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc phase[T](z: Complex[T]): T</seg>
+      </tuv>
+    </tu>
+    <tu tuid="190">
+      <tuv xml:lang="EN">
+        <seg>Returns the phase of z.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の位相を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="191">
+      <tuv xml:lang="EN">
+        <seg>proc polar[T](z: Complex[T]): tuple[r, phi: T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc polar[T](z: Complex[T]): tuple[r, phi: T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="192">
+      <tuv xml:lang="EN">
+        <seg>Returns z in polar coordinates.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の極座標を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="193">
+      <tuv xml:lang="EN">
+        <seg>proc rect[T](r, phi: T): Complex[T]</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc rect[T](r, phi: T): Complex[T]</seg>
+      </tuv>
+    </tu>
+    <tu tuid="194">
+      <tuv xml:lang="EN">
+        <seg>Returns the complex number with polar coordinates r and phi.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>極座標 r と phi により複素数を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="195">
+      <tuv xml:lang="EN">
+        <seg>result.re = r * cos(phi) result.im = r * sin(phi)</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>result.re = r * cos(phi) result.im = r * sin(phi)</seg>
+      </tuv>
+    </tu>
+    <tu tuid="196">
+      <tuv xml:lang="EN">
+        <seg>proc `$`(z: Complex): string</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>proc `$`(z: Complex): string</seg>
+      </tuv>
+    </tu>
+    <tu tuid="197">
+      <tuv xml:lang="EN">
+        <seg>Returns z's string representation as "(re, im)".</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>z の文字列表記として "(re, im)" を返します。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="198">
+      <tuv xml:lang="EN">
+        <seg>template im(arg: typedesc[float32]): Complex32</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>template im(arg: typedesc[float32]): Complex32</seg>
+      </tuv>
+    </tu>
+    <tu tuid="199">
+      <tuv xml:lang="EN">
+        <seg>template im(arg: typedesc[float64]): Complex64</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>template im(arg: typedesc[float64]): Complex64</seg>
+      </tuv>
+    </tu>
+    <tu tuid="200">
+      <tuv xml:lang="EN">
+        <seg>template im(arg: float32): Complex32</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>template im(arg: float32): Complex32</seg>
+      </tuv>
+    </tu>
+    <tu tuid="201">
+      <tuv xml:lang="EN">
+        <seg>template im(arg: float64): Complex64</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>template im(arg: float64): Complex64</seg>
+      </tuv>
+    </tu>
+    <tu tuid="202">
+      <tuv xml:lang="EN">
+        <seg>Made with Nim.</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>Nim で作成しました。</seg>
+      </tuv>
+    </tu>
+    <tu tuid="203">
+      <tuv xml:lang="EN">
+        <seg>Generated: 2020-01-23 17:27:30 UTC</seg>
+      </tuv>
+      <tuv xml:lang="JA">
+        <seg>生成日時: 2020年01月23日 午前17時27分30秒 (UTC)</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

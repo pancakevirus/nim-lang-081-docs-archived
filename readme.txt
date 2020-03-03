@@ -1,5 +1,4 @@
 
-
 ライセンス
 --------
 Nim のライセンスに準ずるものとします。ただし、翻訳物にも著作権があります。
@@ -15,7 +14,7 @@ Nim のライセンスに準ずるものとします。ただし、翻訳物にも著作権があります。
 作業記録
 --------
 対象バージョン   : Nim 1.0.6
-作業対象ファイル : 完了: 64 - 合計 : 181 = 残り : 117
+作業対象ファイル : 完了: 71 - 合計 : 181 = 残り : 110
 
 ・序盤戦終了 : 2020/02/27 (Done: 60) Jan ～ Feb 期間
 ・序盤戦開始 : 2020/02/28 Mar ～ Apr 期間
@@ -24,7 +23,7 @@ Nim のライセンスに準ずるものとします。ただし、翻訳物にも著作権があります。
 Jan : 31 (Current: 31 / 31)  →  31 - 181 = 150 : Achieved!!!
 Feb : 29 (Current: 29 / 29)  →  60 - 181 = 121 : Achieved!!!
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Mar : 31 (Current:  4 / 31)  →  91 - 181 =  90
+Mar : 31 (Current: 11 / 31)  →  91 - 181 =  90
 Apr : 30 (Current:  0 / 30)  → 121 - 181 =  60
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 May : 31 (Current:  0 / 31)  → 151 - 181 =  30
@@ -58,6 +57,8 @@ Nim 1.0.8 公開 : 2020/03/28
 	docgen_sample.html
 	dom.html
 	dynlib.html
+	editdistance.html
+	encodings.html
 	endians.html
 	highlite.html
 	htmlgen.html
@@ -67,6 +68,8 @@ Nim 1.0.8 公開 : 2020/03/28
 	jscore.html
 	koch.html
 	linenoise.html
+	locks.html
+	marshal.html
 	md5.html
 	mersenne.html
 	mimetypes.html
@@ -83,6 +86,7 @@ Nim 1.0.8 公開 : 2020/03/28
 	registry.html
 	rlocks.html
 	rst.html
+	rstast.html
 	rtarrays.html
 	segfaults.html
 	sha1.html
@@ -93,6 +97,8 @@ Nim 1.0.8 公開 : 2020/03/28
 	theindex.html
 	time_t.html
 	tools.html
+	typetraits.html
+	unidecode.html
 	util.html
 	varints.html
 	volatile.html
@@ -101,14 +107,13 @@ Nim 1.0.8 公開 : 2020/03/28
 	wordwrap.html
 	xmlparser.html
 	xmltree.html
-	editdistance.html
-	rstast.html
-	unidecode.html
-	encodings.html
-	locks.html
-	marshal.html
-	typetraits.html
-
+	colors.html
+	oids.html
+	assertions.html
+	io.html
+	ospaths.html
+	parsesql.html
+	complex.html
 
 翻訳活動への参加方法
 --------------------
@@ -139,7 +144,7 @@ Nim 1.0.8 公開 : 2020/03/28
 共通辞書の指定
 --------------
 こればかりは、フリーソフトウェアで良いものがないので、きちんと正規品を購入してください。
-よくある学習用辞典だけでは役不足です。
+よくある学習用辞典だけでは役不足です。そのほかに一般的な百科事典と数学用語辞典なども必要です。
 
 ※英辞郎の最新版発売待ちのため、後ほど記載します。
 
@@ -163,7 +168,6 @@ Nim 1.0.8 公開 : 2020/03/28
 
 対応可能ファイル形式
 --------------------
-
 
 推奨形式:
 * OmegaT プロジェクト

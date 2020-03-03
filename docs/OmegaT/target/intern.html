@@ -17,7 +17,7 @@
 <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600' rel='stylesheet' type='text/css'/>
 
 
-<title>Internals of the Nim Compiler</title>
+<title>Nim コンパイラの内部構造</title>
 <style type="text/css" >
 /*
 Stylesheet for use with Docutils/rst2html.
@@ -805,7 +805,7 @@ function main() {
 <body onload="main()">
 <div class="document" id="documentId">
   <div class="container">
-    <h1 class="title">Internals of the Nim Compiler</h1>
+    <h1 class="title">Nim コンパイラの内部構造</h1>
     <div class="row">
   <div class="three columns">
   <div id="global-links">
@@ -826,13 +826,13 @@ function main() {
       onkeyup="search()" />
   </div>
   <ul class="simple simple-toc" id="toc-list">
-<li><a class="reference" id="directory-structure_toc" href="#directory-structure">Directory structure</a></li>
-<li><a class="reference" id="bootstrapping-the-compiler_toc" href="#bootstrapping-the-compiler">Bootstrapping the compiler</a></li>
-<li><a class="reference" id="coding-guidelines_toc" href="#coding-guidelines">Coding Guidelines</a></li>
-<li><a class="reference" id="porting-to-new-platforms_toc" href="#porting-to-new-platforms">Porting to new platforms</a></li>
+<li><a class="reference" id="directory-structure_toc" href="#directory-structure">ディレクトリ構造</a></li>
+<li><a class="reference" id="bootstrapping-the-compiler_toc" href="#bootstrapping-the-compiler">コンパイラのブートストラップ</a></li>
+<li><a class="reference" id="coding-guidelines_toc" href="#coding-guidelines">コーディングのガイドライン</a></li>
+<li><a class="reference" id="porting-to-new-platforms_toc" href="#porting-to-new-platforms">新しいプラットホームへの移植</a></li>
 <li><a class="reference" id="runtime-type-information_toc" href="#runtime-type-information">Runtime type information</a></li>
-<li><a class="reference" id="debugging-the-compiler_toc" href="#debugging-the-compiler">Debugging the compiler</a></li>
-<li><a class="reference" id="the-compiler-s-architecture_toc" href="#the-compiler-s-architecture">The compiler's architecture</a></li>
+<li><a class="reference" id="debugging-the-compiler_toc" href="#debugging-the-compiler">コンパイラのデバッグ</a></li>
+<li><a class="reference" id="the-compiler-s-architecture_toc" href="#the-compiler-s-architecture">コンパイラのアーキテクチャ</a></li>
 <ul class="simple"><li><a class="reference" id="the-compiler-s-architecture-short-description-of-nim-s-modules_toc" href="#the-compiler-s-architecture-short-description-of-nim-s-modules">Short description of Nim's modules</a></li>
 <li><a class="reference" id="the-compiler-s-architecture-the-syntax-tree_toc" href="#the-compiler-s-architecture-the-syntax-tree">The syntax tree</a></li>
 </ul><li><a class="reference" id="how-the-rtl-is-compiled_toc" href="#how-the-rtl-is-compiled">How the RTL is compiled</a></li>
@@ -848,12 +848,12 @@ function main() {
 <ul class="simple"><li><a class="reference" id="the-garbage-collector-introduction_toc" href="#the-garbage-collector-introduction">はじめに</a></li>
 <li><a class="reference" id="the-garbage-collector-the-cellset-data-structure_toc" href="#the-garbage-collector-the-cellset-data-structure">The CellSet data structure</a></li>
 <li><a class="reference" id="the-garbage-collector-further-complications_toc" href="#the-garbage-collector-further-complications">Further complications</a></li>
-</ul><li><a class="reference" id="code-generation-for-closures_toc" href="#code-generation-for-closures">Code generation for closures</a></li>
+</ul><li><a class="reference" id="code-generation-for-closures_toc" href="#code-generation-for-closures">クロージャーのコード生成</a></li>
 <ul class="simple"><li><a class="reference" id="code-generation-for-closures-design_toc" href="#code-generation-for-closures-design">Design</a></li>
 <li><a class="reference" id="code-generation-for-closures-alternative_toc" href="#code-generation-for-closures-alternative">Alternative</a></li>
 <li><a class="reference" id="code-generation-for-closures-accumulator_toc" href="#code-generation-for-closures-accumulator">Accumulator</a></li>
 <li><a class="reference" id="code-generation-for-closures-internals_toc" href="#code-generation-for-closures-internals">Internals</a></li>
-<li><a class="reference" id="code-generation-for-closures-integer-literalscolon_toc" href="#code-generation-for-closures-integer-literalscolon">Integer literals:</a></li>
+<li><a class="reference" id="code-generation-for-closures-integer-literalscolon_toc" href="#code-generation-for-closures-integer-literalscolon">整数リテラル:</a></li>
 </ul>
 </ul>
 
@@ -863,43 +863,43 @@ function main() {
   
   <p class="module-desc"><table class="docinfo" frame="void" rules="none"><col class="docinfo-name" /><col class="docinfo-content" /><tbody valign="top"><tr><th class="docinfo-name">作成者:</th><td> アンドレアス・ルンプフ</td></tr>
 <tr><th class="docinfo-name">バージョン:</th><td>  1.0.6</td></tr>
-</tbody></table><blockquote><p>"Abstraction is layering ignorance on top of reality." -- Richard Gabriel</p></blockquote>
+</tbody></table><blockquote><p>"抽象化とは現実の上に成り立つ無知の階層化である。" -- リチャード・ガブリエル</p></blockquote>
 
-<h1><a class="toc-backref" id="directory-structure" href="#directory-structure">Directory structure</a></h1><p>The Nim project's directory structure is:</p>
-<table border="1" class="docutils"><tr><th>Path</th><th>Purpose</th></tr>
-<tr><td><tt class="docutils literal"><span class="pre">bin</span></tt></td><td>generated binary files</td></tr>
-<tr><td><tt class="docutils literal"><span class="pre">build</span></tt></td><td>generated C code for the installation</td></tr>
-<tr><td><tt class="docutils literal"><span class="pre">compiler</span></tt></td><td>the Nim compiler itself; note that this code has been translated from a bootstrapping version written in Pascal, so the code is <strong>not</strong> a poster child of good Nim code</td></tr>
-<tr><td><tt class="docutils literal"><span class="pre">config</span></tt></td><td>configuration files for Nim</td></tr>
-<tr><td><tt class="docutils literal"><span class="pre">dist</span></tt></td><td>additional packages for the distribution</td></tr>
-<tr><td><tt class="docutils literal"><span class="pre">doc</span></tt></td><td>the documentation; it is a bunch of reStructuredText files</td></tr>
-<tr><td><tt class="docutils literal"><span class="pre">lib</span></tt></td><td>the Nim library</td></tr>
-<tr><td><tt class="docutils literal"><span class="pre">web</span></tt></td><td>website of Nim; generated by <tt class="docutils literal"><span class="pre">nimweb</span></tt> from the <tt class="docutils literal"><span class="pre">*.txt</span></tt> and <tt class="docutils literal"><span class="pre">*.nimf</span></tt> files</td></tr>
+<h1><a class="toc-backref" id="directory-structure" href="#directory-structure">ディレクトリ構造</a></h1><p>Nim プロジェクトのディレクトリ構造は、</p>
+<table border="1" class="docutils"><tr><th>パス</th><th>用途</th></tr>
+<tr><td><tt class="docutils literal"><span class="pre">bin</span></tt></td><td>生成されたバイナリファイル</td></tr>
+<tr><td><tt class="docutils literal"><span class="pre">build</span></tt></td><td>インストールで生成された C コード</td></tr>
+<tr><td><tt class="docutils literal"><span class="pre">compiler</span></tt></td><td>Nim コンパイラ本体です。このコードは Pascal で書いたブートストラップの移植版であるため、 Nim のコードとしては良いお手本 (poster child) <strong>ではない</strong>ことに注意してください</td></tr>
+<tr><td><tt class="docutils literal"><span class="pre">config</span></tt></td><td>Nim のコンフィギュレーション・ファイル</td></tr>
+<tr><td><tt class="docutils literal"><span class="pre">dist</span></tt></td><td>ディストリビューションの追加パッケージ</td></tr>
+<tr><td><tt class="docutils literal"><span class="pre">doc</span></tt></td><td>reStructuredText 形式のファイルをドキュメンテーションとして収録してあります</td></tr>
+<tr><td><tt class="docutils literal"><span class="pre">lib</span></tt></td><td>Nim ライブラリ</td></tr>
+<tr><td><tt class="docutils literal"><span class="pre">web</span></tt></td><td><tt class="docutils literal"><span class="pre">nimweb</span></tt> により <tt class="docutils literal"><span class="pre">*.txt</span></tt> と <tt class="docutils literal"><span class="pre">*.nimf</span></tt> ファイルから生成される Nim のウェブサイトです。</td></tr>
 </table>
-<h1><a class="toc-backref" id="bootstrapping-the-compiler" href="#bootstrapping-the-compiler">Bootstrapping the compiler</a></h1><p>Compiling the compiler is a simple matter of running:<pre>
+<h1><a class="toc-backref" id="bootstrapping-the-compiler" href="#bootstrapping-the-compiler">コンパイラのブートストラップ</a></h1><p>コンパイラをコンパイルするには簡単なコマンドを実行します。<pre>
 nim c koch.nim
 ./koch boot</pre>
 </p>
-<p>For a release version use:<pre>
+<p>リリースバージョンでは、<pre>
 nim c koch.nim
 ./koch boot -d:release</pre>
 </p>
-<p>And for a debug version compatible with GDB:<pre>
+<p>また、 GDB 互換のデバッグバージョンでは、<pre>
 nim c koch.nim
 ./koch boot --debuginfo --linedir:on</pre>
 </p>
-<p>The <tt class="docutils literal"><span class="pre">koch</span></tt> program is Nim's maintenance script. make コマンドやシェルスクリプトよりも高い汎用性がある優れたツールです。More information about its options can be found in the <a class="reference external" href="koch.html">koch</a> documentation.</p>
+<p><tt class="docutils literal"><span class="pre">koch</span></tt> プログラムは Nim のメンテナンス・スクリプトです。make コマンドやシェルスクリプトよりも高い汎用性がある優れたツールです。このツールのオプションに関する詳細情報は <a class="reference external" href="koch.html">koch</a> ドキュメンテーションにあります。</p>
 
-<h1><a class="toc-backref" id="coding-guidelines" href="#coding-guidelines">Coding Guidelines</a></h1><ul class="simple"><li>Use CamelCase, not underscored_identifiers.</li>
-<li>Indent with two spaces.</li>
-<li>Max line length is 80 characters.</li>
-<li>Provide spaces around binary operators if that enhances readability.</li>
-<li>Use a space after a colon, but not before it.</li>
-<li>[deprecated] Start types with a capital <tt class="docutils literal"><span class="pre">T</span></tt>, unless they are pointers/references which start with <tt class="docutils literal"><span class="pre">P</span></tt>.</li>
+<h1><a class="toc-backref" id="coding-guidelines" href="#coding-guidelines">コーディングのガイドライン</a></h1><ul class="simple"><li>スネークケース (underscored_identifiers) ではなく、キャメルケース (CamelCase) をお使いください。</li>
+<li> インデントはスペース２文字で書いてください。</li>
+<li>一行あたりの最大文字数は 80 文字までにしてください。</li>
+<li> 可読性を向上したいときは、二項演算子の前後にスペースを書いてください。</li>
+<li>コロンの前ではなく、後にスペースをお使いください。</li>
+<li>[廃止] 頭文字が <tt class="docutils literal"><span class="pre">P</span></tt> のポインタや参照である場合を除いて、型の頭文字は大文字の <tt class="docutils literal"><span class="pre">T</span></tt> にします。</li>
 </ul>
-<p>See also the <a class="reference external" href="apis.html">API naming design</a> document.</p>
+<p>詳しくは <a class="reference external" href="apis.html">API 命名仕様書</a>のドキュメンテーションを参照してください。</p>
 
-<h1><a class="toc-backref" id="porting-to-new-platforms" href="#porting-to-new-platforms">Porting to new platforms</a></h1><p>Porting Nim to a new architecture is pretty easy, since C is the most portable programming language (within certain limits) and Nim generates C code, porting the code generator is not necessary.</p>
+<h1><a class="toc-backref" id="porting-to-new-platforms" href="#porting-to-new-platforms">新しいプラットホームへの移植</a></h1><p>Porting Nim to a new architecture is pretty easy, since C is the most portable programming language (within certain limits) and Nim generates C code, porting the code generator is not necessary.</p>
 <p>POSIX-compliant systems on conventional hardware are usually pretty easy to port: Add the platform to <tt class="docutils literal"><span class="pre">platform</span></tt> (if it is not already listed there), check that the OS, System modules work and recompile Nim.</p>
 <p>The only case where things aren't as easy is when the garbage collector needs some assembler tweaking to work. The standard version of the GC uses C's <tt class="docutils literal"><span class="pre">setjmp</span></tt> function to store all registers on the hardware stack. It may be necessary that the new platform needs to replace this generic code by some assembler code.</p>
 
@@ -911,7 +911,7 @@ nim c koch.nim
 </dl>
 <p>We already know the type information as a graph in the compiler. Thus we need to serialize this graph as RTTI for C code generation. Look at the file <tt class="docutils literal"><span class="pre">lib/system/hti.nim</span></tt> for more information.</p>
 
-<h1><a class="toc-backref" id="debugging-the-compiler" href="#debugging-the-compiler">Debugging the compiler</a></h1><p>You can of course use GDB or Visual Studio to debug the compiler (via <tt class="docutils literal"><span class="pre">--debuginfo --lineDir:on</span></tt>). However, there are also lots of procs that aid in debugging:</p>
+<h1><a class="toc-backref" id="debugging-the-compiler" href="#debugging-the-compiler">コンパイラのデバッグ</a></h1><p>You can of course use GDB or Visual Studio to debug the compiler (via <tt class="docutils literal"><span class="pre">--debuginfo --lineDir:on</span></tt>). However, there are also lots of procs that aid in debugging:</p>
 <pre class="listing"><span class="Comment"># pretty prints the Nim AST</span>
 <span class="Identifier">echo</span> <span class="Identifier">renderTree</span><span class="Punctuation">(</span><span class="Identifier">someNode</span><span class="Punctuation">)</span>
 <span class="Comment"># outputs some JSON representation</span>
@@ -937,7 +937,7 @@ git bisect start bad-commit good-commit
 git bisect run ./koch temp -r c test-source.nim</pre>
 </p>
 
-<h1><a class="toc-backref" id="the-compiler-s-architecture" href="#the-compiler-s-architecture">The compiler's architecture</a></h1><p>Nim uses the classic compiler architecture: A lexer/scanner feds tokens to a parser. The parser builds a syntax tree that is used by the code generator. This syntax tree is the interface between the parser and the code generator. It is essential to understand most of the compiler's code.</p>
+<h1><a class="toc-backref" id="the-compiler-s-architecture" href="#the-compiler-s-architecture">コンパイラのアーキテクチャ</a></h1><p>Nim uses the classic compiler architecture: A lexer/scanner feds tokens to a parser. The parser builds a syntax tree that is used by the code generator. This syntax tree is the interface between the parser and the code generator. It is essential to understand most of the compiler's code.</p>
 <p>In order to compile Nim correctly, type-checking has to be separated from parsing. Otherwise generics cannot work.</p>
 
 <h2><a class="toc-backref" id="the-compiler-s-architecture-short-description-of-nim-s-modules" href="#the-compiler-s-architecture-short-description-of-nim-s-modules">Short description of Nim's modules</a></h2><table border="1" class="docutils"><tr><th>Module</th><th>Description</th></tr>
@@ -1103,7 +1103,7 @@ for each page descriptor d:
   <span class="Identifier">setRef</span><span class="Punctuation">(</span><span class="Operator">&amp;</span><span class="Identifier">r</span><span class="Operator">-&gt;</span><span class="Identifier">left</span><span class="Punctuation">)</span>
 <span class="Punctuation">}</span></pre><p>Note that for systems with a continuous stack (which most systems have) the check whether the ref is on the stack is very cheap (only two comparisons).</p>
 
-<h1><a class="toc-backref" id="code-generation-for-closures" href="#code-generation-for-closures">Code generation for closures</a></h1><p>Code generation for closures is implemented by <span id="lambda-lifting_1">lambda lifting</span>.</p>
+<h1><a class="toc-backref" id="code-generation-for-closures" href="#code-generation-for-closures">クロージャーのコード生成</a></h1><p>Code generation for closures is implemented by <span id="lambda-lifting_1">lambda lifting</span>.</p>
 
 <h2><a class="toc-backref" id="code-generation-for-closures-design" href="#code-generation-for-closures-design">Design</a></h2><p>A <tt class="docutils literal"><span class="pre">closure</span></tt> proc var can call ordinary procs of the default Nim calling convention. But not the other way round! A closure is implemented as a <tt class="docutils literal"><span class="pre">tuple[prc, env]</span></tt>. <tt class="docutils literal"><span class="pre">env</span></tt> can be nil implying a call without a closure. This means that a call through a closure generates an <tt class="docutils literal"><span class="pre">if</span></tt> but the interoperability is worth the cost of the <tt class="docutils literal"><span class="pre">if</span></tt>. Thunk generation would be possible too, but it's slightly more effort to implement.</p>
 <p>Tests with GCC on Amd64 showed that it's really beneficical if the 'environment' pointer is passed as the last argument, not as the first argument.</p>
@@ -1189,7 +1189,7 @@ for each page descriptor d:
   <span class="Identifier">echo</span> <span class="Identifier">a</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Operator">+</span> <span class="Identifier">b</span><span class="Punctuation">(</span><span class="Punctuation">)</span></pre>
 <h2><a class="toc-backref" id="code-generation-for-closures-internals" href="#code-generation-for-closures-internals">Internals</a></h2><p>Lambda lifting is implemented as part of the <tt class="docutils literal"><span class="pre">transf</span></tt> pass. The <tt class="docutils literal"><span class="pre">transf</span></tt> pass generates code to setup the environment and to pass it around. However, this pass does not change the types! So we have some kind of mismatch here; on the one hand the proc expression becomes an explicit tuple, on the other hand the tyProc(ccClosure) type is not changed. For C code generation it's also important the hidden formal param is <tt class="docutils literal"><span class="pre">void*</span></tt> and not something more specialized. However the more specialized env type needs to passed to the backend somehow. We deal with this by modifying <tt class="docutils literal"><span class="pre">s.ast[paramPos]</span></tt> to contain the formal hidden parameter, but not <tt class="docutils literal"><span class="pre">s.typ</span></tt>!</p>
 
-<h2><a class="toc-backref" id="code-generation-for-closures-integer-literalscolon" href="#code-generation-for-closures-integer-literalscolon">Integer literals:</a></h2><p>In Nim, there is a redundant way to specify the type of an integer literal. First of all, it should be unsurprising that every node has a node kind. The node of an integer literal can be any of the following values:</p>
+<h2><a class="toc-backref" id="code-generation-for-closures-integer-literalscolon" href="#code-generation-for-closures-integer-literalscolon">整数リテラル:</a></h2><p>In Nim, there is a redundant way to specify the type of an integer literal. First of all, it should be unsurprising that every node has a node kind. The node of an integer literal can be any of the following values:</p>
 <blockquote><p>nkIntLit, nkInt8Lit, nkInt16Lit, nkInt32Lit, nkInt64Lit, nkUIntLit, nkUInt8Lit, nkUInt16Lit, nkUInt32Lit, nkUInt64Lit</p></blockquote>
 <p>On top of that, there is also the <tt class="docutils literal"><span class="pre">typ</span></tt> field for the type. It the kind of the <tt class="docutils literal"><span class="pre">typ</span></tt> field can be one of the following ones, and it should be matching the literal kind:</p>
 <blockquote><p>tyInt, tyInt8, tyInt16, tyInt32, tyInt64, tyUInt, tyUInt8, tyUInt16, tyUInt32, tyUInt64</p></blockquote>

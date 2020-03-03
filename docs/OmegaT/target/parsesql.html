@@ -850,7 +850,7 @@ function main() {
   nkNone, nkIdent, nkQuotedIdent, nkStringLit, nkBitStringLit, nkHexStringLit,
   nkIntegerLit, nkNumericLit, nkPrimaryKey, nkForeignKey, nkNotNull, nkNull,
   nkStmtList, nkDot, nkDotDot, nkPrefix, nkInfix, nkCall, nkPrGroup, nkColumnReference,
-  nkReferences, nkDefault, nkCheck, nkConstraint, nkUnique, nkIdentity, nkColumnDef, ## name, datatype, constraints
+  nkReferences, nkDefault, nkCheck, nkConstraint, nkUnique, nkIdentity, nkColumnDef, ## 名前、データ型、制約
   nkInsert, nkUpdate, nkDelete, nkSelect, nkSelectDistinct, nkSelectColumns,
   nkSelectPair, nkAsgn, nkFrom, nkFromItemPair, nkGroup, nkLimit, nkHaving, nkOrder,
   nkJoin, nkDesc, nkUnion, nkIntersect, nkExcept, nkColumnList, nkValueList, nkWhere,
@@ -862,13 +862,13 @@ function main() {
     title="SqlNode = ref SqlNodeObj"><wbr />Sql<wbr />Node<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#SqlNodeObj"
     title="SqlNodeObj = object
-  case kind*: SqlNodeKind       ## kind of syntax tree
+  case kind*: SqlNodeKind       ## シンタックスリーの種類
   of LiteralNodes:
-      strVal*: string          ## AST leaf: the identifier, numeric literal
-                    ## string literal, etc.
+      strVal*: string          ## 抽象構文木 (AST) のリーフ: 識別子、数値リテラル、
+                    ## 文字列リテラルなど。
     
   else:
-      sons*: seq[SqlNode]      ## the node's children"><wbr />Sql<wbr />Node<wbr />Obj<span class="attachedType"></span></a></li>
+      sons*: seq[SqlNode]      ## ノードの子供ら"><wbr />Sql<wbr />Node<wbr />Obj<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#SqlParser"
     title="SqlParser = object of SqlLexer
   tok: Token"><wbr />Sql<wbr />Parser<span class="attachedType"></span></a></li>
@@ -912,7 +912,7 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"><p>The <tt class="docutils literal"><span class="pre">parsesql</span></tt> module implements a high performance SQL file parser. It parses PostgreSQL syntax and the SQL ANSI standard.</p>
+  <p class="module-desc"><p><tt class="docutils literal"><span class="pre">parsesql</span></tt> モジュールは高性能な SQL ファイルのパーサー実装です。PostgreSQL のシンタックスと SQL ANSI 標準規格を解析します。</p>
 <p>この API は不安定です。</p>
 </p>
   <div class="section" id="6">
@@ -929,7 +929,7 @@ function main() {
 </pre></dt>
 <dd>
 
-the parser object. &nbsp;&nbsp;<a
+パーサーのオブジェクトです。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/parsesql.nim#L47"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/parsesql.nim#L47" class="link-seesrc" target="_blank" >編集</a>
 
@@ -939,7 +939,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
   <span class="Identifier">nkNone</span><span class="Other">,</span> <span class="Identifier">nkIdent</span><span class="Other">,</span> <span class="Identifier">nkQuotedIdent</span><span class="Other">,</span> <span class="Identifier">nkStringLit</span><span class="Other">,</span> <span class="Identifier">nkBitStringLit</span><span class="Other">,</span> <span class="Identifier">nkHexStringLit</span><span class="Other">,</span>
   <span class="Identifier">nkIntegerLit</span><span class="Other">,</span> <span class="Identifier">nkNumericLit</span><span class="Other">,</span> <span class="Identifier">nkPrimaryKey</span><span class="Other">,</span> <span class="Identifier">nkForeignKey</span><span class="Other">,</span> <span class="Identifier">nkNotNull</span><span class="Other">,</span> <span class="Identifier">nkNull</span><span class="Other">,</span>
   <span class="Identifier">nkStmtList</span><span class="Other">,</span> <span class="Identifier">nkDot</span><span class="Other">,</span> <span class="Identifier">nkDotDot</span><span class="Other">,</span> <span class="Identifier">nkPrefix</span><span class="Other">,</span> <span class="Identifier">nkInfix</span><span class="Other">,</span> <span class="Identifier">nkCall</span><span class="Other">,</span> <span class="Identifier">nkPrGroup</span><span class="Other">,</span> <span class="Identifier">nkColumnReference</span><span class="Other">,</span>
-  <span class="Identifier">nkReferences</span><span class="Other">,</span> <span class="Identifier">nkDefault</span><span class="Other">,</span> <span class="Identifier">nkCheck</span><span class="Other">,</span> <span class="Identifier">nkConstraint</span><span class="Other">,</span> <span class="Identifier">nkUnique</span><span class="Other">,</span> <span class="Identifier">nkIdentity</span><span class="Other">,</span> <span class="Identifier">nkColumnDef</span><span class="Other">,</span> <span class="Comment">## name, datatype, constraints</span>
+  <span class="Identifier">nkReferences</span><span class="Other">,</span> <span class="Identifier">nkDefault</span><span class="Other">,</span> <span class="Identifier">nkCheck</span><span class="Other">,</span> <span class="Identifier">nkConstraint</span><span class="Other">,</span> <span class="Identifier">nkUnique</span><span class="Other">,</span> <span class="Identifier">nkIdentity</span><span class="Other">,</span> <span class="Identifier">nkColumnDef</span><span class="Other">,</span> <span class="Comment">## 名前、データ型、制約</span>
   <span class="Identifier">nkInsert</span><span class="Other">,</span> <span class="Identifier">nkUpdate</span><span class="Other">,</span> <span class="Identifier">nkDelete</span><span class="Other">,</span> <span class="Identifier">nkSelect</span><span class="Other">,</span> <span class="Identifier">nkSelectDistinct</span><span class="Other">,</span> <span class="Identifier">nkSelectColumns</span><span class="Other">,</span>
   <span class="Identifier">nkSelectPair</span><span class="Other">,</span> <span class="Identifier">nkAsgn</span><span class="Other">,</span> <span class="Identifier">nkFrom</span><span class="Other">,</span> <span class="Identifier">nkFromItemPair</span><span class="Other">,</span> <span class="Identifier">nkGroup</span><span class="Other">,</span> <span class="Identifier">nkLimit</span><span class="Other">,</span> <span class="Identifier">nkHaving</span><span class="Other">,</span> <span class="Identifier">nkOrder</span><span class="Other">,</span>
   <span class="Identifier">nkJoin</span><span class="Other">,</span> <span class="Identifier">nkDesc</span><span class="Other">,</span> <span class="Identifier">nkUnion</span><span class="Other">,</span> <span class="Identifier">nkIntersect</span><span class="Other">,</span> <span class="Identifier">nkExcept</span><span class="Other">,</span> <span class="Identifier">nkColumnList</span><span class="Other">,</span> <span class="Identifier">nkValueList</span><span class="Other">,</span> <span class="Identifier">nkWhere</span><span class="Other">,</span>
@@ -947,61 +947,45 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
   <span class="Identifier">nkCreateIndex</span><span class="Other">,</span> <span class="Identifier">nkCreateIndexIfNotExists</span><span class="Other">,</span> <span class="Identifier">nkEnumDef</span></pre></dt>
 <dd>
 
-
-
-kind of SQL abstract syntax tree
-&nbsp;&nbsp;<a
+SQL における抽象構文木 (AST) の種類 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/parsesql.nim#L480"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/parsesql.nim#L480" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/parsesql.nim#L480" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="SqlParseError"></a>
 <dt><pre><a href="parsesql.html#SqlParseError"><span class="Identifier">SqlParseError</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="system.html#ValueError"><span class="Identifier">ValueError</span></a></pre></dt>
 <dd>
 
-
-
-Invalid SQL encountered
-&nbsp;&nbsp;<a
+無効な SQL との遭遇 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/parsesql.nim#L546"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/parsesql.nim#L546" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/parsesql.nim#L546" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="SqlNode"></a>
 <dt><pre><a href="parsesql.html#SqlNode"><span class="Identifier">SqlNode</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <a href="parsesql.html#SqlNodeObj"><span class="Identifier">SqlNodeObj</span></a></pre></dt>
 <dd>
 
-
-
-an SQL abstract syntax tree node
-&nbsp;&nbsp;<a
+SQL における抽象構文木 (AST) のノード &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/parsesql.nim#L547"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/parsesql.nim#L547" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/parsesql.nim#L547" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="SqlNodeObj"></a>
 <dt><pre><a href="parsesql.html#SqlNodeObj"><span class="Identifier">SqlNodeObj</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
-  <span class="Keyword">case</span> <span class="Identifier">kind</span><span class="Operator">*</span><span class="Other">:</span> <a href="parsesql.html#SqlNodeKind"><span class="Identifier">SqlNodeKind</span></a>       <span class="Comment">## kind of syntax tree</span>
+  <span class="Keyword">case</span> <span class="Identifier">kind</span><span class="Operator">*</span><span class="Other">:</span> <a href="parsesql.html#SqlNodeKind"><span class="Identifier">SqlNodeKind</span></a>       <span class="Comment">## シンタックスリーの種類</span>
   <span class="Keyword">of</span> <span class="Identifier">LiteralNodes</span><span class="Other">:</span>
-      <span class="Identifier">strVal</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a>          <span class="Comment">## AST leaf: the identifier, numeric literal</span>
-                    <span class="Comment">## string literal, etc.</span>
+      <span class="Identifier">strVal</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a>          <span class="Comment">## 抽象構文木 (AST) のリーフ: 識別子、数値リテラル、</span>
+                    <span class="Comment">## 字列リテラルなど。</span>
     
   <span class="Keyword">else</span><span class="Other">:</span>
-      <span class="Identifier">sons</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#seq"><span class="Identifier">seq</span></a><span class="Other">[</span><a href="parsesql.html#SqlNode"><span class="Identifier">SqlNode</span></a><span class="Other">]</span>      <span class="Comment">## the node's children</span>
+      <span class="Identifier">sons</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#seq"><span class="Identifier">seq</span></a><span class="Other">[</span><a href="parsesql.html#SqlNode"><span class="Identifier">SqlNode</span></a><span class="Other">]</span>      <span class="Comment">## ノードの子孫</span>
     
   </pre></dt>
 <dd>
 
-
-
-an SQL abstract syntax tree node
-&nbsp;&nbsp;<a
+SQL における抽象構文木 (AST) のノード &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/parsesql.nim#L548"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/parsesql.nim#L548" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/parsesql.nim#L548" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="SqlParser"></a>
@@ -1010,13 +994,9 @@ class="link-seesrc" target="_blank">Source</a>
 </pre></dt>
 <dd>
 
-
-
-SQL parser object
-&nbsp;&nbsp;<a
+SQL パーサーのオブジェクト &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/parsesql.nim#L556"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/parsesql.nim#L556" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/parsesql.nim#L556" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 
@@ -1099,7 +1079,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Converts an SQL abstract syntax tree to its string representation. &nbsp;&nbsp;<a
+SQL 抽象構文木を文字列形式へ変換します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/parsesql.nim#L1444"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/parsesql.nim#L1444" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1108,7 +1088,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2CSqlNode"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="parsesql.html#SqlNode"><span class="Identifier">SqlNode</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-an alias for <tt class="docutils literal"><span class="pre">renderSQL</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">renderSQL</span></tt> のエイリアスです。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/parsesql.nim#L1452"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/parsesql.nim#L1452" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1129,7 +1109,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">RootEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-parses the SQL from <tt class="docutils literal"><span class="pre">input</span></tt> into an AST and returns the AST. <tt class="docutils literal"><span class="pre">filename</span></tt> is only used for error messages. Syntax errors raise an <tt class="docutils literal"><span class="pre">SqlParseError</span></tt> exception. &nbsp;&nbsp;<a
+抽象構文木 (AST) にある <tt class="docutils literal"><span class="pre">input</span></tt> から SQL を解析して AST を返します。 <tt class="docutils literal"><span class="pre">filename</span></tt> はエラーメッセージで使います。シンタックスエラーでは <tt class="docutils literal"><span class="pre">SqlParseError</span></tt> 例外が発生します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/parsesql.nim#L1487"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/parsesql.nim#L1487" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1140,7 +1120,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">RootEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-parses the SQL from <tt class="docutils literal"><span class="pre">input</span></tt> into an AST and returns the AST. <tt class="docutils literal"><span class="pre">filename</span></tt> is only used for error messages. Syntax errors raise an <tt class="docutils literal"><span class="pre">SqlParseError</span></tt> exception. &nbsp;&nbsp;<a
+抽象構文木 (AST) にある <tt class="docutils literal"><span class="pre">input</span></tt> から SQL を解析して AST を返します。 <tt class="docutils literal"><span class="pre">filename</span></tt> はエラーメッセージで使います。シンタックスエラーでは <tt class="docutils literal"><span class="pre">SqlParseError</span></tt> 例外が発生します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/parsesql.nim#L1498"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/parsesql.nim#L1498" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1155,7 +1135,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 Generated: 2020-01-23 17:27:40 UTC</small>
+        <small>Nim で作成しました。 生成日時: 2020年01月23日 午前17時27分40秒 (UTC)</small>
       </div>
     </div>
   </div>

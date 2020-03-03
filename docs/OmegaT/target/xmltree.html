@@ -966,7 +966,7 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc">シンプルな XML ツリージェネレーターです。<pre class="listing"><span class="Keyword">import</span> <span class="Identifier">xmltree</span>
+  <p class="module-desc">シンプルな XML ツリージェネレータです。<pre class="listing"><span class="Keyword">import</span> <span class="Identifier">xmltree</span>
 
 <span class="Keyword">var</span> <span class="Identifier">g</span> <span class="Operator">=</span> <span class="Identifier">newElement</span><span class="Punctuation">(</span><span class="StringLit">"myTag"</span><span class="Punctuation">)</span>
 <span class="Identifier">g</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newText</span><span class="Punctuation">(</span><span class="StringLit">"テキスト"</span><span class="Punctuation">)</span>
@@ -985,7 +985,7 @@ function main() {
 <span class="Comment"># &lt;/treeTag&gt;</span></pre><p><strong>関連:</strong></p>
 <ul class="simple"><li><a class="reference external" href="xmlparser.html">xmlparser モジュール</a> は高水準の XML 構文解析器です</li>
 <li><a class="reference external" href="parsexml.html">parsexml モジュール</a> は低水準の XML 構文解析器です</li>
-<li><a class="reference external" href="htmlgen.html">htmlgen モジュール</a> は html コードジェネレーターです</li>
+<li><a class="reference external" href="htmlgen.html">htmlgen モジュール</a> は html コードジェネレータです</li>
 </ul>
 </p>
   <div class="section" id="6">
@@ -1419,7 +1419,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#clear%2CXmlNode"><span class="Identifier">clear</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="xmltree.html#XmlNode"><span class="Identifier">XmlNode</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-XmlNode にある子らを再帰的に消去します。<pre class="listing"><span class="Keyword">var</span> <span class="Identifier">g</span> <span class="Operator">=</span> <span class="Identifier">newElement</span><span class="Punctuation">(</span><span class="StringLit">"myTag"</span><span class="Punctuation">)</span>
+XmlNode にある子孫を再帰的に消去します。<pre class="listing"><span class="Keyword">var</span> <span class="Identifier">g</span> <span class="Operator">=</span> <span class="Identifier">newElement</span><span class="Punctuation">(</span><span class="StringLit">"myTag"</span><span class="Punctuation">)</span>
 <span class="Identifier">g</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newText</span><span class="Punctuation">(</span><span class="StringLit">"テキスト"</span><span class="Punctuation">)</span>
 <span class="Identifier">g</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newComment</span><span class="Punctuation">(</span><span class="StringLit">"これはコメントです"</span><span class="Punctuation">)</span>
 
@@ -1553,7 +1553,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 <p><tt class="docutils literal"><span class="pre">n</span></tt> のクライアントデータを取得します。</p>
-<p>クライアントのデータフィールドは HTML パーザーとジェネレーターで使います。</p>
+<p>クライアントのデータフィールドは HTML パーザーとジェネレータで使います。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/xmltree.nim#L510"
@@ -1565,7 +1565,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 <p><tt class="docutils literal"><span class="pre">n</span></tt> のクライアントデータを設定します。</p>
-<p>クライアントのデータフィールドは HTML パーザーとジェネレーターで使います。</p>
+<p>クライアントのデータフィールドは HTML パーザーとジェネレータで使います。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/xmltree.nim#L516"
@@ -1654,7 +1654,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p><tt class="docutils literal"><span class="pre">n</span></tt> にあるすべての子らにイテレートを行い条件に一致する <tt class="docutils literal"><span class="pre">tag</span></tt> を返します。</p>
+<p><tt class="docutils literal"><span class="pre">n</span></tt> にあるすべての子孫にイテレートを行い条件に一致する <tt class="docutils literal"><span class="pre">tag</span></tt> を返します。</p>
 <p>見つかったノードが条件を満たしていれば <tt class="docutils literal"><span class="pre">result</span></tt> のシーケンスの末尾に追加します。</p>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1722,7 +1722,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#items.i%2CXmlNode"><span class="Identifier">items</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="xmltree.html#XmlNode"><span class="Identifier">XmlNode</span></a><span class="Other">)</span><span class="Other">:</span> <a href="xmltree.html#XmlNode"><span class="Identifier">XmlNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p><tt class="docutils literal"><span class="pre">n</span></tt> にあるすべての子らにイテレートを直接行います。</p>
+<p><tt class="docutils literal"><span class="pre">n</span></tt> にあるすべての子孫にイテレートを直接行います。</p>
 <p><strong>用例:</strong></p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">g</span> <span class="Operator">=</span> <span class="Identifier">newElement</span><span class="Punctuation">(</span><span class="StringLit">"myTag"</span><span class="Punctuation">)</span>
 <span class="Identifier">g</span><span class="Operator">.</span><span class="Identifier">add</span> <span class="Identifier">newText</span><span class="Punctuation">(</span><span class="StringLit">"テキスト"</span><span class="Punctuation">)</span>
@@ -1748,7 +1748,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#mitems.i%2CXmlNode"><span class="Identifier">mitems</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="xmltree.html#XmlNode"><span class="Identifier">XmlNode</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="xmltree.html#XmlNode"><span class="Identifier">XmlNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-変更可能にするために <tt class="docutils literal"><span class="pre">n</span></tt> にあるすべての子らにイテレートを直接行います。&nbsp;&nbsp;<a
+変更可能にするために <tt class="docutils literal"><span class="pre">n</span></tt> にあるすべての子孫にイテレートを直接行います。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/xmltree.nim#L419"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/xmltree.nim#L419" class="link-seesrc" target="_blank" >編集</a>
 

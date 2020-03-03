@@ -840,18 +840,18 @@ function main() {
     title="File = ptr CFile"><wbr />File<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#FileMode"
     title="FileMode = enum
-  fmRead,                     ## Open the file for read access only.
-  fmWrite,                    ## Open the file for write access only.
-          ## If the file does not exist, it will be
-          ## created. Existing files will be cleared!
-  fmReadWrite,                ## Open the file for read and write access.
-              ## If the file does not exist, it will be
-              ## created. Existing files will be cleared!
-  fmReadWriteExisting,        ## Open the file for read and write access.
-                      ## If the file does not exist, it will not be
-                      ## created. The existing file will not be cleared.
-  fmAppend                    ## Open the file for writing only; append data
-          ## at the end."><wbr />File<wbr />Mode<span class="attachedType"></span></a></li>
+  fmRead,                     ## 読み取りアクセス専用でファイルを開きます。
+  fmWrite,                    ## 書き込みアクセス専用でファイルを開きます。
+          ## ファイルがなければ作成します。
+          ## 既存ファイルは消去されます！
+  fmReadWrite,                ## 読み書きアクセス可能でファイルを開きます。
+              ## ファイルがなければ作成します。
+              ## 既存ファイルは消去されます！
+  fmReadWriteExisting,        ## 読み書きアクセス可能でファイルを開きます。
+                      ## ファイルがなくても作成しません。
+                      ## 既存ファイルは消去されません。
+  fmAppend                    ## 書き込み専用でファイルを開きます。
+          ## ファイル終端にデータを追記します。"><wbr />File<wbr />Mode<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#FileHandle"
     title="FileHandle = cint"><wbr />File<wbr />Handle<span class="attachedType"></span></a></li>
 
@@ -989,21 +989,21 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </dd>
 <a id="FileMode"></a>
 <dt><pre><span class="Identifier">FileMode</span> <span class="Other">=</span> <span class="Keyword">enum</span>
-  <span class="Identifier">fmRead</span><span class="Other">,</span>                     <span class="Comment">## Open the file for read access only.</span>
-  <span class="Identifier">fmWrite</span><span class="Other">,</span>                    <span class="Comment">## Open the file for write access only.</span>
-          <span class="Comment">## If the file does not exist, it will be</span>
-          <span class="Comment">## created. Existing files will be cleared!</span>
-  <span class="Identifier">fmReadWrite</span><span class="Other">,</span>                <span class="Comment">## Open the file for read and write access.</span>
-              <span class="Comment">## If the file does not exist, it will be</span>
-              <span class="Comment">## created. Existing files will be cleared!</span>
-  <span class="Identifier">fmReadWriteExisting</span><span class="Other">,</span>        <span class="Comment">## Open the file for read and write access.</span>
-                      <span class="Comment">## If the file does not exist, it will not be</span>
-                      <span class="Comment">## created. The existing file will not be cleared.</span>
-  <span class="Identifier">fmAppend</span>                    <span class="Comment">## Open the file for writing only; append data</span>
-          <span class="Comment">## at the end.</span></pre></dt>
+  <span class="Identifier">fmRead</span><span class="Other">,</span>                     <span class="Comment">## 読み取りアクセス専用でファイルを開きます。</span>
+  <span class="Identifier">fmWrite</span><span class="Other">,</span>                    <span class="Comment">## 書き込みアクセス専用でファイルを開きます。</span>
+          <span class="Comment">## ファイルがなければ作成します。</span>
+          <span class="Comment">## 既存ファイルは消去されます！</span>
+  <span class="Identifier">fmReadWrite</span><span class="Other">,</span>                <span class="Comment">## 読み書きアクセス可能でファイルを開きます。</span>
+              <span class="Comment">## ファイルがなければ作成します。</span>
+              <span class="Comment">## 既存ファイルは消去されます！</span>
+  <span class="Identifier">fmReadWriteExisting</span><span class="Other">,</span>        <span class="Comment">## 読み書きアクセス可能でファイルを開きます。</span>
+                      <span class="Comment">## ファイルがなくても作成しません。</span>
+                      <span class="Comment">## 既存ファイルは消去されません。</span>
+  <span class="Identifier">fmAppend</span>                    <span class="Comment">## 書き込み専用でファイルを開きます。</span>
+          <span class="Comment">## ファイル終端にデータを追記します。</span></pre></dt>
 <dd>
 
-The file mode when opening a file. &nbsp;&nbsp;<a
+ファイルを開くとき指定するファイルモードです。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L19"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L19" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1012,13 +1012,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Identifier">FileHandle</span> <span class="Other">=</span> <span class="Identifier">cint</span></pre></dt>
 <dd>
 
-
-
-type that represents an OS file handle; this is useful for low-level file access
-&nbsp;&nbsp;<a
+オペレーティング・システムにおけるファイルハンドル表現型です。これは低水準ファイルアクセスで有用です。 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L33"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L33" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L33" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 
@@ -1030,7 +1026,7 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Identifier">stdin</span><span class="Other">:</span> <span class="Identifier">File</span></pre></dt>
 <dd>
 
-The standard input stream. &nbsp;&nbsp;<a
+標準入力のストリーム。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L39"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L39" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1039,7 +1035,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Identifier">stdout</span><span class="Other">:</span> <span class="Identifier">File</span></pre></dt>
 <dd>
 
-The standard output stream. &nbsp;&nbsp;<a
+標準出力のストリーム。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L41"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L41" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1048,7 +1044,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Identifier">stderr</span><span class="Other">:</span> <span class="Identifier">File</span></pre></dt>
 <dd>
 
-The standard error stream. &nbsp;&nbsp;<a
+標準エラー出力のストリーム。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L43"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L43" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1063,7 +1059,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-reads <tt class="docutils literal"><span class="pre">len</span></tt> bytes into the buffer pointed to by <tt class="docutils literal"><span class="pre">buffer</span></tt>. Returns the actual number of bytes that have been read which may be less than <tt class="docutils literal"><span class="pre">len</span></tt> (if not as many bytes are remaining), but not greater. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">buffer</span></tt> により指されたバッファから <tt class="docutils literal"><span class="pre">len</span></tt> バイトを読み取ります。読み取られた実バイト数は  <tt class="docutils literal"><span class="pre">len</span></tt> 以上ではなく、それ以下 (残りバイト数と同数ではない) で返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L151"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L151" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1073,7 +1069,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-reads <tt class="docutils literal"><span class="pre">len</span></tt> bytes into the buffer <tt class="docutils literal"><span class="pre">a</span></tt> starting at <tt class="docutils literal"><span class="pre">a[start]</span></tt>. Returns the actual number of bytes that have been read which may be less than <tt class="docutils literal"><span class="pre">len</span></tt> (if not as many bytes are remaining), but not greater. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">a[start]</span></tt> を始点としてバッファ <tt class="docutils literal"><span class="pre">a</span></tt> に <tt class="docutils literal"><span class="pre">len</span></tt> バイトを読み取ります。読み取られた実バイト数は  <tt class="docutils literal"><span class="pre">len</span></tt> 以上ではなく、それ以下 (残りバイト数と同数ではない) で返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L159"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L159" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1083,8 +1079,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>reads <tt class="docutils literal"><span class="pre">len</span></tt> bytes into the buffer <tt class="docutils literal"><span class="pre">a</span></tt> starting at <tt class="docutils literal"><span class="pre">a[start]</span></tt>. Returns the actual number of bytes that have been read which may be less than <tt class="docutils literal"><span class="pre">len</span></tt> (if not as many bytes are remaining), but not greater.</p>
-<p><strong>Warning:</strong> The buffer <tt class="docutils literal"><span class="pre">a</span></tt> must be pre-allocated. This can be done using, for example, <tt class="docutils literal"><span class="pre">newString</span></tt>.</p>
+<p><tt class="docutils literal"><span class="pre">a[start]</span></tt> を始点としてバッファ <tt class="docutils literal"><span class="pre">a</span></tt> に <tt class="docutils literal"><span class="pre">len</span></tt> バイトを読み取ります。読み取られた実バイト数は  <tt class="docutils literal"><span class="pre">len</span></tt> 以上ではなく、それ以下 (残りバイト数と同数ではない) で返します。</p>
+<p><strong>警告:</strong> 事前にバッファ <tt class="docutils literal"><span class="pre">a</span></tt> の割り当てを必ず行ってください。この処理は <tt class="docutils literal"><span class="pre">newString</span></tt> などで行えます。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L166"
@@ -1096,7 +1092,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                              <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Writes a value to the file <tt class="docutils literal"><span class="pre">f</span></tt>. IO 例外が投げられます。&nbsp;&nbsp;<a
+ファイル <tt class="docutils literal"><span class="pre">f</span></tt> に値を書き込みます。IO 例外が投げられます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L178"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L178" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1106,7 +1102,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-writes the bytes of buffer pointed to by the parameter <tt class="docutils literal"><span class="pre">buffer</span></tt> to the file <tt class="docutils literal"><span class="pre">f</span></tt>. Returns the number of actual written bytes, which may be less than <tt class="docutils literal"><span class="pre">len</span></tt> in case of an error. &nbsp;&nbsp;<a
+バッファ <tt class="docutils literal"><span class="pre">buffer</span></tt> パラメータにより指されたバッファからバイトをファイル <tt class="docutils literal"><span class="pre">f</span></tt> へ書き込みます。書き込まれた実バイト数を返しますが、 <tt class="docutils literal"><span class="pre">len</span></tt> 以下ならばエラーになります。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L183"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L183" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1116,7 +1112,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">WriteIOEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-writes the bytes of <tt class="docutils literal"><span class="pre">a[start..start+len-1]</span></tt> to the file <tt class="docutils literal"><span class="pre">f</span></tt>. Returns the number of actual written bytes, which may be less than <tt class="docutils literal"><span class="pre">len</span></tt> in case of an error. &nbsp;&nbsp;<a
+ファイル <tt class="docutils literal"><span class="pre">f</span></tt> に <tt class="docutils literal"><span class="pre">a[start..start+len-1]</span></tt> のバイトを書き込みます。書き込まれた実バイト数を返しますが、 <tt class="docutils literal"><span class="pre">len</span></tt> 以下ならばエラーになります。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L191"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L191" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1126,7 +1122,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">WriteIOEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-writes the bytes of <tt class="docutils literal"><span class="pre">a[start..start+len-1]</span></tt> to the file <tt class="docutils literal"><span class="pre">f</span></tt>. Returns the number of actual written bytes, which may be less than <tt class="docutils literal"><span class="pre">len</span></tt> in case of an error. &nbsp;&nbsp;<a
+ファイル <tt class="docutils literal"><span class="pre">f</span></tt> に <tt class="docutils literal"><span class="pre">a[start..start+len-1]</span></tt> のバイトを書き込みます。書き込まれた実バイト数を返しますが、 <tt class="docutils literal"><span class="pre">len</span></tt> 以下ならばエラーになります。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L199"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L199" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1146,7 +1142,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#close%2CFile"><span class="Identifier">close</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <span class="Identifier">File</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Closes the file. &nbsp;&nbsp;<a
+ファイルを閉じます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L255"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L255" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1155,7 +1151,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#readChar%2CFile"><span class="Identifier">readChar</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <span class="Identifier">File</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">char</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Reads a single character from the stream <tt class="docutils literal"><span class="pre">f</span></tt>. Should not be used in performance sensitive code. &nbsp;&nbsp;<a
+ストリーム <tt class="docutils literal"><span class="pre">f</span></tt> から一文字を読み取ります。動作速度に敏感なコードでは使用しないでください。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L260"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L260" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1164,7 +1160,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#flushFile%2CFile"><span class="Identifier">flushFile</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <span class="Identifier">File</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">WriteIOEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Flushes <tt class="docutils literal"><span class="pre">f</span></tt>'s buffer. &nbsp;&nbsp;<a
+バッファ <tt class="docutils literal"><span class="pre">f</span></tt> をフラッシュします。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L269"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L269" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1173,7 +1169,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#getFileHandle%2CFile"><span class="Identifier">getFileHandle</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <span class="Identifier">File</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">FileHandle</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-returns the file handle of the file <tt class="docutils literal"><span class="pre">f</span></tt>. This is only useful for platform specific programming. Note that on Windows this doesn't return the Windows-specific handle, but the C library's notion of a handle, whatever that means. Use <tt class="docutils literal"><span class="pre">getOsFileHandle</span></tt> instead. &nbsp;&nbsp;<a
+ファイル <tt class="docutils literal"><span class="pre">f</span></tt> のファイルハンドルを返します。これはプラットフォーム固有のプログラミングに限り有用です。そのため、 Windows では Windows  固有のハンドルではなく、 C ライブラリにおけるハンドル概念を返すこと注意してください。代わりに <tt class="docutils literal"><span class="pre">getOsFileHandle</span></tt> をお使いください。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L273"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L273" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1182,7 +1178,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#getOsFileHandle%2CFile"><span class="Identifier">getOsFileHandle</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <span class="Identifier">File</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">FileHandle</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-returns the OS file handle of the file <tt class="docutils literal"><span class="pre">f</span></tt>. This is only useful for platform specific programming. &nbsp;&nbsp;<a
+ファイル <tt class="docutils literal"><span class="pre">f</span></tt> のオペレーティング・システムにおけるファイルハンドルを返します。これはプラットフォーム固有のプログラミングに限り有用です。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L281"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L281" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1192,9 +1188,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-reads a line of text from the file <tt class="docutils literal"><span class="pre">f</span></tt> into <tt class="docutils literal"><span class="pre">line</span></tt>. IO 例外が投げられます。A line of text may be delimited by <tt class="docutils literal"><span class="pre">LF</span></tt> or <tt class="docutils literal"><span class="pre">CRLF</span></tt>. 改行文字は返された文字列の一部ではありません。Returns <tt class="docutils literal"><span class="pre">false</span></tt> if the end of the file has been reached, <tt class="docutils literal"><span class="pre">true</span></tt> otherwise. If <tt class="docutils literal"><span class="pre">false</span></tt> is returned <tt class="docutils literal"><span class="pre">line</span></tt> contains no new data. &nbsp;&nbsp;<a
+ファイル <tt class="docutils literal"><span class="pre">f</span></tt> にある <tt class="docutils literal"><span class="pre">line</span></tt> からテキストを一行読み取ります。IO 例外が投げられます。テキスト行の区切り文字は <tt class="docutils literal"><span class="pre">LF</span></tt> または <tt class="docutils literal"><span class="pre">CRLF</span></tt> です。改行文字は返された文字列の一部ではありません。ファイル終端へ到達したならば <tt class="docutils literal"><span class="pre">false</span></tt> を、そうでなければ <tt class="docutils literal"><span class="pre">true</span></tt> を返します。<tt class="docutils literal"><span class="pre">false</span></tt> が返されたならば、データに新しい <tt class="docutils literal"><span class="pre">line</span></tt> はありません。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L291"
-class="link-seesrc" target="_blank">Source</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L291" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L291" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="readLine,File"></a>
@@ -1202,7 +1198,7 @@ class="link-seesrc" target="_blank">Source</a> <a href="https://github.com/nim-l
                                     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-reads a line of text from the file <tt class="docutils literal"><span class="pre">f</span></tt>. IO 例外が投げられます。A line of text may be delimited by <tt class="docutils literal"><span class="pre">LF</span></tt> or <tt class="docutils literal"><span class="pre">CRLF</span></tt>. 改行文字は返された文字列の一部ではありません。&nbsp;&nbsp;<a
+ファイル <tt class="docutils literal"><span class="pre">f</span></tt> からテキストを一行読み取ります。IO 例外が投げられます。テキスト行の区切り文字は <tt class="docutils literal"><span class="pre">LF</span></tt> または <tt class="docutils literal"><span class="pre">CRLF</span></tt> です。改行文字は返された文字列の一部ではありません。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L338"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L338" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1285,7 +1281,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#endOfFile%2CFile"><span class="Identifier">endOfFile</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <span class="Identifier">File</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Returns true iff <tt class="docutils literal"><span class="pre">f</span></tt> is at the end. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">f</span></tt> が終端に到達した場合に限り true を返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L398"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L398" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1295,8 +1291,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                                       <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Reads all data from the stream <tt class="docutils literal"><span class="pre">file</span></tt>.</p>
-<p>Raises an IO exception in case of an error. It is an error if the current file position is not at the beginning of the file.</p>
+<p>ストリーム <tt class="docutils literal"><span class="pre">file</span></tt> からのすべてのデータを読み取ります。</p>
+<p>エラー時は IO 例外が発生します。現在のファイル位置がファイルの先頭でなければエラーになります。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L422"
@@ -1308,7 +1304,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-writes the values <tt class="docutils literal"><span class="pre">x</span></tt> to <tt class="docutils literal"><span class="pre">f</span></tt> and then writes "\n". IO 例外が投げられます。&nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">f</span></tt> へ 値 <tt class="docutils literal"><span class="pre">x</span></tt> を書き込み後に  "\n" を書き込みます。IO 例外が投げられます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L444"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L444" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1318,8 +1314,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Opens a file named <tt class="docutils literal"><span class="pre">filename</span></tt> with given <tt class="docutils literal"><span class="pre">mode</span></tt>.</p>
-<p>Default mode is readonly. Returns true iff the file could be opened. This throws no exception if the file could not be opened.</p>
+<p><tt class="docutils literal"><span class="pre">mode</span></tt> を指定してファイル名 <tt class="docutils literal"><span class="pre">filename</span></tt> のファイルを開きます。</p>
+<p>デフォルトのモードは読み取り専用 (readonly) です。ファイルを開けたときに限り true を返します。これでファイルが開けなくても例外は投げません。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L518"
@@ -1331,8 +1327,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>reopens the file <tt class="docutils literal"><span class="pre">f</span></tt> with given <tt class="docutils literal"><span class="pre">filename</span></tt> and <tt class="docutils literal"><span class="pre">mode</span></tt>. This is often used to redirect the <tt class="docutils literal"><span class="pre">stdin</span></tt>, <tt class="docutils literal"><span class="pre">stdout</span></tt> or <tt class="docutils literal"><span class="pre">stderr</span></tt> file variables.</p>
-<p>Default mode is readonly. Returns true iff the file could be reopened.</p>
+<p><tt class="docutils literal"><span class="pre">filename</span></tt> と <tt class="docutils literal"><span class="pre">mode</span></tt> を指定してファイル <tt class="docutils literal"><span class="pre">f</span></tt> を開き直します。これは <tt class="docutils literal"><span class="pre">stdin</span></tt>, <tt class="docutils literal"><span class="pre">stdout</span></tt> または <tt class="docutils literal"><span class="pre">stderr</span></tt> ファイル変数をリダイレクトするときによく使われます。</p>
+<p>デフォルトのモードは読み取り専用 (readonly) です。ファイルを開き直せたときに限り true を返します。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L543"
@@ -1344,8 +1340,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Creates a <tt class="docutils literal"><span class="pre">File</span></tt> from a <tt class="docutils literal"><span class="pre">filehandle</span></tt> with given <tt class="docutils literal"><span class="pre">mode</span></tt>.</p>
-<p>Default mode is readonly. Returns true iff the file could be opened.</p>
+<p><tt class="docutils literal"><span class="pre">mode</span></tt> を指定して <tt class="docutils literal"><span class="pre">filehandle</span></tt> から <tt class="docutils literal"><span class="pre">File</span></tt> を作成します。</p>
+<p>デフォルトのモードは読み取り専用 (readonly) です。ファイルを開けたときに限り true を返します。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L553"
@@ -1357,8 +1353,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Opens a file named <tt class="docutils literal"><span class="pre">filename</span></tt> with given <tt class="docutils literal"><span class="pre">mode</span></tt>.</p>
-<p>Default mode is readonly. Raises an <tt class="docutils literal"><span class="pre">IOError</span></tt> if the file could not be opened.</p>
+<p><tt class="docutils literal"><span class="pre">mode</span></tt> を指定してファイル名 <tt class="docutils literal"><span class="pre">filename</span></tt> のファイルを開きます。</p>
+<p>デフォルトのモードは読み取り専用 (readonly) です。ファイルが開けないときは <tt class="docutils literal"><span class="pre">IOError</span></tt> が発生します。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L562"
@@ -1370,7 +1366,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-sets the position of the file pointer that is used for read/write operations. ファイルの先頭バイト位置はインデックス 0 です。&nbsp;&nbsp;<a
+読み書き処理で使うファイルポインタの位置を設定します。ファイルの先頭バイト位置はインデックス 0 です。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L571"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L571" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1379,7 +1375,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#getFilePos%2CFile"><span class="Identifier">getFilePos</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <span class="Identifier">File</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int64</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-retrieves the current position of the file pointer that is used to read from the file <tt class="docutils literal"><span class="pre">f</span></tt>. ファイルの先頭バイト位置はインデックス 0 です。&nbsp;&nbsp;<a
+ファイル <tt class="docutils literal"><span class="pre">f</span></tt> からの読み取り使われるファイルポインタの現在位置を取得します。ファイルの先頭バイト位置はインデックス 0 です。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L577"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L577" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1389,7 +1385,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                                <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-retrieves the file size (in bytes) of <tt class="docutils literal"><span class="pre">f</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">f</span></tt> のファイルサイズを取得します (バイト単位)。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L583"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L583" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1398,7 +1394,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#setStdIoUnbuffered"><span class="Identifier">setStdIoUnbuffered</span></a><span class="Other">(</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Configures <tt class="docutils literal"><span class="pre">stdin</span></tt>, <tt class="docutils literal"><span class="pre">stdout</span></tt> and <tt class="docutils literal"><span class="pre">stderr</span></tt> to be unbuffered. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">stdin</span></tt>, <tt class="docutils literal"><span class="pre">stdout</span></tt>, および <tt class="docutils literal"><span class="pre">stderr</span></tt> をバッファリングなしへ設定します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L590"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L590" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1408,7 +1404,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Opens a file named <tt class="docutils literal"><span class="pre">filename</span></tt> for reading, calls <a class="reference external" href="#readAll,File">readAll</a> and closes the file afterwards. Returns the string. Raises an IO exception in case of an error. If you need to call this inside a compile time macro you can use <a class="reference external" href="system.html#staticRead,string">staticRead</a>. &nbsp;&nbsp;<a
+読み取るためにファイル名 <tt class="docutils literal"><span class="pre">filename</span></tt> のファイルを開き、 <a class="reference external" href="#readAll,File">readAll</a> を呼び出してからファイルを閉じます。文字列を返します。エラー時は IO 例外が発生します。これをコンパイル時マクロ内で呼び出す必要があるときは <a class="reference external" href="system.html#staticRead,string">staticRead</a> を使います。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L660"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L660" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1418,7 +1414,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                                         <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Opens a file named <tt class="docutils literal"><span class="pre">filename</span></tt> for writing. Then writes the <tt class="docutils literal"><span class="pre">content</span></tt> completely to the file and closes the file afterwards. Raises an IO exception in case of an error. &nbsp;&nbsp;<a
+ファイル名 <tt class="docutils literal"><span class="pre">filename</span></tt> を開いて書き込みます。その後、ファイルの内容として <tt class="docutils literal"><span class="pre">content</span></tt> を完全に書き込んでからファイルを閉じます。エラー時は IO 例外が発生します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L675"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L675" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1428,7 +1424,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">EOFError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-read <tt class="docutils literal"><span class="pre">n</span></tt> lines from the file named <tt class="docutils literal"><span class="pre">filename</span></tt>. Raises an IO exception in case of an error. Raises EOF if file does not contain at least <tt class="docutils literal"><span class="pre">n</span></tt> lines. Available at compile time. A line of text may be delimited by <tt class="docutils literal"><span class="pre">LF</span></tt> or <tt class="docutils literal"><span class="pre">CRLF</span></tt>. The newline character(s) are not part of the returned strings. &nbsp;&nbsp;<a
+ファイル名 <tt class="docutils literal"><span class="pre">filename</span></tt> から <tt class="docutils literal"><span class="pre">n</span></tt> 行を読み取ります。エラー時は IO 例外が発生します。ファイル内容が <tt class="docutils literal"><span class="pre">n</span></tt> 行よりも少ないときは EOF が発生します。コンパイル時に利用可能です。テキスト行の区切り文字は <tt class="docutils literal"><span class="pre">LF</span></tt> または <tt class="docutils literal"><span class="pre">CRLF</span></tt> です。改行文字は返された文字列の一部ではありません。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L689"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L689" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1439,8 +1435,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
   <div class="deprecation-message">
-    <b>Deprecated:</b> use readLines with two arguments
-  
+    <b>廃止:</b> readLines に引数を二つ指定してください。
   </div>
 
 
@@ -1459,8 +1454,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Iterates over any line in the file named <tt class="docutils literal"><span class="pre">filename</span></tt>.</p>
-<p>If the file does not exist <tt class="docutils literal"><span class="pre">IOError</span></tt> is raised. The trailing newline character(s) are removed from the iterated lines. 用例:</p>
+<p>ファイル名 <tt class="docutils literal"><span class="pre">filename</span></tt> にあるすべての行をイテレートします。</p>
+<p>ファイルがないときは <tt class="docutils literal"><span class="pre">IOError</span></tt> が発生します。末尾にある改行文字はイテレートされた行から削除されます。用例:</p>
 <pre class="listing"><span class="Keyword">import</span> <span class="Identifier">strutils</span>
 
 <span class="Keyword">proc</span> <span class="Identifier">transformLetters</span><span class="Punctuation">(</span><span class="Identifier">filename</span><span class="Punctuation">:</span> <span class="Identifier">string</span><span class="Punctuation">)</span> <span class="Operator">=</span>
@@ -1477,8 +1472,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#lines.i%2CFile"><span class="Identifier">lines</span></a><span class="Other">(</span><span class="Identifier">f</span><span class="Other">:</span> <span class="Identifier">File</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">TaintedString</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Iterate over any line in the file <tt class="docutils literal"><span class="pre">f</span></tt>.</p>
-<p>The trailing newline character(s) are removed from the iterated lines. 用例:</p>
+<p>ファイル <tt class="docutils literal"><span class="pre">f</span></tt> にあるすべての行をイテレートします。</p>
+<p>末尾にある改行文字はイテレートされた行から削除されます。用例:</p>
 <pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">countZeros</span><span class="Punctuation">(</span><span class="Identifier">filename</span><span class="Punctuation">:</span> <span class="Identifier">File</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Keyword">tuple</span><span class="Punctuation">[</span><span class="Identifier">lines</span><span class="Punctuation">,</span> <span class="Identifier">zeros</span><span class="Punctuation">:</span> <span class="Identifier">int</span><span class="Punctuation">]</span> <span class="Operator">=</span>
   <span class="Keyword">for</span> <span class="Identifier">line</span> <span class="Keyword">in</span> <span class="Identifier">filename</span><span class="Operator">.</span><span class="Identifier">lines</span><span class="Punctuation">:</span>
     <span class="Keyword">for</span> <span class="Identifier">letter</span> <span class="Keyword">in</span> <span class="Identifier">line</span><span class="Punctuation">:</span>
@@ -1499,7 +1494,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">template</span> <a href="#stdmsg.t"><span class="Identifier">stdmsg</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">File</span></pre></dt>
 <dd>
 
-Template which expands to either stdout or stderr depending on <tt class="docutils literal"><span class="pre">useStdoutAsStdmsg</span></tt> compile-time switch. &nbsp;&nbsp;<a
+コンパイル時スイッチ <tt class="docutils literal"><span class="pre">useStdoutAsStdmsg</span></tt> の指定時に stdout または stderr を展開するためのテンプレートです。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/io.nim#L49"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/io.nim#L49" class="link-seesrc" target="_blank" >編集</a>
 

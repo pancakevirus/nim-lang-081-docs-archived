@@ -897,8 +897,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">template</span> <a href="#assert.t%2Cuntyped%2Cstring"><span class="Identifier">assert</span></a><span class="Other">(</span><span class="Identifier">cond</span><span class="Other">:</span> <span class="Identifier">untyped</span><span class="Other">;</span> <span class="Identifier">msg</span> <span class="Other">=</span> <span class="StringLit">""</span><span class="Other">)</span></pre></dt>
 <dd>
 
-<p>Raises <tt class="docutils literal"><span class="pre">AssertionError</span></tt> with <tt class="docutils literal"><span class="pre">msg</span></tt> if <tt class="docutils literal"><span class="pre">cond</span></tt> is false. Note that <tt class="docutils literal"><span class="pre">AssertionError</span></tt> is hidden from the effect system, so it doesn't produce <tt class="docutils literal"><span class="pre">{.raises: [AssertionError].}</span></tt>. This exception is only supposed to be caught by unit testing frameworks.</p>
-<p>The compiler may not generate any code at all for <tt class="docutils literal"><span class="pre">assert</span></tt> if it is advised to do so through the <tt class="docutils literal"><span class="pre">-d:danger</span></tt> or <tt class="docutils literal"><span class="pre">--assertions:off</span></tt> <a class="reference external" href="nimc.html#compiler-usage-command-line-switches">command line switches</a>.</p>
+<p><tt class="docutils literal"><span class="pre">cond</span></tt> が false ならば、 <tt class="docutils literal"><span class="pre">msg</span></tt> と共に <tt class="docutils literal"><span class="pre">AssertionError</span></tt> を発生します。エフェクトシステム側では <tt class="docutils literal"><span class="pre">AssertionError</span></tt> は不可視であるため、 <tt class="docutils literal"><span class="pre">{.raises: [AssertionError].}</span></tt> は生成されないことに注意してください。この例外はフレームワークのユニットテストに限り捕えられることを想定しています。</p>
+<p>コンパイラで <tt class="docutils literal"><span class="pre">assert</span></tt> のコードを一切生成しないようにするには、<a class="reference external" href="nimc.html#compiler-usage-command-line-switches">コマンドラインスイッチ</a>として <tt class="docutils literal"><span class="pre">-d:danger</span></tt> または <tt class="docutils literal"><span class="pre">--assertions:off</span></tt> を渡すことをお勧めします。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/assertions.nim#L40"
@@ -909,7 +909,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">template</span> <a href="#doAssert.t%2Cuntyped%2Cstring"><span class="Identifier">doAssert</span></a><span class="Other">(</span><span class="Identifier">cond</span><span class="Other">:</span> <span class="Identifier">untyped</span><span class="Other">;</span> <span class="Identifier">msg</span> <span class="Other">=</span> <span class="StringLit">""</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Similar to <tt class="docutils literal"><span class="pre">assert</span></tt> but is always turned on regardless of <tt class="docutils literal"><span class="pre">--assertions</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">assert</span></tt> と似ていますが、 <tt class="docutils literal"><span class="pre">--assertions</span></tt> オプションの指定にかかわらずアサーションは有効になります。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/assertions.nim#L52"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/assertions.nim#L52" class="link-seesrc" target="_blank" >編集</a>
 
@@ -918,10 +918,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">template</span> <a href="#onFailedAssert.t%2Cuntyped%2Cuntyped"><span class="Identifier">onFailedAssert</span></a><span class="Other">(</span><span class="Identifier">msg</span><span class="Other">,</span> <span class="Identifier">code</span><span class="Other">:</span> <span class="Identifier">untyped</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">untyped</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">dirty</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Sets an assertion failure handler that will intercept any assert statements following <tt class="docutils literal"><span class="pre">onFailedAssert</span></tt> in the current module scope.<pre class="listing"><span class="Comment"># module-wide policy to change the failed assert</span>
-<span class="Comment"># exception type in order to include a lineinfo</span>
+現在のモジュールスコープにある <tt class="docutils literal"><span class="pre">onFailedAssert</span></tt> に従い assert ステートメントを妨害するアサーション失敗ハンドラを設定します。<pre class="listing"><span class="Comment"># lineinfo があるときに例外型で失敗するよう</span>
+<span class="Comment"># モジュール規模の方針を変更します</span>
 <span class="Identifier">onFailedAssert</span><span class="Punctuation">(</span><span class="Identifier">msg</span><span class="Punctuation">)</span><span class="Punctuation">:</span>
   <span class="Keyword">var</span> <span class="Identifier">e</span> <span class="Operator">=</span> <span class="Identifier">new</span><span class="Punctuation">(</span><span class="Identifier">TMyError</span><span class="Punctuation">)</span>
   <span class="Identifier">e</span><span class="Operator">.</span><span class="Identifier">msg</span> <span class="Operator">=</span> <span class="Identifier">msg</span>
@@ -936,7 +934,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">template</span> <a href="#doAssertRaises.t%2Ctypedesc%2Cuntyped"><span class="Identifier">doAssertRaises</span></a><span class="Other">(</span><span class="Identifier">exception</span><span class="Other">:</span> <span class="Identifier">typedesc</span><span class="Other">;</span> <span class="Identifier">code</span><span class="Other">:</span> <span class="Identifier">untyped</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Raises <tt class="docutils literal"><span class="pre">AssertionError</span></tt> if specified <tt class="docutils literal"><span class="pre">code</span></tt> does not raise the specified exception. 用例:<pre class="listing"><span class="Identifier">doAssertRaises</span><span class="Punctuation">(</span><span class="Identifier">ValueError</span><span class="Punctuation">)</span><span class="Punctuation">:</span>
+指定の <tt class="docutils literal"><span class="pre">code</span></tt> で指定された例外が起きないときは <tt class="docutils literal"><span class="pre">AssertionError</span></tt> を発生します。用例:<pre class="listing"><span class="Identifier">doAssertRaises</span><span class="Punctuation">(</span><span class="Identifier">ValueError</span><span class="Punctuation">)</span><span class="Punctuation">:</span>
   <span class="Keyword">raise</span> <span class="Identifier">newException</span><span class="Punctuation">(</span><span class="Identifier">ValueError</span><span class="Punctuation">,</span> <span class="StringLit">"Hello World"</span><span class="Punctuation">)</span></pre>
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/assertions.nim#L74"
