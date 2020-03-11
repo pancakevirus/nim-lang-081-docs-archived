@@ -1071,7 +1071,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">FutureError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>読み終えるまで指定された先行ストリーム (FutureStream) からデータを読み取ります。読み取られたデータは直ちにファイルへ書き込みを行い、メモリから削除されます。</p>
+<p>読み終えるまで指定された Future ストリームからデータを読み取ります。読み取られたデータは直ちにファイルへ書き込みを行い、メモリから削除されます。</p>
 <p>このプロシージャはメモリを無駄にせずにストリーム形式のデータをファイルへ保存するのに理想的です。</p>
 
 &nbsp;&nbsp;<a
@@ -1084,7 +1084,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">FutureError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-ファイルから読み取りを行い、指定された先行ストリーム (FutureStream) へデータを書き込みます。&nbsp;&nbsp;<a
+ファイルから読み取りを行い、指定された Future ストリームへデータを書き込みます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/asyncfile.nim#L522"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncfile.nim#L522" class="link-seesrc" target="_blank" >編集</a>
 

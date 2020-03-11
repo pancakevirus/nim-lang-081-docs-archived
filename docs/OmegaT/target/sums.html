@@ -869,7 +869,7 @@ function main() {
 <dt><pre><span class="Keyword">func</span> <a href="#sumKbn%2CopenArray%5BT%5D"><span class="Identifier">sumKbn</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <a href="system.html#openArray"><span class="Identifier">openArray</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span></pre></dt>
 <dd>
 
-Kahan (compensated) summation: O(1) error growth, at the expense of a considerable increase in computational expense. &nbsp;&nbsp;<a
+カハン法による総和 (補正加算): 誤差成長 O(1) は、代償として計算量の相当な増加があります。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/std/sums.nim#L12"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/std/sums.nim#L12" class="link-seesrc" target="_blank" >編集</a>
 
@@ -878,11 +878,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">func</span> <a href="#sumPairs%2CopenArray%5BT%5D"><span class="Identifier">sumPairs</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <a href="system.html#openArray"><span class="Identifier">openArray</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span></pre></dt>
 <dd>
 
-<p>Pairwise (cascade) summation of <tt class="docutils literal"><span class="pre">x[i0:i0+n-1]</span></tt>, with O(log n) error growth (vs O(n) for a simple loop) with negligible performance cost if the base case is large enough.</p>
-<p>See, e.g.:</p>
+<p><tt class="docutils literal"><span class="pre">x[i0:i0+n-1]</span></tt> のペアワイズ (カスケード) 法による総和において、規範事例が十分に大きいならば誤差成長 O(log n) の負荷効率は無視できるほど小さいです (線形ループ O(n) との比較)。</p>
+<p>参考文献:</p>
 <ul class="simple"><li><a class="reference external" href="http://en.wikipedia.org/wiki/Pairwise_summation">http://en.wikipedia.org/wiki/Pairwise_summation</a> Higham, Nicholas J. (1993), "The accuracy of floating point summation", SIAM Journal on Scientific Computing 14 (4): 783–799.</li>
 </ul>
-<p>In fact, the root-mean-square error growth, assuming random roundoff errors, is only O(sqrt(log n)), which is nearly indistinguishable from O(1) in practice. 参考文献:</p>
+<p>実際、偶発的な端数切り捨て誤差を想定しているため、 O(sqrt(log n)) となるだけです。実用上は O(1) との区別はほぼできません。 参考文献:</p>
 <ul class="simple"><li>Manfred Tasche and Hansmartin Zeuner, Handbook of Analytic-Computational Methods in Applied Mathematics (2000).</li>
 </ul>
 

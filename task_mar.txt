@@ -1,14 +1,30 @@
+----------------------------------------------------------------------[ project 1: ]
+(J) critbits.krydoc           : tmx 変換待ち
+(J) cstrutils.krydoc          : tmx 変換待ち
+(J) cgi-000.krydoc            : tmx 変換待ち
+(J) asyncstreams-000.krydoc   : tmx 変換待ち
+(J) estp-000.krydoc           : tmx 変換待ち
+
+(J) smtp-000.krydoc           : OmegaT への原稿反映完了 (tmx 変換待ち)
+(J) openssl-000.krydoc        : OmegaT への原稿反映完了 (tmx 変換待ち)
+(J) nimscript-000.krydoc      : OmegaT への原稿反映完了 (tmx 変換待ち)
+(J) sums-000.krydoc           : OmegaT への原稿反映完了 (tmx 変換待ち)
+
+next  : 4 / 5
+total aims : 10 (11日)
+
+
+current task:
+	3: channels
+	4: lib
+
 ----------------------------------------------------------------------
-sums
-cgi
-lib
 lexbase
 threads
-channels
-openssl
 diff
 stats
 strmisc
+docgen
 ----------------------------------------------------------------------
 math
 uri
@@ -19,18 +35,13 @@ db_postgres
 db_mysql
 db_sqlite
 db_common
-smtp
 ----------------------------------------------------------------------
-cstrutils
 ropes
 times
 osproc
 memfiles
-estp
 apis
 niminst
 deques
-nimscript
-----------------------------------------------------------------------
-docgen
 hashes
+----------------------------------------------------------------------

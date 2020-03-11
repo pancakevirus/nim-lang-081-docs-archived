@@ -844,18 +844,18 @@ function main() {
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#JsonEventKind"
     title="JsonEventKind = enum
-  jsonError,                  ## an error occurred during parsing
-  jsonEof,                    ## end of file reached
-  jsonString,                 ## a string literal
-  jsonInt,                    ## an integer literal
-  jsonFloat,                  ## a float literal
-  jsonTrue,                   ## the value ``true``
-  jsonFalse,                  ## the value ``false``
-  jsonNull,                   ## the value ``null``
-  jsonObjectStart,            ## start of an object: the ``{`` token
-  jsonObjectEnd,              ## end of an object: the ``}`` token
-  jsonArrayStart,             ## start of an array: the ``[`` token
-  jsonArrayEnd                ## start of an array: the ``]`` token"><wbr />Json<wbr />Event<wbr />Kind<span class="attachedType"></span></a></li>
+  jsonError,                  ## 構文解析中のエラー発生
+  jsonEof,                    ## ファイル終端へ到達
+  jsonString,                 ## 文字列リテラル
+  jsonInt,                    ## 整数リテラル
+  jsonFloat,                  ## 浮動小数リテラル
+  jsonTrue,                   ## ``true`` 値
+  jsonFalse,                  ## ``false`` 値
+  jsonNull,                   ## ``null`` 値
+  jsonObjectStart,            ## オブジェクトの開始: ``{`` トークン
+  jsonObjectEnd,              ## オブジェクトの終了: ``}`` トークン
+  jsonArrayStart,             ## 配列の開始: ``[`` トークン
+  jsonArrayEnd                ## 配列の終了: ``]`` トークン"><wbr />Json<wbr />Event<wbr />Kind<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#TokKind"
     title="TokKind = enum
   tkError, tkEof, tkString, tkInt, tkFloat, tkTrue, tkFalse, tkNull, tkCurlyLe,
@@ -1177,7 +1177,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#getFilename%2CJsonParser"><span class="Identifier">getFilename</span></a><span class="Other">(</span><span class="Identifier">my</span><span class="Other">:</span> <a href="parsejson.html#JsonParser"><span class="Identifier">JsonParser</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-get the filename of the file that the parser processes. &nbsp;&nbsp;<a
+パーサーで処理するファイルの名前を取得します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/parsejson.nim#L149"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/parsejson.nim#L149" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1186,13 +1186,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#errorMsg%2CJsonParser"><span class="Identifier">errorMsg</span></a><span class="Other">(</span><span class="Identifier">my</span><span class="Other">:</span> <a href="parsejson.html#JsonParser"><span class="Identifier">JsonParser</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns a helpful error message for the event <tt class="docutils literal"><span class="pre">jsonError</span></tt>
-&nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">jsonError</span></tt> イベントの手掛かりとなるエラーメッセージを返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/parsejson.nim#L153"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/parsejson.nim#L153" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/parsejson.nim#L153" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="errorMsgExpected,JsonParser,string"></a>
@@ -1200,13 +1196,9 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns an error message "<tt class="docutils literal"><span class="pre">e</span></tt> expected" in the same format as the other error messages
-&nbsp;&nbsp;<a
+ほかのエラーメッセージと同じ書式でエラーメッセージ "<tt class="docutils literal"><span class="pre">e</span></tt> expected" を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/parsejson.nim#L159"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/parsejson.nim#L159" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/parsejson.nim#L159" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="parseEscapedUTF16,cstring,int"></a>
@@ -1234,7 +1226,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#next%2CJsonParser"><span class="Identifier">next</span></a><span class="Other">(</span><span class="Identifier">my</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="parsejson.html#JsonParser"><span class="Identifier">JsonParser</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-retrieves the first/next event. This controls the parser. &nbsp;&nbsp;<a
+first/next イベントを取得します。これはパーサーを制御します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/parsejson.nim#L403"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/parsejson.nim#L403" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1244,7 +1236,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">JsonParsingError</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-raises an <tt class="docutils literal"><span class="pre">EJsonParsingError</span></tt> exception. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">EJsonParsingError</span></tt> 例外を発生させます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/parsejson.nim#L520"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/parsejson.nim#L520" class="link-seesrc" target="_blank" >編集</a>
 

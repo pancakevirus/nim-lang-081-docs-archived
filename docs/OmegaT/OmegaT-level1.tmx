@@ -186,6 +186,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>## would have been done.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T034845Z" creationid="isVowel" creationdate="20200310T034230Z">
+        <seg>## スクリプトの処理結果を表示します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>--ext:EX1|EX2|...</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T040600Z" creationid="isVowel" creationdate="20200130T040600Z">
@@ -1373,6 +1381,15 @@ proc helloWorld*(times: int) =</seg>
       </tuv>
     </tu>
     <tu>
+      <note>「vertsion of exec」は「exec の派生版」と意訳しています。「～空を出力する exec のバージョン」では少し曖昧なものでして。</note>
+      <tuv lang="EN-US">
+        <seg>Note: If you need a version of exec that returns the exit code and text output of the command, you can use system.gorgeEx.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T085005Z" creationid="isVowel" creationdate="20200310T085005Z">
+        <seg>備考: 終了コードを返してコマンドのテキストを出力する exec の派生版が必要ならば、 system.gorgeEx が使えます。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv lang="EN-US">
         <seg>Note: Import packages/docutils/highlite to use this module</seg>
       </tuv>
@@ -1410,6 +1427,14 @@ proc helloWorld*(times: int) =</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T175923Z" creationid="isVowel" creationdate="20200212T175923Z">
         <seg>備考: JavaScript バックエンドでは利用できません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note: Only the connection parameter is used for sqlite.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T073922Z" creationid="isVowel" creationdate="20200306T073901Z">
+        <seg>備考:connection パラメータは sqlite 専用です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1558,6 +1583,30 @@ echo k
 #   &lt;myTag&gt;テキスト&lt;!-- これはコメントです --&gt;&lt;/myTag&gt;
 #   &lt;secondTag&gt;&amp;エンティティ;&lt;/secondTag&gt;
 # &lt;/treeTag&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>let db = open("mytest.db", "", "", "")
+
+# Records of my_table:
+# | id | name     |
+# |----|----------|
+# |  1 | item#1   |
+# |  2 | item#2   |
+
+for row in db.rows(sql"SELECT id, name FROM my_table"):</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T081952Z" creationid="isVowel" creationdate="20200306T081952Z">
+        <seg>let db = open("mytest.db", "", "", "")
+
+# my_table のレコード:
+# | id | name     |
+# |----|----------|
+# |  1 | item#1   |
+# |  2 | item#2   |
+
+for row in db.rows(sql"SELECT id, name FROM my_table"):</seg>
       </tuv>
     </tu>
     <tu>
@@ -1766,6 +1815,14 @@ assert m.getMimetype("FaKeXT") == "text/fakelang"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>dbNull,                     ## datatype used for the NULL value</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T051522Z" creationid="isVowel" creationdate="20200308T051522Z">
+        <seg>dbNull,                     ## NULL 値で使われるデータ型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>pcDir,                      ## path refers to a directory</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T072004Z" creationid="isVowel" creationdate="20200116T072004Z">
@@ -1902,10 +1959,26 @@ assert m.getMimetype("FaKeXT") == "text/fakelang"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Silent,                     ## Be silent.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T034344Z" creationid="isVowel" creationdate="20200310T034344Z">
+        <seg>Silent,                     ## 無表示。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Windows,                    ## some version of Windows</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200131T095701Z" creationid="isVowel" creationdate="20200131T095701Z">
         <seg>Windows,                    ## Windows のバージョン</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>dbBit,                      ## bit datatype</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T051530Z" creationid="isVowel" creationdate="20200308T051530Z">
+        <seg>dbBit,                      ## ビットによるデータ型</seg>
       </tuv>
     </tu>
     <tu>
@@ -2078,10 +2151,26 @@ assert m.getMimetype("FaKeXT") == "text/fakelang"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Verbose,                    ## Be verbose.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T034353Z" creationid="isVowel" creationdate="20200310T034353Z">
+        <seg>Verbose,                    ## 詳細表示。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>ai_socktype*: cint           ## Socket type.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T083429Z" creationid="isVowel" creationdate="20200208T083429Z">
         <seg>ai_socktype*: cint           ## ソケットの種類。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>dbBool,                     ## boolean datatype</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T051542Z" creationid="isVowel" creationdate="20200308T051537Z">
+        <seg>dbBool,                     ## ブールによるデータ型</seg>
       </tuv>
     </tu>
     <tu>
@@ -2262,6 +2351,14 @@ proc pass2(f: proc (x, y: float): float): float =</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Whatif                      ## Do not run commands, instead just echo what</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T034606Z" creationid="isVowel" creationdate="20200310T034439Z">
+        <seg>Whatif                      ## コマンドは実行しませんが、</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>b: ref B
 
 new(b)
@@ -2292,6 +2389,14 @@ assert c.f == 2
 # マーシャル
 let s = $$c
 assert s == """{"f": 2}"""</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>dbBlob,                     ## blob datatype</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T051549Z" creationid="isVowel" creationdate="20200308T051549Z">
+        <seg>dbBlob,                     ## バイナリ形式の大規模オブジェクト (blob) によるデータ型</seg>
       </tuv>
     </tu>
     <tu>
@@ -2384,6 +2489,14 @@ assert s == """{"f": 2}"""</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>## would have been done.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T034837Z" creationid="isVowel" creationdate="20200310T034456Z">
+        <seg>## スクリプトの処理結果を表示します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>fmAppend                    ## Open the file for writing only; append data</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200303T021634Z" creationid="isVowel" creationdate="20200303T021634Z">
@@ -2444,6 +2557,14 @@ assert s == """{"f": 2}"""</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T083438Z" creationid="isVowel" creationdate="20200208T083438Z">
         <seg>ai_protocol*: cint           ## ソケットのプロトコル。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>dbFixedChar,                ## string of fixed length</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T051600Z" creationid="isVowel" creationdate="20200308T051600Z">
+        <seg>dbFixedChar,                ## 固定長文字列</seg>
       </tuv>
     </tu>
     <tu>
@@ -2568,6 +2689,14 @@ assert s == """{"f": 2}"""</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>dbVarchar,                  ## string datatype</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T051607Z" creationid="isVowel" creationdate="20200308T051607Z">
+        <seg>dbVarchar,                  ## 文字列によるデータ型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>tagArticle,                 ## the HTML ``article`` element</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
@@ -2688,6 +2817,34 @@ assert s == """{"f": 2}"""</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>dbJson,                     ## JSON datatype</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T051621Z" creationid="isVowel" creationdate="20200308T051621Z">
+        <seg>dbJson,                     ## JSON よるデータ型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>echo row
+
+## Output:
+## @["1", "item#1"]
+## @["2", "item#2"]
+
+db.close()</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T082211Z" creationid="isVowel" creationdate="20200306T082211Z">
+        <seg>echo row
+
+## 出力:
+## @["1", "item#1"]
+## @["2", "item#2"]
+
+db.close()</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>tagAside,                   ## the HTML ``aside`` element</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
@@ -2800,6 +2957,14 @@ assert s == """{"f": 2}"""</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>dbXml,                      ## XML datatype</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T051624Z" creationid="isVowel" creationdate="20200308T051624Z">
+        <seg>dbXml,                      ## XML よるデータ型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>tagAudio,                   ## the HTML ``audio`` element</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
@@ -2834,8 +2999,8 @@ assert s == """{"f": 2}"""</seg>
       <tuv lang="EN-US">
         <seg>sons*: RstNodeSeq            ## the node's sons</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200226T094351Z" creationid="isVowel" creationdate="20200226T094351Z">
-        <seg>sons*: RstNodeSeq            ## ノードの息子ら</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T044418Z" creationid="isVowel" creationdate="20200226T094351Z">
+        <seg>sons*: RstNodeSeq            ## ノードの息子</seg>
       </tuv>
     </tu>
     <tu>
@@ -2908,6 +3073,14 @@ assert s == """{"f": 2}"""</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200224T044341Z" creationid="isVowel" creationdate="20200224T044341Z">
         <seg>bytesTotal*: BiggestInt  ## 合計バイト数。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>dbInt,                      ## some integer type</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T051821Z" creationid="isVowel" creationdate="20200308T051821Z">
+        <seg>dbInt,                      ## 整数型</seg>
       </tuv>
     </tu>
     <tu>
@@ -3000,10 +3173,28 @@ assert s == """{"f": 2}"""</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>dbUInt,                     ## some unsigned integer type</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T051854Z" creationid="isVowel" creationdate="20200308T051854Z">
+        <seg>dbUInt,                     ## 符号なし整数型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>tagBase,                    ## the HTML ``base`` element</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
         <seg>tagBase,                    ## HTML ``base`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg># inside foo
+#back to last dir</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T072103Z" creationid="isVowel" creationdate="20200310T072103Z">
+        <seg># foo ディレクトリから
+# 最後のディレクトリへ復帰</seg>
       </tuv>
     </tu>
     <tu>
@@ -3036,6 +3227,14 @@ assert s == """{"f": 2}"""</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200224T044326Z" creationid="isVowel" creationdate="20200224T044326Z">
         <seg>bytesFinished*: BiggestInt ## 転送済みバイト数。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>dbDecimal,                  ## decimal numbers (fixed-point number)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T051936Z" creationid="isVowel" creationdate="20200308T051936Z">
+        <seg>dbDecimal,                  ## 十進数 (固定小数点数)</seg>
       </tuv>
     </tu>
     <tu>
@@ -3080,6 +3279,14 @@ assert s == """{"f": 2}"""</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>dbFloat,                    ## some floating point type</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T052229Z" creationid="isVowel" creationdate="20200308T052229Z">
+        <seg>dbFloat,                    ## 浮動小数点型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>tagBdo,                     ## the deprecated HTML ``dbo`` element</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200303T032450Z" creationid="isVowel" creationdate="20200221T030547Z">
@@ -3108,6 +3315,14 @@ assert s == """{"f": 2}"""</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T181746Z" creationid="isVowel" creationdate="20200212T181746Z">
         <seg>## 三行目</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>dbDate,                     ## a year-month-day description</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T052427Z" creationid="isVowel" creationdate="20200308T052311Z">
+        <seg>dbDate,                     ## 年-月-日の説明</seg>
       </tuv>
     </tu>
     <tu>
@@ -3144,6 +3359,14 @@ assert s == """{"f": 2}"""</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>dbTime,                     ## HH:MM:SS information</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T052336Z" creationid="isVowel" creationdate="20200308T052336Z">
+        <seg>dbTime,                     ## 時:分:秒の情報</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>tagBig,                     ## the HTML ``big`` element</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
@@ -3172,6 +3395,14 @@ assert s == """{"f": 2}"""</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200303T043808Z" creationid="isVowel" creationdate="20200303T043808Z">
         <seg>case kind*: SqlNodeKind       ## シンタックスリーの種類</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>dbUnknown,                  ## unknown datatype</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T051505Z" creationid="isVowel" creationdate="20200308T051505Z">
+        <seg>dbUnknown,                  ## 未知のデータ型</seg>
       </tuv>
     </tu>
     <tu>
@@ -3232,6 +3463,14 @@ assert s == """{"f": 2}"""</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>dbDatetime,                 ## year-month-day and HH:MM:SS information,</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T052459Z" creationid="isVowel" creationdate="20200308T052459Z">
+        <seg>dbDatetime,                 ## 年-月-日と時:分:秒の情報、</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>tagBlockquote,              ## the HTML ``blockquote`` element</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
@@ -3248,6 +3487,14 @@ assert s == """{"f": 2}"""</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>## plus optional time or timezone information</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T052809Z" creationid="isVowel" creationdate="20200308T052809Z">
+        <seg>## それに加えてオプションの時間または標準時間帯の情報</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>tagBody,                    ## the HTML ``body`` element</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
@@ -3256,10 +3503,26 @@ assert s == """{"f": 2}"""</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>dbTimestamp, ## Timestamp values are stored as the number of seconds</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T053944Z" creationid="isVowel" creationdate="20200308T053944Z">
+        <seg>dbTimestamp, ## タイムスタンプ値には UNIX エポック時間からの経過秒数が格納されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>tagBr,                      ## the HTML ``br`` element</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
         <seg>tagBr,                      ## HTML ``br`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>## since the epoch ('1970-01-01 00:00:00' UTC).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T053933Z" creationid="isVowel" creationdate="20200308T053853Z">
+        <seg>## UNIX エポック時間は 1970年01月01日 午前00時00分00秒 (協定世界時) です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3312,6 +3575,14 @@ assert s == """{"f": 2}"""</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>dbEnum,                     ## some enum</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T051740Z" creationid="isVowel" creationdate="20200308T051740Z">
+        <seg>dbEnum,                     ## 列挙型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>tagCanvas,                  ## the HTML ``canvas`` element</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
@@ -3324,6 +3595,14 @@ assert s == """{"f": 2}"""</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T083620Z" creationid="isVowel" creationdate="20200208T083620Z">
         <seg>ai_next*: ptr AddrInfo        ## 次のリストへのポインタ。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>dbSet,                      ## set of enum values</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T051712Z" creationid="isVowel" creationdate="20200308T051712Z">
+        <seg>dbSet,                      ## 列挙値の集合</seg>
       </tuv>
     </tu>
     <tu>
@@ -3360,10 +3639,26 @@ assert s == """{"f": 2}"""</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>dbUrl,                      ## a URL</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T051745Z" creationid="isVowel" creationdate="20200308T051745Z">
+        <seg>dbUrl,                      ## URL</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>tagCode,                    ## the HTML ``code`` element</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
         <seg>tagCode,                    ## HTML ``code`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>dbUuid,                     ## a UUID</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T051751Z" creationid="isVowel" creationdate="20200308T051751Z">
+        <seg>dbUuid,                     ## UUID</seg>
       </tuv>
     </tu>
     <tu>
@@ -3426,6 +3721,14 @@ assert z.bar == "baz"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>dbSerial,                   ## datatype used for primary auto-increment keys</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T051514Z" creationid="isVowel" creationdate="20200308T051514Z">
+        <seg>dbSerial,                   ## 自動インクリメントの主キーで使われるデータ型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>errors*: seq[string]         ## All detected parsing errors.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200214T102526Z" creationid="isVowel" creationdate="20200214T075121Z">
@@ -3466,10 +3769,26 @@ assert z.bar == "baz"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>dbInet,                     ## an IP address</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T051647Z" creationid="isVowel" creationdate="20200308T051647Z">
+        <seg>dbInet,                     ## IP アドレス</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>tagColgroup,                ## the HTML ``colgroup`` element</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
         <seg>tagColgroup,                ## HTML ``colgroup`` 要素</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>dbMacAddress,               ## a MAC address</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T051638Z" creationid="isVowel" creationdate="20200308T051638Z">
+        <seg>dbMacAddress,               ## MAC アドレス</seg>
       </tuv>
     </tu>
     <tu>
@@ -3538,10 +3857,34 @@ assert z.bar == "baz"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Command must not contain the "nim " part.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T062732Z" creationid="isVowel" creationdate="20200310T062732Z">
+        <seg>Command の一部に "nim " は使えません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>\c\L is added for you.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200224T043950Z" creationid="isVowel" creationdate="20200224T043950Z">
         <seg>\c\L は自動的に追加されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>arrayA A-version of the numbers (usually the old one)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200311T050403Z" creationid="isVowel" creationdate="20200311T050403Z">
+        <seg>arrayA バージョン A の数値 (通常は古いほう)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>arrayB B-version of the numbers (usually the new one)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200311T050506Z" creationid="isVowel" creationdate="20200311T050506Z">
+        <seg>arrayB バージョン B の数値 (通常は新しいほう)</seg>
       </tuv>
     </tu>
     <tu>
@@ -3606,6 +3949,22 @@ assert z.bar == "baz"</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200229T082236Z" creationid="isVowel" creationdate="20200229T082236Z">
         <seg>seq[int].genericHead[float] は seq[float] になります</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>textA A-version of the text (usually the old one)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200311T050329Z" creationid="isVowel" creationdate="20200311T050313Z">
+        <seg>textA バージョン A のテキスト (通常は古いほう)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>textB B-version of the text (usually the new one)</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200311T050325Z" creationid="isVowel" creationdate="20200311T050325Z">
+        <seg>textB バージョン B のテキスト (通常は新しいほう)</seg>
       </tuv>
     </tu>
     <tu>
@@ -3740,6 +4099,30 @@ assert z.bar == "baz"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A higher level PostgreSQL database wrapper.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T083207Z" creationid="isVowel" creationdate="20200306T083207Z">
+        <seg>高水準 PostgreSQL データベースのラッパーです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A higher level SQLite database wrapper.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T075518Z" creationid="isVowel" creationdate="20200306T075518Z">
+        <seg>高水準 SQLite データベースのラッパーです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A higher level ODBC database wrapper.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T085347Z" creationid="isVowel" creationdate="20200306T085347Z">
+        <seg>高水準 ODBCデータベースのラッパーです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A large subset is implemented.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200225T034215Z" creationid="isVowel" creationdate="20200225T034215Z">
@@ -3784,6 +4167,22 @@ assert z.bar == "baz"</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200224T044900Z" creationid="isVowel" creationdate="20200224T044900Z">
         <seg>await キーワードを使用可能にするために main async プロシージャを新規宣言してください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A shortcut for switch(astToStr(key), astToStr(val)).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T072423Z" creationid="isVowel" creationdate="20200310T072423Z">
+        <seg>switch(astToStr(key), astToStr(val)) のショートカットです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A shortcut for switch(astToStr(key).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T072418Z" creationid="isVowel" creationdate="20200310T072418Z">
+        <seg>switch(astToStr(key) のショートカットです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3856,6 +4255,14 @@ assert z.bar == "baz"</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200229T082211Z" creationid="isVowel" creationdate="20200229T082211Z">
         <seg>インスタンス化したジェネリック型を用いてアンインスタンス形式を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Access the i-th element of heap.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200307T143001Z" creationid="isVowel" creationdate="20200307T143001Z">
+        <seg>heap の i 番目にある要素へアクセスします。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4057,6 +4464,14 @@ assert z.bar == "baz"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Alternate version of the above.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T085703Z" creationid="isVowel" creationdate="20200308T085703Z">
+        <seg>上記の別バージョンです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>An OID is a global ID that consists of a timestamp, a unique counter and a random value.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200229T154805Z" creationid="isVowel" creationdate="20200229T154805Z">
@@ -4069,6 +4484,22 @@ assert z.bar == "baz"</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200213T063345Z" creationid="isVowel" creationdate="20200213T063345Z">
         <seg>XML ノードで構成された XML ツリーです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>An alias for dirExists.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T045952Z" creationid="isVowel" creationdate="20200310T045952Z">
+        <seg>dirExists のエイリアスです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>An alias for fileExists.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T045948Z" creationid="isVowel" creationdate="20200310T045948Z">
+        <seg>fileExists のエイリアスです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4394,6 +4825,14 @@ assert z.bar == "baz"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Build and test examples:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200309T013416Z" creationid="isVowel" creationdate="20200309T013416Z">
+        <seg>ビルドとテストの用例:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>But you an also define the symbol --define:noUnidecodeTable during compile time and use the loadUnidecodeTable proc to initialize this module.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200226T150519Z" creationid="isVowel" creationdate="20200226T150519Z">
@@ -4464,6 +4903,22 @@ assert z.bar == "baz"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Can be different from system.hostCPU for cross compilations.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T041145Z" creationid="isVowel" creationdate="20200310T041145Z">
+        <seg>クロスコンパイルで使う system.hostCPU とは違います。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Can be different from system.hostOS for cross compilations.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T040734Z" creationid="isVowel" creationdate="20200310T040734Z">
+        <seg>クロスコンパイルで使う system.hostOS とは違います。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Case expression</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T081818Z" creationid="isVowel" creationdate="20200114T081818Z">
@@ -4512,10 +4967,26 @@ assert z.bar == "baz"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Changes the current directory temporarily.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T071627Z" creationid="isVowel" creationdate="20200310T071627Z">
+        <seg>カレントディレクトリを一時的に変更します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Changes the current directory to the parent of the current directory.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200224T043700Z" creationid="isVowel" creationdate="20200224T043700Z">
         <seg>カレントディレクトリを親のカレントディレクトリへ変更します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Changes the current directory.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T085933Z" creationid="isVowel" creationdate="20200310T085933Z">
+        <seg>カレントディレクトリを変更します</seg>
       </tuv>
     </tu>
     <tu>
@@ -4552,6 +5023,38 @@ assert z.bar == "baz"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Checks for the existence of a configuration 'key' like 'gcc.options.always'.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T063733Z" creationid="isVowel" creationdate="20200310T063733Z">
+        <seg>'gcc.options.always' などの構成 'key' の存在を確認します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Checks for the existence of an environment variable named key.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T045243Z" creationid="isVowel" creationdate="20200310T045243Z">
+        <seg>key で指名された環境変数の存在を確認します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Checks if the directory dir exists.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T045936Z" creationid="isVowel" creationdate="20200310T045936Z">
+        <seg>ディレクトリ dir の存在を確認します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Checks if the file exists.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T045852Z" creationid="isVowel" creationdate="20200310T045852Z">
+        <seg>ファイルの存在を確認します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Checks if two MD5Digest values are identical.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200129T095618Z" creationid="isVowel" creationdate="20200129T095618Z">
@@ -4568,10 +5071,26 @@ assert z.bar == "baz"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Close database connection</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T080602Z" creationid="isVowel" creationdate="20200306T075145Z">
+        <seg>データベースの接続終了</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Close stream</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T182314Z" creationid="isVowel" creationdate="20200212T182314Z">
         <seg>ストリームを閉じる</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Closes the database connection.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T081217Z" creationid="isVowel" creationdate="20200306T073937Z">
+        <seg>データベースの接続を終了します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4664,6 +5183,14 @@ assert z.bar == "baz"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Common datatypes and definitions for all db_*.nim ( db_mysql, db_postgres, and db_sqlite) modules.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T051115Z" creationid="isVowel" creationdate="20200308T051115Z">
+        <seg>db_*.nim ( db_mysql, db_postgres, および db_sqlite) モジュールにおける共通データ型と定義です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Compare two Mongo Object IDs for equality   Source Edit</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200229T154104Z" creationid="isVowel" creationdate="20200229T154104Z">
@@ -4676,6 +5203,14 @@ assert z.bar == "baz"</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200303T131856Z" creationid="isVowel" creationdate="20200303T131856Z">
         <seg>複素数 x と y が等しいか比較します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Compares a and b ignoring case.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T045448Z" creationid="isVowel" creationdate="20200310T045448Z">
+        <seg>英数大小同一視で a と b を比較します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4885,6 +5420,14 @@ assert z.bar == "baz"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Controls the behaviour of the script.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T034958Z" creationid="isVowel" creationdate="20200310T034958Z">
+        <seg>スクリプトの動作を制御します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Convert the Windows file time timestamp t to FILETIME.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T082936Z" creationid="isVowel" creationdate="20200208T082936Z">
@@ -4973,6 +5516,22 @@ assert z.bar == "baz"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Copies the dir from to to.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T060310Z" creationid="isVowel" creationdate="20200310T060310Z">
+        <seg>ディレクトリを from から to へコピーします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Copies the file from to to.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T060230Z" creationid="isVowel" creationdate="20200310T060230Z">
+        <seg>ファイルを from から to へコピーします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Core</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T085114Z" creationid="isVowel" creationdate="20200208T085110Z">
@@ -5053,6 +5612,14 @@ assert z.bar == "baz"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Creates a new SqlPrepared statement.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T083645Z" creationid="isVowel" creationdate="20200306T083645Z">
+        <seg>新しい SqlPrepared ステートメントを作成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Creates a new XmlNode of kind xnCData with the text cdata.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200214T072444Z" creationid="isVowel" creationdate="20200214T072444Z">
@@ -5121,6 +5688,23 @@ assert z.bar == "baz"</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T181558Z" creationid="isVowel" creationdate="20200212T181558Z">
         <seg>新しいストリームをファイル f から作成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>include (込み) があるので all (すべて) は修飾詞なんで省いていいような...。</note>
+      <tuv lang="EN-US">
+        <seg>Creates the directory dir including all necessary subdirectories.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T083605Z" creationid="isVowel" creationdate="20200310T083605Z">
+        <seg>必要ならばサブディレクトリ込みでディレクトリ dir を作成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Creating a table</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T080306Z" creationid="isVowel" creationdate="20200306T080306Z">
+        <seg>テーブルの作成</seg>
       </tuv>
     </tu>
     <tu>
@@ -5247,6 +5831,14 @@ will を「予定」と意訳する。</note>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Defines a task.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T072151Z" creationid="isVowel" creationdate="20200310T072151Z">
+        <seg>タスクを定義します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Definitions</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T090705Z" creationid="isVowel" creationdate="20200114T090705Z">
@@ -5275,6 +5867,14 @@ will を「予定」と意訳する。</note>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200223T084859Z" creationid="isVowel" creationdate="20200223T084859Z">
         <seg>n にある i 番目の子を削除します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Deletes the environment variable named key.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T045754Z" creationid="isVowel" creationdate="20200310T045754Z">
+        <seg>key で指名された環境変数を削除します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5331,6 +5931,22 @@ will を「予定」と意訳する。</note>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200301T055419Z" creationid="isVowel" creationdate="20200301T055419Z">
         <seg>ディレクトリ構造</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Disables or enables a specific hint.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T043309Z" creationid="isVowel" creationdate="20200310T043309Z">
+        <seg>指定されたヒントの有効・無効化を行います。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Disables or enables a specific warning.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T043248Z" creationid="isVowel" creationdate="20200310T043248Z">
+        <seg>指定された警告の有効・無効化を行います。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5511,6 +6127,14 @@ will を「予定」と意訳する。</note>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Encapsulates a database connection.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T081026Z" creationid="isVowel" creationdate="20200306T081026Z">
+        <seg>データベース接続をカプセル化したものです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Encode a string that may contain Unicode.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T081754Z" creationid="isVowel" creationdate="20200127T081657Z">
@@ -5595,6 +6219,14 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Establishes a connection with a SMTP server.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T090518Z" creationid="isVowel" creationdate="20200308T090518Z">
+        <seg>SMTP サーバとの接続を確立します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Event   Source Edit</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200224T044210Z" creationid="isVowel" creationdate="20200224T044210Z">
@@ -5623,6 +6255,22 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200218T075517Z" creationid="isVowel" creationdate="20200218T075517Z">
         <seg>用例</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Example for startTls use:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T095323Z" creationid="isVowel" creationdate="20200308T095323Z">
+        <seg>startTls  での用例:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Example gmail use:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T095309Z" creationid="isVowel" creationdate="20200308T095309Z">
+        <seg>Gmail での用例:</seg>
       </tuv>
     </tu>
     <tu>
@@ -5707,6 +6355,38 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Execute SQL query</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T080541Z" creationid="isVowel" creationdate="20200306T075113Z">
+        <seg>SQL クエリの実行</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Executes an external command with the current nim/nimble executable.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T060808Z" creationid="isVowel" creationdate="20200310T060808Z">
+        <seg>現在の nim/nimble 実行可能ファイルから外部コマンドを実行します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Executes an external process.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T060436Z" creationid="isVowel" creationdate="20200310T060436Z">
+        <seg>外部プロセスを実行します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Executes the query and raises a DbError exception if not successful.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T074618Z" creationid="isVowel" creationdate="20200306T074618Z">
+        <seg>クエリを実行します。失敗したときは DbError 例外が発生します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Existing files will be cleared!</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200303T020321Z" creationid="isVowel" creationdate="20200303T020321Z">
@@ -5751,6 +6431,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T112905Z" creationid="isVowel" creationdate="20200122T112905Z">
         <seg>エクスポート</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Exposes the list of requirements for read and write accesses.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T040447Z" creationid="isVowel" creationdate="20200310T040447Z">
+        <seg>読み書きアクセスで必要となる公開リストです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5847,6 +6535,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200303T022900Z" creationid="isVowel" creationdate="20200303T022900Z">
         <seg>バッファ f をフラッシュします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For SSL support this module relies on OpenSSL.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T095522Z" creationid="isVowel" creationdate="20200308T095522Z">
+        <seg>このモジュールの SSL サポートは OpenSSL によるものです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5983,6 +6679,22 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Generate MD5 hash for a file.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200309T004701Z" creationid="isVowel" creationdate="20200309T004701Z">
+        <seg>ファイルの MD5 ハッシュを生成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generate MD5 hash for a string.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200309T004549Z" creationid="isVowel" creationdate="20200309T004549Z">
+        <seg>文字列の MD5 ハッシュを生成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Generate hash of Oid for use in hashtables   Source Edit</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200229T153725Z" creationid="isVowel" creationdate="20200229T153725Z">
@@ -6079,6 +6791,14 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:27:27 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200311T050259Z" creationid="isVowel" creationdate="20200311T050259Z">
+        <seg>生成日時: 2020年01月23日 午前17時27分27秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Generated: 2020-01-23 17:27:28 UTC</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T034323Z" creationid="isVowel" creationdate="20200130T034323Z">
@@ -6151,6 +6871,14 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:27:43 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200307T082642Z" creationid="isVowel" creationdate="20200307T082642Z">
+        <seg>生成日時: 2020年01月23日 午前17時27分43秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Generated: 2020-01-23 17:27:46 UTC</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T115347Z" creationid="isVowel" creationdate="20200208T115347Z">
@@ -6163,6 +6891,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200129T133741Z" creationid="isVowel" creationdate="20200129T133741Z">
         <seg>生成日時: 2020年01月23日 午前17時27分47秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:27:48 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T081823Z" creationid="isVowel" creationdate="20200306T081823Z">
+        <seg>生成日時: 2020年01月23日 午前17時27分48秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
@@ -6299,6 +7035,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200225T033949Z" creationid="isVowel" creationdate="20200225T033949Z">
         <seg>生成日時: 2020年01月23日 午前17時28分11秒 (UTC)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Generated: 2020-01-23 17:28:17 UTC</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200307T095609Z" creationid="isVowel" creationdate="20200307T095609Z">
+        <seg>生成日時: 2020年01月23日 午前17時28分17秒 (UTC)</seg>
       </tuv>
     </tu>
     <tu>
@@ -6543,6 +7287,14 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Get PSK identity.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200309T005147Z" creationid="isVowel" creationdate="20200309T005147Z">
+        <seg>PSK 認証情報を取得します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Gets n's tag as a HtmlTag.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T023827Z" creationid="isVowel" creationdate="20200221T023827Z">
@@ -6563,6 +7315,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T113333Z" creationid="isVowel" creationdate="20200130T113333Z">
         <seg>ext と一致する mimetype を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Gets the Nim command that the compiler has been invoked with, for example "c", "js", "build", "help".</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T082644Z" creationid="isVowel" creationdate="20200310T082644Z">
+        <seg>"c", "js", "build", "help" などコンパイラから呼び出された Nim コマンドを取得します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -6699,6 +7459,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200213T062959Z" creationid="isVowel" creationdate="20200213T062959Z">
         <seg>XML の完成出力で使うヘッダです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Hidden tasks are supported via an empty description.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T072341Z" creationid="isVowel" creationdate="20200310T072341Z">
+        <seg>隠しタスクは description を空にすることでサポートしています。</seg>
       </tuv>
     </tu>
     <tu>
@@ -6865,6 +7633,30 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If the replacement is not an absolute path, the path is interpreted to be local to the Nimscript file that contains the call to patchFile, Nim's --path is not used at all to resolve the filename!</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T071319Z" creationid="isVowel" creationdate="20200310T071319Z">
+        <seg>replacement が絶対パスでなければ、パスは patchFile を呼び出すローカルな Nimscript ファイルとして解釈されるため、 Nim の --path はファイル名の解決に使われません！</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If the directory already exists, no error is raised.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T083706Z" creationid="isVowel" creationdate="20200310T083706Z">
+        <seg>既にディレクトリが存在していても、エラーは発生しません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If the external process terminates with a non-zero exit code, an OSError exception is raised.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T060608Z" creationid="isVowel" creationdate="20200310T060608Z">
+        <seg>非ゼロで外部プロセスが停止したときは、 OSError 例外が発生します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If the file cannot be opened, nil is returned.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T181850Z" creationid="isVowel" creationdate="20200212T181850Z">
@@ -6913,6 +7705,14 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If you need a permanent change, use the cd() proc.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T071832Z" creationid="isVowel" creationdate="20200310T071832Z">
+        <seg>恒常的に変更したいときは、 cd() プロシージャをお使いください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If you need to call this inside a compile time macro you can use staticRead.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200303T024303Z" creationid="isVowel" creationdate="20200303T024303Z">
@@ -6925,6 +7725,22 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200129T095048Z" creationid="isVowel" creationdate="20200129T095048Z">
         <seg>この関数は toMD5 プロシージャ を使うときは明示的に呼び出す必要はありません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you want to enable SSL, compile with -d:ssl.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T095600Z" creationid="isVowel" creationdate="20200308T095600Z">
+        <seg>SSLを有効にするには -d:ssl でコンパイルしてください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you want to statically link against OpenSSL 1.0.x, you now have to define the openssl10 symbol via -d:openssl10.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200309T013403Z" creationid="isVowel" creationdate="20200309T013403Z">
+        <seg>OpenSSL 1.0.x を静的リンクする場合は、 -d:openssl10 で openssl10 シンボルを定義してください。</seg>
       </tuv>
     </tu>
     <tu>
@@ -6997,6 +7813,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200226T075229Z" creationid="isVowel" creationdate="20200226T075229Z">
         <seg>混血ライブラリ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In fact, the root-mean-square error growth, assuming random roundoff errors, is only O(sqrt(log n)), which is nearly indistinguishable from O(1) in practice.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T115904Z" creationid="isVowel" creationdate="20200310T115904Z">
+        <seg>実際、偶発的な端数切り捨て誤差を想定しているため、 O(sqrt(log n)) となるだけです。実用上は O(1) との区別はほぼできません。 </seg>
       </tuv>
     </tu>
     <tu>
@@ -7083,6 +7907,14 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Initialize SSL using OPENSSL_init_ssl for OpenSSL &gt;= 1.1.0 otherwise SSL_library_init   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200309T012457Z" creationid="isVowel" creationdate="20200309T012457Z">
+        <seg>OpenSSL 1.1.0 以降は OPENSSL_init_ssl を、それ以外は SSL_library_init で SSL を初期化します   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Initializes a MD5Context.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200129T095644Z" creationid="isVowel" creationdate="20200129T095644Z">
@@ -7119,6 +7951,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200223T084626Z" creationid="isVowel" creationdate="20200223T084626Z">
         <seg>father の指定位置へ子の son を挿入します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Inserting data</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T080249Z" creationid="isVowel" creationdate="20200306T080238Z">
+        <seg>データの挿入</seg>
       </tuv>
     </tu>
     <tu>
@@ -7297,6 +8137,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>It is usually not required to do that, nims' filename is the default.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T035502Z" creationid="isVowel" creationdate="20200310T035436Z">
+        <seg>デフォルトは nims のファイル名であるため、通常は設定不要です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>It is your job to ensure the package name   Source Edit</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200131T095520Z" creationid="isVowel" creationdate="20200131T095520Z">
@@ -7384,6 +8232,15 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
     </tu>
     <tu>
+      <note>たどたどしいので、あとで改訳のこと。</note>
+      <tuv lang="EN-US">
+        <seg>Its path is obtained via currentSourcePath (although, currently, currentSourcePath resolves symlinks, unlike thisDir).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T085918Z" creationid="isVowel" creationdate="20200310T085918Z">
+        <seg>このパスは currentSourcePath で取得できます (とはいえ、今のところ、 thisDir と異なり、 currentSourcePath はシンボリックリンクを解決します)。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv lang="EN-US">
         <seg>Its primary purpose is to produce output for Nimble packages like:</seg>
       </tuv>
@@ -7397,6 +8254,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200220T012108Z" creationid="isVowel" creationdate="20200220T012042Z">
         <seg>JavaScript のターゲット</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Kahan (compensated) summation: O(1) error growth, at the expense of a considerable increase in computational expense.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T115722Z" creationid="isVowel" creationdate="20200310T115722Z">
+        <seg>カハン法による総和 (補正加算): 誤差成長 O(1) は、代償として計算量の相当な増加があります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -7469,6 +8334,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200224T041421Z" creationid="isVowel" creationdate="20200224T041421Z">
         <seg>dir にあるファイルをすべてリスト化します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Lists all the files (non-recursively) in the directory dir.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T042543Z" creationid="isVowel" creationdate="20200310T042543Z">
+        <seg>ディレクトリ dir にあるファイルをすべてリスト化します (再起処理ではありません)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Lists all the subdirectories (non-recursively) in the directory dir.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T042322Z" creationid="isVowel" creationdate="20200310T042322Z">
+        <seg>ディレクトリ dir にあるサブディレクトリをすべてリスト化します (再起処理ではありません)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -7588,6 +8469,38 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>May fail with ReplyError or with a socket error.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T090931Z" creationid="isVowel" creationdate="20200308T090931Z">
+        <seg> 失敗時は ReplyError またはソケットエラーになります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>May fail with ReplyError   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T092457Z" creationid="isVowel" creationdate="20200308T092457Z">
+        <seg>失敗時は ReplyError になります   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>May fail with ReplyError.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T093306Z" creationid="isVowel" creationdate="20200308T093306Z">
+        <seg>失敗時は ReplyError になります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>May return nil.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200309T010200Z" creationid="isVowel" creationdate="20200309T010200Z">
+        <seg>nil を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>May throw an IO exception.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200224T032451Z" creationid="isVowel" creationdate="20200224T032112Z">
@@ -7608,6 +8521,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T070112Z" creationid="isVowel" creationdate="20200116T065716Z">
         <seg>Nim のメモリトラッキング・サポートです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Messages may be formed using createMessage by converting the Message into a string.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T094437Z" creationid="isVowel" creationdate="20200308T094437Z">
+        <seg>メッセージは createMessage によりメッセージを文字列に変換することで得られます。</seg>
       </tuv>
     </tu>
     <tu>
@@ -7688,6 +8609,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200301T062449Z" creationid="isVowel" creationdate="20200301T062449Z">
         <seg>このツールのオプションに関する詳細情報は koch ドキュメンテーションにあります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Moves the dir from to to.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T060126Z" creationid="isVowel" creationdate="20200310T060126Z">
+        <seg>ディレクトリを from から to へ移動します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Moves the file from to to.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T060005Z" creationid="isVowel" creationdate="20200310T060005Z">
+        <seg>ファイルを from から to へ移動します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -7938,6 +8875,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Nimble support: Call this to set the list of requirements of your Nimble package.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T091001Z" creationid="isVowel" creationdate="20200310T091001Z">
+        <seg>Nimble サポート: これは Nimble パッケージの動作要件リストを設定するために呼び出してください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Nimble support: Set this to the package name.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T035144Z" creationid="isVowel" creationdate="20200310T035144Z">
+        <seg>Nimble サポート: これはパッケージ名の設定です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Nimble support: The package's author.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200222T160218Z" creationid="isVowel" creationdate="20200222T160218Z">
@@ -7954,10 +8907,34 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Nimble support: The package's binary directory.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T040146Z" creationid="isVowel" creationdate="20200310T040141Z">
+        <seg>Nimble サポート: パッケージのバイナリディレクトリです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Nimble support: The package's description.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T040018Z" creationid="isVowel" creationdate="20200310T040018Z">
+        <seg>Nimble サポート: パッケージの概要です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Nimble support: The package's license.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200222T160238Z" creationid="isVowel" creationdate="20200222T160238Z">
         <seg>Nimble サポート: パッケージのライセンスです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Nimble support: The package's source directory.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T040129Z" creationid="isVowel" creationdate="20200310T040129Z">
+        <seg>Nimble サポート: パッケージのソースディレクトリです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -8150,6 +9127,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>On Windows adds ".dll" to filename, on Posix produces "lib$filename.so".</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T055343Z" creationid="isVowel" creationdate="20200310T055343Z">
+        <seg>Windows では filename に ".dll" を追加しますが、 POSIX では "lib$filename.so" を生成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>On Windows adds ".exe" to filename, else returns filename unmodified.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T055324Z" creationid="isVowel" creationdate="20200310T055324Z">
+        <seg>Windows では filename に ".exe" を追加しますが、それ以外のプラットフォームでは無変更の filename を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>On posix, this is an alias to posix.Time.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T023657Z" creationid="isVowel" creationdate="20200113T023657Z">
@@ -8166,6 +9159,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Open database connection</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T080509Z" creationid="isVowel" creationdate="20200306T075125Z">
+        <seg>データベースの接続開始</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Open input stream</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T182322Z" creationid="isVowel" creationdate="20200212T182322Z">
@@ -8178,6 +9179,38 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T111131Z" creationid="isVowel" creationdate="20200212T111120Z">
         <seg>OpenGL サンドボックス</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>OpenSSL can also be statically linked using --dynlibOverride:ssl for OpenSSL &gt;= 1.1.0.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200309T013613Z" creationid="isVowel" creationdate="20200309T013324Z">
+        <seg>OpenSSL は --dynlibOverride:ssl で OpenSSL 1.1.0 以降の静的リンクができます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>OpenSSL support</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200309T013259Z" creationid="isVowel" creationdate="20200309T013255Z">
+        <seg>OpenSSL のサポート</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Opening a connection to a database</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T080351Z" creationid="isVowel" creationdate="20200306T080351Z">
+        <seg>データベースの接続開始</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Opens a database connection.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T081259Z" creationid="isVowel" creationdate="20200306T073520Z">
+        <seg>データベースの接続を開始します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -8326,6 +9359,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Overrides the location of a given file belonging to the passed package.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T070519Z" creationid="isVowel" creationdate="20200310T070519Z">
+        <seg>渡されたパッケージにある指定ファイルの格納先をオーバーライドします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Packaging Nim</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T105734Z" creationid="isVowel" creationdate="20200208T105734Z">
@@ -8346,6 +9387,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T083626Z" creationid="isVowel" creationdate="20200114T083626Z">
         <seg>Packed プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Pairwise (cascade) summation of x[i0:i0+n-1], with O(log n) error growth (vs O(n) for a simple loop) with negligible performance cost if the base case is large enough.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T115818Z" creationid="isVowel" creationdate="20200310T115818Z">
+        <seg>x[i0:i0+n-1] のペアワイズ (カスケード) 法による総和において、規範事例が十分に大きいならば誤差成長 O(log n) の負荷効率は無視できるほど小さいです (線形ループ O(n) との比較)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -8629,6 +9678,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Put the SMTP connection in TLS (Transport Layer Security) mode.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T092433Z" creationid="isVowel" creationdate="20200308T092433Z">
+        <seg>TLS (トランスポート層セキュリティ) モードで SMTP 接続を行います。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Quick start</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200118T022436Z" creationid="isVowel" creationdate="20200118T022436Z">
@@ -8669,6 +9726,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Raises EDb if the connection could not be established.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T073616Z" creationid="isVowel" creationdate="20200306T073616Z">
+        <seg>接続を確立できないときは EDb が発生します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Raises EInvalidLibrary if the symbol could not be found.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T084310Z" creationid="isVowel" creationdate="20200221T084310Z">
@@ -8697,6 +9762,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200303T024441Z" creationid="isVowel" creationdate="20200303T024441Z">
         <seg>ファイル内容が n 行よりも少ないときは EOF が発生します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Raises a DbError exception if the connection could not be established.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T073743Z" creationid="isVowel" creationdate="20200306T073743Z">
+        <seg>接続を確立できないときは  DbError 例外が発生します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -8765,6 +9838,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Reads a line of data from stdin - blocks until n or EOF which happens when stdin is closed   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T090826Z" creationid="isVowel" creationdate="20200310T090826Z">
+        <seg>stdin からデータを一行読み取ります － stdin が閉じられたときは EOF が出現するまでブロックします   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Reads a single character from the stream f.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200303T022713Z" creationid="isVowel" creationdate="20200303T022713Z">
@@ -8777,6 +9858,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200217T025107Z" creationid="isVowel" creationdate="20200217T025107Z">
         <seg>指定されたファイルから一行を非同期で読み取ります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Reads all data from stdin - blocks until EOF which happens when stdin is closed   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T090753Z" creationid="isVowel" creationdate="20200310T090753Z">
+        <seg>stdin からデータをすべて読み取ります － stdin が閉じられたときは EOF が出現するまでブロックします   ソース 編集</seg>
       </tuv>
     </tu>
     <tu>
@@ -8804,20 +9893,15 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
     </tu>
     <tu>
-      <note>直訳で future stream は未来ストリームです。ただ、これでは変ですから「先行きストリーム」→「先行ストリーム」としています。本文翻訳時点では機能が未だわかってないので、もしかしたら future はキャッシュ (先読み) のことを指すのかもしれません。
+      <note>Future とは非同期プログラミングにおけるデザインパターンのことです (オブジェクト指向のデザインパターンと混同されているようですが)。日本語による訳語はありません。ですので、原語表記です。以前の意訳では「先行ストリーム」としていました。
 
-この future stream は、一般的なプログラミング言語では、あまり見かけない表現のようです。
-
-(当方は検証しながら訳すのではなく全部訳して終えてから検証する人です)
-
-【参考文献】
-・研究社   新英和中辞典 : 先行き
-</note>
+参考文献:
+https://en.wikipedia.org/wiki/Futures_and_promises</note>
       <tuv lang="EN-US">
         <seg>Reads data from the specified future stream until it is completed.</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200217T031012Z" creationid="isVowel" creationdate="20200217T031012Z">
-        <seg>読み終えるまで指定された先行ストリーム (FutureStream) からデータを読み取ります。</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200307T052640Z" creationid="isVowel" creationdate="20200217T031012Z">
+        <seg>読み終えるまで指定された Future ストリームからデータを読み取ります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -8886,6 +9970,30 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Remove all elements from heap, making it empty.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200307T142158Z" creationid="isVowel" creationdate="20200307T142158Z">
+        <seg>heap から要素をすべて削除して、空にします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Removes the file.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T055518Z" creationid="isVowel" creationdate="20200310T055518Z">
+        <seg>ファイル file を削除します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Removes the directory dir.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T055429Z" creationid="isVowel" creationdate="20200310T055429Z">
+        <seg>ディレクトリ dir を削除します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Rename a file or directory on the remote FTP Server from current name name_from to new name name_to   Source Edit</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200224T040759Z" creationid="isVowel" creationdate="20200224T040759Z">
@@ -8910,6 +10018,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Result is a 32 character hex string with lowercase characters   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200309T004643Z" creationid="isVowel" creationdate="20200309T004643Z">
+        <seg>結果は 32 文字の十六進数 (英数小文字) で返されます   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Result is a 32 character   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200309T004745Z" creationid="isVowel" creationdate="20200309T004724Z">
+        <seg>結果は 32 文字で返されます   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Result variable</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041258Z" creationid="isVowel" creationdate="20200113T041258Z">
@@ -8926,10 +10050,50 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Retrieve the server name requested in the client hello.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200309T010619Z" creationid="isVowel" creationdate="20200309T010119Z">
+        <seg>Client Hello でリクエストされたサーバ名を取得します。 </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Retrieves file.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200224T045528Z" creationid="isVowel" creationdate="20200224T041256Z">
         <seg>file を取得します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Retrieves a configuration 'key' like 'gcc.options.always'.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T063715Z" creationid="isVowel" creationdate="20200310T063320Z">
+        <seg>'gcc.options.always' などの構成 'key' を取得します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Retrieves the i'th command line parameter.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T042852Z" creationid="isVowel" creationdate="20200310T042830Z">
+        <seg>i 番目にあるコマンドライン引数を取得します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Retrieves the absolute directory of the current project   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T064344Z" creationid="isVowel" creationdate="20200310T064344Z">
+        <seg>現在のプロジェクトにおける絶対ディレクトリを取得します   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Retrieves the absolute path of the current project   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T064420Z" creationid="isVowel" creationdate="20200310T064420Z">
+        <seg>現在のプロジェクトにおける絶対パスを取得します   ソース 編集</seg>
       </tuv>
     </tu>
     <tu>
@@ -8950,10 +10114,58 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Retrieves the directory of the current nims script file.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T085204Z" creationid="isVowel" creationdate="20200310T085204Z">
+        <seg>現在の nims スクリプトファイルがあるディレクトリを取得します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Retrieves the environment variable of name key.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T044550Z" creationid="isVowel" creationdate="20200310T044539Z">
+        <seg>key で指名された環境変数を取得します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Retrieves the location of 'nimcache'.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T064157Z" creationid="isVowel" creationdate="20200310T064157Z">
+        <seg>'nimcache' の格納先を取得します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Retrieves the name of the current project   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T064310Z" creationid="isVowel" creationdate="20200310T064310Z">
+        <seg>現在のプロジェクト名を取得します   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Retrieves the number of command line parameters.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T043003Z" creationid="isVowel" creationdate="20200310T042951Z">
+        <seg>コマンドライン引数の個数を取得します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Retrieves the specified file's size.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200217T021725Z" creationid="isVowel" creationdate="20200217T021725Z">
         <seg>指定されたファイルのサイズを取得します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Return OpenSSL version as unsigned long or 0 if not available   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200309T011810Z" creationid="isVowel" creationdate="20200309T011810Z">
+        <seg>OpenSSL のバージョンを unsigned long または利用不可ならば 0 を返します。   ソース 編集</seg>
       </tuv>
     </tu>
     <tu>
@@ -8974,6 +10186,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Return the number of elements of deq.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200307T142604Z" creationid="isVowel" creationdate="20200307T142604Z">
+        <seg>deq の要素数を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Return the number of elements of heap.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200307T142933Z" creationid="isVowel" creationdate="20200307T142933Z">
+        <seg>heap の要素数を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Return the squared distance from (0,0) to z.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200303T131801Z" creationid="isVowel" creationdate="20200303T131801Z">
@@ -8990,6 +10218,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Returns "" if the exe cannot be found.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T101536Z" creationid="isVowel" creationdate="20200310T101536Z">
+        <seg>実行可能ファイルが見つからないときは "" を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Returns "" on failure.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200223T091227Z" creationid="isVowel" creationdate="20200223T091227Z">
@@ -9002,6 +10238,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T054841Z" creationid="isVowel" creationdate="20200116T054841Z">
         <seg>検出不能時は 0 を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns 1 if SNI was set, 0 if current SSL configuration doesn't support SNI.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200309T011035Z" creationid="isVowel" creationdate="20200309T011035Z">
+        <seg>SNI が設定されたときは 1 を、現在の SSL 構成で SNI をサポートしてないときは 0 を返します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9218,6 +10462,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200224T043857Z" creationid="isVowel" creationdate="20200224T043857Z">
         <seg>現在の作業ディレクトリを返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the currently running nim or nimble executable.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T050120Z" creationid="isVowel" creationdate="20200310T050120Z">
+        <seg>現在実行中の nim または nimble 実行可能ファイルを返します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9614,6 +10866,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Same as fastRows, but slower and safe.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T084342Z" creationid="isVowel" creationdate="20200306T084342Z">
+        <seg>fastRows と似ていますが、安全性を優先しているため処理速度は遅いです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Sample output</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200218T075546Z" creationid="isVowel" creationdate="20200218T075546Z">
@@ -9642,6 +10902,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T025116Z" creationid="isVowel" creationdate="20200113T025116Z">
         <seg>検索</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Searches for bin in the current working directory and then in directories listed in the PATH environment variable.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T101408Z" creationid="isVowel" creationdate="20200310T101408Z">
+        <seg>現在の作業ディレクトリと環境変数 PATH に記述されているディレクトのリストからバイナリを検索します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9694,6 +10962,62 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>See also: Limitations of the method call syntax.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T085022Z" creationid="isVowel" creationdate="20200306T085022Z">
+        <seg>関連: Limitations of the method call syntax.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See also: allocShared0.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T084956Z" creationid="isVowel" creationdate="20200306T084956Z">
+        <seg>関連: allocShared0.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See also: db_odbc, db_sqlite, db_mysql.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T085058Z" creationid="isVowel" creationdate="20200306T085058Z">
+        <seg>関連: db_odbc, db_sqlite, db_mysql.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See also: db_odbc, db_sqlite, db_postgres.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T085054Z" creationid="isVowel" creationdate="20200306T085054Z">
+        <seg>関連: db_odbc, db_sqlite, db_postgres.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See also: db_postgres, db_sqlite, db_mysql.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T085111Z" creationid="isVowel" creationdate="20200306T085111Z">
+        <seg>関連: db_postgres, db_sqlite, db_mysql.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See also: https://en.wikipedia.org/wiki/Tz_database</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T085033Z" creationid="isVowel" creationdate="20200306T085033Z">
+        <seg>関連: https://en.wikipedia.org/wiki/Tz_database</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See also:ven</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T085045Z" creationid="isVowel" creationdate="20200306T085045Z">
+        <seg>関連:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>See its source code for available options.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200117T060106Z" creationid="isVowel" creationdate="20200117T060106Z">
@@ -9706,6 +11030,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T060442Z" creationid="isVowel" creationdate="20200122T060335Z">
         <seg>ソース参照用スイッチ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See, e.g.:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T115833Z" creationid="isVowel" creationdate="20200310T115833Z">
+        <seg>参考文献:</seg>
       </tuv>
     </tu>
     <tu>
@@ -9742,6 +11074,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Sends msg from fromAddr to the addresses specified in toAddrs.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T093948Z" creationid="isVowel" creationdate="20200308T093948Z">
+        <seg>fromAddr からの msg を toAddrs で指定されたアドレスへ送信します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Sends an AUTH command to the server to login as the username using password.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T093236Z" creationid="isVowel" creationdate="20200308T093236Z">
+        <seg>username を用いて password としてログインするためにサーバへ AUTH コマンドを送信します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Sends the specified headers to the requesting client.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200219T110933Z" creationid="isVowel" creationdate="20200219T110933Z">
@@ -9758,10 +11106,34 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Set PSK identity hint to use.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200309T005139Z" creationid="isVowel" creationdate="20200309T005134Z">
+        <seg>ヒントとして使う PSK 認証情報を設定します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Set a file length.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200217T025750Z" creationid="isVowel" creationdate="20200217T025750Z">
         <seg>ファイルの長さを設定します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Set callback called when OpenSSL needs PSK (for client).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200309T004936Z" creationid="isVowel" creationdate="20200309T004936Z">
+        <seg>OpenSSL で PSK が要求されるときに呼び出されるコールバックを設定します (クライアント側)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Set callback called when OpenSSL needs PSK (for server).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200309T005016Z" creationid="isVowel" creationdate="20200309T005016Z">
+        <seg>OpenSSL で PSK が要求されるときに呼び出されるコールバックを設定します (サーバ側)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9774,6 +11146,38 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Set the SNI server name extension to be used in a client hello.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200309T010821Z" creationid="isVowel" creationdate="20200309T010821Z">
+        <seg>Client Hello で使われる SNI サーバ名拡張機能を設定します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Set the callback to be used on listening SSL connections when the client hello is received.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200309T010631Z" creationid="isVowel" creationdate="20200309T005521Z">
+        <seg>Client Hello を受信したときに SSL 接続のリスニングで使われるコールバックを設定します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Set the pointer to be used in the callback registered to SSL_CTX_set_tlsext_servername_callback.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200309T005223Z" creationid="isVowel" creationdate="20200309T005223Z">
+        <seg>SSL_CTX_set_tlsext_servername_callback に登録されたコールバックで使われるポインタを設定します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Set this to influence how mkDir, rmDir, rmFile etc. behave   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T035033Z" creationid="isVowel" creationdate="20200310T035033Z">
+        <seg>この設定は how mkDir, rmDir, rmFile などの動作に影響します   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Sets</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T042117Z" creationid="isVowel" creationdate="20200113T042117Z">
@@ -9782,10 +11186,34 @@ replacementは「代替手段」を指します。このまま「代替ツール
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Sets a Nim compiler command line switch, for example switch("checks", "on").</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T043144Z" creationid="isVowel" creationdate="20200310T043144Z">
+        <seg>switch("checks", "on") などの Nim コンパイラのコマンドスイッチを設定します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Sets a configuration 'key' like 'gcc.options.always' to its value.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T063310Z" creationid="isVowel" creationdate="20200310T063310Z">
+        <seg>'gcc.options.always' などの構成 'key' に値を設定します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Sets an assertion failure handler that will intercept any assert statements following onFailedAssert in the current module scope.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200301T045047Z" creationid="isVowel" creationdate="20200301T045047Z">
         <seg>現在のモジュールスコープにある onFailedAssert に従い assert ステートメントを妨害するアサーション失敗ハンドラを設定します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Sets the Nim command that should be continued with after this Nimscript has finished.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T045612Z" creationid="isVowel" creationdate="20200310T045612Z">
+        <seg>この Nimscript の終了後に続行する Nim コマンドを設定します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9829,6 +11257,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>Sets the value of the environment variable named key to val.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T045304Z" creationid="isVowel" creationdate="20200310T045304Z">
+        <seg>key で指名された環境変数に値 val を設定します。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>どうやって wording を意訳するか翻訳者の腕の見せ所でしょう。「言葉づかい」と直訳するほど、このドキュメントの解説範囲は狭いのかと疑おう。
 
 may ～は「かもしれない」に限らない。辞書を調べよう。
@@ -9856,6 +11292,22 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200303T022723Z" creationid="isVowel" creationdate="20200303T022723Z">
         <seg>動作速度に敏感なコードでは使用しないでください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Silent,                     ## Be silent.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T034145Z" creationid="isVowel" creationdate="20200310T034145Z">
+        <seg>Silent,                     ## 無表示。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Similar to fastRows iterator, but slower and safe.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T082501Z" creationid="isVowel" creationdate="20200306T081920Z">
+        <seg>fastRows イテレータ と似ていますが、安全性を優先しているため処理速度は遅いです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -10374,6 +11826,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The CPU this build is running on.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T040917Z" creationid="isVowel" creationdate="20200310T040917Z">
+        <seg>このビルドを実行している CPU の種類です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The Debian package ships bash and ksh completion and manpages that can be reused.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T110956Z" creationid="isVowel" creationdate="20200208T110951Z">
@@ -10438,6 +11898,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The OS this build is running on.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T040545Z" creationid="isVowel" creationdate="20200310T040545Z">
+        <seg>このビルドを実行しているオペレーティング・システムです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The above output could be the result of a code snippet like:</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200131T095708Z" creationid="isVowel" creationdate="20200131T095708Z">
@@ -10474,6 +11942,22 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200217T073108Z" creationid="isVowel" creationdate="20200217T073108Z">
         <seg>内蔵型ドキュメントジェネレータ nim doc は .nim ソースファイルから HTML ドキュメンテーションを生成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The callback should return one of:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200309T005606Z" creationid="isVowel" creationdate="20200309T005606Z">
+        <seg>コールバックとして返されるものは、</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The change is permanent for the rest of the execution, since this is just a shortcut for os.setCurrentDir() .</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T101926Z" creationid="isVowel" creationdate="20200310T101903Z">
+        <seg>これは os.setCurrentDir() のショートカットであるため、実行後の変更は恒常的となります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -10919,6 +12403,14 @@ skipped : スキップする、無視する、読み飛ばす。</note>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This can be used in the callback set in SSL_CTX_set_tlsext_servername_callback to implement virtual hosting.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200309T010144Z" creationid="isVowel" creationdate="20200309T010144Z">
+        <seg>これは SSL_CTX_set_tlsext_servername_callback に設定されたコールバックでありバーチャルホスティングの実装で使われます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This code demonstrates how you can iterate over all the tags in an HTML file and write back the modified version.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T082804Z" creationid="isVowel" creationdate="20200221T082804Z">
@@ -10939,6 +12431,14 @@ skipped : スキップする、無視する、読み飛ばす。</note>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200117T055126Z" creationid="isVowel" creationdate="20200117T054910Z">
         <seg>このコマンドは Nim のテストスイートにおけるメインドライバです。 testament/tester.nim のコンパイル、および実行します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This controls the parser.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200311T042656Z" creationid="isVowel" creationdate="20200311T042656Z">
+        <seg>これはパーサーを制御します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -11043,6 +12543,22 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This interface is implemented for other databases also.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T083218Z" creationid="isVowel" creationdate="20200306T083218Z">
+        <seg>そのほかのデータベース実装でもインタフェースは共通化してあります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This interface is implemented for other databases too.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T075452Z" creationid="isVowel" creationdate="20200306T075452Z">
+        <seg>そのほかのデータベース実装でもインタフェースは共通化してあります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This is an embedded profiler that requires --profiler:on.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200213T051448Z" creationid="isVowel" creationdate="20200213T051448Z">
@@ -11099,10 +12615,26 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This is the same interface that is implemented for other databases.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T085417Z" creationid="isVowel" creationdate="20200306T085417Z">
+        <seg>そのほかのデータベース実装でもインタフェースは共通化してあります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This means essentially that it does not work if the object has some other runtime type than its compiletime type.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200228T060127Z" creationid="isVowel" creationdate="20200228T060127Z">
         <seg>つまり、この関数はオブジェクトが compiletime 型とは別のランタイム型ならば基本的に動作しません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This module also implements the protocol used to format messages, as specified by RFC 2822.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T095707Z" creationid="isVowel" creationdate="20200308T095246Z">
+        <seg>また、このモジュールでは RFC 5321 で制定されたメッセージ形式で用いられるプロトコルを実装してあります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -11319,6 +12851,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200214T143754Z" creationid="isVowel" creationdate="20200214T143754Z">
         <seg>このモジュールは一般的に良く使われるアルゴリズムの実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This module implements the SMTP client protocol as specified by RFC 5321, this can be used to send mail to any SMTP Server.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T095232Z" creationid="isVowel" creationdate="20200308T095232Z">
+        <seg>このモジュールは RFC 5321 で制定された SMTP クライアントのプロトコルにおける実装であり、 SMTP サーバへのメール送信で使います。</seg>
       </tuv>
     </tu>
     <tu>
@@ -11638,6 +13178,22 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>To learn about scripting in Nim see NimScript</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T034332Z" creationid="isVowel" creationdate="20200310T034332Z">
+        <seg>Nim スクリプトの記述方法を学ぶには NimScript をお読みください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To use a HeapQueue with a custom object, the &lt; operator must be implemented.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200307T143544Z" creationid="isVowel" creationdate="20200307T143531Z">
+        <seg>カスタムオブジェクトで HeapQueue を使うには、 &lt; 演算子を実装してください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Tools available with Nim</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T115121Z" creationid="isVowel" creationdate="20200130T115020Z">
@@ -11658,6 +13214,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200225T093038Z" creationid="isVowel" creationdate="20200225T093038Z">
         <seg>指定されたロックの取得を試行します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Tries to execute the query and returns true if successful, false otherwise.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T074920Z" creationid="isVowel" creationdate="20200306T074920Z">
+        <seg>クエリの実行を試行します。成功時はtrue を、それ以外は false を返します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -11690,6 +13254,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T042200Z" creationid="isVowel" creationdate="20200113T042200Z">
         <seg>タプル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Turn a heap into its string representation.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200307T141922Z" creationid="isVowel" creationdate="20200307T141922Z">
+        <seg>ヒープを文字列形式へ変換します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -11836,6 +13408,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Usage example:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T071915Z" creationid="isVowel" creationdate="20200310T071915Z">
+        <seg>使用例:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Usage of this function asynchronously is recommended to view the progress of the download.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200224T040916Z" creationid="isVowel" creationdate="20200224T040916Z">
@@ -11904,6 +13484,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200301T065929Z" creationid="isVowel" creationdate="20200301T065929Z">
         <seg>コロンの前ではなく、後にスペースをお使いください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Use the withDir() template if you want to perform a temporary change only.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T102054Z" creationid="isVowel" creationdate="20200310T102054Z">
+        <seg>一時的に変更したいときは withDir() テンプレートをお使いください。</seg>
       </tuv>
     </tu>
     <tu>
@@ -11992,6 +13580,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Verbose,                    ## Be verbose.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T034153Z" creationid="isVowel" creationdate="20200310T034153Z">
+        <seg>Verbose,                    ## 詳細表示。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Version:</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T032952Z" creationid="isVowel" creationdate="20200113T032952Z">
@@ -12036,6 +13632,42 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200208T110319Z" creationid="isVowel" creationdate="20200208T110319Z">
         <seg>インストールするもの:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Whatif                      ## Do not run commands, instead just echo what</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T034641Z" creationid="isVowel" creationdate="20200310T034223Z">
+        <seg>Whatif                      ## コマンドは実行しませんが、</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>【付録】※あくまで試験導入見本です。
+解析環境: コリャ英和！一発翻訳2020
+※正確さは保証されていません。高負荷作業のため継続は未定です。また、作業開始は仮訳全完了後(デバッグ作業)です。
+
+●参考機械訳文
+Software1: 
+Software2: 
+Software3: 
+
+●訳振り情報 (コリャ英和！一発翻訳2020)
+[When とき] OpenSSL is [dynamically 動的に] [linked リンクしている],  [the wrapper ラッパー] [provides 提供します] [partial部分的な] [forward 上位] [and と] [backward 下位] [compatibility 互換性] [for に] OpenSSL [versions バージョン] [above and below 以前・以降] 1.1.0  
+
+●訳振り情報 (by. isVowel)
+OpenSSL [is の] [dynamically linked 動的リンク] [When 時は]、 OpenSSL [versions バージョン] 1.1.0 [above and below 以前・以降] [for における] [partial 部分的な] [forward 上位] [and ・] [backward 下位] [compatibility 互換性] が [the wrapper ラッパー] [provides  にあります]。
+
+●品詞情報
+[When 接続詞] [OpenSSL 名詞] is [dynamically 副詞] [linked 形容詞], the [wrapper 名詞] [provides 動詞] [partial 形容詞] [forward 名詞] [and 接続詞] [backward 名詞] [compatibility 名詞] [for 前置詞] [OpenSSL 名詞] [versions 名詞] [above and below 前置詞] [1.1.0 名詞] 
+
+●発音情報
+[When ホゥエンヌ  [OpenSSL オープン・エスエスエル] [is イズ]  [dynamically ダイネアミカリイー]  [linked リインクト],  [the ズァ (ズイー)]  [wrapper ゥレアパ～ァ]  [provides プゥロヴアイヅ]  [partial ポア～ァシァウ]  [forward フオ～ァゥワ～ァド]  [and ァンド] [backward ベアクゥワ～ァド]  [compatibility コンペアティブヴィテイー] [for フォ～ァ]  [OpenSSL オープン・エスエスエル] [versions ヴァ～ァジォンズ]  [above ァバヴ]  [and ァンド]  [below ビロオウ]  [ワンポイントゼロ 1.1.0]   </note>
+      <tuv lang="EN-US">
+        <seg>When OpenSSL is dynamically linked, the wrapper provides partial forward and backward compatibility for OpenSSL versions above and below 1.1.0</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200309T013304Z" creationid="isVowel" creationdate="20200309T013304Z">
+        <seg>OpenSSL の動的リンク時は、 OpenSSL バージョン 1.1.0 以前・以降における部分的な上位・下位互換性がラッパーにあります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -12178,8 +13810,8 @@ sudo apt-get libvoodoo</seg>
       <tuv lang="EN-US">
         <seg>Writes data to the specified future stream as the file is read.</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200217T035035Z" creationid="isVowel" creationdate="20200217T035035Z">
-        <seg>ファイルから読み取りを行い、指定された先行ストリーム (FutureStream) へデータを書き込みます。</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200307T052754Z" creationid="isVowel" creationdate="20200217T035035Z">
+        <seg>ファイルから読み取りを行い、指定された Future ストリームへデータを書き込みます。</seg>
       </tuv>
     </tu>
     <tu>
@@ -12479,6 +14111,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>an SQL query string   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T051236Z" creationid="isVowel" creationdate="20200308T051236Z">
+        <seg>SQL クエリ文字列   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>an alias for 'send'.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T113757Z" creationid="isVowel" creationdate="20200122T113757Z">
@@ -12607,6 +14247,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>closes the database connection.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T083740Z" creationid="isVowel" creationdate="20200306T083740Z">
+        <seg>データベースの接続を終了します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>closure interators</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200220T091652Z" creationid="isVowel" creationdate="20200220T091652Z">
@@ -12715,6 +14363,94 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>dbBit,                      ## bit datatype</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T041559Z" creationid="isVowel" creationdate="20200308T041446Z">
+        <seg>dbBit,                      ## ビットによるデータ型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>dbBlob,                     ## blob datatype</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T042057Z" creationid="isVowel" creationdate="20200308T042057Z">
+        <seg>dbBlob,                     ## バイナリ形式の大規模オブジェクト (blob) によるデータ型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>dbBool,                     ## boolean datatype</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T041608Z" creationid="isVowel" creationdate="20200308T041608Z">
+        <seg>dbBool,                     ## ブールによるデータ型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>dbFixedChar,                ## string of fixed length</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T042117Z" creationid="isVowel" creationdate="20200308T042117Z">
+        <seg>dbFixedChar,                ## 固定長文字列</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>dbInt,                      ## some integer type</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T042252Z" creationid="isVowel" creationdate="20200308T042252Z">
+        <seg>dbInt,                      ## 整数型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>dbJson,                     ## JSON datatype</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T042148Z" creationid="isVowel" creationdate="20200308T042148Z">
+        <seg>dbJson,                     ## JSON によるデータ型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>dbNull,                     ## datatype used for the NULL value</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T041432Z" creationid="isVowel" creationdate="20200308T041432Z">
+        <seg>dbNull,                     ## NULL 値で使われるデータ型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>dbSerial,                   ## datatype used for primary auto-increment keys</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T041422Z" creationid="isVowel" creationdate="20200308T041422Z">
+        <seg>dbSerial,                   ## 自動インクリメントの主キーで使われるデータ型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>dbUnknown,                  ## unknown datatype</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T041322Z" creationid="isVowel" creationdate="20200308T041322Z">
+        <seg>dbUnknown,                  ## 未知のデータ型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>dbVarchar,                  ## string datatype</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T042137Z" creationid="isVowel" creationdate="20200308T042137Z">
+        <seg>dbVarchar,                  ## 文字列によるデータ型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>dbXml,                      ## XML datatype</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T042208Z" creationid="isVowel" creationdate="20200308T042208Z">
+        <seg>dbXml,                      ## XML によるデータ型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>delete proc</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200222T142637Z" creationid="isVowel" creationdate="20200222T142637Z">
@@ -12753,6 +14489,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>encapsulates a database connection   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T083248Z" creationid="isVowel" creationdate="20200306T083248Z">
+        <seg>データベース接続をカプセル化したものです   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>error pragma</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082026Z" creationid="isVowel" creationdate="20200114T082026Z">
@@ -12773,6 +14517,22 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200227T053209Z" creationid="isVowel" creationdate="20200227T053209Z">
         <seg>エンコーディングエラー発生時の例外   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>exception that is raised if a database error occurs   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T051159Z" creationid="isVowel" creationdate="20200308T051159Z">
+        <seg>データベースエラー発生時の例外   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>executes the query and raises EDB if not successful.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T083522Z" creationid="isVowel" creationdate="20200306T083522Z">
+        <seg>クエリを実行します。失敗したときは EDB が発生します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -13792,6 +15552,15 @@ sudo apt-get libvoodoo</seg>
       </tuv>
     </tu>
     <tu>
+      <note>filename of the file のようなものは「ファイルのファイル名」ではなく fiile を省いて「ファイルの名前」にした方がいいです。</note>
+      <tuv lang="EN-US">
+        <seg>get the filename of the file that the parser processes.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200311T043548Z" creationid="isVowel" creationdate="20200311T043548Z">
+        <seg>パーサーで処理するファイルの名前を取得します。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv lang="EN-US">
         <seg>gets the handle from the current executable.</seg>
       </tuv>
@@ -13921,6 +15690,102 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200228T060302Z" creationid="isVowel" creationdate="20200228T060302Z">
         <seg>json モジュール</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>jsonArrayEnd                ## start of an array: the ``]`` token</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200311T042154Z" creationid="isVowel" creationdate="20200311T042154Z">
+        <seg>jsonArrayEnd                ## 配列の終了: ``]`` トークン</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>jsonArrayStart,             ## start of an array: the ``[`` token</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200311T042105Z" creationid="isVowel" creationdate="20200311T042105Z">
+        <seg>jsonArrayStart,             ## 配列の開始: ``[`` トークン</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>jsonEof,                    ## end of file reached</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200311T041848Z" creationid="isVowel" creationdate="20200311T041848Z">
+        <seg>jsonEof,                    ## ファイル終端へ到達</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>jsonError,                  ## an error occurred during parsing</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200311T041839Z" creationid="isVowel" creationdate="20200311T041839Z">
+        <seg>jsonError,                  ## 構文解析中のエラー発生</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>jsonFalse,                  ## the value ``false``</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200311T041944Z" creationid="isVowel" creationdate="20200311T041944Z">
+        <seg>jsonFalse,                  ## ``false`` 値</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>jsonFloat,                  ## a float literal</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200311T041929Z" creationid="isVowel" creationdate="20200311T041929Z">
+        <seg>jsonFloat,                  ## 浮動小数リテラル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>jsonInt,                    ## an integer literal</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200311T041924Z" creationid="isVowel" creationdate="20200311T041924Z">
+        <seg>jsonInt,                    ## 整数リテラル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>jsonNull,                   ## the value ``null``</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200311T042029Z" creationid="isVowel" creationdate="20200311T042029Z">
+        <seg>jsonNull,                   ## ``null`` 値</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>jsonObjectEnd,              ## end of an object: the ``}`` token</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200311T042055Z" creationid="isVowel" creationdate="20200311T042055Z">
+        <seg>jsonObjectEnd,              ## オブジェクトの終了: ``}`` トークン</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>jsonObjectStart,            ## start of an object: the ``{`` token</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200311T042044Z" creationid="isVowel" creationdate="20200311T042044Z">
+        <seg>jsonObjectStart,            ## オブジェクトの開始: ``{`` トークン</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>jsonString,                 ## a string literal</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200311T041917Z" creationid="isVowel" creationdate="20200311T041917Z">
+        <seg>jsonString,                 ## 文字列リテラル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>jsonTrue,                   ## the value ``true``</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200311T041937Z" creationid="isVowel" creationdate="20200311T041937Z">
+        <seg>jsonTrue,                   ## ``true`` 値</seg>
       </tuv>
     </tu>
     <tu>
@@ -14187,6 +16052,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>opens a database connection.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T083749Z" creationid="isVowel" creationdate="20200306T083749Z">
+        <seg>データベースの接続を開始します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>options for the RST parser   Source Edit</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200225T034110Z" creationid="isVowel" creationdate="20200225T034110Z">
@@ -14323,10 +16196,26 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>raises a DbError exception.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T083328Z" creationid="isVowel" creationdate="20200306T083328Z">
+        <seg>DbError 例外を発生させます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>raises an EInvalidLibrary exception.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T084225Z" creationid="isVowel" creationdate="20200221T084225Z">
         <seg>EInvalidLibrary 例外を発生させます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>raises an EJsonParsingError exception.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200311T042711Z" creationid="isVowel" creationdate="20200311T042711Z">
+        <seg>EJsonParsingError 例外を発生させます。</seg>
       </tuv>
     </tu>
     <tu>
@@ -14459,6 +16348,30 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>retrieves the first/next event.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200311T042650Z" creationid="isVowel" creationdate="20200311T042650Z">
+        <seg>first/next イベントを取得します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>returns a helpful error message for the event jsonError   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200311T043311Z" creationid="isVowel" creationdate="20200311T043311Z">
+        <seg>jsonError イベントの手掛かりとなるエラーメッセージを返します   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>returns an error message "e expected" in the same format as the other error messages   Source Edit</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200311T043011Z" creationid="isVowel" creationdate="20200311T043011Z">
+        <seg>ほかのエラーメッセージと同じ書式でエラーメッセージ "e expected" を返します   ソース 編集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>returns the OS file handle of the file f.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200303T022956Z" creationid="isVowel" creationdate="20200303T022956Z">
@@ -14511,6 +16424,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T023815Z" creationid="isVowel" creationdate="20200127T023815Z">
         <seg>type T = distinct A を反転します。これは再帰的処理を行います。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>same as fastRows, but slower and safe.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T084428Z" creationid="isVowel" creationdate="20200306T084428Z">
+        <seg>fastRows と似ていますが、安全性を優先しているため処理速度は遅いです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -14597,16 +16518,16 @@ sudo apt-get libvoodoo</seg>
       <tuv lang="EN-US">
         <seg>sons*: RstNodeSeq            ## the node's sons</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200303T044045Z" creationid="isVowel" creationdate="20200226T094022Z">
-        <seg>sons*: RstNodeSeq            ## ノードの息子ら</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T044412Z" creationid="isVowel" creationdate="20200226T094022Z">
+        <seg>sons*: RstNodeSeq            ## ノードの息子</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
         <seg>sons*: seq[SqlNode]      ## the node's children</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200303T043356Z" creationid="isVowel" creationdate="20200303T043356Z">
-        <seg>sons*: seq[SqlNode]      ## ノードの子供ら</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T044358Z" creationid="isVowel" creationdate="20200303T043356Z">
+        <seg>sons*: seq[SqlNode]      ## ノードの子供</seg>
       </tuv>
     </tu>
     <tu>
@@ -14631,6 +16552,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200228T060300Z" creationid="isVowel" creationdate="20200228T060300Z">
         <seg>streams モジュール</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>stringify for Message.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200308T090116Z" creationid="isVowel" creationdate="20200308T090116Z">
+        <seg>Message の文字列化 (stringify) です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -15666,6 +17595,15 @@ sudo apt-get libvoodoo</seg>
       </tuv>
     </tu>
     <tu>
+      <note>原文の出来があまりよろしくないようです。再翻訳時は注意深くお願いします。</note>
+      <tuv lang="EN-US">
+        <seg>tell Nim that define is a C preprocessor #define and so always needs to be mangled.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200310T101124Z" creationid="isVowel" creationdate="20200310T094942Z">
+        <seg>Nim に Cプリプロセッサ定義 (#define)で define を識別させます。必ず修飾 (mangled) してください。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv lang="EN-US">
         <seg>temp command</seg>
       </tuv>
@@ -15809,6 +17747,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200220T091507Z" creationid="isVowel" creationdate="20200220T091507Z">
         <seg>トラッキングは cooldome, araq</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>tries to execute the query and returns true if successful, false otherwise.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200306T083433Z" creationid="isVowel" creationdate="20200306T083433Z">
+        <seg>クエリの実行を試行します。成功時は trueを、それ以外は false を返します。</seg>
       </tuv>
     </tu>
     <tu>

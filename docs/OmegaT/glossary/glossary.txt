@@ -71,3 +71,11 @@ distance	距離
 Deprecated	廃止
 polar coordinates	極座標
 complex number	複素数
+lexicographical order	辞書式順序
+underlying	隠されている
+underlying	潜在的な
+fixed-point number	固定小数点数
+configuration	コンフィギュレーション
+configuration	構成
+current line	現在行
+current column	現在列

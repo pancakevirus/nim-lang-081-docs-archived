@@ -909,16 +909,16 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"><p>This module implements the SMTP client protocol as specified by RFC 5321, this can be used to send mail to any SMTP Server.</p>
-<p>This module also implements the protocol used to format messages, as specified by RFC 2822.</p>
-<p>Example gmail use:</p>
+  <p class="module-desc"><p>このモジュールは RFC 5321 で制定された SMTP クライアントのプロトコルにおける実装であり、 SMTP サーバへのメール送信で使います。</p>
+<p>また、このモジュールでは RFC 5321 で制定されたメッセージ形式で用いられるプロトコルを実装してあります。</p>
+<p>Gmail での用例:</p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">msg</span> <span class="Operator">=</span> <span class="Identifier">createMessage</span><span class="Punctuation">(</span><span class="StringLit">"Hello from Nim's SMTP"</span><span class="Punctuation">,</span>
                         <span class="StringLit">"Hello!.</span><span class="EscapeSequence">\n</span><span class="StringLit"> Is this awesome or what?"</span><span class="Punctuation">,</span>
                         <span class="Operator">@</span><span class="Punctuation">[</span><span class="StringLit">"foo@gmail.com"</span><span class="Punctuation">]</span><span class="Punctuation">)</span>
 <span class="Keyword">let</span> <span class="Identifier">smtpConn</span> <span class="Operator">=</span> <span class="Identifier">newSmtp</span><span class="Punctuation">(</span><span class="Identifier">useSsl</span> <span class="Operator">=</span> <span class="Identifier">true</span><span class="Punctuation">,</span> <span class="Identifier">debug</span><span class="Operator">=</span><span class="Identifier">true</span><span class="Punctuation">)</span>
 <span class="Identifier">smtpConn</span><span class="Operator">.</span><span class="Identifier">connect</span><span class="Punctuation">(</span><span class="StringLit">"smtp.gmail.com"</span><span class="Punctuation">,</span> <span class="Identifier">Port</span> <span class="DecNumber">465</span><span class="Punctuation">)</span>
 <span class="Identifier">smtpConn</span><span class="Operator">.</span><span class="Identifier">auth</span><span class="Punctuation">(</span><span class="StringLit">"username"</span><span class="Punctuation">,</span> <span class="StringLit">"password"</span><span class="Punctuation">)</span>
-<span class="Identifier">smtpConn</span><span class="Operator">.</span><span class="Identifier">sendmail</span><span class="Punctuation">(</span><span class="StringLit">"username@gmail.com"</span><span class="Punctuation">,</span> <span class="Operator">@</span><span class="Punctuation">[</span><span class="StringLit">"foo@gmail.com"</span><span class="Punctuation">]</span><span class="Punctuation">,</span> <span class="Operator">$</span><span class="Identifier">msg</span><span class="Punctuation">)</span></pre><p>Example for startTls use:</p>
+<span class="Identifier">smtpConn</span><span class="Operator">.</span><span class="Identifier">sendmail</span><span class="Punctuation">(</span><span class="StringLit">"username@gmail.com"</span><span class="Punctuation">,</span> <span class="Operator">@</span><span class="Punctuation">[</span><span class="StringLit">"foo@gmail.com"</span><span class="Punctuation">]</span><span class="Punctuation">,</span> <span class="Operator">$</span><span class="Identifier">msg</span><span class="Punctuation">)</span></pre><p>startTls  での用例:</p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">msg</span> <span class="Operator">=</span> <span class="Identifier">createMessage</span><span class="Punctuation">(</span><span class="StringLit">"Hello from Nim's SMTP"</span><span class="Punctuation">,</span>
                         <span class="StringLit">"Hello!.</span><span class="EscapeSequence">\n</span><span class="StringLit"> Is this awesome or what?"</span><span class="Punctuation">,</span>
                         <span class="Operator">@</span><span class="Punctuation">[</span><span class="StringLit">"foo@gmail.com"</span><span class="Punctuation">]</span><span class="Punctuation">)</span>
@@ -926,7 +926,7 @@ function main() {
 <span class="Identifier">smtpConn</span><span class="Operator">.</span><span class="Identifier">connect</span><span class="Punctuation">(</span><span class="StringLit">"smtp.mailtrap.io"</span><span class="Punctuation">,</span> <span class="Identifier">Port</span> <span class="DecNumber">2525</span><span class="Punctuation">)</span>
 <span class="Identifier">smtpConn</span><span class="Operator">.</span><span class="Identifier">startTls</span><span class="Punctuation">(</span><span class="Punctuation">)</span>
 <span class="Identifier">smtpConn</span><span class="Operator">.</span><span class="Identifier">auth</span><span class="Punctuation">(</span><span class="StringLit">"username"</span><span class="Punctuation">,</span> <span class="StringLit">"password"</span><span class="Punctuation">)</span>
-<span class="Identifier">smtpConn</span><span class="Operator">.</span><span class="Identifier">sendmail</span><span class="Punctuation">(</span><span class="StringLit">"username@gmail.com"</span><span class="Punctuation">,</span> <span class="Operator">@</span><span class="Punctuation">[</span><span class="StringLit">"foo@gmail.com"</span><span class="Punctuation">]</span><span class="Punctuation">,</span> <span class="Operator">$</span><span class="Identifier">msg</span><span class="Punctuation">)</span></pre><p>For SSL support this module relies on OpenSSL. If you want to enable SSL, compile with <tt class="docutils literal"><span class="pre">-d:ssl</span></tt>.</p>
+<span class="Identifier">smtpConn</span><span class="Operator">.</span><span class="Identifier">sendmail</span><span class="Punctuation">(</span><span class="StringLit">"username@gmail.com"</span><span class="Punctuation">,</span> <span class="Operator">@</span><span class="Punctuation">[</span><span class="StringLit">"foo@gmail.com"</span><span class="Punctuation">]</span><span class="Punctuation">,</span> <span class="Operator">$</span><span class="Identifier">msg</span><span class="Punctuation">)</span></pre><p>このモジュールの SSL サポートは OpenSSL によるものです。SSLを有効にするには <tt class="docutils literal"><span class="pre">-d:ssl</span></tt> でコンパイルしてください。</p>
 </p>
   <div class="section" id="6">
 <h1><a class="toc-backref" href="#6">インポート</a></h1>
@@ -1003,7 +1003,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Alternate version of the above. &nbsp;&nbsp;<a
+上記の別バージョンです。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/smtp.nim#L106"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L106" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1012,7 +1012,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2CMessage"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">msg</span><span class="Other">:</span> <a href="smtp.html#Message"><span class="Identifier">Message</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-stringify for <tt class="docutils literal"><span class="pre">Message</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">Message</span></tt> の文字列化 (stringify) です。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/smtp.nim#L115"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L115" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1044,7 +1044,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">FutureError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Establishes a connection with a SMTP server. May fail with ReplyError or with a socket error. &nbsp;&nbsp;<a
+SMTP サーバとの接続を確立します。 失敗時は ReplyError またはソケットエラーになります。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/smtp.nim#L174"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L174" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1055,7 +1055,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">TimeEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Establishes a connection with a SMTP server. May fail with ReplyError or with a socket error. &nbsp;&nbsp;<a
+SMTP サーバとの接続を確立します。 失敗時は ReplyError またはソケットエラーになります。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/smtp.nim#L175"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L175" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1065,13 +1065,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">FutureError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">,</span> <span class="Identifier">ReadDirEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Put the SMTP connection in TLS (Transport Layer Security) mode. May fail with ReplyError
-&nbsp;&nbsp;<a
+TLS (トランスポート層セキュリティ) モードで SMTP 接続を行います。失敗時は ReplyError になります &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/smtp.nim#L184"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L184" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L184" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="startTls,Smtp,SslContext"></a>
@@ -1080,13 +1076,9 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">WriteIOEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">TimeEffect</span><span class="Other">,</span> <span class="Identifier">RootEffect</span><span class="Other">,</span> <span class="Identifier">ReadDirEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Put the SMTP connection in TLS (Transport Layer Security) mode. May fail with ReplyError
-&nbsp;&nbsp;<a
+TLS (トランスポート層セキュリティ) モードで SMTP 接続を行います。失敗時は ReplyError になります &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/smtp.nim#L184"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L184" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L184" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="auth,AsyncSmtp,string,string"></a>
@@ -1094,7 +1086,7 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">FutureError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Sends an AUTH command to the server to login as the <tt class="docutils literal"><span class="pre">username</span></tt> using <tt class="docutils literal"><span class="pre">password</span></tt>. May fail with ReplyError. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">username</span></tt> を用いて <tt class="docutils literal"><span class="pre">password</span></tt> としてログインするためにサーバへ AUTH コマンドを送信します。失敗時は ReplyError になります。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/smtp.nim#L197"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L197" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1105,7 +1097,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">WriteIOEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">TimeEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Sends an AUTH command to the server to login as the <tt class="docutils literal"><span class="pre">username</span></tt> using <tt class="docutils literal"><span class="pre">password</span></tt>. May fail with ReplyError. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">username</span></tt> を用いて <tt class="docutils literal"><span class="pre">password</span></tt> としてログインするためにサーバへ AUTH コマンドを送信します。失敗時は ReplyError になります。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/smtp.nim#L197"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L197" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1115,7 +1107,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <a href="asyncfutures.html#Future"><span class="Identifier">Future</span></a><span class="Other">[</span><a href="system.html#void"><span class="Identifier">void</span></a><span class="Other">]</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">FutureError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Sends <tt class="docutils literal"><span class="pre">msg</span></tt> from <tt class="docutils literal"><span class="pre">fromAddr</span></tt> to the addresses specified in <tt class="docutils literal"><span class="pre">toAddrs</span></tt>. Messages may be formed using <tt class="docutils literal"><span class="pre">createMessage</span></tt> by converting the Message into a string. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">fromAddr</span></tt> からの <tt class="docutils literal"><span class="pre">msg</span></tt> を <tt class="docutils literal"><span class="pre">toAddrs</span></tt> で指定されたアドレスへ送信します。メッセージは <tt class="docutils literal"><span class="pre">createMessage</span></tt> によりメッセージを文字列に変換することで得られます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/smtp.nim#L211"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L211" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1126,7 +1118,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">WriteIOEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">TimeEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Sends <tt class="docutils literal"><span class="pre">msg</span></tt> from <tt class="docutils literal"><span class="pre">fromAddr</span></tt> to the addresses specified in <tt class="docutils literal"><span class="pre">toAddrs</span></tt>. Messages may be formed using <tt class="docutils literal"><span class="pre">createMessage</span></tt> by converting the Message into a string. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">fromAddr</span></tt> からの <tt class="docutils literal"><span class="pre">msg</span></tt> を <tt class="docutils literal"><span class="pre">toAddrs</span></tt> で指定されたアドレスへ送信します。メッセージは <tt class="docutils literal"><span class="pre">createMessage</span></tt> によりメッセージを文字列に変換することで得られます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/smtp.nim#L212"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L212" class="link-seesrc" target="_blank" >編集</a>
 

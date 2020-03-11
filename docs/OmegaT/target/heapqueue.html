@@ -895,7 +895,7 @@ function main() {
 <span class="Identifier">assert</span> <span class="Identifier">heap</span><span class="Operator">.</span><span class="Identifier">pop</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">2</span>
 <span class="Comment"># The lowest element remaining is 5</span>
 <span class="Identifier">assert</span> <span class="Identifier">heap</span><span class="Punctuation">[</span><span class="DecNumber">0</span><span class="Punctuation">]</span> <span class="Operator">==</span> <span class="DecNumber">5</span></pre>
-<h1><a class="toc-backref" id="usage-with-custom-object" href="#usage-with-custom-object">カスタムオブジェクトの用法</a></h1><p>To use a <tt class="docutils literal"><span class="pre">HeapQueue</span></tt> with a custom object, the <tt class="docutils literal"><span class="pre">&lt;</span></tt> operator must be implemented.</p>
+<h1><a class="toc-backref" id="usage-with-custom-object" href="#usage-with-custom-object">カスタムオブジェクトの用法</a></h1><p>カスタムオブジェクトで <tt class="docutils literal"><span class="pre">HeapQueue</span></tt> を使うには、 <tt class="docutils literal"><span class="pre">&lt;</span></tt> 演算子を実装してください。</p>
 <pre class="listing"><span class="Keyword">import</span> <span class="Identifier">heapqueue</span>
 
 <span class="Keyword">type</span> <span class="Identifier">Job</span> <span class="Operator">=</span> <span class="Keyword">object</span>
@@ -940,7 +940,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#len%2CHeapQueue%5BT%5D"><span class="Identifier">len</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">heap</span><span class="Other">:</span> <a href="heapqueue.html#HeapQueue"><span class="Identifier">HeapQueue</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Return the number of elements of <tt class="docutils literal"><span class="pre">heap</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">heap</span></tt> の要素数を返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/collections/heapqueue.nim#L62"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/heapqueue.nim#L62" class="link-seesrc" target="_blank" >編集</a>
 
@@ -949,7 +949,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%5B%5D%2CHeapQueue%5BT%5D%2CNatural"><span class="Identifier">`[]`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">heap</span><span class="Other">:</span> <a href="heapqueue.html#HeapQueue"><span class="Identifier">HeapQueue</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">i</span><span class="Other">:</span> <a href="system.html#Natural"><span class="Identifier">Natural</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Access the i-th element of <tt class="docutils literal"><span class="pre">heap</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">heap</span></tt> の i 番目にある要素へアクセスします。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/collections/heapqueue.nim#L66"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/heapqueue.nim#L66" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1007,10 +1007,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#clear%2CHeapQueue%5BT%5D"><span class="Identifier">clear</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">heap</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="heapqueue.html#HeapQueue"><span class="Identifier">HeapQueue</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
 <dd>
 
-
-
-Remove all elements from <tt class="docutils literal"><span class="pre">heap</span></tt>, making it empty.
-
+<tt class="docutils literal"><span class="pre">heap</span></tt> から要素をすべて削除して、空にします。
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">heap</span> <span class="Other">=</span> <span class="Identifier">initHeapQueue</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">(</span><span class="Other">)</span>
 <span class="Identifier">heap</span><span class="Other">.</span><span class="Identifier">push</span><span class="Other">(</span><span class="DecNumber">1</span><span class="Other">)</span>
@@ -1025,10 +1022,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2CHeapQueue%5BT%5D"><span class="Identifier">`$`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">heap</span><span class="Other">:</span> <a href="heapqueue.html#HeapQueue"><span class="Identifier">HeapQueue</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a></pre></dt>
 <dd>
 
-
-
-Turn a heap into its string representation.
-
+ヒープを文字列形式へ変換します。
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">heap</span> <span class="Other">=</span> <span class="Identifier">initHeapQueue</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">(</span><span class="Other">)</span>
 <span class="Identifier">heap</span><span class="Other">.</span><span class="Identifier">push</span><span class="Other">(</span><span class="DecNumber">1</span><span class="Other">)</span>

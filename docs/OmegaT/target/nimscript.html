@@ -838,10 +838,10 @@ function main() {
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#ScriptMode"
     title="ScriptMode {.pure.} = enum
-  Silent,                     ## Be silent.
-  Verbose,                    ## Be verbose.
-  Whatif                      ## Do not run commands, instead just echo what
-        ## would have been done."><wbr />Script<wbr />Mode<span class="attachedType"></span></a></li>
+  Silent,                     ## 無表示。
+  Verbose,                    ## 詳細表示。
+  Whatif                      ## コマンドは実行しませんが、
+        ## スクリプトの処理結果を表示します。"><wbr />Script<wbr />Mode<span class="attachedType"></span></a></li>
 
   </ul>
 </li>
@@ -1016,19 +1016,19 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc">To learn about scripting in Nim see <a class="reference external" href="nims.html">NimScript</a></p>
+  <p class="module-desc">Nim スクリプトの記述方法を学ぶには <a class="reference external" href="nims.html">NimScript</a> をお読みください。</p>
   <div class="section" id="7">
 <h1><a class="toc-backref" href="#7">型</a></h1>
 <dl class="item">
 <a id="ScriptMode"></a>
 <dt><pre><a href="nimscript.html#ScriptMode"><span class="Identifier">ScriptMode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">pure</span></span><span class="Other">.}</span></span> <span class="Other">=</span> <span class="Keyword">enum</span>
-  <span class="Identifier">Silent</span><span class="Other">,</span>                     <span class="Comment">## Be silent.</span>
-  <span class="Identifier">Verbose</span><span class="Other">,</span>                    <span class="Comment">## Be verbose.</span>
-  <span class="Identifier">Whatif</span>                      <span class="Comment">## Do not run commands, instead just echo what</span>
-        <span class="Comment">## would have been done.</span></pre></dt>
+  <span class="Identifier">Silent</span><span class="Other">,</span>                     <span class="Comment">## 無表示。</span>
+  <span class="Identifier">Verbose</span><span class="Other">,</span>                    <span class="Comment">## 詳細表示。</span>
+  <span class="Identifier">Whatif</span>                      <span class="Comment">## コマンドは実行しませんが、</span>
+        <span class="Comment">## スクリプトの処理結果を表示します。</span></pre></dt>
 <dd>
 
-Controls the behaviour of the script. &nbsp;&nbsp;<a
+スクリプトの動作を制御します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L176"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L176" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1042,20 +1042,16 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="nimscript.html#mode"><span class="Identifier">mode</span></a><span class="Other">:</span> <a href="nimscript.html#ScriptMode"><span class="Identifier">ScriptMode</span></a></pre></dt>
 <dd>
 
-
-
-Set this to influence how mkDir, rmDir, rmFile etc. behave
-&nbsp;&nbsp;<a
+この設定は how mkDir, rmDir, rmFile などの動作に影響します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L183"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L183" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L183" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="packageName"></a>
 <dt><pre><a href="nimscript.html#packageName"><span class="Identifier">packageName</span></a> <span class="Other">=</span> <span class="StringLit">""</span></pre></dt>
 <dd>
 
-Nimble support: Set this to the package name. It is usually not required to do that, nims' filename is the default. &nbsp;&nbsp;<a
+Nimble サポート: これはパッケージ名の設定です。デフォルトは nims のファイル名であるため、通常は設定不要です。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L397"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L397" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1082,7 +1078,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="nimscript.html#description"><span class="Identifier">description</span></a><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a></pre></dt>
 <dd>
 
-Nimble support: The package's description. &nbsp;&nbsp;<a
+Nimble サポート: パッケージの概要です。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L402"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L402" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1100,7 +1096,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="nimscript.html#srcDir"><span class="Identifier">srcDir</span></a><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a></pre></dt>
 <dd>
 
-Nimble support: The package's source directory. &nbsp;&nbsp;<a
+Nimble サポート: パッケージのソースディレクトリです。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L404"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L404" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1109,7 +1105,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="nimscript.html#binDir"><span class="Identifier">binDir</span></a><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a></pre></dt>
 <dd>
 
-Nimble support: The package's binary directory. &nbsp;&nbsp;<a
+Nimble サポート: パッケージのバイナリディレクトリです。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L405"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L405" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1190,7 +1186,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="nimscript.html#requiresData"><span class="Identifier">requiresData</span></a><span class="Other">:</span> <a href="system.html#seq"><span class="Identifier">seq</span></a><span class="Other">[</span><a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">]</span> <span class="Other">=</span> <span class="Operator">@</span><span class="Other">[</span><span class="Other">]</span></pre></dt>
 <dd>
 
-Exposes the list of requirements for read and write accesses. &nbsp;&nbsp;<a
+読み書きアクセスで必要となる公開リストです。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L410"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L410" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1204,7 +1200,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="nimscript.html#buildOS"><span class="Identifier">buildOS</span></a><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span class="Other">=</span> <span class="StringLit">""</span></pre></dt>
 <dd>
 
-The OS this build is running on. Can be different from <tt class="docutils literal"><span class="pre">system.hostOS</span></tt> for cross compilations. &nbsp;&nbsp;<a
+このビルドを実行しているオペレーティング・システムです。クロスコンパイルで使う <tt class="docutils literal"><span class="pre">system.hostOS</span></tt> とは違います。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L16"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L16" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1213,7 +1209,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="nimscript.html#buildCPU"><span class="Identifier">buildCPU</span></a><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span class="Other">=</span> <span class="StringLit">""</span></pre></dt>
 <dd>
 
-The CPU this build is running on. Can be different from <tt class="docutils literal"><span class="pre">system.hostCPU</span></tt> for cross compilations. &nbsp;&nbsp;<a
+このビルドを実行している CPU の種類です。クロスコンパイルで使う <tt class="docutils literal"><span class="pre">system.hostCPU</span></tt> とは違います。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L20"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L20" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1227,7 +1223,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#listDirs%2Cstring"><span class="Identifier">listDirs</span></a><span class="Other">(</span><span class="Identifier">dir</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#seq"><span class="Identifier">seq</span></a><span class="Other">[</span><a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Lists all the subdirectories (non-recursively) in the directory <tt class="docutils literal"><span class="pre">dir</span></tt>. &nbsp;&nbsp;<a
+ディレクトリ <tt class="docutils literal"><span class="pre">dir</span></tt> にあるサブディレクトリをすべてリスト化します (再起処理ではありません)。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L29"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L29" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1236,7 +1232,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#listFiles%2Cstring"><span class="Identifier">listFiles</span></a><span class="Other">(</span><span class="Identifier">dir</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#seq"><span class="Identifier">seq</span></a><span class="Other">[</span><a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Lists all the files (non-recursively) in the directory <tt class="docutils literal"><span class="pre">dir</span></tt>. &nbsp;&nbsp;<a
+ディレクトリ <tt class="docutils literal"><span class="pre">dir</span></tt> にあるファイルをすべてリスト化します (再起処理ではありません)。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L32"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L32" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1254,7 +1250,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#paramStr%2Cint"><span class="Identifier">paramStr</span></a><span class="Other">(</span><span class="Identifier">i</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Retrieves the <tt class="docutils literal"><span class="pre">i</span></tt>'th command line parameter. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">i</span></tt> 番目にあるコマンドライン引数を取得します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L61"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L61" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1263,7 +1259,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#paramCount"><span class="Identifier">paramCount</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Retrieves the number of command line parameters. &nbsp;&nbsp;<a
+コマンドライン引数の個数を取得します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L65"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L65" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1272,7 +1268,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#switch%2Cstring%2Cstring"><span class="Identifier">switch</span></a><span class="Other">(</span><span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">val</span> <span class="Other">=</span> <span class="StringLit">""</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Sets a Nim compiler command line switch, for example <tt class="docutils literal"><span class="pre">switch("checks", "on")</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">switch("checks", "on")</span></tt> などの Nim コンパイラのコマンドスイッチを設定します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L69"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L69" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1281,7 +1277,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#warning%2Cstring%2Cbool"><span class="Identifier">warning</span></a><span class="Other">(</span><span class="Identifier">name</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">val</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Disables or enables a specific warning. &nbsp;&nbsp;<a
+指定された警告の有効・無効化を行います。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L74"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L74" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1290,7 +1286,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#hint%2Cstring%2Cbool"><span class="Identifier">hint</span></a><span class="Other">(</span><span class="Identifier">name</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">val</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Disables or enables a specific hint. &nbsp;&nbsp;<a
+指定されたヒントの有効・無効化を行います。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L79"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L79" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1299,7 +1295,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#patchFile%2Cstring%2Cstring%2Cstring"><span class="Identifier">patchFile</span></a><span class="Other">(</span><span class="Identifier">package</span><span class="Other">,</span> <span class="Identifier">filename</span><span class="Other">,</span> <span class="Identifier">replacement</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Overrides the location of a given file belonging to the passed package. If the <tt class="docutils literal"><span class="pre">replacement</span></tt> is not an absolute path, the path is interpreted to be local to the Nimscript file that contains the call to <tt class="docutils literal"><span class="pre">patchFile</span></tt>, Nim's <tt class="docutils literal"><span class="pre">--path</span></tt> is not used at all to resolve the filename!</p>
+<p>渡されたパッケージにある指定ファイルの格納先をオーバーライドします。<tt class="docutils literal"><span class="pre">replacement</span></tt> が絶対パスでなければ、パスは <tt class="docutils literal"><span class="pre">patchFile</span></tt> を呼び出すローカルな Nimscript ファイルとして解釈されるため、 Nim の <tt class="docutils literal"><span class="pre">--path</span></tt> はファイル名の解決に使われません！</p>
 <p>用例:</p>
 <pre class="listing"><span class="Identifier">patchFile</span><span class="Punctuation">(</span><span class="StringLit">"stdlib"</span><span class="Punctuation">,</span> <span class="StringLit">"asyncdispatch"</span><span class="Punctuation">,</span> <span class="StringLit">"patches/replacement"</span><span class="Punctuation">)</span></pre>
 &nbsp;&nbsp;<a
@@ -1311,7 +1307,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#getCommand"><span class="Identifier">getCommand</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Gets the Nim command that the compiler has been invoked with, for example "c", "js", "build", "help". &nbsp;&nbsp;<a
+"c", "js", "build", "help" などコンパイラから呼び出された Nim コマンドを取得します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L99"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L99" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1320,7 +1316,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#setCommand%2Cstring%2Cstring"><span class="Identifier">setCommand</span></a><span class="Other">(</span><span class="Identifier">cmd</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">project</span> <span class="Other">=</span> <span class="StringLit">""</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Sets the Nim command that should be continued with after this Nimscript has finished. &nbsp;&nbsp;<a
+この Nimscript の終了後に続行する Nim コマンドを設定します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L104"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L104" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1329,7 +1325,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#cmpic%2Cstring%2Cstring"><span class="Identifier">cmpic</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Compares <tt class="docutils literal"><span class="pre">a</span></tt> and <tt class="docutils literal"><span class="pre">b</span></tt> ignoring case. &nbsp;&nbsp;<a
+英数大小同一視で <tt class="docutils literal"><span class="pre">a</span></tt> と <tt class="docutils literal"><span class="pre">b</span></tt> を比較します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L112"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L112" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1338,7 +1334,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#getEnv%2Cstring%2Cstring"><span class="Identifier">getEnv</span></a><span class="Other">(</span><span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">default</span> <span class="Other">=</span> <span class="StringLit">""</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><a href="system.html#ReadIOEffect"><span class="Identifier">ReadIOEffect</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Retrieves the environment variable of name <tt class="docutils literal"><span class="pre">key</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">key</span></tt> で指名された環境変数を取得します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L116"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L116" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1347,7 +1343,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#existsEnv%2Cstring"><span class="Identifier">existsEnv</span></a><span class="Other">(</span><span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><a href="system.html#ReadIOEffect"><span class="Identifier">ReadIOEffect</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Checks for the existence of an environment variable named <tt class="docutils literal"><span class="pre">key</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">key</span></tt> で指名された環境変数の存在を確認します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L120"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L120" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1356,7 +1352,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#putEnv%2Cstring%2Cstring"><span class="Identifier">putEnv</span></a><span class="Other">(</span><span class="Identifier">key</span><span class="Other">,</span> <span class="Identifier">val</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><a href="system.html#WriteIOEffect"><span class="Identifier">WriteIOEffect</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Sets the value of the environment variable named <tt class="docutils literal"><span class="pre">key</span></tt> to <tt class="docutils literal"><span class="pre">val</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">key</span></tt> で指名された環境変数に値 <tt class="docutils literal"><span class="pre">val</span></tt> を設定します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L124"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L124" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1365,7 +1361,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#delEnv%2Cstring"><span class="Identifier">delEnv</span></a><span class="Other">(</span><span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><a href="system.html#WriteIOEffect"><span class="Identifier">WriteIOEffect</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Deletes the environment variable named <tt class="docutils literal"><span class="pre">key</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">key</span></tt> で指名された環境変数を削除します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L128"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L128" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1374,7 +1370,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#fileExists%2Cstring"><span class="Identifier">fileExists</span></a><span class="Other">(</span><span class="Identifier">filename</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><a href="system.html#ReadIOEffect"><span class="Identifier">ReadIOEffect</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Checks if the file exists. &nbsp;&nbsp;<a
+ファイルの存在を確認します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L132"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L132" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1383,7 +1379,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#dirExists%2Cstring"><span class="Identifier">dirExists</span></a><span class="Other">(</span><span class="Identifier">dir</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><a href="system.html#ReadIOEffect"><span class="Identifier">ReadIOEffect</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Checks if the directory <tt class="docutils literal"><span class="pre">dir</span></tt> exists. &nbsp;&nbsp;<a
+ディレクトリ <tt class="docutils literal"><span class="pre">dir</span></tt> の存在を確認します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L136"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L136" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1392,7 +1388,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#existsFile%2Cstring"><span class="Identifier">existsFile</span></a><span class="Other">(</span><span class="Identifier">filename</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-An alias for <tt class="docutils literal"><span class="pre">fileExists</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">fileExists</span></tt> のエイリアスです。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L141"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L141" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1401,7 +1397,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#existsDir%2Cstring"><span class="Identifier">existsDir</span></a><span class="Other">(</span><span class="Identifier">dir</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-An alias for <tt class="docutils literal"><span class="pre">dirExists</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">dirExists</span></tt> のエイリアスです。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L145"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L145" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1410,7 +1406,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#selfExe"><span class="Identifier">selfExe</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Returns the currently running nim or nimble executable. &nbsp;&nbsp;<a
+現在実行中の nim または nimble 実行可能ファイルを返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L149"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L149" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1419,7 +1415,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#toExe%2Cstring"><span class="Identifier">toExe</span></a><span class="Other">(</span><span class="Identifier">filename</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-On Windows adds ".exe" to <tt class="docutils literal"><span class="pre">filename</span></tt>, else returns <tt class="docutils literal"><span class="pre">filename</span></tt> unmodified. &nbsp;&nbsp;<a
+Windows では <tt class="docutils literal"><span class="pre">filename</span></tt> に ".exe" を追加しますが、それ以外のプラットフォームでは無変更の <tt class="docutils literal"><span class="pre">filename</span></tt> を返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L154"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L154" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1428,7 +1424,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#toDll%2Cstring"><span class="Identifier">toDll</span></a><span class="Other">(</span><span class="Identifier">filename</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-On Windows adds ".dll" to <tt class="docutils literal"><span class="pre">filename</span></tt>, on Posix produces "lib$filename.so". &nbsp;&nbsp;<a
+Windows では <tt class="docutils literal"><span class="pre">filename</span></tt> に ".dll" を追加しますが、 POSIX では "lib$filename.so" を生成します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L158"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L158" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1437,7 +1433,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#rmDir%2Cstring"><span class="Identifier">rmDir</span></a><span class="Other">(</span><span class="Identifier">dir</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><a href="system.html#OSError"><span class="Identifier">OSError</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Removes the directory <tt class="docutils literal"><span class="pre">dir</span></tt>. &nbsp;&nbsp;<a
+ディレクトリ <tt class="docutils literal"><span class="pre">dir</span></tt> を削除します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L199"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L199" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1446,7 +1442,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#rmFile%2Cstring"><span class="Identifier">rmFile</span></a><span class="Other">(</span><span class="Identifier">file</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><a href="system.html#OSError"><span class="Identifier">OSError</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Removes the <tt class="docutils literal"><span class="pre">file</span></tt>. &nbsp;&nbsp;<a
+ファイル <tt class="docutils literal"><span class="pre">file</span></tt> を削除します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L205"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L205" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1455,7 +1451,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#mkDir%2Cstring"><span class="Identifier">mkDir</span></a><span class="Other">(</span><span class="Identifier">dir</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><a href="system.html#OSError"><span class="Identifier">OSError</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Creates the directory <tt class="docutils literal"><span class="pre">dir</span></tt> including all necessary subdirectories. If the directory already exists, no error is raised. &nbsp;&nbsp;<a
+必要ならばサブディレクトリ込みでディレクトリ <tt class="docutils literal"><span class="pre">dir</span></tt> を作成します。既にディレクトリが存在していても、エラーは発生しません。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L211"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L211" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1465,7 +1461,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                               <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Moves the file <tt class="docutils literal"><span class="pre">from</span></tt> to <tt class="docutils literal"><span class="pre">to</span></tt>. &nbsp;&nbsp;<a
+ファイルを <tt class="docutils literal"><span class="pre">from</span></tt> から <tt class="docutils literal"><span class="pre">to</span></tt> へ移動します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L218"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L218" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1475,7 +1471,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                              <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Moves the dir <tt class="docutils literal"><span class="pre">from</span></tt> to <tt class="docutils literal"><span class="pre">to</span></tt>. &nbsp;&nbsp;<a
+ディレクトリを <tt class="docutils literal"><span class="pre">from</span></tt> から <tt class="docutils literal"><span class="pre">to</span></tt> へ移動します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L224"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L224" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1485,7 +1481,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                               <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Copies the file <tt class="docutils literal"><span class="pre">from</span></tt> to <tt class="docutils literal"><span class="pre">to</span></tt>. &nbsp;&nbsp;<a
+ファイルを <tt class="docutils literal"><span class="pre">from</span></tt> から <tt class="docutils literal"><span class="pre">to</span></tt> へコピーします。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L230"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L230" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1495,7 +1491,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                              <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Copies the dir <tt class="docutils literal"><span class="pre">from</span></tt> to <tt class="docutils literal"><span class="pre">to</span></tt>. &nbsp;&nbsp;<a
+ディレクトリを <tt class="docutils literal"><span class="pre">from</span></tt> から <tt class="docutils literal"><span class="pre">to</span></tt> へコピーします。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L236"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L236" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1504,8 +1500,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#exec%2Cstring"><span class="Identifier">exec</span></a><span class="Other">(</span><span class="Identifier">command</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><a href="system.html#OSError"><span class="Identifier">OSError</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><a href="system.html#ExecIOEffect"><span class="Identifier">ExecIOEffect</span></a><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Executes an external process. If the external process terminates with a non-zero exit code, an OSError exception is raised.</p>
-<p><strong>Note:</strong> If you need a version of <tt class="docutils literal"><span class="pre">exec</span></tt> that returns the exit code and text output of the command, you can use <a class="reference external" href="system.html#gorgeEx,string,string,string">system.gorgeEx</a>.</p>
+<p>外部プロセスを実行します。非ゼロで外部プロセスが停止したときは、 OSError 例外が発生します。</p>
+<p><strong>備考:</strong> 終了コードを返してコマンドのテキストを出力する <tt class="docutils literal"><span class="pre">exec</span></tt> の派生版が必要ならば、 <a class="reference external" href="system.html#gorgeEx,string,string,string">system.gorgeEx</a> が使えます。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L242"
@@ -1517,7 +1513,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><a href="system.html#ExecIOEffect"><span class="Identifier">ExecIOEffect</span></a><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Executes an external process. If the external process terminates with a non-zero exit code, an OSError exception is raised. &nbsp;&nbsp;<a
+外部プロセスを実行します。非ゼロで外部プロセスが停止したときは、 OSError 例外が発生します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L255"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L255" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1526,7 +1522,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#selfExec%2Cstring"><span class="Identifier">selfExec</span></a><span class="Other">(</span><span class="Identifier">command</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><a href="system.html#OSError"><span class="Identifier">OSError</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><a href="system.html#ExecIOEffect"><span class="Identifier">ExecIOEffect</span></a><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Executes an external command with the current nim/nimble executable. <tt class="docutils literal"><span class="pre">Command</span></tt> must not contain the "nim " part. &nbsp;&nbsp;<a
+現在の nim/nimble 実行可能ファイルから外部コマンドを実行します。<tt class="docutils literal"><span class="pre">Command</span></tt> の一部に "nim " は使えません。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L265"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L265" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1535,7 +1531,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#put%2Cstring%2Cstring"><span class="Identifier">put</span></a><span class="Other">(</span><span class="Identifier">key</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Sets a configuration 'key' like 'gcc.options.always' to its value. &nbsp;&nbsp;<a
+'gcc.options.always' などの構成 'key' に値を設定します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L275"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L275" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1544,7 +1540,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#get%2Cstring"><span class="Identifier">get</span></a><span class="Other">(</span><span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Retrieves a configuration 'key' like 'gcc.options.always'. &nbsp;&nbsp;<a
+'gcc.options.always' などの構成 'key' を取得します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L279"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L279" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1553,7 +1549,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#exists%2Cstring"><span class="Identifier">exists</span></a><span class="Other">(</span><span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Checks for the existence of a configuration 'key' like 'gcc.options.always'. &nbsp;&nbsp;<a
+'gcc.options.always' などの構成 'key' の存在を確認します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L283"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L283" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1562,7 +1558,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#nimcacheDir"><span class="Identifier">nimcacheDir</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Retrieves the location of 'nimcache'. &nbsp;&nbsp;<a
+'nimcache' の格納先を取得します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L288"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L288" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1571,46 +1567,34 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#projectName"><span class="Identifier">projectName</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Retrieves the name of the current project
-&nbsp;&nbsp;<a
+現在のプロジェクト名を取得します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L292"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L292" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L292" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="projectDir"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#projectDir"><span class="Identifier">projectDir</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Retrieves the absolute directory of the current project
-&nbsp;&nbsp;<a
+現在のプロジェクトにおける絶対ディレクトリを取得します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L296"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L296" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L296" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="projectPath"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#projectPath"><span class="Identifier">projectPath</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Retrieves the absolute path of the current project
-&nbsp;&nbsp;<a
+現在のプロジェクトにおける絶対パスを取得します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L300"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L300" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L300" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="thisDir"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#thisDir"><span class="Identifier">thisDir</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Retrieves the directory of the current <tt class="docutils literal"><span class="pre">nims</span></tt> script file. Its path is obtained via <tt class="docutils literal"><span class="pre">currentSourcePath</span></tt> (although, currently, <tt class="docutils literal"><span class="pre">currentSourcePath</span></tt> resolves symlinks, unlike <tt class="docutils literal"><span class="pre">thisDir</span></tt>). &nbsp;&nbsp;<a
+現在の <tt class="docutils literal"><span class="pre">nims</span></tt> スクリプトファイルがあるディレクトリを取得します。このパスは <tt class="docutils literal"><span class="pre">currentSourcePath</span></tt> で取得できます (とはいえ、今のところ、 <tt class="docutils literal"><span class="pre">thisDir</span></tt> と異なり、 <tt class="docutils literal"><span class="pre">currentSourcePath</span></tt> はシンボリックリンクを解決します)。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L304"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L304" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1619,8 +1603,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#cd%2Cstring"><span class="Identifier">cd</span></a><span class="Other">(</span><span class="Identifier">dir</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><a href="system.html#OSError"><span class="Identifier">OSError</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Changes the current directory.</p>
-<p>The change is permanent for the rest of the execution, since this is just a shortcut for <a class="reference external" href="os.html#setCurrentDir,string">os.setCurrentDir()</a> . Use the <a class="reference external" href="#withDir.t,string,untyped">withDir()</a> template if you want to perform a temporary change only.</p>
+<p>カレントディレクトリを変更します</p>
+<p>これは <a class="reference external" href="os.html#setCurrentDir,string">os.setCurrentDir()</a> のショートカットであるため、実行後の変更は恒常的となります。一時的に変更したいときは <a class="reference external" href="#withDir.t,string,untyped">withDir()</a> テンプレートをお使いください。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L310"
@@ -1631,7 +1615,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#findExe%2Cstring"><span class="Identifier">findExe</span></a><span class="Other">(</span><span class="Identifier">bin</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Searches for bin in the current working directory and then in directories listed in the PATH environment variable. Returns "" if the exe cannot be found. &nbsp;&nbsp;<a
+現在の作業ディレクトリと環境変数 PATH に記述されているディレクトのリストからバイナリを検索します。実行可能ファイルが見つからないときは "" を返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L320"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L320" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1640,7 +1624,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#cppDefine%2Cstring"><span class="Identifier">cppDefine</span></a><span class="Other">(</span><span class="Identifier">define</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-tell Nim that <tt class="docutils literal"><span class="pre">define</span></tt> is a C preprocessor <tt class="docutils literal"><span class="pre">#define</span></tt> and so always needs to be mangled. &nbsp;&nbsp;<a
+Nim に Cプリプロセッサ定義 (<tt class="docutils literal"><span class="pre">#define</span></tt>)で <tt class="docutils literal"><span class="pre">define</span></tt> を識別させます。必ず修飾 (mangled) してください。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L350"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L350" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1649,33 +1633,25 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#readLineFromStdin"><span class="Identifier">readLineFromStdin</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#TaintedString"><span class="Identifier">TaintedString</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><a href="system.html#IOError"><span class="Identifier">IOError</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Reads a line of data from stdin - blocks until n or EOF which happens when stdin is closed
-&nbsp;&nbsp;<a
+stdin からデータを一行読み取ります － stdin が閉じられたときは EOF が出現するまでブロックします &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L363"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L363" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L363" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="readAllFromStdin"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#readAllFromStdin"><span class="Identifier">readAllFromStdin</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#TaintedString"><span class="Identifier">TaintedString</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><a href="system.html#IOError"><span class="Identifier">IOError</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Reads all data from stdin - blocks until EOF which happens when stdin is closed
-&nbsp;&nbsp;<a
+stdin からデータをすべて読み取ります － stdin が閉じられたときは EOF が出現するまでブロックします &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L369"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L369" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L369" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="requires,varargs[string]"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#requires%2Cvarargs%5Bstring%5D"><span class="Identifier">requires</span></a><span class="Other">(</span><span class="Identifier">deps</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">]</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Nimble support: Call this to set the list of requirements of your Nimble package. &nbsp;&nbsp;<a
+Nimble サポート: これは Nimble パッケージの動作要件リストを設定するために呼び出してください。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L413"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L413" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1689,7 +1665,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">template</span> <a href="#--.t%2Cuntyped%2Cuntyped"><span class="Identifier">`--`</span></a><span class="Other">(</span><span class="Identifier">key</span><span class="Other">,</span> <span class="Identifier">val</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">)</span></pre></dt>
 <dd>
 
-A shortcut for <tt class="docutils literal"><span class="pre">switch(astToStr(key), astToStr(val))</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">switch(astToStr(key), astToStr(val))</span></tt> のショートカットです。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L167"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L167" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1698,7 +1674,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">template</span> <a href="#--.t%2Cuntyped"><span class="Identifier">`--`</span></a><span class="Other">(</span><span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">)</span></pre></dt>
 <dd>
 
-A shortcut for <tt class="docutils literal"><span class="pre">switch(astToStr(key)</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">switch(astToStr(key)</span></tt> のショートカットです。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L171"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L171" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1707,11 +1683,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">template</span> <a href="#withDir.t%2Cstring%2Cuntyped"><span class="Identifier">withDir</span></a><span class="Other">(</span><span class="Identifier">dir</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">body</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-<p>Changes the current directory temporarily.</p>
-<p>If you need a permanent change, use the <a class="reference external" href="#cd,string">cd()</a> proc. Usage example:</p>
+<p>カレントディレクトリを一時的に変更します。</p>
+<p>恒常的に変更したいときは、 <a class="reference external" href="#cd,string">cd()</a> プロシージャをお使いください。使用例:</p>
 <pre class="listing"><span class="Identifier">withDir</span> <span class="StringLit">"foo"</span><span class="Punctuation">:</span>
-  <span class="Comment"># inside foo</span>
-<span class="Comment">#back to last dir</span></pre>
+  <span class="Comment"># foo ディレクトリから</span>
+<span class="Comment"># 最後のディレクトリへ復帰</span></pre>
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L326"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/nimscript.nim#L326" class="link-seesrc" target="_blank" >編集</a>
@@ -1721,7 +1697,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">template</span> <a href="#task.t%2Cuntyped%2Cstring%2Cuntyped"><span class="Identifier">task</span></a><span class="Other">(</span><span class="Identifier">name</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">;</span> <span class="Identifier">description</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">body</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-Defines a task. Hidden tasks are supported via an empty description. 用例:<pre class="listing"><span class="Identifier">task</span> <span class="Identifier">build</span><span class="Punctuation">,</span> <span class="StringLit">"default build is via the C backend"</span><span class="Punctuation">:</span>
+タスクを定義します。隠しタスクは description を空にすることでサポートしています。用例:<pre class="listing"><span class="Identifier">task</span> <span class="Identifier">build</span><span class="Punctuation">,</span> <span class="StringLit">"default build is via the C backend"</span><span class="Punctuation">:</span>
   <span class="Identifier">setCommand</span> <span class="StringLit">"c"</span></pre>
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/nimscript.nim#L377"
