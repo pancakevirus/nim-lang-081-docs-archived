@@ -844,10 +844,10 @@ function main() {
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#Item"
     title="Item = object
-  startA*: int                 ## Start Line number in Data A.
-  startB*: int                 ## Start Line number in Data B.
-  deletedA*: int               ## Number of changes in Data A.
-  insertedB*: int              ## Number of changes in Data B."><wbr />Item<span class="attachedType"></span></a></li>
+  startA*: int                 ## データ A の開始行数。
+  startB*: int                 ## データ B の開始行数。
+  deletedA*: int               ## データ A の変更数。
+  insertedB*: int              ## データ B の変更数。"><wbr />Item<span class="attachedType"></span></a></li>
 
   </ul>
 </li>
@@ -868,18 +868,18 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"><p>This module implements an algorithm to compute the <span id="diff_1">diff</span> between two sequences of lines.</p>
-<p>A basic example of <tt class="docutils literal"><span class="pre">diffInt</span></tt> on 2 arrays of integers:</p>
+  <p class="module-desc"><p>シーケンス同士の行の差異 (<span id="diff_1">diff</span>) を求めるためのアルゴリズムの実装です。</p>
+<p>基本的な用例として <tt class="docutils literal"><span class="pre">diffInt</span></tt> で整数配列同士の比較:</p>
 <pre class="listing"><span class="Keyword">import</span> <span class="Identifier">experimental</span><span class="Operator">/</span><span class="Identifier">diff</span>
-<span class="Identifier">echo</span> <span class="Identifier">diffInt</span><span class="Punctuation">(</span><span class="Punctuation">[</span><span class="DecNumber">0</span><span class="Punctuation">,</span> <span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="DecNumber">4</span><span class="Punctuation">,</span> <span class="DecNumber">5</span><span class="Punctuation">,</span> <span class="DecNumber">6</span><span class="Punctuation">,</span> <span class="DecNumber">7</span><span class="Punctuation">,</span> <span class="DecNumber">8</span><span class="Punctuation">]</span><span class="Punctuation">,</span> <span class="Punctuation">[</span><span class="Operator">-</span><span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="DecNumber">4</span><span class="Punctuation">,</span> <span class="DecNumber">5</span><span class="Punctuation">,</span> <span class="DecNumber">666</span><span class="Punctuation">,</span> <span class="DecNumber">7</span><span class="Punctuation">,</span> <span class="DecNumber">42</span><span class="Punctuation">]</span><span class="Punctuation">)</span></pre><p>Another short example of <tt class="docutils literal"><span class="pre">diffText</span></tt> to diff strings:</p>
+<span class="Identifier">echo</span> <span class="Identifier">diffInt</span><span class="Punctuation">(</span><span class="Punctuation">[</span><span class="DecNumber">0</span><span class="Punctuation">,</span> <span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="DecNumber">4</span><span class="Punctuation">,</span> <span class="DecNumber">5</span><span class="Punctuation">,</span> <span class="DecNumber">6</span><span class="Punctuation">,</span> <span class="DecNumber">7</span><span class="Punctuation">,</span> <span class="DecNumber">8</span><span class="Punctuation">]</span><span class="Punctuation">,</span> <span class="Punctuation">[</span><span class="Operator">-</span><span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="DecNumber">2</span><span class="Punctuation">,</span> <span class="DecNumber">3</span><span class="Punctuation">,</span> <span class="DecNumber">4</span><span class="Punctuation">,</span> <span class="DecNumber">5</span><span class="Punctuation">,</span> <span class="DecNumber">666</span><span class="Punctuation">,</span> <span class="DecNumber">7</span><span class="Punctuation">,</span> <span class="DecNumber">42</span><span class="Punctuation">]</span><span class="Punctuation">)</span></pre><p>別の用例として <tt class="docutils literal"><span class="pre">diffText</span></tt> によるテキスト同士の差異比較:</p>
 <pre class="listing"><span class="Keyword">import</span> <span class="Identifier">experimental</span><span class="Operator">/</span><span class="Identifier">diff</span>
-<span class="Comment"># 2 samples of text for testing (from "The Call of Cthulhu" by Lovecraft)</span>
+<span class="Comment"># テスト用のサンプルテキスト (引用元: ""The Call of Cthulhu" by Lovecraft")</span>
 <span class="Keyword">let</span> <span class="Identifier">txt0</span> <span class="Operator">=</span> <span class="LongStringLit">"""I have looked upon all the universe has to hold of horror,
 even skies of spring and flowers of summer must ever be poison to me."""</span>
 <span class="Keyword">let</span> <span class="Identifier">txt1</span> <span class="Operator">=</span> <span class="LongStringLit">"""I have looked upon all your code has to hold of bugs,
 even skies of spring and flowers of summer must ever be poison to me."""</span>
 
-<span class="Identifier">echo</span> <span class="Identifier">diffText</span><span class="Punctuation">(</span><span class="Identifier">txt0</span><span class="Punctuation">,</span> <span class="Identifier">txt1</span><span class="Punctuation">)</span></pre><ul class="simple"><li>To learn more see <a class="reference external" href="http://wikipedia.org/wiki/Diff">Diff on Wikipedia.</a></li>
+<span class="Identifier">echo</span> <span class="Identifier">diffText</span><span class="Punctuation">(</span><span class="Identifier">txt0</span><span class="Punctuation">,</span> <span class="Identifier">txt1</span><span class="Punctuation">)</span></pre><ul class="simple"><li>Diff の詳細情報については  <a class="reference external" href="http://wikipedia.org/wiki/Diff">Wikipedia</a> を参照してください。</li>
 </ul>
 </p>
   <div class="section" id="6">
@@ -892,14 +892,14 @@ even skies of spring and flowers of summer must ever be poison to me."""</span>
 <dl class="item">
 <a id="Item"></a>
 <dt><pre><a href="diff.html#Item"><span class="Identifier">Item</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
-  <span class="Identifier">startA</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a>                 <span class="Comment">## Start Line number in Data A.</span>
-  <span class="Identifier">startB</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a>                 <span class="Comment">## Start Line number in Data B.</span>
-  <span class="Identifier">deletedA</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a>               <span class="Comment">## Number of changes in Data A.</span>
-  <span class="Identifier">insertedB</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a>              <span class="Comment">## Number of changes in Data B.</span>
+  <span class="Identifier">startA</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a>                 <span class="Comment">## ータ A の開始行数。</span>
+  <span class="Identifier">startB</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a>                 <span class="Comment">## データ B の開始行数。</span>
+  <span class="Identifier">deletedA</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a>               <span class="Comment">## データ A の変更数。</span>
+  <span class="Identifier">insertedB</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a>              <span class="Comment">## データ B の変更数。</span>
   </pre></dt>
 <dd>
 
-An Item in the list of differences. &nbsp;&nbsp;<a
+Item は差異情報のリストです。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/experimental/diff.nim#L46"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/experimental/diff.nim#L46" class="link-seesrc" target="_blank" >編集</a>
 
@@ -913,10 +913,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#diffInt%2CopenArray%5Bint%5D%2CopenArray%5Bint%5D"><span class="Identifier">diffInt</span></a><span class="Other">(</span><span class="Identifier">arrayA</span><span class="Other">,</span> <span class="Identifier">arrayB</span><span class="Other">:</span> <a href="system.html#openArray"><span class="Identifier">openArray</span></a><span class="Other">[</span><a href="system.html#int"><span class="Identifier">int</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#seq"><span class="Identifier">seq</span></a><span class="Other">[</span><a href="diff.html#Item"><span class="Identifier">Item</span></a><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Find the difference in 2 arrays of integers.</p>
-<p><tt class="docutils literal"><span class="pre">arrayA</span></tt> バージョン A の数値 (通常は古いほう)</p>
-<p><tt class="docutils literal"><span class="pre">arrayB</span></tt> バージョン B の数値 (通常は新しいほう)</p>
-<p>Returns a sequence of Items that describe the differences.</p>
+<p>整数配列同士の差異を検出します。</p>
+<p><tt class="docutils literal"><span class="pre">arrayA</span></tt> バージョン A の数値 (通常は旧版)</p>
+<p><tt class="docutils literal"><span class="pre">arrayB</span></tt> バージョン B の数値 (通常は新版)</p>
+<p>差異を記述したシーケンス Items を返します。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/experimental/diff.nim#L275"
@@ -927,11 +927,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#diffText%2Cstring%2Cstring"><span class="Identifier">diffText</span></a><span class="Other">(</span><span class="Identifier">textA</span><span class="Other">,</span> <span class="Identifier">textB</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#seq"><span class="Identifier">seq</span></a><span class="Other">[</span><a href="diff.html#Item"><span class="Identifier">Item</span></a><span class="Other">]</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">KeyError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Find the difference in 2 text documents, comparing by textlines.</p>
-<p>The algorithm itself is comparing 2 arrays of numbers so when comparing 2 text documents each line is converted into a (hash) number. This hash-value is computed by storing all textlines into a common hashtable so i can find duplicates in there, and generating a new number each time a new textline is inserted.</p>
-<p><tt class="docutils literal"><span class="pre">textA</span></tt> バージョン A のテキスト (通常は古いほう)</p>
-<p><tt class="docutils literal"><span class="pre">textB</span></tt> バージョン B のテキスト (通常は新しいほう)</p>
-<p>Returns a seq of Items that describe the differences.</p>
+<p>テキスト行の比較により、テキストドキュメント同士を検出します。</p>
+<p>アルゴリズムの処理方法はテキストドキュメント同士の比較時に各行を数値 (ハッシュ) へ変換してから数値配列同士を比較しています。 このハッシュ値は全てのテキスト行で共用されるハッシュテーブルへ格納して算出をすることで重複を検出します。なお、新しいテキスト行の挿入が起きる度に数値を新規生成します。</p>
+<p><tt class="docutils literal"><span class="pre">textA</span></tt> バージョン A のテキスト (通常は旧版)</p>
+<p><tt class="docutils literal"><span class="pre">textB</span></tt> バージョン B のテキスト (通常は新版)</p>
+<p>差異を記述したシーケンス Items を返します。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/experimental/diff.nim#L299"

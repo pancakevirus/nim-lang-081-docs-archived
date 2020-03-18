@@ -1,81 +1,92 @@
+Canonical name	正規名	カノニカルネーム
 Complexity	複雑性	計算量、複雑度、集合体
+Create	作成	作る、生成
 Declaration	宣言
+Deprecated	廃止
 Deprecated	廃止予定
+Do yourself a favor	いいですか。
+Do yourself a favor	悪いことは言わないから、
 Document	ドキュメント
+Encodes	エンコード
 Erik	エリック	【人名】
+JavaScript	JavaScript
+Levenshtein distance	レーベンシュタイン距離
 Model	モデル
 O'Leary	オライリー	【人名】オライリー、オレーリー、オレアリー、オリーリ  【参考】O'Leary - Wikipedia : https://en.wikipedia.org/wiki/O%27Leary
 RST	RST	RST = reStructuredText (軽量マークアップ言語の一種)
+Syntax sugar	シンタックスシュガー
+Usage	用法
+Wrapper	ラッパー
+algorithm	アルゴリズム
+anonymous procedures	無名プロシージャ
+array	配列	アレイ、アレー
 backend	バックエンド
+base64	Base64
+characters	文字
+checksums	チェックサム
+column	列	≪数学≫行列の縦方向
+column	桁	≪情報≫列、桁、縦列、カラム
+column	桁	≪文書≫n文字目の位置 (横方向)
+complex number	複素数
+compute	求める
+computing	計算	演算
+configuration	コンフィギュレーション
+configuration	構成
+configuration	設定
+current column	現在の列
+current column	現在の桁
+current line	現在の行
+custom	カスタム
+databases	データベース
+decoder	デコーダー
+design	デザイン
+design	仕様書
+design	設計
 determine	判断	判定、決定
+distance	距離
 documentation	ドキュメンテーション
+edit distance	編集距離
+empty	空	無、虚空
+encoder	エンコーダー
+fixed-point number	固定小数点数
 good idea	得策	名案、良案、良い考え
+heap	ヒープ
 helper	補助	手助けとなる、介助、お手伝い、支援
+identical	同じ	同一値
+implements	実装
 interactive mode	インタラクティブモード	対話型実行方式
+lexicographical order	辞書式順序
+limited	制限された
+line	行	≪情報≫行、ライン
+line	行	≪数学≫行列の横方向
+line	行	≪文書≫n行目の位置 (縦方向)
+macro	マクロ
+module	モジュール
+naming	命名
+new	新規	新しい
+object	オブジェクト
+openarray	無蓋配列	openarray のこと。 Dephi言語ではオープン配列、ほかの言語では可変長配列を指す。「無蓋」の出典は「ニューセンチュリー英和辞典」より。
+polar coordinates	極座標
+procedure types	プロシージャ型
+representation	形式	表現
+server	サーバ
+socket	ソケット
 statement	ステートメント
+string	文字列
+subset	サブセット
+subset	部分集合
+syntactic sugar	シンタックスシュガー	糖衣構文
+system	システム
 tabulator	タブ
 thread	スレッド
 thread pool	スレッドプール
-object	オブジェクト
-custom	カスタム
-Usage	用法
-heap	ヒープ
-Create	作成	作る、生成
-new	新規	新しい
-empty	空	無、虚空
-Wrapper	ラッパー
-JavaScript	JavaScript
-wordwrap	ワードラップ
-string	文字列
-module	モジュール
-algorithm	アルゴリズム
-Encodes	エンコード
-representation	形式	表現
-base64	Base64
-characters	文字
-openarray	無蓋配列	openarray のこと。 Dephi言語ではオープン配列、ほかの言語では可変長配列を指す。「無蓋」の出典は「ニューセンチュリー英和辞典」より。
-array	配列	アレイ、アレー
-syntactic sugar	シンタックスシュガー	糖衣構文
-macro	マクロ
-system	システム
-implements	実装
-Syntax sugar	シンタックスシュガー
-anonymous procedures	無名プロシージャ
-procedure types	プロシージャ型
 tree representing	ツリー構造	represent(ing)が何を指しているのか考えること。
-limited	制限された
-subset	サブセット
-subset	部分集合
-identical	同じ	同一値
-checksums	チェックサム
-computing	計算	演算
-encoder	エンコーダー
-decoder	デコーダー
-value	値
-naming	命名
-design	仕様書
-design	設計
-design	設計
-design	デザイン
-server	サーバ
-socket	ソケット
-databases	データベース
-Canonical name	正規名	カノニカルネーム
-Do yourself a favor	いいですか。
-Do yourself a favor	悪いことは言わないから、
-volatile	揮発性
-compute	求める
-edit distance	編集距離
-Levenshtein distance	レーベンシュタイン距離
-distance	距離
-Deprecated	廃止
-polar coordinates	極座標
-complex number	複素数
-lexicographical order	辞書式順序
-underlying	隠されている
 underlying	潜在的な
-fixed-point number	固定小数点数
-configuration	コンフィギュレーション
-configuration	構成
-current line	現在行
-current column	現在列
+underlying	隠されている
+value	値
+volatile	揮発性
+wordwrap	ワードラップ
+Description	Description
+definition	定義
+definition	概念
+definition	説明

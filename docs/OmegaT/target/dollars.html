@@ -885,20 +885,16 @@ function main() {
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2Cint"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"IntToStr"</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-The stringify operator for an integer argument. Returns <tt class="docutils literal"><span class="pre">x</span></tt> converted to a decimal string. <tt class="docutils literal"><span class="pre">$</span></tt> is Nim's general way of spelling <span id="tostring_1">toString</span>.
-&nbsp;&nbsp;<a
+整数型引数用の文字列化 (stringify)  演算子です。<tt class="docutils literal"><span class="pre">x</span></tt> を十進数文字列へ変換して返します。Nim において <tt class="docutils literal"><span class="pre">$</span></tt> は <span id="tostring_1">toString</span>スペリングの汎用化手法です。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/dollars.nim#L1"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/dollars.nim#L1" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/dollars.nim#L1" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="$,int64"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2Cint64"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Identifier">int64</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"Int64ToStr"</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-The stringify operator for an integer argument. Returns <tt class="docutils literal"><span class="pre">x</span></tt> converted to a decimal string. &nbsp;&nbsp;<a
+整数型引数用の文字列化 (stringify)  演算子です。<tt class="docutils literal"><span class="pre">x</span></tt> を十進数文字列へ変換して返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/dollars.nim#L6"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/dollars.nim#L6" class="link-seesrc" target="_blank" >編集</a>
 
@@ -907,7 +903,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2Cfloat"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"FloatToStr"</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-The stringify operator for a float argument. Returns <tt class="docutils literal"><span class="pre">x</span></tt> converted to a decimal string. &nbsp;&nbsp;<a
+浮動小数型引数用の文字列化 (stringify)  演算子です。<tt class="docutils literal"><span class="pre">x</span></tt> を十進数文字列へ変換して返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/dollars.nim#L10"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/dollars.nim#L10" class="link-seesrc" target="_blank" >編集</a>
 
@@ -916,7 +912,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2Cbool"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"BoolToStr"</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-The stringify operator for a boolean argument. Returns <tt class="docutils literal"><span class="pre">x</span></tt> converted to the string "false" or "true". &nbsp;&nbsp;<a
+ブール型引数用の文字列化 (stringify)  演算子です。<tt class="docutils literal"><span class="pre">x</span></tt> を文字列 "false" または "true" へ変換して返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/dollars.nim#L14"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/dollars.nim#L14" class="link-seesrc" target="_blank" >編集</a>
 
@@ -925,9 +921,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2Cchar"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Identifier">char</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"CharToStr"</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-The stringify operator for a character argument. Returns <tt class="docutils literal"><span class="pre">x</span></tt> converted to a string.<pre class="listing"><span class="Identifier">assert</span> <span class="Operator">$</span><span class="CharLit">'c'</span> <span class="Operator">==</span> <span class="StringLit">"c"</span></pre>
+文字型引数用の文字列化 (stringify)  演算子です。<tt class="docutils literal"><span class="pre">x</span></tt> を文字列へ変換して返します。<pre class="listing"><span class="Identifier">assert</span> <span class="Operator">$</span><span class="CharLit">'c'</span> <span class="Operator">==</span> <span class="StringLit">"c"</span></pre>
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/dollars.nim#L18"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/dollars.nim#L18" class="link-seesrc" target="_blank" >編集</a>
@@ -937,7 +931,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2Ccstring"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Identifier">cstring</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"CStrToStr"</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-The stringify operator for a CString argument. Returns <tt class="docutils literal"><span class="pre">x</span></tt> converted to a string. &nbsp;&nbsp;<a
+CString 型引数用の文字列化 (stringify)  演算子です。<tt class="docutils literal"><span class="pre">x</span></tt> を文字列へ変換して返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/dollars.nim#L25"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/dollars.nim#L25" class="link-seesrc" target="_blank" >編集</a>
 
@@ -946,7 +940,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2Cstring"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Identifier">string</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"StrToStr"</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-The stringify operator for a string argument. Returns <tt class="docutils literal"><span class="pre">x</span></tt> as it is. This operator is useful for generic code, so that <tt class="docutils literal"><span class="pre">$expr</span></tt> also works if <tt class="docutils literal"><span class="pre">expr</span></tt> is already a string. &nbsp;&nbsp;<a
+文字列型引数用の文字列化 (stringify)  演算子です。そのまま <tt class="docutils literal"><span class="pre">x</span></tt> を返します。この演算子は既に <tt class="docutils literal"><span class="pre">expr</span></tt> が文字列であっても <tt class="docutils literal"><span class="pre">$expr</span></tt> は動作するため、汎用コードで便利です。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/dollars.nim#L29"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/dollars.nim#L29" class="link-seesrc" target="_blank" >編集</a>
 
@@ -955,8 +949,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2CEnum"><span class="Identifier">`$`</span></a><span class="Other">[</span><span class="Identifier">Enum</span><span class="Other">:</span> <span class="Keyword">enum</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Identifier">Enum</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"EnumToStr"</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>The stringify operator for an enumeration argument. This works for any enumeration type thanks to compiler magic.</p>
-<p>If a <tt class="docutils literal"><span class="pre">$</span></tt> operator for a concrete enumeration is provided, this is used instead. (In other words: <em>Overwriting</em> is possible.)</p>
+<p>列挙型引数用の文字列化 (stringify)  演算子です。これはコンパイラマジックのおかげで、あらゆる列挙型で動作します。</p>
+<p>具象化抽象型で <tt class="docutils literal"><span class="pre">$</span></tt> 演算子が使えるときは、これを代わりに使います(言い換えると: <em>上書き</em>可能です)。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/dollars.nim#L34"
@@ -968,7 +962,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 <p>指定された型の名前を返します。</p>
-<p>For more procedures dealing with <tt class="docutils literal"><span class="pre">typedesc</span></tt>, see <a class="reference external" href="typetraits.html">typetraits module</a>.</p>
+<p>これ以外の <tt class="docutils literal"><span class="pre">typedesc</span></tt> を処理するプロシージャに関しては、 <a class="reference external" href="typetraits.html">typetraits モジュール</a>を参照してください。</p>
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Operator">$</span><span class="Punctuation">(</span><span class="Keyword">type</span><span class="Punctuation">(</span><span class="DecNumber">42</span><span class="Punctuation">)</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="StringLit">"int"</span>
 <span class="Identifier">doAssert</span> <span class="Operator">$</span><span class="Punctuation">(</span><span class="Keyword">type</span><span class="Punctuation">(</span><span class="StringLit">"Foo"</span><span class="Punctuation">)</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="StringLit">"string"</span>
 <span class="Keyword">static</span><span class="Punctuation">:</span> <span class="Identifier">doAssert</span> <span class="Operator">$</span><span class="Punctuation">(</span><span class="Keyword">type</span><span class="Punctuation">(</span><span class="Operator">@</span><span class="Punctuation">[</span><span class="CharLit">'A'</span><span class="Punctuation">,</span> <span class="CharLit">'B'</span><span class="Punctuation">]</span><span class="Punctuation">)</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="StringLit">"seq[char]"</span></pre>
@@ -982,7 +976,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Keyword">object</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span></pre></dt>
 <dd>
 
-Generic <tt class="docutils literal"><span class="pre">$</span></tt> operator for tuples that is lifted from the components of <tt class="docutils literal"><span class="pre">x</span></tt>. 用例:<pre class="listing"><span class="Operator">$</span><span class="Punctuation">(</span><span class="DecNumber">23</span><span class="Punctuation">,</span> <span class="DecNumber">45</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="StringLit">"(23, 45)"</span>
+タプルのジェネリック演算子 <tt class="docutils literal"><span class="pre">$</span></tt> であり、 <tt class="docutils literal"><span class="pre">x</span></tt> の要素を取り除きまさう。用例:<pre class="listing"><span class="Operator">$</span><span class="Punctuation">(</span><span class="DecNumber">23</span><span class="Punctuation">,</span> <span class="DecNumber">45</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="StringLit">"(23, 45)"</span>
 <span class="Operator">$</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">:</span> <span class="DecNumber">23</span><span class="Punctuation">,</span> <span class="Identifier">b</span><span class="Punctuation">:</span> <span class="DecNumber">45</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="StringLit">"(a: 23, b: 45)"</span>
 <span class="Operator">$</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="StringLit">"()"</span></pre>
 &nbsp;&nbsp;<a
@@ -994,7 +988,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2Cset%5BT%5D"><span class="Identifier">`$`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Identifier">set</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span></pre></dt>
 <dd>
 
-Generic <tt class="docutils literal"><span class="pre">$</span></tt> operator for sets that is lifted from the components of <tt class="docutils literal"><span class="pre">x</span></tt>. 用例:<pre class="listing"><span class="Operator">$</span><span class="Punctuation">{</span><span class="DecNumber">23</span><span class="Punctuation">,</span> <span class="DecNumber">45</span><span class="Punctuation">}</span> <span class="Operator">==</span> <span class="StringLit">"{23, 45}"</span></pre>
+集合 (sets) のジェネリック演算子 <tt class="docutils literal"><span class="pre">$</span></tt> であり、 <tt class="docutils literal"><span class="pre">x</span></tt> の要素を取り除きます。用例:<pre class="listing"><span class="Operator">$</span><span class="Punctuation">{</span><span class="DecNumber">23</span><span class="Punctuation">,</span> <span class="DecNumber">45</span><span class="Punctuation">}</span> <span class="Operator">==</span> <span class="StringLit">"{23, 45}"</span></pre>
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/dollars.nim#L120"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/dollars.nim#L120" class="link-seesrc" target="_blank" >編集</a>
@@ -1004,7 +998,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2Cseq%5BT%5D%5BT%5D"><span class="Identifier">`$`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Identifier">seq</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span></pre></dt>
 <dd>
 
-Generic <tt class="docutils literal"><span class="pre">$</span></tt> operator for seqs that is lifted from the components of <tt class="docutils literal"><span class="pre">x</span></tt>. 用例:<pre class="listing"><span class="Operator">$</span><span class="Punctuation">(</span><span class="Operator">@</span><span class="Punctuation">[</span><span class="DecNumber">23</span><span class="Punctuation">,</span> <span class="DecNumber">45</span><span class="Punctuation">]</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="StringLit">"@[23, 45]"</span></pre>
+シーケンス (seqs) のジェネリック演算子 <tt class="docutils literal"><span class="pre">$</span></tt> であり、 <tt class="docutils literal"><span class="pre">x</span></tt> の要素を取り除きます。用例:<pre class="listing"><span class="Operator">$</span><span class="Punctuation">(</span><span class="Operator">@</span><span class="Punctuation">[</span><span class="DecNumber">23</span><span class="Punctuation">,</span> <span class="DecNumber">45</span><span class="Punctuation">]</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="StringLit">"@[23, 45]"</span></pre>
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/dollars.nim#L128"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/dollars.nim#L128" class="link-seesrc" target="_blank" >編集</a>
@@ -1014,7 +1008,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2CHSlice%5BT%2CU%5D"><span class="Identifier">`$`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">,</span> <span class="Identifier">U</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Identifier">HSlice</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">,</span> <span class="Identifier">U</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span></pre></dt>
 <dd>
 
-Generic <tt class="docutils literal"><span class="pre">$</span></tt> operator for slices that is lifted from the components of <tt class="docutils literal"><span class="pre">x</span></tt>. 用例:<pre class="listing"><span class="Operator">$</span><span class="Punctuation">(</span><span class="DecNumber">1</span> <span class="Operator">..</span> <span class="DecNumber">5</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="StringLit">"1 .. 5"</span></pre>
+スライスのジェネリック演算子 <tt class="docutils literal"><span class="pre">$</span></tt> であり、 <tt class="docutils literal"><span class="pre">x</span></tt> の要素を取り除きます。用例:<pre class="listing"><span class="Operator">$</span><span class="Punctuation">(</span><span class="DecNumber">1</span> <span class="Operator">..</span> <span class="DecNumber">5</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="StringLit">"1 .. 5"</span></pre>
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/dollars.nim#L136"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/dollars.nim#L136" class="link-seesrc" target="_blank" >編集</a>
@@ -1024,7 +1018,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2Carray%5BIDX%2CT%5D"><span class="Identifier">`$`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">,</span> <span class="Identifier">IDX</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Identifier">array</span><span class="Other">[</span><span class="Identifier">IDX</span><span class="Other">,</span> <span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span></pre></dt>
 <dd>
 
-Generic <tt class="docutils literal"><span class="pre">$</span></tt> operator for arrays that is lifted from the components. &nbsp;&nbsp;<a
+配列のジェネリック演算子 <tt class="docutils literal"><span class="pre">$</span></tt> であり、要素を取り除きます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/dollars.nim#L148"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/dollars.nim#L148" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1033,7 +1027,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2CopenArray%5BT%5D"><span class="Identifier">`$`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Identifier">openArray</span><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span></pre></dt>
 <dd>
 
-Generic <tt class="docutils literal"><span class="pre">$</span></tt> operator for openarrays that is lifted from the components of <tt class="docutils literal"><span class="pre">x</span></tt>. 用例:<pre class="listing"><span class="Operator">$</span><span class="Punctuation">(</span><span class="Operator">@</span><span class="Punctuation">[</span><span class="DecNumber">23</span><span class="Punctuation">,</span> <span class="DecNumber">45</span><span class="Punctuation">]</span><span class="Operator">.</span><span class="Identifier">toOpenArray</span><span class="Punctuation">(</span><span class="DecNumber">0</span><span class="Punctuation">,</span> <span class="DecNumber">1</span><span class="Punctuation">)</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="StringLit">"[23, 45]"</span></pre>
+無蓋配列 (openarray) のジェネリック演算子 <tt class="docutils literal"><span class="pre">$</span></tt> であり、 <tt class="docutils literal"><span class="pre">x</span></tt> の要素を取り除きます。用例:<pre class="listing"><span class="Operator">$</span><span class="Punctuation">(</span><span class="Operator">@</span><span class="Punctuation">[</span><span class="DecNumber">23</span><span class="Punctuation">,</span> <span class="DecNumber">45</span><span class="Punctuation">]</span><span class="Operator">.</span><span class="Identifier">toOpenArray</span><span class="Punctuation">(</span><span class="DecNumber">0</span><span class="Punctuation">,</span> <span class="DecNumber">1</span><span class="Punctuation">)</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="StringLit">"[23, 45]"</span></pre>
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/system/dollars.nim#L152"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/system/dollars.nim#L152" class="link-seesrc" target="_blank" >編集</a>

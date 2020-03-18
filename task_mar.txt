@@ -1,47 +1,127 @@
+algorithm
+asyncdispatch
+asyncfutures
+asyncjs
+asyncnet
+backends
+bitops
+channels
+contributing
+coro
+db_common
+db_mysql
+db_odbc
+db_postgres
+db_sqlite
+deques
+destructors
+docgen
+fenv
+filters
+gc
+hashes
+hcr
+heapqueue
+httpclient
+httpcore
+idetools
+intern
+intsets
+iterators
+jsffi
+json
+lenientops
+lib
+linux
+lists
+logging
+macros
+manual
+manual_experimental
+math
+memfiles
+monotimes
+nativesockets
+nep1
+net
+nimc
+nims
+nimsuggest
+nre
+options
+os
+osproc
+parsecfg
+parsecsv
+parsejson
+parseopt
+parseutils
+parsexml
+pcre
+pegs
+posix
+posix_utils
+postgres
+random
+rationals
+re
+ropes
+rstgen
+selectors
+sequtils
+sets
+sexp
+sharedtables
+stats
+streams
+strformat
+strmisc
+strscans
+strtabs
+strutils
+system
+tables
+terminal
+threadpool
+times
+tut1
+tut2
+tut3
+typeinfo
+unicode
+unittest
+uri
+var_t_return
+
+
+
 ----------------------------------------------------------------------[ project 1: ]
-(J) critbits.krydoc           : tmx 変換待ち
-(J) cstrutils.krydoc          : tmx 変換待ち
-(J) cgi-000.krydoc            : tmx 変換待ち
-(J) asyncstreams-000.krydoc   : tmx 変換待ち
-(J) estp-000.krydoc           : tmx 変換待ち
 
-(J) smtp-000.krydoc           : OmegaT への原稿反映完了 (tmx 変換待ち)
-(J) openssl-000.krydoc        : OmegaT への原稿反映完了 (tmx 変換待ち)
-(J) nimscript-000.krydoc      : OmegaT への原稿反映完了 (tmx 変換待ち)
-(J) sums-000.krydoc           : OmegaT への原稿反映完了 (tmx 変換待ち)
-
-next  : 4 / 5
-total aims : 10 (11日)
+next  : 1 / 22
+total aims : 22 (21日まで)
 
 
 current task:
-	3: channels
-	4: lib
+	02: 
+	03: 
+	04: 
+	05: 
+	06: 
+	07: 
+	08: 
+	09: 
+	10: 
+	11: 
+	12: 
+	13: 
+	14: 
+	15: 
+	16: 
+	17: 
+	18: 
+	19: 
+	20: 
 
 ----------------------------------------------------------------------
-lexbase
-threads
-diff
-stats
-strmisc
-docgen
 ----------------------------------------------------------------------
-math
-uri
-rstgen
-logging
-asyncjs
-db_postgres
-db_mysql
-db_sqlite
-db_common
-----------------------------------------------------------------------
-ropes
-times
-osproc
-memfiles
-apis
-niminst
-deques
-hashes
 ----------------------------------------------------------------------

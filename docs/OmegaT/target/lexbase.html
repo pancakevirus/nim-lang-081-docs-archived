@@ -844,10 +844,10 @@ function main() {
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#BaseLexer"
     title="BaseLexer = object of RootObj
-  bufpos*: int                 ## the current position within the buffer
-  buf*: string                 ## the buffer itself
-  input: Stream                ## the input stream
-  lineNumber*: int             ## the current line number
+  bufpos*: int                 ## バッファ内の現在位置
+  buf*: string                 ## バッファ本体
+  input: Stream                ## 入力ストリーム
+  lineNumber*: int             ## 現在の行数
   sentinel: int
   lineStart: int
   offsetBase*: int
@@ -893,7 +893,7 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc">This module implements a base object of a lexer with efficient buffer handling. Only at line endings checks are necessary if the buffer needs refilling.</p>
+  <p class="module-desc">このモジュールは効率的なバッファ処理による字句解析器 (lexer) の基底オブジェクトの実装です。行末であってもバッファの再調整が必要であれば、必ず確認をしてください。</p>
   <div class="section" id="6">
 <h1><a class="toc-backref" href="#6">インポート</a></h1>
 <dl class="item">
@@ -904,10 +904,10 @@ function main() {
 <dl class="item">
 <a id="BaseLexer"></a>
 <dt><pre><a href="lexbase.html#BaseLexer"><span class="Identifier">BaseLexer</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="system.html#RootObj"><span class="Identifier">RootObj</span></a>
-  <span class="Identifier">bufpos</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a>                 <span class="Comment">## the current position within the buffer</span>
-  <span class="Identifier">buf</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a>                 <span class="Comment">## the buffer itself</span>
-  <span class="Identifier">input</span><span class="Other">:</span> <a href="streams.html#Stream"><span class="Identifier">Stream</span></a>                <span class="Comment">## the input stream</span>
-  <span class="Identifier">lineNumber</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a>             <span class="Comment">## the current line number</span>
+  <span class="Identifier">bufpos</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a>                 <span class="Comment">## バッファ内の現在位置</span>
+  <span class="Identifier">buf</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a>                 <span class="Comment">## バッファ本体</span>
+  <span class="Identifier">input</span><span class="Other">:</span> <a href="streams.html#Stream"><span class="Identifier">Stream</span></a>                <span class="Comment">## 入力ストリーム</span>
+  <span class="Identifier">lineNumber</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a>             <span class="Comment">## 現在の行数</span>
   <span class="Identifier">sentinel</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a>
   <span class="Identifier">lineStart</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a>
   <span class="Identifier">offsetBase</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a>
@@ -915,7 +915,7 @@ function main() {
 </pre></dt>
 <dd>
 
-the base lexer. Inherit your lexer from this object. &nbsp;&nbsp;<a
+lexer の基底オブジェクトです。このオブジェクトから lexer を継承してください。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/lexbase.nim#L28"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/lexbase.nim#L28" class="link-seesrc" target="_blank" >編集</a>
 
@@ -929,13 +929,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="lexbase.html#EndOfFile"><span class="Identifier">EndOfFile</span></a> <span class="Other">=</span> <span class="CharLit">'\x00'</span></pre></dt>
 <dd>
 
-
-
-end of file marker
-&nbsp;&nbsp;<a
+ファイル終端マーカー &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/lexbase.nim#L18"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/lexbase.nim#L18" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/lexbase.nim#L18" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="NewLines"></a>
@@ -958,7 +954,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                            <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-closes the base lexer. This closes <tt class="docutils literal"><span class="pre">L</span></tt>'s associated stream too. &nbsp;&nbsp;<a
+lexer の基底オブジェクトを閉じます。これは <tt class="docutils literal"><span class="pre">L</span></tt> 関連のストリームも閉じられます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/lexbase.nim#L39"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/lexbase.nim#L39" class="link-seesrc" target="_blank" >編集</a>
 
@@ -968,7 +964,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Call this if you scanned over 'c' in the buffer; it returns the position to continue the scanning from. <tt class="docutils literal"><span class="pre">pos</span></tt> must be the position of the 'c'. &nbsp;&nbsp;<a
+これはバッファで 'c' の走査を終えたときに呼び出してください。これにより走査の続行位置を返します。必ず <tt class="docutils literal"><span class="pre">pos</span></tt>  は 'c' の位置となります。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/lexbase.nim#L102"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/lexbase.nim#L102" class="link-seesrc" target="_blank" >編集</a>
 
@@ -978,7 +974,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Call this if you scanned over 'L' in the buffer; it returns the position to continue the scanning from. <tt class="docutils literal"><span class="pre">pos</span></tt> must be the position of the 'L'. &nbsp;&nbsp;<a
+これはバッファで 'L' の走査を終えたときに呼び出してください。これにより走査の続行位置を返します。必ず <tt class="docutils literal"><span class="pre">pos</span></tt>  は 'L' の位置となります。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/lexbase.nim#L113"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/lexbase.nim#L113" class="link-seesrc" target="_blank" >編集</a>
 
@@ -988,7 +984,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Defect</span><span class="Other">,</span> <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Call this if a terminator character other than a new line is scanned at <tt class="docutils literal"><span class="pre">pos</span></tt>; it returns the position to continue the scanning from. &nbsp;&nbsp;<a
+これは改行以外の区切り文字文字で <tt class="docutils literal"><span class="pre">pos</span></tt> が走査されたときに呼び出してください。これにより走査の続行位置を返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/lexbase.nim#L122"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/lexbase.nim#L122" class="link-seesrc" target="_blank" >編集</a>
 
@@ -999,7 +995,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-inits the BaseLexer with a stream to read from. &nbsp;&nbsp;<a
+ストリームを読み取って BaseLexer を初期化します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/lexbase.nim#L133"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/lexbase.nim#L133" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1008,7 +1004,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#getColNumber%2CBaseLexer%2Cint"><span class="Identifier">getColNumber</span></a><span class="Other">(</span><span class="Identifier">L</span><span class="Other">:</span> <a href="lexbase.html#BaseLexer"><span class="Identifier">BaseLexer</span></a><span class="Other">;</span> <span class="Identifier">pos</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-retrieves the current column. &nbsp;&nbsp;<a
+現在の桁を取得します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/lexbase.nim#L149"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/lexbase.nim#L149" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1017,7 +1013,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#getCurrentLine%2CBaseLexer%2Cbool"><span class="Identifier">getCurrentLine</span></a><span class="Other">(</span><span class="Identifier">L</span><span class="Other">:</span> <a href="lexbase.html#BaseLexer"><span class="Identifier">BaseLexer</span></a><span class="Other">;</span> <span class="Identifier">marker</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span class="Other">=</span> <span class="Identifier">true</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-retrieves the current line. &nbsp;&nbsp;<a
+現在の行を取得します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/lexbase.nim#L153"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/lexbase.nim#L153" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1032,7 +1028,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 Generated: 2020-01-23 17:27:37 UTC</small>
+        <small>Nim で作成しました。 生成日時: 2020年01月23日 午前17時27分37秒 (UTC)</small>
       </div>
     </div>
   </div>
