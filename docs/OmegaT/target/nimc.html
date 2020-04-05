@@ -831,17 +831,17 @@ function main() {
 <ul class="simple"><li><a class="reference" id="compiler-usage-command-line-switches_toc" href="#compiler-usage-command-line-switches">コマンドラインスイッチ</a></li>
 <li><a class="reference" id="compiler-usage-list-of-warnings_toc" href="#compiler-usage-list-of-warnings">警告のリスト</a></li>
 <li><a class="reference" id="compiler-usage-list-of-hints_toc" href="#compiler-usage-list-of-hints">ヒントのリスト</a></li>
-<li><a class="reference" id="compiler-usage-verbosity-levels_toc" href="#compiler-usage-verbosity-levels">詳細表示の基準</a></li>
+<li><a class="reference" id="compiler-usage-verbosity-levels_toc" href="#compiler-usage-verbosity-levels">詳細表示レベル</a></li>
 <li><a class="reference" id="compiler-usage-compile-time-symbols_toc" href="#compiler-usage-compile-time-symbols">コンパイル時のシンボル</a></li>
 <li><a class="reference" id="compiler-usage-configuration-files_toc" href="#compiler-usage-configuration-files">コンフィギュレーション・ファイル</a></li>
 <li><a class="reference" id="compiler-usage-search-path-handling_toc" href="#compiler-usage-search-path-handling">検索パスの処理</a></li>
 <li><a class="reference" id="compiler-usage-generated-c-code-directory_toc" href="#compiler-usage-generated-c-code-directory">Generated C code directory</a></li>
-</ul><li><a class="reference" id="compiler-selection_toc" href="#compiler-selection">Compiler Selection</a></li>
+</ul><li><a class="reference" id="compiler-selection_toc" href="#compiler-selection">コンパイラの選択</a></li>
 <li><a class="reference" id="cross-compilation_toc" href="#cross-compilation">クロスコンパイル</a></li>
-<li><a class="reference" id="cross-compilation-for-windows_toc" href="#cross-compilation-for-windows">Cross compilation for Windows</a></li>
-<li><a class="reference" id="cross-compilation-for-android_toc" href="#cross-compilation-for-android">Cross compilation for Android</a></li>
-<li><a class="reference" id="cross-compilation-for-ios_toc" href="#cross-compilation-for-ios">Cross compilation for iOS</a></li>
-<li><a class="reference" id="cross-compilation-for-nintendo-switch_toc" href="#cross-compilation-for-nintendo-switch">Cross compilation for Nintendo Switch</a></li>
+<li><a class="reference" id="cross-compilation-for-windows_toc" href="#cross-compilation-for-windows">Windows 用のクロスコンパイル</a></li>
+<li><a class="reference" id="cross-compilation-for-android_toc" href="#cross-compilation-for-android">Android 用のクロスコンパイル</a></li>
+<li><a class="reference" id="cross-compilation-for-ios_toc" href="#cross-compilation-for-ios">iOS 用のクロスコンパイル</a></li>
+<li><a class="reference" id="cross-compilation-for-nintendo-switch_toc" href="#cross-compilation-for-nintendo-switch">Nintendo Switch 用のクロスコンパイル</a></li>
 <li><a class="reference" id="dll-generation_toc" href="#dll-generation">DLL の生成</a></li>
 <li><a class="reference" id="additional-compilation-switches_toc" href="#additional-compilation-switches">Additional compilation switches</a></li>
 <li><a class="reference" id="additional-features_toc" href="#additional-features">Additional Features</a></li>
@@ -866,7 +866,7 @@ function main() {
   
   <p class="module-desc"><table class="docinfo" frame="void" rules="none"><col class="docinfo-name" /><col class="docinfo-content" /><tbody valign="top"><tr><th class="docinfo-name">作成者:</th><td> アンドレアス・ルンプフ</td></tr>
 <tr><th class="docinfo-name">バージョン:</th><td>  1.0.6</td></tr>
-</tbody></table><blockquote><p>"ハッカーよ。煙と蒸気を吐き、我が回廊を走り抜ける肉塊と骸骨の惨めな異形者よ。完璧なる神の機関へ挑む術でもあるというのかね？"</p></blockquote>
+</tbody></table><blockquote><p>"おお、ハッカーよ。煙と蒸気を吐き、我が回廊を走り抜ける肉塊と骸骨の惨めな異形者よ。完璧なる神の機関へ挑む術でもあるというのかね？"</p></blockquote>
 
 <h1><a class="toc-backref" id="introduction" href="#introduction">はじめに</a></h1><p>このドキュメントでは各種プラットフォームをサポートしている <em>Nim コンパイラ</em>の用法について解説しています。つまり、プログラミング言語 Nim の説明 (definition) ではありません (<a class="reference external" href="manual.html">マニュアル</a>で扱います)。</p>
 <p>Nim は <a class="reference external" href="http://www.opensource.org/licenses/mit-license.php">MIT ライセンス</a>のフリーソフトウェアです。</p>
@@ -893,21 +893,21 @@ nim コマンド [オプション] [プロジェクトファイル] [引数]</pr
 </tr>
 <tr><th align="left">-f, --forceBuild:on|off</th><td align="left">強制的にモジュールをすべて再ビルドします</td>
 </tr>
-<tr><th align="left">--stackTrace:on|off</th><td align="left">スタックトレースの入 (on) ・切 (off) を指定します</td>
+<tr><th align="left">--stackTrace:on|off</th><td align="left">スタックトレース: 入 (on) ・切 (off)</td>
 </tr>
-<tr><th align="left">--lineTrace:on|off</th><td align="left">ライントレースの入 (on) ・切 (off) を指定します</td>
+<tr><th align="left">--lineTrace:on|off</th><td align="left">ライントレース: 入 (on) ・切 (off)</td>
 </tr>
-<tr><th align="left">--threads:on|off</th><td align="left">マルチスレッドサポートの入 (on) ・切 (off) を指定します</td>
+<tr><th align="left">--threads:on|off</th><td align="left">マルチスレッドサポート: 入 (on) ・切 (off)</td>
 </tr>
-<tr><th align="left">-x, --checks:on|off</th><td align="left">ランタイム検査全体の入 (on) ・切 (off) を指定します</td>
+<tr><th align="left">-x, --checks:on|off</th><td align="left">ランタイム全体検査: 入 (on) ・切 (off)</td>
 </tr>
-<tr><th align="left">-a, --assertions:on|off</th><td align="left">turn assertions on|off</td>
+<tr><th align="left">-a, --assertions:on|off</th><td align="left">アサーション: 入 (on) ・切 (off)</td>
 </tr>
-<tr><th align="left">--opt:none|speed|size</th><td align="left">optimize not at all or for speed|size Note: use -d:release for a release build!</td>
+<tr><th align="left">--opt:none|speed|size</th><td align="left">最適化方法: なし (none)、速度重視 (speed)、バイナリサイズ重視 (size) 備考: -d:release を使うとリリースビルドになります！</td>
 </tr>
 <tr><th align="left">--debugger:native</th><td align="left">ネイティブ・デバッガ (gdb) を使用します</td>
 </tr>
-<tr><th align="left">--app:console|gui|lib|staticlib</th><td align="left">コンソールアプリケーション (console)、 GUI アプリケーション (gui)、共有ライブラリ (lib)、静的ライブラリ (staticlib) を生成します</td>
+<tr><th align="left">--app:console|gui|lib|staticlib</th><td align="left">生成アプリケーションの種類: コンソールアプリケーション (console)、 GUI アプリケーション (gui)、共有ライブラリ (lib)、静的ライブラリ (staticlib)</td>
 </tr>
 <tr><th align="left">-r, --run</th><td align="left">引数を指定してコンパイル後のプログラムを実行します</td>
 </tr>
@@ -919,39 +919,39 @@ nim コマンド [オプション] [プロジェクトファイル] [引数]</pr
 </tr>
 </table></dd>
 </dl>
-<p>Note, single letter options that take an argument require a colon. E.g. -p:PATH.  </p>
+<p>注意として、単文字オプションの引数はコロンで指定してください。例えば -p:パス とします。 </p>
 <hr />
-<p>Advanced command line switches are:</p>
-<dl class="docutils"><dt>Advanced commands:</dt>
-<dd><table frame="void"><tr><th align="left">compileToC, cc</th><td align="left">compile project with C code generator</td>
+<p>高度なコマンドラインスイッチは:</p>
+<dl class="docutils"><dt>高度なコマンド:</dt>
+<dd><table frame="void"><tr><th align="left">compileToC, cc</th><td align="left">プロジェクトを C コードジェネレータでコンパイルします</td>
 </tr>
-<tr><th align="left">compileToCpp, cpp</th><td align="left">compile project to C++ code</td>
+<tr><th align="left">compileToCpp, cpp</th><td align="left">C++ コードのプロジェクトをコンパイルします</td>
 </tr>
-<tr><th align="left">compileToOC, objc</th><td align="left">compile project to Objective C code</td>
+<tr><th align="left">compileToOC, objc</th><td align="left">Objective C コードのプロジェクトをコンパイルします</td>
 </tr>
-<tr><th align="left">js</th><td align="left">compile project to Javascript</td>
+<tr><th align="left">js</th><td align="left">Javascript のプロジェクトをコンパイルします</td>
 </tr>
-<tr><th align="left">e</th><td align="left">run a Nimscript file</td>
+<tr><th align="left">e</th><td align="left">Nimscript ファイルを実行します</td>
 </tr>
-<tr><th align="left">rst2html</th><td align="left">convert a reStructuredText file to HTML</td>
+<tr><th align="left">rst2html</th><td align="left">reStructuredText ファイルを HTML へ変換します</td>
 </tr>
-<tr><th align="left">rst2tex</th><td align="left">convert a reStructuredText file to TeX</td>
+<tr><th align="left">rst2tex</th><td align="left">reStructuredText ファイルを TeX へ変換します</td>
 </tr>
-<tr><th align="left">jsondoc</th><td align="left">extract the documentation to a json file</td>
+<tr><th align="left">jsondoc</th><td align="left">json ファイルのドキュメンテーションを抽出します</td>
 </tr>
-<tr><th align="left">ctags</th><td align="left">create a tags file</td>
+<tr><th align="left">ctags</th><td align="left">tags ファイルを作成します</td>
 </tr>
-<tr><th align="left">buildIndex</th><td align="left">build an index for the whole documentation</td>
+<tr><th align="left">buildIndex</th><td align="left">ドキュメンテーション全体の索引をビルドします</td>
 </tr>
-<tr><th align="left">genDepend</th><td align="left">generate a DOT file containing the module dependency graph</td>
+<tr><th align="left">genDepend</th><td align="left">モジュールの依存関係図を記した DOT ファイルを作成します</td>
 </tr>
-<tr><th align="left">dump</th><td align="left">dump all defined conditionals and search paths see also: --dump.format:json (useful with: ` | jq`)</td>
+<tr><th align="left">dump</th><td align="left">定義条件と検索パスをすべてダンプします    関連: --dump.format:json (` | jq` で有用です)</td>
 </tr>
-<tr><th align="left">check</th><td align="left">checks the project for syntax and semantic</td>
+<tr><th align="left">check</th><td align="left">プロジェクトのシンタックスとセマンティクスを確認します</td>
 </tr>
 </table></dd>
-<dt>Runtime checks (see -x):</dt>
-<dd><table frame="void"><tr><th align="left">--objChecks:on|off</th><td align="left">turn obj conversion checks on|off</td>
+<dt>ランタイム検査 (-x を参照):</dt>
+<dd><table frame="void"><tr><th align="left">--objChecks:on|off</th><td align="left">obj 変換時の検査: 入 (on) ・切 (off)</td>
 </tr>
 <tr><th align="left">--fieldChecks:on|off</th><td align="left">turn case variant field checks on|off</td>
 </tr>
@@ -1111,7 +1111,7 @@ nim コマンド [オプション] [プロジェクトファイル] [引数]</pr
 </tr>
 <tr><th align="left">--legacy:$2</th><td align="left">enable obsolete/legacy language feature</td>
 </tr>
-<tr><th align="left">--useVersion:1.0</th><td align="left">emulate Nim version X of the Nim compiler</td>
+<tr><th align="left">--useVersion:1.0</th><td align="left">Nim バージョン X のNim コンパイラををエミュレートします</td>
 </tr>
 <tr><th align="left">--newruntime</th><td align="left">use an alternative runtime that uses destructors and that uses a shared heap via -d:useMalloc</td>
 </tr>
@@ -1120,51 +1120,51 @@ nim コマンド [オプション] [プロジェクトファイル] [引数]</pr
 </table></dd>
 </dl>
 
-<h2><a class="toc-backref" id="compiler-usage-list-of-warnings" href="#compiler-usage-list-of-warnings">警告のリスト</a></h2><p>Each warning can be activated individually with <tt class="docutils literal"><span class="pre">--warning[NAME]:on|off</span></tt> or in a <tt class="docutils literal"><span class="pre">push</span></tt> pragma.</p>
-<table border="1" class="docutils"><tr><th>Name</th><th>Description</th></tr>
-<tr><td>CannotOpenFile</td><td>Some file not essential for the compiler's working could not be opened.</td></tr>
-<tr><td>OctalEscape</td><td>The code contains an unsupported octal sequence.</td></tr>
-<tr><td>Deprecated</td><td>The code uses a deprecated symbol.</td></tr>
-<tr><td>ConfigDeprecated</td><td>The project makes use of a deprecated config file.</td></tr>
-<tr><td>SmallLshouldNotBeUsed</td><td>The letter 'l' should not be used as an identifier.</td></tr>
-<tr><td>EachIdentIsTuple</td><td>The code contains a confusing <tt class="docutils literal"><span class="pre">var</span></tt> declaration.</td></tr>
-<tr><td>User</td><td>Some user defined warning.</td></tr>
+<h2><a class="toc-backref" id="compiler-usage-list-of-warnings" href="#compiler-usage-list-of-warnings">警告のリスト</a></h2><p>警告は <tt class="docutils literal"><span class="pre">--warning[名前]:on|off</span></tt> または <tt class="docutils literal"><span class="pre">push</span></tt> プラグマで個別に有効化できます。</p>
+<table border="1" class="docutils"><tr><th>名前</th><th>説明</th></tr>
+<tr><td>CannotOpenFile</td><td>コンパイラの動作に必須ではないファイルを開けない。</td></tr>
+<tr><td>OctalEscape</td><td>非対応の八進数シーケンスがコードにある。</td></tr>
+<tr><td>Deprecated</td><td>廃止されたシンボルをコードで使用している。</td></tr>
+<tr><td>ConfigDeprecated</td><td>廃止されたコンフィギュレーション・ファイルをプロジェクトで使用している。</td></tr>
+<tr><td>SmallLshouldNotBeUsed</td><td>小文字 'l' は識別子として使わないでください。</td></tr>
+<tr><td>EachIdentIsTuple</td><td>紛らわしい <tt class="docutils literal"><span class="pre">var</span></tt> 定義がコードにある。</td></tr>
+<tr><td>User</td><td>ユーザ定義による警告。</td></tr>
 </table>
-<h2><a class="toc-backref" id="compiler-usage-list-of-hints" href="#compiler-usage-list-of-hints">ヒントのリスト</a></h2><p>Each hint can be activated individually with <tt class="docutils literal"><span class="pre">--hint[NAME]:on|off</span></tt> or in a <tt class="docutils literal"><span class="pre">push</span></tt> pragma.</p>
-<table border="1" class="docutils"><tr><th>Name</th><th>Description</th></tr>
-<tr><td>CC</td><td>Shows when the C compiler is called.</td></tr>
+<h2><a class="toc-backref" id="compiler-usage-list-of-hints" href="#compiler-usage-list-of-hints">ヒントのリスト</a></h2><p>ヒントは <tt class="docutils literal"><span class="pre">--hint[名前]:on|off</span></tt> または <tt class="docutils literal"><span class="pre">push</span></tt> プラグマで個別に有効化できます。</p>
+<table border="1" class="docutils"><tr><th>名前</th><th>説明</th></tr>
+<tr><td>CC</td><td>C コンパイラが呼び出されたときに表示。</td></tr>
 <tr><td>CodeBegin</td><td></td></tr>
 <tr><td>CodeEnd</td><td></td></tr>
 <tr><td>CondTrue</td><td></td></tr>
-<tr><td>Conf</td><td>A config file was loaded.</td></tr>
+<tr><td>Conf</td><td>コンフィギュレーション・ファイルがロードされた。</td></tr>
 <tr><td>ConvToBaseNotNeeded</td><td></td></tr>
 <tr><td>ConvFromXtoItselfNotNeeded</td><td></td></tr>
 <tr><td>Dependency</td><td></td></tr>
-<tr><td>Exec</td><td>Program is executed.</td></tr>
+<tr><td>Exec</td><td>プログラムが実行された。</td></tr>
 <tr><td>ExprAlwaysX</td><td></td></tr>
 <tr><td>ExtendedContext</td><td></td></tr>
-<tr><td>GCStats</td><td>Dumps statistics about the Garbage Collector.</td></tr>
-<tr><td>GlobalVar</td><td>Shows global variables declarations.</td></tr>
-<tr><td>LineTooLong</td><td>Line exceeds the maximum length.</td></tr>
-<tr><td>Link</td><td>Linking phase.</td></tr>
+<tr><td>GCStats</td><td>ガーベジ・コレクターの統計をダンプ。</td></tr>
+<tr><td>GlobalVar</td><td>グローバル変数の宣言を表示。</td></tr>
+<tr><td>LineTooLong</td><td>行の最大長を超過した。</td></tr>
+<tr><td>Link</td><td>リンク処理段階。</td></tr>
 <tr><td>Name</td><td></td></tr>
-<tr><td>Path</td><td>Search paths modifications.</td></tr>
+<tr><td>Path</td><td>検索パスの変更。</td></tr>
 <tr><td>Pattern</td><td></td></tr>
 <tr><td>Performance</td><td></td></tr>
-<tr><td>Processing</td><td>Artifact being compiled.</td></tr>
+<tr><td>Processing</td><td>中間生成物 (artifact) をコンパイルした。</td></tr>
 <tr><td>QuitCalled</td><td></td></tr>
-<tr><td>Source</td><td>The source line that triggered a diagnostic message.</td></tr>
+<tr><td>Source</td><td>診断メッセージが発生したソースの行。</td></tr>
 <tr><td>StackTrace</td><td></td></tr>
-<tr><td>Success, SuccessX</td><td>Successful compilation of a library or a binary.</td></tr>
+<tr><td>Success, SuccessX</td><td>ライブラリまたはバイナリのコンパイルに成功した。</td></tr>
 <tr><td>User</td><td></td></tr>
 <tr><td>UserRaw</td><td></td></tr>
-<tr><td>XDeclaredButNotUsed</td><td>Unused symbols in the code.</td></tr>
+<tr><td>XDeclaredButNotUsed</td><td>未使用のシンボルがコードにある。</td></tr>
 </table>
-<h2><a class="toc-backref" id="compiler-usage-verbosity-levels" href="#compiler-usage-verbosity-levels">詳細表示の基準</a></h2><table border="1" class="docutils"><tr><th>Level</th><th>Description</th></tr>
-<tr><td>0</td><td>Minimal output level for the compiler.</td></tr>
-<tr><td>1</td><td>Displays compilation of all the compiled files, including those imported by other modules or through the <a class="reference external" href="manual.html#implementation-specific-pragmas-compile-pragma">compile pragma</a>. This is the default level.</td></tr>
-<tr><td>2</td><td>Displays compilation statistics, enumerates the dynamic libraries that will be loaded by the final binary and dumps to standard output the result of applying <a class="reference external" href="filters.html">a filter to the source code</a> if any filter was used during compilation.</td></tr>
-<tr><td>3</td><td>In addition to the previous levels dumps a debug stack trace for compiler developers.</td></tr>
+<h2><a class="toc-backref" id="compiler-usage-verbosity-levels" href="#compiler-usage-verbosity-levels">詳細表示レベル</a></h2><table border="1" class="docutils"><tr><th>レベル</th><th>説明</th></tr>
+<tr><td>0</td><td>コンパイラの最小出力レベル。</td></tr>
+<tr><td>1</td><td>ほかのモジュール、または <a class="reference external" href="manual.html#implementation-specific-pragmas-compile-pragma">compile プラグマ</a>によるインポートなどコンパイルを行ったファイルのコンパイル状況を表示します。これはデフォルトのレベルです。</td></tr>
+<tr><td>2</td><td>コンパイルの統計表示、完成版のバイナリでロードされる動的ライブラリの一覧表示、およびコンパイル中にフィルタが使用されたときは<a class="reference external" href="filters.html">ソースコードのフィルタ</a>の適用結果を標準出力へダンプします。</td></tr>
+<tr><td>3</td><td>前述のレベルに加えて、コンパイル開発者向けのデバッグ用スタックトレースをダンプします。</td></tr>
 </table>
 <h2><a class="toc-backref" id="compiler-usage-compile-time-symbols" href="#compiler-usage-compile-time-symbols">コンパイル時のシンボル</a></h2><p>Through the <tt class="docutils literal"><span class="pre">-d:x</span></tt> or <tt class="docutils literal"><span class="pre">--define:x</span></tt> switch you can define compile time symbols for conditional compilation. The defined switches can be checked in source code with the <a class="reference external" href="manual.html#statements-and-expressions-when-statement">when statement</a> and <a class="reference external" href="system.html#defined,untyped">defined proc</a>. The typical use of this switch is to enable builds in release mode (<tt class="docutils literal"><span class="pre">-d:release</span></tt>) where optimizations are enabled for better performance. Another common use is the <tt class="docutils literal"><span class="pre">-d:ssl</span></tt> switch to activate SSL sockets.</p>
 <p>Additionally, you may pass a value along with the symbol: <tt class="docutils literal"><span class="pre">-d:x=y</span></tt> which may be used in conjunction with the <a class="reference external" href="manual.html#implementation-specific-pragmas-compile-time-define-pragmas">compile time define pragmas</a> to override symbols during build time.</p>
@@ -1207,12 +1207,12 @@ other.nim</pre>
 <p>The <tt class="docutils literal"><span class="pre">--nimcache</span></tt> <a class="reference external" href="#compiler-usage-command-line-switches">compiler switch</a> can be used to to change the <tt class="docutils literal"><span class="pre">nimcache</span></tt> directory.</p>
 <p>However, the generated C code is not platform independent. C code generated for Linux does not compile on Windows, for instance. The comment on top of the C file lists the OS, CPU and CC the file has been compiled for.</p>
 
-<h1><a class="toc-backref" id="compiler-selection" href="#compiler-selection">Compiler Selection</a></h1><p>To change the compiler from the default compiler (at the command line):<pre>
+<h1><a class="toc-backref" id="compiler-selection" href="#compiler-selection">コンパイラの選択</a></h1><p>デフォルトのコンパイラから別のコンパイラへ変更するには (コマンドラインにて):<pre>
 nim c --cc:llvm_gcc --compile_only myfile.nim</pre>
 </p>
-<p>This uses the configuration defined in <tt class="docutils literal"><span class="pre">config\nim.cfg</span></tt> for <tt class="docutils literal"><span class="pre">lvm_gcc</span></tt>.</p>
-<p>If nimcache already contains compiled code from a different compiler for the same project, add the <tt class="docutils literal"><span class="pre">-f</span></tt> flag to force all files to be recompiled.</p>
-<p>The default compiler is defined at the top of <tt class="docutils literal"><span class="pre">config\nim.cfg</span></tt>.  Changing this setting affects the compiler used by <tt class="docutils literal"><span class="pre">koch</span></tt> to (re)build Nim.</p>
+<p>これは <tt class="docutils literal"><span class="pre">config\nim.cfg</span></tt> で定義されている <tt class="docutils literal"><span class="pre">lvm_gcc</span></tt> の構成を使います。</p>
+<p>同じプロジェクトで異種コンパイラを用いてコンパイルされたコードが nimcache によりキャッシュ済みならば、 <tt class="docutils literal"><span class="pre">-f</span></tt> フラグを指定してファイルをすべて強制再コンパイルしてください。</p>
+<p>デフォルトのコンパイラ構成は <tt class="docutils literal"><span class="pre">config\nim.cfg</span></tt> の先頭に定義されています。この設定をコンパイラへ反映するには <tt class="docutils literal"><span class="pre">koch</span></tt> で Nim を(再)ビルドしてください。</p>
 
 <h1><a class="toc-backref" id="cross-compilation" href="#cross-compilation">クロスコンパイル</a></h1><p>To cross compile, use for example:<pre>
 nim c --cpu:i386 --os:linux --compileOnly --genScript myproject.nim</pre>
@@ -1227,17 +1227,17 @@ arm.linux.gcc.exe = "arm-linux-gcc"
 arm.linux.gcc.linkerexe = "arm-linux-gcc"</pre>
 </p>
 
-<h1><a class="toc-backref" id="cross-compilation-for-windows" href="#cross-compilation-for-windows">Cross compilation for Windows</a></h1><p>To cross compile for Windows from Linux or macOS using the MinGW-w64 toolchain:<pre>
+<h1><a class="toc-backref" id="cross-compilation-for-windows" href="#cross-compilation-for-windows">Windows 用のクロスコンパイル</a></h1><p>Linux または macOS から Windows のクロスコンパイルをするには MinGW-w64 ツールチェーンを使います:<pre>
 nim c -d:mingw myproject.nim</pre>
 </p>
-<p>Use <tt class="docutils literal"><span class="pre">--cpu:i386</span></tt> or <tt class="docutils literal"><span class="pre">--cpu:amd64</span></tt> to switch the CPU architecture.</p>
-<p>The MinGW-w64 toolchain can be installed as follows:<pre>
+<p>CPU アーキテクチャを切り替えるには <tt class="docutils literal"><span class="pre">--cpu:i386</span></tt> または <tt class="docutils literal"><span class="pre">--cpu:amd64</span></tt> を指定します。</p>
+<p>MinGW-w64 ツールチェーンは下記の手順でインストールします:<pre>
 Ubuntu: apt install mingw-w64
 CentOS: yum install mingw32-gcc | mingw64-gcc - requires EPEL
 OSX: brew install mingw-w64</pre>
 </p>
 
-<h1><a class="toc-backref" id="cross-compilation-for-android" href="#cross-compilation-for-android">Cross compilation for Android</a></h1><p>There are two ways to compile for Android: terminal programs (Termux) and with the NDK (Android Native Development Kit).</p>
+<h1><a class="toc-backref" id="cross-compilation-for-android" href="#cross-compilation-for-android">Android 用のクロスコンパイル</a></h1><p>There are two ways to compile for Android: terminal programs (Termux) and with the NDK (Android Native Development Kit).</p>
 <p>First one is to treat Android as a simple Linux and use <a class="reference external" href="https://wiki.termux.com">Termux</a> to connect and run the Nim compiler directly on android as if it was Linux. These programs are console only programs that can't be distributed in the Play Store.</p>
 <p>Use regular <tt class="docutils literal"><span class="pre">nim c</span></tt> inside termux to make Android terminal programs.</p>
 <p>Normal Android apps are written in Java, to use Nim inside an Android app you need a small Java stub that calls out to a native library written in Nim using the <a class="reference external" href="https://developer.android.com/ndk">NDK</a>. You can also use <a class="reference external" href="https://developer.android.com/ndk/samples/sample_na">native-acitivty</a> to have the Java stub be auto generated for you.</p>
@@ -1246,14 +1246,14 @@ OSX: brew install mingw-w64</pre>
 <pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">NimMain</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">importc</span><span class="Operator">.</span><span class="Punctuation">}</span>
 <span class="Keyword">proc</span> <span class="Identifier">glfmMain</span><span class="Operator">*</span><span class="Punctuation">(</span><span class="Identifier">display</span><span class="Punctuation">:</span> <span class="Keyword">ptr</span> <span class="Identifier">GLFMDisplay</span><span class="Punctuation">)</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">exportc</span><span class="Operator">.</span><span class="Punctuation">}</span> <span class="Operator">=</span>
   <span class="Identifier">NimMain</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Comment"># initialize garbage collector memory, types and stack</span></pre>
-<h1><a class="toc-backref" id="cross-compilation-for-ios" href="#cross-compilation-for-ios">Cross compilation for iOS</a></h1><p>To cross compile for iOS you need to be on a MacOS computer and use XCode. Normal languages for iOS development are Swift and Objective C. Both of these use LLVM and can be compiled into object files linked together with C, C++ or Objective C code produced by Nim.</p>
+<h1><a class="toc-backref" id="cross-compilation-for-ios" href="#cross-compilation-for-ios">iOS 用のクロスコンパイル</a></h1><p>To cross compile for iOS you need to be on a MacOS computer and use XCode. Normal languages for iOS development are Swift and Objective C. Both of these use LLVM and can be compiled into object files linked together with C, C++ or Objective C code produced by Nim.</p>
 <p>Use <tt class="docutils literal"><span class="pre">nim c -c --os:ios --noMain:on</span></tt> to generate C files and include them in your XCode project. Then you can use XCode to compile, link, package and sign everything.</p>
 <p>Because Nim is part of a library it can't have its own c style <tt class="docutils literal"><span class="pre">main()</span></tt> so you would need to define <tt class="docutils literal"><span class="pre">main</span></tt> that calls <tt class="docutils literal"><span class="pre">autoreleasepool</span></tt> and <tt class="docutils literal"><span class="pre">UIApplicationMain</span></tt> to do it, or use a library like SDL2 or GLFM. After the iOS setup is done, it's very important to call <tt class="docutils literal"><span class="pre">NimMain()</span></tt> in order to initialize Nim's garbage collector and to run the top level statements of your program.</p>
 <pre class="listing"><span class="Keyword">proc</span> <span class="Identifier">NimMain</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">importc</span><span class="Operator">.</span><span class="Punctuation">}</span>
 <span class="Keyword">proc</span> <span class="Identifier">glfmMain</span><span class="Operator">*</span><span class="Punctuation">(</span><span class="Identifier">display</span><span class="Punctuation">:</span> <span class="Keyword">ptr</span> <span class="Identifier">GLFMDisplay</span><span class="Punctuation">)</span> <span class="Punctuation">{</span><span class="Operator">.</span><span class="Identifier">exportc</span><span class="Operator">.</span><span class="Punctuation">}</span> <span class="Operator">=</span>
   <span class="Identifier">NimMain</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Comment"># initialize garbage collector memory, types and stack</span></pre><p>Note: XCodes "make clean" gets confused about the genreated nim.c files, so you need to clean those files manually to do a clean build.</p>
 
-<h1><a class="toc-backref" id="cross-compilation-for-nintendo-switch" href="#cross-compilation-for-nintendo-switch">Cross compilation for Nintendo Switch</a></h1><p>Simply add --os:nintendoswitch to your usual <tt class="docutils literal"><span class="pre">nim c</span></tt> or <tt class="docutils literal"><span class="pre">nim cpp</span></tt> command and set the <tt class="docutils literal"><span class="pre">passC</span></tt> and <tt class="docutils literal"><span class="pre">passL</span></tt> command line switches to something like:</p>
+<h1><a class="toc-backref" id="cross-compilation-for-nintendo-switch" href="#cross-compilation-for-nintendo-switch">Nintendo Switch 用のクロスコンパイル</a></h1><p>Simply add --os:nintendoswitch to your usual <tt class="docutils literal"><span class="pre">nim c</span></tt> or <tt class="docutils literal"><span class="pre">nim cpp</span></tt> command and set the <tt class="docutils literal"><span class="pre">passC</span></tt> and <tt class="docutils literal"><span class="pre">passL</span></tt> command line switches to something like:</p>
 <pre class="listing">nim c ... --passC="-I$DEVKITPRO/libnx/include" ...
 --passL="-specs=$DEVKITPRO/libnx/switch.specs -L$DEVKITPRO/libnx/lib -lnx"</pre><p>or setup a nim.cfg file like so:</p>
 <pre class="listing"><span class="Comment">#nim.cfg</span>

@@ -14,17 +14,17 @@ Nim のライセンスに準ずるものとします。ただし、翻訳物にも著作権があります。
 作業記録
 --------
 対象バージョン   : Nim 1.0.6
-作業対象ファイル : 完了: 78 ( +10 = krydoc) - 合計 : 181 = 残り : 102 ( 93 = accounts krydoc)
+作業対象ファイル : 完了: 81 ( +20 = krydoc) - 合計 : 181 = 残り : 99 ( 80 = accounts krydoc)
 
 ・序盤戦終了 : 2020/02/27 (Done: 60) Jan ～ Feb 期間
-・序盤戦開始 : 2020/02/28 Mar ～ Apr 期間
+・中盤戦開始 : 2020/02/28 Mar ～ Apr 期間
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Jan : 31 (Current: 31 / 31)  →  31 - 181 = 150 : Achieved!!!
 Feb : 29 (Current: 29 / 29)  →  60 - 181 = 121 : Achieved!!!
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Mar : 31 (Current: 18 ( +10 = krydoc) / 31)  →  91 - 181 =  90
-Apr : 30 (Current:  0 / 30)  → 121 - 181 =  60
+Mar : 31 (Current: 20 ( +11 = krydoc) / 31)  →  91 - 181 =  90 : Achieved!!!
+Apr : 30 (Current:  0 ( + 9 = krydoc) / 30)  → 121 - 181 =  60
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 May : 31 (Current:  0 / 31)  → 151 - 181 =  30
 Jun : 30 (Current:  0 / 30)  → 180 - 181 =   1
@@ -121,6 +121,9 @@ Nim 1.0.8 公開 : 2020/03/28
 	lexbase.html
 	dollars.html
 	diff.html
+	db_common.html
+	linux.html
+	postgres.html
 	(J) critbits.krydoc         / .txt : tmx 変換待ち
 	(J) cstrutils.krydoc        / .txt : tmx 変換待ち
 	(J) cgi-000.krydoc          / .txt : tmx 変換待ち
@@ -131,6 +134,16 @@ Nim 1.0.8 公開 : 2020/03/28
 	(J) apis-000.krydoc         / .txt : tmx 変換待ち
 	(J) tinyc-000.krydoc        / .txt : tmx 変換待ち
 	(J) channels-000.krydoc     / .txt : tmx 変換待ち
+	(J) posix-000.krydoc        / .txt : tmx 変換待ち
+	(J) posix_utils-000.krydoc  / .txt : tmx 変換待ち
+	(J) terminal-000.krydoc     / .txt : tmx 変換待ち
+	(J) iterators-000.krydoc    / .txt : tmx 変換待ち
+	(J) osproc-000.krydoc       / .txt : tmx 変換待ち
+	(J) sexp-000.krydoc         / .txt : tmx 変換待ち
+	(J) heapqueue-000.krydoc    / .txt : tmx 変換待ち
+	(J) db_postgres-000.krydoc  / .txt : tmx 変換待ち
+	(J) db_odbc-000.krydoc      / .txt : tmx 変換待ち
+	(J) db_mysql-000.krydoc     / .txt : tmx 変換待ち
 
 
 翻訳活動への参加方法

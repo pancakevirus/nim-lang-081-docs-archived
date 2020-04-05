@@ -1,0 +1,39 @@
+﻿<?xml version="1.0"?>
+<tmx version="1.4">
+  <header creationtool="Goldpan Editor by Logrus Global" creationtoolversion="3.3" segtype="sentence" o-tmf="TW4Win 2.0 Format" adminlang="en" srclang="en" creationdate="20200318T193148Z" creationid="LAPTOP-9EDG4KI5\Manabu Noguchi">
+  </header>
+  <body>
+    <tu creationdate="20200318T193148Z" userid="LAPTOP-9EDG4KI5\Manabu Noguchi" tuid="45a1720d-3365-450d-9101-4f1f2582a587">
+      <tuv xml:lang="en">
+        <seg>Name</seg>
+      </tuv>
+      <tuv xml:lang="ja">
+        <seg>Name</seg>
+      </tuv>
+    </tu>
+    <tu creationdate="20200318T193148Z" userid="LAPTOP-9EDG4KI5\Manabu Noguchi" tuid="9cb2c1d2-f470-49ca-8c08-30b73d7f5ab0">
+      <tuv xml:lang="en">
+        <seg>Name</seg>
+      </tuv>
+      <tuv xml:lang="ja">
+        <seg>名前</seg>
+      </tuv>
+    </tu>
+    <tu creationdate="20200318T193148Z" userid="LAPTOP-9EDG4KI5\Manabu Noguchi" tuid="72d6dfdf-275f-4ec8-af94-186e9ea7bd5b">
+      <tuv xml:lang="en">
+        <seg>Deprecated</seg>
+      </tuv>
+      <tuv xml:lang="ja">
+        <seg>Deprecated</seg>
+      </tuv>
+    </tu>
+    <tu creationdate="20200318T193148Z" userid="LAPTOP-9EDG4KI5\Manabu Noguchi" tuid="6485b760-0304-47e0-b40a-e4ce323a88ee">
+      <tuv xml:lang="en">
+        <seg>Deprecated</seg>
+      </tuv>
+      <tuv xml:lang="ja">
+        <seg>廃止</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

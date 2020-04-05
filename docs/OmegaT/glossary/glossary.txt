@@ -22,8 +22,9 @@ anonymous procedures	無名プロシージャ
 array	配列	アレイ、アレー
 backend	バックエンド
 base64	Base64
-characters	文字
-checksums	チェックサム
+character	文字
+checksum	チェックサム
+row	行	
 column	列	≪数学≫行列の縦方向
 column	桁	≪情報≫列、桁、縦列、カラム
 column	桁	≪文書≫n文字目の位置 (横方向)
@@ -90,3 +91,12 @@ Description	Description
 definition	定義
 definition	概念
 definition	説明
+dependency graph	従属グラフ
+dependency graph	依存性グラフ
+dependency graph	依存関係図
+Description	説明
+Description	概要
+effective	実効
+effective	効果的
+effective	効率的
+effective	有効

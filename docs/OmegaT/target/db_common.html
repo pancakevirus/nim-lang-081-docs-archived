@@ -849,7 +849,7 @@ function main() {
   <li><a class="reference" href="#DbTypeKind"
     title="DbTypeKind = enum
   dbUnknown,                  ## 未知のデータ型
-  dbSerial,                   ## 自動インクリメントの主キーで使われるデータ型
+  dbSerial,                   ## 自動インクリメントのプライマリキーで使われるデータ型
   dbNull,                     ## NULL 値で使われるデータ型
   dbBit,                      ## ビットによるデータ型
   dbBool,                     ## ブールによるデータ型
@@ -859,54 +859,54 @@ function main() {
   dbJson,                     ## JSON によるデータ型
   dbXml,                      ## XML によるデータ型
   dbInt,                      ## 整数型
-  dbUInt,                     ## some unsigned integer type
-  dbDecimal,                  ## decimal numbers (fixed-point number)
-  dbFloat,                    ## some floating point type
-  dbDate,                     ## a year-month-day description
-  dbTime,                     ## HH:MM:SS information
-  dbDatetime,                 ## year-month-day and HH:MM:SS information,
-             ## plus optional time or timezone information
-  dbTimestamp, ## Timestamp values are stored as the number of seconds
-              ## since the epoch ('1970-01-01 00:00:00' UTC).
-  dbTimeInterval,             ## an interval [a,b] of times
-  dbEnum,                     ## some enum
-  dbSet,                      ## set of enum values
-  dbArray,                    ## an array of values
-  dbComposite,                ## composite type (record, struct, etc)
-  dbUrl,                      ## a URL
-  dbUuid,                     ## a UUID
-  dbInet,                     ## an IP address
-  dbMacAddress,               ## a MAC address
-  dbGeometry,                 ## some geometric type
-  dbPoint,                    ## Point on a plane   (x,y)
-  dbLine,                     ## Infinite line ((x1,y1),(x2,y2))
-  dbLseg,                     ## Finite line segment   ((x1,y1),(x2,y2))
-  dbBox,                      ## Rectangular box   ((x1,y1),(x2,y2))
-  dbPath,                     ## Closed or open path (similar to polygon) ((x1,y1),...)
-  dbPolygon,                  ## Polygon (similar to closed path)   ((x1,y1),...)
-  dbCircle,                   ## Circle   &lt;(x,y),r&gt; (center point and radius)
-  dbUser1,                    ## user definable datatype 1 (for unknown extensions)
-  dbUser2,                    ## user definable datatype 2 (for unknown extensions)
-  dbUser3,                    ## user definable datatype 3 (for unknown extensions)
-  dbUser4,                    ## user definable datatype 4 (for unknown extensions)
-  dbUser5                     ## user definable datatype 5 (for unknown extensions)"><wbr />Db<wbr />Type<wbr />Kind<span class="attachedType"></span></a></li>
+  dbUInt,                     ## 符号なし整数型
+  dbDecimal,                  ## 十進数 (固定小数点数)
+  dbFloat,                    ## 浮動小数点型
+  dbDate,                     ## 年-月-日の説明
+  dbTime,                     ## 時:分:秒の情報
+  dbDatetime,                 ## 年-月-日と時:分:秒の情報、
+             ## れに加えてオプションの時間または標準時間帯の情報
+  dbTimestamp, ## タイムスタンプ値には UNIX エポック時間からの経過秒数が格納されます。
+              ## UNIX エポック時間は 1970年01月01日 午前00時00分00秒 (協定世界時) です。
+  dbTimeInterval,             ## [a,b] 時間のインターバル
+  dbEnum,                     ## 列挙型
+  dbSet,                      ## 列挙値の集合
+  dbArray,                    ## 配列の値
+  dbComposite,                ## 複合型 (レコード、構造体など)
+  dbUrl,                      ## URL
+  dbUuid,                     ## UUID
+  dbInet,                     ## IP アドレス
+  dbMacAddress,               ## MAC アドレス
+  dbGeometry,                 ## ジオメトリック型
+  dbPoint,                    ## 平面上の地点   (x,y)
+  dbLine,                     ## 無限長の線 ((x1,y1),(x2,y2))
+  dbLseg,                     ## 有限長の線分   ((x1,y1),(x2,y2))
+  dbBox,                      ## 矩形領域   ((x1,y1),(x2,y2))
+  dbPath,                     ## クローズまたはオープンパス (多角形と類似) ((x1,y1),...)
+  dbPolygon,                  ## 多角形 (クローズパスと類似)   ((x1,y1),...)
+  dbCircle,                   ## 円形   &lt;(x,y),r&gt; (中心点と半径)
+  dbUser1,                    ## ユーザ定義によるデータ型１ (未知のエクステンション)
+  dbUser2,                    ## ユーザ定義によるデータ型２ (未知のエクステンション)
+  dbUser3,                    ## ユーザ定義によるデータ型３ (未知のエクステンション)
+  dbUser4,                    ## ユーザ定義によるデータ型４ (未知のエクステンション)
+  dbUser5                     ## ユーザ定義によるデータ型５ (未知のエクステンション)"><wbr />Db<wbr />Type<wbr />Kind<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#DbType"
     title="DbType = object
-  kind*: DbTypeKind            ## the kind of the described type
-  notNull*: bool               ## does the type contain NULL?
-  name*: string                ## the name of the type
-  size*: Natural               ## the size of the datatype; 0 if of variable size
-  maxReprLen*: Natural         ## maximal length required for the representation
-  precision*, scale*: Natural   ## precision and scale of the number
-  min*, max*: BiggestInt        ## the minimum and maximum of allowed values
-  validValues*: seq[string]    ## valid values of an enum or a set"><wbr />Db<wbr />Type<span class="attachedType"></span></a></li>
+  kind*: DbTypeKind            ## 型表現の種類
+  notNull*: bool               ## 型は NULL であるか？
+  name*: string                ## 型の名前
+  size*: Natural               ## データ型のサイズ。 0 ならば可変長サイズ
+  maxReprLen*: Natural         ## 表現で必要とされる最大長
+  precision*, scale*: Natural   ## 数値の精度と尺度
+  min*, max*: BiggestInt        ## 有効範囲内の最小・最大値
+  validValues*: seq[string]    ## 列挙型または集合の有効値"><wbr />Db<wbr />Type<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#DbColumn"
     title="DbColumn = object
-  name*: string                ## name of the column
-  tableName*: string           ## name of the table the column belongs to (optional)
-  typ*: DbType                 ## type of the column
-  primaryKey*: bool            ## is this a primary key?
-  foreignKey*: bool            ## is this a foreign key?"><wbr />Db<wbr />Column<span class="attachedType"></span></a></li>
+  name*: string                ## カラムの名前
+  tableName*: string           ## カラムの所属先であるテーブルの名前 (オプション)
+  typ*: DbType                 ## カラムの型
+  primaryKey*: bool            ## これはプライマリキーであるか？
+  foreignKey*: bool            ## これは外部キーであるか？"><wbr />Db<wbr />Column<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#DbColumns"
     title="DbColumns = seq[DbColumn]"><wbr />Db<wbr />Columns<span class="attachedType"></span></a></li>
 
@@ -961,45 +961,33 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="db_common.html#DbEffect"><span class="Identifier">DbEffect</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="system.html#IOEffect"><span class="Identifier">IOEffect</span></a></pre></dt>
 <dd>
 
-
-
-effect that denotes a database operation
-&nbsp;&nbsp;<a
+データベース操作を意味するエフェクト &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/db_common.nim#L20"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/db_common.nim#L20" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/db_common.nim#L20" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="ReadDbEffect"></a>
 <dt><pre><a href="db_common.html#ReadDbEffect"><span class="Identifier">ReadDbEffect</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="db_common.html#DbEffect"><span class="Identifier">DbEffect</span></a></pre></dt>
 <dd>
 
-
-
-effect that denotes a read operation
-&nbsp;&nbsp;<a
+読み取り操作を意味するエフェクト &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/db_common.nim#L21"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/db_common.nim#L21" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/db_common.nim#L21" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="WriteDbEffect"></a>
 <dt><pre><a href="db_common.html#WriteDbEffect"><span class="Identifier">WriteDbEffect</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="db_common.html#DbEffect"><span class="Identifier">DbEffect</span></a></pre></dt>
 <dd>
 
-
-
-effect that denotes a write operation
-&nbsp;&nbsp;<a
+書き込み操作を意味するエフェクト &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/db_common.nim#L22"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/db_common.nim#L22" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/db_common.nim#L22" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="DbTypeKind"></a>
 <dt><pre><a href="db_common.html#DbTypeKind"><span class="Identifier">DbTypeKind</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
   <span class="Identifier">dbUnknown</span><span class="Other">,</span>                  <span class="Comment">## 未知のデータ型</span>
-  <span class="Identifier">dbSerial</span><span class="Other">,</span>                   <span class="Comment">## 自動インクリメントの主キーで使われるデータ型</span>
+  <span class="Identifier">dbSerial</span><span class="Other">,</span>                   <span class="Comment">## 自動インクリメントのプライマリキーで使われるデータ型</span>
   <span class="Identifier">dbNull</span><span class="Other">,</span>                     <span class="Comment">## NULL 値で使われるデータ型</span>
   <span class="Identifier">dbBit</span><span class="Other">,</span>                      <span class="Comment">## ビットによるデータ型</span>
   <span class="Identifier">dbBool</span><span class="Other">,</span>                     <span class="Comment">## ブールによるデータ型</span>
@@ -1018,74 +1006,66 @@ class="link-seesrc" target="_blank">Source</a>
              <span class="Comment">## それに加えてオプションの時間または標準時間帯の情報</span>
   <span class="Identifier">dbTimestamp</span><span class="Other">,</span> <span class="Comment">## タイムスタンプ値には UNIX エポック時間からの経過秒数が格納されます。</span>
               <span class="Comment">## UNIX エポック時間は 1970年01月01日 午前00時00分00秒 (協定世界時) です。</span>
-  <span class="Identifier">dbTimeInterval</span><span class="Other">,</span>             <span class="Comment">## an interval [a,b] of times</span>
+  <span class="Identifier">dbTimeInterval</span><span class="Other">,</span>             <span class="Comment">## [a,b] 時間のインターバル</span>
   <span class="Identifier">dbEnum</span><span class="Other">,</span>                     <span class="Comment">## 列挙型</span>
   <span class="Identifier">dbSet</span><span class="Other">,</span>                      <span class="Comment">## 列挙値の集合</span>
-  <span class="Identifier">dbArray</span><span class="Other">,</span>                    <span class="Comment">## an array of values</span>
-  <span class="Identifier">dbComposite</span><span class="Other">,</span>                <span class="Comment">## composite type (record, struct, etc)</span>
+  <span class="Identifier">dbArray</span><span class="Other">,</span>                    <span class="Comment">## 配列の値</span>
+  <span class="Identifier">dbComposite</span><span class="Other">,</span>                <span class="Comment">## 複合型 (レコード、構造体など)</span>
   <span class="Identifier">dbUrl</span><span class="Other">,</span>                      <span class="Comment">## URL</span>
   <span class="Identifier">dbUuid</span><span class="Other">,</span>                     <span class="Comment">## UUID</span>
   <span class="Identifier">dbInet</span><span class="Other">,</span>                     <span class="Comment">## IP アドレス</span>
   <span class="Identifier">dbMacAddress</span><span class="Other">,</span>               <span class="Comment">## MAC アドレス</span>
-  <span class="Identifier">dbGeometry</span><span class="Other">,</span>                 <span class="Comment">## some geometric type</span>
-  <span class="Identifier">dbPoint</span><span class="Other">,</span>                    <span class="Comment">## Point on a plane   (x,y)</span>
-  <span class="Identifier">dbLine</span><span class="Other">,</span>                     <span class="Comment">## Infinite line ((x1,y1),(x2,y2))</span>
-  <span class="Identifier">dbLseg</span><span class="Other">,</span>                     <span class="Comment">## Finite line segment   ((x1,y1),(x2,y2))</span>
-  <span class="Identifier">dbBox</span><span class="Other">,</span>                      <span class="Comment">## Rectangular box   ((x1,y1),(x2,y2))</span>
-  <span class="Identifier">dbPath</span><span class="Other">,</span>                     <span class="Comment">## Closed or open path (similar to polygon) ((x1,y1),...)</span>
-  <span class="Identifier">dbPolygon</span><span class="Other">,</span>                  <span class="Comment">## Polygon (similar to closed path)   ((x1,y1),...)</span>
-  <span class="Identifier">dbCircle</span><span class="Other">,</span>                   <span class="Comment">## Circle   &lt;(x,y),r&gt; (center point and radius)</span>
-  <span class="Identifier">dbUser1</span><span class="Other">,</span>                    <span class="Comment">## user definable datatype 1 (for unknown extensions)</span>
-  <span class="Identifier">dbUser2</span><span class="Other">,</span>                    <span class="Comment">## user definable datatype 2 (for unknown extensions)</span>
-  <span class="Identifier">dbUser3</span><span class="Other">,</span>                    <span class="Comment">## user definable datatype 3 (for unknown extensions)</span>
-  <span class="Identifier">dbUser4</span><span class="Other">,</span>                    <span class="Comment">## user definable datatype 4 (for unknown extensions)</span>
-  <span class="Identifier">dbUser5</span>                     <span class="Comment">## user definable datatype 5 (for unknown extensions)</span></pre></dt>
+  <span class="Identifier">dbGeometry</span><span class="Other">,</span>                 <span class="Comment">## ジオメトリック型</span>
+  <span class="Identifier">dbPoint</span><span class="Other">,</span>                    <span class="Comment">## 平面上の地点   (x,y)</span>
+  <span class="Identifier">dbLine</span><span class="Other">,</span>                     <span class="Comment">## 無限長の線 ((x1,y1),(x2,y2))</span>
+  <span class="Identifier">dbLseg</span><span class="Other">,</span>                     <span class="Comment">## 有限長の線分   ((x1,y1),(x2,y2))</span>
+  <span class="Identifier">dbBox</span><span class="Other">,</span>                      <span class="Comment">## 矩形領域   ((x1,y1),(x2,y2))</span>
+  <span class="Identifier">dbPath</span><span class="Other">,</span>                     <span class="Comment">## クローズまたはオープンパス (多角形と類似) ((x1,y1),...)</span>
+  <span class="Identifier">dbPolygon</span><span class="Other">,</span>                  <span class="Comment">## 多角形 (クローズパスと類似)   ((x1,y1),...)</span>
+  <span class="Identifier">dbCircle</span><span class="Other">,</span>                   <span class="Comment">## 円形   &lt;(x,y),r&gt; (中心点と半径)</span>
+  <span class="Identifier">dbUser1</span><span class="Other">,</span>                    <span class="Comment">## ユーザ定義によるデータ型１ (未知のエクステンション)</span>
+  <span class="Identifier">dbUser2</span><span class="Other">,</span>                    <span class="Comment">## ユーザ定義によるデータ型２ (未知のエクステンション)</span>
+  <span class="Identifier">dbUser3</span><span class="Other">,</span>                    <span class="Comment">## ユーザ定義によるデータ型３ (未知のエクステンション)</span>
+  <span class="Identifier">dbUser4</span><span class="Other">,</span>                    <span class="Comment">## ユーザ定義によるデータ型４ (未知のエクステンション)</span>
+  <span class="Identifier">dbUser5</span>                     <span class="Comment">## ユーザ定義によるデータ型５ (未知のエクステンション)</span></pre></dt>
 <dd>
 
-a superset of datatypes that might be supported. &nbsp;&nbsp;<a
+サポートされているデータ型の上位型です。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/db_common.nim#L24"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/db_common.nim#L24" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="DbType"></a>
 <dt><pre><a href="db_common.html#DbType"><span class="Identifier">DbType</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
-  <span class="Identifier">kind</span><span class="Operator">*</span><span class="Other">:</span> <a href="db_common.html#DbTypeKind"><span class="Identifier">DbTypeKind</span></a>            <span class="Comment">## the kind of the described type</span>
-  <span class="Identifier">notNull</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a>               <span class="Comment">## does the type contain NULL?</span>
-  <span class="Identifier">name</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a>                <span class="Comment">## the name of the type</span>
-  <span class="Identifier">size</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#Natural"><span class="Identifier">Natural</span></a>               <span class="Comment">## the size of the datatype; 0 if of variable size</span>
-  <span class="Identifier">maxReprLen</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#Natural"><span class="Identifier">Natural</span></a>         <span class="Comment">## maximal length required for the representation</span>
-  <span class="Identifier">precision</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">scale</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#Natural"><span class="Identifier">Natural</span></a>   <span class="Comment">## precision and scale of the number</span>
-  <span class="Identifier">min</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">max</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#BiggestInt"><span class="Identifier">BiggestInt</span></a>        <span class="Comment">## the minimum and maximum of allowed values</span>
-  <span class="Identifier">validValues</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#seq"><span class="Identifier">seq</span></a><span class="Other">[</span><a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">]</span>    <span class="Comment">## valid values of an enum or a set</span>
+  <span class="Identifier">kind</span><span class="Operator">*</span><span class="Other">:</span> <a href="db_common.html#DbTypeKind"><span class="Identifier">DbTypeKind</span></a>            <span class="Comment">## 型表現の種類</span>
+  <span class="Identifier">notNull</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a>               <span class="Comment">## 型は NULL であるか？</span>
+  <span class="Identifier">name</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a>                <span class="Comment">## 型の名前</span>
+  <span class="Identifier">size</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#Natural"><span class="Identifier">Natural</span></a>               <span class="Comment">## データ型のサイズ。 0 ならば可変長サイズ</span>
+  <span class="Identifier">maxReprLen</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#Natural"><span class="Identifier">Natural</span></a>         <span class="Comment">## 表現で必要とされる最大長</span>
+  <span class="Identifier">precision</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">scale</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#Natural"><span class="Identifier">Natural</span></a>   <span class="Comment">## 数値の精度と尺度</span>
+  <span class="Identifier">min</span><span class="Operator">*</span><span class="Other">,</span> <span class="Identifier">max</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#BiggestInt"><span class="Identifier">BiggestInt</span></a>        <span class="Comment">## 有効範囲内の最小・最大値</span>
+  <span class="Identifier">validValues</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#seq"><span class="Identifier">seq</span></a><span class="Other">[</span><a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">]</span>    <span class="Comment">## 列挙型または集合の有効値</span>
   </pre></dt>
 <dd>
 
-
-
-describes a database type
-&nbsp;&nbsp;<a
+データベース型の概要 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/db_common.nim#L68"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/db_common.nim#L68" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/db_common.nim#L68" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="DbColumn"></a>
 <dt><pre><a href="db_common.html#DbColumn"><span class="Identifier">DbColumn</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
-  <span class="Identifier">name</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a>                <span class="Comment">## name of the column</span>
-  <span class="Identifier">tableName</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a>           <span class="Comment">## name of the table the column belongs to (optional)</span>
-  <span class="Identifier">typ</span><span class="Operator">*</span><span class="Other">:</span> <a href="db_common.html#DbType"><span class="Identifier">DbType</span></a>                 <span class="Comment">## type of the column</span>
-  <span class="Identifier">primaryKey</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a>            <span class="Comment">## is this a primary key?</span>
-  <span class="Identifier">foreignKey</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a>            <span class="Comment">## is this a foreign key?</span>
+  <span class="Identifier">name</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a>                <span class="Comment">## カラムの名前</span>
+  <span class="Identifier">tableName</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a>           <span class="Comment">## カラムの所属先であるテーブルの名前 (オプション)</span>
+  <span class="Identifier">typ</span><span class="Operator">*</span><span class="Other">:</span> <a href="db_common.html#DbType"><span class="Identifier">DbType</span></a>                 <span class="Comment">## カラムの型</span>
+  <span class="Identifier">primaryKey</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a>            <span class="Comment">## これはプライマリキーであるか？</span>
+  <span class="Identifier">foreignKey</span><span class="Operator">*</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a>            <span class="Comment">## これは外部キーであるか？</span>
   </pre></dt>
 <dd>
 
-
-
-information about a database column
-&nbsp;&nbsp;<a
+データベースのカラム (列) に関する情報 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/db_common.nim#L78"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/db_common.nim#L78" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/db_common.nim#L78" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="DbColumns"></a>
@@ -1107,7 +1087,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#dbError%2Cstring"><span class="Identifier">dbError</span></a><span class="Other">(</span><span class="Identifier">msg</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">noreturn</span><span class="Other">,</span> <span class="Identifier">noinline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">DbError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-raises an DbError exception with message <tt class="docutils literal"><span class="pre">msg</span></tt>. &nbsp;&nbsp;<a
+メッセージ <tt class="docutils literal"><span class="pre">msg</span></tt> 付きで DbError の例外を発生します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/db_common.nim#L95"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/db_common.nim#L95" class="link-seesrc" target="_blank" >編集</a>
 
@@ -1121,8 +1101,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">template</span> <a href="#sql.t%2Cstring"><span class="Identifier">sql</span></a><span class="Other">(</span><span class="Identifier">query</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="db_common.html#SqlQuery"><span class="Identifier">SqlQuery</span></a></pre></dt>
 <dd>
 
-<p>constructs a SqlQuery from the string <tt class="docutils literal"><span class="pre">query</span></tt>. This is supposed to be used as a raw-string-literal modifier: <tt class="docutils literal"><span class="pre">sql"update user set counter = counter + 1"</span></tt></p>
-<p>If assertions are turned off, it does nothing. If assertions are turned on, later versions will check the string for valid syntax.</p>
+<p>文字列 <tt class="docutils literal"><span class="pre">query</span></tt> から SqlQuery を作成 (constructs) します。これは生文字列リテラル修飾子として使われます: <tt class="docutils literal"><span class="pre">sql"update user set counter = counter + 1"</span></tt></p>
+<p>アサーション無効時、なにも処理をしません。アサーション有効時、将来のバージョンではシンタックスが正しいか文字列を検査します。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/db_common.nim#L86"
