@@ -18,772 +18,7 @@
 
 
 <title>macros</title>
-<style type="text/css" >
-/*
-Stylesheet for use with Docutils/rst2html.
-
-See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
-customize this style sheet.
-
-Modified from Chad Skeeters' rst2html-style
-https://bitbucket.org/cskeeters/rst2html-style/
-
-Modified by Boyd Greenfield and narimiran
-*/
-
-html {
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
-
-body {
-  font-family: "Lato", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 1.125em;
-  line-height: 1.5;
-  color: #222;
-  background-color: #FCFCFC; }
-
-/* Skeleton grid */
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 1050px;
-  margin: 0 auto;
-  padding: 0;
-  box-sizing: border-box; }
-
-.column,
-.columns {
-  width: 100%;
-  float: left;
-  box-sizing: border-box;
-  margin-left: 1%;
-}
-
-.column:first-child,
-.columns:first-child {
-  margin-left: 0; }
-
-.three.columns {
-  width: 19%; }
-
-.nine.columns {
-  width: 80.0%; }
-
-.twelve.columns {
-  width: 100%;
-  margin-left: 0; }
-
-@media screen and (max-width: 860px) {
-  .three.columns {
-    display: none;
-  }
-  .nine.columns {
-    width: 98.0%;
-  }
-  body {
-    font-size: 1em;
-    line-height: 1.35;
-  }
-}
-
-cite {
-  font-style: italic !important; }
-
-
-/* Nim search input */
-div#searchInputDiv {
-  margin-bottom: 1em;
-}
-input#searchInput {
-  width: 80%;
-}
-
-/*
- * Some custom formatting for input forms.
- * This also fixes input form colors on Firefox with a dark system theme on Linux.
- */
-input {
-  -moz-appearance: none;
-  color: #333;
-  background-color: #f8f8f8;
-  border: 1px solid #aaa;
-  font-family: "Lato", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-  font-size: 0.9em;
-  padding: 6px;
-}
-input:focus {
-  border: 1px solid #1fa0eb;
-  box-shadow: 0 0 2px #1fa0eb;
-}
-
-/* Docgen styles */
-/* Links */
-a {
-  color: #07b;
-  text-decoration: none;
-}
-
-a span.Identifier {
-  text-decoration: underline;
-  text-decoration-color: #aab;
-}
-
-a.reference-toplevel {
-  font-weight: bold;
-}
-
-a.toc-backref {
-  text-decoration: none;
-  color: #222; }
-
-a.link-seesrc {
-  color: #607c9f;
-  font-size: 0.9em;
-  font-style: italic; }
-
-a:hover,
-a:focus {
-  color: #607c9f;
-  text-decoration: underline; }
-
-a:hover span.Identifier {
-  color: #607c9f;
-}
-
-
-sub,
-sup {
-  position: relative;
-  font-size: 75%;
-  line-height: 0;
-  vertical-align: baseline; }
-
-sup {
-  top: -0.5em; }
-
-sub {
-  bottom: -0.25em; }
-
-img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-  border: 0;
-  -ms-interpolation-mode: bicubic; }
-
-@media print {
-  * {
-    color: black !important;
-    text-shadow: none !important;
-    background: transparent !important;
-    box-shadow: none !important; }
-
-  a,
-  a:visited {
-    text-decoration: underline; }
-
-  a[href]:after {
-    content: " (" attr(href) ")"; }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")"; }
-
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: ""; }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid; }
-
-  thead {
-    display: table-header-group; }
-
-  tr,
-  img {
-    page-break-inside: avoid; }
-
-  img {
-    max-width: 100% !important; }
-
-  @page {
-    margin: 0.5cm; }
-
-  h1 {
-    page-break-before: always; }
-
-  h1.title {
-    page-break-before: avoid; }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3; }
-
-  h2,
-  h3 {
-    page-break-after: avoid; }
-}
-
-
-p {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
-small {
-  font-size: 85%; }
-
-strong {
-  font-weight: 600;
-  font-size: 0.95em;
-  color: #3c3c3c;
-}
-
-em {
-  font-style: italic; }
-
-h1 {
-  font-size: 1.8em;
-  font-weight: 400;
-  padding-bottom: .25em;
-  border-bottom: 1px solid #aaa;
-  margin-top: 2.5em;
-  margin-bottom: 1em;
-  line-height: 1.2em; }
-
-h1.title {
-  padding-bottom: 1em;
-  border-bottom: 0px;
-  font-size: 2.5em;
-  text-align: center;
-  font-weight: 900;
-  margin-top: 0.75em;
-  margin-bottom: 0em;
-}
-
-h2 {
-  font-size: 1.3em;
-  margin-top: 2em; }
-
-h2.subtitle {
-  text-align: center; }
-
-h3 {
-  font-size: 1.125em;
-  font-style: italic;
-  margin-top: 1.5em; }
-
-h4 {
-  font-size: 1.125em;
-  margin-top: 1em; }
-
-h5 {
-  font-size: 1.125em;
-  margin-top: 0.75em; }
-
-h6 {
-  font-size: 1.1em; }
-
-
-ul,
-ol {
-  padding: 0;
-  margin-top: 0.5em;
-  margin-left: 0.75em; }
-
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin-bottom: 0;
-  margin-left: 1.25em; }
-
-li {
-    list-style-type: circle;
-}
-
-ul.simple-boot li {
-    list-style-type: none;
-    margin-left: 0em;
-    margin-bottom: 0.5em;
-}
-
-ol.simple > li, ul.simple > li {
-  margin-bottom: 0.25em;
-  margin-left: 0.4em }
-
-ul.simple.simple-toc > li {
-    margin-top: 1em;
-}
-
-ul.simple-toc {
-  list-style: none;
-  font-size: 0.9em;
-  margin-left: -0.3em;
-  margin-top: 1em; }
-
-ul.simple-toc > li {
-    list-style-type: none;
-}
-
-ul.simple-toc-section {
-  list-style-type: circle;
-  margin-left: 1em;
-  color: #6c9aae; }
-
-
-ol.arabic {
-  list-style: decimal; }
-
-ol.loweralpha {
-  list-style: lower-alpha; }
-
-ol.upperalpha {
-  list-style: upper-alpha; }
-
-ol.lowerroman {
-  list-style: lower-roman; }
-
-ol.upperroman {
-  list-style: upper-roman; }
-
-ul.auto-toc {
-  list-style-type: none; }
-
-
-dl {
-  margin-bottom: 1.5em; }
-
-dt {
-  margin-bottom: -0.5em;
-  margin-left: 0.0em; }
-
-dd {
-  margin-left: 2.0em;
-  margin-bottom: 3.0em;
-  margin-top: 0.5em; }
-
-
-hr {
-  margin: 2em 0;
-  border: 0;
-  border-top: 1px solid #aaa; }
-
-blockquote {
-  font-size: 0.9em;
-  font-style: italic;
-  padding-left: 0.5em;
-  margin-left: 0;
-  border-left: 5px solid #bbc;
-}
-
-.pre {
-  font-family: "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace;
-  font-weight: 500;
-  font-size: 0.85em;
-  background-color: #f0f3ff;
-  padding-left: 3px;
-  padding-right: 3px;
-  border-radius: 4px;
-}
-
-pre {
-  font-family: "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace;
-  color: #222;
-  font-weight: 500;
-  display: inline-block;
-  box-sizing: border-box;
-  min-width: 100%;
-  padding: 0.5em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  font-size: 0.85em;
-  white-space: pre !important;
-  overflow-y: hidden;
-  overflow-x: visible;
-  background-color: ghostwhite;
-  border: 1px solid #dde;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px; }
-
-.pre-scrollable {
-  max-height: 340px;
-  overflow-y: scroll; }
-
-
-/* Nim line-numbered tables */
-.line-nums-table {
-  width: 100%;
-  table-layout: fixed; }
-
-table.line-nums-table {
-  border-radius: 4px;
-  border: 1px solid #cccccc;
-  background-color: ghostwhite;
-  border-collapse: separate;
-  margin-top: 15px;
-  margin-bottom: 25px; }
-
-.line-nums-table tbody {
-  border: none; }
-
-.line-nums-table td pre {
-  border: none;
-  background-color: transparent; }
-
-.line-nums-table td.blob-line-nums {
-  width: 28px; }
-
-.line-nums-table td.blob-line-nums pre {
-  color: #b0b0b0;
-  -webkit-filter: opacity(75%);
-  text-align: right;
-  border-color: transparent;
-  background-color: transparent;
-  padding-left: 0px;
-  margin-left: 0px;
-  padding-right: 0px;
-  margin-right: 0px; }
-
-
-table {
-  max-width: 100%;
-  background-color: transparent;
-  margin-top: 0.5em;
-  margin-bottom: 1.5em;
-  border-collapse: collapse;
-  border-color: #ccc;
-  border-spacing: 0;
-  font-size: 0.9em;
-}
-
-table th, table td {
-  padding: 0px 0.5em 0px;
-}
-
-table th {
-  background-color: #e8e8e8;
-  font-weight: bold; }
-
-table th.docinfo-name {
-    background-color: transparent;
-}
-
-table tr:hover {
-  background-color: ghostwhite; }
-
-
-/* rst2html default used to remove borders from tables and images */
-.borderless, table.borderless td, table.borderless th {
-  border: 0; }
-
-table.borderless td, table.borderless th {
-  /* Override padding for "table.docutils td" with "! important".
-     The right padding separates the table cells. */
-  padding: 0 0.5em 0 0 !important; }
-
-.first {
-  /* Override more specific margin styles with "! important". */
-  margin-top: 0 !important; }
-
-.last, .with-subtitle {
-  margin-bottom: 0 !important; }
-
-.hidden {
-  display: none; }
-
-blockquote.epigraph {
-  margin: 2em 5em; }
-
-dl.docutils dd {
-  margin-bottom: 0.5em; }
-
-object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
-  overflow: hidden; }
-
-
-div.figure {
-  margin-left: 2em;
-  margin-right: 2em; }
-
-div.footer, div.header {
-  clear: both;
-  text-align: center;
-  color: #666;
-  font-size: smaller; }
-
-div.footer {
-    padding-top: 5em;
-}
-
-div.line-block {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em; }
-
-div.line-block div.line-block {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 1.5em; }
-
-div.topic {
-  margin: 2em; }
-
-div.search_results {
-  background-color: antiquewhite;
-  margin: 3em;
-  padding: 1em;
-  border: 1px solid #4d4d4d;
-}
-
-div#global-links ul {
-  margin-left: 0;
-  list-style-type: none;
-}
-
-div#global-links > simple-boot {
-    margin-left: 3em;
-}
-
-hr.docutils {
-  width: 75%; }
-
-img.align-left, .figure.align-left, object.align-left {
-  clear: left;
-  float: left;
-  margin-right: 1em; }
-
-img.align-right, .figure.align-right, object.align-right {
-  clear: right;
-  float: right;
-  margin-left: 1em; }
-
-img.align-center, .figure.align-center, object.align-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
-.align-left {
-  text-align: left; }
-
-.align-center {
-  clear: both;
-  text-align: center; }
-
-.align-right {
-  text-align: right; }
-
-/* reset inner alignment in figures */
-div.align-right {
-  text-align: inherit; }
-
-p.attribution {
-  text-align: right;
-  margin-left: 50%; }
-
-p.caption {
-  font-style: italic; }
-
-p.credits {
-  font-style: italic;
-  font-size: smaller; }
-
-p.label {
-  white-space: nowrap; }
-
-p.rubric {
-  font-weight: bold;
-  font-size: larger;
-  color: maroon;
-  text-align: center; }
-
-p.topic-title {
-  font-weight: bold; }
-
-pre.address {
-  margin-bottom: 0;
-  margin-top: 0;
-  font: inherit; }
-
-pre.literal-block, pre.doctest-block, pre.math, pre.code {
-  margin-left: 2em;
-  margin-right: 2em; }
-
-pre.code .ln {
-  color: grey; }
-
-/* line numbers */
-pre.code, code {
-  background-color: #eeeeee; }
-
-pre.code .comment, code .comment {
-  color: #5c6576; }
-
-pre.code .keyword, code .keyword {
-  color: #3B0D06;
-  font-weight: bold; }
-
-pre.code .literal.string, code .literal.string {
-  color: #0c5404; }
-
-pre.code .name.builtin, code .name.builtin {
-  color: #352b84; }
-
-pre.code .deleted, code .deleted {
-  background-color: #DEB0A1; }
-
-pre.code .inserted, code .inserted {
-  background-color: #A3D289; }
-
-span.classifier {
-  font-style: oblique; }
-
-span.classifier-delimiter {
-  font-weight: bold; }
-
-span.option {
-  white-space: nowrap; }
-
-span.problematic {
-  color: #b30000; }
-
-span.section-subtitle {
-  /* font-size relative to parent (h1..h6 element) */
-  font-size: 80%; }
-
-span.DecNumber {
-  color: #252dbe; }
-
-span.BinNumber {
-  color: #252dbe; }
-
-span.HexNumber {
-  color: #252dbe; }
-
-span.OctNumber {
-  color: #252dbe; }
-
-span.FloatNumber {
-  color: #252dbe; }
-
-span.Identifier {
-  color: #222; }
-
-span.Keyword {
-  font-weight: 600;
-  color: #5e8f60; }
-
-span.StringLit {
-  color: #a4255b; }
-
-span.LongStringLit {
-  color: #a4255b; }
-
-span.CharLit {
-  color: #a4255b; }
-
-span.EscapeSequence {
-  color: black; }
-
-span.Operator {
-  color: black; }
-
-span.Punctuation {
-  color: black; }
-
-span.Comment, span.LongComment {
-  font-style: italic;
-  font-weight: 400;
-  color: #484a86; }
-
-span.RegularExpression {
-  color: darkviolet; }
-
-span.TagStart {
-  color: darkviolet; }
-
-span.TagEnd {
-  color: darkviolet; }
-
-span.Key {
-  color: #252dbe; }
-
-span.Value {
-  color: #252dbe; }
-
-span.RawData {
-  color: #a4255b; }
-
-span.Assembler {
-  color: #252dbe; }
-
-span.Preprocessor {
-  color: #252dbe; }
-
-span.Directive {
-  color: #252dbe; }
-
-span.Command, span.Rule, span.Hyperlink, span.Label, span.Reference,
-span.Other {
-  color: black; }
-
-/* Pop type, const, proc, and iterator defs in nim def blocks */
-dt pre > span.Identifier, dt pre > span.Operator {
-  color: #155da4;
-  font-weight: 700; }
-
-dt pre > span.Keyword ~ span.Identifier, dt pre > span.Identifier ~ span.Identifier,
-dt pre > span.Operator ~ span.Identifier, dt pre > span.Other ~ span.Identifier {
-  color: inherit;
-  font-weight: inherit; }
-
-/* Nim sprite for the footer (taken from main page favicon) */
-.nim-sprite {
-  display: inline-block;
-  height: 16px;
-  width: 16px;
-  background-position: 0 0;
-  background-size: 16px 16px;
-  -webkit-filter: opacity(50%);
-  background-repeat: no-repeat;
-  background-image: url("data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA==");
-  margin-bottom: -5px; }
-
-span.pragmadots {
-  /* Position: relative frees us up to make the dots
-  look really nice without fucking up the layout and
-  causing bulging in the parent container */
-  position: relative;
-  /* 1px down looks slightly nicer */
-  top: 1px;
-  padding: 2px;
-  background-color: #e8e8e8;
-  border-radius: 4px;
-  margin: 0 2px;
-  cursor: pointer;
-  font-size: 0.8em;
-}
-
-span.pragmadots:hover {
-  background-color: #DBDBDB;
-}
-span.pragmawrap {
-  display: none;
-}
-
-span.attachedType {
-  display: none;
-  visibility: hidden;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="nimdoc.out.css">
 
 <script type="text/javascript" src="dochack.js"></script>
 
@@ -798,6 +33,37 @@ function main() {
       event.target.parentNode.nextElementSibling.style.display = "inline";
     }
   }
+
+  const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+  function switchTheme(e) {
+      if (e.target.checked) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+      } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+      }
+  }
+
+  toggleSwitch.addEventListener('change', switchTheme, false);
+
+
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.setAttribute('data-theme', "dark");
+    toggleSwitch.checked = true;
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    document.documentElement.setAttribute('data-theme', "light");
+    toggleSwitch.checked = false;
+  } else {
+    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+    if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+
+      if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+      }
+    }
+  }
 }
 </script>
 
@@ -808,6 +74,13 @@ function main() {
     <h1 class="title">macros</h1>
     <div class="row">
   <div class="three columns">
+  <div class="theme-switch-wrapper">
+    <label class="theme-switch" for="checkbox">
+      <input type="checkbox" id="checkbox" />
+      <div class="slider round"></div>
+    </label>
+    &nbsp;&nbsp;&nbsp; <em>消灯</em>
+  </div>
   <div id="global-links">
     <ul class="simple-boot">
       <li>
@@ -973,7 +246,7 @@ function main() {
     title="nnkCallKinds = {nnkCall, nnkInfix, nnkPrefix, nnkPostfix, nnkCommand, nnkCallStrLit}"><wbr />nnk<wbr />Call<wbr />Kinds<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#RoutineNodes"
     title="RoutineNodes = {nnkProcDef, nnkFuncDef, nnkMethodDef, nnkDo, nnkLambda, nnkIteratorDef,
-              nnkTemplateDef, nnkConverterDef}"><wbr />Routine<wbr />Nodes<span class="attachedType"></span></a></li>
+              nnkTemplateDef, nnkConverterDef, nnkMacroDef}"><wbr />Routine<wbr />Nodes<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#AtomicNodes"
     title="AtomicNodes = {nnkNone..nnkNilLit}"><wbr />Atomic<wbr />Nodes<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#CallNodes"
@@ -1169,9 +442,11 @@ function main() {
     title="newLit(arg: enum): NimNode"><wbr />new<wbr />Lit<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#newLit_2"
     title="newLit(arg: object): NimNode"><wbr />new<wbr />Lit<span class="attachedType"></span></a></li>
+  <li><a class="reference" href="#newLit%2Cref."
+    title="newLit(arg: ref object): NimNode"><wbr />new<wbr />Lit<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#newLit%2Carray%5BN%2CT%5D"
     title="newLit[N, T](arg: array[N, T]): NimNode"><wbr />new<wbr />Lit<span class="attachedType"></span></a></li>
-  <li><a class="reference" href="#newLit%2Cseq%5BT%5D%5BT%5D"
+  <li><a class="reference" href="#newLit%2Cseq%5BT%5D"
     title="newLit[T](arg: seq[T]): NimNode"><wbr />new<wbr />Lit<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#newLit%2Cset%5BT%5D"
     title="newLit[T](s: set[T]): NimNode"><wbr />new<wbr />Lit<span class="attachedType"></span></a></li>
@@ -1279,6 +554,8 @@ function main() {
     title="eqIdent(a: string; b: NimNode): bool"><wbr />eq<wbr />Ident<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#eqIdent%2CNimNode%2CNimNode"
     title="eqIdent(a: NimNode; b: NimNode): bool"><wbr />eq<wbr />Ident<span class="attachedType"></span></a></li>
+  <li><a class="reference" href="#expectIdent%2CNimNode%2Cstring"
+    title="expectIdent(n: NimNode; name: string)"><wbr />expect<wbr />Ident<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#hasArgOfName%2CNimNode%2Cstring"
     title="hasArgOfName(params: NimNode; name: string): bool"><wbr />has<wbr />Arg<wbr />Of<wbr />Name<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#addIdentIfAbsent%2CNimNode%2Cstring"
@@ -1988,7 +1265,7 @@ function main() {
 <h2><a class="toc-backref" id="statements-macro-declaration" href="#statements-macro-declaration">マクロ宣言</a></h2><p>Macros behave like templates, but <tt class="docutils literal"><span class="pre">nnkTemplateDef</span></tt> is replaced with <tt class="docutils literal"><span class="pre">nnkMacroDef</span></tt>.</p>
 
 <h1><a class="toc-backref" id="special-node-kinds" href="#special-node-kinds">Special node kinds</a></h1><p>There are several node kinds that are used for semantic checking or code generation. These are accessible from this module, but should not be used. Other node kinds are especially designed to make AST manipulations easier. These are explained here.</p>
-<p>To be written.  </p>
+<p>To be written.</p>
 </p>
   <div class="section" id="7">
 <h1><a class="toc-backref" href="#7">型</a></h1>
@@ -2027,7 +1304,7 @@ function main() {
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L25"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L25"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L25" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2037,7 +1314,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L89"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L89"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L89" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2057,7 +1334,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L90"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L90"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L90" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2067,7 +1344,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L110"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L110"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L110" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2081,7 +1358,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L111"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L111"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L111" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2091,7 +1368,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L120"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L120"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L120" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2101,7 +1378,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Represents a Nim identifier in the AST. <strong>Note</strong>: This is only rarely useful, for identifier construction from a string use <tt class="docutils literal"><span class="pre">ident"abc"</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L123"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L123"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L123" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2110,7 +1387,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Represents a Nim <em>symbol</em> in the compiler; a <em>symbol</em> is a looked-up <em>ident</em>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L129"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L129"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L129" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2129,7 +1406,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 specifies how <tt class="docutils literal"><span class="pre">bindSym</span></tt> behaves
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L470"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L470"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L470" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -2143,7 +1420,7 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L513"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L513"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L513" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2158,7 +1435,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L135"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L135"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L135" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2168,19 +1445,19 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L136"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L136"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L136" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="RoutineNodes"></a>
 <dt><pre><a href="macros.html#RoutineNodes"><span class="Identifier">RoutineNodes</span></a> <span class="Other">=</span> <span class="Other">{</span><span class="DecNumber">nnkProcDef</span><span class="Other">,</span> <span class="DecNumber">nnkFuncDef</span><span class="Other">,</span> <span class="DecNumber">nnkMethodDef</span><span class="Other">,</span> <span class="DecNumber">nnkDo</span><span class="Other">,</span> <span class="DecNumber">nnkLambda</span><span class="Other">,</span> <span class="DecNumber">nnkIteratorDef</span><span class="Other">,</span>
-              <span class="DecNumber">nnkTemplateDef</span><span class="Other">,</span> <span class="DecNumber">nnkConverterDef</span><span class="Other">}</span></pre></dt>
+              <span class="DecNumber">nnkTemplateDef</span><span class="Other">,</span> <span class="DecNumber">nnkConverterDef</span><span class="Other">,</span> <span class="DecNumber">nnkMacroDef</span><span class="Other">}</span></pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1081"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1081" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1087"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1087" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="AtomicNodes"></a>
@@ -2189,8 +1466,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1083"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1083" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1089"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1089" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="CallNodes"></a>
@@ -2200,8 +1477,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1084"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1084" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1090"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1090" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 
@@ -2218,7 +1495,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
   </div>
 
 Constructs an identifier from the string <tt class="docutils literal"><span class="pre">s</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L142"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L142"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L142" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2231,7 +1508,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
   </div>
 
 Constructs an identifier from the string <tt class="docutils literal"><span class="pre">s</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L146"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L146"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L146" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2244,7 +1521,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
   </div>
 
 Compares two Nim identifiers. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L150"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L150"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L150" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2253,7 +1530,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Compare two Nim nodes. Return true if nodes are structurally equivalent. This means two independently created nodes can be equal. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L154"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L154"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L154" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2266,7 +1543,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
   </div>
 
 Compares two Nim symbols. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L158"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L158"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L158" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2276,7 +1553,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Compares two Nim nodes' types. Return true if the types are the same, eg. true when comparing alias with original type. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L164"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L164"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L164" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2285,7 +1562,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Returns the number of children of <tt class="docutils literal"><span class="pre">n</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L169"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L169"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L169" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2294,7 +1571,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Get <tt class="docutils literal"><span class="pre">n</span></tt>'s <tt class="docutils literal"><span class="pre">i</span></tt>'th child. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L172"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L172"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L172" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2303,7 +1580,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Get <tt class="docutils literal"><span class="pre">n</span></tt>'s <tt class="docutils literal"><span class="pre">i</span></tt>'th child. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L175"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L175"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L175" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2312,7 +1589,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Slice operation for NimNode. Returns a seq of child of <tt class="docutils literal"><span class="pre">n</span></tt> who inclusive range [n[x.a], n[x.b]]. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L181"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L181"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L181" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2321,7 +1598,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Set <tt class="docutils literal"><span class="pre">n</span></tt>'s <tt class="docutils literal"><span class="pre">i</span></tt>'th child to <tt class="docutils literal"><span class="pre">child</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L190"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L190"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L190" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2330,7 +1607,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Set <tt class="docutils literal"><span class="pre">n</span></tt>'s <tt class="docutils literal"><span class="pre">i</span></tt>'th child to <tt class="docutils literal"><span class="pre">child</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L194"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L194"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L194" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2340,7 +1617,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Adds the <tt class="docutils literal"><span class="pre">child</span></tt> to the <tt class="docutils literal"><span class="pre">father</span></tt> node. Returns the father node so that calls can be nested. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L213"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L213"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L213" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2350,7 +1627,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Adds each child of <tt class="docutils literal"><span class="pre">children</span></tt> to the <tt class="docutils literal"><span class="pre">father</span></tt> node. Returns the <tt class="docutils literal"><span class="pre">father</span></tt> node so that calls can be nested. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L218"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L218"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L218" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2359,7 +1636,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Deletes <tt class="docutils literal"><span class="pre">n</span></tt> children of <tt class="docutils literal"><span class="pre">father</span></tt> starting at index <tt class="docutils literal"><span class="pre">idx</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L223"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L223"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L223" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2368,7 +1645,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Returns the <tt class="docutils literal"><span class="pre">kind</span></tt> of the node <tt class="docutils literal"><span class="pre">n</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L226"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L226"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L226" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2377,7 +1654,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Returns an integer value from any integer literal or enum field symbol. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L229"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L229"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L229" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2386,7 +1663,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Returns a float from any floating point literal. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L232"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L232"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L232" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2400,7 +1677,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L237"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L237"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L237" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2414,7 +1691,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L240"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L240"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L240" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2428,7 +1705,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L243"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L243"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L243" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2438,7 +1715,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L246"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L246"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L246" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2447,7 +1724,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Returns a copy of the declaration of a symbol or <tt class="docutils literal"><span class="pre">nil</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L247"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L247"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L247" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2461,7 +1738,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L249"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L249"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L249" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2474,7 +1751,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
   </div>
 
 Converts a Nim identifier to a string. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L255"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L255"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L255" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2487,7 +1764,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
   </div>
 
 Converts a Nim symbol to a string. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L259"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L259"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L259" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2502,7 +1779,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L288"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L288"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L288" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2512,7 +1789,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Checks if a proc symbol is an instance of the generic proc symbol. Useful to check proc symbols against generic symbols returned by <tt class="docutils literal"><span class="pre">bindSym</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L300"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L300"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L300" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2521,7 +1798,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 With 'getType' you can access the node's <span id="type_1">type</span>. A Nim type is mapped to a Nim AST too, so it's slightly confusing but it means the same API can be used to traverse types. Recursive types are flattened for you so there is no danger of infinite recursions during traversal. To resolve recursive types, you have to call 'getType' again. To see what kind of type it is, call <tt class="docutils literal"><span class="pre">typeKind</span></tt> on getType's result. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L305"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L305"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L305" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2530,7 +1807,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Version of <tt class="docutils literal"><span class="pre">getType</span></tt> which takes a <tt class="docutils literal"><span class="pre">typedesc</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L313"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L313"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L313" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2539,7 +1816,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Returns the type kind of the node 'n' that should represent a type, that means the node should have been obtained via <tt class="docutils literal"><span class="pre">getType</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L316"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L316"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L316" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2569,7 +1846,7 @@ Returns the <span id="type_2">type</span> of a node in a form matching the way t
 <span class="Identifier">doAssert</span><span class="Other">(</span><span class="Identifier">dumpTypeInst</span><span class="Other">(</span><span class="Identifier">b</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"Vec4[float32]"</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span><span class="Other">(</span><span class="Identifier">dumpTypeInst</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"Vec[4, float32]"</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L320"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L320"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L320" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2578,7 +1855,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Version of <tt class="docutils literal"><span class="pre">getTypeInst</span></tt> which takes a <tt class="docutils literal"><span class="pre">typedesc</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L338"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L338"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L338" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2611,7 +1888,7 @@ Returns the <span id="type_3">type</span> of a node in a form matching the imple
 <span class="Identifier">doAssert</span><span class="Other">(</span><span class="Identifier">dumpTypeImpl</span><span class="Other">(</span><span class="Identifier">b</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">t</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span><span class="Other">(</span><span class="Identifier">dumpTypeImpl</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">t</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L341"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L341"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L341" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2620,7 +1897,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Returns a stable identifier derived from the signature of a symbol. The signature combines many factors such as the type of the symbol, the owning module of the symbol and others. The same identifier is used in the back-end to produce the mangled symbol name. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L366"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L366"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L366" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2629,7 +1906,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Returns a stable digest for symbols derived not only from type signature and owning module, but also implementation body. All procs/variables used in the implementation of this symbol are hashed recursively as well, including magics from system module. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L372"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L372"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L372" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2638,7 +1915,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Version of <tt class="docutils literal"><span class="pre">getTypeImpl</span></tt> which takes a <tt class="docutils literal"><span class="pre">typedesc</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L379"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L379"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L379" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2648,7 +1925,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L382"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L382"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L382" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2658,7 +1935,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L383"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L383"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L383" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2672,7 +1949,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L387"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L387"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L387" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2686,7 +1963,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L390"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L390"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L390" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2702,7 +1979,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L402"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L402"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L402" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2715,7 +1992,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>The <tt class="docutils literal"><span class="pre">lineInfoFrom</span></tt> parameter is used for line information when the produced code crashes. You should ensure that it is set to a node that you are transforming.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L412"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L412"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L412" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2725,7 +2002,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L421"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L421"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L421" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2735,7 +2012,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L422"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L422"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L422" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2744,7 +2021,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Writes an error message at compile time. The optional <tt class="docutils literal"><span class="pre">n: NimNode</span></tt> parameter is used as the source for file and line number information in the compilation error message. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L424"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L424"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L424" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2753,7 +2030,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Writes a warning message at compile time. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L429"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L429"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L429" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2762,7 +2039,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Writes a hint message at compile time. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L432"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L432"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L432" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2771,7 +2048,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Creates a string literal node from <tt class="docutils literal"><span class="pre">s</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L435"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L435"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L435" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2781,7 +2058,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Creates a comment statement node. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L440"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L440"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L440" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2790,7 +2067,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Creates an int literal node from <tt class="docutils literal"><span class="pre">i</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L445"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L445"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L445" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2799,7 +2076,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Creates a float literal node from <tt class="docutils literal"><span class="pre">f</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L450"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L450"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L450" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2811,7 +2088,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
   </div>
 
 Creates an identifier node from <tt class="docutils literal"><span class="pre">i</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L457"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L457"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L457" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2820,7 +2097,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Creates an identifier node from <tt class="docutils literal"><span class="pre">i</span></tt>. It is simply an alias for <tt class="docutils literal"><span class="pre">ident(string)</span></tt>. Use that, it's shorter. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L464"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L464"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L464" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2833,7 +2110,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Experimental feature: use {.experimental: "dynamicBindSym".} to activate it. If called from template / regular code, <tt class="docutils literal"><span class="pre">ident</span></tt> and <tt class="docutils literal"><span class="pre">rule</span></tt> must be constant expression / literal value. If called from macros / compile time procs / static blocks, <tt class="docutils literal"><span class="pre">ident</span></tt> and <tt class="docutils literal"><span class="pre">rule</span></tt> can be VM computed value.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L479"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L479"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L479" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2843,7 +2120,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Generates a fresh symbol that is guaranteed to be unique. The symbol needs to occur in a declaration context. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L498"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L498"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L498" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2856,7 +2133,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
   </div>
 
 Returns the AST of the invocation expression that invoked this macro. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L503"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L503"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L503" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2865,7 +2142,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Converts the AST <tt class="docutils literal"><span class="pre">n</span></tt> to the concrete Nim code and wraps that in a string literal node. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L507"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L507"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L507" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2874,7 +2151,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Return a string representation in the form <tt class="docutils literal"><span class="pre">filepath(line, column)</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L517"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L517"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L517" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2883,7 +2160,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Copy lineinfo from <tt class="docutils literal"><span class="pre">info</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L530"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L530"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L530" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2892,7 +2169,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Returns <tt class="docutils literal"><span class="pre">LineInfo</span></tt> of <tt class="docutils literal"><span class="pre">n</span></tt>, using absolute path for <tt class="docutils literal"><span class="pre">filename</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L533"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L533"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L533" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2901,7 +2178,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Return line info in the form <tt class="docutils literal"><span class="pre">filepath(line, column)</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L539"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L539"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L539" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2910,7 +2187,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Some builtins set an error flag. This is then turned into a proper exception. <strong>Note</strong>: Ordinary application code should not call this. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L549"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L549"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L549" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2920,7 +2197,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Compiles the passed string to its AST representation. Expects a single expression. Raises <tt class="docutils literal"><span class="pre">ValueError</span></tt> for parsing errors. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L553"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L553"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L553" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2930,7 +2207,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Compiles the passed string to its AST representation. Expects one or more statements. Raises <tt class="docutils literal"><span class="pre">ValueError</span></tt> for parsing errors. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L560"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L560"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L560" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2941,7 +2218,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 Obtains the AST nodes returned from a macro or template invocation. 用例:<pre class="listing"><span class="Keyword">macro</span> <span class="Identifier">FooMacro</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Operator">=</span>
   <span class="Keyword">var</span> <span class="Identifier">ast</span> <span class="Operator">=</span> <span class="Identifier">getAst</span><span class="Punctuation">(</span><span class="Identifier">BarTemplate</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L567"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L567"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L567" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2968,7 +2245,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Keyword">if</span> <span class="Keyword">not</span> <span class="Punctuation">`</span><span class="Identifier">ex</span><span class="Punctuation">`</span><span class="Punctuation">:</span>
       <span class="Identifier">echo</span> <span class="Punctuation">`</span><span class="Identifier">info</span><span class="Punctuation">`</span> <span class="Operator">&amp;</span> <span class="StringLit">": Check failed: "</span> <span class="Operator">&amp;</span> <span class="Punctuation">`</span><span class="Identifier">expString</span><span class="Punctuation">`</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L576"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L576"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L576" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2977,7 +2254,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Checks that <tt class="docutils literal"><span class="pre">n</span></tt> is of kind <tt class="docutils literal"><span class="pre">k</span></tt>. If this is not the case, compilation aborts with an error message. This is useful for writing macros that check the AST that is passed to them. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L605"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L605"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L605" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2986,7 +2263,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Checks that <tt class="docutils literal"><span class="pre">n</span></tt> has at least <tt class="docutils literal"><span class="pre">min</span></tt> children. If this is not the case, compilation aborts with an error message. This is useful for writing macros that check its number of arguments. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L611"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L611"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L611" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2995,7 +2272,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Checks that <tt class="docutils literal"><span class="pre">n</span></tt> has exactly <tt class="docutils literal"><span class="pre">len</span></tt> children. If this is not the case, compilation aborts with an error message. This is useful for writing macros that check its number of arguments. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L617"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L617"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L617" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -3004,7 +2281,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Checks that <tt class="docutils literal"><span class="pre">n</span></tt> has a number of children in the range <tt class="docutils literal"><span class="pre">min..max</span></tt>. If this is not the case, compilation aborts with an error message. This is useful for writing macros that check its number of arguments. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L623"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L623"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L623" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -3014,7 +2291,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Produces a new node with children. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L630"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L630"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L630" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -3024,7 +2301,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Produces a new call node. <tt class="docutils literal"><span class="pre">theProc</span></tt> is the proc that is called with the arguments <tt class="docutils literal"><span class="pre">args[0..]</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L636"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L636"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L636" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -3038,7 +2315,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
   </div>
 
 Produces a new call node. <tt class="docutils literal"><span class="pre">theProc</span></tt> is the proc that is called with the arguments <tt class="docutils literal"><span class="pre">args[0..]</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L646"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L646"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L646" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -3048,7 +2325,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Produces a new call node. <tt class="docutils literal"><span class="pre">theProc</span></tt> is the proc that is called with the arguments <tt class="docutils literal"><span class="pre">args[0..]</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L656"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L656"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L656" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -3057,7 +2334,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Produces a new character literal node. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L664"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L664"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L664" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -3066,7 +2343,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Produces a new integer literal node. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L669"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L669"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L669" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -3075,7 +2352,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Produces a new integer literal node. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L674"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L674"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L674" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -3084,7 +2361,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Produces a new integer literal node. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L679"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L679"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L679" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -3093,7 +2370,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Produces a new integer literal node. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L684"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L684"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L684" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -3102,7 +2379,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Produces a new integer literal node. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L689"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L689"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L689" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -3111,7 +2388,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Produces a new unsigned integer literal node. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L694"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L694"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L694" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -3120,7 +2397,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Produces a new unsigned integer literal node. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L699"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L699"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L699" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -3129,7 +2406,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Produces a new unsigned integer literal node. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L704"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L704"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L704" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -3138,7 +2415,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Produces a new unsigned integer literal node. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L709"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L709"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L709" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -3147,7 +2424,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Produces a new unsigned integer literal node. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L714"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L714"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L714" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -3156,7 +2433,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Produces a new boolean literal node. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L719"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L719"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L719" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -3165,7 +2442,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Produces a new string literal node. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L723"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L723"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L723" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -3174,7 +2451,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Produces a new float literal node. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L735"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L735"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L735" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -3183,7 +2460,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Produces a new float literal node. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L740"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L740"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L740" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -3193,7 +2470,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L751"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L751"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L751" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -3203,8 +2480,17 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L762"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L762"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L762" class="link-seesrc" target="_blank" >編集</a>
+
+</dd>
+<a id="newLit,ref."></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#newLit%2Cref."><span class="Identifier">newLit</span></a><span class="Other">(</span><span class="Identifier">arg</span><span class="Other">:</span> <span class="Keyword">ref</span> <span class="Keyword">object</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+produces a new ref type literal node. &nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L767"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L767" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newLit,array[N,T]"></a>
@@ -3213,18 +2499,18 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L767"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L767" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L773"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L773" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
-<a id="newLit,seq[T][T]"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#newLit%2Cseq%5BT%5D%5BT%5D"><span class="Identifier">newLit</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">arg</span><span class="Other">:</span> <a href="system.html#seq"><span class="Identifier">seq</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span></span><span class="Other">.}</span></span></pre></dt>
+<a id="newLit,seq[T]"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#newLit%2Cseq%5BT%5D"><span class="Identifier">newLit</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">arg</span><span class="Other">:</span> <a href="system.html#seq"><span class="Identifier">seq</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L772"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L772" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L778"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L778" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newLit,set[T]"></a>
@@ -3233,8 +2519,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L785"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L785" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L791"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L791" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newLit_3"></a>
@@ -3243,8 +2529,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L790"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L790" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L796"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L796" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="nestList,NimNode,NimNode"></a>
@@ -3252,8 +2538,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Nests the list <tt class="docutils literal"><span class="pre">pack</span></tt> into a tree of call expressions: <tt class="docutils literal"><span class="pre">[a, b, c]</span></tt> is transformed into <tt class="docutils literal"><span class="pre">op(a, op(c, d))</span></tt>. This is also known as fold expression. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L795"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L795" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L801"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L801" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="nestList,NimNode,NimNode,NimNode"></a>
@@ -3262,8 +2548,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Nests the list <tt class="docutils literal"><span class="pre">pack</span></tt> into a tree of call expressions: <tt class="docutils literal"><span class="pre">[a, b, c]</span></tt> is transformed into <tt class="docutils literal"><span class="pre">op(a, op(c, d))</span></tt>. This is also known as fold expression. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L805"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L805" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L811"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L811" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="nestList,NimIdent,NimNode"></a>
@@ -3277,8 +2563,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L815"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L815" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L821"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L821" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="treeRepr,NimNode"></a>
@@ -3289,8 +2575,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>See also <tt class="docutils literal"><span class="pre">repr</span></tt>, <tt class="docutils literal"><span class="pre">lispRepr</span></tt>, and <tt class="docutils literal"><span class="pre">astGenRepr</span></tt>.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L855"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L855" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L861"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L861" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="lispRepr,NimNode"></a>
@@ -3302,8 +2588,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>See also <tt class="docutils literal"><span class="pre">repr</span></tt>, <tt class="docutils literal"><span class="pre">treeRepr</span></tt>, and <tt class="docutils literal"><span class="pre">astGenRepr</span></tt>.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L861"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L861" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L867"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L867" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="astGenRepr,NimNode"></a>
@@ -3314,8 +2600,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>See also <tt class="docutils literal"><span class="pre">repr</span></tt>, <tt class="docutils literal"><span class="pre">treeRepr</span></tt>, and <tt class="docutils literal"><span class="pre">lispRepr</span></tt>.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L867"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L867" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L873"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L873" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newEmptyNode"></a>
@@ -3323,8 +2609,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Create a new empty node. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L992"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L992" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L998"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L998" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newStmtList,varargs[NimNode]"></a>
@@ -3332,8 +2618,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Create a new statement list. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L996"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L996" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1002"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1002" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newPar,varargs[NimNode]"></a>
@@ -3341,8 +2627,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Create a new parentheses-enclosed expression. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1000"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1000" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1006"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1006" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newBlockStmt,NimNode,NimNode"></a>
@@ -3350,8 +2636,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Create a new block statement with label. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1004"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1004" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1010"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1010" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newBlockStmt,NimNode"></a>
@@ -3359,8 +2645,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Create a new block: stmt. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1008"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1008" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1014"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1014" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newVarStmt,NimNode,NimNode"></a>
@@ -3368,8 +2654,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Create a new var stmt. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1012"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1012" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1018"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1018" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newLetStmt,NimNode,NimNode"></a>
@@ -3377,8 +2663,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Create a new let stmt. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1017"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1017" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1023"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1023" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newConstStmt,NimNode,NimNode"></a>
@@ -3386,8 +2672,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Create a new const stmt. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1022"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1022" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1028"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1028" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newAssignment,NimNode,NimNode"></a>
@@ -3396,8 +2682,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1027"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1027" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1033"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1033" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newDotExpr,NimNode,NimNode"></a>
@@ -3408,9 +2694,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 Create new dot expression. a.dot(b) -&gt; <tt class="docutils literal"><span class="pre">a.b</span></tt>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1030"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1036"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1030" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1036" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="newColonExpr,NimNode,NimNode"></a>
@@ -3421,9 +2707,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Create new colon expression. newColonExpr(a, b) -&gt; <tt class="docutils literal"><span class="pre">a: b</span></tt>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1035"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1041"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1035" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1041" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="newIdentDefs,NimNode,NimNode"></a>
@@ -3443,8 +2729,8 @@ class="link-seesrc" target="_blank">Source</a>
   <span class="Identifier">ident</span><span class="Punctuation">(</span><span class="StringLit">"a"</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">ident</span><span class="Punctuation">(</span><span class="StringLit">"b"</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">ident</span><span class="Punctuation">(</span><span class="StringLit">"c"</span><span class="Punctuation">)</span><span class="Punctuation">,</span> <span class="Identifier">ident</span><span class="Punctuation">(</span><span class="StringLit">"string"</span><span class="Punctuation">)</span><span class="Punctuation">,</span>
     <span class="Identifier">newStrLitNode</span><span class="Punctuation">(</span><span class="StringLit">"Hello"</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1040"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1040" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1046"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1046" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newNilLit"></a>
@@ -3452,8 +2738,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 New nil literal shortcut. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1072"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1072" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1078"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1078" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="last,NimNode"></a>
@@ -3461,8 +2747,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Return the last item in nodes children. Same as <tt class="docutils literal"><span class="pre">node[^1]</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1076"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1076" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1082"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1082" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="expectKind,NimNode,set[NimNodeKind]"></a>
@@ -3470,8 +2756,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Checks that <tt class="docutils literal"><span class="pre">n</span></tt> is of kind <tt class="docutils literal"><span class="pre">k</span></tt>. If this is not the case, compilation aborts with an error message. This is useful for writing macros that check the AST that is passed to them. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1087"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1087" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1093"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1093" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newProc,openArray[NimNode],NimNode,NimNode"></a>
@@ -3485,8 +2771,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>The <tt class="docutils literal"><span class="pre">params</span></tt> array must start with the return type of the proc, followed by a list of IdentDefs which specify the params.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1093"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1093" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1099"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1099" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newIfStmt,varargs[tuple[NimNode,NimNode]]"></a>
@@ -3501,8 +2787,8 @@ Constructor for <tt class="docutils literal"><span class="pre">if</span></tt> st
   <span class="Operator">...</span>
 <span class="Punctuation">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1114"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1114" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1120"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1120" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newEnum,NimNode,openArray[NimNode],bool,bool"></a>
@@ -3519,8 +2805,8 @@ Creates a new enum. <tt class="docutils literal"><span class="pre">name</span></
 
 <span class="Comment"># type Colors* = Blue Red</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1131"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1131" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1137"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1137" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="copyChildrenTo,NimNode,NimNode"></a>
@@ -3528,8 +2814,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Copy all children from <tt class="docutils literal"><span class="pre">src</span></tt> to <tt class="docutils literal"><span class="pre">dest</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1175"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1175" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1181"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1181" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="name,NimNode"></a>
@@ -3538,8 +2824,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1183"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1183" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1189"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1189" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="name=,NimNode,NimNode"></a>
@@ -3548,8 +2834,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1194"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1194" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1200"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1200" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="params,NimNode"></a>
@@ -3558,8 +2844,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1200"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1200" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1206"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1206" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="params=,NimNode,NimNode"></a>
@@ -3568,8 +2854,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1203"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1203" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1209"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1209" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="pragma,NimNode"></a>
@@ -3577,8 +2863,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Get the pragma of a proc type. These will be expanded. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1208"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1208" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1214"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1214" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="pragma=,NimNode,NimNode"></a>
@@ -3586,8 +2872,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Set the pragma of a proc type. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1216"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1216" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1222"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1222" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="addPragma,NimNode,NimNode"></a>
@@ -3595,8 +2881,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Adds pragma to routine definition. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1225"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1225" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1231"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1231" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="body,NimNode"></a>
@@ -3605,8 +2891,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1237"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1237" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1243"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1243" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="body=,NimNode,NimNode"></a>
@@ -3615,8 +2901,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1248"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1248" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1254"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1254" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="$,NimNode"></a>
@@ -3624,8 +2910,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Get the string of an identifier node. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1261"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1261" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1267"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1267" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="ident,string"></a>
@@ -3633,8 +2919,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Create a new ident node from a string. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1275"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1275" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1281"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1281" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="insert,NimNode,int,NimNode"></a>
@@ -3642,8 +2928,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Insert node <tt class="docutils literal"><span class="pre">b</span></tt> into node <tt class="docutils literal"><span class="pre">a</span></tt> at <tt class="docutils literal"><span class="pre">pos</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1307"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1307" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1313"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1313" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="basename,NimNode"></a>
@@ -3651,8 +2937,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Pull an identifier from prefix/postfix expressions. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1322"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1322" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1328"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1328" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="basename=,NimNode,string"></a>
@@ -3661,8 +2947,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1331"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1331" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1338"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1338" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="postfix,NimNode,string"></a>
@@ -3671,8 +2957,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1341"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1341" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1349"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1349" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="prefix,NimNode,string"></a>
@@ -3681,8 +2967,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1344"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1344" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1352"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1352" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="infix,NimNode,string,NimNode"></a>
@@ -3691,8 +2977,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1347"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1347" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1355"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1355" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="unpackPostfix,NimNode"></a>
@@ -3702,8 +2988,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1351"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1351" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1359"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1359" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="unpackPrefix,NimNode"></a>
@@ -3713,8 +2999,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1356"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1356" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1364"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1364" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="unpackInfix,NimNode"></a>
@@ -3724,8 +3010,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1361"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1361" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1369"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1369" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="copy,NimNode"></a>
@@ -3733,8 +3019,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 An alias for <a class="reference external" href="#copyNimTree,NimNode">copyNimTree</a>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1366"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1366" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1374"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1374" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="eqIdent,string,string"></a>
@@ -3742,35 +3028,44 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Style insensitive comparison. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1371"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1371" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1379"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1379" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="eqIdent,NimNode,string"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#eqIdent%2CNimNode%2Cstring"><span class="Identifier">eqIdent</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"EqIdent"</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Style insensitive comparison. <tt class="docutils literal"><span class="pre">a</span></tt> can be an identifier or a symbol. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1374"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1374" class="link-seesrc" target="_blank" >編集</a>
+Style insensitive comparison. <tt class="docutils literal"><span class="pre">a</span></tt> can be an identifier or a symbol. <tt class="docutils literal"><span class="pre">a</span></tt> may be wrapped in an export marker (<tt class="docutils literal"><span class="pre">nnkPostfix</span></tt>) or quoted with backticks (<tt class="docutils literal"><span class="pre">nnkAccQuoted</span></tt>), these nodes will be unwrapped. &nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1382"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1382" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="eqIdent,string,NimNode"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#eqIdent%2Cstring%2CNimNode"><span class="Identifier">eqIdent</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"EqIdent"</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Style insensitive comparison. <tt class="docutils literal"><span class="pre">b</span></tt> can be an identifier or a symbol. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1378"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1378" class="link-seesrc" target="_blank" >編集</a>
+Style insensitive comparison. <tt class="docutils literal"><span class="pre">b</span></tt> can be an identifier or a symbol. <tt class="docutils literal"><span class="pre">b</span></tt> may be wrapped in an export marker (<tt class="docutils literal"><span class="pre">nnkPostfix</span></tt>) or quoted with backticks (<tt class="docutils literal"><span class="pre">nnkAccQuoted</span></tt>), these nodes will be unwrapped. &nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1388"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1388" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="eqIdent,NimNode,NimNode"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#eqIdent%2CNimNode%2CNimNode"><span class="Identifier">eqIdent</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"EqIdent"</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Style insensitive comparison. <tt class="docutils literal"><span class="pre">a</span></tt> and <tt class="docutils literal"><span class="pre">b</span></tt> can be an identifier or a symbol. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1382"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1382" class="link-seesrc" target="_blank" >編集</a>
+Style insensitive comparison. <tt class="docutils literal"><span class="pre">a</span></tt> and <tt class="docutils literal"><span class="pre">b</span></tt> can be an identifier or a symbol. Both may be wrapped in an export marker (<tt class="docutils literal"><span class="pre">nnkPostfix</span></tt>) or quoted with backticks (<tt class="docutils literal"><span class="pre">nnkAccQuoted</span></tt>), these nodes will be unwrapped. &nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1394"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1394" class="link-seesrc" target="_blank" >編集</a>
+
+</dd>
+<a id="expectIdent,NimNode,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#expectIdent%2CNimNode%2Cstring"><span class="Identifier">expectIdent</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">;</span> <span class="Identifier">name</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">compileTime</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Check that <tt class="docutils literal"><span class="pre">eqIdent(n,name)</span></tt> holds true. If this is not the case, compilation aborts with an error message. This is useful for writing macros that check the AST that is passed to them. &nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1436"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1436" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="hasArgOfName,NimNode,string"></a>
@@ -3779,8 +3074,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Search <tt class="docutils literal"><span class="pre">nnkFormalParams</span></tt> for an argument. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1422"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1422" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1443"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1443" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="addIdentIfAbsent,NimNode,string"></a>
@@ -3789,8 +3084,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Add <tt class="docutils literal"><span class="pre">ident</span></tt> to <tt class="docutils literal"><span class="pre">dest</span></tt> if it is not present. This is intended for use with pragmas. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1430"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1430" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1451"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1451" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="boolVal,NimNode"></a>
@@ -3799,17 +3094,17 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1442"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1442" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1463"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1463" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="nodeID,NimNode"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#nodeID%2CNimNode"><span class="Identifier">nodeID</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="Identifier">NodeId</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#nodeID%2CNimNode"><span class="Identifier">nodeID</span></a><span class="Other">(</span><span class="Identifier">n</span><span class="Other">:</span> <a href="system.html#NimNode"><span class="Identifier">NimNode</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"NodeId"</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 Returns the id of <tt class="docutils literal"><span class="pre">n</span></tt>, when the compiler has been compiled with the flag <tt class="docutils literal"><span class="pre">-d:useNodeids</span></tt>, otherwise returns <tt class="docutils literal"><span class="pre">-1</span></tt>. This proc is for the purpose to debug the compiler only. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1447"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1447" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1468"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1468" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getProjectPath"></a>
@@ -3827,8 +3122,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1622"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1622" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1643"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1643" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getSize,NimNode"></a>
@@ -3836,8 +3131,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Returns the same result as <tt class="docutils literal"><span class="pre">system.sizeof</span></tt> if the size is known by the Nim compiler. Returns a negative value if the Nim compiler does not know the size. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1648"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1648" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1669"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1669" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getAlign,NimNode"></a>
@@ -3845,8 +3140,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Returns the same result as <tt class="docutils literal"><span class="pre">system.alignof</span></tt> if the alignment is known by the Nim compiler. It works on <tt class="docutils literal"><span class="pre">NimNode</span></tt> for use in macro context. Returns a negative value if the Nim compiler does not know the alignment. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1652"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1652" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1673"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1673" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getOffset,NimNode"></a>
@@ -3854,8 +3149,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Returns the same result as <tt class="docutils literal"><span class="pre">system.offsetof</span></tt> if the offset is known by the Nim compiler. It expects a resolved symbol node from a field of a type. Therefore it only requires one argument instead of two. Returns a negative value if the Nim compiler does not know the offset. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1657"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1657" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1678"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1678" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="isExported,NimNode"></a>
@@ -3863,8 +3158,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Returns whether the symbol is exported or not. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1664"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1664" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1685"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1685" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 
@@ -3877,8 +3172,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Iterates over the children of the NimNode <tt class="docutils literal"><span class="pre">n</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1278"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1278" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1284"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1284" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="pairs.i,NimNode"></a>
@@ -3886,8 +3181,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Iterates over the children of the NimNode <tt class="docutils literal"><span class="pre">n</span></tt> and its indices. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1283"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1283" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1289"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1289" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="children.i,NimNode"></a>
@@ -3895,8 +3190,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Iterates over the children of the NimNode <tt class="docutils literal"><span class="pre">n</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1288"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1288" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1294"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1294" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 
@@ -3919,8 +3214,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">StrLit</span> <span class="StringLit">"Hello, World!"</span></pre><p>Also see <tt class="docutils literal"><span class="pre">dumpAstGen</span></tt> and <tt class="docutils literal"><span class="pre">dumpLisp</span></tt>.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L913"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L913" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L919"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L919" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="dumpLisp.m,untyped"></a>
@@ -3938,8 +3233,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
   <span class="Punctuation">(</span><span class="Identifier">StrLit</span> <span class="StringLit">"Hello, World!"</span><span class="Punctuation">)</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre><p>Also see <tt class="docutils literal"><span class="pre">dumpAstGen</span></tt> and <tt class="docutils literal"><span class="pre">dumpTree</span></tt>.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L937"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L937" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L943"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L943" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="dumpAstGen.m,untyped"></a>
@@ -3959,8 +3254,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Punctuation">)</span></pre><p>Also see <tt class="docutils literal"><span class="pre">dumpTree</span></tt> and <tt class="docutils literal"><span class="pre">dumpLisp</span></tt>.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L961"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L961" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L967"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L967" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="dumpTreeImm.m,untyped"></a>
@@ -3971,8 +3266,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
   </div>
 
 Deprecated. Use <tt class="docutils literal"><span class="pre">dumpTree</span></tt> instead. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L986"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L986" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L992"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L992" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="dumpLispImm.m,untyped"></a>
@@ -3983,8 +3278,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
   </div>
 
 Deprecated. Use <tt class="docutils literal"><span class="pre">dumpLisp</span></tt> instead. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L989"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L989" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L995"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L995" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="expandMacros.m,typed"></a>
@@ -3993,7 +3288,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Expands one level of macro - useful for debugging. Can be used to inspect what happens when a macro call is expanded, without altering its result.</p>
 <p>For instance,</p>
-<pre class="listing"><span class="Keyword">import</span> <span class="Identifier">future</span><span class="Punctuation">,</span> <span class="Identifier">macros</span>
+<pre class="listing"><span class="Keyword">import</span> <span class="Identifier">sugar</span><span class="Punctuation">,</span> <span class="Identifier">macros</span>
 
 <span class="Keyword">let</span>
   <span class="Identifier">x</span> <span class="Operator">=</span> <span class="DecNumber">10</span>
@@ -4002,8 +3297,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
   <span class="Identifier">dump</span><span class="Punctuation">(</span><span class="Identifier">x</span> <span class="Operator">+</span> <span class="Identifier">y</span><span class="Punctuation">)</span></pre><p>will actually dump <tt class="docutils literal"><span class="pre">x + y</span></tt>, but at the same time will print at compile time the expansion of the <tt class="docutils literal"><span class="pre">dump</span></tt> macro, which in this case is <tt class="docutils literal"><span class="pre">debugEcho ["x + y", " = ", x + y]</span></tt>.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1452"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1452" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1473"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1473" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="hasCustomPragma.m,typed,"></a>
@@ -4023,8 +3318,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">assert</span><span class="Punctuation">(</span><span class="Identifier">o</span><span class="Operator">.</span><span class="Identifier">myField</span><span class="Operator">.</span><span class="Identifier">hasCustomPragma</span><span class="Punctuation">(</span><span class="Identifier">myAttr</span><span class="Punctuation">)</span><span class="Punctuation">)</span>
 <span class="Identifier">assert</span><span class="Punctuation">(</span><span class="Identifier">myProc</span><span class="Operator">.</span><span class="Identifier">hasCustomPragma</span><span class="Punctuation">(</span><span class="Identifier">myAttr</span><span class="Punctuation">)</span><span class="Punctuation">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1547"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1547" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1568"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1568" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getCustomPragmaVal.m,typed,"></a>
@@ -4042,8 +3337,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">assert</span><span class="Punctuation">(</span><span class="Identifier">o</span><span class="Operator">.</span><span class="Identifier">getCustomPragmaVal</span><span class="Punctuation">(</span><span class="Identifier">serializationKey</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="StringLit">"mo"</span><span class="Punctuation">)</span>
 <span class="Identifier">assert</span><span class="Punctuation">(</span><span class="Identifier">MyObj</span><span class="Operator">.</span><span class="Identifier">getCustomPragmaVal</span><span class="Punctuation">(</span><span class="Identifier">serializationKey</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="StringLit">"mo"</span><span class="Punctuation">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1571"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1571" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1592"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1592" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="unpackVarargs.m,untyped,varargs[untyped]"></a>
@@ -4052,8 +3347,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1617"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1617" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1638"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1638" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 
@@ -4069,7 +3364,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 Evaluate <tt class="docutils literal"><span class="pre">x</span></tt> and when it is not an empty node, return it. Otherwise evaluate to <tt class="docutils literal"><span class="pre">y</span></tt>. Can be used to chain several expressions to get the first expression that is not empty.<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">node</span> <span class="Operator">=</span> <span class="Identifier">mightBeEmpty</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Keyword">or</span> <span class="Identifier">mightAlsoBeEmpty</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Keyword">or</span> <span class="Identifier">fallbackNode</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L198"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L198"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L198" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -4082,8 +3377,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 Find the first child node matching condition (or nil).<pre class="listing"><span class="Keyword">var</span> <span class="Identifier">res</span> <span class="Operator">=</span> <span class="Identifier">findChild</span><span class="Punctuation">(</span><span class="Identifier">n</span><span class="Punctuation">,</span> <span class="Identifier">it</span><span class="Operator">.</span><span class="Identifier">kind</span> <span class="Operator">==</span> <span class="Identifier">nnkPostfix</span> <span class="Keyword">and</span>
                        <span class="Identifier">it</span><span class="Operator">.</span><span class="Identifier">basename</span><span class="Operator">.</span><span class="Identifier">ident</span> <span class="Operator">==</span> <span class="RawData">toNimIdent"foo"</span><span class="Punctuation">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1293"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1293" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1299"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1299" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="emit.t,static[string]"></a>
@@ -4098,8 +3393,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 Accepts a single string argument and treats it as nim code that should be inserted verbatim in the program Example:<pre class="listing"><span class="Identifier">emit</span><span class="Punctuation">(</span><span class="StringLit">"echo "</span> <span class="Operator">&amp;</span> <span class="CharLit">'"'</span> <span class="Operator">&amp;</span> <span class="StringLit">"hello world"</span><span class="Operator">.</span><span class="Identifier">toUpper</span> <span class="Operator">&amp;</span> <span class="CharLit">'"'</span><span class="Punctuation">)</span></pre><p>Deprecated since version 0.15 since it's so rarely useful.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/core/macros.nim#L1604"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1604" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/core/macros.nim#L1625"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/core/macros.nim#L1625" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 
@@ -4112,7 +3407,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 生成日時: 2020年01月23日 午前17時27分18秒 (UTC)</small>
+        <small style="color: var(--hint);">Nim で作成しました。 生成日時: 2020年04月03日 午前12時37分30秒 (UTC)</small>
       </div>
     </div>
   </div>

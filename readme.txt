@@ -11,35 +11,56 @@ Nim のライセンスに準ずるものとします。ただし、翻訳物にも著作権があります。
 もちろん、寄贈者が記載していいのは、あなたが担当した部分だけです。
 
 
-作業記録
---------
-対象バージョン   : Nim 1.0.6
-作業対象ファイル : 完了: 81 ( +20 = krydoc) - 合計 : 181 = 残り : 99 ( 80 = accounts krydoc)
+仮訳作業記録
+------------
+対象バージョン   : Nim 1.0.6 (1.2.0 移行作業中)
+作業開始日       : 2020年01月02日 午前11時00分
+序盤戦終了       : 2020/02/27 (Done: 60) Jan ～ Feb 期間
+中盤戦開始       : 2020/02/28 Mar ～ May
 
-・序盤戦終了 : 2020/02/27 (Done: 60) Jan ～ Feb 期間
-・中盤戦開始 : 2020/02/28 Mar ～ Apr 期間
++---------------+-----------------------+-------------+-------------+
+|    2020       | 現在状況 / 月産目標   | 残り / 合計 | 達成状況    |
++---------------+-----------------------+-------------+-------------+
+| Jan (v.1.0.4) |               31 / 31 |  150 / 181  |     ○      |
++---------------+-----------------------+-------------+-------------+
+| Feb (v.1.0.6) |               29 / 29 |  121 / 181  |     ○      |
++---------------+-----------------------+---------------------------+
+| Mar (v.1.0.6) |               31 / 31 |   90 / 181  |     ○      |
++---------------+-----------------------+-------------+-------------+
+| Apr (v.1.2.0) |       19 + 11(K) / 30 |   80 / 203  |     △      |
++---------------+-----------------------+-------------+-------------+
+| May (v.1.2.0) |                  / 31 | (60) / 203  |     －      |
++---------------+-----------------------+-------------+-------------+
+| Jun (v.1.2.0) |                  / 30 | (30) / 203  |     －      |
++---------------+-----------------------+-------------+-------------+
+| Jul (v.1.?.?) |                  / 31 | (??) / ???  |     －      |
++---------------+-----------------------+-------------+-------------+
+| Aug (v.1.?.?) |                  / 31 | (??) / ???  |     －      |
++---------------+-----------------------+-------------+-------------+
+| Sep (v.1.?.?) |                  / 30 | (??) / ???  |     －      |
++---------------+-----------------------+-------------+-------------+
+| Oct (v.1.?.?) |                  / 31 | (??) / ???  |     －      |
++---------------+-----------------------+-------------+-------------+
+| Nov (v.1.?.?) |                  / 30 | (??) / ???  |     －      |
++---------------+-----------------------+-------------+-------------+
+| Dec (v.1.?.?) |                  / 31 | (??) / ???  |     －      |
++---------------+-----------------------+-------------+- (121/203) -+
+・    K = コリャ!英和 一発翻訳 ファイル形式 (kyrdoc)
+・(nn)  = 進捗達成予定
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Jan : 31 (Current: 31 / 31)  →  31 - 181 = 150 : Achieved!!!
-Feb : 29 (Current: 29 / 29)  →  60 - 181 = 121 : Achieved!!!
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Mar : 31 (Current: 20 ( +11 = krydoc) / 31)  →  91 - 181 =  90 : Achieved!!!
-Apr : 30 (Current:  0 ( + 9 = krydoc) / 30)  → 121 - 181 =  60
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-May : 31 (Current:  0 / 31)  → 151 - 181 =  30
-Jun : 30 (Current:  0 / 30)  → 180 - 181 =   1
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Jul : 10
-Aug : 10
-Sep : 10
-Oct : 10
-Nov : 10
-Dec : 10
+備考:
+・2020年04月は v1.0.6 → v1.2.0 移行作業、ならびに
+  各種変換など作業準備のため進捗を抑えています (精神面での疲労もあります)。
 
 
-予測
---------
-Nim 1.0.8 公開 : 2020/03/28
+寄贈者
+------
+・主要翻訳者: isVowel (Twitter: @isvowel)
+
+担当(記載例)
+・hogefile.html - foobar さん (連絡先/URL)
+・品質管理 (用語集データベース)     : foobar  さん (連絡先/URL)
+・品質管理 (翻訳メモリデータベース) : foobar2 さん (連絡先/URL)
 
 
 仮訳完了:
@@ -83,7 +104,6 @@ Nim 1.0.8 公開 : 2020/03/28
 	nimtracker.html
 	odbcsql.html
 	oids.html
-	ospaths.html
 	oswalkdir.html
 	overview.html
 	packaging.html
@@ -99,12 +119,12 @@ Nim 1.0.8 公開 : 2020/03/28
 	sha1.html
 	sharedlist.html
 	sqlite3.html
-	sugar.html
+U:	sugar.html
 	termios.html
 	theindex.html
 	time_t.html
 	tools.html
-	typetraits.html
+U:	typetraits.html
 	unidecode.html
 	util.html
 	varints.html
@@ -124,144 +144,146 @@ Nim 1.0.8 公開 : 2020/03/28
 	db_common.html
 	linux.html
 	postgres.html
-	(J) critbits.krydoc         / .txt : tmx 変換待ち
-	(J) cstrutils.krydoc        / .txt : tmx 変換待ち
-	(J) cgi-000.krydoc          / .txt : tmx 変換待ち
+	parsejson.html
+	estp.html
+	sexp.html
+	posix.html
+	posix_utils.html
+	asyncjs.html
+	async.html
+	decls.html
+	hotcodereloading.html
+	logic.html
+	macrocache.html
+	nimhcr.html
+	nimrtl.html
+	pathnorm.html
+	ssl_certs.html
+	stackframes.html
+	switch_memory.html
+	underscored_calls.html
+	wrapnils.html
+	reservedmem.html
+	tinyc.html
+	apis.html
+	cstrutils.html
+	niminst.html
+	with.html
+	db_mysql.html
+	db_odbc.html
+	db_postgres.html
+	db_sqlite.html
+	coro.html
 	(J) asyncstreams-000.krydoc / .txt : tmx 変換待ち
-	(J) estp-000.krydoc         / .txt : tmx 変換待ち
-	(J) threads-000.krydoc      / .txt : tmx 変換待ち
-	(J) niminst-000.krydoc      / .txt : tmx 変換待ち
-	(J) apis-000.krydoc         / .txt : tmx 変換待ち
-	(J) tinyc-000.krydoc        / .txt : tmx 変換待ち
+	(J) cgi-000.krydoc          / .txt : tmx 変換待ち
 	(J) channels-000.krydoc     / .txt : tmx 変換待ち
-	(J) posix-000.krydoc        / .txt : tmx 変換待ち
-	(J) posix_utils-000.krydoc  / .txt : tmx 変換待ち
-	(J) terminal-000.krydoc     / .txt : tmx 変換待ち
+	(J) critbits-000.krydoc     / .txt : tmx 変換待ち
+	(J) heapqueue-000.krydoc    / .txt : tmx 変換待ち
 	(J) iterators-000.krydoc    / .txt : tmx 変換待ち
 	(J) osproc-000.krydoc       / .txt : tmx 変換待ち
-	(J) sexp-000.krydoc         / .txt : tmx 変換待ち
-	(J) heapqueue-000.krydoc    / .txt : tmx 変換待ち
-	(J) db_postgres-000.krydoc  / .txt : tmx 変換待ち
-	(J) db_odbc-000.krydoc      / .txt : tmx 変換待ち
-	(J) db_mysql-000.krydoc     / .txt : tmx 変換待ち
+	(J) terminal-000.krydoc     / .txt : tmx 変換待ち
+	(J) threads-000.krydoc      / .txt : tmx 変換待ち
+	compilesettings_v1.2.0.krydoc      / .txt : tmx 変換待ち
+	inotify_v1.2.0.krydoc              / .txt : tmx 変換待ち
 
 
-翻訳活動への参加方法
---------------------
-事前にツール (OSDN, OmegaT, TMX/TBX Editor, Git など) の使いかたを理解してくださるようお願いします。
-これらは、すべてフリーソフトウェア (寄付歓迎、開発協力歓迎も対象) です。
+以下未整理
+==========
 
-* OmegaT (4.3.0 以降。ただし安定版のみ)                 : https://www.omegat.org/
-* Okapi Framework (6.038 以降)                          : https://okapiframework.org/
-* Rogrus Global Goldpan TBX/TMX Editor (3.3 以降)       : https://logrusglobal.com/goldpan.html
-* WinMerge                                              : https://winmerge.org/
-* BusyBox                                               : https://www.busybox.net/
-* TortoiseGit                                           : https://tortoisegit.org/
-* Xbench                                                : https://www.xbench.net/
-* Anchovy                                               : https://www.maxprograms.com/products/anchovy.html
-* Stanford Log-linear Part-Of-Speech Tagger             : https://nlp.stanford.edu/software/tagger.shtml
-
-・OmegaT はメインの翻訳環境として使います。TMXが扱えるなら、ほかのCATツール (例えばBasicCAT) でも構いません。
-・Okapi Framework は翻訳メモリの各種処理に使います。
-  例えば翻訳メモリに対応していない機械翻訳ソフトの対訳データを TMX へ変換することもできます。
-・Goldpan TBX/TMX は翻訳メモリデータベースの編集に使います。OmegaT などの翻訳メモリは定期的に保守整備を行わないと訳出精度が落ちるため、このようなソフトでの編集が必要です。
-・Xbench は翻訳メモリのフォーマット変換、翻訳品質検査などに使います。
-・Anchovy は Maxprograms Swordfish にバンドルされているフリーソフトウェアの用語集データベースエディタです。
-・Part-Of-Speech Tagger は英文の品詞解析に使います。
-・WinMerge は新旧バージョンの比較と変更箇所の検出に使います。
-
-・パソコンのメモリは最低でも 8GB (Windows機) ほど必要です。 OmegaT だけで 1.2GB ほど消費します。
-  VisualStudio などと併用しながら...となると 4GB では、かなりきついです。
-
-
-共通辞書の指定
---------------
-こればかりは、フリーソフトウェアで良いものがないので、きちんと正規品を購入してください。
-
-・英辞郎 第11版 (辞書データVer.159 / 2020年1月8日版) 以降
-  https://ec.alc.co.jp/book/7020008/
-
-注意点: PDIC-R形式ですので、ほかのソフトでの串刺し検索はできません (変換方法は公開されておりません)。
-EBWin4/EBPocket などで、ほかの辞書との串刺し検索をしたい方は、
-書籍第8版ではなく、きちんと修正が施された EDPのサイトより旧版 (Ver.144.8)をお求めください。
-
-その他に英米俗語辞典 (引用句の翻訳) や英和学習辞典が必要です (手持ちのものをお使いください)。
-
-それ以外にもOALD9など置いておきたいものはありますが、あまり無理は言えません。
-
-
-引用句について
---------------------
-国内では愛好家以外なじみのない洋楽、洋物ゲームに関する知識が必要です。
-スラングがわからないと訳せないものもあります。
-
-・ラムシュタイン
-・System Shock2
-
-など。他言語の訳者もうまく訳せていないかたを多く見かけます (2020年現在、ニューラル翻訳でも正確な翻訳は不可能です)。
-自信がなければ、そのままにしておいたほうが良いでしょう。
-
-
-機械翻訳ソフトの指定
---------------------
-あれば便利ですが、買わなくていいです。
-LogoVista コリャ！英和 本格翻訳 2020 を使っていますが、翻訳作業に不慣れなかた向けに使っている面が強いです。
-
-日本全国どこでも手に入りやすく、個人経営の書店でも注文できることくらいですかね。
-ただ。今後、使用を終了する方針で作業を進めています。やはり、バグに泣かされることが多いんで。
-これを書いていた数時間前も三十分ほどかけた原稿が印刷プレビューのバグで飛んでしまい、本当に捨てたくなりました。
-
-
-翻訳活動への参加時にかかる必要
-------------------------------
-追加初期機材費用として 5000～10000 円以内とします (主に辞書代です)。
-機械翻訳ソフトウェアは任意です (みんなの自動翻訳が使えるかは未だ検討中)。
-用意しなくても、いずれ翻訳メモリデータベースが蓄積されていきますので次第にいらなくなるでしょう。
-そしてChromebook (Linux対応機) でも作業ができるようなると思います。
-
-国内の Nim のユーザー層であると考えられる「平均的な学生さん/月平均のお小遣い2500～円」で
-捻出できる範囲を想定しております。
-
-活動参加のための飲食代、宿泊費、通信費、電気代などは算入していません。
+未完 (ライブラリ)
+--------------------[0 / 58]
+algorithm
+asyncdispatch
+asyncfutures
+asyncmacro
+asyncnet
+atomics
+bitops
+deques
+epoll
+fenv
+hashes
+httpclient
+httpcore
+intsets
+jsffi
+json
+kqueue
+lenientops
+lists
+logging
+macros
+math
+memfiles
+monotimes
+nativesockets
+net
+nre
+options
+os
+parsecfg
+parsecsv
+parseopt
+parseutils
+parsexml
+pegs
+random
+rationals
+re
+ropes
+rstgen
+selectors
+sequtils
+sets
+sharedtables
+stats
+streams
+strformat
+strmisc
+strscans
+strtabs
+strutils
+system
+tables
+times
+typeinfo
+unicode
+unittest
+uri
 
 
 
-翻訳活動への参加方法 (注意点)
------------------------------
-内輪揉めをしているほど人生は暇ではありません。利用者の混乱を避けるため、フォークの乱立は避けてください。
-
-* 主要翻訳者、および関係者へメールで送られても対応できません。かならず OSDN のリポジトリへプルリクエストしてください。
-* Google翻訳などウェブ翻訳サービスを使用した訳出結果のコミットはライセンス規約上の問題以外にも、
-  ニューラル翻訳特有の問題があります。正確さを保証・検証できないため使用を禁止させていただいております。
+Updated (Mixed)
+---------------
+1.0.6 → 1.2.0 移行対象ファイル : 0 / 6
+対象バージョン   : Nim 1.2.0
 
 
-対応可能ファイル形式
+新規追加未完了 (0 / 5):
+	asyncmacro.html
+	atomics.html
+	drnim.html
+	epoll.html
+	kqueue.html
+
+
+原著の不具合修正状況 
 --------------------
 
-推奨形式:
-* OmegaT プロジェクト
-* TSV (UTF-8 エンコーディング)
-* tmx
-* XLIFF
+epoll.html
+	proc epoll_ctl において「1 in case of error ( the "errno" variable will contain the」のマーカーが「specific error code ) 」まで届いておらず、改行されています。
+	おまけに That のまえのフルストップも忘れているので、このまま機械翻訳にかけると、誤訳の原因となります。
 
-対応可能形式 (2020年03月現在):
-* Microsoft Excel / Word
-* Libre Office
-* FUJITSU ATLUS 翻訳 2004 以降
-* LogoVista コリャ英和！  一発翻訳 2009 以降
-* TOSHBA The翻訳 V10 以降
+osseps.html
+	不具合により出力されていません。そのため pathnorm.html 側で osseps.html を参照してもリンク切れとなります。
+	これについては手作業で作るしかないようです。
 
-それ以外につきましてはご相談ください。
+switch_memory.html
+	正しくレンダリングされていません。可能な限り手作業で修正しています (ただし、定数が抜けているかもしれません)。
 
 
-寄贈者
-------
-・主要翻訳者: isVowel (Twitter: @isvowel)
+wrapnils.html
+	Unstable API. の前に改行がされていません。
 
-
-担当(記載例)
-・hogefile.html - foobar さん (連絡先/URL)
-・品質管理 (用語集データベース)     : foobar  さん (連絡先/URL)
-・品質管理 (翻訳メモリデータベース) : foobar2 さん (連絡先/URL)
 
 

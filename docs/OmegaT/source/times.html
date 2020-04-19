@@ -18,772 +18,7 @@
 
 <!-- CSS -->
 <title>times</title>
-<style type="text/css" >
-/*
-Stylesheet for use with Docutils/rst2html.
-
-See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
-customize this style sheet.
-
-Modified from Chad Skeeters' rst2html-style
-https://bitbucket.org/cskeeters/rst2html-style/
-
-Modified by Boyd Greenfield and narimiran
-*/
-
-html {
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
-
-body {
-  font-family: "Lato", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 1.125em;
-  line-height: 1.5;
-  color: #222;
-  background-color: #FCFCFC; }
-
-/* Skeleton grid */
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 1050px;
-  margin: 0 auto;
-  padding: 0;
-  box-sizing: border-box; }
-
-.column,
-.columns {
-  width: 100%;
-  float: left;
-  box-sizing: border-box;
-  margin-left: 1%;
-}
-
-.column:first-child,
-.columns:first-child {
-  margin-left: 0; }
-
-.three.columns {
-  width: 19%; }
-
-.nine.columns {
-  width: 80.0%; }
-
-.twelve.columns {
-  width: 100%;
-  margin-left: 0; }
-
-@media screen and (max-width: 860px) {
-  .three.columns {
-    display: none;
-  }
-  .nine.columns {
-    width: 98.0%;
-  }
-  body {
-    font-size: 1em;
-    line-height: 1.35;
-  }
-}
-
-cite {
-  font-style: italic !important; }
-
-
-/* Nim search input */
-div#searchInputDiv {
-  margin-bottom: 1em;
-}
-input#searchInput {
-  width: 80%;
-}
-
-/*
- * Some custom formatting for input forms.
- * This also fixes input form colors on Firefox with a dark system theme on Linux.
- */
-input {
-  -moz-appearance: none;
-  color: #333;
-  background-color: #f8f8f8;
-  border: 1px solid #aaa;
-  font-family: "Lato", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-  font-size: 0.9em;
-  padding: 6px;
-}
-input:focus {
-  border: 1px solid #1fa0eb;
-  box-shadow: 0 0 2px #1fa0eb;
-}
-
-/* Docgen styles */
-/* Links */
-a {
-  color: #07b;
-  text-decoration: none;
-}
-
-a span.Identifier {
-  text-decoration: underline;
-  text-decoration-color: #aab;
-}
-
-a.reference-toplevel {
-  font-weight: bold;
-}
-
-a.toc-backref {
-  text-decoration: none;
-  color: #222; }
-
-a.link-seesrc {
-  color: #607c9f;
-  font-size: 0.9em;
-  font-style: italic; }
-
-a:hover,
-a:focus {
-  color: #607c9f;
-  text-decoration: underline; }
-
-a:hover span.Identifier {
-  color: #607c9f;
-}
-
-
-sub,
-sup {
-  position: relative;
-  font-size: 75%;
-  line-height: 0;
-  vertical-align: baseline; }
-
-sup {
-  top: -0.5em; }
-
-sub {
-  bottom: -0.25em; }
-
-img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-  border: 0;
-  -ms-interpolation-mode: bicubic; }
-
-@media print {
-  * {
-    color: black !important;
-    text-shadow: none !important;
-    background: transparent !important;
-    box-shadow: none !important; }
-
-  a,
-  a:visited {
-    text-decoration: underline; }
-
-  a[href]:after {
-    content: " (" attr(href) ")"; }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")"; }
-
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: ""; }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid; }
-
-  thead {
-    display: table-header-group; }
-
-  tr,
-  img {
-    page-break-inside: avoid; }
-
-  img {
-    max-width: 100% !important; }
-
-  @page {
-    margin: 0.5cm; }
-
-  h1 {
-    page-break-before: always; }
-
-  h1.title {
-    page-break-before: avoid; }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3; }
-
-  h2,
-  h3 {
-    page-break-after: avoid; }
-}
-
-
-p {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
-small {
-  font-size: 85%; }
-
-strong {
-  font-weight: 600;
-  font-size: 0.95em;
-  color: #3c3c3c;
-}
-
-em {
-  font-style: italic; }
-
-h1 {
-  font-size: 1.8em;
-  font-weight: 400;
-  padding-bottom: .25em;
-  border-bottom: 1px solid #aaa;
-  margin-top: 2.5em;
-  margin-bottom: 1em;
-  line-height: 1.2em; }
-
-h1.title {
-  padding-bottom: 1em;
-  border-bottom: 0px;
-  font-size: 2.5em;
-  text-align: center;
-  font-weight: 900;
-  margin-top: 0.75em;
-  margin-bottom: 0em;
-}
-
-h2 {
-  font-size: 1.3em;
-  margin-top: 2em; }
-
-h2.subtitle {
-  text-align: center; }
-
-h3 {
-  font-size: 1.125em;
-  font-style: italic;
-  margin-top: 1.5em; }
-
-h4 {
-  font-size: 1.125em;
-  margin-top: 1em; }
-
-h5 {
-  font-size: 1.125em;
-  margin-top: 0.75em; }
-
-h6 {
-  font-size: 1.1em; }
-
-
-ul,
-ol {
-  padding: 0;
-  margin-top: 0.5em;
-  margin-left: 0.75em; }
-
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin-bottom: 0;
-  margin-left: 1.25em; }
-
-li {
-    list-style-type: circle;
-}
-
-ul.simple-boot li {
-    list-style-type: none;
-    margin-left: 0em;
-    margin-bottom: 0.5em;
-}
-
-ol.simple > li, ul.simple > li {
-  margin-bottom: 0.25em;
-  margin-left: 0.4em }
-
-ul.simple.simple-toc > li {
-    margin-top: 1em;
-}
-
-ul.simple-toc {
-  list-style: none;
-  font-size: 0.9em;
-  margin-left: -0.3em;
-  margin-top: 1em; }
-
-ul.simple-toc > li {
-    list-style-type: none;
-}
-
-ul.simple-toc-section {
-  list-style-type: circle;
-  margin-left: 1em;
-  color: #6c9aae; }
-
-
-ol.arabic {
-  list-style: decimal; }
-
-ol.loweralpha {
-  list-style: lower-alpha; }
-
-ol.upperalpha {
-  list-style: upper-alpha; }
-
-ol.lowerroman {
-  list-style: lower-roman; }
-
-ol.upperroman {
-  list-style: upper-roman; }
-
-ul.auto-toc {
-  list-style-type: none; }
-
-
-dl {
-  margin-bottom: 1.5em; }
-
-dt {
-  margin-bottom: -0.5em;
-  margin-left: 0.0em; }
-
-dd {
-  margin-left: 2.0em;
-  margin-bottom: 3.0em;
-  margin-top: 0.5em; }
-
-
-hr {
-  margin: 2em 0;
-  border: 0;
-  border-top: 1px solid #aaa; }
-
-blockquote {
-  font-size: 0.9em;
-  font-style: italic;
-  padding-left: 0.5em;
-  margin-left: 0;
-  border-left: 5px solid #bbc;
-}
-
-.pre {
-  font-family: "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace;
-  font-weight: 500;
-  font-size: 0.85em;
-  background-color: #f0f3ff;
-  padding-left: 3px;
-  padding-right: 3px;
-  border-radius: 4px;
-}
-
-pre {
-  font-family: "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace;
-  color: #222;
-  font-weight: 500;
-  display: inline-block;
-  box-sizing: border-box;
-  min-width: 100%;
-  padding: 0.5em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  font-size: 0.85em;
-  white-space: pre !important;
-  overflow-y: hidden;
-  overflow-x: visible;
-  background-color: ghostwhite;
-  border: 1px solid #dde;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px; }
-
-.pre-scrollable {
-  max-height: 340px;
-  overflow-y: scroll; }
-
-
-/* Nim line-numbered tables */
-.line-nums-table {
-  width: 100%;
-  table-layout: fixed; }
-
-table.line-nums-table {
-  border-radius: 4px;
-  border: 1px solid #cccccc;
-  background-color: ghostwhite;
-  border-collapse: separate;
-  margin-top: 15px;
-  margin-bottom: 25px; }
-
-.line-nums-table tbody {
-  border: none; }
-
-.line-nums-table td pre {
-  border: none;
-  background-color: transparent; }
-
-.line-nums-table td.blob-line-nums {
-  width: 28px; }
-
-.line-nums-table td.blob-line-nums pre {
-  color: #b0b0b0;
-  -webkit-filter: opacity(75%);
-  text-align: right;
-  border-color: transparent;
-  background-color: transparent;
-  padding-left: 0px;
-  margin-left: 0px;
-  padding-right: 0px;
-  margin-right: 0px; }
-
-
-table {
-  max-width: 100%;
-  background-color: transparent;
-  margin-top: 0.5em;
-  margin-bottom: 1.5em;
-  border-collapse: collapse;
-  border-color: #ccc;
-  border-spacing: 0;
-  font-size: 0.9em;
-}
-
-table th, table td {
-  padding: 0px 0.5em 0px;
-}
-
-table th {
-  background-color: #e8e8e8;
-  font-weight: bold; }
-
-table th.docinfo-name {
-    background-color: transparent;
-}
-
-table tr:hover {
-  background-color: ghostwhite; }
-
-
-/* rst2html default used to remove borders from tables and images */
-.borderless, table.borderless td, table.borderless th {
-  border: 0; }
-
-table.borderless td, table.borderless th {
-  /* Override padding for "table.docutils td" with "! important".
-     The right padding separates the table cells. */
-  padding: 0 0.5em 0 0 !important; }
-
-.first {
-  /* Override more specific margin styles with "! important". */
-  margin-top: 0 !important; }
-
-.last, .with-subtitle {
-  margin-bottom: 0 !important; }
-
-.hidden {
-  display: none; }
-
-blockquote.epigraph {
-  margin: 2em 5em; }
-
-dl.docutils dd {
-  margin-bottom: 0.5em; }
-
-object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
-  overflow: hidden; }
-
-
-div.figure {
-  margin-left: 2em;
-  margin-right: 2em; }
-
-div.footer, div.header {
-  clear: both;
-  text-align: center;
-  color: #666;
-  font-size: smaller; }
-
-div.footer {
-    padding-top: 5em;
-}
-
-div.line-block {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em; }
-
-div.line-block div.line-block {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 1.5em; }
-
-div.topic {
-  margin: 2em; }
-
-div.search_results {
-  background-color: antiquewhite;
-  margin: 3em;
-  padding: 1em;
-  border: 1px solid #4d4d4d;
-}
-
-div#global-links ul {
-  margin-left: 0;
-  list-style-type: none;
-}
-
-div#global-links > simple-boot {
-    margin-left: 3em;
-}
-
-hr.docutils {
-  width: 75%; }
-
-img.align-left, .figure.align-left, object.align-left {
-  clear: left;
-  float: left;
-  margin-right: 1em; }
-
-img.align-right, .figure.align-right, object.align-right {
-  clear: right;
-  float: right;
-  margin-left: 1em; }
-
-img.align-center, .figure.align-center, object.align-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
-.align-left {
-  text-align: left; }
-
-.align-center {
-  clear: both;
-  text-align: center; }
-
-.align-right {
-  text-align: right; }
-
-/* reset inner alignment in figures */
-div.align-right {
-  text-align: inherit; }
-
-p.attribution {
-  text-align: right;
-  margin-left: 50%; }
-
-p.caption {
-  font-style: italic; }
-
-p.credits {
-  font-style: italic;
-  font-size: smaller; }
-
-p.label {
-  white-space: nowrap; }
-
-p.rubric {
-  font-weight: bold;
-  font-size: larger;
-  color: maroon;
-  text-align: center; }
-
-p.topic-title {
-  font-weight: bold; }
-
-pre.address {
-  margin-bottom: 0;
-  margin-top: 0;
-  font: inherit; }
-
-pre.literal-block, pre.doctest-block, pre.math, pre.code {
-  margin-left: 2em;
-  margin-right: 2em; }
-
-pre.code .ln {
-  color: grey; }
-
-/* line numbers */
-pre.code, code {
-  background-color: #eeeeee; }
-
-pre.code .comment, code .comment {
-  color: #5c6576; }
-
-pre.code .keyword, code .keyword {
-  color: #3B0D06;
-  font-weight: bold; }
-
-pre.code .literal.string, code .literal.string {
-  color: #0c5404; }
-
-pre.code .name.builtin, code .name.builtin {
-  color: #352b84; }
-
-pre.code .deleted, code .deleted {
-  background-color: #DEB0A1; }
-
-pre.code .inserted, code .inserted {
-  background-color: #A3D289; }
-
-span.classifier {
-  font-style: oblique; }
-
-span.classifier-delimiter {
-  font-weight: bold; }
-
-span.option {
-  white-space: nowrap; }
-
-span.problematic {
-  color: #b30000; }
-
-span.section-subtitle {
-  /* font-size relative to parent (h1..h6 element) */
-  font-size: 80%; }
-
-span.DecNumber {
-  color: #252dbe; }
-
-span.BinNumber {
-  color: #252dbe; }
-
-span.HexNumber {
-  color: #252dbe; }
-
-span.OctNumber {
-  color: #252dbe; }
-
-span.FloatNumber {
-  color: #252dbe; }
-
-span.Identifier {
-  color: #222; }
-
-span.Keyword {
-  font-weight: 600;
-  color: #5e8f60; }
-
-span.StringLit {
-  color: #a4255b; }
-
-span.LongStringLit {
-  color: #a4255b; }
-
-span.CharLit {
-  color: #a4255b; }
-
-span.EscapeSequence {
-  color: black; }
-
-span.Operator {
-  color: black; }
-
-span.Punctuation {
-  color: black; }
-
-span.Comment, span.LongComment {
-  font-style: italic;
-  font-weight: 400;
-  color: #484a86; }
-
-span.RegularExpression {
-  color: darkviolet; }
-
-span.TagStart {
-  color: darkviolet; }
-
-span.TagEnd {
-  color: darkviolet; }
-
-span.Key {
-  color: #252dbe; }
-
-span.Value {
-  color: #252dbe; }
-
-span.RawData {
-  color: #a4255b; }
-
-span.Assembler {
-  color: #252dbe; }
-
-span.Preprocessor {
-  color: #252dbe; }
-
-span.Directive {
-  color: #252dbe; }
-
-span.Command, span.Rule, span.Hyperlink, span.Label, span.Reference,
-span.Other {
-  color: black; }
-
-/* Pop type, const, proc, and iterator defs in nim def blocks */
-dt pre > span.Identifier, dt pre > span.Operator {
-  color: #155da4;
-  font-weight: 700; }
-
-dt pre > span.Keyword ~ span.Identifier, dt pre > span.Identifier ~ span.Identifier,
-dt pre > span.Operator ~ span.Identifier, dt pre > span.Other ~ span.Identifier {
-  color: inherit;
-  font-weight: inherit; }
-
-/* Nim sprite for the footer (taken from main page favicon) */
-.nim-sprite {
-  display: inline-block;
-  height: 16px;
-  width: 16px;
-  background-position: 0 0;
-  background-size: 16px 16px;
-  -webkit-filter: opacity(50%);
-  background-repeat: no-repeat;
-  background-image: url("data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA==");
-  margin-bottom: -5px; }
-
-span.pragmadots {
-  /* Position: relative frees us up to make the dots
-  look really nice without fucking up the layout and
-  causing bulging in the parent container */
-  position: relative;
-  /* 1px down looks slightly nicer */
-  top: 1px;
-  padding: 2px;
-  background-color: #e8e8e8;
-  border-radius: 4px;
-  margin: 0 2px;
-  cursor: pointer;
-  font-size: 0.8em;
-}
-
-span.pragmadots:hover {
-  background-color: #DBDBDB;
-}
-span.pragmawrap {
-  display: none;
-}
-
-span.attachedType {
-  display: none;
-  visibility: hidden;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="nimdoc.out.css">
 
 <script type="text/javascript" src="dochack.js"></script>
 
@@ -798,6 +33,37 @@ function main() {
       event.target.parentNode.nextElementSibling.style.display = "inline";
     }
   }
+
+  const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+  function switchTheme(e) {
+      if (e.target.checked) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+      } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+      }
+  }
+
+  toggleSwitch.addEventListener('change', switchTheme, false);
+
+
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.setAttribute('data-theme', "dark");
+    toggleSwitch.checked = true;
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    document.documentElement.setAttribute('data-theme', "light");
+    toggleSwitch.checked = false;
+  } else {
+    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+    if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+
+      if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+      }
+    }
+  }
 }
 </script>
 
@@ -808,6 +74,13 @@ function main() {
     <h1 class="title">times</h1>
     <div class="row">
   <div class="three columns">
+  <div class="theme-switch-wrapper">
+    <label class="theme-switch" for="checkbox">
+      <input type="checkbox" id="checkbox" />
+      <div class="slider round"></div>
+    </label>
+    &nbsp;&nbsp;&nbsp; <em>Dark Mode</em>
+  </div>
   <div id="global-links">
     <ul class="simple-boot">
       <li>
@@ -1009,12 +282,18 @@ function main() {
     title="fromUnix(unix: int64): Time"><wbr />from<wbr />Unix<span class="attachedType">Time</span></a></li>
   <li><a class="reference" href="#toUnix%2CTime"
     title="toUnix(t: Time): int64"><wbr />to<wbr />Unix<span class="attachedType">Time</span></a></li>
+  <li><a class="reference" href="#fromUnixFloat%2Cfloat"
+    title="fromUnixFloat(seconds: float): Time"><wbr />from<wbr />Unix<wbr />Float<span class="attachedType">Time</span></a></li>
+  <li><a class="reference" href="#toUnixFloat%2CTime"
+    title="toUnixFloat(t: Time): float"><wbr />to<wbr />Unix<wbr />Float<span class="attachedType">Time</span></a></li>
   <li><a class="reference" href="#fromWinTime%2Cint64"
     title="fromWinTime(win: int64): Time"><wbr />from<wbr />Win<wbr />Time<span class="attachedType">Time</span></a></li>
   <li><a class="reference" href="#toWinTime%2CTime"
     title="toWinTime(t: Time): int64"><wbr />to<wbr />Win<wbr />Time<span class="attachedType">Time</span></a></li>
   <li><a class="reference" href="#isLeapYear%2Cint"
     title="isLeapYear(year: int): bool"><wbr />is<wbr />Leap<wbr />Year<span class="attachedType"></span></a></li>
+  <li><a class="reference" href="#isLeapDay%2CDateTime"
+    title="isLeapDay(t: DateTime): bool"><wbr />is<wbr />Leap<wbr />Day<span class="attachedType">DateTime</span></a></li>
   <li><a class="reference" href="#getDaysInMonth%2CMonth%2Cint"
     title="getDaysInMonth(month: Month; year: int): int"><wbr />get<wbr />Days<wbr />In<wbr />Month<span class="attachedType">Month</span></a></li>
   <li><a class="reference" href="#getDaysInYear%2Cint"
@@ -1384,7 +663,7 @@ function main() {
 
 Represents a month. Note that the enum starts at <tt class="docutils literal"><span class="pre">1</span></tt>, so <tt class="docutils literal"><span class="pre">ord(month)</span></tt> will give the month number in the range <tt class="docutils literal"><span class="pre">1..12</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L260"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L260"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L260" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1397,7 +676,7 @@ class="link-seesrc" target="_blank">Source</a>
 
 Represents a weekday.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L276"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L276"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L276" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1413,7 +692,7 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L289"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L289"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L289" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1424,7 +703,7 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L299"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L299"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L299" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1435,7 +714,7 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L300"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L300"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L300" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1446,7 +725,7 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L301"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L301"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L301" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1457,7 +736,7 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L302"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L302"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L302" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1468,7 +747,7 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L303"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L303"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L303" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1479,7 +758,7 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L304"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L304"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L304" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1493,7 +772,7 @@ class="link-seesrc" target="_blank">Source</a>
 
 Represents a point in time.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L306"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L306"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L306" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1536,7 +815,7 @@ Represents a time in different parts. Although this type can represent leap seco
 <p>Instead of mutating the fields directly, use the <a class="reference external" href="#Duration">Duration</a> and <a class="reference external" href="#TimeInterval">TimeInterval</a> types for arithmetic and use the <a class="reference external" href="#initDateTime,MonthdayRange,Month,int,HourRange,MinuteRange,SecondRange,NanosecondRange,Timezone">initDateTime proc</a> for changing a specific field.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L310"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L310"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L310" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1552,7 +831,7 @@ class="link-seesrc" target="_blank">Source</a>
 <p>To create a new <tt class="docutils literal"><span class="pre">Duration</span></tt>, use <a class="reference external" href="#initDuration,int64,int64,int64,int64,int64,int64,int64,int64">initDuration proc</a>.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L352"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L352"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L352" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1565,7 +844,7 @@ class="link-seesrc" target="_blank">Source</a>
 
 Different units of time.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L360"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L360"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L360" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1577,7 +856,7 @@ class="link-seesrc" target="_blank">Source</a>
 
 Subrange of <tt class="docutils literal"><span class="pre">TimeUnit</span></tt> that only includes units of fixed duration. These are the units that can be represented by a <tt class="docutils literal"><span class="pre">Duration</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L364"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L364"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L364" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1604,7 +883,7 @@ Represents a non-fixed duration of time. Can be used to add and subtract non-fix
 <p>Note that <tt class="docutils literal"><span class="pre">TimeInterval</span></tt>'s returned from the <tt class="docutils literal"><span class="pre">times</span></tt> module are never normalized. If you want to normalize a time unit, <a class="reference external" href="#Duration">Duration</a> should be used instead.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L368"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L368"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L368" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1622,7 +901,7 @@ class="link-seesrc" target="_blank">Source</a>
 
 Timezone interface for supporting <a class="reference external" href="#DateTime">DateTime</a>s of arbitrary timezones. The <tt class="docutils literal"><span class="pre">times</span></tt> module only supplies implementations for the systems local time and UTC.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L395"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L395"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L395" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1638,7 +917,7 @@ class="link-seesrc" target="_blank">Source</a>
 
 Represents a point in time with an associated UTC offset and DST flag. This type is only used for implementing timezones.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L405"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L405"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L405" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1649,7 +928,7 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L413"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L413"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L413" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1660,7 +939,7 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L414"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L414"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L414" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1681,9 +960,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>To create a new <tt class="docutils literal"><span class="pre">TimeFormat</span></tt> use <a class="reference external" href="#initTimeFormat,string">initTimeFormat proc</a>.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1762"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1798"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1762" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1798" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="TimeParseError"></a>
@@ -1693,9 +972,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Raised when parsing input using a <tt class="docutils literal"><span class="pre">TimeFormat</span></tt> fails.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1775"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1811"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1775" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1811" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="TimeFormatParseError"></a>
@@ -1705,9 +984,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Raised when parsing a <tt class="docutils literal"><span class="pre">TimeFormat</span></tt> string fails.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1778"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1814"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1778" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1814" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -1726,7 +1005,7 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L437"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L437"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L437" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1739,9 +1018,9 @@ class="link-seesrc" target="_blank">Source</a>
 Zero value for durations. Useful for comparisons.<pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">initDuration</span><span class="Punctuation">(</span><span class="Identifier">seconds</span> <span class="Operator">=</span> <span class="DecNumber">1</span><span class="Punctuation">)</span> <span class="Operator">&gt;</span> <span class="Identifier">DurationZero</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">initDuration</span><span class="Punctuation">(</span><span class="Identifier">seconds</span> <span class="Operator">=</span> <span class="DecNumber">0</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="Identifier">DurationZero</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L730"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L766"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L730" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L766" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -1759,7 +1038,7 @@ Convert a quantity of some duration unit to another duration unit. This proc onl
 <span class="Identifier">doAssert</span> <span class="Identifier">convert</span><span class="Other">(</span><span class="Identifier">Days</span><span class="Other">,</span> <span class="Identifier">Weeks</span><span class="Other">,</span> <span class="DecNumber">13</span><span class="Other">)</span> <span class="Operator">==</span> <span class="DecNumber">1</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">convert</span><span class="Other">(</span><span class="Identifier">Seconds</span><span class="Other">,</span> <span class="Identifier">Milliseconds</span><span class="Other">,</span> <span class="Operator">-</span><span class="DecNumber">1</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Operator">-</span><span class="DecNumber">1000</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L447"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L447"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L447" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1770,7 +1049,7 @@ class="link-seesrc" target="_blank">Source</a>
 
 Get the fractional part of a <tt class="docutils literal"><span class="pre">Time</span></tt> as the number of nanoseconds of the second.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L481"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L481"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L481" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1786,7 +1065,7 @@ Create a new <a class="reference external" href="#Duration">Duration</a>.
 <span class="Identifier">doAssert</span> <span class="Identifier">dur</span><span class="Other">.</span><span class="Identifier">milliseconds</span> <span class="Operator">==</span> <span class="DecNumber">1</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">dur</span><span class="Other">.</span><span class="Identifier">seconds</span> <span class="Operator">==</span> <span class="DecNumber">1</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L486"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L486"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L486" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1800,7 +1079,7 @@ Convert the duration to the number of whole weeks.
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">dur</span> <span class="Other">=</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">days</span> <span class="Other">=</span> <span class="DecNumber">8</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">dur</span><span class="Other">.</span><span class="Identifier">inWeeks</span> <span class="Operator">==</span> <span class="DecNumber">1</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L527"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L527"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L527" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1814,7 +1093,7 @@ Convert the duration to the number of whole days.
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">dur</span> <span class="Other">=</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">hours</span> <span class="Other">=</span> <span class="Operator">-</span><span class="DecNumber">50</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">dur</span><span class="Other">.</span><span class="Identifier">inDays</span> <span class="Operator">==</span> <span class="Operator">-</span><span class="DecNumber">2</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L534"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L534"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L534" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1828,7 +1107,7 @@ Convert the duration to the number of whole hours.
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">dur</span> <span class="Other">=</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">minutes</span> <span class="Other">=</span> <span class="DecNumber">60</span><span class="Other">,</span> <span class="Identifier">days</span> <span class="Other">=</span> <span class="DecNumber">2</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">dur</span><span class="Other">.</span><span class="Identifier">inHours</span> <span class="Operator">==</span> <span class="DecNumber">49</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L541"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L541"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L541" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1842,7 +1121,7 @@ Convert the duration to the number of whole minutes.
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">dur</span> <span class="Other">=</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">hours</span> <span class="Other">=</span> <span class="DecNumber">2</span><span class="Other">,</span> <span class="Identifier">seconds</span> <span class="Other">=</span> <span class="DecNumber">10</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">dur</span><span class="Other">.</span><span class="Identifier">inMinutes</span> <span class="Operator">==</span> <span class="DecNumber">120</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L548"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L548"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L548" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1856,7 +1135,7 @@ Convert the duration to the number of whole seconds.
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">dur</span> <span class="Other">=</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">hours</span> <span class="Other">=</span> <span class="DecNumber">2</span><span class="Other">,</span> <span class="Identifier">milliseconds</span> <span class="Other">=</span> <span class="DecNumber">10</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">dur</span><span class="Other">.</span><span class="Identifier">inSeconds</span> <span class="Operator">==</span> <span class="DecNumber">2</span> <span class="Operator">*</span> <span class="DecNumber">60</span> <span class="Operator">*</span> <span class="DecNumber">60</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L555"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L555"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L555" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1870,7 +1149,7 @@ Convert the duration to the number of whole milliseconds.
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">dur</span> <span class="Other">=</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">seconds</span> <span class="Other">=</span> <span class="Operator">-</span><span class="DecNumber">2</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">dur</span><span class="Other">.</span><span class="Identifier">inMilliseconds</span> <span class="Operator">==</span> <span class="Operator">-</span><span class="DecNumber">2000</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L562"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L562"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L562" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1884,7 +1163,7 @@ Convert the duration to the number of whole microseconds.
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">dur</span> <span class="Other">=</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">seconds</span> <span class="Other">=</span> <span class="Operator">-</span><span class="DecNumber">2</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">dur</span><span class="Other">.</span><span class="Identifier">inMicroseconds</span> <span class="Operator">==</span> <span class="Operator">-</span><span class="DecNumber">2000000</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L569"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L569"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L569" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1898,7 +1177,7 @@ Convert the duration to the number of whole nanoseconds.
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">dur</span> <span class="Other">=</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">seconds</span> <span class="Other">=</span> <span class="Operator">-</span><span class="DecNumber">2</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">dur</span><span class="Other">.</span><span class="Identifier">inNanoseconds</span> <span class="Operator">==</span> <span class="Operator">-</span><span class="DecNumber">2000000000</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L576"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L576"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L576" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1911,7 +1190,7 @@ Convert a unix timestamp (seconds since <tt class="docutils literal"><span class
 <p><strong class="examples_text">Examples:</strong></p>
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Operator">$</span><span class="Identifier">fromUnix</span><span class="Other">(</span><span class="DecNumber">0</span><span class="Other">)</span><span class="Other">.</span><span class="Identifier">utc</span> <span class="Operator">==</span> <span class="StringLit">&quot;1970-01-01T00:00:00Z&quot;</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L583"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L583"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L583" class="link-seesrc" target="_blank" >Edit</a>
 
@@ -1920,13 +1199,43 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#toUnix%2CTime"><span class="Identifier">toUnix</span></a><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <a href="times.html#Time"><span class="Identifier">Time</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int64"><span class="Identifier">int64</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Convert <tt class="docutils literal"><span class="pre">t</span></tt> to a unix timestamp (seconds since <tt class="docutils literal"><span class="pre">1970-01-01T00:00:00Z</span></tt>).
+Convert <tt class="docutils literal"><span class="pre">t</span></tt> to a unix timestamp (seconds since <tt class="docutils literal"><span class="pre">1970-01-01T00:00:00Z</span></tt>). See also <tt class="docutils literal"><span class="pre">toUnixFloat</span></tt> for subsecond resolution.
 <p><strong class="examples_text">Examples:</strong></p>
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">fromUnix</span><span class="Other">(</span><span class="DecNumber">0</span><span class="Other">)</span><span class="Other">.</span><span class="Identifier">toUnix</span><span class="Other">(</span><span class="Other">)</span> <span class="Operator">==</span> <span class="DecNumber">0</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L591"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L591"
 class="link-seesrc" target="_blank">Source</a>
 <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L591" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+<a id="fromUnixFloat,float"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#fromUnixFloat%2Cfloat"><span class="Identifier">fromUnixFloat</span></a><span class="Other">(</span><span class="Identifier">seconds</span><span class="Other">:</span> <a href="system.html#float"><span class="Identifier">float</span></a><span class="Other">)</span><span class="Other">:</span> <a href="times.html#Time"><span class="Identifier">Time</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+                                       <span class="Identifier">noSideEffect</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Convert a unix timestamp in seconds to a <tt class="docutils literal"><span class="pre">Time</span></tt>; same as <tt class="docutils literal"><span class="pre">fromUnix</span></tt> but with subsecond resolution.
+<p><strong class="examples_text">Examples:</strong></p>
+<pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">fromUnixFloat</span><span class="Other">(</span><span class="FloatNumber">123456.0</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">fromUnixFloat</span><span class="Other">(</span><span class="DecNumber">123456</span><span class="Other">)</span>
+<span class="Identifier">doAssert</span> <span class="Identifier">fromUnixFloat</span><span class="Other">(</span><span class="Operator">-</span><span class="FloatNumber">123456.0</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">fromUnixFloat</span><span class="Other">(</span><span class="Operator">-</span><span class="DecNumber">123456</span><span class="Other">)</span></pre>
+&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L598"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L598" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+<a id="toUnixFloat,Time"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#toUnixFloat%2CTime"><span class="Identifier">toUnixFloat</span></a><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <a href="times.html#Time"><span class="Identifier">Time</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#float"><span class="Identifier">float</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+Same as <tt class="docutils literal"><span class="pre">toUnix</span></tt> but using subsecond resolution.
+<p><strong class="examples_text">Examples:</strong></p>
+<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">t</span> <span class="Other">=</span> <span class="Identifier">getTime</span><span class="Other">(</span><span class="Other">)</span>
+<span class="Identifier">doAssert</span> <span class="Identifier">abs</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">.</span><span class="Identifier">toUnixFloat</span><span class="Other">(</span><span class="Other">)</span><span class="Other">.</span><span class="Identifier">fromUnixFloat</span> <span class="Operator">-</span> <span class="Identifier">t</span><span class="Other">)</span> <span class="Operator">&lt;</span>
+    <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">nanoseconds</span> <span class="Other">=</span> <span class="DecNumber">1000</span><span class="Other">)</span></pre>
+&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L608"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L608" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="fromWinTime,int64"></a>
@@ -1935,9 +1244,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Convert a Windows file time (100-nanosecond intervals since <tt class="docutils literal"><span class="pre">1601-01-01T00:00:00Z</span></tt>) to a <tt class="docutils literal"><span class="pre">Time</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L597"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L620"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L597" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L620" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="toWinTime,Time"></a>
@@ -1946,9 +1255,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Convert <tt class="docutils literal"><span class="pre">t</span></tt> to a Windows file time (100-nanosecond intervals since <tt class="docutils literal"><span class="pre">1601-01-01T00:00:00Z</span></tt>).
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L605"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L628"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L605" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L628" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="isLeapYear,int"></a>
@@ -1960,9 +1269,29 @@ Returns true if <tt class="docutils literal"><span class="pre">year</span></tt> 
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">isLeapYear</span><span class="Other">(</span><span class="DecNumber">2000</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Keyword">not</span> <span class="Identifier">isLeapYear</span><span class="Other">(</span><span class="DecNumber">1900</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L610"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L633"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L610" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L633" class="link-seesrc" target="_blank" >Edit</a>
+
+</dd>
+<a id="isLeapDay,DateTime"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#isLeapDay%2CDateTime"><span class="Identifier">isLeapDay</span></a><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <a href="times.html#DateTime"><span class="Identifier">DateTime</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+returns whether <tt class="docutils literal"><span class="pre">t</span></tt> is a leap day, ie, Feb 29 in a leap year. This matters as it affects time offset calculations.
+<p><strong class="examples_text">Examples:</strong></p>
+<pre class="listing"><span class="Keyword">let</span> <span class="Identifier">t</span> <span class="Other">=</span> <span class="Identifier">initDateTime</span><span class="Other">(</span><span class="DecNumber">29</span><span class="Other">,</span> <span class="Identifier">mFeb</span><span class="Other">,</span> <span class="DecNumber">2020</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">utc</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span>
+<span class="Identifier">doAssert</span> <span class="Identifier">t</span><span class="Other">.</span><span class="Identifier">isLeapDay</span>
+<span class="Identifier">doAssert</span> <span class="Identifier">t</span> <span class="Operator">+</span> <span class="DecNumber">1</span><span class="Other">.</span><span class="Identifier">years</span> <span class="Operator">-</span> <span class="DecNumber">1</span><span class="Other">.</span><span class="Identifier">years</span> <span class="Operator">!=</span> <span class="Identifier">t</span>
+<span class="Keyword">let</span> <span class="Identifier">t2</span> <span class="Other">=</span> <span class="Identifier">initDateTime</span><span class="Other">(</span><span class="DecNumber">28</span><span class="Other">,</span> <span class="Identifier">mFeb</span><span class="Other">,</span> <span class="DecNumber">2020</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">utc</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span>
+<span class="Identifier">doAssert</span> <span class="Keyword">not</span> <span class="Identifier">t2</span><span class="Other">.</span><span class="Identifier">isLeapDay</span>
+<span class="Identifier">doAssert</span> <span class="Identifier">t2</span> <span class="Operator">+</span> <span class="DecNumber">1</span><span class="Other">.</span><span class="Identifier">years</span> <span class="Operator">-</span> <span class="DecNumber">1</span><span class="Other">.</span><span class="Identifier">years</span> <span class="Operator">==</span> <span class="Identifier">t2</span>
+<span class="Identifier">doAssertRaises</span><span class="Other">(</span><span class="Identifier">Exception</span><span class="Other">)</span><span class="Other">:</span>
+  <span class="Keyword">discard</span> <span class="Identifier">initDateTime</span><span class="Other">(</span><span class="DecNumber">29</span><span class="Other">,</span> <span class="Identifier">mFeb</span><span class="Other">,</span> <span class="DecNumber">2021</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">utc</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span></pre>
+&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L640"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L640" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="getDaysInMonth,Month,int"></a>
@@ -1974,9 +1303,9 @@ Get the number of days in <tt class="docutils literal"><span class="pre">month</
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">getDaysInMonth</span><span class="Other">(</span><span class="Identifier">mFeb</span><span class="Other">,</span> <span class="DecNumber">2000</span><span class="Other">)</span> <span class="Operator">==</span> <span class="DecNumber">29</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">getDaysInMonth</span><span class="Other">(</span><span class="Identifier">mFeb</span><span class="Other">,</span> <span class="DecNumber">2001</span><span class="Other">)</span> <span class="Operator">==</span> <span class="DecNumber">28</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L617"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L653"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L617" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L653" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="getDaysInYear,int"></a>
@@ -1988,9 +1317,9 @@ Get the number of days in a <tt class="docutils literal"><span class="pre">year<
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">getDaysInYear</span><span class="Other">(</span><span class="DecNumber">2000</span><span class="Other">)</span> <span class="Operator">==</span> <span class="DecNumber">366</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">getDaysInYear</span><span class="Other">(</span><span class="DecNumber">2001</span><span class="Other">)</span> <span class="Operator">==</span> <span class="DecNumber">365</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L628"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L664"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L628" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L664" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="getDayOfYear,MonthdayRange,Month,int"></a>
@@ -2004,9 +1333,9 @@ Returns the day of the year. Equivalent with <tt class="docutils literal"><span 
 <span class="Identifier">doAssert</span> <span class="Identifier">getDayOfYear</span><span class="Other">(</span><span class="DecNumber">10</span><span class="Other">,</span> <span class="Identifier">mJan</span><span class="Other">,</span> <span class="DecNumber">2000</span><span class="Other">)</span> <span class="Operator">==</span> <span class="DecNumber">9</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">getDayOfYear</span><span class="Other">(</span><span class="DecNumber">10</span><span class="Other">,</span> <span class="Identifier">mFeb</span><span class="Other">,</span> <span class="DecNumber">2000</span><span class="Other">)</span> <span class="Operator">==</span> <span class="DecNumber">40</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L675"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L711"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L675" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L711" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="getDayOfWeek,MonthdayRange,Month,int"></a>
@@ -2019,9 +1348,9 @@ Returns the day of the week enum from day, month and year. Equivalent with <tt c
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">getDayOfWeek</span><span class="Other">(</span><span class="DecNumber">13</span><span class="Other">,</span> <span class="Identifier">mJun</span><span class="Other">,</span> <span class="DecNumber">1990</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">dWed</span>
 <span class="Identifier">doAssert</span> <span class="Operator">$</span><span class="Identifier">getDayOfWeek</span><span class="Other">(</span><span class="DecNumber">13</span><span class="Other">,</span> <span class="Identifier">mJun</span><span class="Other">,</span> <span class="DecNumber">1990</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">&quot;Wednesday&quot;</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L695"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L731"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L695" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L731" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="toParts,Duration"></a>
@@ -2040,9 +1369,9 @@ class="link-seesrc" target="_blank">Source</a>
 <span class="Identifier">dp</span> <span class="Other">=</span> <span class="Identifier">toParts</span><span class="Other">(</span><span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">days</span> <span class="Other">=</span> <span class="Operator">-</span><span class="DecNumber">1</span><span class="Other">)</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">dp</span><span class="Other">[</span><span class="Identifier">Days</span><span class="Other">]</span> <span class="Operator">==</span> <span class="Operator">-</span><span class="DecNumber">1</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L738"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L774"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L738" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L774" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="$,Duration"></a>
@@ -2055,11 +1384,12 @@ Human friendly string representation of a <tt class="docutils literal"><span cla
 <span class="Identifier">doAssert</span> <span class="Operator">$</span><span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">weeks</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">days</span> <span class="Other">=</span> <span class="DecNumber">2</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">&quot;1 week and 2 days&quot;</span>
 <span class="Identifier">doAssert</span> <span class="Operator">$</span><span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">hours</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">minutes</span> <span class="Other">=</span> <span class="DecNumber">2</span><span class="Other">,</span> <span class="Identifier">seconds</span> <span class="Other">=</span> <span class="DecNumber">3</span><span class="Other">)</span> <span class="Operator">==</span>
     <span class="StringLit">&quot;1 hour, 2 minutes, and 3 seconds&quot;</span>
-<span class="Identifier">doAssert</span> <span class="Operator">$</span><span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">milliseconds</span> <span class="Other">=</span> <span class="Operator">-</span><span class="DecNumber">1500</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">&quot;-1 second and -500 milliseconds&quot;</span></pre>
+<span class="Identifier">doAssert</span> <span class="Operator">$</span><span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">milliseconds</span> <span class="Other">=</span> <span class="Operator">-</span><span class="DecNumber">1500</span><span class="Other">)</span> <span class="Operator">==</span>
+    <span class="StringLit">&quot;-1 second and -500 milliseconds&quot;</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L798"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L834"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L798" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L834" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="+,Duration,Duration"></a>
@@ -2072,9 +1402,9 @@ Add two durations together.
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">seconds</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">)</span> <span class="Operator">+</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">days</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">)</span> <span class="Operator">==</span>
     <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">seconds</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">days</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L817"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L853"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L817" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L853" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="-,Duration,Duration"></a>
@@ -2087,9 +1417,9 @@ Subtract a duration from another.
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">seconds</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">days</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">)</span> <span class="Operator">-</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">seconds</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">)</span> <span class="Operator">==</span>
     <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">days</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L824"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L860"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L824" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L860" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="-,Duration"></a>
@@ -2101,9 +1431,9 @@ Reverse a duration.
 <p><strong class="examples_text">Examples:</strong></p>
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Operator">-</span><span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">seconds</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">seconds</span> <span class="Other">=</span> <span class="Operator">-</span><span class="DecNumber">1</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L831"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L867"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L831" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L867" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="<,Duration,Duration"></a>
@@ -2117,9 +1447,9 @@ Note that a duration can be negative, so even if <tt class="docutils literal"><s
 <span class="Identifier">doAssert</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">seconds</span> <span class="Other">=</span> <span class="Operator">-</span><span class="DecNumber">2</span><span class="Other">)</span> <span class="Operator">&lt;</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">seconds</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">seconds</span> <span class="Other">=</span> <span class="Operator">-</span><span class="DecNumber">2</span><span class="Other">)</span><span class="Other">.</span><span class="Identifier">abs</span> <span class="Operator">&lt;</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">seconds</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">)</span><span class="Other">.</span><span class="Identifier">abs</span> <span class="Operator">==</span> <span class="Identifier">false</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L837"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L873"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L837" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L873" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="<=,Duration,Duration"></a>
@@ -2129,9 +1459,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L849"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L885"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L849" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L885" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="==,Duration,Duration"></a>
@@ -2146,9 +1476,9 @@ class="link-seesrc" target="_blank">Source</a>
   <span class="Identifier">d2</span> <span class="Other">=</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">days</span> <span class="Other">=</span> <span class="DecNumber">7</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">d1</span> <span class="Operator">==</span> <span class="Identifier">d2</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L852"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L888"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L852" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L888" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="*,int64,Duration"></a>
@@ -2162,9 +1492,9 @@ Multiply a duration by some scalar.
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="DecNumber">5</span> <span class="Operator">*</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">seconds</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">seconds</span> <span class="Other">=</span> <span class="DecNumber">5</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="DecNumber">3</span> <span class="Operator">*</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">minutes</span> <span class="Other">=</span> <span class="DecNumber">45</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">hours</span> <span class="Other">=</span> <span class="DecNumber">2</span><span class="Other">,</span> <span class="Identifier">minutes</span> <span class="Other">=</span> <span class="DecNumber">15</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L860"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L896"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L860" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L896" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="*,Duration,int64"></a>
@@ -2177,9 +1507,9 @@ Multiply a duration by some scalar.
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">seconds</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">)</span> <span class="Operator">*</span> <span class="DecNumber">5</span> <span class="Operator">==</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">seconds</span> <span class="Other">=</span> <span class="DecNumber">5</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">minutes</span> <span class="Other">=</span> <span class="DecNumber">45</span><span class="Other">)</span> <span class="Operator">*</span> <span class="DecNumber">3</span> <span class="Operator">==</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">hours</span> <span class="Other">=</span> <span class="DecNumber">2</span><span class="Other">,</span> <span class="Identifier">minutes</span> <span class="Other">=</span> <span class="DecNumber">15</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L868"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L904"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L868" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L904" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="div,Duration,int64"></a>
@@ -2195,9 +1525,9 @@ Integer division for durations.
     <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">minutes</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">seconds</span> <span class="Other">=</span> <span class="DecNumber">30</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">nanoseconds</span> <span class="Other">=</span> <span class="DecNumber">3</span><span class="Other">)</span> <span class="Keyword">div</span> <span class="DecNumber">2</span> <span class="Operator">==</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">nanoseconds</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L876"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L912"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L876" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L912" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="initTime,int64,NanosecondRange"></a>
@@ -2207,9 +1537,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Create a <a class="reference external" href="#Time">Time</a> from a unix timestamp and a nanosecond part.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L889"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L925"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L889" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L925" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="-,Time,Time"></a>
@@ -2222,9 +1552,9 @@ Computes the duration between two points in time.
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">initTime</span><span class="Other">(</span><span class="DecNumber">1000</span><span class="Other">,</span> <span class="DecNumber">100</span><span class="Other">)</span> <span class="Operator">-</span> <span class="Identifier">initTime</span><span class="Other">(</span><span class="DecNumber">500</span><span class="Other">,</span> <span class="DecNumber">20</span><span class="Other">)</span> <span class="Operator">==</span>
     <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">minutes</span> <span class="Other">=</span> <span class="DecNumber">8</span><span class="Other">,</span> <span class="Identifier">seconds</span> <span class="Other">=</span> <span class="DecNumber">20</span><span class="Other">,</span> <span class="Identifier">nanoseconds</span> <span class="Other">=</span> <span class="DecNumber">80</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L894"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L930"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L894" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L930" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="+,Time,Duration"></a>
@@ -2236,9 +1566,9 @@ Add a duration of time to a <tt class="docutils literal"><span class="pre">Time<
 <p><strong class="examples_text">Examples:</strong></p>
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Other">(</span><span class="Identifier">fromUnix</span><span class="Other">(</span><span class="DecNumber">0</span><span class="Other">)</span> <span class="Operator">+</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">seconds</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">)</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">fromUnix</span><span class="Other">(</span><span class="DecNumber">1</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L901"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L937"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L901" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L937" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="-,Time,Duration"></a>
@@ -2250,9 +1580,9 @@ Subtracts a duration of time from a <tt class="docutils literal"><span class="pr
 <p><strong class="examples_text">Examples:</strong></p>
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Other">(</span><span class="Identifier">fromUnix</span><span class="Other">(</span><span class="DecNumber">0</span><span class="Other">)</span> <span class="Operator">-</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">seconds</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">)</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">fromUnix</span><span class="Other">(</span><span class="Operator">-</span><span class="DecNumber">1</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L907"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L943"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L907" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L943" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="<,Time,Time"></a>
@@ -2264,9 +1594,9 @@ Returns true if <tt class="docutils literal"><span class="pre">a &lt; b</span></
 <p><strong class="examples_text">Examples:</strong></p>
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">initTime</span><span class="Other">(</span><span class="DecNumber">50</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">)</span> <span class="Operator">&lt;</span> <span class="Identifier">initTime</span><span class="Other">(</span><span class="DecNumber">99</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L913"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L949"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L913" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L949" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="<=,Time,Time"></a>
@@ -2276,9 +1606,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns true if <tt class="docutils literal"><span class="pre">a &lt;= b</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L919"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L955"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L919" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L955" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="==,Time,Time"></a>
@@ -2288,9 +1618,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns true if <tt class="docutils literal"><span class="pre">a == b</span></tt>, that is if both times represent the same point in time.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L923"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L959"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L923" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L959" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="high,typedesc[Time]"></a>
@@ -2299,9 +1629,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L927"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L963"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L927" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L963" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="low,typedesc[Time]"></a>
@@ -2310,9 +1640,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L930"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L966"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L930" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L966" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="high,typedesc[Duration]"></a>
@@ -2321,9 +1651,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Get the longest representable duration.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L933"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L969"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L933" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L969" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="low,typedesc[Duration]"></a>
@@ -2332,9 +1662,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Get the longest representable duration of negative direction.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L937"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L973"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L937" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L973" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="abs,Duration"></a>
@@ -2346,9 +1676,9 @@ class="link-seesrc" target="_blank">Source</a>
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">milliseconds</span> <span class="Other">=</span> <span class="Operator">-</span><span class="DecNumber">1500</span><span class="Other">)</span><span class="Other">.</span><span class="Identifier">abs</span> <span class="Operator">==</span>
     <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">milliseconds</span> <span class="Other">=</span> <span class="DecNumber">1500</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L941"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L977"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L941" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L977" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="toTime,DateTime"></a>
@@ -2357,9 +1687,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Converts a <tt class="docutils literal"><span class="pre">DateTime</span></tt> to a <tt class="docutils literal"><span class="pre">Time</span></tt> representing the same point in time.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L947"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L983"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L947" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L983" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="newTimezone,string,proc(Time),proc(Time)"></a>
@@ -2379,9 +1709,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 <span class="Keyword">let</span> <span class="Identifier">utc</span> <span class="Other">=</span> <span class="Identifier">newTimezone</span><span class="Other">(</span><span class="StringLit">&quot;Etc/UTC&quot;</span><span class="Other">,</span> <span class="Identifier">utcTzInfo</span><span class="Other">,</span> <span class="Identifier">utcTzInfo</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L986"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1022"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L986" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1022" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="name,Timezone"></a>
@@ -2393,9 +1723,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>See also: <a class="reference external" href="https://en.wikipedia.org/wiki/Tz_database">https://en.wikipedia.org/wiki/Tz_database</a></p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1014"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1050"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1014" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1050" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="zonedTimeFromTime,Timezone,Time"></a>
@@ -2404,9 +1734,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns the <tt class="docutils literal"><span class="pre">ZonedTime</span></tt> for some point in time.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1026"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1062"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1026" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1062" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="zonedTimeFromAdjTime,Timezone,Time"></a>
@@ -2418,9 +1748,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>Note that the <tt class="docutils literal"><span class="pre">Time</span></tt> argument does not represent a point in time, it represent a local time! E.g if <tt class="docutils literal"><span class="pre">adjTime</span></tt> is <tt class="docutils literal"><span class="pre">fromUnix(0)</span></tt>, it should be interpreted as 1970-01-01T00:00:00 in the <tt class="docutils literal"><span class="pre">zone</span></tt> timezone, not in UTC.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1030"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1066"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1030" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1066" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="$,Timezone"></a>
@@ -2429,9 +1759,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns the name of the timezone.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1038"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1074"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1038" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1074" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="==,Timezone,Timezone"></a>
@@ -2443,9 +1773,9 @@ Two <tt class="docutils literal"><span class="pre">Timezone</span></tt>'s are co
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">local</span><span class="Other">(</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">local</span><span class="Other">(</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">local</span><span class="Other">(</span><span class="Other">)</span> <span class="Operator">!=</span> <span class="Identifier">utc</span><span class="Other">(</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1042"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1078"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1042" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1078" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="inZone,Time,Timezone"></a>
@@ -2454,9 +1784,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Convert <tt class="docutils literal"><span class="pre">time</span></tt> into a <tt class="docutils literal"><span class="pre">DateTime</span></tt> using <tt class="docutils literal"><span class="pre">zone</span></tt> as the timezone.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1054"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1090"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1054" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1090" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="inZone,DateTime,Timezone"></a>
@@ -2466,9 +1796,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns a <tt class="docutils literal"><span class="pre">DateTime</span></tt> representing the same point in time as <tt class="docutils literal"><span class="pre">dt</span></tt> but using <tt class="docutils literal"><span class="pre">zone</span></tt> as the timezone.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1059"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1095"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1059" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1095" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="utc"></a>
@@ -2480,9 +1810,9 @@ Get the <tt class="docutils literal"><span class="pre">Timezone</span></tt> impl
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">now</span><span class="Other">(</span><span class="Other">)</span><span class="Other">.</span><span class="Identifier">utc</span><span class="Other">.</span><span class="Identifier">timezone</span> <span class="Operator">==</span> <span class="Identifier">utc</span><span class="Other">(</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">utc</span><span class="Other">(</span><span class="Other">)</span><span class="Other">.</span><span class="Identifier">name</span> <span class="Operator">==</span> <span class="StringLit">&quot;Etc/UTC&quot;</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1166"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1202"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1166" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1202" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="local"></a>
@@ -2494,9 +1824,9 @@ Get the <tt class="docutils literal"><span class="pre">Timezone</span></tt> impl
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">now</span><span class="Other">(</span><span class="Other">)</span><span class="Other">.</span><span class="Identifier">timezone</span> <span class="Operator">==</span> <span class="Identifier">local</span><span class="Other">(</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">local</span><span class="Other">(</span><span class="Other">)</span><span class="Other">.</span><span class="Identifier">name</span> <span class="Operator">==</span> <span class="StringLit">&quot;LOCAL&quot;</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1175"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1211"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1175" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1211" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="utc,DateTime"></a>
@@ -2505,9 +1835,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Shorthand for <tt class="docutils literal"><span class="pre">dt.inZone(utc())</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1185"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1221"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1185" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1221" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="local,DateTime"></a>
@@ -2516,9 +1846,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Shorthand for <tt class="docutils literal"><span class="pre">dt.inZone(local())</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1189"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1225"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1189" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1225" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="utc,Time"></a>
@@ -2527,9 +1857,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Shorthand for <tt class="docutils literal"><span class="pre">t.inZone(utc())</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1193"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1229"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1193" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1229" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="local,Time"></a>
@@ -2538,9 +1868,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Shorthand for <tt class="docutils literal"><span class="pre">t.inZone(local())</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1197"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1233"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1197" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1233" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="getTime"></a>
@@ -2549,9 +1879,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Gets the current time as a <tt class="docutils literal"><span class="pre">Time</span></tt> with up to nanosecond resolution.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1201"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1237"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1201" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1237" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="now"></a>
@@ -2562,9 +1892,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p>Shorthand for <tt class="docutils literal"><span class="pre">getTime().local</span></tt>.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1223"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1259"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1223" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1259" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="initTimeInterval,int,int,int,int,int,int,int,int,int,int"></a>
@@ -2583,9 +1913,9 @@ class="link-seesrc" target="_blank">Source</a>
 <span class="Identifier">doAssert</span> <span class="Operator">$</span><span class="Other">(</span><span class="Identifier">dt</span> <span class="Operator">+</span> <span class="Identifier">day</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">&quot;2000-01-02T12:00:00Z&quot;</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">initTimeInterval</span><span class="Other">(</span><span class="Identifier">hours</span> <span class="Other">=</span> <span class="DecNumber">24</span><span class="Other">)</span> <span class="Operator">!=</span> <span class="Identifier">initTimeInterval</span><span class="Other">(</span><span class="Identifier">days</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1229"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1265"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1229" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1265" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="+,TimeInterval,TimeInterval"></a>
@@ -2594,9 +1924,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Adds two <tt class="docutils literal"><span class="pre">TimeInterval</span></tt> objects together.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1256"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1292"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1256" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1292" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="-,TimeInterval"></a>
@@ -2608,9 +1938,9 @@ Reverses a time interval
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">day</span> <span class="Other">=</span> <span class="Operator">-</span><span class="Identifier">initTimeInterval</span><span class="Other">(</span><span class="Identifier">hours</span> <span class="Other">=</span> <span class="DecNumber">24</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">day</span><span class="Other">.</span><span class="Identifier">hours</span> <span class="Operator">==</span> <span class="Operator">-</span><span class="DecNumber">24</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1269"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1305"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1269" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1305" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="-,TimeInterval,TimeInterval"></a>
@@ -2625,9 +1955,9 @@ class="link-seesrc" target="_blank">Source</a>
 <span class="Keyword">let</span> <span class="Identifier">ti2</span> <span class="Other">=</span> <span class="Identifier">initTimeInterval</span><span class="Other">(</span><span class="Identifier">hours</span> <span class="Other">=</span> <span class="DecNumber">4</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Other">(</span><span class="Identifier">ti1</span> <span class="Operator">-</span> <span class="Identifier">ti2</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">initTimeInterval</span><span class="Other">(</span><span class="Identifier">hours</span> <span class="Other">=</span> <span class="DecNumber">20</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1288"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1324"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1288" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1324" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="getDateStr"></a>
@@ -2639,9 +1969,9 @@ Gets the current local date as a string of the format <tt class="docutils litera
 <p><strong class="examples_text">Examples:</strong></p>
 <pre class="listing"><span class="Identifier">echo</span> <span class="Identifier">getDateStr</span><span class="Other">(</span><span class="Identifier">now</span><span class="Other">(</span><span class="Other">)</span> <span class="Operator">-</span> <span class="DecNumber">1</span><span class="Other">.</span><span class="Identifier">months</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1299"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1335"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1299" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1335" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="getClockStr"></a>
@@ -2653,9 +1983,9 @@ Gets the current local clock time as a string of the format <tt class="docutils 
 <p><strong class="examples_text">Examples:</strong></p>
 <pre class="listing"><span class="Identifier">echo</span> <span class="Identifier">getClockStr</span><span class="Other">(</span><span class="Identifier">now</span><span class="Other">(</span><span class="Other">)</span> <span class="Operator">-</span> <span class="DecNumber">1</span><span class="Other">.</span><span class="Identifier">hours</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1306"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1342"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1306" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1342" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="toParts,TimeInterval"></a>
@@ -2670,9 +2000,9 @@ class="link-seesrc" target="_blank">Source</a>
 <span class="Identifier">doAssert</span> <span class="Identifier">tp</span><span class="Other">[</span><span class="Identifier">Years</span><span class="Other">]</span> <span class="Operator">==</span> <span class="DecNumber">1</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">tp</span><span class="Other">[</span><span class="Identifier">Nanoseconds</span><span class="Other">]</span> <span class="Operator">==</span> <span class="DecNumber">123</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1313"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1349"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1313" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1349" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="$,TimeInterval"></a>
@@ -2685,9 +2015,9 @@ Get string representation of <tt class="docutils literal"><span class="pre">Time
     <span class="StringLit">&quot;1 year and 123 nanoseconds&quot;</span>
 <span class="Identifier">doAssert</span> <span class="Operator">$</span><span class="Identifier">initTimeInterval</span><span class="Other">(</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">&quot;0 nanoseconds&quot;</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1329"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1365"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1329" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1365" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="nanoseconds,int"></a>
@@ -2696,9 +2026,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 TimeInterval of <tt class="docutils literal"><span class="pre">nanos</span></tt> nanoseconds.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1344"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1380"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1344" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1380" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="microseconds,int"></a>
@@ -2707,9 +2037,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 TimeInterval of <tt class="docutils literal"><span class="pre">micros</span></tt> microseconds.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1348"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1384"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1348" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1384" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="milliseconds,int"></a>
@@ -2718,9 +2048,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 TimeInterval of <tt class="docutils literal"><span class="pre">ms</span></tt> milliseconds.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1352"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1388"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1352" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1388" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="seconds,int"></a>
@@ -2731,9 +2061,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p><tt class="docutils literal"><span class="pre">echo getTime() + 5.seconds</span></tt></p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1356"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1392"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1356" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1392" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="minutes,int"></a>
@@ -2744,9 +2074,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p><tt class="docutils literal"><span class="pre">echo getTime() + 5.minutes</span></tt></p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1362"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1398"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1362" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1398" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="hours,int"></a>
@@ -2757,9 +2087,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p><tt class="docutils literal"><span class="pre">echo getTime() + 2.hours</span></tt></p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1368"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1404"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1368" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1404" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="days,int"></a>
@@ -2770,9 +2100,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p><tt class="docutils literal"><span class="pre">echo getTime() + 2.days</span></tt></p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1374"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1410"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1374" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1410" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="weeks,int"></a>
@@ -2783,9 +2113,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p><tt class="docutils literal"><span class="pre">echo getTime() + 2.weeks</span></tt></p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1380"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1416"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1380" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1416" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="months,int"></a>
@@ -2796,9 +2126,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p><tt class="docutils literal"><span class="pre">echo getTime() + 2.months</span></tt></p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1386"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1422"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1386" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1422" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="years,int"></a>
@@ -2809,9 +2139,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p><tt class="docutils literal"><span class="pre">echo getTime() + 2.years</span></tt></p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1392"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1428"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1392" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1428" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="initDateTime,MonthdayRange,Month,int,HourRange,MinuteRange,SecondRange,NanosecondRange,Timezone"></a>
@@ -2826,9 +2156,9 @@ Create a new <a class="reference external" href="#DateTime">DateTime</a> in the 
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">dt1</span> <span class="Other">=</span> <span class="Identifier">initDateTime</span><span class="Other">(</span><span class="DecNumber">30</span><span class="Other">,</span> <span class="Identifier">mMar</span><span class="Other">,</span> <span class="DecNumber">2017</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">utc</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Operator">$</span><span class="Identifier">dt1</span> <span class="Operator">==</span> <span class="StringLit">&quot;2017-03-30T00:00:00Z&quot;</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1438"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1474"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1438" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1474" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="initDateTime,MonthdayRange,Month,int,HourRange,MinuteRange,SecondRange,Timezone"></a>
@@ -2842,9 +2172,9 @@ Create a new <a class="reference external" href="#DateTime">DateTime</a> in the 
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">dt1</span> <span class="Other">=</span> <span class="Identifier">initDateTime</span><span class="Other">(</span><span class="DecNumber">30</span><span class="Other">,</span> <span class="Identifier">mMar</span><span class="Other">,</span> <span class="DecNumber">2017</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">utc</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Operator">$</span><span class="Identifier">dt1</span> <span class="Operator">==</span> <span class="StringLit">&quot;2017-03-30T00:00:00Z&quot;</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1459"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1495"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1459" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1495" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="+,DateTime,TimeInterval"></a>
@@ -2859,9 +2189,9 @@ class="link-seesrc" target="_blank">Source</a>
 <span class="Identifier">doAssert</span> <span class="Operator">$</span><span class="Other">(</span><span class="Identifier">dt</span> <span class="Operator">+</span> <span class="DecNumber">1</span><span class="Other">.</span><span class="Identifier">months</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">&quot;2017-04-30T00:00:00Z&quot;</span>
 <span class="Identifier">doAssert</span> <span class="Operator">$</span><span class="Other">(</span><span class="Identifier">dt</span> <span class="Operator">-</span> <span class="DecNumber">1</span><span class="Other">.</span><span class="Identifier">months</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">&quot;2017-03-02T00:00:00Z&quot;</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1469"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1505"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1469" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1505" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="-,DateTime,TimeInterval"></a>
@@ -2873,9 +2203,9 @@ Subtract <tt class="docutils literal"><span class="pre">interval</span></tt> fro
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">dt</span> <span class="Other">=</span> <span class="Identifier">initDateTime</span><span class="Other">(</span><span class="DecNumber">30</span><span class="Other">,</span> <span class="Identifier">mMar</span><span class="Other">,</span> <span class="DecNumber">2017</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">utc</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Operator">$</span><span class="Other">(</span><span class="Identifier">dt</span> <span class="Operator">-</span> <span class="DecNumber">5</span><span class="Other">.</span><span class="Identifier">days</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">&quot;2017-03-25T00:00:00Z&quot;</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1498"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1534"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1498" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1534" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="+,DateTime,Duration"></a>
@@ -2888,9 +2218,9 @@ class="link-seesrc" target="_blank">Source</a>
 <span class="Keyword">let</span> <span class="Identifier">dur</span> <span class="Other">=</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">hours</span> <span class="Other">=</span> <span class="DecNumber">5</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Operator">$</span><span class="Other">(</span><span class="Identifier">dt</span> <span class="Operator">+</span> <span class="Identifier">dur</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">&quot;2017-03-30T05:00:00Z&quot;</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1509"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1545"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1509" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1545" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="-,DateTime,Duration"></a>
@@ -2903,9 +2233,9 @@ class="link-seesrc" target="_blank">Source</a>
 <span class="Keyword">let</span> <span class="Identifier">dur</span> <span class="Other">=</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">days</span> <span class="Other">=</span> <span class="DecNumber">5</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Operator">$</span><span class="Other">(</span><span class="Identifier">dt</span> <span class="Operator">-</span> <span class="Identifier">dur</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">&quot;2017-03-25T00:00:00Z&quot;</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1517"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1553"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1517" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1553" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="-,DateTime,DateTime"></a>
@@ -2918,9 +2248,9 @@ Compute the duration between <tt class="docutils literal"><span class="pre">dt1<
 <span class="Keyword">let</span> <span class="Identifier">dt2</span> <span class="Other">=</span> <span class="Identifier">initDateTime</span><span class="Other">(</span><span class="DecNumber">25</span><span class="Other">,</span> <span class="Identifier">mMar</span><span class="Other">,</span> <span class="DecNumber">2017</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">utc</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">dt1</span> <span class="Operator">-</span> <span class="Identifier">dt2</span> <span class="Operator">==</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">days</span> <span class="Other">=</span> <span class="DecNumber">5</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1525"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1561"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1525" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1561" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="<,DateTime,DateTime"></a>
@@ -2929,9 +2259,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns true if <tt class="docutils literal"><span class="pre">a</span></tt> happened before <tt class="docutils literal"><span class="pre">b</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1535"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1571"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1535" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1571" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="<=,DateTime,DateTime"></a>
@@ -2940,9 +2270,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns true if <tt class="docutils literal"><span class="pre">a</span></tt> happened before or at the same time as <tt class="docutils literal"><span class="pre">b</span></tt>.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1539"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1575"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1539" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1575" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="==,DateTime,DateTime"></a>
@@ -2951,9 +2281,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns true if <tt class="docutils literal"><span class="pre">a</span></tt> and <tt class="docutils literal"><span class="pre">b</span></tt> represent the same point in time.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1543"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1579"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1543" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1579" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="between,DateTime,DateTime"></a>
@@ -2972,9 +2302,9 @@ Gives the difference between <tt class="docutils literal"><span class="pre">star
 <span class="Identifier">doAssert</span> <span class="Identifier">between</span><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">ti</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">between</span><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Operator">-</span><span class="Identifier">between</span><span class="Other">(</span><span class="Identifier">b</span><span class="Other">,</span> <span class="Identifier">a</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1560"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1596"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1560" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1596" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="+,Time,TimeInterval"></a>
@@ -2986,9 +2316,9 @@ Adds <tt class="docutils literal"><span class="pre">interval</span></tt> to <tt 
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">tm</span> <span class="Other">=</span> <span class="Identifier">fromUnix</span><span class="Other">(</span><span class="DecNumber">0</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">tm</span> <span class="Operator">+</span> <span class="DecNumber">5</span><span class="Other">.</span><span class="Identifier">seconds</span> <span class="Operator">==</span> <span class="Identifier">fromUnix</span><span class="Other">(</span><span class="DecNumber">5</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1665"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1701"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1665" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1701" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="-,Time,TimeInterval"></a>
@@ -3000,9 +2330,9 @@ Subtracts <tt class="docutils literal"><span class="pre">interval</span></tt> fr
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">tm</span> <span class="Other">=</span> <span class="Identifier">fromUnix</span><span class="Other">(</span><span class="DecNumber">5</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">tm</span> <span class="Operator">-</span> <span class="DecNumber">5</span><span class="Other">.</span><span class="Identifier">seconds</span> <span class="Operator">==</span> <span class="Identifier">fromUnix</span><span class="Other">(</span><span class="DecNumber">0</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1678"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1714"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1678" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1714" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="+=,T,U"></a>
@@ -3015,9 +2345,9 @@ Modify <tt class="docutils literal"><span class="pre">a</span></tt> in place by 
 <span class="Identifier">tm</span> <span class="Operator">+=</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">seconds</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">tm</span> <span class="Operator">==</span> <span class="Identifier">fromUnix</span><span class="Other">(</span><span class="DecNumber">1</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1691"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1727"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1691" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1727" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="-=,T,U"></a>
@@ -3030,9 +2360,9 @@ Modify <tt class="docutils literal"><span class="pre">a</span></tt> in place by 
 <span class="Identifier">tm</span> <span class="Operator">-=</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">seconds</span> <span class="Other">=</span> <span class="DecNumber">5</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">tm</span> <span class="Operator">==</span> <span class="Identifier">fromUnix</span><span class="Other">(</span><span class="DecNumber">0</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1699"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1735"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1699" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1735" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="*=,T,U"></a>
@@ -3045,9 +2375,9 @@ class="link-seesrc" target="_blank">Source</a>
 <span class="Identifier">dur</span> <span class="Operator">*=</span> <span class="DecNumber">5</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">dur</span> <span class="Operator">==</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">seconds</span> <span class="Other">=</span> <span class="DecNumber">5</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1707"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1743"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1707" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1743" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="$,TimeFormat"></a>
@@ -3059,9 +2389,9 @@ Returns the format string that was used to construct <tt class="docutils literal
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">initTimeFormat</span><span class="Other">(</span><span class="StringLit">&quot;yyyy-MM-dd&quot;</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Operator">$</span><span class="Identifier">f</span> <span class="Operator">==</span> <span class="StringLit">&quot;yyyy-MM-dd&quot;</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1783"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1819"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1783" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1819" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="initTimeFormat,string"></a>
@@ -3076,9 +2406,9 @@ class="link-seesrc" target="_blank">Source</a>
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">f</span> <span class="Other">=</span> <span class="Identifier">initTimeFormat</span><span class="Other">(</span><span class="StringLit">&quot;yyyy-MM-dd&quot;</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="StringLit">&quot;2000-01-01&quot;</span> <span class="Operator">==</span> <span class="StringLit">&quot;2000-01-01&quot;</span><span class="Other">.</span><span class="Identifier">parse</span><span class="Other">(</span><span class="Identifier">f</span><span class="Other">)</span><span class="Other">.</span><span class="Identifier">format</span><span class="Other">(</span><span class="Identifier">f</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L1904"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L1940"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1904" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L1940" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="format,DateTime,TimeFormat,DateTimeLocale"></a>
@@ -3092,9 +2422,9 @@ Format <tt class="docutils literal"><span class="pre">dt</span></tt> using the f
 <span class="Keyword">let</span> <span class="Identifier">dt</span> <span class="Other">=</span> <span class="Identifier">initDateTime</span><span class="Other">(</span><span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">mJan</span><span class="Other">,</span> <span class="DecNumber">2000</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">utc</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="StringLit">&quot;2000-01-01&quot;</span> <span class="Operator">==</span> <span class="Identifier">dt</span><span class="Other">.</span><span class="Identifier">format</span><span class="Other">(</span><span class="Identifier">f</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2281"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2307"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2281" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2307" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="format,DateTime,string,DateTimeLocale"></a>
@@ -3109,9 +2439,9 @@ class="link-seesrc" target="_blank">Source</a>
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">dt</span> <span class="Other">=</span> <span class="Identifier">initDateTime</span><span class="Other">(</span><span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">mJan</span><span class="Other">,</span> <span class="DecNumber">2000</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">utc</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="StringLit">&quot;2000-01-01&quot;</span> <span class="Operator">==</span> <span class="Identifier">format</span><span class="Other">(</span><span class="Identifier">dt</span><span class="Other">,</span> <span class="StringLit">&quot;yyyy-MM-dd&quot;</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2302"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2328"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2302" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2328" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="format,DateTime,static[string]"></a>
@@ -3120,9 +2450,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Overload that validates <tt class="docutils literal"><span class="pre">format</span></tt> at compile time.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2314"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2340"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2314" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2340" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="formatValue,string,DateTime,string"></a>
@@ -3132,9 +2462,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 adapter for strformat. Not intended to be called directly.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2319"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2345"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2319" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2345" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="format,Time,string,Timezone"></a>
@@ -3150,9 +2480,9 @@ class="link-seesrc" target="_blank">Source</a>
 <span class="Keyword">var</span> <span class="Identifier">tm</span> <span class="Other">=</span> <span class="Identifier">dt</span><span class="Other">.</span><span class="Identifier">toTime</span><span class="Other">(</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">format</span><span class="Other">(</span><span class="Identifier">tm</span><span class="Other">,</span> <span class="StringLit">&quot;yyyy-MM-dd\'T\'HH:mm:ss&quot;</span><span class="Other">,</span> <span class="Identifier">utc</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">&quot;1970-01-01T00:00:00&quot;</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2324"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2350"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2324" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2350" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="format,Time,static[string],Timezone"></a>
@@ -3161,9 +2491,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Overload that validates <tt class="docutils literal"><span class="pre">f</span></tt> at compile time.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2337"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2363"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2337" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2363" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="parse,string,TimeFormat,Timezone,DateTimeLocale"></a>
@@ -3180,9 +2510,9 @@ class="link-seesrc" target="_blank">Source</a>
 <span class="Keyword">let</span> <span class="Identifier">dt</span> <span class="Other">=</span> <span class="Identifier">initDateTime</span><span class="Other">(</span><span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">mJan</span><span class="Other">,</span> <span class="DecNumber">2000</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">utc</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">dt</span> <span class="Operator">==</span> <span class="StringLit">&quot;2000-01-01&quot;</span><span class="Other">.</span><span class="Identifier">parse</span><span class="Other">(</span><span class="Identifier">f</span><span class="Other">,</span> <span class="Identifier">utc</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2347"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2373"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2347" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2373" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="parse,string,string,Timezone,DateTimeLocale"></a>
@@ -3197,9 +2527,9 @@ class="link-seesrc" target="_blank">Source</a>
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">dt</span> <span class="Other">=</span> <span class="Identifier">initDateTime</span><span class="Other">(</span><span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">mJan</span><span class="Other">,</span> <span class="DecNumber">2000</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">utc</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">dt</span> <span class="Operator">==</span> <span class="Identifier">parse</span><span class="Other">(</span><span class="StringLit">&quot;2000-01-01&quot;</span><span class="Other">,</span> <span class="StringLit">&quot;yyyy-MM-dd&quot;</span><span class="Other">,</span> <span class="Identifier">utc</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2391"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2417"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2391" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2417" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="parse,string,static[string],Timezone,DateTimeLocale"></a>
@@ -3210,9 +2540,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Overload that validates <tt class="docutils literal"><span class="pre">f</span></tt> at compile time.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2405"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2431"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2405" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2431" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="parseTime,string,string,Timezone"></a>
@@ -3227,9 +2557,9 @@ class="link-seesrc" target="_blank">Source</a>
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">tStr</span> <span class="Other">=</span> <span class="StringLit">&quot;1970-01-01T00:00:00+00:00&quot;</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">parseTime</span><span class="Other">(</span><span class="Identifier">tStr</span><span class="Other">,</span> <span class="StringLit">&quot;yyyy-MM-dd\'T\'HH:mm:sszzz&quot;</span><span class="Other">,</span> <span class="Identifier">utc</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">fromUnix</span><span class="Other">(</span><span class="DecNumber">0</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2412"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2438"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2412" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2438" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="parseTime,string,static[string],Timezone"></a>
@@ -3239,9 +2569,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Overload that validates <tt class="docutils literal"><span class="pre">format</span></tt> at compile time.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2424"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2450"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2424" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2450" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="$,DateTime"></a>
@@ -3253,24 +2583,24 @@ Converts a <tt class="docutils literal"><span class="pre">DateTime</span></tt> o
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">dt</span> <span class="Other">=</span> <span class="Identifier">initDateTime</span><span class="Other">(</span><span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">mJan</span><span class="Other">,</span> <span class="DecNumber">2000</span><span class="Other">,</span> <span class="DecNumber">12</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">utc</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Operator">$</span><span class="Identifier">dt</span> <span class="Operator">==</span> <span class="StringLit">&quot;2000-01-01T12:00:00Z&quot;</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2434"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2460"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2434" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2460" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="$,Time"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2CTime"><span class="Identifier">`$`</span></a><span class="Other">(</span><span class="Identifier">time</span><span class="Other">:</span> <a href="times.html#Time"><span class="Identifier">Time</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Converts a <tt class="docutils literal"><span class="pre">Time</span></tt> value to a string representation. It will use the local time zone and use the format <tt class="docutils literal"><span class="pre">yyyy-MM-dd'T'HH-mm-sszzz</span></tt>.
+Converts a <tt class="docutils literal"><span class="pre">Time</span></tt> value to a string representation. It will use the local time zone and use the format <tt class="docutils literal"><span class="pre">yyyy-MM-dd'T'HH:mm:sszzz</span></tt>.
 <p><strong class="examples_text">Examples:</strong></p>
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">dt</span> <span class="Other">=</span> <span class="Identifier">initDateTime</span><span class="Other">(</span><span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">mJan</span><span class="Other">,</span> <span class="DecNumber">1970</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">local</span><span class="Other">(</span><span class="Other">)</span><span class="Other">)</span>
 <span class="Keyword">let</span> <span class="Identifier">tm</span> <span class="Other">=</span> <span class="Identifier">dt</span><span class="Other">.</span><span class="Identifier">toTime</span><span class="Other">(</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Operator">$</span><span class="Identifier">tm</span> <span class="Operator">==</span> <span class="StringLit">&quot;1970-01-01T00:00:00&quot;</span> <span class="Operator">&amp;</span> <span class="Identifier">format</span><span class="Other">(</span><span class="Identifier">dt</span><span class="Other">,</span> <span class="StringLit">&quot;zzz&quot;</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2442"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2468"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2442" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2468" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="countLeapYears,int"></a>
@@ -3285,9 +2615,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p><strong>Deprecated since v0.20.0</strong>.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2451"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2477"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2451" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2477" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="countDays,int"></a>
@@ -3301,9 +2631,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p><strong>Deprecated since v0.20.0</strong>.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2463"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2489"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2463" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2489" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="countYears,int"></a>
@@ -3317,9 +2647,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p><strong>Deprecated since v0.20.0</strong>.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2470"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2496"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2470" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2496" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="countYearsAndDays,int"></a>
@@ -3334,9 +2664,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p><strong>Deprecated since v0.20.0</strong>.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2477"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2503"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2477" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2503" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="toTimeInterval,Time"></a>
@@ -3356,9 +2686,9 @@ class="link-seesrc" target="_blank">Source</a>
 <span class="Keyword">let</span> <span class="Identifier">ti</span> <span class="Other">=</span> <span class="Identifier">b</span><span class="Other">.</span><span class="Identifier">toTimeInterval</span><span class="Other">(</span><span class="Other">)</span> <span class="Operator">-</span> <span class="Identifier">a</span><span class="Other">.</span><span class="Identifier">toTimeInterval</span><span class="Other">(</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">a</span> <span class="Operator">+</span> <span class="Identifier">ti</span> <span class="Operator">==</span> <span class="Identifier">b</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2487"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2513"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2487" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2513" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="cpuTime"></a>
@@ -3374,9 +2704,9 @@ gets time spent that the CPU spent to run the current process in seconds. This m
 <span class="Identifier">echo</span> <span class="StringLit">&quot;CPU time [s] &quot;</span><span class="Other">,</span> <span class="Identifier">cpuTime</span><span class="Other">(</span><span class="Other">)</span> <span class="Operator">-</span> <span class="Identifier">t0</span>
 <span class="Identifier">echo</span> <span class="StringLit">&quot;Fib is [s] &quot;</span><span class="Other">,</span> <span class="Identifier">fib</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2512"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2538"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2512" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2538" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="epochTime"></a>
@@ -3387,9 +2717,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p><tt class="docutils literal"><span class="pre">getTime</span></tt> should generally be preferred over this proc.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2537"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2563"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2537" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2563" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="weeks,Duration"></a>
@@ -3407,9 +2737,9 @@ class="link-seesrc" target="_blank">Source</a>
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">dur</span> <span class="Other">=</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">weeks</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">days</span> <span class="Other">=</span> <span class="DecNumber">2</span><span class="Other">,</span> <span class="Identifier">hours</span> <span class="Other">=</span> <span class="DecNumber">3</span><span class="Other">,</span> <span class="Identifier">minutes</span> <span class="Other">=</span> <span class="DecNumber">4</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">dur</span><span class="Other">.</span><span class="Identifier">weeks</span> <span class="Operator">==</span> <span class="DecNumber">1</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2569"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2595"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2569" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2595" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="days,Duration"></a>
@@ -3427,9 +2757,9 @@ class="link-seesrc" target="_blank">Source</a>
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">dur</span> <span class="Other">=</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">weeks</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">days</span> <span class="Other">=</span> <span class="DecNumber">2</span><span class="Other">,</span> <span class="Identifier">hours</span> <span class="Other">=</span> <span class="DecNumber">3</span><span class="Other">,</span> <span class="Identifier">minutes</span> <span class="Other">=</span> <span class="DecNumber">4</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">dur</span><span class="Other">.</span><span class="Identifier">days</span> <span class="Operator">==</span> <span class="DecNumber">9</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2580"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2606"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2580" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2606" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="hours,Duration"></a>
@@ -3447,9 +2777,9 @@ class="link-seesrc" target="_blank">Source</a>
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">dur</span> <span class="Other">=</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">days</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">hours</span> <span class="Other">=</span> <span class="DecNumber">2</span><span class="Other">,</span> <span class="Identifier">minutes</span> <span class="Other">=</span> <span class="DecNumber">3</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">dur</span><span class="Other">.</span><span class="Identifier">hours</span> <span class="Operator">==</span> <span class="DecNumber">26</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2591"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2617"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2591" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2617" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="minutes,Duration"></a>
@@ -3467,9 +2797,9 @@ class="link-seesrc" target="_blank">Source</a>
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">dur</span> <span class="Other">=</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">days</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">,</span> <span class="Identifier">hours</span> <span class="Other">=</span> <span class="DecNumber">2</span><span class="Other">,</span> <span class="Identifier">minutes</span> <span class="Other">=</span> <span class="DecNumber">3</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">dur</span><span class="Other">.</span><span class="Identifier">minutes</span> <span class="Operator">==</span> <span class="DecNumber">1563</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2602"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2628"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2602" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2628" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="seconds,Duration"></a>
@@ -3487,9 +2817,9 @@ class="link-seesrc" target="_blank">Source</a>
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">dur</span> <span class="Other">=</span> <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">minutes</span> <span class="Other">=</span> <span class="DecNumber">10</span><span class="Other">,</span> <span class="Identifier">seconds</span> <span class="Other">=</span> <span class="DecNumber">30</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">dur</span><span class="Other">.</span><span class="Identifier">seconds</span> <span class="Operator">==</span> <span class="DecNumber">630</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2613"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2639"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2613" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2639" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="milliseconds,Duration"></a>
@@ -3507,9 +2837,9 @@ class="link-seesrc" target="_blank">Source</a>
                     <span class="Identifier">nanoseconds</span> <span class="Other">=</span> <span class="DecNumber">9</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">dur</span><span class="Other">.</span><span class="Identifier">milliseconds</span> <span class="Operator">==</span> <span class="DecNumber">7</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2624"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2650"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2624" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2650" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="microseconds,Duration"></a>
@@ -3527,9 +2857,9 @@ class="link-seesrc" target="_blank">Source</a>
                     <span class="Identifier">nanoseconds</span> <span class="Other">=</span> <span class="DecNumber">9</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">dur</span><span class="Other">.</span><span class="Identifier">microseconds</span> <span class="Operator">==</span> <span class="DecNumber">7008</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2635"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2661"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2635" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2661" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="nanoseconds,Duration"></a>
@@ -3548,9 +2878,9 @@ class="link-seesrc" target="_blank">Source</a>
                     <span class="Identifier">nanoseconds</span> <span class="Other">=</span> <span class="DecNumber">9</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">dur</span><span class="Other">.</span><span class="Identifier">nanoseconds</span> <span class="Operator">==</span> <span class="DecNumber">7008009</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2646"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2672"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2646" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2672" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="fractional,Duration"></a>
@@ -3569,9 +2899,9 @@ class="link-seesrc" target="_blank">Source</a>
 <span class="Identifier">doAssert</span> <span class="Identifier">dur</span><span class="Other">.</span><span class="Identifier">fractional</span> <span class="Operator">==</span>
     <span class="Identifier">initDuration</span><span class="Other">(</span><span class="Identifier">milliseconds</span> <span class="Other">=</span> <span class="DecNumber">7</span><span class="Other">,</span> <span class="Identifier">microseconds</span> <span class="Other">=</span> <span class="DecNumber">8</span><span class="Other">,</span> <span class="Identifier">nanoseconds</span> <span class="Other">=</span> <span class="DecNumber">9</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2657"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2683"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2657" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2683" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="unixTimeToWinTime,impl"></a>
@@ -3586,9 +2916,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p><strong>Deprecated:</strong> use <tt class="docutils literal"><span class="pre">toWinTime</span></tt> instead.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2669"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2695"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2669" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2695" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="winTimeToUnixTime,int64"></a>
@@ -3603,9 +2933,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p><strong>Deprecated:</strong> use <tt class="docutils literal"><span class="pre">fromWinTime</span></tt> instead.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2676"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2702"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2676" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2702" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="initInterval,int,int,int,int,int,int"></a>
@@ -3618,26 +2948,25 @@ class="link-seesrc" target="_blank">Source</a>
 
 <strong>Deprecated since v0.18.0:</strong> use <tt class="docutils literal"><span class="pre">initTimeInterval</span></tt> instead.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2683"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2709"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2683" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2709" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="fromSeconds,float"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#fromSeconds%2Cfloat"><span class="Identifier">fromSeconds</span></a><span class="Other">(</span><span class="Identifier">since1970</span><span class="Other">:</span> <a href="system.html#float"><span class="Identifier">float</span></a><span class="Other">)</span><span class="Other">:</span> <a href="times.html#Time"><span class="Identifier">Time</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">,</span>
-                                       <span class="Identifier">deprecated</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#fromSeconds%2Cfloat"><span class="Identifier">fromSeconds</span></a><span class="Other">(</span><span class="Identifier">since1970</span><span class="Other">:</span> <a href="system.html#float"><span class="Identifier">float</span></a><span class="Other">)</span><span class="Other">:</span> <a href="times.html#Time"><span class="Identifier">Time</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">deprecated</span><span class="Other">:</span> <span class="StringLit">&quot;Use fromUnixFloat or fromUnix&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
   <div class="deprecation-message">
-    <b>Deprecated</b> 
+    <b>Deprecated:</b> Use fromUnixFloat or fromUnix
   </div>
 
 <p>Takes a float which contains the number of seconds since the unix epoch and returns a time object.</p>
 <p><strong>Deprecated since v0.18.0:</strong> use <tt class="docutils literal"><span class="pre">fromUnix</span></tt> instead</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2688"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2714"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2688" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2714" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="fromSeconds,int64"></a>
@@ -3652,25 +2981,24 @@ class="link-seesrc" target="_blank">Source</a>
 <p><strong>Deprecated since v0.18.0:</strong> use <tt class="docutils literal"><span class="pre">fromUnix</span></tt> instead</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2698"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2722"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2698" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2722" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="toSeconds,Time"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#toSeconds%2CTime"><span class="Identifier">toSeconds</span></a><span class="Other">(</span><span class="Identifier">time</span><span class="Other">:</span> <a href="times.html#Time"><span class="Identifier">Time</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#float"><span class="Identifier">float</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">deprecated</span></span><span class="Other">.}</span></span></pre></dt>
+<dt><pre><span class="Keyword">proc</span> <a href="#toSeconds%2CTime"><span class="Identifier">toSeconds</span></a><span class="Other">(</span><span class="Identifier">time</span><span class="Other">:</span> <a href="times.html#Time"><span class="Identifier">Time</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#float"><span class="Identifier">float</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">locks</span><span class="Other">:</span> <span class="DecNumber">0</span><span class="Other">,</span>
+                                <span class="Identifier">deprecated</span><span class="Other">:</span> <span class="StringLit">&quot;Use toUnixFloat or toUnix&quot;</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
   <div class="deprecation-message">
-    <b>Deprecated</b> 
+    <b>Deprecated:</b> Use toUnixFloat or toUnix
   </div>
 
-<p>Returns the time in seconds since the unix epoch.</p>
-<p><strong>Deprecated since v0.18.0:</strong> use <tt class="docutils literal"><span class="pre">toUnix</span></tt> instead</p>
-
+Returns the time in seconds since the unix epoch, with subsecond resolution.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2706"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2730"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2706" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2730" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="getLocalTime,Time"></a>
@@ -3685,9 +3013,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p><strong>Deprecated since v0.18.0:</strong> use <tt class="docutils literal"><span class="pre">local</span></tt> instead</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2713"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2735"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2713" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2735" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="getGMTime,Time"></a>
@@ -3701,9 +3029,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p><strong>Deprecated since v0.18.0:</strong> use <tt class="docutils literal"><span class="pre">utc</span></tt> instead</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2721"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2743"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2721" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2743" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="getTimezone"></a>
@@ -3717,9 +3045,9 @@ class="link-seesrc" target="_blank">Source</a>
 <p><strong>Deprecated since v0.18.0:</strong> use <tt class="docutils literal"><span class="pre">now().utcOffset</span></tt> to get the current utc offset (including DST).</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2729"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2751"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2729" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2751" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="getDayOfWeek,int,int,int"></a>
@@ -3732,9 +3060,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 <strong>Deprecated since v0.18.0:</strong> use <tt class="docutils literal"><span class="pre">getDayOfWeek(monthday: MonthdayRange; month: Month; year: int)</span></tt> instead.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2744"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2766"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2744" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2766" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="getDayOfWeekJulian,int,int,int"></a>
@@ -3747,9 +3075,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 Returns the day of the week enum from day, month and year, according to the Julian calendar. <strong>Deprecated since v0.18.0</strong>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2750"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2772"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2750" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2772" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="adjTime,ZonedTime"></a>
@@ -3762,9 +3090,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 <strong>Deprecated since v0.19.0:</strong> use the <tt class="docutils literal"><span class="pre">time</span></tt> field instead.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2762"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2784"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2762" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2784" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="adjTime=,ZonedTime,Time"></a>
@@ -3777,9 +3105,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 <strong>Deprecated since v0.19.0:</strong> use the <tt class="docutils literal"><span class="pre">time</span></tt> field instead.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2767"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2789"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2767" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2789" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="zoneInfoFromUtc,Timezone,Time"></a>
@@ -3792,9 +3120,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 <strong>Deprecated since v0.19.0:</strong> use <tt class="docutils literal"><span class="pre">zonedTimeFromTime</span></tt> instead.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2772"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2794"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2772" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2794" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="zoneInfoFromTz,Timezone,Time"></a>
@@ -3807,9 +3135,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 <strong>Deprecated since v0.19.0:</strong> use the <tt class="docutils literal"><span class="pre">zonedTimeFromAdjTime</span></tt> instead.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2777"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2799"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2777" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2799" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -3823,9 +3151,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 adapter for <tt class="docutils literal"><span class="pre">strformat</span></tt>. Not intended to be called directly.
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/times.nim#L2343"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/times.nim#L2369"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2343" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/times.nim#L2369" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -3838,7 +3166,7 @@ class="link-seesrc" target="_blank">Source</a>
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Made with Nim. Generated: 2020-01-23 17:27:32 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2020-04-03 12:37:00 UTC</small>
       </div>
     </div>
   </div>

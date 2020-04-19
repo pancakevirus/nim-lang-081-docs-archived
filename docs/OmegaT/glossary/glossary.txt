@@ -100,3 +100,16 @@ effective	実効
 effective	効果的
 effective	効率的
 effective	有効
+support	サポート
+support	機能
+support	対応
+support	実装
+Provide	提供
+Provide	実装
+Provide	実現
+Provide	用意
+Provide	装備
+Provide	搭載
+limits	制限
+Provides	取得
+Runtime type inform	実行時型情報

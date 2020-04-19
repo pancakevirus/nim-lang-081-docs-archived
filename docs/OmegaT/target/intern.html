@@ -18,772 +18,7 @@
 
 
 <title>Nim コンパイラの内部構造</title>
-<style type="text/css" >
-/*
-Stylesheet for use with Docutils/rst2html.
-
-See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
-customize this style sheet.
-
-Modified from Chad Skeeters' rst2html-style
-https://bitbucket.org/cskeeters/rst2html-style/
-
-Modified by Boyd Greenfield and narimiran
-*/
-
-html {
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
-
-body {
-  font-family: "Lato", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 1.125em;
-  line-height: 1.5;
-  color: #222;
-  background-color: #FCFCFC; }
-
-/* Skeleton grid */
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 1050px;
-  margin: 0 auto;
-  padding: 0;
-  box-sizing: border-box; }
-
-.column,
-.columns {
-  width: 100%;
-  float: left;
-  box-sizing: border-box;
-  margin-left: 1%;
-}
-
-.column:first-child,
-.columns:first-child {
-  margin-left: 0; }
-
-.three.columns {
-  width: 19%; }
-
-.nine.columns {
-  width: 80.0%; }
-
-.twelve.columns {
-  width: 100%;
-  margin-left: 0; }
-
-@media screen and (max-width: 860px) {
-  .three.columns {
-    display: none;
-  }
-  .nine.columns {
-    width: 98.0%;
-  }
-  body {
-    font-size: 1em;
-    line-height: 1.35;
-  }
-}
-
-cite {
-  font-style: italic !important; }
-
-
-/* Nim search input */
-div#searchInputDiv {
-  margin-bottom: 1em;
-}
-input#searchInput {
-  width: 80%;
-}
-
-/*
- * Some custom formatting for input forms.
- * This also fixes input form colors on Firefox with a dark system theme on Linux.
- */
-input {
-  -moz-appearance: none;
-  color: #333;
-  background-color: #f8f8f8;
-  border: 1px solid #aaa;
-  font-family: "Lato", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-  font-size: 0.9em;
-  padding: 6px;
-}
-input:focus {
-  border: 1px solid #1fa0eb;
-  box-shadow: 0 0 2px #1fa0eb;
-}
-
-/* Docgen styles */
-/* Links */
-a {
-  color: #07b;
-  text-decoration: none;
-}
-
-a span.Identifier {
-  text-decoration: underline;
-  text-decoration-color: #aab;
-}
-
-a.reference-toplevel {
-  font-weight: bold;
-}
-
-a.toc-backref {
-  text-decoration: none;
-  color: #222; }
-
-a.link-seesrc {
-  color: #607c9f;
-  font-size: 0.9em;
-  font-style: italic; }
-
-a:hover,
-a:focus {
-  color: #607c9f;
-  text-decoration: underline; }
-
-a:hover span.Identifier {
-  color: #607c9f;
-}
-
-
-sub,
-sup {
-  position: relative;
-  font-size: 75%;
-  line-height: 0;
-  vertical-align: baseline; }
-
-sup {
-  top: -0.5em; }
-
-sub {
-  bottom: -0.25em; }
-
-img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-  border: 0;
-  -ms-interpolation-mode: bicubic; }
-
-@media print {
-  * {
-    color: black !important;
-    text-shadow: none !important;
-    background: transparent !important;
-    box-shadow: none !important; }
-
-  a,
-  a:visited {
-    text-decoration: underline; }
-
-  a[href]:after {
-    content: " (" attr(href) ")"; }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")"; }
-
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: ""; }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid; }
-
-  thead {
-    display: table-header-group; }
-
-  tr,
-  img {
-    page-break-inside: avoid; }
-
-  img {
-    max-width: 100% !important; }
-
-  @page {
-    margin: 0.5cm; }
-
-  h1 {
-    page-break-before: always; }
-
-  h1.title {
-    page-break-before: avoid; }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3; }
-
-  h2,
-  h3 {
-    page-break-after: avoid; }
-}
-
-
-p {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
-small {
-  font-size: 85%; }
-
-strong {
-  font-weight: 600;
-  font-size: 0.95em;
-  color: #3c3c3c;
-}
-
-em {
-  font-style: italic; }
-
-h1 {
-  font-size: 1.8em;
-  font-weight: 400;
-  padding-bottom: .25em;
-  border-bottom: 1px solid #aaa;
-  margin-top: 2.5em;
-  margin-bottom: 1em;
-  line-height: 1.2em; }
-
-h1.title {
-  padding-bottom: 1em;
-  border-bottom: 0px;
-  font-size: 2.5em;
-  text-align: center;
-  font-weight: 900;
-  margin-top: 0.75em;
-  margin-bottom: 0em;
-}
-
-h2 {
-  font-size: 1.3em;
-  margin-top: 2em; }
-
-h2.subtitle {
-  text-align: center; }
-
-h3 {
-  font-size: 1.125em;
-  font-style: italic;
-  margin-top: 1.5em; }
-
-h4 {
-  font-size: 1.125em;
-  margin-top: 1em; }
-
-h5 {
-  font-size: 1.125em;
-  margin-top: 0.75em; }
-
-h6 {
-  font-size: 1.1em; }
-
-
-ul,
-ol {
-  padding: 0;
-  margin-top: 0.5em;
-  margin-left: 0.75em; }
-
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin-bottom: 0;
-  margin-left: 1.25em; }
-
-li {
-    list-style-type: circle;
-}
-
-ul.simple-boot li {
-    list-style-type: none;
-    margin-left: 0em;
-    margin-bottom: 0.5em;
-}
-
-ol.simple > li, ul.simple > li {
-  margin-bottom: 0.25em;
-  margin-left: 0.4em }
-
-ul.simple.simple-toc > li {
-    margin-top: 1em;
-}
-
-ul.simple-toc {
-  list-style: none;
-  font-size: 0.9em;
-  margin-left: -0.3em;
-  margin-top: 1em; }
-
-ul.simple-toc > li {
-    list-style-type: none;
-}
-
-ul.simple-toc-section {
-  list-style-type: circle;
-  margin-left: 1em;
-  color: #6c9aae; }
-
-
-ol.arabic {
-  list-style: decimal; }
-
-ol.loweralpha {
-  list-style: lower-alpha; }
-
-ol.upperalpha {
-  list-style: upper-alpha; }
-
-ol.lowerroman {
-  list-style: lower-roman; }
-
-ol.upperroman {
-  list-style: upper-roman; }
-
-ul.auto-toc {
-  list-style-type: none; }
-
-
-dl {
-  margin-bottom: 1.5em; }
-
-dt {
-  margin-bottom: -0.5em;
-  margin-left: 0.0em; }
-
-dd {
-  margin-left: 2.0em;
-  margin-bottom: 3.0em;
-  margin-top: 0.5em; }
-
-
-hr {
-  margin: 2em 0;
-  border: 0;
-  border-top: 1px solid #aaa; }
-
-blockquote {
-  font-size: 0.9em;
-  font-style: italic;
-  padding-left: 0.5em;
-  margin-left: 0;
-  border-left: 5px solid #bbc;
-}
-
-.pre {
-  font-family: "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace;
-  font-weight: 500;
-  font-size: 0.85em;
-  background-color: #f0f3ff;
-  padding-left: 3px;
-  padding-right: 3px;
-  border-radius: 4px;
-}
-
-pre {
-  font-family: "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace;
-  color: #222;
-  font-weight: 500;
-  display: inline-block;
-  box-sizing: border-box;
-  min-width: 100%;
-  padding: 0.5em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  font-size: 0.85em;
-  white-space: pre !important;
-  overflow-y: hidden;
-  overflow-x: visible;
-  background-color: ghostwhite;
-  border: 1px solid #dde;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px; }
-
-.pre-scrollable {
-  max-height: 340px;
-  overflow-y: scroll; }
-
-
-/* Nim line-numbered tables */
-.line-nums-table {
-  width: 100%;
-  table-layout: fixed; }
-
-table.line-nums-table {
-  border-radius: 4px;
-  border: 1px solid #cccccc;
-  background-color: ghostwhite;
-  border-collapse: separate;
-  margin-top: 15px;
-  margin-bottom: 25px; }
-
-.line-nums-table tbody {
-  border: none; }
-
-.line-nums-table td pre {
-  border: none;
-  background-color: transparent; }
-
-.line-nums-table td.blob-line-nums {
-  width: 28px; }
-
-.line-nums-table td.blob-line-nums pre {
-  color: #b0b0b0;
-  -webkit-filter: opacity(75%);
-  text-align: right;
-  border-color: transparent;
-  background-color: transparent;
-  padding-left: 0px;
-  margin-left: 0px;
-  padding-right: 0px;
-  margin-right: 0px; }
-
-
-table {
-  max-width: 100%;
-  background-color: transparent;
-  margin-top: 0.5em;
-  margin-bottom: 1.5em;
-  border-collapse: collapse;
-  border-color: #ccc;
-  border-spacing: 0;
-  font-size: 0.9em;
-}
-
-table th, table td {
-  padding: 0px 0.5em 0px;
-}
-
-table th {
-  background-color: #e8e8e8;
-  font-weight: bold; }
-
-table th.docinfo-name {
-    background-color: transparent;
-}
-
-table tr:hover {
-  background-color: ghostwhite; }
-
-
-/* rst2html default used to remove borders from tables and images */
-.borderless, table.borderless td, table.borderless th {
-  border: 0; }
-
-table.borderless td, table.borderless th {
-  /* Override padding for "table.docutils td" with "! important".
-     The right padding separates the table cells. */
-  padding: 0 0.5em 0 0 !important; }
-
-.first {
-  /* Override more specific margin styles with "! important". */
-  margin-top: 0 !important; }
-
-.last, .with-subtitle {
-  margin-bottom: 0 !important; }
-
-.hidden {
-  display: none; }
-
-blockquote.epigraph {
-  margin: 2em 5em; }
-
-dl.docutils dd {
-  margin-bottom: 0.5em; }
-
-object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
-  overflow: hidden; }
-
-
-div.figure {
-  margin-left: 2em;
-  margin-right: 2em; }
-
-div.footer, div.header {
-  clear: both;
-  text-align: center;
-  color: #666;
-  font-size: smaller; }
-
-div.footer {
-    padding-top: 5em;
-}
-
-div.line-block {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em; }
-
-div.line-block div.line-block {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 1.5em; }
-
-div.topic {
-  margin: 2em; }
-
-div.search_results {
-  background-color: antiquewhite;
-  margin: 3em;
-  padding: 1em;
-  border: 1px solid #4d4d4d;
-}
-
-div#global-links ul {
-  margin-left: 0;
-  list-style-type: none;
-}
-
-div#global-links > simple-boot {
-    margin-left: 3em;
-}
-
-hr.docutils {
-  width: 75%; }
-
-img.align-left, .figure.align-left, object.align-left {
-  clear: left;
-  float: left;
-  margin-right: 1em; }
-
-img.align-right, .figure.align-right, object.align-right {
-  clear: right;
-  float: right;
-  margin-left: 1em; }
-
-img.align-center, .figure.align-center, object.align-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
-.align-left {
-  text-align: left; }
-
-.align-center {
-  clear: both;
-  text-align: center; }
-
-.align-right {
-  text-align: right; }
-
-/* reset inner alignment in figures */
-div.align-right {
-  text-align: inherit; }
-
-p.attribution {
-  text-align: right;
-  margin-left: 50%; }
-
-p.caption {
-  font-style: italic; }
-
-p.credits {
-  font-style: italic;
-  font-size: smaller; }
-
-p.label {
-  white-space: nowrap; }
-
-p.rubric {
-  font-weight: bold;
-  font-size: larger;
-  color: maroon;
-  text-align: center; }
-
-p.topic-title {
-  font-weight: bold; }
-
-pre.address {
-  margin-bottom: 0;
-  margin-top: 0;
-  font: inherit; }
-
-pre.literal-block, pre.doctest-block, pre.math, pre.code {
-  margin-left: 2em;
-  margin-right: 2em; }
-
-pre.code .ln {
-  color: grey; }
-
-/* line numbers */
-pre.code, code {
-  background-color: #eeeeee; }
-
-pre.code .comment, code .comment {
-  color: #5c6576; }
-
-pre.code .keyword, code .keyword {
-  color: #3B0D06;
-  font-weight: bold; }
-
-pre.code .literal.string, code .literal.string {
-  color: #0c5404; }
-
-pre.code .name.builtin, code .name.builtin {
-  color: #352b84; }
-
-pre.code .deleted, code .deleted {
-  background-color: #DEB0A1; }
-
-pre.code .inserted, code .inserted {
-  background-color: #A3D289; }
-
-span.classifier {
-  font-style: oblique; }
-
-span.classifier-delimiter {
-  font-weight: bold; }
-
-span.option {
-  white-space: nowrap; }
-
-span.problematic {
-  color: #b30000; }
-
-span.section-subtitle {
-  /* font-size relative to parent (h1..h6 element) */
-  font-size: 80%; }
-
-span.DecNumber {
-  color: #252dbe; }
-
-span.BinNumber {
-  color: #252dbe; }
-
-span.HexNumber {
-  color: #252dbe; }
-
-span.OctNumber {
-  color: #252dbe; }
-
-span.FloatNumber {
-  color: #252dbe; }
-
-span.Identifier {
-  color: #222; }
-
-span.Keyword {
-  font-weight: 600;
-  color: #5e8f60; }
-
-span.StringLit {
-  color: #a4255b; }
-
-span.LongStringLit {
-  color: #a4255b; }
-
-span.CharLit {
-  color: #a4255b; }
-
-span.EscapeSequence {
-  color: black; }
-
-span.Operator {
-  color: black; }
-
-span.Punctuation {
-  color: black; }
-
-span.Comment, span.LongComment {
-  font-style: italic;
-  font-weight: 400;
-  color: #484a86; }
-
-span.RegularExpression {
-  color: darkviolet; }
-
-span.TagStart {
-  color: darkviolet; }
-
-span.TagEnd {
-  color: darkviolet; }
-
-span.Key {
-  color: #252dbe; }
-
-span.Value {
-  color: #252dbe; }
-
-span.RawData {
-  color: #a4255b; }
-
-span.Assembler {
-  color: #252dbe; }
-
-span.Preprocessor {
-  color: #252dbe; }
-
-span.Directive {
-  color: #252dbe; }
-
-span.Command, span.Rule, span.Hyperlink, span.Label, span.Reference,
-span.Other {
-  color: black; }
-
-/* Pop type, const, proc, and iterator defs in nim def blocks */
-dt pre > span.Identifier, dt pre > span.Operator {
-  color: #155da4;
-  font-weight: 700; }
-
-dt pre > span.Keyword ~ span.Identifier, dt pre > span.Identifier ~ span.Identifier,
-dt pre > span.Operator ~ span.Identifier, dt pre > span.Other ~ span.Identifier {
-  color: inherit;
-  font-weight: inherit; }
-
-/* Nim sprite for the footer (taken from main page favicon) */
-.nim-sprite {
-  display: inline-block;
-  height: 16px;
-  width: 16px;
-  background-position: 0 0;
-  background-size: 16px 16px;
-  -webkit-filter: opacity(50%);
-  background-repeat: no-repeat;
-  background-image: url("data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA==");
-  margin-bottom: -5px; }
-
-span.pragmadots {
-  /* Position: relative frees us up to make the dots
-  look really nice without fucking up the layout and
-  causing bulging in the parent container */
-  position: relative;
-  /* 1px down looks slightly nicer */
-  top: 1px;
-  padding: 2px;
-  background-color: #e8e8e8;
-  border-radius: 4px;
-  margin: 0 2px;
-  cursor: pointer;
-  font-size: 0.8em;
-}
-
-span.pragmadots:hover {
-  background-color: #DBDBDB;
-}
-span.pragmawrap {
-  display: none;
-}
-
-span.attachedType {
-  display: none;
-  visibility: hidden;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="nimdoc.out.css">
 
 <script type="text/javascript" src="dochack.js"></script>
 
@@ -798,6 +33,37 @@ function main() {
       event.target.parentNode.nextElementSibling.style.display = "inline";
     }
   }
+
+  const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+  function switchTheme(e) {
+      if (e.target.checked) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+      } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+      }
+  }
+
+  toggleSwitch.addEventListener('change', switchTheme, false);
+
+
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.setAttribute('data-theme', "dark");
+    toggleSwitch.checked = true;
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    document.documentElement.setAttribute('data-theme', "light");
+    toggleSwitch.checked = false;
+  } else {
+    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+    if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+
+      if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+      }
+    }
+  }
 }
 </script>
 
@@ -808,6 +74,13 @@ function main() {
     <h1 class="title">Nim コンパイラの内部構造</h1>
     <div class="row">
   <div class="three columns">
+  <div class="theme-switch-wrapper">
+    <label class="theme-switch" for="checkbox">
+      <input type="checkbox" id="checkbox" />
+      <div class="slider round"></div>
+    </label>
+   &nbsp;&nbsp;&nbsp; <em>消灯</em>
+  </div>
   <div id="global-links">
     <ul class="simple-boot">
       <li>
@@ -830,10 +103,10 @@ function main() {
 <li><a class="reference" id="bootstrapping-the-compiler_toc" href="#bootstrapping-the-compiler">コンパイラのブートストラップ</a></li>
 <li><a class="reference" id="coding-guidelines_toc" href="#coding-guidelines">コーディングのガイドライン</a></li>
 <li><a class="reference" id="porting-to-new-platforms_toc" href="#porting-to-new-platforms">新しいプラットホームへの移植</a></li>
-<li><a class="reference" id="runtime-type-information_toc" href="#runtime-type-information">Runtime type information</a></li>
+<li><a class="reference" id="runtime-type-information_toc" href="#runtime-type-information">実行時型情報</a></li>
 <li><a class="reference" id="debugging-the-compiler_toc" href="#debugging-the-compiler">コンパイラのデバッグ</a></li>
 <li><a class="reference" id="the-compiler-s-architecture_toc" href="#the-compiler-s-architecture">コンパイラのアーキテクチャ</a></li>
-<ul class="simple"><li><a class="reference" id="the-compiler-s-architecture-short-description-of-nim-s-modules_toc" href="#the-compiler-s-architecture-short-description-of-nim-s-modules">Short description of Nim's modules</a></li>
+<ul class="simple"><li><a class="reference" id="the-compiler-s-architecture-short-description-of-nim-s-modules_toc" href="#the-compiler-s-architecture-short-description-of-nim-s-modules">Nim のモジュールの手短な概要</a></li>
 <li><a class="reference" id="the-compiler-s-architecture-the-syntax-tree_toc" href="#the-compiler-s-architecture-the-syntax-tree">The syntax tree</a></li>
 </ul><li><a class="reference" id="how-the-rtl-is-compiled_toc" href="#how-the-rtl-is-compiled">How the RTL is compiled</a></li>
 <li><a class="reference" id="compilation-cache_toc" href="#compilation-cache">Compilation cache</a></li>
@@ -862,11 +135,11 @@ function main() {
   <div id="tocRoot"></div>
   
   <p class="module-desc"><table class="docinfo" frame="void" rules="none"><col class="docinfo-name" /><col class="docinfo-content" /><tbody valign="top"><tr><th class="docinfo-name">作成者:</th><td> アンドレアス・ルンプフ</td></tr>
-<tr><th class="docinfo-name">バージョン:</th><td>  1.0.6</td></tr>
+<tr><th class="docinfo-name">バージョン:</th><td>  1.2.0</td></tr>
 </tbody></table><blockquote><p>"抽象化とは現実の上に成り立つ無知の階層化である。" -- リチャード・ガブリエル</p></blockquote>
 
 <h1><a class="toc-backref" id="directory-structure" href="#directory-structure">ディレクトリ構造</a></h1><p>Nim プロジェクトのディレクトリ構造は、</p>
-<table border="1" class="docutils"><tr><th>Path</th><th>用途</th></tr>
+<table border="1" class="docutils"><tr><th>パス</th><th>用途</th></tr>
 <tr><td><tt class="docutils literal"><span class="pre">bin</span></tt></td><td>生成されたバイナリファイル</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">build</span></tt></td><td>インストールで生成された C コード</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">compiler</span></tt></td><td>Nim コンパイラ本体です。このコードは Pascal で書いたブートストラップの移植版であるため、 Nim のコードとしては良いお手本 (poster child) <strong>ではない</strong>ことに注意してください</td></tr>
@@ -899,11 +172,11 @@ nim c koch.nim
 </ul>
 <p>詳しくは <a class="reference external" href="apis.html">API 命名仕様書</a>のドキュメンテーションを参照してください。</p>
 
-<h1><a class="toc-backref" id="porting-to-new-platforms" href="#porting-to-new-platforms">新しいプラットホームへの移植</a></h1><p>Porting Nim to a new architecture is pretty easy, since C is the most portable programming language (within certain limits) and Nim generates C code, porting the code generator is not necessary.</p>
-<p>POSIX-compliant systems on conventional hardware are usually pretty easy to port: Add the platform to <tt class="docutils literal"><span class="pre">platform</span></tt> (if it is not already listed there), check that the OS, System modules work and recompile Nim.</p>
-<p>The only case where things aren't as easy is when the garbage collector needs some assembler tweaking to work. The standard version of the GC uses C's <tt class="docutils literal"><span class="pre">setjmp</span></tt> function to store all registers on the hardware stack. It may be necessary that the new platform needs to replace this generic code by some assembler code.</p>
+<h1><a class="toc-backref" id="porting-to-new-platforms" href="#porting-to-new-platforms">新しいプラットホームへの移植</a></h1><p>Nim を新規アーキテクチャへ移植することはかなり簡単です。 C は高い移植性があるプログラミング言語 (ある程度の範囲内では) であり Nim は C コードを生成するため、コードジェネレータの移植は不要です。</p>
+<p>通常、 POSIX 規格準拠システムが搭載されている旧式のシステムすら移植はかなり簡単です。 <tt class="docutils literal"><span class="pre">platform</span></tt> (リストに未掲載の場合) へ プラットフォームを追加するには、 os, system モジュールの動作確認後に Nim の再コンパイルをしてください。</p>
+<p>唯一、難しいのはガーベジ・コレクタ処理箇所でのアセンブラ言語による微調整が必要なときです。ガーベジ・コレクタの標準版では全レジスタをハードウェア・スタックへストアするために C の <tt class="docutils literal"><span class="pre">setjmp</span></tt>関数を使います。新しいプラットフォームでは、この汎用コードをアセンブラのコードで書き換えることが必要になるかもしれません。</p>
 
-<h1><a class="toc-backref" id="runtime-type-information" href="#runtime-type-information">Runtime type information</a></h1><p><em>Runtime type information</em> (RTTI) is needed for several aspects of the Nim programming language:</p>
+<h1><a class="toc-backref" id="runtime-type-information" href="#runtime-type-information">実行時型情報</a></h1><p><em>Runtime type information</em> (RTTI) is needed for several aspects of the Nim programming language:</p>
 <dl class="docutils"><dt>Garbage collection</dt>
 <dd>The most important reason for RTTI. Generating traversal procedures produces bigger code and is likely to be slower on modern hardware as dynamic procedure binding is hard to predict.</dd>
 <dt>Complex assignments</dt>
@@ -911,44 +184,44 @@ nim c koch.nim
 </dl>
 <p>We already know the type information as a graph in the compiler. Thus we need to serialize this graph as RTTI for C code generation. Look at the file <tt class="docutils literal"><span class="pre">lib/system/hti.nim</span></tt> for more information.</p>
 
-<h1><a class="toc-backref" id="debugging-the-compiler" href="#debugging-the-compiler">コンパイラのデバッグ</a></h1><p>You can of course use GDB or Visual Studio to debug the compiler (via <tt class="docutils literal"><span class="pre">--debuginfo --lineDir:on</span></tt>). However, there are also lots of procs that aid in debugging:</p>
-<pre class="listing"><span class="Comment"># pretty prints the Nim AST</span>
+<h1><a class="toc-backref" id="debugging-the-compiler" href="#debugging-the-compiler">コンパイラのデバッグ</a></h1><p>もちろん、 GDB または Visual Studio でコンパイラのデバッグができます (<tt class="docutils literal"><span class="pre">--debuginfo --lineDir:on</span></tt> による)。また、デバッグ支援用のプロシージャもあります。</p>
+<pre class="listing"><span class="Comment"># Nim 抽象構文木 (AST) の整形出力</span>
 <span class="Identifier">echo</span> <span class="Identifier">renderTree</span><span class="Punctuation">(</span><span class="Identifier">someNode</span><span class="Punctuation">)</span>
-<span class="Comment"># outputs some JSON representation</span>
+<span class="Comment"># JSON 形式で出力</span>
 <span class="Identifier">debug</span><span class="Punctuation">(</span><span class="Identifier">someNode</span><span class="Punctuation">)</span>
-<span class="Comment"># pretty prints some type</span>
+<span class="Comment"># 型の整形出力</span>
 <span class="Identifier">echo</span> <span class="Identifier">typeToString</span><span class="Punctuation">(</span><span class="Identifier">someType</span><span class="Punctuation">)</span>
 <span class="Identifier">debug</span><span class="Punctuation">(</span><span class="Identifier">someType</span><span class="Punctuation">)</span>
 <span class="Identifier">echo</span> <span class="Identifier">symbol</span><span class="Operator">.</span><span class="Identifier">name</span><span class="Operator">.</span><span class="Identifier">s</span>
 <span class="Identifier">debug</span><span class="Punctuation">(</span><span class="Identifier">symbol</span><span class="Punctuation">)</span>
-<span class="Comment"># pretty prints the Nim ast, but annotates symbol IDs:</span>
+<span class="Comment"># シンボル ID による注釈付きで Nim 抽象構文木 (AST) の整形出力:</span>
 <span class="Identifier">echo</span> <span class="Identifier">renderTree</span><span class="Punctuation">(</span><span class="Identifier">someNode</span><span class="Punctuation">,</span> <span class="Punctuation">{</span><span class="Identifier">renderIds</span><span class="Punctuation">}</span><span class="Punctuation">)</span>
 <span class="Keyword">if</span> <span class="Identifier">n</span><span class="Operator">.</span><span class="Identifier">info</span> <span class="Operator">??</span> <span class="StringLit">"temp.nim"</span><span class="Punctuation">:</span>
-  <span class="Comment"># only output when it comes from "temp.nim"</span>
+  <span class="Comment"># "temp.nim" 由来であるときに限り出力します</span>
   <span class="Identifier">echo</span> <span class="Identifier">renderTree</span><span class="Punctuation">(</span><span class="Identifier">n</span><span class="Punctuation">)</span>
 <span class="Keyword">if</span> <span class="Identifier">n</span><span class="Operator">.</span><span class="Identifier">info</span> <span class="Operator">??</span> <span class="StringLit">"temp.nim"</span><span class="Punctuation">:</span>
-  <span class="Comment"># why does it process temp.nim here?</span>
-  <span class="Identifier">writeStackTrace</span><span class="Punctuation">(</span><span class="Punctuation">)</span></pre><p>To create a new compiler for each run, use <tt class="docutils literal"><span class="pre">koch temp</span></tt>:<pre>
+  <span class="Comment"># ここで temp.nim を処理する理由は？</span>
+  <span class="Identifier">writeStackTrace</span><span class="Punctuation">(</span><span class="Punctuation">)</span></pre><p>実行するたびに新しいコンパイラを作成するには、 <tt class="docutils literal"><span class="pre">koch temp</span></tt> を使います。<pre>
 ./koch temp c /tmp/test.nim</pre>
 </p>
-<p><tt class="docutils literal"><span class="pre">koch temp</span></tt> creates a debug build of the compiler, which is useful to create stacktraces for compiler debugging.</p>
-<p><tt class="docutils literal"><span class="pre">koch temp</span></tt> returns 125 as the exit code in case the compiler compilation fails. This exit code tells <tt class="docutils literal"><span class="pre">git bisect</span></tt> to skip the current commit.:<pre>
+<p><tt class="docutils literal"><span class="pre">koch temp</span></tt> はデバッグビルド版のコンパイラを作成します。これはコンパラのデバッグで実用的なスタックトレースを作成します。</p>
+<p><tt class="docutils literal"><span class="pre">koch temp</span></tt> で終了コード 125 が返されたときは、コンパイラ本体のコンパイルに失敗しています。この終了コードにより現在のコミットがスキップされているか判別するには <tt class="docutils literal"><span class="pre">git bisect</span></tt> を使います。<pre>
 git bisect start bad-commit good-commit
 git bisect run ./koch temp -r c test-source.nim</pre>
 </p>
 
-<h1><a class="toc-backref" id="the-compiler-s-architecture" href="#the-compiler-s-architecture">コンパイラのアーキテクチャ</a></h1><p>Nim uses the classic compiler architecture: A lexer/scanner feds tokens to a parser. The parser builds a syntax tree that is used by the code generator. This syntax tree is the interface between the parser and the code generator. It is essential to understand most of the compiler's code.</p>
-<p>In order to compile Nim correctly, type-checking has to be separated from parsing. Otherwise generics cannot work.</p>
+<h1><a class="toc-backref" id="the-compiler-s-architecture" href="#the-compiler-s-architecture">コンパイラのアーキテクチャ</a></h1><p>Nim は古典的コンパイラのアーキテクチャを採用しています: 字句解析器やスキャナのトークンをパーサへ渡します。パーサはコードジェネレータで使うシンタックスツリーを構築します。このシンタックスツリーはパーサとコードジェネレータ間のインターフェースです。コンパイラのコードの大部分を理解することは必要不可欠です。</p>
+<p>Nim で正確にコンパイルするために、構文解析から型検査を切り離しています。そうしなければ、ジェネリック型は動作しません。</p>
 
-<h2><a class="toc-backref" id="the-compiler-s-architecture-short-description-of-nim-s-modules" href="#the-compiler-s-architecture-short-description-of-nim-s-modules">Short description of Nim's modules</a></h2><table border="1" class="docutils"><tr><th>Module</th><th>Description</th></tr>
-<tr><td>nim</td><td>main module: parses the command line and calls <tt class="docutils literal"><span class="pre">main.MainCommand</span></tt></td></tr>
-<tr><td>main</td><td>implements the top-level command dispatching</td></tr>
+<h2><a class="toc-backref" id="the-compiler-s-architecture-short-description-of-nim-s-modules" href="#the-compiler-s-architecture-short-description-of-nim-s-modules">Nim のモジュールの手短な概要</a></h2><table border="1" class="docutils"><tr><th>モジュール</th><th>Description</th></tr>
+<tr><td>nim</td><td>nimmain モジュール: コマンドラインの解析と <tt class="docutils literal"><span class="pre">main.MainCommand</span></tt> の呼び出し</td></tr>
+<tr><td>main</td><td>最上位コマンド・ディスパッチングの実装</td></tr>
 <tr><td>nimconf</td><td>implements the config file reader</td></tr>
 <tr><td>syntaxes</td><td>dispatcher for the different parsers and filters</td></tr>
 <tr><td>filter_tmpl</td><td>standard template filter (<tt class="docutils literal"><span class="pre">#? stdtempl</span></tt>)</td></tr>
 <tr><td>lexbase</td><td>buffer handling of the lexical analyser</td></tr>
 <tr><td>lexer</td><td>lexical analyser</td></tr>
-<tr><td>parser</td><td>Nim's parser</td></tr>
+<tr><td>parser</td><td>Nim のパーサ</td></tr>
 <tr><td>renderer</td><td>Nim code renderer (AST back to its textual form)</td></tr>
 <tr><td>options</td><td>contains global and local compiler options</td></tr>
 <tr><td>ast</td><td>type definitions of the abstract syntax tree (AST) and node constructors</td></tr>
@@ -968,10 +241,10 @@ git bisect run ./koch temp -r c test-source.nim</pre>
 <tr><td>pragmas</td><td>semantic checking of pragmas</td></tr>
 <tr><td></td><td></td></tr>
 <tr><td>idents</td><td>implements a general mapping from identifiers to an internal representation (<tt class="docutils literal"><span class="pre">PIdent</span></tt>) that is used so that a simple id-comparison suffices to establish whether two Nim identifiers are equivalent</td></tr>
-<tr><td>ropes</td><td>implements long strings represented as trees for lazy evaluation; used mainly by the code generators</td></tr>
+<tr><td>ropes</td><td>遅延評価用の長大文字列表現によるツリーの実装。主にコードジェネレータで使います</td></tr>
 <tr><td></td><td></td></tr>
 <tr><td>transf</td><td>transformations on the AST that need to be done before code generation</td></tr>
-<tr><td>cgen</td><td>main file of the C code generator</td></tr>
+<tr><td>cgen</td><td>C コードジェネレータのメインファイル</td></tr>
 <tr><td>ccgutils</td><td>contains helpers for the C code generator</td></tr>
 <tr><td>ccgtypes</td><td>the generator for C types</td></tr>
 <tr><td>ccgstmts</td><td>the generator for statements</td></tr>
@@ -1227,7 +500,7 @@ for each page descriptor d:
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 生成日時: 2020年01月23日 午前17時25分36秒 (UTC)</small>
+        <small style="color: var(--hint);">Nim で作成しました。 生成日時: 2020年04月03日 午前12時34分31秒 (UTC)</small>
       </div>
     </div>
   </div>

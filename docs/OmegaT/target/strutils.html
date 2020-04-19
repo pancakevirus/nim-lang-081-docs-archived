@@ -18,772 +18,7 @@
 
 
 <title>strutils</title>
-<style type="text/css" >
-/*
-Stylesheet for use with Docutils/rst2html.
-
-See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
-customize this style sheet.
-
-Modified from Chad Skeeters' rst2html-style
-https://bitbucket.org/cskeeters/rst2html-style/
-
-Modified by Boyd Greenfield and narimiran
-*/
-
-html {
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
-
-body {
-  font-family: "Lato", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 1.125em;
-  line-height: 1.5;
-  color: #222;
-  background-color: #FCFCFC; }
-
-/* Skeleton grid */
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 1050px;
-  margin: 0 auto;
-  padding: 0;
-  box-sizing: border-box; }
-
-.column,
-.columns {
-  width: 100%;
-  float: left;
-  box-sizing: border-box;
-  margin-left: 1%;
-}
-
-.column:first-child,
-.columns:first-child {
-  margin-left: 0; }
-
-.three.columns {
-  width: 19%; }
-
-.nine.columns {
-  width: 80.0%; }
-
-.twelve.columns {
-  width: 100%;
-  margin-left: 0; }
-
-@media screen and (max-width: 860px) {
-  .three.columns {
-    display: none;
-  }
-  .nine.columns {
-    width: 98.0%;
-  }
-  body {
-    font-size: 1em;
-    line-height: 1.35;
-  }
-}
-
-cite {
-  font-style: italic !important; }
-
-
-/* Nim search input */
-div#searchInputDiv {
-  margin-bottom: 1em;
-}
-input#searchInput {
-  width: 80%;
-}
-
-/*
- * Some custom formatting for input forms.
- * This also fixes input form colors on Firefox with a dark system theme on Linux.
- */
-input {
-  -moz-appearance: none;
-  color: #333;
-  background-color: #f8f8f8;
-  border: 1px solid #aaa;
-  font-family: "Lato", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-  font-size: 0.9em;
-  padding: 6px;
-}
-input:focus {
-  border: 1px solid #1fa0eb;
-  box-shadow: 0 0 2px #1fa0eb;
-}
-
-/* Docgen styles */
-/* Links */
-a {
-  color: #07b;
-  text-decoration: none;
-}
-
-a span.Identifier {
-  text-decoration: underline;
-  text-decoration-color: #aab;
-}
-
-a.reference-toplevel {
-  font-weight: bold;
-}
-
-a.toc-backref {
-  text-decoration: none;
-  color: #222; }
-
-a.link-seesrc {
-  color: #607c9f;
-  font-size: 0.9em;
-  font-style: italic; }
-
-a:hover,
-a:focus {
-  color: #607c9f;
-  text-decoration: underline; }
-
-a:hover span.Identifier {
-  color: #607c9f;
-}
-
-
-sub,
-sup {
-  position: relative;
-  font-size: 75%;
-  line-height: 0;
-  vertical-align: baseline; }
-
-sup {
-  top: -0.5em; }
-
-sub {
-  bottom: -0.25em; }
-
-img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-  border: 0;
-  -ms-interpolation-mode: bicubic; }
-
-@media print {
-  * {
-    color: black !important;
-    text-shadow: none !important;
-    background: transparent !important;
-    box-shadow: none !important; }
-
-  a,
-  a:visited {
-    text-decoration: underline; }
-
-  a[href]:after {
-    content: " (" attr(href) ")"; }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")"; }
-
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: ""; }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid; }
-
-  thead {
-    display: table-header-group; }
-
-  tr,
-  img {
-    page-break-inside: avoid; }
-
-  img {
-    max-width: 100% !important; }
-
-  @page {
-    margin: 0.5cm; }
-
-  h1 {
-    page-break-before: always; }
-
-  h1.title {
-    page-break-before: avoid; }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3; }
-
-  h2,
-  h3 {
-    page-break-after: avoid; }
-}
-
-
-p {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
-small {
-  font-size: 85%; }
-
-strong {
-  font-weight: 600;
-  font-size: 0.95em;
-  color: #3c3c3c;
-}
-
-em {
-  font-style: italic; }
-
-h1 {
-  font-size: 1.8em;
-  font-weight: 400;
-  padding-bottom: .25em;
-  border-bottom: 1px solid #aaa;
-  margin-top: 2.5em;
-  margin-bottom: 1em;
-  line-height: 1.2em; }
-
-h1.title {
-  padding-bottom: 1em;
-  border-bottom: 0px;
-  font-size: 2.5em;
-  text-align: center;
-  font-weight: 900;
-  margin-top: 0.75em;
-  margin-bottom: 0em;
-}
-
-h2 {
-  font-size: 1.3em;
-  margin-top: 2em; }
-
-h2.subtitle {
-  text-align: center; }
-
-h3 {
-  font-size: 1.125em;
-  font-style: italic;
-  margin-top: 1.5em; }
-
-h4 {
-  font-size: 1.125em;
-  margin-top: 1em; }
-
-h5 {
-  font-size: 1.125em;
-  margin-top: 0.75em; }
-
-h6 {
-  font-size: 1.1em; }
-
-
-ul,
-ol {
-  padding: 0;
-  margin-top: 0.5em;
-  margin-left: 0.75em; }
-
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin-bottom: 0;
-  margin-left: 1.25em; }
-
-li {
-    list-style-type: circle;
-}
-
-ul.simple-boot li {
-    list-style-type: none;
-    margin-left: 0em;
-    margin-bottom: 0.5em;
-}
-
-ol.simple > li, ul.simple > li {
-  margin-bottom: 0.25em;
-  margin-left: 0.4em }
-
-ul.simple.simple-toc > li {
-    margin-top: 1em;
-}
-
-ul.simple-toc {
-  list-style: none;
-  font-size: 0.9em;
-  margin-left: -0.3em;
-  margin-top: 1em; }
-
-ul.simple-toc > li {
-    list-style-type: none;
-}
-
-ul.simple-toc-section {
-  list-style-type: circle;
-  margin-left: 1em;
-  color: #6c9aae; }
-
-
-ol.arabic {
-  list-style: decimal; }
-
-ol.loweralpha {
-  list-style: lower-alpha; }
-
-ol.upperalpha {
-  list-style: upper-alpha; }
-
-ol.lowerroman {
-  list-style: lower-roman; }
-
-ol.upperroman {
-  list-style: upper-roman; }
-
-ul.auto-toc {
-  list-style-type: none; }
-
-
-dl {
-  margin-bottom: 1.5em; }
-
-dt {
-  margin-bottom: -0.5em;
-  margin-left: 0.0em; }
-
-dd {
-  margin-left: 2.0em;
-  margin-bottom: 3.0em;
-  margin-top: 0.5em; }
-
-
-hr {
-  margin: 2em 0;
-  border: 0;
-  border-top: 1px solid #aaa; }
-
-blockquote {
-  font-size: 0.9em;
-  font-style: italic;
-  padding-left: 0.5em;
-  margin-left: 0;
-  border-left: 5px solid #bbc;
-}
-
-.pre {
-  font-family: "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace;
-  font-weight: 500;
-  font-size: 0.85em;
-  background-color: #f0f3ff;
-  padding-left: 3px;
-  padding-right: 3px;
-  border-radius: 4px;
-}
-
-pre {
-  font-family: "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace;
-  color: #222;
-  font-weight: 500;
-  display: inline-block;
-  box-sizing: border-box;
-  min-width: 100%;
-  padding: 0.5em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  font-size: 0.85em;
-  white-space: pre !important;
-  overflow-y: hidden;
-  overflow-x: visible;
-  background-color: ghostwhite;
-  border: 1px solid #dde;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px; }
-
-.pre-scrollable {
-  max-height: 340px;
-  overflow-y: scroll; }
-
-
-/* Nim line-numbered tables */
-.line-nums-table {
-  width: 100%;
-  table-layout: fixed; }
-
-table.line-nums-table {
-  border-radius: 4px;
-  border: 1px solid #cccccc;
-  background-color: ghostwhite;
-  border-collapse: separate;
-  margin-top: 15px;
-  margin-bottom: 25px; }
-
-.line-nums-table tbody {
-  border: none; }
-
-.line-nums-table td pre {
-  border: none;
-  background-color: transparent; }
-
-.line-nums-table td.blob-line-nums {
-  width: 28px; }
-
-.line-nums-table td.blob-line-nums pre {
-  color: #b0b0b0;
-  -webkit-filter: opacity(75%);
-  text-align: right;
-  border-color: transparent;
-  background-color: transparent;
-  padding-left: 0px;
-  margin-left: 0px;
-  padding-right: 0px;
-  margin-right: 0px; }
-
-
-table {
-  max-width: 100%;
-  background-color: transparent;
-  margin-top: 0.5em;
-  margin-bottom: 1.5em;
-  border-collapse: collapse;
-  border-color: #ccc;
-  border-spacing: 0;
-  font-size: 0.9em;
-}
-
-table th, table td {
-  padding: 0px 0.5em 0px;
-}
-
-table th {
-  background-color: #e8e8e8;
-  font-weight: bold; }
-
-table th.docinfo-name {
-    background-color: transparent;
-}
-
-table tr:hover {
-  background-color: ghostwhite; }
-
-
-/* rst2html default used to remove borders from tables and images */
-.borderless, table.borderless td, table.borderless th {
-  border: 0; }
-
-table.borderless td, table.borderless th {
-  /* Override padding for "table.docutils td" with "! important".
-     The right padding separates the table cells. */
-  padding: 0 0.5em 0 0 !important; }
-
-.first {
-  /* Override more specific margin styles with "! important". */
-  margin-top: 0 !important; }
-
-.last, .with-subtitle {
-  margin-bottom: 0 !important; }
-
-.hidden {
-  display: none; }
-
-blockquote.epigraph {
-  margin: 2em 5em; }
-
-dl.docutils dd {
-  margin-bottom: 0.5em; }
-
-object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
-  overflow: hidden; }
-
-
-div.figure {
-  margin-left: 2em;
-  margin-right: 2em; }
-
-div.footer, div.header {
-  clear: both;
-  text-align: center;
-  color: #666;
-  font-size: smaller; }
-
-div.footer {
-    padding-top: 5em;
-}
-
-div.line-block {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em; }
-
-div.line-block div.line-block {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 1.5em; }
-
-div.topic {
-  margin: 2em; }
-
-div.search_results {
-  background-color: antiquewhite;
-  margin: 3em;
-  padding: 1em;
-  border: 1px solid #4d4d4d;
-}
-
-div#global-links ul {
-  margin-left: 0;
-  list-style-type: none;
-}
-
-div#global-links > simple-boot {
-    margin-left: 3em;
-}
-
-hr.docutils {
-  width: 75%; }
-
-img.align-left, .figure.align-left, object.align-left {
-  clear: left;
-  float: left;
-  margin-right: 1em; }
-
-img.align-right, .figure.align-right, object.align-right {
-  clear: right;
-  float: right;
-  margin-left: 1em; }
-
-img.align-center, .figure.align-center, object.align-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
-.align-left {
-  text-align: left; }
-
-.align-center {
-  clear: both;
-  text-align: center; }
-
-.align-right {
-  text-align: right; }
-
-/* reset inner alignment in figures */
-div.align-right {
-  text-align: inherit; }
-
-p.attribution {
-  text-align: right;
-  margin-left: 50%; }
-
-p.caption {
-  font-style: italic; }
-
-p.credits {
-  font-style: italic;
-  font-size: smaller; }
-
-p.label {
-  white-space: nowrap; }
-
-p.rubric {
-  font-weight: bold;
-  font-size: larger;
-  color: maroon;
-  text-align: center; }
-
-p.topic-title {
-  font-weight: bold; }
-
-pre.address {
-  margin-bottom: 0;
-  margin-top: 0;
-  font: inherit; }
-
-pre.literal-block, pre.doctest-block, pre.math, pre.code {
-  margin-left: 2em;
-  margin-right: 2em; }
-
-pre.code .ln {
-  color: grey; }
-
-/* line numbers */
-pre.code, code {
-  background-color: #eeeeee; }
-
-pre.code .comment, code .comment {
-  color: #5c6576; }
-
-pre.code .keyword, code .keyword {
-  color: #3B0D06;
-  font-weight: bold; }
-
-pre.code .literal.string, code .literal.string {
-  color: #0c5404; }
-
-pre.code .name.builtin, code .name.builtin {
-  color: #352b84; }
-
-pre.code .deleted, code .deleted {
-  background-color: #DEB0A1; }
-
-pre.code .inserted, code .inserted {
-  background-color: #A3D289; }
-
-span.classifier {
-  font-style: oblique; }
-
-span.classifier-delimiter {
-  font-weight: bold; }
-
-span.option {
-  white-space: nowrap; }
-
-span.problematic {
-  color: #b30000; }
-
-span.section-subtitle {
-  /* font-size relative to parent (h1..h6 element) */
-  font-size: 80%; }
-
-span.DecNumber {
-  color: #252dbe; }
-
-span.BinNumber {
-  color: #252dbe; }
-
-span.HexNumber {
-  color: #252dbe; }
-
-span.OctNumber {
-  color: #252dbe; }
-
-span.FloatNumber {
-  color: #252dbe; }
-
-span.Identifier {
-  color: #222; }
-
-span.Keyword {
-  font-weight: 600;
-  color: #5e8f60; }
-
-span.StringLit {
-  color: #a4255b; }
-
-span.LongStringLit {
-  color: #a4255b; }
-
-span.CharLit {
-  color: #a4255b; }
-
-span.EscapeSequence {
-  color: black; }
-
-span.Operator {
-  color: black; }
-
-span.Punctuation {
-  color: black; }
-
-span.Comment, span.LongComment {
-  font-style: italic;
-  font-weight: 400;
-  color: #484a86; }
-
-span.RegularExpression {
-  color: darkviolet; }
-
-span.TagStart {
-  color: darkviolet; }
-
-span.TagEnd {
-  color: darkviolet; }
-
-span.Key {
-  color: #252dbe; }
-
-span.Value {
-  color: #252dbe; }
-
-span.RawData {
-  color: #a4255b; }
-
-span.Assembler {
-  color: #252dbe; }
-
-span.Preprocessor {
-  color: #252dbe; }
-
-span.Directive {
-  color: #252dbe; }
-
-span.Command, span.Rule, span.Hyperlink, span.Label, span.Reference,
-span.Other {
-  color: black; }
-
-/* Pop type, const, proc, and iterator defs in nim def blocks */
-dt pre > span.Identifier, dt pre > span.Operator {
-  color: #155da4;
-  font-weight: 700; }
-
-dt pre > span.Keyword ~ span.Identifier, dt pre > span.Identifier ~ span.Identifier,
-dt pre > span.Operator ~ span.Identifier, dt pre > span.Other ~ span.Identifier {
-  color: inherit;
-  font-weight: inherit; }
-
-/* Nim sprite for the footer (taken from main page favicon) */
-.nim-sprite {
-  display: inline-block;
-  height: 16px;
-  width: 16px;
-  background-position: 0 0;
-  background-size: 16px 16px;
-  -webkit-filter: opacity(50%);
-  background-repeat: no-repeat;
-  background-image: url("data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA==");
-  margin-bottom: -5px; }
-
-span.pragmadots {
-  /* Position: relative frees us up to make the dots
-  look really nice without fucking up the layout and
-  causing bulging in the parent container */
-  position: relative;
-  /* 1px down looks slightly nicer */
-  top: 1px;
-  padding: 2px;
-  background-color: #e8e8e8;
-  border-radius: 4px;
-  margin: 0 2px;
-  cursor: pointer;
-  font-size: 0.8em;
-}
-
-span.pragmadots:hover {
-  background-color: #DBDBDB;
-}
-span.pragmawrap {
-  display: none;
-}
-
-span.attachedType {
-  display: none;
-  visibility: hidden;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="nimdoc.out.css">
 
 <script type="text/javascript" src="dochack.js"></script>
 
@@ -798,6 +33,37 @@ function main() {
       event.target.parentNode.nextElementSibling.style.display = "inline";
     }
   }
+
+  const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+  function switchTheme(e) {
+      if (e.target.checked) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+      } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+      }
+  }
+
+  toggleSwitch.addEventListener('change', switchTheme, false);
+
+
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.setAttribute('data-theme', "dark");
+    toggleSwitch.checked = true;
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    document.documentElement.setAttribute('data-theme', "light");
+    toggleSwitch.checked = false;
+  } else {
+    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+    if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+
+      if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+      }
+    }
+  }
 }
 </script>
 
@@ -808,6 +74,13 @@ function main() {
     <h1 class="title">strutils</h1>
     <div class="row">
   <div class="three columns">
+  <div class="theme-switch-wrapper">
+    <label class="theme-switch" for="checkbox">
+      <input type="checkbox" id="checkbox" />
+      <div class="slider round"></div>
+    </label>
+    &nbsp;&nbsp;&nbsp; <em>消灯</em>
+  </div>
   <div id="global-links">
     <ul class="simple-boot">
       <li>
@@ -1070,8 +343,8 @@ function main() {
   <li><a class="reference" href="#formatFloat%2Cfloat%2CFloatFormatMode%2Crange%5B%5D%2Cchar"
     title="formatFloat(f: float; format: FloatFormatMode = ffDefault;
             precision: range[-1 .. 32] = 16; decimalSep = '.'): string"><wbr />format<wbr />Float<span class="attachedType">FloatFormatMode</span></a></li>
-  <li><a class="reference" href="#trimZeros%2Cstring"
-    title="trimZeros(x: var string)"><wbr />trim<wbr />Zeros<span class="attachedType"></span></a></li>
+  <li><a class="reference" href="#trimZeros%2Cstring%2Cchar"
+    title="trimZeros(x: var string; decimalSep = '.')"><wbr />trim<wbr />Zeros<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#formatSize%2Cint64%2Cchar"
     title="formatSize(bytes: int64; decimalSep = '.'; prefix = bpIEC; includeSpace = false): string"><wbr />format<wbr />Size<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#formatEng%2CBiggestFloat%2Crange%5B%5D%2Cbool%2Cbool%2Cstring%2Cchar"
@@ -1089,27 +362,10 @@ function main() {
     title="strip(s: string; leading = true; trailing = true; chars: set[char] = Whitespace): string"><wbr />strip<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#stripLineEnd%2Cstring"
     title="stripLineEnd(s: var string)"><wbr />strip<wbr />Line<wbr />End<span class="attachedType"></span></a></li>
-  <li><a class="reference" href="#editDistance%2Cstring%2Cstring"
-    title="editDistance(a, b: string): int"><wbr />edit<wbr />Distance<span class="attachedType"></span></a></li>
-  <li><a class="reference" href="#isNilOrEmpty%2Cstring"
-    title="isNilOrEmpty(s: string): bool"><wbr />is<wbr />Nil<wbr />Or<wbr />Empty<span class="attachedType"></span></a></li>
+  <li><a class="reference" href="#isEmptyOrWhitespace%2Cstring"
+    title="isEmptyOrWhitespace(s: string): bool"><wbr />is<wbr />Empty<wbr />Or<wbr />Whitespace<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#isNilOrWhitespace%2Cstring"
     title="isNilOrWhitespace(s: string): bool"><wbr />is<wbr />Nil<wbr />Or<wbr />Whitespace<span class="attachedType"></span></a></li>
-  <li><a class="reference" href="#isAlphaAscii%2Cstring"
-    title="isAlphaAscii(s: string): bool"><wbr />is<wbr />Alpha<wbr />Ascii<span class="attachedType"></span></a></li>
-  <li><a class="reference" href="#isAlphaNumeric%2Cstring"
-    title="isAlphaNumeric(s: string): bool"><wbr />is<wbr />Alpha<wbr />Numeric<span class="attachedType"></span></a></li>
-  <li><a class="reference" href="#isDigit%2Cstring"
-    title="isDigit(s: string): bool"><wbr />is<wbr />Digit<span class="attachedType"></span></a></li>
-  <li><a class="reference" href="#isSpaceAscii%2Cstring"
-    title="isSpaceAscii(s: string): bool"><wbr />is<wbr />Space<wbr />Ascii<span class="attachedType"></span></a></li>
-  <li><a class="reference" href="#isLowerAscii%2Cstring%2Cbool"
-    title="isLowerAscii(s: string; skipNonAlpha: bool): bool"><wbr />is<wbr />Lower<wbr />Ascii<span class="attachedType"></span></a></li>
-  <li><a class="reference" href="#isUpperAscii%2Cstring%2Cbool"
-    title="isUpperAscii(s: string; skipNonAlpha: bool): bool"><wbr />is<wbr />Upper<wbr />Ascii<span class="attachedType"></span></a></li>
-  <li><a class="reference" href="#wordWrap%2Cstring%2Cint%2Cset%5Bchar%5D%2Cstring"
-    title='wordWrap(s: string; maxLineWidth = 80; splitLongWords = true;
-         seps: set[char] = Whitespace; newLine = "\n"): string'><wbr />word<wbr />Wrap<span class="attachedType"></span></a></li>
 
   </ul>
 </li>
@@ -1208,8 +464,8 @@ function main() {
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1798"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1798" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1786"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1786" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="FloatFormatMode"></a>
@@ -1223,9 +479,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 the different modes of floating point formatting
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2296"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2284"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2296" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2284" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="BinaryPrefixMode"></a>
@@ -1237,9 +493,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 the different names for binary prefixes
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2425"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2415"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2425" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2415" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -1255,9 +511,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 All the characters that count as whitespace (space, tab, vertical tab, carriage return, new line, form feed)
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L99"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L86"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L99" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L86" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="Letters"></a>
@@ -1268,9 +524,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 the set of letters
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L103"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L90"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L103" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L90" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="Digits"></a>
@@ -1281,9 +537,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 the set of digits
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L106"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L93"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L106" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L93" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="HexDigits"></a>
@@ -1294,9 +550,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 the set of hexadecimal digits
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L109"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L96"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L109" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L96" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="IdentChars"></a>
@@ -1307,9 +563,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 the set of characters an identifier can consist of
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L112"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L99"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L112" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L99" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="IdentStartChars"></a>
@@ -1320,9 +576,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 the set of characters an identifier can start with
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L115"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L102"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L115" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L102" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="Newlines"></a>
@@ -1333,9 +589,9 @@ class="link-seesrc" target="_blank">Source</a>
 
 the set of characters a newline terminator can start with (carriage return, line feed)
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L118"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L105"
 class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L118" class="link-seesrc" target="_blank" >Edit</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L105" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 <a id="AllChars"></a>
@@ -1348,8 +604,8 @@ class="link-seesrc" target="_blank">Source</a>
 <span class="Identifier">doAssert</span> <span class="StringLit">"01234"</span><span class="Operator">.</span><span class="Identifier">find</span><span class="Punctuation">(</span><span class="Identifier">invalid</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="Operator">-</span><span class="DecNumber">1</span>
 <span class="Identifier">doAssert</span> <span class="StringLit">"01A34"</span><span class="Operator">.</span><span class="Identifier">find</span><span class="Punctuation">(</span><span class="Identifier">invalid</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">2</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L122"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L122" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L109"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L109" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 
@@ -1370,8 +626,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">isAlphaAscii</span><span class="Other">(</span><span class="CharLit">'E'</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">true</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">isAlphaAscii</span><span class="Other">(</span><span class="CharLit">'8'</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">false</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L134"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L134" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L121"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L121" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="isAlphaNumeric,char"></a>
@@ -1388,8 +644,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">isAlphaNumeric</span><span class="Other">(</span><span class="CharLit">'8'</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">true</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">isAlphaNumeric</span><span class="Other">(</span><span class="CharLit">' '</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">false</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L146"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L146" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L133"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L133" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="isDigit,char"></a>
@@ -1404,8 +660,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">isDigit</span><span class="Other">(</span><span class="CharLit">'n'</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">false</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">isDigit</span><span class="Other">(</span><span class="CharLit">'8'</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">true</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L157"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L157" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L144"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L144" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="isSpaceAscii,char"></a>
@@ -1422,8 +678,8 @@ Checks whether or not <tt class="docutils literal"><span class="pre">c</span></t
 <span class="Identifier">doAssert</span> <span class="Identifier">isSpaceAscii</span><span class="Other">(</span><span class="CharLit">' '</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">true</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">isSpaceAscii</span><span class="Other">(</span><span class="CharLit">'\t'</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">true</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L167"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L167" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L154"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L154" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="isLowerAscii,char"></a>
@@ -1442,8 +698,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">isLowerAscii</span><span class="Other">(</span><span class="CharLit">'E'</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">false</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">isLowerAscii</span><span class="Other">(</span><span class="CharLit">'7'</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">false</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L176"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L176" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L163"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L163" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="isUpperAscii,char"></a>
@@ -1462,8 +718,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">isUpperAscii</span><span class="Other">(</span><span class="CharLit">'E'</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">true</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">isUpperAscii</span><span class="Other">(</span><span class="CharLit">'7'</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">false</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L191"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L191" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L178"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L178" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="toLowerAscii,char"></a>
@@ -1482,8 +738,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">toLowerAscii</span><span class="Other">(</span><span class="CharLit">'A'</span><span class="Other">)</span> <span class="Operator">==</span> <span class="CharLit">'a'</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">toLowerAscii</span><span class="Other">(</span><span class="CharLit">'e'</span><span class="Other">)</span> <span class="Operator">==</span> <span class="CharLit">'e'</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L207"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L207" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L194"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L194" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="toLowerAscii,string"></a>
@@ -1501,8 +757,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">toLowerAscii</span><span class="Other">(</span><span class="StringLit">"FooBar!"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"foobar!"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L231"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L231" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L218"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L218" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="toUpperAscii,char"></a>
@@ -1522,8 +778,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">toUpperAscii</span><span class="Other">(</span><span class="CharLit">'a'</span><span class="Other">)</span> <span class="Operator">==</span> <span class="CharLit">'A'</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">toUpperAscii</span><span class="Other">(</span><span class="CharLit">'E'</span><span class="Other">)</span> <span class="Operator">==</span> <span class="CharLit">'E'</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L245"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L245" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L232"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L232" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="toUpperAscii,string"></a>
@@ -1541,8 +797,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">toUpperAscii</span><span class="Other">(</span><span class="StringLit">"FooBar!"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"FOOBAR!"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L265"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L265" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L252"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L252" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="capitalizeAscii,string"></a>
@@ -1561,8 +817,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">capitalizeAscii</span><span class="Other">(</span><span class="StringLit">"foo"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"Foo"</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">capitalizeAscii</span><span class="Other">(</span><span class="StringLit">"-bar"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"-bar"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L279"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L279" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L266"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L266" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="normalize,string"></a>
@@ -1580,8 +836,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">normalize</span><span class="Other">(</span><span class="StringLit">"Foo_bar"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"foobar"</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">normalize</span><span class="Other">(</span><span class="StringLit">"Foo Bar"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"foo bar"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L294"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L294" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L281"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L281" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="cmpIgnoreCase,string,string"></a>
@@ -1590,16 +846,14 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                                    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Compares two strings in a case insensitive manner. Returns:<p>0 if a == b<br />&lt; 0 if a &lt; b<br />&gt; 0 if a &gt; b<br /></p>
+英数大小文字同一視で文字列同士を比較します。返値:<p>0 if a == b<br />&lt; 0 if a &lt; b<br />&gt; 0 if a &gt; b<br /></p>
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">cmpIgnoreCase</span><span class="Other">(</span><span class="StringLit">"FooBar"</span><span class="Other">,</span> <span class="StringLit">"foobar"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="DecNumber">0</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">cmpIgnoreCase</span><span class="Other">(</span><span class="StringLit">"bar"</span><span class="Other">,</span> <span class="StringLit">"Foo"</span><span class="Other">)</span> <span class="Operator">&lt;</span> <span class="DecNumber">0</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">cmpIgnoreCase</span><span class="Other">(</span><span class="StringLit">"Foo5"</span><span class="Other">,</span> <span class="StringLit">"foo4"</span><span class="Other">)</span> <span class="Operator">&gt;</span> <span class="DecNumber">0</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L317"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L317" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L304"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L304" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="cmpIgnoreStyle,string,string"></a>
@@ -1608,15 +862,15 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                                     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Semantically the same as <tt class="docutils literal"><span class="pre">cmp(normalize(a), normalize(b))</span></tt>. It is just optimized to not allocate temporary strings. This should NOT be used to compare Nim identifier names. Use <a class="reference external" href="macros.html#eqIdent,string,string">macros.eqIdent</a> for that.</p>
-<p>Returns:</p>
+<p>Semantically the same as <tt class="docutils literal"><span class="pre">cmp(normalize(a), normalize(b))</span></tt>. つまり、一時作業用の文字列を割り当てずに最適化を行います。これは Nim の識別名との比較では使用してはいけません。Use <a class="reference external" href="macros.html#eqIdent,string,string">macros.eqIdent</a> for that.</p>
+<p>返値:</p>
 <p>0 if a == b<br />&lt; 0 if a &lt; b<br />&gt; 0 if a &gt; b<br /></p>
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">cmpIgnoreStyle</span><span class="Other">(</span><span class="StringLit">"foo_bar"</span><span class="Other">,</span> <span class="StringLit">"FooBar"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="DecNumber">0</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">cmpIgnoreStyle</span><span class="Other">(</span><span class="StringLit">"foo_bar_5"</span><span class="Other">,</span> <span class="StringLit">"FooBar4"</span><span class="Other">)</span> <span class="Operator">&gt;</span> <span class="DecNumber">0</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L339"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L339" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L326"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L326" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="split,string,char,int"></a>
@@ -1636,8 +890,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="StringLit">"a,b,c"</span><span class="Other">.</span><span class="Identifier">split</span><span class="Other">(</span><span class="CharLit">','</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Operator">@</span><span class="Other">[</span><span class="StringLit">"a"</span><span class="Other">,</span> <span class="StringLit">"b"</span><span class="Other">,</span> <span class="StringLit">"c"</span><span class="Other">]</span>
 <span class="Identifier">doAssert</span> <span class="StringLit">""</span><span class="Other">.</span><span class="Identifier">split</span><span class="Other">(</span><span class="CharLit">' '</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Operator">@</span><span class="Other">[</span><span class="StringLit">""</span><span class="Other">]</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L720"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L720" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L707"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L707" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="split,string,set[char],int"></a>
@@ -1657,8 +911,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="StringLit">"a,b;c"</span><span class="Other">.</span><span class="Identifier">split</span><span class="Other">(</span><span class="Other">{</span><span class="CharLit">','</span><span class="Other">,</span> <span class="CharLit">';'</span><span class="Other">}</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Operator">@</span><span class="Other">[</span><span class="StringLit">"a"</span><span class="Other">,</span> <span class="StringLit">"b"</span><span class="Other">,</span> <span class="StringLit">"c"</span><span class="Other">]</span>
 <span class="Identifier">doAssert</span> <span class="StringLit">""</span><span class="Other">.</span><span class="Identifier">split</span><span class="Other">(</span><span class="Other">{</span><span class="CharLit">' '</span><span class="Other">}</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Operator">@</span><span class="Other">[</span><span class="StringLit">""</span><span class="Other">]</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L735"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L735" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L722"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L722" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="split,string,string,int"></a>
@@ -1685,8 +939,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="StringLit">"a  largely    spaced sentence"</span><span class="Other">.</span><span class="Identifier">split</span><span class="Other">(</span><span class="StringLit">" "</span><span class="Other">,</span> <span class="Identifier">maxsplit</span> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">)</span> <span class="Operator">==</span>
     <span class="Operator">@</span><span class="Other">[</span><span class="StringLit">"a"</span><span class="Other">,</span> <span class="StringLit">" largely    spaced sentence"</span><span class="Other">]</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L750"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L750" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L737"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L737" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="rsplit,string,char,int"></a>
@@ -1706,8 +960,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L773"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L773" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L760"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L760" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="rsplit,string,set[char],int"></a>
@@ -1727,8 +981,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L800"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L800" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L787"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L787" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="rsplit,string,string,int"></a>
@@ -1757,8 +1011,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="StringLit">"a  largely    spaced sentence"</span><span class="Other">.</span><span class="Identifier">rsplit</span><span class="Other">(</span><span class="StringLit">" "</span><span class="Other">)</span> <span class="Operator">==</span>
     <span class="Operator">@</span><span class="Other">[</span><span class="StringLit">"a"</span><span class="Other">,</span> <span class="StringLit">""</span><span class="Other">,</span> <span class="StringLit">"largely"</span><span class="Other">,</span> <span class="StringLit">""</span><span class="Other">,</span> <span class="StringLit">""</span><span class="Other">,</span> <span class="StringLit">""</span><span class="Other">,</span> <span class="StringLit">"spaced"</span><span class="Other">,</span> <span class="StringLit">"sentence"</span><span class="Other">]</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L828"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L828" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L815"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L815" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="splitLines,string"></a>
@@ -1774,8 +1028,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L864"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L864" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L851"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L851" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="splitWhitespace,string,int"></a>
@@ -1790,8 +1044,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L875"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L875" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L862"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L862" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="toBin,BiggestInt,Positive"></a>
@@ -1810,8 +1064,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">b</span><span class="Other">.</span><span class="Identifier">toBin</span><span class="Other">(</span><span class="DecNumber">8</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"00000001"</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">b</span><span class="Other">.</span><span class="Identifier">toBin</span><span class="Other">(</span><span class="DecNumber">9</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"100000001"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L885"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L885" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L872"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L872" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="toOct,BiggestInt,Positive"></a>
@@ -1831,8 +1085,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">b</span><span class="Other">.</span><span class="Identifier">toOct</span><span class="Other">(</span><span class="DecNumber">3</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"001"</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">b</span><span class="Other">.</span><span class="Identifier">toOct</span><span class="Other">(</span><span class="DecNumber">5</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"01001"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L908"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L908" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L895"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L895" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="toHex,BiggestInt,Positive"></a>
@@ -1851,8 +1105,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">b</span><span class="Other">.</span><span class="Identifier">toHex</span><span class="Other">(</span><span class="DecNumber">3</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"001"</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">b</span><span class="Other">.</span><span class="Identifier">toHex</span><span class="Other">(</span><span class="DecNumber">4</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"1001"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L933"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L933" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L920"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L920" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="toHex,T"></a>
@@ -1861,12 +1115,12 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 
-Shortcut for <tt class="docutils literal"><span class="pre">toHex(x, T.sizeOf * 2)</span></tt>
+Shortcut for <tt class="docutils literal"><span class="pre">toHex(x, T.sizeof * 2)</span></tt>
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">toHex</span><span class="Other">(</span><span class="DecNumber">1984'i64</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"00000000000007C0"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L957"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L957" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L944"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L944" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="toHex,string"></a>
@@ -1888,8 +1142,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">b</span><span class="Other">.</span><span class="Identifier">toHex</span><span class="Other">(</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"41"</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">c</span><span class="Other">.</span><span class="Identifier">toHex</span><span class="Other">(</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"00FF"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L963"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L963" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L950"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L950" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="toOctal,char"></a>
@@ -1907,8 +1161,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">toOctal</span><span class="Other">(</span><span class="CharLit">'a'</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"141"</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">toOctal</span><span class="Other">(</span><span class="CharLit">'!'</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"041"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L988"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L988" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L975"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L975" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="fromBin,string"></a>
@@ -1928,8 +1182,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">fromBin</span><span class="Other">[</span><span class="Identifier">int16</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">s</span><span class="Other">)</span> <span class="Operator">==</span> <span class="DecNumber">0b1110111010011001'i16</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">fromBin</span><span class="Other">[</span><span class="Identifier">uint64</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">s</span><span class="Other">)</span> <span class="Operator">==</span> <span class="DecNumber">1216933529'u64</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1007"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1007" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L994"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L994" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="fromOct,string"></a>
@@ -1949,8 +1203,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">fromOct</span><span class="Other">[</span><span class="Identifier">int16</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">s</span><span class="Other">)</span> <span class="Operator">==</span> <span class="DecNumber">24063'i16</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">fromOct</span><span class="Other">[</span><span class="Identifier">uint64</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">s</span><span class="Other">)</span> <span class="Operator">==</span> <span class="DecNumber">21913087'u64</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1030"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1030" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1017"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1017" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="fromHex,string"></a>
@@ -1970,8 +1224,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">fromHex</span><span class="Other">[</span><span class="Identifier">int16</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">s</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Operator">-</span><span class="DecNumber">29194'i16</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">fromHex</span><span class="Other">[</span><span class="Identifier">uint64</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">s</span><span class="Other">)</span> <span class="Operator">==</span> <span class="DecNumber">305499638'u64</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1053"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1053" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1040"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1040" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="intToStr,int,Positive"></a>
@@ -1986,8 +1240,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">intToStr</span><span class="Other">(</span><span class="DecNumber">1984</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"1984"</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">intToStr</span><span class="Other">(</span><span class="DecNumber">1984</span><span class="Other">,</span> <span class="DecNumber">6</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"001984"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1076"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1076" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1063"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1063" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="parseInt,string"></a>
@@ -2001,8 +1255,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">parseInt</span><span class="Other">(</span><span class="StringLit">"-0042"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Operator">-</span><span class="DecNumber">42</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1091"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1091" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1078"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1078" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="parseBiggestInt,string"></a>
@@ -2014,8 +1268,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>If <tt class="docutils literal"><span class="pre">s</span></tt> is not a valid integer, <tt class="docutils literal"><span class="pre">ValueError</span></tt> is raised.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1102"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1102" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1089"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1089" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="parseUInt,string"></a>
@@ -2027,8 +1281,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>If <tt class="docutils literal"><span class="pre">s</span></tt> is not a valid integer, <tt class="docutils literal"><span class="pre">ValueError</span></tt> is raised.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1111"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1111" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1098"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1098" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="parseBiggestUInt,string"></a>
@@ -2040,8 +1294,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>If <tt class="docutils literal"><span class="pre">s</span></tt> is not a valid integer, <tt class="docutils literal"><span class="pre">ValueError</span></tt> is raised.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1120"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1120" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1107"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1107" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="parseFloat,string"></a>
@@ -2057,8 +1311,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">parseFloat</span><span class="Other">(</span><span class="StringLit">"3.14"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="FloatNumber">3.14</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">parseFloat</span><span class="Other">(</span><span class="StringLit">"inf"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="FloatNumber">1.0</span> <span class="Operator">/</span> <span class="DecNumber">0</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1129"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1129" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1116"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1116" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="parseBinInt,string"></a>
@@ -2077,8 +1331,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">a</span><span class="Other">.</span><span class="Identifier">parseBinInt</span><span class="Other">(</span><span class="Other">)</span> <span class="Operator">==</span> <span class="DecNumber">53</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">b</span><span class="Other">.</span><span class="Identifier">parseBinInt</span><span class="Other">(</span><span class="Other">)</span> <span class="Operator">==</span> <span class="DecNumber">7</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1142"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1142" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1129"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1129" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="parseOctInt,string"></a>
@@ -2090,8 +1344,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>If <tt class="docutils literal"><span class="pre">s</span></tt> is not a valid oct integer, <tt class="docutils literal"><span class="pre">ValueError</span></tt> is raised. <tt class="docutils literal"><span class="pre">s</span></tt> can have one of the following optional prefixes: <tt class="docutils literal"><span class="pre">0o</span></tt>, <tt class="docutils literal"><span class="pre">0O</span></tt>.  Underscores within <tt class="docutils literal"><span class="pre">s</span></tt> are ignored.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1160"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1160" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1147"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1147" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="parseHexInt,string"></a>
@@ -2104,8 +1358,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>If <tt class="docutils literal"><span class="pre">s</span></tt> is not a valid hex integer, <tt class="docutils literal"><span class="pre">ValueError</span></tt> is raised. <tt class="docutils literal"><span class="pre">s</span></tt> can have one of the following optional prefixes: <tt class="docutils literal"><span class="pre">0x</span></tt>, <tt class="docutils literal"><span class="pre">0X</span></tt>, <tt class="docutils literal"><span class="pre">#</span></tt>.  Underscores within <tt class="docutils literal"><span class="pre">s</span></tt> are ignored.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1171"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1171" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1158"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1158" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="parseHexStr,string"></a>
@@ -2129,8 +1383,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">parseHexStr</span><span class="Other">(</span><span class="Identifier">b</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"1a"</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">parseHexStr</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"\x00�"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1197"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1197" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1184"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1184" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="parseBool,string"></a>
@@ -2144,8 +1398,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">a</span> <span class="Other">=</span> <span class="StringLit">"n"</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">parseBool</span><span class="Other">(</span><span class="Identifier">a</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">false</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1228"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1228" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1216"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1216" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="parseEnum,string"></a>
@@ -2164,8 +1418,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssertRaises</span><span class="Other">(</span><span class="Identifier">ValueError</span><span class="Other">)</span><span class="Other">:</span>
   <span class="Identifier">echo</span> <span class="Identifier">parseEnum</span><span class="Other">[</span><span class="Identifier">MyEnum</span><span class="Other">]</span><span class="Other">(</span><span class="StringLit">"third"</span><span class="Other">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1244"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1244" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1232"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1232" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="parseEnum,string,T"></a>
@@ -2183,8 +1437,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">parseEnum</span><span class="Other">[</span><span class="Identifier">MyEnum</span><span class="Other">]</span><span class="Other">(</span><span class="StringLit">"second"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">second</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">parseEnum</span><span class="Other">[</span><span class="Identifier">MyEnum</span><span class="Other">]</span><span class="Other">(</span><span class="StringLit">"last"</span><span class="Other">,</span> <span class="Identifier">third</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">third</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1266"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1266" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1254"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1254" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="repeat,char,Natural"></a>
@@ -2200,8 +1454,8 @@ Returns a string of length <tt class="docutils literal"><span class="pre">count<
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">a</span> <span class="Other">=</span> <span class="CharLit">'z'</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">a</span><span class="Other">.</span><span class="Identifier">repeat</span><span class="Other">(</span><span class="DecNumber">5</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"zzzzz"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1287"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1287" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1275"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1275" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="repeat,string,Natural"></a>
@@ -2216,8 +1470,8 @@ Returns string <tt class="docutils literal"><span class="pre">s</span></tt> conc
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="StringLit">"+ foo +"</span><span class="Other">.</span><span class="Identifier">repeat</span><span class="Other">(</span><span class="DecNumber">3</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"+ foo ++ foo ++ foo +"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1297"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1297" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1285"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1285" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="spaces,Natural"></a>
@@ -2241,8 +1495,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">text2</span> <span class="Operator">&amp;</span> <span class="Identifier">spaces</span><span class="Other">(</span><span class="Identifier">max</span><span class="Other">(</span><span class="DecNumber">0</span><span class="Other">,</span> <span class="Identifier">width</span> <span class="Operator">-</span> <span class="Identifier">text2</span><span class="Other">.</span><span class="Identifier">len</span><span class="Other">)</span><span class="Other">)</span> <span class="Operator">&amp;</span> <span class="StringLit">"|"</span> <span class="Operator">==</span>
     <span class="StringLit">"This is a very long string|"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1306"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1306" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1294"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1294" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="align,string,Natural,char"></a>
@@ -2265,8 +1519,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">assert</span> <span class="Identifier">align</span><span class="Other">(</span><span class="StringLit">"1232"</span><span class="Other">,</span> <span class="DecNumber">6</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"  1232"</span>
 <span class="Identifier">assert</span> <span class="Identifier">align</span><span class="Other">(</span><span class="StringLit">"1232"</span><span class="Other">,</span> <span class="DecNumber">6</span><span class="Other">,</span> <span class="CharLit">'#'</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"##1232"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1326"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1326" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1314"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1314" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="alignLeft,string,Natural,char"></a>
@@ -2289,8 +1543,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">assert</span> <span class="Identifier">alignLeft</span><span class="Other">(</span><span class="StringLit">"1232"</span><span class="Other">,</span> <span class="DecNumber">6</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"1232  "</span>
 <span class="Identifier">assert</span> <span class="Identifier">alignLeft</span><span class="Other">(</span><span class="StringLit">"1232"</span><span class="Other">,</span> <span class="DecNumber">6</span><span class="Other">,</span> <span class="CharLit">'#'</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"1232##"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1353"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1353" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1341"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1341" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="center,string,int,char"></a>
@@ -2313,8 +1567,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">a</span><span class="Other">.</span><span class="Identifier">center</span><span class="Other">(</span><span class="DecNumber">5</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">" foo "</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">a</span><span class="Other">.</span><span class="Identifier">center</span><span class="Other">(</span><span class="DecNumber">6</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">" foo  "</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1381"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1381" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1369"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1369" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="indent,string,Natural,string"></a>
@@ -2335,8 +1589,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">indent</span><span class="Other">(</span><span class="StringLit">"First line\c\n and second line."</span><span class="Other">,</span> <span class="DecNumber">2</span><span class="Other">)</span> <span class="Operator">==</span>
     <span class="StringLit">"  First line\n   and second line."</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1416"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1416" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1404"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1404" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="unindent,string,Natural,string"></a>
@@ -2357,8 +1611,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">unindent</span><span class="Other">(</span><span class="StringLit">"  First line\n   and second line"</span><span class="Other">,</span> <span class="DecNumber">3</span><span class="Other">)</span> <span class="Operator">==</span>
     <span class="StringLit">"First line\nand second line"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1440"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1440" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1428"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1428" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="unindent,string"></a>
@@ -2380,8 +1634,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     """</span><span class="Other">.</span><span class="Identifier">unindent</span><span class="Other">(</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">x</span> <span class="Operator">==</span> <span class="StringLit">"Hello\nThere\n"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1469"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1469" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1457"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1457" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="delete,string,int,int"></a>
@@ -2401,8 +1655,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">a</span><span class="Other">.</span><span class="Identifier">delete</span><span class="Other">(</span><span class="DecNumber">2</span><span class="Other">,</span> <span class="DecNumber">999</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">a</span> <span class="Operator">==</span> <span class="StringLit">"ar"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1487"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1487" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1475"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1475" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="startsWith,string,char"></a>
@@ -2422,8 +1676,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">a</span><span class="Other">.</span><span class="Identifier">startsWith</span><span class="Other">(</span><span class="CharLit">'a'</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">true</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">a</span><span class="Other">.</span><span class="Identifier">startsWith</span><span class="Other">(</span><span class="CharLit">'b'</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">false</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1515"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1515" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1503"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1503" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="startsWith,string,string"></a>
@@ -2432,7 +1686,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 <p>Returns true if <tt class="docutils literal"><span class="pre">s</span></tt> starts with string <tt class="docutils literal"><span class="pre">prefix</span></tt>.</p>
-<p>If <tt class="docutils literal"><span class="pre">prefix == ""</span></tt> true is returned.</p>
+<p><tt class="docutils literal"><span class="pre">prefix == ""</span></tt> ならば true が返されます。</p>
 <p>関連:</p>
 <ul class="simple"><li><a class="reference external" href="#endsWith,string,string">endsWith proc</a></li>
 <li><a class="reference external" href="#continuesWith,string,string,Natural">continuesWith proc</a></li>
@@ -2444,8 +1698,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">a</span><span class="Other">.</span><span class="Identifier">startsWith</span><span class="Other">(</span><span class="StringLit">"abra"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">true</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">a</span><span class="Other">.</span><span class="Identifier">startsWith</span><span class="Other">(</span><span class="StringLit">"bra"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">false</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1528"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1528" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1516"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1516" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="endsWith,string,char"></a>
@@ -2464,8 +1718,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">a</span><span class="Other">.</span><span class="Identifier">endsWith</span><span class="Other">(</span><span class="CharLit">'a'</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">true</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">a</span><span class="Other">.</span><span class="Identifier">endsWith</span><span class="Other">(</span><span class="CharLit">'b'</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">false</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1548"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1548" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1536"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1536" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="endsWith,string,string"></a>
@@ -2474,7 +1728,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 <p>Returns true if <tt class="docutils literal"><span class="pre">s</span></tt> ends with <tt class="docutils literal"><span class="pre">suffix</span></tt>.</p>
-<p>If <tt class="docutils literal"><span class="pre">suffix == ""</span></tt> true is returned.</p>
+<p><tt class="docutils literal"><span class="pre">suffix == ""</span></tt>  ならば true が返されます。</p>
 <p>関連:</p>
 <ul class="simple"><li><a class="reference external" href="#startsWith,string,string">startsWith proc</a></li>
 <li><a class="reference external" href="#continuesWith,string,string,Natural">continuesWith proc</a></li>
@@ -2486,8 +1740,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">a</span><span class="Other">.</span><span class="Identifier">endsWith</span><span class="Other">(</span><span class="StringLit">"abra"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">true</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">a</span><span class="Other">.</span><span class="Identifier">endsWith</span><span class="Other">(</span><span class="StringLit">"dab"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">false</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1561"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1561" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1549"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1549" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="continuesWith,string,string,Natural"></a>
@@ -2508,8 +1762,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">a</span><span class="Other">.</span><span class="Identifier">continuesWith</span><span class="Other">(</span><span class="StringLit">"ca"</span><span class="Other">,</span> <span class="DecNumber">5</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">false</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">a</span><span class="Other">.</span><span class="Identifier">continuesWith</span><span class="Other">(</span><span class="StringLit">"dab"</span><span class="Other">,</span> <span class="DecNumber">6</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">true</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1582"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1582" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1570"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1570" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="removePrefix,string,set[char]"></a>
@@ -2532,8 +1786,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">otherInput</span><span class="Other">.</span><span class="Identifier">removePrefix</span><span class="Other">(</span><span class="Other">{</span><span class="CharLit">'!'</span><span class="Other">,</span> <span class="CharLit">'?'</span><span class="Other">}</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">otherInput</span> <span class="Operator">==</span> <span class="StringLit">"Hello!?!"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1603"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1603" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1591"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1591" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="removePrefix,string,char"></a>
@@ -2552,8 +1806,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">ident</span><span class="Other">.</span><span class="Identifier">removePrefix</span><span class="Other">(</span><span class="CharLit">'p'</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">ident</span> <span class="Operator">==</span> <span class="StringLit">"Control"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1625"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1625" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1613"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1613" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="removePrefix,string,string"></a>
@@ -2572,8 +1826,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">answers</span><span class="Other">.</span><span class="Identifier">removePrefix</span><span class="Other">(</span><span class="StringLit">"yes"</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">answers</span> <span class="Operator">==</span> <span class="StringLit">"yes"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1639"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1639" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1627"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1627" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="removeSuffix,string,set[char]"></a>
@@ -2596,8 +1850,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">otherInput</span><span class="Other">.</span><span class="Identifier">removeSuffix</span><span class="Other">(</span><span class="Other">{</span><span class="CharLit">'!'</span><span class="Other">,</span> <span class="CharLit">'?'</span><span class="Other">}</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">otherInput</span> <span class="Operator">==</span> <span class="StringLit">"Hello"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1653"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1653" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1641"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1641" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="removeSuffix,string,char"></a>
@@ -2619,8 +1873,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">dots</span><span class="Other">.</span><span class="Identifier">removeSuffix</span><span class="Other">(</span><span class="CharLit">'.'</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">dots</span> <span class="Operator">==</span> <span class="StringLit">"Trailing dots"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1676"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1676" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1664"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1664" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="removeSuffix,string,string"></a>
@@ -2639,8 +1893,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">answers</span><span class="Other">.</span><span class="Identifier">removeSuffix</span><span class="Other">(</span><span class="StringLit">"es"</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">answers</span> <span class="Operator">==</span> <span class="StringLit">"yes"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1695"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1695" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1683"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1683" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="addSep,string,string,Natural"></a>
@@ -2660,8 +1914,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">add</span><span class="Other">(</span><span class="Identifier">arr</span><span class="Other">,</span> <span class="StringLit">"]"</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">arr</span> <span class="Operator">==</span> <span class="StringLit">"[2, 3, 5, 7, 11]"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1712"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1712" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1700"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1700" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="allCharsInSet,string,set[char]"></a>
@@ -2676,8 +1930,8 @@ Returns true if every character of <tt class="docutils literal"><span class="pre
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">allCharsInSet</span><span class="Other">(</span><span class="StringLit">"aeea"</span><span class="Other">,</span> <span class="Other">{</span><span class="CharLit">'a'</span><span class="Other">,</span> <span class="CharLit">'e'</span><span class="Other">}</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">true</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">allCharsInSet</span><span class="Other">(</span><span class="StringLit">""</span><span class="Other">,</span> <span class="Other">{</span><span class="CharLit">'a'</span><span class="Other">,</span> <span class="CharLit">'e'</span><span class="Other">}</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">true</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1735"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1735" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1723"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1723" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="abbrev,string,openArray[string]"></a>
@@ -2693,8 +1947,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">abbrev</span><span class="Other">(</span><span class="StringLit">"fac"</span><span class="Other">,</span> <span class="Other">[</span><span class="StringLit">"college"</span><span class="Other">,</span> <span class="StringLit">"faculty"</span><span class="Other">,</span> <span class="StringLit">"faculties"</span><span class="Other">]</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Operator">-</span><span class="DecNumber">2</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">abbrev</span><span class="Other">(</span><span class="StringLit">"college"</span><span class="Other">,</span> <span class="Other">[</span><span class="StringLit">"college"</span><span class="Other">,</span> <span class="StringLit">"colleges"</span><span class="Other">,</span> <span class="StringLit">"industry"</span><span class="Other">]</span><span class="Other">)</span> <span class="Operator">==</span> <span class="DecNumber">0</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1745"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1745" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1733"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1733" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="join,openArray[string],string"></a>
@@ -2709,8 +1963,8 @@ Concatenates all strings in the container <tt class="docutils literal"><span cla
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">join</span><span class="Other">(</span><span class="Other">[</span><span class="StringLit">"A"</span><span class="Other">,</span> <span class="StringLit">"B"</span><span class="Other">,</span> <span class="StringLit">"Conclusion"</span><span class="Other">]</span><span class="Other">,</span> <span class="StringLit">" -&gt; "</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"A -&gt; B -&gt; Conclusion"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1767"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1767" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1755"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1755" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="join,openArray[T],string"></a>
@@ -2724,8 +1978,8 @@ Converts all elements in the container <tt class="docutils literal"><span class=
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">join</span><span class="Other">(</span><span class="Other">[</span><span class="DecNumber">1</span><span class="Other">,</span> <span class="DecNumber">2</span><span class="Other">,</span> <span class="DecNumber">3</span><span class="Other">]</span><span class="Other">,</span> <span class="StringLit">" -&gt; "</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"1 -&gt; 2 -&gt; 3"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1784"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1784" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1772"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1772" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="initSkipTable,SkipTable,string"></a>
@@ -2734,8 +1988,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 Preprocess table <tt class="docutils literal"><span class="pre">a</span></tt> for <tt class="docutils literal"><span class="pre">sub</span></tt>. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1800"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1800" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1788"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1788" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="find,SkipTable,string,string,Natural,int"></a>
@@ -2747,8 +2001,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Searching is case-sensitive. If <tt class="docutils literal"><span class="pre">sub</span></tt> is not in <tt class="docutils literal"><span class="pre">s</span></tt>, -1 is returned.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1819"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1819" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1807"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1807" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="find,string,char,Natural,int"></a>
@@ -2764,8 +2018,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1855"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1855" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1843"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1843" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="find,string,set[char],Natural,int"></a>
@@ -2781,8 +2035,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1883"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1883" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1871"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1871" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="find,string,string,Natural,int"></a>
@@ -2798,8 +2052,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1900"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1900" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1888"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1888" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="rfind,string,char,Natural"></a>
@@ -2814,8 +2068,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1918"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1918" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1906"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1906" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="rfind,string,set[char],Natural"></a>
@@ -2830,8 +2084,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1936"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1936" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1924"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1924" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="rfind,string,string,Natural"></a>
@@ -2846,8 +2100,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1954"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1954" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1942"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1942" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="count,string,char"></a>
@@ -2861,8 +2115,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1980"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1980" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1968"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1968" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="count,string,set[char]"></a>
@@ -2877,8 +2131,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1989"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1989" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1977"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1977" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="count,string,string,bool"></a>
@@ -2892,8 +2146,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L1999"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1999" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L1987"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L1987" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="countLines,string"></a>
@@ -2911,8 +2165,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">countLines</span><span class="Other">(</span><span class="StringLit">"First line\n and second line."</span><span class="Other">)</span> <span class="Operator">==</span> <span class="DecNumber">2</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2016"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2016" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2004"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2004" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="contains,string,string"></a>
@@ -2925,8 +2179,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2044"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2044" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2032"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2032" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="contains,string,set[char]"></a>
@@ -2939,8 +2193,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2051"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2051" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2039"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2039" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="replace,string,string,string"></a>
@@ -2958,8 +2212,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2058"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2058" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2046"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2046" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="replace,string,char,char"></a>
@@ -2976,8 +2230,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2100"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2100" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2088"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2088" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="replaceWord,string,string,string"></a>
@@ -2989,8 +2243,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Each occurrence of <tt class="docutils literal"><span class="pre">sub</span></tt> has to be surrounded by word boundaries (comparable to <tt class="docutils literal"><span class="pre">\b</span></tt> in regular expressions), otherwise it is not replaced.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2118"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2118" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2106"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2106" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="multiReplace,string,varargs[]"></a>
@@ -3004,8 +2258,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>The order of the replacements does matter. Earlier replacements are preferred over later replacements in the argument list.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2149"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2149" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2137"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2137" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="insertSep,string,char,int"></a>
@@ -3019,8 +2273,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">insertSep</span><span class="Other">(</span><span class="StringLit">"1000000"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"1_000_000"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2185"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2185" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2173"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2173" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="escape,string,string,string"></a>
@@ -3036,8 +2290,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>operation</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2208"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2208" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2196"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2196" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="unescape,string,string,string"></a>
@@ -3050,8 +2304,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>If <tt class="docutils literal"><span class="pre">s</span></tt> does not begin with <tt class="docutils literal"><span class="pre">prefix</span></tt> and end with <tt class="docutils literal"><span class="pre">suffix</span></tt> a ValueError exception will be raised.</p>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2232"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2232" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2220"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2220" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="validIdentifier,string"></a>
@@ -3066,8 +2320,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Identifier">doAssert</span> <span class="StringLit">"abc_def08"</span><span class="Other">.</span><span class="Identifier">validIdentifier</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2275"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2275" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2263"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2263" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="formatBiggestFloat,BiggestFloat,FloatFormatMode,range[],char"></a>
@@ -3086,8 +2340,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">x</span><span class="Other">.</span><span class="Identifier">formatBiggestFloat</span><span class="Other">(</span><span class="Identifier">ffDecimal</span><span class="Other">,</span> <span class="DecNumber">4</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"123.4560"</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">x</span><span class="Other">.</span><span class="Identifier">formatBiggestFloat</span><span class="Other">(</span><span class="Identifier">ffScientific</span><span class="Other">,</span> <span class="DecNumber">2</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"1.23e+02"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2302"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2302" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2290"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2290" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="formatFloat,float,FloatFormatMode,range[],char"></a>
@@ -3106,12 +2360,12 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">x</span><span class="Other">.</span><span class="Identifier">formatFloat</span><span class="Other">(</span><span class="Identifier">ffDecimal</span><span class="Other">,</span> <span class="DecNumber">4</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"123.4560"</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">x</span><span class="Other">.</span><span class="Identifier">formatFloat</span><span class="Other">(</span><span class="Identifier">ffScientific</span><span class="Other">,</span> <span class="DecNumber">2</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"1.23e+02"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2382"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2382" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2374"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2374" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
-<a id="trimZeros,string"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#trimZeros%2Cstring"><span class="Identifier">trimZeros</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<a id="trimZeros,string,char"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#trimZeros%2Cstring%2Cchar"><span class="Identifier">trimZeros</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">decimalSep</span> <span class="Other">=</span> <span class="CharLit">'.'</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
 <p>Trim trailing zeros from a formatted floating point value <tt class="docutils literal"><span class="pre">x</span></tt> (must be declared as <tt class="docutils literal"><span class="pre">var</span></tt>).</p>
@@ -3122,8 +2376,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">x</span><span class="Other">.</span><span class="Identifier">trimZeros</span><span class="Other">(</span><span class="Other">)</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">x</span> <span class="Operator">==</span> <span class="StringLit">"123.456"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2403"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2403" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2395"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2395" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="formatSize,int64,char"></a>
@@ -3146,8 +2400,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">formatSize</span><span class="Other">(</span><span class="DecNumber">4096</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"4KiB"</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">formatSize</span><span class="Other">(</span><span class="DecNumber">5378934</span><span class="Other">,</span> <span class="Identifier">prefix</span> <span class="Other">=</span> <span class="Identifier">bpColloquial</span><span class="Other">,</span> <span class="Identifier">decimalSep</span> <span class="Other">=</span> <span class="CharLit">','</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"5,13MB"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2429"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2429" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2419"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2419" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="formatEng,BiggestFloat,range[],bool,bool,string,char"></a>
@@ -3181,8 +2435,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2485"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2485" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2475"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2475" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="addf,string,string,varargs[string,]"></a>
@@ -3191,8 +2445,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 The same as <tt class="docutils literal"><span class="pre">add(s, formatstr % a)</span></tt>, but more efficient. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2636"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2636" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2626"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2626" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="%,string,openArray[string]"></a>
@@ -3213,8 +2467,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2699"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2699" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2689"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2689" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="%,string,string"></a>
@@ -3224,8 +2478,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 This is the same as <tt class="docutils literal"><span class="pre">formatstr % [a]</span></tt> (see <a class="reference external" href="#%25,string,openArray[string]">% proc</a>). &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2747"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2747" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2737"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2737" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="format,string,varargs[string,]"></a>
@@ -3239,8 +2493,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2754"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2754" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2744"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2744" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="strip,string,set[char]"></a>
@@ -3266,8 +2520,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Identifier">doAssert</span> <span class="Identifier">c</span><span class="Other">.</span><span class="Identifier">strip</span><span class="Other">(</span><span class="Identifier">chars</span> <span class="Other">=</span> <span class="Other">{</span><span class="CharLit">'b'</span><span class="Other">,</span> <span class="CharLit">'a'</span><span class="Other">}</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"laXbl"</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">c</span><span class="Other">.</span><span class="Identifier">strip</span><span class="Other">(</span><span class="Identifier">chars</span> <span class="Other">=</span> <span class="Other">{</span><span class="CharLit">'b'</span><span class="Other">,</span> <span class="CharLit">'a'</span><span class="Other">,</span> <span class="CharLit">'l'</span><span class="Other">}</span><span class="Other">)</span> <span class="Operator">==</span> <span class="StringLit">"X"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2766"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2766" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2756"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2756" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="stripLineEnd,string"></a>
@@ -3285,201 +2539,38 @@ Returns <tt class="docutils literal"><span class="pre">s</span></tt> stripped fr
 <span class="Identifier">s</span><span class="Other">.</span><span class="Identifier">stripLineEnd</span>
 <span class="Identifier">doAssert</span> <span class="Identifier">s</span> <span class="Operator">==</span> <span class="StringLit">"foo"</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2802"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2802" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2792"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2792" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
-<a id="editDistance,string,string"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#editDistance%2Cstring%2Cstring"><span class="Identifier">editDistance</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">,</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nsuEditDistance"</span><span class="Other">,</span> <span class="Identifier">deprecated</span><span class="Other">:</span> <span class="StringLit">"use editdistance.editDistanceAscii instead"</span><span class="Other">,</span>
-                                  <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+<a id="isEmptyOrWhitespace,string"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#isEmptyOrWhitespace%2Cstring"><span class="Identifier">isEmptyOrWhitespace</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">procvar</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span>
+                                        <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nsuIsEmptyOrWhitespace"</span><span class="Other">,</span>
+                                        <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
-  <div class="deprecation-message">
-    <b>Deprecated:</b> use editdistance.editDistanceAscii instead
-  
-  </div>
 
-<p><tt class="docutils literal"><span class="pre">a</span></tt> から <tt class="docutils literal"><span class="pre">b</span></tt> までの編集距離を返します。</p>
-<p>これは<span id="levenshtein_1">レーベンシュタイン</span>距離のアルゴリズムを使うため線形メモリによるオーバーヘッドが伴います。</p>
-
-&nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2870"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2870" class="link-seesrc" target="_blank" >編集</a>
-
-</dd>
-<a id="isNilOrEmpty,string"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#isNilOrEmpty%2Cstring"><span class="Identifier">isNilOrEmpty</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">procvar</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span>
-                                 <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nsuIsNilOrEmpty"</span><span class="Other">,</span>
-                                 <span class="Identifier">deprecated</span><span class="Other">:</span> <span class="StringLit">"use \'x.len == 0\' instead"</span><span class="Other">,</span>
-                                 <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
-<dd>
-  <div class="deprecation-message">
-    <b>Deprecated:</b> use 'x.len == 0' instead
-  
-  </div>
-
-Checks if <tt class="docutils literal"><span class="pre">s</span></tt> is nil or empty. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2960"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2960" class="link-seesrc" target="_blank" >編集</a>
+Checks if <tt class="docutils literal"><span class="pre">s</span></tt> is empty or consists entirely of whitespace characters. &nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2852"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2852" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="isNilOrWhitespace,string"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#isNilOrWhitespace%2Cstring"><span class="Identifier">isNilOrWhitespace</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">procvar</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span>
-                                      <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nsuIsNilOrWhitespace"</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
-                                      <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
-<dd>
-
-Checks if <tt class="docutils literal"><span class="pre">s</span></tt> is nil or consists entirely of whitespace characters. &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2966"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2966" class="link-seesrc" target="_blank" >編集</a>
-
-</dd>
-<a id="isAlphaAscii,string"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#isAlphaAscii%2Cstring"><span class="Identifier">isAlphaAscii</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">procvar</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span>
-                                 <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nsuIsAlphaAsciiStr"</span><span class="Other">,</span> <span class="Identifier">deprecated</span><span class="Other">:</span> <span class="StringLit">"Deprecated since version 0.20 since its semantics are unclear"</span><span class="Other">,</span>
-                                 <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
+                                      <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nsuIsNilOrWhitespace"</span><span class="Other">,</span> <span class="Identifier">deprecated</span><span class="Other">:</span> <span class="StringLit">"use isEmptyOrWhitespace instead"</span><span class="Other">,</span>
+                                      <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
   <div class="deprecation-message">
-    <b>Deprecated:</b> Deprecated since version 0.20 since its semantics are unclear
+    <b>Deprecated:</b> use isEmptyOrWhitespace instead
   
   </div>
 
-<p>Checks whether or not <tt class="docutils literal"><span class="pre">s</span></tt> is alphabetical.</p>
-<p>This checks a-z, A-Z ASCII characters only. Returns true if all characters in <tt class="docutils literal"><span class="pre">s</span></tt> are alphabetic and there is at least one character in <tt class="docutils literal"><span class="pre">s</span></tt>. Use <a class="reference external" href="unicode.html">Unicode module</a> for UTF-8 support.</p>
 
-<p><strong class="examples_text">用例:</strong></p>
-<pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">isAlphaAscii</span><span class="Other">(</span><span class="StringLit">"fooBar"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">true</span>
-<span class="Identifier">doAssert</span> <span class="Identifier">isAlphaAscii</span><span class="Other">(</span><span class="StringLit">"fooBar1"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">false</span>
-<span class="Identifier">doAssert</span> <span class="Identifier">isAlphaAscii</span><span class="Other">(</span><span class="StringLit">"foo Bar"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">false</span></pre>
+
+Alias for isEmptyOrWhitespace
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2980"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2980" class="link-seesrc" target="_blank" >編集</a>
-
-</dd>
-<a id="isAlphaNumeric,string"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#isAlphaNumeric%2Cstring"><span class="Identifier">isAlphaNumeric</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">procvar</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span>
-                                   <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nsuIsAlphaNumericStr"</span><span class="Other">,</span> <span class="Identifier">deprecated</span><span class="Other">:</span> <span class="StringLit">"Deprecated since version 0.20 since its semantics are unclear"</span><span class="Other">,</span>
-                                   <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
-<dd>
-  <div class="deprecation-message">
-    <b>Deprecated:</b> Deprecated since version 0.20 since its semantics are unclear
-  
-  </div>
-
-<p>Checks whether or not <tt class="docutils literal"><span class="pre">s</span></tt> is alphanumeric.</p>
-<p>This checks a-z, A-Z, 0-9 ASCII characters only. Returns true if all characters in <tt class="docutils literal"><span class="pre">s</span></tt> are alpanumeric and there is at least one character in <tt class="docutils literal"><span class="pre">s</span></tt>. Use <a class="reference external" href="unicode.html">Unicode module</a> for UTF-8 support.</p>
-
-<p><strong class="examples_text">用例:</strong></p>
-<pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">isAlphaNumeric</span><span class="Other">(</span><span class="StringLit">"fooBar"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">true</span>
-<span class="Identifier">doAssert</span> <span class="Identifier">isAlphaNumeric</span><span class="Other">(</span><span class="StringLit">"fooBar1"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">true</span>
-<span class="Identifier">doAssert</span> <span class="Identifier">isAlphaNumeric</span><span class="Other">(</span><span class="StringLit">"foo Bar"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">false</span></pre>
-&nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2996"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2996" class="link-seesrc" target="_blank" >編集</a>
-
-</dd>
-<a id="isDigit,string"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#isDigit%2Cstring"><span class="Identifier">isDigit</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">procvar</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nsuIsDigitStr"</span><span class="Other">,</span> <span class="Identifier">deprecated</span><span class="Other">:</span> <span class="StringLit">"Deprecated since version 0.20 since its semantics are unclear"</span><span class="Other">,</span>
-                            <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
-<dd>
-  <div class="deprecation-message">
-    <b>Deprecated:</b> Deprecated since version 0.20 since its semantics are unclear
-  
-  </div>
-
-<p>Checks whether or not <tt class="docutils literal"><span class="pre">s</span></tt> is a numeric value.</p>
-<p>This checks 0-9 ASCII characters only. Returns true if all characters in <tt class="docutils literal"><span class="pre">s</span></tt> are numeric and there is at least one character in <tt class="docutils literal"><span class="pre">s</span></tt>.</p>
-
-<p><strong class="examples_text">用例:</strong></p>
-<pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">isDigit</span><span class="Other">(</span><span class="StringLit">"1908"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">true</span>
-<span class="Identifier">doAssert</span> <span class="Identifier">isDigit</span><span class="Other">(</span><span class="StringLit">"fooBar1"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">false</span></pre>
-&nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L3012"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L3012" class="link-seesrc" target="_blank" >編集</a>
-
-</dd>
-<a id="isSpaceAscii,string"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#isSpaceAscii%2Cstring"><span class="Identifier">isSpaceAscii</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">procvar</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span>
-                                 <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nsuIsSpaceAsciiStr"</span><span class="Other">,</span> <span class="Identifier">deprecated</span><span class="Other">:</span> <span class="StringLit">"Deprecated since version 0.20 since its semantics are unclear"</span><span class="Other">,</span>
-                                 <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
-<dd>
-  <div class="deprecation-message">
-    <b>Deprecated:</b> Deprecated since version 0.20 since its semantics are unclear
-  
-  </div>
-
-<p>Checks whether or not <tt class="docutils literal"><span class="pre">s</span></tt> is completely whitespace.</p>
-<p>Returns true if all characters in <tt class="docutils literal"><span class="pre">s</span></tt> are whitespace characters and there is at least one character in <tt class="docutils literal"><span class="pre">s</span></tt>.</p>
-
-<p><strong class="examples_text">用例:</strong></p>
-<pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">isSpaceAscii</span><span class="Other">(</span><span class="StringLit">"   "</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">true</span>
-<span class="Identifier">doAssert</span> <span class="Identifier">isSpaceAscii</span><span class="Other">(</span><span class="StringLit">""</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">false</span></pre>
-&nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L3026"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L3026" class="link-seesrc" target="_blank" >編集</a>
-
-</dd>
-<a id="isLowerAscii,string,bool"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#isLowerAscii%2Cstring%2Cbool"><span class="Identifier">isLowerAscii</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">skipNonAlpha</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">deprecated</span><span class="Other">:</span> <span class="StringLit">"Deprecated since version 0.20 since its semantics are unclear"</span><span class="Other">,</span>
-    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
-<dd>
-  <div class="deprecation-message">
-    <b>Deprecated:</b> Deprecated since version 0.20 since its semantics are unclear
-  
-  </div>
-
-<p>Checks whether <tt class="docutils literal"><span class="pre">s</span></tt> is lower case.</p>
-<p>This checks ASCII characters only.</p>
-<p>If <tt class="docutils literal"><span class="pre">skipNonAlpha</span></tt> is true, returns true if all alphabetical characters in <tt class="docutils literal"><span class="pre">s</span></tt> are lower case.  Returns false if none of the characters in <tt class="docutils literal"><span class="pre">s</span></tt> are alphabetical.</p>
-<p>If <tt class="docutils literal"><span class="pre">skipNonAlpha</span></tt> is false, returns true only if all characters in <tt class="docutils literal"><span class="pre">s</span></tt> are alphabetical and lower case.</p>
-<p>For either value of <tt class="docutils literal"><span class="pre">skipNonAlpha</span></tt>, returns false if <tt class="docutils literal"><span class="pre">s</span></tt> is an empty string. Use <a class="reference external" href="unicode.html">Unicode module</a> for UTF-8 support.</p>
-
-<p><strong class="examples_text">用例:</strong></p>
-<pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">isLowerAscii</span><span class="Other">(</span><span class="StringLit">"1foobar"</span><span class="Other">,</span> <span class="Identifier">false</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">false</span>
-<span class="Identifier">doAssert</span> <span class="Identifier">isLowerAscii</span><span class="Other">(</span><span class="StringLit">"1foobar"</span><span class="Other">,</span> <span class="Identifier">true</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">true</span>
-<span class="Identifier">doAssert</span> <span class="Identifier">isLowerAscii</span><span class="Other">(</span><span class="StringLit">"1fooBar"</span><span class="Other">,</span> <span class="Identifier">true</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">false</span></pre>
-&nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L3053"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L3053" class="link-seesrc" target="_blank" >編集</a>
-
-</dd>
-<a id="isUpperAscii,string,bool"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#isUpperAscii%2Cstring%2Cbool"><span class="Identifier">isUpperAscii</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">skipNonAlpha</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">deprecated</span><span class="Other">:</span> <span class="StringLit">"Deprecated since version 0.20 since its semantics are unclear"</span><span class="Other">,</span>
-    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
-<dd>
-  <div class="deprecation-message">
-    <b>Deprecated:</b> Deprecated since version 0.20 since its semantics are unclear
-  
-  </div>
-
-<p>Checks whether <tt class="docutils literal"><span class="pre">s</span></tt> is upper case.</p>
-<p>This checks ASCII characters only.</p>
-<p>If <tt class="docutils literal"><span class="pre">skipNonAlpha</span></tt> is true, returns true if all alphabetical characters in <tt class="docutils literal"><span class="pre">s</span></tt> are upper case.  Returns false if none of the characters in <tt class="docutils literal"><span class="pre">s</span></tt> are alphabetical.</p>
-<p>If <tt class="docutils literal"><span class="pre">skipNonAlpha</span></tt> is false, returns true only if all characters in <tt class="docutils literal"><span class="pre">s</span></tt> are alphabetical and upper case.</p>
-<p>For either value of <tt class="docutils literal"><span class="pre">skipNonAlpha</span></tt>, returns false if <tt class="docutils literal"><span class="pre">s</span></tt> is an empty string. Use <a class="reference external" href="unicode.html">Unicode module</a> for UTF-8 support.</p>
-
-<p><strong class="examples_text">用例:</strong></p>
-<pre class="listing"><span class="Identifier">doAssert</span> <span class="Identifier">isUpperAscii</span><span class="Other">(</span><span class="StringLit">"1FOO"</span><span class="Other">,</span> <span class="Identifier">false</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">false</span>
-<span class="Identifier">doAssert</span> <span class="Identifier">isUpperAscii</span><span class="Other">(</span><span class="StringLit">"1FOO"</span><span class="Other">,</span> <span class="Identifier">true</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">true</span>
-<span class="Identifier">doAssert</span> <span class="Identifier">isUpperAscii</span><span class="Other">(</span><span class="StringLit">"1Foo"</span><span class="Other">,</span> <span class="Identifier">true</span><span class="Other">)</span> <span class="Operator">==</span> <span class="Identifier">false</span></pre>
-&nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L3075"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L3075" class="link-seesrc" target="_blank" >編集</a>
-
-</dd>
-<a id="wordWrap,string,int,set[char],string"></a>
-<dt><pre><span class="Keyword">proc</span> <a href="#wordWrap%2Cstring%2Cint%2Cset%5Bchar%5D%2Cstring"><span class="Identifier">wordWrap</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">maxLineWidth</span> <span class="Other">=</span> <span class="DecNumber">80</span><span class="Other">;</span> <span class="Identifier">splitLongWords</span> <span class="Other">=</span> <span class="Identifier">true</span><span class="Other">;</span>
-             <span class="Identifier">seps</span><span class="Other">:</span> <a href="system.html#set"><span class="Identifier">set</span></a><span class="Other">[</span><a href="system.html#char"><span class="Identifier">char</span></a><span class="Other">]</span> <span class="Other">=</span> <span class="Identifier">Whitespace</span><span class="Other">;</span> <span class="Identifier">newLine</span> <span class="Other">=</span> <span class="StringLit">"\n"</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">noSideEffect</span><span class="Other">,</span>
-    <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nsuWordWrap"</span><span class="Other">,</span>
-    <span class="Identifier">deprecated</span><span class="Other">:</span> <span class="StringLit">"use wrapWords in std/wordwrap instead"</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
-<dd>
-  <div class="deprecation-message">
-    <b>Deprecated:</b> use wrapWords in std/wordwrap instead
-  
-  </div>
-
-<tt class="docutils literal"><span class="pre">s</span></tt> にワードラップをします。&nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L3097"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L3097" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2857"
+class="link-seesrc" target="_blank">Source</a>
+<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2857" class="link-seesrc" target="_blank" >Edit</a>
 
 </dd>
 
@@ -3512,8 +2603,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L427"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L427" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L414"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L414" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="split.i,string,set[char],int"></a>
@@ -3548,8 +2639,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L458"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L458" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L445"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L445" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="split.i,string,string,int"></a>
@@ -3570,8 +2661,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L507"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L507" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L494"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L494" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="rsplit.i,string,char,int"></a>
@@ -3592,8 +2683,8 @@ Splits the string <tt class="docutils literal"><span class="pre">s</span></tt> i
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L556"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L556" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L543"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L543" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="rsplit.i,string,set[char],int"></a>
@@ -3615,8 +2706,8 @@ Splits the string <tt class="docutils literal"><span class="pre">s</span></tt> i
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L581"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L581" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L568"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L568" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="rsplit.i,string,string,int,bool"></a>
@@ -3638,8 +2729,8 @@ Splits the string <tt class="docutils literal"><span class="pre">s</span></tt> i
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L606"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L606" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L593"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L593" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="splitLines.i,string"></a>
@@ -3663,8 +2754,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L631"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L631" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L618"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L618" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="splitWhitespace.i,string,int"></a>
@@ -3698,8 +2789,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L680"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L680" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L667"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L667" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="tokenize.i,string,set[char]"></a>
@@ -3721,8 +2812,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <span class="Punctuation">(</span><span class="StringLit">"example"</span><span class="Punctuation">,</span> <span class="Identifier">false</span><span class="Punctuation">)</span>
 <span class="Punctuation">(</span><span class="StringLit">"  "</span><span class="Punctuation">,</span> <span class="Identifier">true</span><span class="Punctuation">)</span></pre>
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/pure/strutils.nim#L2828"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2828" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/strutils.nim#L2818"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/strutils.nim#L2818" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 
@@ -3740,7 +2831,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 生成日時: 2020年01月23日 午前17時27分25秒 (UTC)</small>
+        <small style="color: var(--hint);">Nim で作成しました。 生成日時: 2020年04月03日 午前12時36分57秒 (UTC)</small>
       </div>
     </div>
   </div>

@@ -18,772 +18,7 @@
 
 
 <title>dom</title>
-<style type="text/css" >
-/*
-Stylesheet for use with Docutils/rst2html.
-
-See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
-customize this style sheet.
-
-Modified from Chad Skeeters' rst2html-style
-https://bitbucket.org/cskeeters/rst2html-style/
-
-Modified by Boyd Greenfield and narimiran
-*/
-
-html {
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
-
-body {
-  font-family: "Lato", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 1.125em;
-  line-height: 1.5;
-  color: #222;
-  background-color: #FCFCFC; }
-
-/* Skeleton grid */
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 1050px;
-  margin: 0 auto;
-  padding: 0;
-  box-sizing: border-box; }
-
-.column,
-.columns {
-  width: 100%;
-  float: left;
-  box-sizing: border-box;
-  margin-left: 1%;
-}
-
-.column:first-child,
-.columns:first-child {
-  margin-left: 0; }
-
-.three.columns {
-  width: 19%; }
-
-.nine.columns {
-  width: 80.0%; }
-
-.twelve.columns {
-  width: 100%;
-  margin-left: 0; }
-
-@media screen and (max-width: 860px) {
-  .three.columns {
-    display: none;
-  }
-  .nine.columns {
-    width: 98.0%;
-  }
-  body {
-    font-size: 1em;
-    line-height: 1.35;
-  }
-}
-
-cite {
-  font-style: italic !important; }
-
-
-/* Nim search input */
-div#searchInputDiv {
-  margin-bottom: 1em;
-}
-input#searchInput {
-  width: 80%;
-}
-
-/*
- * Some custom formatting for input forms.
- * This also fixes input form colors on Firefox with a dark system theme on Linux.
- */
-input {
-  -moz-appearance: none;
-  color: #333;
-  background-color: #f8f8f8;
-  border: 1px solid #aaa;
-  font-family: "Lato", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-  font-size: 0.9em;
-  padding: 6px;
-}
-input:focus {
-  border: 1px solid #1fa0eb;
-  box-shadow: 0 0 2px #1fa0eb;
-}
-
-/* Docgen styles */
-/* Links */
-a {
-  color: #07b;
-  text-decoration: none;
-}
-
-a span.Identifier {
-  text-decoration: underline;
-  text-decoration-color: #aab;
-}
-
-a.reference-toplevel {
-  font-weight: bold;
-}
-
-a.toc-backref {
-  text-decoration: none;
-  color: #222; }
-
-a.link-seesrc {
-  color: #607c9f;
-  font-size: 0.9em;
-  font-style: italic; }
-
-a:hover,
-a:focus {
-  color: #607c9f;
-  text-decoration: underline; }
-
-a:hover span.Identifier {
-  color: #607c9f;
-}
-
-
-sub,
-sup {
-  position: relative;
-  font-size: 75%;
-  line-height: 0;
-  vertical-align: baseline; }
-
-sup {
-  top: -0.5em; }
-
-sub {
-  bottom: -0.25em; }
-
-img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-  border: 0;
-  -ms-interpolation-mode: bicubic; }
-
-@media print {
-  * {
-    color: black !important;
-    text-shadow: none !important;
-    background: transparent !important;
-    box-shadow: none !important; }
-
-  a,
-  a:visited {
-    text-decoration: underline; }
-
-  a[href]:after {
-    content: " (" attr(href) ")"; }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")"; }
-
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: ""; }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid; }
-
-  thead {
-    display: table-header-group; }
-
-  tr,
-  img {
-    page-break-inside: avoid; }
-
-  img {
-    max-width: 100% !important; }
-
-  @page {
-    margin: 0.5cm; }
-
-  h1 {
-    page-break-before: always; }
-
-  h1.title {
-    page-break-before: avoid; }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3; }
-
-  h2,
-  h3 {
-    page-break-after: avoid; }
-}
-
-
-p {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
-small {
-  font-size: 85%; }
-
-strong {
-  font-weight: 600;
-  font-size: 0.95em;
-  color: #3c3c3c;
-}
-
-em {
-  font-style: italic; }
-
-h1 {
-  font-size: 1.8em;
-  font-weight: 400;
-  padding-bottom: .25em;
-  border-bottom: 1px solid #aaa;
-  margin-top: 2.5em;
-  margin-bottom: 1em;
-  line-height: 1.2em; }
-
-h1.title {
-  padding-bottom: 1em;
-  border-bottom: 0px;
-  font-size: 2.5em;
-  text-align: center;
-  font-weight: 900;
-  margin-top: 0.75em;
-  margin-bottom: 0em;
-}
-
-h2 {
-  font-size: 1.3em;
-  margin-top: 2em; }
-
-h2.subtitle {
-  text-align: center; }
-
-h3 {
-  font-size: 1.125em;
-  font-style: italic;
-  margin-top: 1.5em; }
-
-h4 {
-  font-size: 1.125em;
-  margin-top: 1em; }
-
-h5 {
-  font-size: 1.125em;
-  margin-top: 0.75em; }
-
-h6 {
-  font-size: 1.1em; }
-
-
-ul,
-ol {
-  padding: 0;
-  margin-top: 0.5em;
-  margin-left: 0.75em; }
-
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin-bottom: 0;
-  margin-left: 1.25em; }
-
-li {
-    list-style-type: circle;
-}
-
-ul.simple-boot li {
-    list-style-type: none;
-    margin-left: 0em;
-    margin-bottom: 0.5em;
-}
-
-ol.simple > li, ul.simple > li {
-  margin-bottom: 0.25em;
-  margin-left: 0.4em }
-
-ul.simple.simple-toc > li {
-    margin-top: 1em;
-}
-
-ul.simple-toc {
-  list-style: none;
-  font-size: 0.9em;
-  margin-left: -0.3em;
-  margin-top: 1em; }
-
-ul.simple-toc > li {
-    list-style-type: none;
-}
-
-ul.simple-toc-section {
-  list-style-type: circle;
-  margin-left: 1em;
-  color: #6c9aae; }
-
-
-ol.arabic {
-  list-style: decimal; }
-
-ol.loweralpha {
-  list-style: lower-alpha; }
-
-ol.upperalpha {
-  list-style: upper-alpha; }
-
-ol.lowerroman {
-  list-style: lower-roman; }
-
-ol.upperroman {
-  list-style: upper-roman; }
-
-ul.auto-toc {
-  list-style-type: none; }
-
-
-dl {
-  margin-bottom: 1.5em; }
-
-dt {
-  margin-bottom: -0.5em;
-  margin-left: 0.0em; }
-
-dd {
-  margin-left: 2.0em;
-  margin-bottom: 3.0em;
-  margin-top: 0.5em; }
-
-
-hr {
-  margin: 2em 0;
-  border: 0;
-  border-top: 1px solid #aaa; }
-
-blockquote {
-  font-size: 0.9em;
-  font-style: italic;
-  padding-left: 0.5em;
-  margin-left: 0;
-  border-left: 5px solid #bbc;
-}
-
-.pre {
-  font-family: "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace;
-  font-weight: 500;
-  font-size: 0.85em;
-  background-color: #f0f3ff;
-  padding-left: 3px;
-  padding-right: 3px;
-  border-radius: 4px;
-}
-
-pre {
-  font-family: "Source Code Pro", Monaco, Menlo, Consolas, "Courier New", monospace;
-  color: #222;
-  font-weight: 500;
-  display: inline-block;
-  box-sizing: border-box;
-  min-width: 100%;
-  padding: 0.5em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  font-size: 0.85em;
-  white-space: pre !important;
-  overflow-y: hidden;
-  overflow-x: visible;
-  background-color: ghostwhite;
-  border: 1px solid #dde;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px; }
-
-.pre-scrollable {
-  max-height: 340px;
-  overflow-y: scroll; }
-
-
-/* Nim line-numbered tables */
-.line-nums-table {
-  width: 100%;
-  table-layout: fixed; }
-
-table.line-nums-table {
-  border-radius: 4px;
-  border: 1px solid #cccccc;
-  background-color: ghostwhite;
-  border-collapse: separate;
-  margin-top: 15px;
-  margin-bottom: 25px; }
-
-.line-nums-table tbody {
-  border: none; }
-
-.line-nums-table td pre {
-  border: none;
-  background-color: transparent; }
-
-.line-nums-table td.blob-line-nums {
-  width: 28px; }
-
-.line-nums-table td.blob-line-nums pre {
-  color: #b0b0b0;
-  -webkit-filter: opacity(75%);
-  text-align: right;
-  border-color: transparent;
-  background-color: transparent;
-  padding-left: 0px;
-  margin-left: 0px;
-  padding-right: 0px;
-  margin-right: 0px; }
-
-
-table {
-  max-width: 100%;
-  background-color: transparent;
-  margin-top: 0.5em;
-  margin-bottom: 1.5em;
-  border-collapse: collapse;
-  border-color: #ccc;
-  border-spacing: 0;
-  font-size: 0.9em;
-}
-
-table th, table td {
-  padding: 0px 0.5em 0px;
-}
-
-table th {
-  background-color: #e8e8e8;
-  font-weight: bold; }
-
-table th.docinfo-name {
-    background-color: transparent;
-}
-
-table tr:hover {
-  background-color: ghostwhite; }
-
-
-/* rst2html default used to remove borders from tables and images */
-.borderless, table.borderless td, table.borderless th {
-  border: 0; }
-
-table.borderless td, table.borderless th {
-  /* Override padding for "table.docutils td" with "! important".
-     The right padding separates the table cells. */
-  padding: 0 0.5em 0 0 !important; }
-
-.first {
-  /* Override more specific margin styles with "! important". */
-  margin-top: 0 !important; }
-
-.last, .with-subtitle {
-  margin-bottom: 0 !important; }
-
-.hidden {
-  display: none; }
-
-blockquote.epigraph {
-  margin: 2em 5em; }
-
-dl.docutils dd {
-  margin-bottom: 0.5em; }
-
-object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
-  overflow: hidden; }
-
-
-div.figure {
-  margin-left: 2em;
-  margin-right: 2em; }
-
-div.footer, div.header {
-  clear: both;
-  text-align: center;
-  color: #666;
-  font-size: smaller; }
-
-div.footer {
-    padding-top: 5em;
-}
-
-div.line-block {
-  display: block;
-  margin-top: 1em;
-  margin-bottom: 1em; }
-
-div.line-block div.line-block {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 1.5em; }
-
-div.topic {
-  margin: 2em; }
-
-div.search_results {
-  background-color: antiquewhite;
-  margin: 3em;
-  padding: 1em;
-  border: 1px solid #4d4d4d;
-}
-
-div#global-links ul {
-  margin-left: 0;
-  list-style-type: none;
-}
-
-div#global-links > simple-boot {
-    margin-left: 3em;
-}
-
-hr.docutils {
-  width: 75%; }
-
-img.align-left, .figure.align-left, object.align-left {
-  clear: left;
-  float: left;
-  margin-right: 1em; }
-
-img.align-right, .figure.align-right, object.align-right {
-  clear: right;
-  float: right;
-  margin-left: 1em; }
-
-img.align-center, .figure.align-center, object.align-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
-.align-left {
-  text-align: left; }
-
-.align-center {
-  clear: both;
-  text-align: center; }
-
-.align-right {
-  text-align: right; }
-
-/* reset inner alignment in figures */
-div.align-right {
-  text-align: inherit; }
-
-p.attribution {
-  text-align: right;
-  margin-left: 50%; }
-
-p.caption {
-  font-style: italic; }
-
-p.credits {
-  font-style: italic;
-  font-size: smaller; }
-
-p.label {
-  white-space: nowrap; }
-
-p.rubric {
-  font-weight: bold;
-  font-size: larger;
-  color: maroon;
-  text-align: center; }
-
-p.topic-title {
-  font-weight: bold; }
-
-pre.address {
-  margin-bottom: 0;
-  margin-top: 0;
-  font: inherit; }
-
-pre.literal-block, pre.doctest-block, pre.math, pre.code {
-  margin-left: 2em;
-  margin-right: 2em; }
-
-pre.code .ln {
-  color: grey; }
-
-/* line numbers */
-pre.code, code {
-  background-color: #eeeeee; }
-
-pre.code .comment, code .comment {
-  color: #5c6576; }
-
-pre.code .keyword, code .keyword {
-  color: #3B0D06;
-  font-weight: bold; }
-
-pre.code .literal.string, code .literal.string {
-  color: #0c5404; }
-
-pre.code .name.builtin, code .name.builtin {
-  color: #352b84; }
-
-pre.code .deleted, code .deleted {
-  background-color: #DEB0A1; }
-
-pre.code .inserted, code .inserted {
-  background-color: #A3D289; }
-
-span.classifier {
-  font-style: oblique; }
-
-span.classifier-delimiter {
-  font-weight: bold; }
-
-span.option {
-  white-space: nowrap; }
-
-span.problematic {
-  color: #b30000; }
-
-span.section-subtitle {
-  /* font-size relative to parent (h1..h6 element) */
-  font-size: 80%; }
-
-span.DecNumber {
-  color: #252dbe; }
-
-span.BinNumber {
-  color: #252dbe; }
-
-span.HexNumber {
-  color: #252dbe; }
-
-span.OctNumber {
-  color: #252dbe; }
-
-span.FloatNumber {
-  color: #252dbe; }
-
-span.Identifier {
-  color: #222; }
-
-span.Keyword {
-  font-weight: 600;
-  color: #5e8f60; }
-
-span.StringLit {
-  color: #a4255b; }
-
-span.LongStringLit {
-  color: #a4255b; }
-
-span.CharLit {
-  color: #a4255b; }
-
-span.EscapeSequence {
-  color: black; }
-
-span.Operator {
-  color: black; }
-
-span.Punctuation {
-  color: black; }
-
-span.Comment, span.LongComment {
-  font-style: italic;
-  font-weight: 400;
-  color: #484a86; }
-
-span.RegularExpression {
-  color: darkviolet; }
-
-span.TagStart {
-  color: darkviolet; }
-
-span.TagEnd {
-  color: darkviolet; }
-
-span.Key {
-  color: #252dbe; }
-
-span.Value {
-  color: #252dbe; }
-
-span.RawData {
-  color: #a4255b; }
-
-span.Assembler {
-  color: #252dbe; }
-
-span.Preprocessor {
-  color: #252dbe; }
-
-span.Directive {
-  color: #252dbe; }
-
-span.Command, span.Rule, span.Hyperlink, span.Label, span.Reference,
-span.Other {
-  color: black; }
-
-/* Pop type, const, proc, and iterator defs in nim def blocks */
-dt pre > span.Identifier, dt pre > span.Operator {
-  color: #155da4;
-  font-weight: 700; }
-
-dt pre > span.Keyword ~ span.Identifier, dt pre > span.Identifier ~ span.Identifier,
-dt pre > span.Operator ~ span.Identifier, dt pre > span.Other ~ span.Identifier {
-  color: inherit;
-  font-weight: inherit; }
-
-/* Nim sprite for the footer (taken from main page favicon) */
-.nim-sprite {
-  display: inline-block;
-  height: 16px;
-  width: 16px;
-  background-position: 0 0;
-  background-size: 16px 16px;
-  -webkit-filter: opacity(50%);
-  background-repeat: no-repeat;
-  background-image: url("data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA==");
-  margin-bottom: -5px; }
-
-span.pragmadots {
-  /* Position: relative frees us up to make the dots
-  look really nice without fucking up the layout and
-  causing bulging in the parent container */
-  position: relative;
-  /* 1px down looks slightly nicer */
-  top: 1px;
-  padding: 2px;
-  background-color: #e8e8e8;
-  border-radius: 4px;
-  margin: 0 2px;
-  cursor: pointer;
-  font-size: 0.8em;
-}
-
-span.pragmadots:hover {
-  background-color: #DBDBDB;
-}
-span.pragmawrap {
-  display: none;
-}
-
-span.attachedType {
-  display: none;
-  visibility: hidden;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="nimdoc.out.css">
 
 <script type="text/javascript" src="dochack.js"></script>
 
@@ -798,6 +33,37 @@ function main() {
       event.target.parentNode.nextElementSibling.style.display = "inline";
     }
   }
+
+  const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+  function switchTheme(e) {
+      if (e.target.checked) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+      } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+      }
+  }
+
+  toggleSwitch.addEventListener('change', switchTheme, false);
+
+
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.setAttribute('data-theme', "dark");
+    toggleSwitch.checked = true;
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    document.documentElement.setAttribute('data-theme', "light");
+    toggleSwitch.checked = false;
+  } else {
+    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+    if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+
+      if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+      }
+    }
+  }
 }
 </script>
 
@@ -808,6 +74,13 @@ function main() {
     <h1 class="title">dom</h1>
     <div class="row">
   <div class="three columns">
+  <div class="theme-switch-wrapper">
+    <label class="theme-switch" for="checkbox">
+      <input type="checkbox" id="checkbox" />
+      <div class="slider round"></div>
+    </label>
+    &nbsp;&nbsp;&nbsp; <em>消灯</em>
+  </div>
   <div id="global-links">
     <ul class="simple-boot">
       <li>
@@ -880,6 +153,8 @@ function main() {
     title="Performance {.importc.} = ref object
   memory*: PerformanceMemory
   timing*: PerformanceTiming"><wbr />Performance<span class="attachedType"></span></a></li>
+  <li><a class="reference" href="#LocalStorage"
+    title="LocalStorage {.importc.} = ref object"><wbr />Local<wbr />Storage<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#Window"
     title="Window = ref WindowObj"><wbr />Window<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#Frame"
@@ -903,6 +178,8 @@ function main() {
     title="Blob = ref BlobObj"><wbr />Blob<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#File"
     title="File = ref FileObj"><wbr />File<span class="attachedType"></span></a></li>
+  <li><a class="reference" href="#TextAreaElement"
+    title="TextAreaElement = ref TextAreaElementObj"><wbr />Text<wbr />Area<wbr />Element<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#InputElement"
     title="InputElement = ref InputElementObj"><wbr />Input<wbr />Element<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#LinkElement"
@@ -1348,6 +625,18 @@ function main() {
     title="checkValidity(e: InputElement): bool"><wbr />check<wbr />Validity<span class="attachedType">InputElement</span></a></li>
   <li><a class="reference" href="#slice%2CBlob%2Cint%2Cint%2Ccstring"
     title='slice(e: Blob; startindex: int = 0; endindex: int = e.size; contentType: cstring = "")'><wbr />slice<span class="attachedType">Blob</span></a></li>
+  <li><a class="reference" href="#now%2CPerformance"
+    title="now(p: Performance): float"><wbr />now<span class="attachedType"></span></a></li>
+  <li><a class="reference" href="#getItem%2CLocalStorage%2Ccstring"
+    title="getItem(ls: LocalStorage; key: cstring): cstring"><wbr />get<wbr />Item<span class="attachedType"></span></a></li>
+  <li><a class="reference" href="#setItem%2CLocalStorage%2Ccstring%2Ccstring"
+    title="setItem(ls: LocalStorage; key, value: cstring)"><wbr />set<wbr />Item<span class="attachedType"></span></a></li>
+  <li><a class="reference" href="#hasItem%2CLocalStorage%2Ccstring"
+    title="hasItem(ls: LocalStorage; key: cstring): bool"><wbr />has<wbr />Item<span class="attachedType"></span></a></li>
+  <li><a class="reference" href="#clear%2CLocalStorage"
+    title="clear(ls: LocalStorage)"><wbr />clear<span class="attachedType"></span></a></li>
+  <li><a class="reference" href="#removeItem%2CLocalStorage%2Ccstring"
+    title="removeItem(ls: LocalStorage; key: cstring)"><wbr />remove<wbr />Item<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#setAttr%2CNode%2Ccstring%2Ccstring"
     title="setAttr(n: Node; key, val: cstring)"><wbr />set<wbr />Attr<span class="attachedType">Node</span></a></li>
   <li><a class="reference" href="#decodeURI%2Ccstring"
@@ -1380,6 +669,8 @@ function main() {
     title="inViewport(el: Node): bool"><wbr />in<wbr />Viewport<span class="attachedType">Node</span></a></li>
   <li><a class="reference" href="#scrollTop%2CNode"
     title="scrollTop(e: Node): int"><wbr />scroll<wbr />Top<span class="attachedType">Node</span></a></li>
+  <li><a class="reference" href="#scrollTop%3D%2CNode%2Cint"
+    title="scrollTop=(e: Node; value: int)"><wbr />scroll<wbr />Top=<span class="attachedType">Node</span></a></li>
   <li><a class="reference" href="#scrollLeft%2CNode"
     title="scrollLeft(e: Node): int"><wbr />scroll<wbr />Left<span class="attachedType">Node</span></a></li>
   <li><a class="reference" href="#scrollHeight%2CNode"
@@ -1414,7 +705,7 @@ function main() {
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L20"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L20"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L20" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -1431,10 +722,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
   <span class="Identifier">Unload</span> <span class="Other">=</span> <span class="StringLit">"unload"</span><span class="Other">,</span> <span class="Identifier">Wheel</span> <span class="Other">=</span> <span class="StringLit">"wheel"</span></pre></dt>
 <dd>
 
-
-&nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L44"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L44" class="link-seesrc" target="_blank" >編集</a>
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/Events">ドキュメント</a>を参照&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L43"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L43" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="PerformanceMemory"></a>
@@ -1447,7 +737,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L75"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L75"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L75" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -1478,7 +768,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L80"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L80"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L80" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -1491,8 +781,18 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L102"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L102"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L102" class="link-seesrc" target="_blank" >編集</a>
+
+</dd>
+<a id="LocalStorage"></a>
+<dt><pre><a href="dom.html#LocalStorage"><span class="Identifier">LocalStorage</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importc</span></span><span class="Other">.}</span></span> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Keyword">object</span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L106"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L106" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="Window"></a>
@@ -1501,8 +801,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L106"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L106" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L108"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L108" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="Frame"></a>
@@ -1511,8 +811,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L133"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L133" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L136"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L136" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="ClassList"></a>
@@ -1521,8 +821,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L136"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L136" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L139"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L139" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="NodeType"></a>
@@ -1534,8 +834,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L139"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L139" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L142"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L142" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="Node"></a>
@@ -1544,8 +844,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L153"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L153" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L156"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L156" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="Document"></a>
@@ -1554,8 +854,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L170"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L170" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L175"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L175" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="Element"></a>
@@ -1564,48 +864,53 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L193"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L193" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L199"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L199" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="ValidityState"></a>
 <dt><pre><a href="dom.html#ValidityState"><span class="Identifier">ValidityState</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Identifier">ValidityStateObj</span></pre></dt>
 <dd>
 
-
-&nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L215"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L215" class="link-seesrc" target="_blank" >編集</a>
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/ValidityState">ドキュメント</a>を参照&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L220"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L220" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="Blob"></a>
 <dt><pre><a href="dom.html#Blob"><span class="Identifier">Blob</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Identifier">BlobObj</span></pre></dt>
 <dd>
 
-
-&nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L230"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L230" class="link-seesrc" target="_blank" >編集</a>
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/Blob">ドキュメント</a>を参照&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L234"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L234" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="File"></a>
 <dt><pre><a href="dom.html#File"><span class="Identifier">File</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Identifier">FileObj</span></pre></dt>
 <dd>
 
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/File">ドキュメント</a>を参照&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L239"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L239" class="link-seesrc" target="_blank" >編集</a>
 
-&nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L236"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L236" class="link-seesrc" target="_blank" >編集</a>
+</dd>
+<a id="TextAreaElement"></a>
+<dt><pre><a href="dom.html#TextAreaElement"><span class="Identifier">TextAreaElement</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Identifier">TextAreaElementObj</span></pre></dt>
+<dd>
+
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement">ドキュメント</a>を参照&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L244"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L244" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="InputElement"></a>
 <dt><pre><a href="dom.html#InputElement"><span class="Identifier">InputElement</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Identifier">InputElementObj</span></pre></dt>
 <dd>
 
-
-&nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L242"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L242" class="link-seesrc" target="_blank" >編集</a>
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement">ドキュメント</a>を参照&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L251"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L251" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="LinkElement"></a>
@@ -1614,8 +919,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L295"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L295" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L304"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L304" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="EmbedElement"></a>
@@ -1624,8 +929,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L302"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L302" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L311"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L311" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="AnchorElement"></a>
@@ -1634,8 +939,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L311"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L311" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L320"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L320" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="OptionElement"></a>
@@ -1644,18 +949,17 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L316"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L316" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L325"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L325" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="FormElement"></a>
 <dt><pre><a href="dom.html#FormElement"><span class="Identifier">FormElement</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Identifier">FormObj</span></pre></dt>
 <dd>
 
-
-&nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L325"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L325" class="link-seesrc" target="_blank" >編集</a>
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement">ドキュメント</a>を参照&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L333"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L333" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="ImageElement"></a>
@@ -1664,8 +968,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L338"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L338" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L346"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L346" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="Style"></a>
@@ -1674,8 +978,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L349"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L349" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L357"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L357" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="EventPhase"></a>
@@ -1685,38 +989,35 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L444"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L444" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L460"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L460" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="Event"></a>
 <dt><pre><a href="dom.html#Event"><span class="Identifier">Event</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Identifier">EventObj</span></pre></dt>
 <dd>
 
-
-&nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L451"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L451" class="link-seesrc" target="_blank" >編集</a>
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/Event">ドキュメント</a>を参照&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L466"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L466" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="UIEvent"></a>
 <dt><pre><a href="dom.html#UIEvent"><span class="Identifier">UIEvent</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Identifier">UIEventObj</span></pre></dt>
 <dd>
 
-
-&nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L465"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L465" class="link-seesrc" target="_blank" >編集</a>
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/UIEvent">ドキュメント</a>を参照&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L479"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L479" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="KeyboardEvent"></a>
 <dt><pre><a href="dom.html#KeyboardEvent"><span class="Identifier">KeyboardEvent</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Identifier">KeyboardEventObj</span></pre></dt>
 <dd>
 
-
-&nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L471"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L471" class="link-seesrc" target="_blank" >編集</a>
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent">ドキュメント</a>を参照&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L484"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L484" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="KeyboardEventKey"></a>
@@ -1773,10 +1074,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
   <span class="Identifier">Key12</span><span class="Other">,</span> <span class="Identifier">Separator</span></pre></dt>
 <dd>
 
-
-&nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L481"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L481" class="link-seesrc" target="_blank" >編集</a>
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key/Key_Values">ドキュメント</a>を参照&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L493"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L493" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="MouseButtons"></a>
@@ -1787,18 +1087,17 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L827"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L827" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L839"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L839" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="MouseEvent"></a>
 <dt><pre><a href="dom.html#MouseEvent"><span class="Identifier">MouseEvent</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Identifier">MouseEventObj</span></pre></dt>
 <dd>
 
-
-&nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L836"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L836" class="link-seesrc" target="_blank" >編集</a>
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent">ドキュメント</a>を参照&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L847"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L847" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="DataTransferItemKind"></a>
@@ -1808,28 +1107,26 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L850"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L850" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L861"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L861" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="DataTransferItem"></a>
 <dt><pre><a href="dom.html#DataTransferItem"><span class="Identifier">DataTransferItem</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Identifier">DataTransferItemObj</span></pre></dt>
 <dd>
 
-
-&nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L855"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L855" class="link-seesrc" target="_blank" >編集</a>
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem">ドキュメント</a>を参照&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L865"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L865" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="DataTransfer"></a>
 <dt><pre><a href="dom.html#DataTransfer"><span class="Identifier">DataTransfer</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Identifier">DataTransferObj</span></pre></dt>
 <dd>
 
-
-&nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L861"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L861" class="link-seesrc" target="_blank" >編集</a>
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer">ドキュメント</a>を参照&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L870"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L870" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="DataTransferDropEffect"></a>
@@ -1839,8 +1136,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L869"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L869" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L878"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L878" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="DataTransferEffectAllowed"></a>
@@ -1851,8 +1148,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L875"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L875" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L884"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L884" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="DragEventTypes"></a>
@@ -1863,8 +1160,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L886"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L886" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L895"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L895" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="DragEvent"></a>
@@ -1873,10 +1170,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </pre></dt>
 <dd>
 
-
-&nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L897"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L897" class="link-seesrc" target="_blank" >編集</a>
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/DragEvent">ドキュメント</a>を参照&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L905"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L905" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="TouchList"></a>
@@ -1887,8 +1183,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L900"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L900" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L909"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L909" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="Touch"></a>
@@ -1897,8 +1193,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L903"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L903" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L912"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L912" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="TouchEvent"></a>
@@ -1907,8 +1203,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L912"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L912" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L921"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L921" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="Location"></a>
@@ -1917,8 +1213,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L916"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L916" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L925"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L925" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="History"></a>
@@ -1927,8 +1223,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L927"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L927" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L937"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L937" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="Navigator"></a>
@@ -1937,8 +1233,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L931"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L931" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L941"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L941" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="Plugin"></a>
@@ -1951,8 +1247,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L942"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L942" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L952"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L952" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="MimeType"></a>
@@ -1966,8 +1262,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L947"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L947" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L957"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L957" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="LocationBar"></a>
@@ -1978,8 +1274,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L953"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L953" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L963"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L963" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="MenuBar"></a>
@@ -1988,8 +1284,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L955"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L955" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L965"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L965" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="PersonalBar"></a>
@@ -1998,8 +1294,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L956"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L956" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L966"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L966" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="ScrollBars"></a>
@@ -2008,8 +1304,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L957"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L957" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L967"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L967" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="ToolBar"></a>
@@ -2018,8 +1314,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L958"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L958" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L968"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L968" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="StatusBar"></a>
@@ -2028,8 +1324,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L959"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L959" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L969"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L969" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="TimeOut"></a>
@@ -2038,8 +1334,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L970"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L970" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L980"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L980" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="Interval"></a>
@@ -2048,8 +1344,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L971"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L971" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L981"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L981" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="AddEventListenerOptions"></a>
@@ -2062,8 +1358,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L973"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L973" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L983"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L983" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="BoundingRect"></a>
@@ -2074,8 +1370,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1255"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1255" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1275"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1275" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 
@@ -2089,8 +1385,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1230"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1230" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1250"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1250" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="navigator_2"></a>
@@ -2099,8 +1395,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1231"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1231" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1251"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1251" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="screen"></a>
@@ -2109,8 +1405,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1232"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1232" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1252"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1252" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="document_2"></a>
@@ -2119,8 +1415,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1235"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1235" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1255"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1255" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 
@@ -2133,7 +1429,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 DOM API の対応バージョンです。ただし、この定数を用いたバージョンの確認が行われる保証はありません。&nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L17"
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L17"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L17" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
@@ -2148,8 +1444,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L978"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L978" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L988"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L988" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="id=,Node,cstring"></a>
@@ -2158,8 +1454,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L979"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L979" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L989"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L989" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="class,Node"></a>
@@ -2168,8 +1464,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L980"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L980" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L990"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L990" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="class=,Node,cstring"></a>
@@ -2178,8 +1474,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L981"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L981" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L991"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L991" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="value,Node"></a>
@@ -2188,8 +1484,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L983"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L983" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L993"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L993" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="value=,Node,cstring"></a>
@@ -2198,8 +1494,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L984"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L984" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L994"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L994" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="disabled=,Node,bool"></a>
@@ -2208,8 +1504,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L986"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L986" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L996"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L996" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="len,Node"></a>
@@ -2218,8 +1514,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1056"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1056" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1066"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1066" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="[],Node,int"></a>
@@ -2228,8 +1524,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1057"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1057" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1067"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1067" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getElementById,cstring"></a>
@@ -2238,8 +1534,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1058"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1058" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1068"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1068" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="appendChild,Node,Node"></a>
@@ -2248,8 +1544,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1059"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1059" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1069"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1069" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="removeChild,Node,Node"></a>
@@ -2258,8 +1554,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1060"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1060" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1070"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1070" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="replaceChild,Node,Node,Node"></a>
@@ -2268,8 +1564,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1061"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1061" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1071"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1071" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="insertBefore,Node,Node,Node"></a>
@@ -2278,8 +1574,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1062"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1062" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1072"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1072" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getElementById,Document,cstring"></a>
@@ -2288,8 +1584,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1063"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1063" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1073"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1073" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="createElement,Document,cstring"></a>
@@ -2298,8 +1594,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1064"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1064" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1074"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1074" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="createTextNode,Document,cstring"></a>
@@ -2308,8 +1604,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1065"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1065" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1075"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1075" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="setTimeout,proc),int"></a>
@@ -2318,8 +1614,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1067"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1067" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1077"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1077" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="clearTimeout,TimeOut"></a>
@@ -2328,8 +1624,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1068"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1068" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1078"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1078" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="addEventListener,EventTarget,cstring,proc(Event),bool"></a>
@@ -2339,8 +1635,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1073"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1073" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1083"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1083" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="addEventListener,EventTarget,cstring,proc(Event),AddEventListenerOptions"></a>
@@ -2350,8 +1646,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1074"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1074" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1084"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1084" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="dispatchEvent,EventTarget,Event"></a>
@@ -2360,8 +1656,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1075"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1075" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1085"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1085" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="removeEventListener,EventTarget,cstring,proc(Event)"></a>
@@ -2370,8 +1666,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1076"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1076" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1086"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1086" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="alert,Window,cstring"></a>
@@ -2380,8 +1676,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1079"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1079" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1089"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1089" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="back,Window"></a>
@@ -2390,8 +1686,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1080"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1080" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1090"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1090" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="blur,Window"></a>
@@ -2400,8 +1696,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1081"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1081" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1091"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1091" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="captureEvents,Window,int"></a>
@@ -2413,8 +1709,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1082"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1082" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1092"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1092" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="clearInterval,Window,ref.Interval"></a>
@@ -2423,8 +1719,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1083"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1083" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1093"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1093" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="clearTimeout,Window,ref.TimeOut"></a>
@@ -2433,8 +1729,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1084"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1084" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1094"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1094" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="close,Window"></a>
@@ -2443,8 +1739,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1085"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1085" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1095"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1095" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="confirm,Window,cstring"></a>
@@ -2453,8 +1749,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1086"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1086" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1096"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1096" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="disableExternalCapture,Window"></a>
@@ -2463,8 +1759,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1087"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1087" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1097"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1097" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="enableExternalCapture,Window"></a>
@@ -2473,8 +1769,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1088"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1088" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1098"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1098" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="find,Window,cstring"></a>
@@ -2483,8 +1779,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1089"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1089" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1099"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1099" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="focus,Window"></a>
@@ -2493,8 +1789,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1091"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1091" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1101"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1101" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="forward,Window"></a>
@@ -2503,8 +1799,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1092"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1092" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1102"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1102" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getComputedStyle,Window,Node,Node"></a>
@@ -2513,8 +1809,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1093"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1093" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1103"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1103" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="handleEvent,Window,Event"></a>
@@ -2523,8 +1819,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1094"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1094" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1104"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1104" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="home,Window"></a>
@@ -2533,8 +1829,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1095"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1095" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1105"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1105" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="moveBy,Window,int,int"></a>
@@ -2543,8 +1839,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1096"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1096" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1106"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1106" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="moveTo,Window,int,int"></a>
@@ -2553,8 +1849,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1097"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1097" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1107"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1107" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="open,Window,cstring,cstring,cstring"></a>
@@ -2564,8 +1860,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1098"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1098" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1108"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1108" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="print,Window"></a>
@@ -2574,8 +1870,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1100"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1100" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1110"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1110" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="prompt,Window,cstring,cstring"></a>
@@ -2584,8 +1880,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1101"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1101" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1111"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1111" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="releaseEvents,Window,int"></a>
@@ -2597,8 +1893,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1102"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1102" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1112"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1112" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="resizeBy,Window,int,int"></a>
@@ -2607,8 +1903,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1103"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1103" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1113"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1113" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="resizeTo,Window,int,int"></a>
@@ -2617,8 +1913,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1104"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1104" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1114"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1114" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="routeEvent,Window,Event"></a>
@@ -2627,8 +1923,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1105"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1105" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1115"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1115" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="scrollBy,Window,int,int"></a>
@@ -2637,8 +1933,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1106"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1106" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1116"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1116" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="scrollTo,Window,int,int"></a>
@@ -2647,8 +1943,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1107"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1107" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1117"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1117" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="setInterval,Window,cstring,int"></a>
@@ -2657,8 +1953,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1108"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1108" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1118"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1118" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="setInterval,Window,proc),int"></a>
@@ -2667,8 +1963,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1109"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1109" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1119"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1119" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="setTimeout,Window,cstring,int"></a>
@@ -2677,8 +1973,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1110"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1110" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1120"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1120" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="setTimeout,Window,proc),int"></a>
@@ -2687,8 +1983,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1111"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1111" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1121"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1121" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="stop,Window"></a>
@@ -2697,8 +1993,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1112"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1112" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1122"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1122" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="requestAnimationFrame,Window,proc(float)"></a>
@@ -2707,8 +2003,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1113"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1113" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1123"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1123" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="cancelAnimationFrame,Window,int"></a>
@@ -2717,8 +2013,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1114"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1114" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1124"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1124" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="appendData,Node,cstring"></a>
@@ -2727,8 +2023,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1117"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1117" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1127"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1127" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="cloneNode,Node,bool"></a>
@@ -2737,8 +2033,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1118"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1118" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1128"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1128" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="deleteData,Node,int,int"></a>
@@ -2747,8 +2043,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1119"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1119" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1129"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1129" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="focus,Node"></a>
@@ -2757,8 +2053,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1120"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1120" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1130"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1130" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getAttribute,Node,cstring"></a>
@@ -2767,8 +2063,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1121"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1121" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1131"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1131" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getAttributeNode,Node,cstring"></a>
@@ -2777,8 +2073,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1122"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1122" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1132"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1132" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="hasChildNodes,Node"></a>
@@ -2787,8 +2083,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1123"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1123" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1133"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1133" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="insertData,Node,int,cstring"></a>
@@ -2797,8 +2093,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1124"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1124" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1134"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1134" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="removeAttribute,Node,cstring"></a>
@@ -2807,8 +2103,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1125"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1125" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1135"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1135" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="removeAttributeNode,Node,Node"></a>
@@ -2817,8 +2113,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1126"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1126" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1136"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1136" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="replaceData,Node,int,int,cstring"></a>
@@ -2827,8 +2123,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1127"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1127" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1137"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1137" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="scrollIntoView,Node"></a>
@@ -2837,8 +2133,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1128"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1128" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1138"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1138" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="setAttribute,Node,cstring,cstring"></a>
@@ -2847,8 +2143,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1129"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1129" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1139"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1139" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="setAttributeNode,Node,Node"></a>
@@ -2857,8 +2153,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1130"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1130" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1140"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1140" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="captureEvents,Document,int"></a>
@@ -2870,8 +2166,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1133"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1133" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1143"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1143" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="createAttribute,Document,cstring"></a>
@@ -2880,8 +2176,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1134"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1134" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1144"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1144" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getElementsByName,Document,cstring"></a>
@@ -2890,8 +2186,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1135"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1135" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1145"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1145" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getElementsByTagName,Document,cstring"></a>
@@ -2900,8 +2196,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1136"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1136" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1146"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1146" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getElementsByClassName,Document,cstring"></a>
@@ -2910,8 +2206,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1137"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1137" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1147"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1147" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getSelection,Document"></a>
@@ -2920,8 +2216,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1138"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1138" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1148"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1148" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="handleEvent,Document,Event"></a>
@@ -2930,8 +2226,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1139"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1139" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1149"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1149" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="open,Document"></a>
@@ -2940,8 +2236,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1140"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1140" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1150"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1150" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="releaseEvents,Document,int"></a>
@@ -2953,8 +2249,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1141"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1141" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1151"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1151" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="routeEvent,Document,Event"></a>
@@ -2963,8 +2259,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1142"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1142" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1152"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1152" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="write,Document,cstring"></a>
@@ -2973,8 +2269,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1143"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1143" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1153"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1153" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="writeln,Document,cstring"></a>
@@ -2983,8 +2279,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1144"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1144" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1154"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1154" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="querySelector,Document,cstring"></a>
@@ -2993,8 +2289,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1145"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1145" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1155"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1155" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="querySelectorAll,Document,cstring"></a>
@@ -3003,8 +2299,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1146"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1146" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1156"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1156" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="blur,Element"></a>
@@ -3013,8 +2309,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1149"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1149" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1159"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1159" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="click,Element"></a>
@@ -3023,8 +2319,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1150"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1150" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1160"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1160" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="focus,Element"></a>
@@ -3033,8 +2329,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1151"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1151" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1161"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1161" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="handleEvent,Element,Event"></a>
@@ -3043,8 +2339,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1152"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1152" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1162"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1162" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="select,Element"></a>
@@ -3053,8 +2349,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1153"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1153" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1163"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1163" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getElementsByTagName,Element,cstring"></a>
@@ -3063,8 +2359,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1154"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1154" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1164"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1164" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getElementsByClassName,Element,cstring"></a>
@@ -3073,8 +2369,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1155"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1155" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1165"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1165" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="reset,FormElement"></a>
@@ -3083,8 +2379,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1158"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1158" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1168"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1168" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="submit,FormElement"></a>
@@ -3093,8 +2389,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1159"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1159" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1169"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1169" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="checkValidity,FormElement"></a>
@@ -3103,8 +2399,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1160"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1160" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1170"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1170" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="reportValidity,FormElement"></a>
@@ -3113,8 +2409,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1161"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1161" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1171"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1171" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="play,EmbedElement"></a>
@@ -3123,8 +2419,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1164"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1164" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1174"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1174" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="stop,EmbedElement"></a>
@@ -3133,8 +2429,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1165"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1165" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1175"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1175" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="reload,Location"></a>
@@ -3143,8 +2439,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1168"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1168" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1178"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1178" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="replace,Location,cstring"></a>
@@ -3153,8 +2449,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1169"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1169" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1179"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1179" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="back,History"></a>
@@ -3163,8 +2459,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1172"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1172" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1182"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1182" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="forward,History"></a>
@@ -3173,8 +2469,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1173"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1173" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1183"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1183" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="go,History,int"></a>
@@ -3183,8 +2479,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1174"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1174" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1184"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1184" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="pushState,History,T,cstring,cstring"></a>
@@ -3193,8 +2489,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1175"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1175" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1185"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1185" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="javaEnabled,Navigator"></a>
@@ -3203,8 +2499,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1178"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1178" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1188"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1188" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="add,ClassList,cstring"></a>
@@ -3213,8 +2509,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1181"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1181" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1191"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1191" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="remove,ClassList,cstring"></a>
@@ -3223,8 +2519,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1182"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1182" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1192"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1192" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="contains,ClassList,cstring"></a>
@@ -3233,8 +2529,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1183"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1183" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1193"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1193" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="toggle,ClassList,cstring"></a>
@@ -3243,8 +2539,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1184"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1184" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1194"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1194" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getPropertyValue,Style,cstring"></a>
@@ -3253,8 +2549,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1187"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1187" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1197"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1197" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="removeProperty,Style,cstring"></a>
@@ -3263,8 +2559,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1188"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1188" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1198"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1198" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="setProperty,Style,cstring,cstring,string"></a>
@@ -3273,8 +2569,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1189"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1189" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1199"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1199" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getPropertyPriority,Style,cstring"></a>
@@ -3283,8 +2579,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1190"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1190" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1200"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1200" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="preventDefault,Event"></a>
@@ -3293,8 +2589,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1193"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1193" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1203"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1203" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="stopImmediatePropagation,Event"></a>
@@ -3303,8 +2599,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1194"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1194" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1204"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1204" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="stopPropagation,Event"></a>
@@ -3313,8 +2609,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1195"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1195" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1205"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1205" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getModifierState,KeyboardEvent,cstring"></a>
@@ -3323,8 +2619,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1198"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1198" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1208"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1208" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getModifierState,MouseEvent,cstring"></a>
@@ -3333,8 +2629,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1201"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1201" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1211"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1211" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="identifiedTouch,TouchList"></a>
@@ -3343,8 +2639,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1204"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1204" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1214"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1214" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="item,TouchList,int"></a>
@@ -3353,8 +2649,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1205"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1205" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1215"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1215" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="clearData,DataTransfer,cstring"></a>
@@ -3363,8 +2659,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1208"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1208" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1218"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1218" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getData,DataTransfer,cstring"></a>
@@ -3373,8 +2669,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1209"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1209" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1219"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1219" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="setData,DataTransfer,cstring,cstring"></a>
@@ -3383,8 +2679,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1210"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1210" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1220"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1220" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="setDragImage,DataTransfer,Element,int64,int64"></a>
@@ -3394,8 +2690,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1211"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1211" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1221"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1221" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getAsFile,DataTransferItem"></a>
@@ -3404,8 +2700,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1214"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1214" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1224"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1224" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="setSelectionRange,InputElement,int,int,cstring"></a>
@@ -3415,8 +2711,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1217"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1217" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1227"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1227" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="setRangeText,InputElement,cstring,int,int,cstring"></a>
@@ -3426,8 +2722,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1218"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1218" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1228"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1228" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="setCustomValidity,InputElement,cstring"></a>
@@ -3436,8 +2732,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1219"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1219" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1229"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1229" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="checkValidity,InputElement"></a>
@@ -3446,8 +2742,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1220"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1220" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1230"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1230" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="slice,Blob,int,int,cstring"></a>
@@ -3457,8 +2753,68 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1223"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1223" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1233"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1233" class="link-seesrc" target="_blank" >編集</a>
+
+</dd>
+<a id="now,Performance"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#now%2CPerformance"><span class="Identifier">now</span></a><span class="Other">(</span><span class="Identifier">p</span><span class="Other">:</span> <a href="dom.html#Performance"><span class="Identifier">Performance</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#float"><span class="Identifier">float</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importcpp</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1236"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1236" class="link-seesrc" target="_blank" >編集</a>
+
+</dd>
+<a id="getItem,LocalStorage,cstring"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#getItem%2CLocalStorage%2Ccstring"><span class="Identifier">getItem</span></a><span class="Other">(</span><span class="Identifier">ls</span><span class="Other">:</span> <a href="dom.html#LocalStorage"><span class="Identifier">LocalStorage</span></a><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#cstring"><span class="Identifier">cstring</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#cstring"><span class="Identifier">cstring</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importcpp</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1239"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1239" class="link-seesrc" target="_blank" >編集</a>
+
+</dd>
+<a id="setItem,LocalStorage,cstring,cstring"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#setItem%2CLocalStorage%2Ccstring%2Ccstring"><span class="Identifier">setItem</span></a><span class="Other">(</span><span class="Identifier">ls</span><span class="Other">:</span> <a href="dom.html#LocalStorage"><span class="Identifier">LocalStorage</span></a><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <a href="system.html#cstring"><span class="Identifier">cstring</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importcpp</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1240"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1240" class="link-seesrc" target="_blank" >編集</a>
+
+</dd>
+<a id="hasItem,LocalStorage,cstring"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#hasItem%2CLocalStorage%2Ccstring"><span class="Identifier">hasItem</span></a><span class="Other">(</span><span class="Identifier">ls</span><span class="Other">:</span> <a href="dom.html#LocalStorage"><span class="Identifier">LocalStorage</span></a><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#cstring"><span class="Identifier">cstring</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importcpp</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1241"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1241" class="link-seesrc" target="_blank" >編集</a>
+
+</dd>
+<a id="clear,LocalStorage"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#clear%2CLocalStorage"><span class="Identifier">clear</span></a><span class="Other">(</span><span class="Identifier">ls</span><span class="Other">:</span> <a href="dom.html#LocalStorage"><span class="Identifier">LocalStorage</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importcpp</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1242"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1242" class="link-seesrc" target="_blank" >編集</a>
+
+</dd>
+<a id="removeItem,LocalStorage,cstring"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#removeItem%2CLocalStorage%2Ccstring"><span class="Identifier">removeItem</span></a><span class="Other">(</span><span class="Identifier">ls</span><span class="Other">:</span> <a href="dom.html#LocalStorage"><span class="Identifier">LocalStorage</span></a><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#cstring"><span class="Identifier">cstring</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importcpp</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1243"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1243" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="setAttr,Node,cstring,cstring"></a>
@@ -3467,8 +2823,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1227"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1227" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1247"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1247" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="decodeURI,cstring"></a>
@@ -3477,8 +2833,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1237"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1237" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1257"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1257" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="encodeURI,cstring"></a>
@@ -3487,8 +2843,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1238"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1238" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1258"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1258" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="escape,cstring"></a>
@@ -3497,8 +2853,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1240"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1240" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1260"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1260" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="unescape,cstring"></a>
@@ -3507,8 +2863,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1241"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1241" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1261"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1261" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="decodeURIComponent,cstring"></a>
@@ -3517,8 +2873,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1243"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1243" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1263"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1263" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="encodeURIComponent,cstring"></a>
@@ -3527,8 +2883,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1244"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1244" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1264"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1264" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="isFinite,BiggestFloat"></a>
@@ -3537,8 +2893,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1245"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1245" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1265"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1265" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="isNaN,BiggestFloat"></a>
@@ -3547,8 +2903,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1246"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1246" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1266"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1266" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newEvent,cstring"></a>
@@ -3557,8 +2913,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1248"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1248" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1268"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1268" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getElementsByClass,Node,cstring"></a>
@@ -3568,8 +2924,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1250"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1250" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1270"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1270" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getBoundingClientRect,Node"></a>
@@ -3579,8 +2935,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1258"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1258" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1278"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1278" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="clientHeight"></a>
@@ -3590,8 +2946,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1260"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1260" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1280"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1280" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="clientWidth"></a>
@@ -3601,8 +2957,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1262"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1262" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1282"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1282" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="inViewport,Node"></a>
@@ -3611,8 +2967,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1265"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1265" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1285"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1285" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="scrollTop,Node"></a>
@@ -3621,8 +2977,18 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1271"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1271" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1291"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1291" class="link-seesrc" target="_blank" >編集</a>
+
+</dd>
+<a id="scrollTop=,Node,int"></a>
+<dt><pre><span class="Keyword">proc</span> <a href="#scrollTop%3D%2CNode%2Cint"><span class="Identifier">scrollTop=</span></a><span class="Other">(</span><span class="Identifier">e</span><span class="Other">:</span> <a href="dom.html#Node"><span class="Identifier">Node</span></a><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importcpp</span><span class="Other">:</span> <span class="StringLit">"#.scrollTop = #"</span><span class="Other">,</span> <span class="Identifier">nodecl</span></span><span class="Other">.}</span></span></pre></dt>
+<dd>
+
+
+&nbsp;&nbsp;<a
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1292"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1292" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="scrollLeft,Node"></a>
@@ -3631,8 +2997,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1272"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1272" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1293"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1293" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="scrollHeight,Node"></a>
@@ -3641,8 +3007,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1273"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1273" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1294"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1294" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="scrollWidth,Node"></a>
@@ -3651,8 +3017,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1274"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1274" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1295"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1295" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="offsetHeight,Node"></a>
@@ -3661,8 +3027,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1275"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1275" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1296"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1296" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="offsetWidth,Node"></a>
@@ -3671,8 +3037,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1276"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1276" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1297"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1297" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="offsetTop,Node"></a>
@@ -3681,8 +3047,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1277"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1277" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1298"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1298" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="offsetLeft,Node"></a>
@@ -3691,8 +3057,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 
 &nbsp;&nbsp;<a
-href="https://github.com/nim-lang/Nim/tree/version-1-0/lib/js/dom.nim#L1278"
-class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1278" class="link-seesrc" target="_blank" >編集</a>
+href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/js/dom.nim#L1299"
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/js/dom.nim#L1299" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 
@@ -3705,7 +3071,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br/>
-        <small>Nim で作成しました。 生成日時: 2020年01月23日 午前17時27分21秒 (UTC)</small>
+        <small style="color: var(--hint);">Nim で作成しました。 生成日時: 2020年04月03日 午前12時37分23秒 (UTC)</small>
       </div>
     </div>
   </div>
