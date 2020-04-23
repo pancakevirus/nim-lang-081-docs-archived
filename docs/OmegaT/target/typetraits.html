@@ -185,13 +185,9 @@ function main() {
   </pre></dt>
 <dd>
 
-
-
-used to wrap a static value in <tt class="docutils literal"><span class="pre">genericParams</span></tt>
-&nbsp;&nbsp;<a
+used to wrap a static value in <tt class="docutils literal"><span class="pre">genericParams</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/typetraits.nim#L96"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/typetraits.nim#L96" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/typetraits.nim#L96" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 
@@ -263,7 +259,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 <p>このトレイは <tt class="docutils literal"><span class="pre">t</span></tt>  型を <span id="copymem_1">copyMem</span> で安全に使えるならば true を返します。</p>
-<p>そのほかの言語において、この型の名前は <span id="blob_1">blob</span> などがあります。</p>
+<p>一般的な言語において、この型の名前は <span id="blob_1">blob</span> などがあります。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/typetraits.nim#L61"
@@ -283,26 +279,18 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#distinctBase%2Ctypedesc"><span class="Identifier">distinctBase</span></a><span class="Other">(</span><span class="Identifier">T</span><span class="Other">:</span> <a href="system.html#typedesc"><span class="Identifier">typedesc</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#typedesc"><span class="Identifier">typedesc</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"TypeTrait"</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Returns base type for distinct types, works only for distinct types. compile time error otherwise
-&nbsp;&nbsp;<a
+distinct 型における基底型であり、 distinct 型に限り動作します。それ以外の型はコンパイル時にエラーとなります &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/typetraits.nim#L70"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/typetraits.nim#L70" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/typetraits.nim#L70" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="tupleLen,typedesc[]"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#tupleLen%2Ctypedesc%5B%5D"><span class="Identifier">tupleLen</span></a><span class="Other">(</span><span class="Identifier">T</span><span class="Other">:</span> <a href="system.html#typedesc"><span class="Identifier">typedesc</span></a><span class="Other">[</span><span class="Keyword">tuple</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">magic</span><span class="Other">:</span> <span class="StringLit">"TypeTrait"</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Return number of elements of <tt class="docutils literal"><span class="pre">T</span></tt>
-&nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">T</span></tt> の要素数を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/typetraits.nim#L82"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/typetraits.nim#L82" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/typetraits.nim#L82" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 
@@ -314,10 +302,7 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">template</span> <a href="#distinctBase.t%2CT"><span class="Identifier">distinctBase</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-
-
-overload for values
-
+値のオーバロード
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">type</span>
   <span class="Identifier">MyInt</span> <span class="Other">=</span> <span class="Keyword">distinct</span> <span class="Identifier">int</span>
@@ -331,35 +316,25 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">template</span> <a href="#tupleLen.t"><span class="Identifier">tupleLen</span></a><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Keyword">tuple</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a></pre></dt>
 <dd>
 
-
-
-Return number of elements of <tt class="docutils literal"><span class="pre">t</span></tt>
-&nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">t</span></tt> の要素数を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/typetraits.nim#L86"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/typetraits.nim#L86" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/typetraits.nim#L86" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="get.t,typedesc[],"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#get.t%2Ctypedesc%5B%5D%2C"><span class="Identifier">get</span></a><span class="Other">(</span><span class="Identifier">T</span><span class="Other">:</span> <a href="system.html#typedesc"><span class="Identifier">typedesc</span></a><span class="Other">[</span><span class="Keyword">tuple</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">i</span><span class="Other">:</span> <a href="system.html#static"><span class="Identifier">static</span></a> <span class="Identifier">int</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-
-
-Return <tt class="docutils literal"><span class="pre">i`th element of `T</span></tt>
-&nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">T</span></tt> にある i 番目の要素を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/typetraits.nim#L91"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/typetraits.nim#L91" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/typetraits.nim#L91" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="genericParams.t,typedesc"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#genericParams.t%2Ctypedesc"><span class="Identifier">genericParams</span></a><span class="Other">(</span><span class="Identifier">T</span><span class="Other">:</span> <a href="system.html#typedesc"><span class="Identifier">typedesc</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-
-
-return tuple of generic params for generic <tt class="docutils literal"><span class="pre">T</span></tt>
+ジェネリック型 <tt class="docutils literal"><span class="pre">T</span></tt> においてジェネリック型パラメータのタプルを返します
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">type</span>
   <span class="Identifier">Foo</span><span class="Other">[</span><span class="Identifier">T1</span><span class="Other">,</span> <span class="Identifier">T2</span><span class="Other">]</span> <span class="Other">=</span> <span class="Keyword">object</span>

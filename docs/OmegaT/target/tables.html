@@ -806,7 +806,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%5B%5D%2CTable%5BA%2CB%5D%2CA_2"><span class="Identifier">`[]`</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Identifier">B</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="tables.html#Table"><span class="Identifier">Table</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Identifier">B</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <span class="Identifier">A</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">B</span></pre></dt>
 <dd>
 
-<p>Retrieves the value at <tt class="docutils literal"><span class="pre">t[key]</span></tt>. The value can be modified.</p>
+<p>Retrieves the value at <tt class="docutils literal"><span class="pre">t[key]</span></tt>. 値は修正可能です。</p>
 <p>If <tt class="docutils literal"><span class="pre">key</span></tt> is not in <tt class="docutils literal"><span class="pre">t</span></tt>, the <tt class="docutils literal"><span class="pre">KeyError</span></tt> exception is raised.</p>
 <p>関連:</p>
 <ul class="simple"><li><a class="reference external" href="#getOrDefault,Table[A,B],A">getOrDefault proc</a> to return a default value (e.g. zero for int) if the key doesn't exist</li>
@@ -1547,7 +1547,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%5B%5D%2COrderedTable%5BA%2CB%5D%2CA_2"><span class="Identifier">`[]`</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Identifier">B</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="tables.html#OrderedTable"><span class="Identifier">OrderedTable</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Identifier">B</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <span class="Identifier">A</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">B</span></pre></dt>
 <dd>
 
-<p>Retrieves the value at <tt class="docutils literal"><span class="pre">t[key]</span></tt>. The value can be modified.</p>
+<p>Retrieves the value at <tt class="docutils literal"><span class="pre">t[key]</span></tt>. 値は修正可能です。</p>
 <p>If <tt class="docutils literal"><span class="pre">key</span></tt> is not in <tt class="docutils literal"><span class="pre">t</span></tt>, the <tt class="docutils literal"><span class="pre">KeyError</span></tt> exception is raised.</p>
 <p>関連:</p>
 <ul class="simple"><li><a class="reference external" href="#getOrDefault,OrderedTable[A,B],A">getOrDefault proc</a> to return a default value (e.g. zero for int) if the key doesn't exist</li>
@@ -2761,7 +2761,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#mpairs.i%2CTable%5BA%2CB%5D"><span class="Identifier">mpairs</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Identifier">B</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="tables.html#Table"><span class="Identifier">Table</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Identifier">B</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Other">(</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Keyword">var</span> <span class="Identifier">B</span><span class="Other">)</span></pre></dt>
 <dd>
 
-<p>Iterates over any <tt class="docutils literal"><span class="pre">(key, value)</span></tt> pair in the table <tt class="docutils literal"><span class="pre">t</span></tt> (must be declared as <tt class="docutils literal"><span class="pre">var</span></tt>). The values can be modified.</p>
+<p>Iterates over any <tt class="docutils literal"><span class="pre">(key, value)</span></tt> pair in the table <tt class="docutils literal"><span class="pre">t</span></tt> (must be declared as <tt class="docutils literal"><span class="pre">var</span></tt>). 値は修正可能です。</p>
 <p>関連:</p>
 <ul class="simple"><li><a class="reference external" href="#pairs.i,Table[A,B]">pairs iterator</a></li>
 <li><a class="reference external" href="#mvalues.i,Table[A,B]">mvalues iterator</a></li>
@@ -2821,7 +2821,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#mvalues.i%2CTable%5BA%2CB%5D"><span class="Identifier">mvalues</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Identifier">B</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="tables.html#Table"><span class="Identifier">Table</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Identifier">B</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">B</span></pre></dt>
 <dd>
 
-<p>Iterates over any value in the table <tt class="docutils literal"><span class="pre">t</span></tt> (must be declared as <tt class="docutils literal"><span class="pre">var</span></tt>). The values can be modified.</p>
+<p>Iterates over any value in the table <tt class="docutils literal"><span class="pre">t</span></tt> (must be declared as <tt class="docutils literal"><span class="pre">var</span></tt>). 値は修正可能です。</p>
 <p>関連:</p>
 <ul class="simple"><li><a class="reference external" href="#mpairs.i,Table[A,B]">mpairs iterator</a></li>
 <li><a class="reference external" href="#values.i,Table[A,B]">values iterator</a></li>
@@ -2892,7 +2892,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#mpairs.i%2CTableRef%5BA%2CB%5D"><span class="Identifier">mpairs</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Identifier">B</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <a href="tables.html#TableRef"><span class="Identifier">TableRef</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Identifier">B</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Other">(</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Keyword">var</span> <span class="Identifier">B</span><span class="Other">)</span></pre></dt>
 <dd>
 
-<p>Iterates over any <tt class="docutils literal"><span class="pre">(key, value)</span></tt> pair in the table <tt class="docutils literal"><span class="pre">t</span></tt>. The values can be modified.</p>
+<p>Iterates over any <tt class="docutils literal"><span class="pre">(key, value)</span></tt> pair in the table <tt class="docutils literal"><span class="pre">t</span></tt>. 値は修正可能です。</p>
 <p>関連:</p>
 <ul class="simple"><li><a class="reference external" href="#pairs.i,TableRef[A,B]">pairs iterator</a></li>
 <li><a class="reference external" href="#mvalues.i,TableRef[A,B]">mvalues iterator</a></li>
@@ -2952,7 +2952,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#mvalues.i%2CTableRef%5BA%2CB%5D"><span class="Identifier">mvalues</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Identifier">B</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <a href="tables.html#TableRef"><span class="Identifier">TableRef</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Identifier">B</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">B</span></pre></dt>
 <dd>
 
-<p>Iterates over any value in the table <tt class="docutils literal"><span class="pre">t</span></tt>. The values can be modified.</p>
+<p>Iterates over any value in the table <tt class="docutils literal"><span class="pre">t</span></tt>. 値は修正可能です。</p>
 <p>関連:</p>
 <ul class="simple"><li><a class="reference external" href="#mpairs.i,TableRef[A,B]">mpairs iterator</a></li>
 <li><a class="reference external" href="#values.i,TableRef[A,B]">values iterator</a></li>
@@ -3001,7 +3001,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#mpairs.i%2COrderedTable%5BA%2CB%5D"><span class="Identifier">mpairs</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Identifier">B</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="tables.html#OrderedTable"><span class="Identifier">OrderedTable</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Identifier">B</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Other">(</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Keyword">var</span> <span class="Identifier">B</span><span class="Other">)</span></pre></dt>
 <dd>
 
-<p>Iterates over any <tt class="docutils literal"><span class="pre">(key, value)</span></tt> pair in the table <tt class="docutils literal"><span class="pre">t</span></tt> (must be declared as <tt class="docutils literal"><span class="pre">var</span></tt>) in insertion order. The values can be modified.</p>
+<p>Iterates over any <tt class="docutils literal"><span class="pre">(key, value)</span></tt> pair in the table <tt class="docutils literal"><span class="pre">t</span></tt> (must be declared as <tt class="docutils literal"><span class="pre">var</span></tt>) in insertion order. 値は修正可能です。</p>
 <p>関連:</p>
 <ul class="simple"><li><a class="reference external" href="#pairs.i,OrderedTable[A,B]">pairs iterator</a></li>
 <li><a class="reference external" href="#mvalues.i,OrderedTable[A,B]">mvalues iterator</a></li>
@@ -3061,7 +3061,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#mvalues.i%2COrderedTable%5BA%2CB%5D"><span class="Identifier">mvalues</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Identifier">B</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="tables.html#OrderedTable"><span class="Identifier">OrderedTable</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Identifier">B</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">B</span></pre></dt>
 <dd>
 
-<p>Iterates over any value in the table <tt class="docutils literal"><span class="pre">t</span></tt> (must be declared as <tt class="docutils literal"><span class="pre">var</span></tt>) in insertion order. The values can be modified.</p>
+<p>Iterates over any value in the table <tt class="docutils literal"><span class="pre">t</span></tt> (must be declared as <tt class="docutils literal"><span class="pre">var</span></tt>) in insertion order. 値は修正可能です。</p>
 <p>関連:</p>
 <ul class="simple"><li><a class="reference external" href="#mpairs.i,OrderedTable[A,B]">mpairs iterator</a></li>
 <li><a class="reference external" href="#values.i,OrderedTable[A,B]">values iterator</a></li>
@@ -3110,7 +3110,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#mpairs.i%2COrderedTableRef%5BA%2CB%5D"><span class="Identifier">mpairs</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Identifier">B</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <a href="tables.html#OrderedTableRef"><span class="Identifier">OrderedTableRef</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Identifier">B</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Other">(</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Keyword">var</span> <span class="Identifier">B</span><span class="Other">)</span></pre></dt>
 <dd>
 
-<p>Iterates over any <tt class="docutils literal"><span class="pre">(key, value)</span></tt> pair in the table <tt class="docutils literal"><span class="pre">t</span></tt> in insertion order. The values can be modified.</p>
+<p>Iterates over any <tt class="docutils literal"><span class="pre">(key, value)</span></tt> pair in the table <tt class="docutils literal"><span class="pre">t</span></tt> in insertion order. 値は修正可能です。</p>
 <p>関連:</p>
 <ul class="simple"><li><a class="reference external" href="#pairs.i,OrderedTableRef[A,B]">pairs iterator</a></li>
 <li><a class="reference external" href="#mvalues.i,OrderedTableRef[A,B]">mvalues iterator</a></li>
@@ -3170,7 +3170,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#mvalues.i%2COrderedTableRef%5BA%2CB%5D"><span class="Identifier">mvalues</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Identifier">B</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <a href="tables.html#OrderedTableRef"><span class="Identifier">OrderedTableRef</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Identifier">B</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">B</span></pre></dt>
 <dd>
 
-<p>Iterates over any value in the table <tt class="docutils literal"><span class="pre">t</span></tt> in insertion order. The values can be modified.</p>
+<p>Iterates over any value in the table <tt class="docutils literal"><span class="pre">t</span></tt> in insertion order. 値は修正可能です。</p>
 <p>関連:</p>
 <ul class="simple"><li><a class="reference external" href="#mpairs.i,OrderedTableRef[A,B]">mpairs iterator</a></li>
 <li><a class="reference external" href="#values.i,OrderedTableRef[A,B]">values iterator</a></li>
@@ -3222,7 +3222,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#mpairs.i%2CCountTable%5BA%5D"><span class="Identifier">mpairs</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="tables.html#CountTable"><span class="Identifier">CountTable</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Other">(</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Keyword">var</span> <a href="system.html#int"><span class="Identifier">int</span></a><span class="Other">)</span></pre></dt>
 <dd>
 
-<p>Iterates over any <tt class="docutils literal"><span class="pre">(key, value)</span></tt> pair in the table <tt class="docutils literal"><span class="pre">t</span></tt> (must be declared as <tt class="docutils literal"><span class="pre">var</span></tt>). The values can be modified.</p>
+<p>Iterates over any <tt class="docutils literal"><span class="pre">(key, value)</span></tt> pair in the table <tt class="docutils literal"><span class="pre">t</span></tt> (must be declared as <tt class="docutils literal"><span class="pre">var</span></tt>). 値は修正可能です。</p>
 <p>関連:</p>
 <ul class="simple"><li><a class="reference external" href="#pairs.i,CountTable[A]">pairs iterator</a></li>
 <li><a class="reference external" href="#mvalues.i,CountTable[A]">mvalues iterator</a></li>
@@ -3282,7 +3282,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#mvalues.i%2CCountTable%5BA%5D"><span class="Identifier">mvalues</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="tables.html#CountTable"><span class="Identifier">CountTable</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="system.html#int"><span class="Identifier">int</span></a></pre></dt>
 <dd>
 
-<p>Iterates over any value in the table <tt class="docutils literal"><span class="pre">t</span></tt> (must be declared as <tt class="docutils literal"><span class="pre">var</span></tt>). The values can be modified.</p>
+<p>Iterates over any value in the table <tt class="docutils literal"><span class="pre">t</span></tt> (must be declared as <tt class="docutils literal"><span class="pre">var</span></tt>). 値は修正可能です。</p>
 <p>関連:</p>
 <ul class="simple"><li><a class="reference external" href="#mpairs.i,CountTable[A]">mpairs iterator</a></li>
 <li><a class="reference external" href="#values.i,CountTable[A]">values iterator</a></li>
@@ -3334,7 +3334,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#mpairs.i%2CCountTableRef%5BA%5D"><span class="Identifier">mpairs</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <a href="tables.html#CountTableRef"><span class="Identifier">CountTableRef</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Other">(</span><span class="Identifier">A</span><span class="Other">,</span> <span class="Keyword">var</span> <a href="system.html#int"><span class="Identifier">int</span></a><span class="Other">)</span></pre></dt>
 <dd>
 
-<p>Iterates over any <tt class="docutils literal"><span class="pre">(key, value)</span></tt> pair in the table <tt class="docutils literal"><span class="pre">t</span></tt>. The values can be modified.</p>
+<p>Iterates over any <tt class="docutils literal"><span class="pre">(key, value)</span></tt> pair in the table <tt class="docutils literal"><span class="pre">t</span></tt>. 値は修正可能です。</p>
 <p>関連:</p>
 <ul class="simple"><li><a class="reference external" href="#pairs.i,CountTableRef[A]">pairs iterator</a></li>
 <li><a class="reference external" href="#mvalues.i,CountTableRef[A]">mvalues iterator</a></li>
@@ -3394,7 +3394,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#mvalues.i%2CCountTableRef%5BA%5D"><span class="Identifier">mvalues</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">t</span><span class="Other">:</span> <a href="tables.html#CountTableRef"><span class="Identifier">CountTableRef</span></a><span class="Other">[</span><span class="Identifier">A</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="system.html#int"><span class="Identifier">int</span></a></pre></dt>
 <dd>
 
-<p>Iterates over any value in the table <tt class="docutils literal"><span class="pre">t</span></tt>. The values can be modified.</p>
+<p>Iterates over any value in the table <tt class="docutils literal"><span class="pre">t</span></tt>. 値は修正可能です。</p>
 <p>関連:</p>
 <ul class="simple"><li><a class="reference external" href="#mpairs.i,CountTableRef[A]">mpairs iterator</a></li>
 <li><a class="reference external" href="#values.i,CountTableRef[A]">values iterator</a></li>

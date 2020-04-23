@@ -383,7 +383,7 @@ function main() {
 
 <h1><a class="toc-backref" id="peg-syntax-and-semantics" href="#peg-syntax-and-semantics">PEG syntax and semantics</a></h1><p>A PEG (Parsing expression grammar) is a simple deterministic grammar, that can be directly used for parsing. The current implementation has been designed as a more powerful replacement for regular expressions. UTF-8 is supported.</p>
 <p>The notation used for a PEG is similar to that of EBNF:</p>
-<table border="1" class="docutils"><tr><th>notation</th><th>meaning</th></tr>
+<table border="1" class="docutils"><tr><th>notation</th><th>説明</th></tr>
 <tr><td><tt class="docutils literal"><span class="pre">A / ... / Z</span></tt></td><td>Ordered choice: Apply expressions <tt class="docutils literal"><span class="pre">A</span></tt>, ..., <tt class="docutils literal"><span class="pre">Z</span></tt>, in this order, to the text ahead, until one of them succeeds and possibly consumes some text. Indicate success if one of expressions succeeded. Otherwise do not consume any text and indicate failure.</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">A ... Z</span></tt></td><td>Sequence: Apply expressions <tt class="docutils literal"><span class="pre">A</span></tt>, ..., <tt class="docutils literal"><span class="pre">Z</span></tt>, in this order, to consume consecutive portions of the text ahead, as long as they succeed. Indicate success if all succeeded. Otherwise do not consume any text and indicate failure. The sequence's precedence is higher than that of ordered choice: <tt class="docutils literal"><span class="pre">A B / C</span></tt> means <tt class="docutils literal"><span class="pre">(A B) / Z</span></tt> and not <tt class="docutils literal"><span class="pre">A (B / Z)</span></tt>.</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">(E)</span></tt></td><td>Grouping: Parenthesis can be used to change operator priority.</td></tr>
@@ -415,7 +415,7 @@ function main() {
 <tr><td><tt class="docutils literal"><span class="pre">\ddd</span></tt></td><td>Character with decimal code <em>ddd</em>.</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\"</span></tt>, etc</td><td>Literal <tt class="docutils literal"><span class="pre">"</span></tt>, etc.</td></tr>
 </table>
-<h2><a class="toc-backref" id="peg-syntax-and-semantics-builtminusin-macros" href="#peg-syntax-and-semantics-builtminusin-macros">Built-in macros</a></h2><table border="1" class="docutils"><tr><th>macro</th><th>meaning</th></tr>
+<h2><a class="toc-backref" id="peg-syntax-and-semantics-builtminusin-macros" href="#peg-syntax-and-semantics-builtminusin-macros">Built-in macros</a></h2><table border="1" class="docutils"><tr><th>macro</th><th>説明</th></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\d</span></tt></td><td>any decimal digit: <tt class="docutils literal"><span class="pre">[0-9]</span></tt></td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\D</span></tt></td><td>any character that is not a decimal digit: <tt class="docutils literal"><span class="pre">[^0-9]</span></tt></td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\s</span></tt></td><td>any whitespace character: <tt class="docutils literal"><span class="pre">[ \9-\13]</span></tt></td></tr>
@@ -435,7 +435,7 @@ function main() {
 <tr><td><tt class="docutils literal"><span class="pre">\title</span></tt></td><td>any Unicode title letter</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\white</span></tt></td><td>any Unicode whitespace character</td></tr>
 </table><p>A backslash followed by a letter is a built-in macro, otherwise it is used for ordinary escaping:</p>
-<table border="1" class="docutils"><tr><th>notation</th><th>meaning</th></tr>
+<table border="1" class="docutils"><tr><th>notation</th><th>説明</th></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\\</span></tt></td><td>a single backslash</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\*</span></tt></td><td>same as <tt class="docutils literal"><span class="pre">'*'</span></tt></td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\t</span></tt></td><td>not a tabulator, but an (unknown) built-in</td></tr>
@@ -571,13 +571,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
   </pre></dt>
 <dd>
 
-
-
-type that represents a PEG
-&nbsp;&nbsp;<a
+type that represents a PEG &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L78"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L78" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L78" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="NonTerminal"></a>
@@ -607,13 +603,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="pegs.html#EInvalidPeg"><span class="Identifier">EInvalidPeg</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="system.html#ValueError"><span class="Identifier">ValueError</span></a></pre></dt>
 <dd>
 
-
-
-raised if an invalid PEG has been detected
-&nbsp;&nbsp;<a
+raised if an invalid PEG has been detected &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L1794"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L1794" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L1794" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 
@@ -739,13 +731,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                         <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-constructs a PEG from a terminal string
-&nbsp;&nbsp;<a
+constructs a PEG from a terminal string &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L142"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L142" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L142" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="termIgnoreCase,string"></a>
@@ -753,13 +741,9 @@ class="link-seesrc" target="_blank">Source</a>
                                   <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-constructs a PEG from a terminal string; ignore case for matching
-&nbsp;&nbsp;<a
+constructs a PEG from a terminal string; ignore case for matching &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L149"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L149" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L149" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="termIgnoreStyle,string"></a>
@@ -767,13 +751,9 @@ class="link-seesrc" target="_blank">Source</a>
                                    <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-constructs a PEG from a terminal string; ignore style for matching
-&nbsp;&nbsp;<a
+constructs a PEG from a terminal string; ignore style for matching &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L154"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L154" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L154" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="term,char"></a>
@@ -781,13 +761,9 @@ class="link-seesrc" target="_blank">Source</a>
                       <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-constructs a PEG from a terminal char
-&nbsp;&nbsp;<a
+constructs a PEG from a terminal char &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L159"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L159" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L159" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="charSet,set[char]"></a>
@@ -795,13 +771,9 @@ class="link-seesrc" target="_blank">Source</a>
                               <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-constructs a PEG from a character set <tt class="docutils literal"><span class="pre">s</span></tt>
-&nbsp;&nbsp;<a
+constructs a PEG from a character set <tt class="docutils literal"><span class="pre">s</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L164"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L164" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L164" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="/,varargs[Peg]"></a>
@@ -809,13 +781,9 @@ class="link-seesrc" target="_blank">Source</a>
                              <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-constructs an ordered choice with the PEGs in <tt class="docutils literal"><span class="pre">a</span></tt>
-&nbsp;&nbsp;<a
+constructs an ordered choice with the PEGs in <tt class="docutils literal"><span class="pre">a</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L197"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L197" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L197" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="sequence,varargs[Peg]"></a>
@@ -823,13 +791,9 @@ class="link-seesrc" target="_blank">Source</a>
                                   <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-constructs a sequence with all the PEGs from <tt class="docutils literal"><span class="pre">a</span></tt>
-&nbsp;&nbsp;<a
+constructs a sequence with all the PEGs from <tt class="docutils literal"><span class="pre">a</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L214"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L214" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L214" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="?,Peg"></a>
@@ -837,13 +801,9 @@ class="link-seesrc" target="_blank">Source</a>
                     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-constructs an optional for the PEG <tt class="docutils literal"><span class="pre">a</span></tt>
-&nbsp;&nbsp;<a
+constructs an optional for the PEG <tt class="docutils literal"><span class="pre">a</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L219"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L219" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L219" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="*,Peg"></a>
@@ -851,26 +811,18 @@ class="link-seesrc" target="_blank">Source</a>
                     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-constructs a "greedy repetition" for the PEG <tt class="docutils literal"><span class="pre">a</span></tt>
-&nbsp;&nbsp;<a
+constructs a "greedy repetition" for the PEG <tt class="docutils literal"><span class="pre">a</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L229"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L229" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L229" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="!*,Peg"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#%21%2A%2CPeg"><span class="Identifier">`!*`</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="pegs.html#Peg"><span class="Identifier">Peg</span></a><span class="Other">)</span><span class="Other">:</span> <a href="pegs.html#Peg"><span class="Identifier">Peg</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"npegsSearch"</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-constructs a "search" for the PEG <tt class="docutils literal"><span class="pre">a</span></tt>
-&nbsp;&nbsp;<a
+constructs a "search" for the PEG <tt class="docutils literal"><span class="pre">a</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L244"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L244" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L244" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="!*\,Peg"></a>
@@ -878,13 +830,9 @@ class="link-seesrc" target="_blank">Source</a>
                       <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-constructs a "captured search" for the PEG <tt class="docutils literal"><span class="pre">a</span></tt>
-&nbsp;&nbsp;<a
+constructs a "captured search" for the PEG <tt class="docutils literal"><span class="pre">a</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L248"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L248" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L248" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="+,Peg"></a>
@@ -892,13 +840,9 @@ class="link-seesrc" target="_blank">Source</a>
                     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-constructs a "greedy positive repetition" with the PEG <tt class="docutils literal"><span class="pre">a</span></tt>
-&nbsp;&nbsp;<a
+constructs a "greedy positive repetition" with the PEG <tt class="docutils literal"><span class="pre">a</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L253"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L253" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L253" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="&,Peg"></a>
@@ -906,13 +850,9 @@ class="link-seesrc" target="_blank">Source</a>
                     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-constructs an "and predicate" with the PEG <tt class="docutils literal"><span class="pre">a</span></tt>
-&nbsp;&nbsp;<a
+constructs an "and predicate" with the PEG <tt class="docutils literal"><span class="pre">a</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L257"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L257" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L257" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="!,Peg"></a>
@@ -920,52 +860,36 @@ class="link-seesrc" target="_blank">Source</a>
                     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-constructs a "not predicate" with the PEG <tt class="docutils literal"><span class="pre">a</span></tt>
-&nbsp;&nbsp;<a
+constructs a "not predicate" with the PEG <tt class="docutils literal"><span class="pre">a</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L261"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L261" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L261" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="any"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#any"><span class="Identifier">any</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="pegs.html#Peg"><span class="Identifier">Peg</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-constructs the PEG <span id="any-character_1">any character</span> (<tt class="docutils literal"><span class="pre">.</span></tt>)
-&nbsp;&nbsp;<a
+constructs the PEG <span id="any-character_1">any character</span> (<tt class="docutils literal"><span class="pre">.</span></tt>) &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L265"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L265" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L265" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="anyRune"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#anyRune"><span class="Identifier">anyRune</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="pegs.html#Peg"><span class="Identifier">Peg</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-constructs the PEG <span id="any-rune_1">any rune</span> (<tt class="docutils literal"><span class="pre">_</span></tt>)
-&nbsp;&nbsp;<a
+constructs the PEG <span id="any-rune_1">any rune</span> (<tt class="docutils literal"><span class="pre">_</span></tt>) &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L269"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L269" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L269" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newLine"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#newLine"><span class="Identifier">newLine</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="pegs.html#Peg"><span class="Identifier">Peg</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-constructs the PEG <span id="newline_1">newline</span> (<tt class="docutils literal"><span class="pre">\n</span></tt>)
-&nbsp;&nbsp;<a
+constructs the PEG <span id="newline_1">newline</span> (<tt class="docutils literal"><span class="pre">\n</span></tt>) &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L273"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L273" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L273" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="unicodeLetter"></a>
@@ -1036,13 +960,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                         <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-constructs a capture with the PEG <tt class="docutils literal"><span class="pre">a</span></tt>
-&nbsp;&nbsp;<a
+constructs a capture with the PEG <tt class="docutils literal"><span class="pre">a</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L306"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L306" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L306" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="backref,range[]"></a>
@@ -1080,13 +1000,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                                     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-constructs a PEG that consists of the nonterminal symbol
-&nbsp;&nbsp;<a
+constructs a PEG that consists of the nonterminal symbol &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L343"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L343" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L343" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="newNonTerminal,string,int,int"></a>
@@ -1094,13 +1010,9 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"npegs$1"</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-constructs a nonterminal symbol
-&nbsp;&nbsp;<a
+constructs a nonterminal symbol &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L353"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L353" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L353" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="$,Peg"></a>
@@ -1108,13 +1020,9 @@ class="link-seesrc" target="_blank">Source</a>
                        <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-converts a PEG to its string representation
-&nbsp;&nbsp;<a
+converts a PEG to its string representation &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L521"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L521" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L521" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="bounds,Captures,range[]"></a>
@@ -1132,13 +1040,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"npegs$1"</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-low-level matching proc that implements the PEG interpreter. Use this for maximum efficiency (every other PEG operation ends up calling this proc). Returns -1 if it does not match, else the length of the match
-&nbsp;&nbsp;<a
+low-level matching proc that implements the PEG interpreter. Use this for maximum efficiency (every other PEG operation ends up calling this proc). Returns -1 if it does not match, else the length of the match &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L853"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L853" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L853" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="matchLen,string,Peg,openArray[string],int"></a>
@@ -1227,13 +1131,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"npegs$1"</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-same as <tt class="docutils literal"><span class="pre">find(s, pattern, start) &gt;= 0</span></tt>
-&nbsp;&nbsp;<a
+same as <tt class="docutils literal"><span class="pre">find(s, pattern, start) &gt;= 0</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L1188"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L1188" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L1188" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="contains,string,Peg,openArray[string],int"></a>
@@ -1241,13 +1141,9 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">noSideEffect</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"npegs$1Capture"</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-same as <tt class="docutils literal"><span class="pre">find(s, pattern, matches, start) &gt;= 0</span></tt>
-&nbsp;&nbsp;<a
+same as <tt class="docutils literal"><span class="pre">find(s, pattern, matches, start) &gt;= 0</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L1193"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L1193" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L1193" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="startsWith,string,Peg,int"></a>
@@ -1255,13 +1151,9 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"npegs$1"</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns true if <tt class="docutils literal"><span class="pre">s</span></tt> starts with the pattern <tt class="docutils literal"><span class="pre">prefix</span></tt>
-&nbsp;&nbsp;<a
+returns true if <tt class="docutils literal"><span class="pre">s</span></tt> starts with the pattern <tt class="docutils literal"><span class="pre">prefix</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L1198"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L1198" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L1198" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="endsWith,string,Peg,int"></a>
@@ -1269,13 +1161,9 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"npegs$1"</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns true if <tt class="docutils literal"><span class="pre">s</span></tt> ends with the pattern <tt class="docutils literal"><span class="pre">suffix</span></tt>
-&nbsp;&nbsp;<a
+returns true if <tt class="docutils literal"><span class="pre">s</span></tt> ends with the pattern <tt class="docutils literal"><span class="pre">suffix</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L1203"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L1203" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L1203" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="replacef,string,Peg,string"></a>
@@ -1450,91 +1338,63 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">template</span> <a href="#letters.t"><span class="Identifier">letters</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="pegs.html#Peg"><span class="Identifier">Peg</span></a></pre></dt>
 <dd>
 
-
-
-expands to <tt class="docutils literal"><span class="pre">charset({'A'..'Z', 'a'..'z'})</span></tt>
-&nbsp;&nbsp;<a
+expands to <tt class="docutils literal"><span class="pre">charset({'A'..'Z', 'a'..'z'})</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L358"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L358" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L358" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="digits.t"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#digits.t"><span class="Identifier">digits</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="pegs.html#Peg"><span class="Identifier">Peg</span></a></pre></dt>
 <dd>
 
-
-
-expands to <tt class="docutils literal"><span class="pre">charset({'0'..'9'})</span></tt>
-&nbsp;&nbsp;<a
+expands to <tt class="docutils literal"><span class="pre">charset({'0'..'9'})</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L362"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L362" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L362" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="whitespace.t"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#whitespace.t"><span class="Identifier">whitespace</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="pegs.html#Peg"><span class="Identifier">Peg</span></a></pre></dt>
 <dd>
 
-
-
-expands to <tt class="docutils literal"><span class="pre">charset({' ', '\9'..'\13'})</span></tt>
-&nbsp;&nbsp;<a
+expands to <tt class="docutils literal"><span class="pre">charset({' ', '\9'..'\13'})</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L366"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L366" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L366" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="identChars.t"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#identChars.t"><span class="Identifier">identChars</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="pegs.html#Peg"><span class="Identifier">Peg</span></a></pre></dt>
 <dd>
 
-
-
-expands to <tt class="docutils literal"><span class="pre">charset({'a'..'z', 'A'..'Z', '0'..'9', '_'})</span></tt>
-&nbsp;&nbsp;<a
+expands to <tt class="docutils literal"><span class="pre">charset({'a'..'z', 'A'..'Z', '0'..'9', '_'})</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L370"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L370" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L370" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="identStartChars.t"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#identStartChars.t"><span class="Identifier">identStartChars</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="pegs.html#Peg"><span class="Identifier">Peg</span></a></pre></dt>
 <dd>
 
-
-
-expands to <tt class="docutils literal"><span class="pre">charset({'A'..'Z', 'a'..'z', '_'})</span></tt>
-&nbsp;&nbsp;<a
+expands to <tt class="docutils literal"><span class="pre">charset({'A'..'Z', 'a'..'z', '_'})</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L374"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L374" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L374" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="ident.t"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#ident.t"><span class="Identifier">ident</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="pegs.html#Peg"><span class="Identifier">Peg</span></a></pre></dt>
 <dd>
 
-
-
-same as <tt class="docutils literal"><span class="pre">[a-zA-Z_][a-zA-z_0-9]*</span></tt>; standard identifier
-&nbsp;&nbsp;<a
+same as <tt class="docutils literal"><span class="pre">[a-zA-Z_][a-zA-z_0-9]*</span></tt>; standard identifier &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L378"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L378" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L378" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="natural.t"></a>
 <dt><pre><span class="Keyword">template</span> <a href="#natural.t"><span class="Identifier">natural</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="pegs.html#Peg"><span class="Identifier">Peg</span></a></pre></dt>
 <dd>
 
-
-
-same as <tt class="docutils literal"><span class="pre">\d+</span></tt>
-&nbsp;&nbsp;<a
+same as <tt class="docutils literal"><span class="pre">\d+</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/pegs.nim#L383"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L383" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/pegs.nim#L383" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="eventParser.t,untyped,untyped"></a>

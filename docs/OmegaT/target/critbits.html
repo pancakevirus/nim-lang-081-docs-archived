@@ -195,8 +195,7 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc">This module implements a <span id="crit-bit-tree_1">crit bit tree</span> which is an efficient container for a sorted set of strings, or for a sorted mapping of strings. Based on the excellent paper by Adam Langley. (A crit bit tree is a form of <span id="radix-tree_1">radix tree</span> or <span id="patricia-trie_1">patricia trie</span>.)
-
+  <p class="module-desc">このモジュールは文字列集合のソート、または文字列写像のソートで効率的なコンテナである <span id="crit-bit-tree_1">crit ビットツリー</span>の実装です。アダム・ラングリーによる素晴らしい論文をベースにしています (crit ビットツリーの方式は<span id="radix-tree_1">基数ツリー</span>、または<span id="patricia-trie_1">パトリシア・トライ</span>です)。
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">static</span> <span class="Other">:</span>
   <span class="Keyword">block</span><span class="Other">:</span>
@@ -235,7 +234,7 @@ function main() {
 </pre></dt>
 <dd>
 
-The crit bit tree can either be used as a mapping from strings to some type <tt class="docutils literal"><span class="pre">T</span></tt> or as a set of strings if <tt class="docutils literal"><span class="pre">T</span></tt> is void. &nbsp;&nbsp;<a
+crit ビットツリーは文字列から <tt class="docutils literal"><span class="pre">T</span></tt>  型に対する写像、または <tt class="docutils literal"><span class="pre">T</span></tt> が void のときは文字列集合として使えます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L29"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L29" class="link-seesrc" target="_blank" >編集</a>
 
@@ -249,7 +248,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#len%2CCritBitTree%5BT%5D"><span class="Identifier">len</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a></pre></dt>
 <dd>
 
-returns the number of elements in <tt class="docutils literal"><span class="pre">c</span></tt> in O(1). &nbsp;&nbsp;<a
+O(1) により <tt class="docutils literal"><span class="pre">c</span></tt> の要素数を返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L36"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L36" class="link-seesrc" target="_blank" >編集</a>
 
@@ -258,7 +257,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#contains%2CCritBitTree%5BT%5D%2Cstring"><span class="Identifier">contains</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-returns true iff <tt class="docutils literal"><span class="pre">c</span></tt> contains the given <tt class="docutils literal"><span class="pre">key</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">c</span></tt> に指定された <tt class="docutils literal"><span class="pre">key</span></tt> がある場合に限り true を返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L50"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L50" class="link-seesrc" target="_blank" >編集</a>
 
@@ -267,7 +266,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#hasKey%2CCritBitTree%5BT%5D%2Cstring"><span class="Identifier">hasKey</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-alias for <tt class="docutils literal"><span class="pre">contains</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">contains</span></tt> のエイリアスです。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L54"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L54" class="link-seesrc" target="_blank" >編集</a>
 
@@ -276,7 +275,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#excl%2CCritBitTree%5BT%5D%2Cstring"><span class="Identifier">excl</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span></pre></dt>
 <dd>
 
-removes <tt class="docutils literal"><span class="pre">key</span></tt> (and its associated value) from the set <tt class="docutils literal"><span class="pre">c</span></tt>. If the <tt class="docutils literal"><span class="pre">key</span></tt> does not exist, nothing happens. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">key</span></tt> (および関連値) を集合 <tt class="docutils literal"><span class="pre">c</span></tt> から削除します。<tt class="docutils literal"><span class="pre">key</span></tt>  がなければ、何もしません。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L132"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L132" class="link-seesrc" target="_blank" >編集</a>
 
@@ -285,7 +284,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#missingOrExcl%2CCritBitTree%5BT%5D%2Cstring"><span class="Identifier">missingOrExcl</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a></pre></dt>
 <dd>
 
-Returns true iff <tt class="docutils literal"><span class="pre">c</span></tt> does not contain the given <tt class="docutils literal"><span class="pre">key</span></tt>. If the key does exist, c.excl(key) is performed. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">c</span></tt> に指定された <tt class="docutils literal"><span class="pre">key</span></tt> がない場合に限り true を返します。key があれば c.excl(key) を実行します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L137"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L137" class="link-seesrc" target="_blank" >編集</a>
 
@@ -294,7 +293,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#containsOrIncl%2CCritBitTree%5BT%5D%2Cstring%2CT"><span class="Identifier">containsOrIncl</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">val</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a></pre></dt>
 <dd>
 
-returns true iff <tt class="docutils literal"><span class="pre">c</span></tt> contains the given <tt class="docutils literal"><span class="pre">key</span></tt>. If the key does not exist <tt class="docutils literal"><span class="pre">c[key] = val</span></tt> is performed. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">c</span></tt> に指定された <tt class="docutils literal"><span class="pre">key</span></tt> がある場合に限り true を返します。key がなければ <tt class="docutils literal"><span class="pre">c[key] = val</span></tt> を実行します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L144"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L144" class="link-seesrc" target="_blank" >編集</a>
 
@@ -303,7 +302,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#containsOrIncl%2CCritBitTree%5Bvoid%5D%2Cstring"><span class="Identifier">containsOrIncl</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><a href="system.html#void"><span class="Identifier">void</span></a><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-returns true iff <tt class="docutils literal"><span class="pre">c</span></tt> contains the given <tt class="docutils literal"><span class="pre">key</span></tt>. If the key does not exist it is inserted into <tt class="docutils literal"><span class="pre">c</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">c</span></tt> に指定された <tt class="docutils literal"><span class="pre">key</span></tt> がある場合に限り true を返します。key がなければ <tt class="docutils literal"><span class="pre">c</span></tt> へ挿入します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L153"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L153" class="link-seesrc" target="_blank" >編集</a>
 
@@ -312,7 +311,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#inc%2CCritBitTree%5Bint%5D%2Cstring%2Cint"><span class="Identifier">inc</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><a href="system.html#int"><span class="Identifier">int</span></a><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">val</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span class="Other">=</span> <span class="DecNumber">1</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-increments <tt class="docutils literal"><span class="pre">c[key]</span></tt> by <tt class="docutils literal"><span class="pre">val</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">val</span></tt> で <tt class="docutils literal"><span class="pre">c[key]</span></tt> をインクリメント (増分) します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L160"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L160" class="link-seesrc" target="_blank" >編集</a>
 
@@ -321,7 +320,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#incl%2CCritBitTree%5Bvoid%5D%2Cstring"><span class="Identifier">incl</span></a><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><a href="system.html#void"><span class="Identifier">void</span></a><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-includes <tt class="docutils literal"><span class="pre">key</span></tt> in <tt class="docutils literal"><span class="pre">c</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">c</span></tt> に <tt class="docutils literal"><span class="pre">key</span></tt> をインクルードします。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L165"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L165" class="link-seesrc" target="_blank" >編集</a>
 
@@ -330,7 +329,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#incl%2CCritBitTree%5BT%5D%2Cstring%2CT"><span class="Identifier">incl</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">val</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span></pre></dt>
 <dd>
 
-inserts <tt class="docutils literal"><span class="pre">key</span></tt> with value <tt class="docutils literal"><span class="pre">val</span></tt> into <tt class="docutils literal"><span class="pre">c</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">c</span></tt> にある値 <tt class="docutils literal"><span class="pre">val</span></tt> を <tt class="docutils literal"><span class="pre">key</span></tt> へ挿入します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L169"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L169" class="link-seesrc" target="_blank" >編集</a>
 
@@ -339,7 +338,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%5B%5D%3D%2CCritBitTree%5BT%5D%2Cstring%2CT"><span class="Identifier">`[]=`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">val</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span></pre></dt>
 <dd>
 
-puts a (key, value)-pair into <tt class="docutils literal"><span class="pre">t</span></tt>. &nbsp;&nbsp;<a
+(key, value) ペアを <tt class="docutils literal"><span class="pre">t</span></tt> に追加します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L174"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L174" class="link-seesrc" target="_blank" >編集</a>
 
@@ -348,7 +347,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%5B%5D%2CCritBitTree%5BT%5D%2Cstring"><span class="Identifier">`[]`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-retrieves the value at <tt class="docutils literal"><span class="pre">c[key]</span></tt>. If <tt class="docutils literal"><span class="pre">key</span></tt> is not in <tt class="docutils literal"><span class="pre">t</span></tt>, the <tt class="docutils literal"><span class="pre">KeyError</span></tt> exception is raised. One can check with <tt class="docutils literal"><span class="pre">hasKey</span></tt> whether the key exists. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">c[key]</span></tt> の値を取得します。<tt class="docutils literal"><span class="pre">t</span></tt> に <tt class="docutils literal"><span class="pre">key</span></tt> がないときは、 <tt class="docutils literal"><span class="pre">KeyError</span></tt> 例外が発生します。key の有無は <tt class="docutils literal"><span class="pre">hasKey</span></tt> で確認できます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L189"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L189" class="link-seesrc" target="_blank" >編集</a>
 
@@ -357,7 +356,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%5B%5D%2CCritBitTree%5BT%5D%2Cstring_2"><span class="Identifier">`[]`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">T</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-retrieves the value at <tt class="docutils literal"><span class="pre">c[key]</span></tt>. The value can be modified. If <tt class="docutils literal"><span class="pre">key</span></tt> is not in <tt class="docutils literal"><span class="pre">t</span></tt>, the <tt class="docutils literal"><span class="pre">KeyError</span></tt> exception is raised. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">c[key]</span></tt> の値を取得します。値は修正可能です。<tt class="docutils literal"><span class="pre">t</span></tt> に <tt class="docutils literal"><span class="pre">key</span></tt> がないときは、 <tt class="docutils literal"><span class="pre">KeyError</span></tt> 例外が発生します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L195"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L195" class="link-seesrc" target="_blank" >編集</a>
 
@@ -366,7 +365,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2CCritBitTree%5BT%5D"><span class="Identifier">`$`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a></pre></dt>
 <dd>
 
-turns <tt class="docutils literal"><span class="pre">c</span></tt> into a string representation. Example outputs: <tt class="docutils literal"><span class="pre">{keyA: value, keyB: value}</span></tt>, <tt class="docutils literal"><span class="pre">{:}</span></tt> If <tt class="docutils literal"><span class="pre">T</span></tt> is void the outputs look like: <tt class="docutils literal"><span class="pre">{keyA, keyB}</span></tt>, <tt class="docutils literal"><span class="pre">{}</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">c</span></tt> を文字列形式へ変換します。出力例: <tt class="docutils literal"><span class="pre">{keyA: value, keyB: value}</span></tt>, <tt class="docutils literal"><span class="pre">{:}</span></tt> <tt class="docutils literal"><span class="pre">T</span></tt> が void ならば出力は: <tt class="docutils literal"><span class="pre">{keyA, keyB}</span></tt>, <tt class="docutils literal"><span class="pre">{}</span></tt>. &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L297"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L297" class="link-seesrc" target="_blank" >編集</a>
 
@@ -380,7 +379,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#keys.i%2CCritBitTree%5BT%5D"><span class="Identifier">keys</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a></pre></dt>
 <dd>
 
-yields all keys in lexicographical order. &nbsp;&nbsp;<a
+辞書式順序でキーをすべて生成します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L213"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L213" class="link-seesrc" target="_blank" >編集</a>
 
@@ -389,7 +388,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#values.i%2CCritBitTree%5BT%5D"><span class="Identifier">values</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span></pre></dt>
 <dd>
 
-yields all values of <tt class="docutils literal"><span class="pre">c</span></tt> in the lexicographical order of the corresponding keys. &nbsp;&nbsp;<a
+対応するキーによる辞書式順序で <tt class="docutils literal"><span class="pre">c</span></tt> 値をすべて生成します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L217"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L217" class="link-seesrc" target="_blank" >編集</a>
 
@@ -398,7 +397,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#mvalues.i%2CCritBitTree%5BT%5D"><span class="Identifier">mvalues</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">T</span></pre></dt>
 <dd>
 
-yields all values of <tt class="docutils literal"><span class="pre">c</span></tt> in the lexicographical order of the corresponding keys. The values can be modified. &nbsp;&nbsp;<a
+対応するキーによる辞書式順序で <tt class="docutils literal"><span class="pre">c</span></tt> 値をすべて生成します。値は修正可能です。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L222"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L222" class="link-seesrc" target="_blank" >編集</a>
 
@@ -407,7 +406,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#items.i%2CCritBitTree%5BT%5D"><span class="Identifier">items</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a></pre></dt>
 <dd>
 
-yields all keys in lexicographical order. &nbsp;&nbsp;<a
+辞書式順序でキーをすべて生成します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L227"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L227" class="link-seesrc" target="_blank" >編集</a>
 
@@ -416,7 +415,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#pairs.i%2CCritBitTree%5BT%5D"><span class="Identifier">pairs</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">,</span> <span class="Identifier">val</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">]</span></pre></dt>
 <dd>
 
-yields all (key, value)-pairs of <tt class="docutils literal"><span class="pre">c</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">c</span></tt> にある (key, value) の全ペアを生成します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L231"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L231" class="link-seesrc" target="_blank" >編集</a>
 
@@ -425,7 +424,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#mpairs.i%2CCritBitTree%5BT%5D"><span class="Identifier">mpairs</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">,</span> <span class="Identifier">val</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">T</span><span class="Other">]</span></pre></dt>
 <dd>
 
-yields all (key, value)-pairs of <tt class="docutils literal"><span class="pre">c</span></tt>. The yielded values can be modified. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">c</span></tt> にある (key, value) の全ペアを生成します。生成値は修正可能です。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L235"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L235" class="link-seesrc" target="_blank" >編集</a>
 
@@ -434,7 +433,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#itemsWithPrefix.i%2CCritBitTree%5BT%5D%2Cstring"><span class="Identifier">itemsWithPrefix</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">prefix</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">longestMatch</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a></pre></dt>
 <dd>
 
-yields all keys starting with <tt class="docutils literal"><span class="pre">prefix</span></tt>. If <tt class="docutils literal"><span class="pre">longestMatch</span></tt> is true, the longest match is returned, it doesn't have to be a complete match then. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">prefix</span></tt> を始点としたキーをすべて生成します。longestMatch</span></tt> が true ならば、最長一致を返します。この場合は完全一致でなくても問題ありません。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L255"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L255" class="link-seesrc" target="_blank" >編集</a>
 
@@ -443,7 +442,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#keysWithPrefix.i%2CCritBitTree%5BT%5D%2Cstring"><span class="Identifier">keysWithPrefix</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">prefix</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">longestMatch</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a></pre></dt>
 <dd>
 
-yields all keys starting with <tt class="docutils literal"><span class="pre">prefix</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">prefix</span></tt> を始点としたキーをすべて生成します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L262"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L262" class="link-seesrc" target="_blank" >編集</a>
 
@@ -452,7 +451,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#valuesWithPrefix.i%2CCritBitTree%5BT%5D%2Cstring"><span class="Identifier">valuesWithPrefix</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">c</span><span class="Other">:</span> <a href="critbits.html#CritBitTree"><span class="Identifier">CritBitTree</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">prefix</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">longestMatch</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span></pre></dt>
 <dd>
 
-yields all values of <tt class="docutils literal"><span class="pre">c</span></tt> starting with <tt class="docutils literal"><span class="pre">prefix</span></tt> of the corresponding keys. &nbsp;&nbsp;<a
+対応するキーの <tt class="docutils literal"><span class="pre">prefix</span></tt> を始点として <tt class="docutils literal"><span class="pre">c</span></tt> にある (key, value) の全ペアを生成します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L268"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L268" class="link-seesrc" target="_blank" >編集</a>
 
@@ -462,7 +461,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                              <span class="Identifier">longestMatch</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">T</span></pre></dt>
 <dd>
 
-yields all values of <tt class="docutils literal"><span class="pre">c</span></tt> starting with <tt class="docutils literal"><span class="pre">prefix</span></tt> of the corresponding keys. The values can be modified. &nbsp;&nbsp;<a
+対応するキーの <tt class="docutils literal"><span class="pre">prefix</span></tt> を始点として <tt class="docutils literal"><span class="pre">c</span></tt> にある (key, value) の全ペアを生成します。値は修正可能です。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L275"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L275" class="link-seesrc" target="_blank" >編集</a>
 
@@ -472,7 +471,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">,</span> <span class="Identifier">val</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">]</span></pre></dt>
 <dd>
 
-yields all (key, value)-pairs of <tt class="docutils literal"><span class="pre">c</span></tt> starting with <tt class="docutils literal"><span class="pre">prefix</span></tt>. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">prefix</span></tt> を始点として <tt class="docutils literal"><span class="pre">c</span></tt> にある (key, value) の全ペアを生成します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L282"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L282" class="link-seesrc" target="_blank" >編集</a>
 
@@ -482,7 +481,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                             <span class="Identifier">longestMatch</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">,</span> <span class="Identifier">val</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">T</span><span class="Other">]</span></pre></dt>
 <dd>
 
-yields all (key, value)-pairs of <tt class="docutils literal"><span class="pre">c</span></tt> starting with <tt class="docutils literal"><span class="pre">prefix</span></tt>. The yielded values can be modified. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">prefix</span></tt> を始点として <tt class="docutils literal"><span class="pre">c</span></tt> にある (key, value) の全ペアを生成します。生成値は修正可能です。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/critbits.nim#L289"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/critbits.nim#L289" class="link-seesrc" target="_blank" >編集</a>
 

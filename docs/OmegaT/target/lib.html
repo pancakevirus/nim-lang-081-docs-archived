@@ -144,7 +144,7 @@ function main() {
 <h1><a class="toc-backref" id="nimble" href="#nimble">Nimble</a></h1><p>Nim の標準ライブラリは基本機能のみ網羅しています。サードパーティ製パッケージのリストは <a class="reference external" href="https://nimble.directory/">https://nimble.directory/</a> をご確認ください。</p>
 
 <h1><a class="toc-backref" id="pure-libraries" href="#pure-libraries">純血ライブラリ</a></h1>
-<h2><a class="toc-backref" id="pure-libraries-automatic-imports" href="#pure-libraries-automatic-imports">自動インポート</a></h2><ul class="simple"><li><a class="reference external" href="system.html">system</a> すべてのプログラムで必要とされる基本的なプロシージャと演算子です。また、テキストとバイナリファイルの読み書きに関する IO 機能も実装してあります。コンパイラにより暗黙的にインポートされます。直接的にインポートしないでください。この処理はコンパイラ・マジックに依存します。</li>
+<h2><a class="toc-backref" id="pure-libraries-automatic-imports" href="#pure-libraries-automatic-imports">自動インポート</a></h2><ul class="simple"><li><a class="reference external" href="system.html">system</a> すべてのプログラムで必要とされる基本的なプロシージャと演算子です。また、テキストとバイナリファイルの読み書きに関する IO 機能も実装してあります。コンパイラにより暗黙的にインポートされます。明示的にインポートしないでください。この処理はコンパイラ・マジックに依存します。</li>
 <li><a class="reference external" href="threads.html">threads</a> Nim の基本的なスレッド機能です。<strong>備考</strong>: これは system モジュールの一部です。明示的にインポートしないでください。<tt class="docutils literal"><span class="pre">--threads:on</span></tt> で有効になります。</li>
 <li><a class="reference external" href="channels.html">channels</a> スレッドにおける Nim のメッセージ・パッシング機能です。<strong>備考</strong>: これは system モジュールの一部です。明示的にインポートしないでください。<tt class="docutils literal"><span class="pre">--threads:on</span></tt> で有効になります。</li>
 </ul>

@@ -182,7 +182,7 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"><p>このモジュールは RFC 5321 で制定された SMTP クライアントのプロトコルにおける実装であり、 SMTP サーバへのメール送信で使います。</p>
+  <p class="module-desc"><p>このモジュールは RFC 5321 で制定された SMTP クライアントのプロトコルにおける実装であり、 SMTP サーバーへのメール送信で使います。</p>
 <p>また、このモジュールでは RFC 5321 で制定されたメッセージ形式で用いられるプロトコルを実装してあります。</p>
 <p>Gmail での用例:</p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">msg</span> <span class="Operator">=</span> <span class="Identifier">createMessage</span><span class="Punctuation">(</span><span class="StringLit">"Hello from Nim's SMTP"</span><span class="Punctuation">,</span>
@@ -317,7 +317,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">FutureError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-SMTP サーバとの接続を確立します。 失敗時は ReplyError またはソケットエラーになります。&nbsp;&nbsp;<a
+SMTP サーバーとの接続を確立します。 失敗時は ReplyError またはソケットエラーになります。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/smtp.nim#L174"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L174" class="link-seesrc" target="_blank" >編集</a>
 
@@ -328,7 +328,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">TimeEffect</span><span class="Other">,</span> <span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-SMTP サーバとの接続を確立します。 失敗時は ReplyError またはソケットエラーになります。&nbsp;&nbsp;<a
+SMTP サーバーとの接続を確立します。 失敗時は ReplyError またはソケットエラーになります。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/smtp.nim#L175"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L175" class="link-seesrc" target="_blank" >編集</a>
 
@@ -359,7 +359,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">FutureError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<tt class="docutils literal"><span class="pre">username</span></tt> を用いて <tt class="docutils literal"><span class="pre">password</span></tt> としてログインするためにサーバへ AUTH コマンドを送信します。失敗時は ReplyError になります。&nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">username</span></tt> を用いて <tt class="docutils literal"><span class="pre">password</span></tt> としてログインするためにサーバーへ AUTH コマンドを送信します。失敗時は ReplyError になります。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/smtp.nim#L197"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L197" class="link-seesrc" target="_blank" >編集</a>
 
@@ -370,7 +370,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">WriteIOEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">,</span> <span class="Identifier">TimeEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<tt class="docutils literal"><span class="pre">username</span></tt> を用いて <tt class="docutils literal"><span class="pre">password</span></tt> としてログインするためにサーバへ AUTH コマンドを送信します。失敗時は ReplyError になります。&nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">username</span></tt> を用いて <tt class="docutils literal"><span class="pre">password</span></tt> としてログインするためにサーバーへ AUTH コマンドを送信します。失敗時は ReplyError になります。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/smtp.nim#L197"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L197" class="link-seesrc" target="_blank" >編集</a>
 
@@ -401,7 +401,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">RootEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-SMTP サーバから切断してソケットを閉じます。&nbsp;&nbsp;<a
+SMTP サーバーから切断してソケットを閉じます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/smtp.nim#L230"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L230" class="link-seesrc" target="_blank" >編集</a>
 
@@ -410,7 +410,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#close%2CSmtp"><span class="Identifier">close</span></a><span class="Other">(</span><span class="Identifier">smtp</span><span class="Other">:</span> <a href="smtp.html#Smtp"><span class="Identifier">Smtp</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">SslError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-SMTP サーバから切断してソケットを閉じます。&nbsp;&nbsp;<a
+SMTP サーバーから切断してソケットを閉じます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/smtp.nim#L230"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/smtp.nim#L230" class="link-seesrc" target="_blank" >編集</a>
 

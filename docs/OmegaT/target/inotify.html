@@ -112,11 +112,11 @@ function main() {
       <li><a class="reference" href="#InotifyEvent"
     title='InotifyEvent {.pure, final, importc: "struct inotify_event",
               header: "&lt;sys/inotify.h&gt;".} = object
-  wd* {.importc: "wd".}: FileHandle ## Watch descriptor.
-  mask* {.importc: "mask".}: uint32 ## Watch mask.
-  cookie* {.importc: "cookie".}: uint32 ## Cookie to synchronize two events.
-  len* {.importc: "len".}: uint32 ## Length (including NULs) of name.
-  name* {.importc: "name".}: char ## Name.'><wbr />Inotify<wbr />Event<span class="attachedType"></span></a></li>
+  wd* {.importc: "wd".}: FileHandle ## 監視用ディスクリプタ。
+  mask* {.importc: "mask".}: uint32 ## 監視用マスク。
+  cookie* {.importc: "cookie".}: uint32 ## イベント同士の同期用クッキー。
+  len* {.importc: "len".}: uint32 ## name の長さ (ナル文字類も算入)。
+  name* {.importc: "name".}: char ## 名前。'><wbr />Inotify<wbr />Event<span class="attachedType"></span></a></li>
 
   </ul>
 </li>
@@ -198,26 +198,26 @@ function main() {
   <p class="module-desc">
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">when</span> <span class="Identifier">defined</span><span class="Other">(</span><span class="Identifier">linux</span><span class="Other">)</span><span class="Other">:</span>
-  <span class="Keyword">let</span> <span class="Identifier">inoty</span><span class="Other">:</span> <span class="Identifier">FileHandle</span> <span class="Other">=</span> <span class="Identifier">inotify_init</span><span class="Other">(</span><span class="Other">)</span> <span class="Comment">## Create 1 Inotify.</span>
-  <span class="Identifier">doAssert</span> <span class="Identifier">inoty</span> <span class="Operator">&gt;=</span> <span class="DecNumber">0</span>            <span class="Comment">## Check for errors (FileHandle is alias to cint).</span>
-  <span class="Keyword">let</span> <span class="Identifier">watchdoge</span><span class="Other">:</span> <span class="Identifier">cint</span> <span class="Other">=</span> <span class="Identifier">inotify_add_watch</span><span class="Other">(</span><span class="Identifier">inoty</span><span class="Other">,</span> <span class="StringLit">"."</span><span class="Other">,</span> <span class="Identifier">IN_ALL_EVENTS</span><span class="Other">)</span> <span class="Comment">## Add directory to watchdog.</span>
-  <span class="Identifier">doAssert</span> <span class="Identifier">watchdoge</span> <span class="Operator">&gt;=</span> <span class="DecNumber">0</span>        <span class="Comment">## Check for errors.</span>
-  <span class="Identifier">doAssert</span> <span class="Identifier">inotify_rm_watch</span><span class="Other">(</span><span class="Identifier">inoty</span><span class="Other">,</span> <span class="Identifier">watchdoge</span><span class="Other">)</span> <span class="Operator">&gt;=</span> <span class="DecNumber">0</span> <span class="Comment">## Remove directory from the watchdog</span></pre></p>
+  <span class="Keyword">let</span> <span class="Identifier">inoty</span><span class="Other">:</span> <span class="Identifier">FileHandle</span> <span class="Other">=</span> <span class="Identifier">inotify_init</span><span class="Other">(</span><span class="Other">)</span> <span class="Comment">## Inotify 単体を作成します。</span>
+  <span class="Identifier">doAssert</span> <span class="Identifier">inoty</span> <span class="Operator">&gt;=</span> <span class="DecNumber">0</span>            <span class="Comment">## エラーの確認 (FileHandle は cint のエイリアス)。</span>
+  <span class="Keyword">let</span> <span class="Identifier">watchdoge</span><span class="Other">:</span> <span class="Identifier">cint</span> <span class="Other">=</span> <span class="Identifier">inotify_add_watch</span><span class="Other">(</span><span class="Identifier">inoty</span><span class="Other">,</span> <span class="StringLit">"."</span><span class="Other">,</span> <span class="Identifier">IN_ALL_EVENTS</span><span class="Other">)</span> <span class="Comment">## ウォッチドック (監視先) へディレクトリを追加します。</span>
+  <span class="Identifier">doAssert</span> <span class="Identifier">watchdoge</span> <span class="Operator">&gt;=</span> <span class="DecNumber">0</span>        <span class="Comment">## エラーの確認。</span>
+  <span class="Identifier">doAssert</span> <span class="Identifier">inotify_rm_watch</span><span class="Other">(</span><span class="Identifier">inoty</span><span class="Other">,</span> <span class="Identifier">watchdoge</span><span class="Other">)</span> <span class="Operator">&gt;=</span> <span class="DecNumber">0</span> <span class="Comment">## ウォッチドック (監視先) からディレクトリを除外します。</span></pre></p>
   <div class="section" id="7">
 <h1><a class="toc-backref" href="#7">型</a></h1>
 <dl class="item">
 <a id="InotifyEvent"></a>
 <dt><pre><a href="inotify.html#InotifyEvent"><span class="Identifier">InotifyEvent</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">pure</span><span class="Other">,</span> <span class="Identifier">final</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">"struct inotify_event"</span><span class="Other">,</span>
               <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">"&lt;sys/inotify.h&gt;"</span></span><span class="Other">.}</span></span> <span class="Other">=</span> <span class="Keyword">object</span>
-  <span class="Identifier">wd</span><span class="Operator">*</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">"wd"</span></span><span class="Other">.}</span></span><span class="Other">:</span> <a href="io.html#FileHandle"><span class="Identifier">FileHandle</span></a> <span class="Comment">## Watch descriptor.</span>
-  <span class="Identifier">mask</span><span class="Operator">*</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">"mask"</span></span><span class="Other">.}</span></span><span class="Other">:</span> <a href="system.html#uint32"><span class="Identifier">uint32</span></a> <span class="Comment">## Watch mask.</span>
-  <span class="Identifier">cookie</span><span class="Operator">*</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">"cookie"</span></span><span class="Other">.}</span></span><span class="Other">:</span> <a href="system.html#uint32"><span class="Identifier">uint32</span></a> <span class="Comment">## Cookie to synchronize two events.</span>
-  <span class="Identifier">len</span><span class="Operator">*</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">"len"</span></span><span class="Other">.}</span></span><span class="Other">:</span> <a href="system.html#uint32"><span class="Identifier">uint32</span></a> <span class="Comment">## Length (including NULs) of name.</span>
-  <span class="Identifier">name</span><span class="Operator">*</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">"name"</span></span><span class="Other">.}</span></span><span class="Other">:</span> <a href="system.html#char"><span class="Identifier">char</span></a> <span class="Comment">## Name.</span>
+  <span class="Identifier">wd</span><span class="Operator">*</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">"wd"</span></span><span class="Other">.}</span></span><span class="Other">:</span> <a href="io.html#FileHandle"><span class="Identifier">FileHandle</span></a> <span class="Comment">## 監視用ディスクリプタ。</span>
+  <span class="Identifier">mask</span><span class="Operator">*</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">"mask"</span></span><span class="Other">.}</span></span><span class="Other">:</span> <a href="system.html#uint32"><span class="Identifier">uint32</span></a> <span class="Comment">## 監視用マスク。</span>
+  <span class="Identifier">cookie</span><span class="Operator">*</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">"cookie"</span></span><span class="Other">.}</span></span><span class="Other">:</span> <a href="system.html#uint32"><span class="Identifier">uint32</span></a> <span class="Comment">## イベント同士の同期用クッキー。</span>
+  <span class="Identifier">len</span><span class="Operator">*</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">"len"</span></span><span class="Other">.}</span></span><span class="Other">:</span> <a href="system.html#uint32"><span class="Identifier">uint32</span></a> <span class="Comment">## name の長さ (ナル文字類も算入)。</span>
+  <span class="Identifier">name</span><span class="Operator">*</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">"name"</span></span><span class="Other">.}</span></span><span class="Other">:</span> <a href="system.html#char"><span class="Identifier">char</span></a> <span class="Comment">## 名前。</span>
   </pre></dt>
 <dd>
 
-An Inotify event. &nbsp;&nbsp;<a
+Inotify イベント。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L14"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L14" class="link-seesrc" target="_blank" >編集</a>
 
@@ -231,7 +231,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="inotify.html#IN_ACCESS"><span class="Identifier">IN_ACCESS</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000001</span></pre></dt>
 <dd>
 
-File was accessed. &nbsp;&nbsp;<a
+ファイルがアクセスされた。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L23"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L23" class="link-seesrc" target="_blank" >編集</a>
 
@@ -240,7 +240,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="inotify.html#IN_MODIFY"><span class="Identifier">IN_MODIFY</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000002</span></pre></dt>
 <dd>
 
-File was modified. &nbsp;&nbsp;<a
+ファイルが修正された。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L24"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L24" class="link-seesrc" target="_blank" >編集</a>
 
@@ -249,7 +249,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="inotify.html#IN_ATTRIB"><span class="Identifier">IN_ATTRIB</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000004</span></pre></dt>
 <dd>
 
-Metadata changed. &nbsp;&nbsp;<a
+メタデータが変更された。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L25"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L25" class="link-seesrc" target="_blank" >編集</a>
 
@@ -258,7 +258,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="inotify.html#IN_CLOSE_WRITE"><span class="Identifier">IN_CLOSE_WRITE</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000008</span></pre></dt>
 <dd>
 
-Writtable file was closed. &nbsp;&nbsp;<a
+書き込み可能ファイルが閉じられた。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L26"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L26" class="link-seesrc" target="_blank" >編集</a>
 
@@ -267,7 +267,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="inotify.html#IN_CLOSE_NOWRITE"><span class="Identifier">IN_CLOSE_NOWRITE</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000010</span></pre></dt>
 <dd>
 
-Unwrittable file closed. &nbsp;&nbsp;<a
+読み取り専用ファイルが閉じられた。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L27"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L27" class="link-seesrc" target="_blank" >編集</a>
 
@@ -276,7 +276,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="inotify.html#IN_CLOSE"><span class="Identifier">IN_CLOSE</span></a> <span class="Other">=</span> <span class="DecNumber">24</span></pre></dt>
 <dd>
 
-Close. &nbsp;&nbsp;<a
+閉じられた。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L28"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L28" class="link-seesrc" target="_blank" >編集</a>
 
@@ -285,7 +285,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="inotify.html#IN_OPEN"><span class="Identifier">IN_OPEN</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000020</span></pre></dt>
 <dd>
 
-File was opened. &nbsp;&nbsp;<a
+ファイルが開かれた。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L29"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L29" class="link-seesrc" target="_blank" >編集</a>
 
@@ -294,33 +294,25 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="inotify.html#IN_MOVED_FROM"><span class="Identifier">IN_MOVED_FROM</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000040</span></pre></dt>
 <dd>
 
-
-
-File was moved from X.
-&nbsp;&nbsp;<a
+X からファイルが移動された。 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L30"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L30" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L30" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="IN_MOVED_TO"></a>
 <dt><pre><a href="inotify.html#IN_MOVED_TO"><span class="Identifier">IN_MOVED_TO</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000080</span></pre></dt>
 <dd>
 
-
-
-File was moved to Y.
-&nbsp;&nbsp;<a
+ファイルが Y へ移動された。 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L31"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L31" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L31" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="IN_MOVE"></a>
 <dt><pre><a href="inotify.html#IN_MOVE"><span class="Identifier">IN_MOVE</span></a> <span class="Other">=</span> <span class="DecNumber">192</span></pre></dt>
 <dd>
 
-Moves. &nbsp;&nbsp;<a
+移動された。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L32"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L32" class="link-seesrc" target="_blank" >編集</a>
 
@@ -329,7 +321,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="inotify.html#IN_CREATE"><span class="Identifier">IN_CREATE</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000100</span></pre></dt>
 <dd>
 
-Subfile was created. &nbsp;&nbsp;<a
+サブファイルが作られた。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L33"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L33" class="link-seesrc" target="_blank" >編集</a>
 
@@ -338,7 +330,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="inotify.html#IN_DELETE"><span class="Identifier">IN_DELETE</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000200</span></pre></dt>
 <dd>
 
-Subfile was deleted. &nbsp;&nbsp;<a
+サブファイルが削除された。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L34"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L34" class="link-seesrc" target="_blank" >編集</a>
 
@@ -347,7 +339,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="inotify.html#IN_DELETE_SELF"><span class="Identifier">IN_DELETE_SELF</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000400</span></pre></dt>
 <dd>
 
-Self was deleted. &nbsp;&nbsp;<a
+Self が削除された。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L35"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L35" class="link-seesrc" target="_blank" >編集</a>
 
@@ -356,7 +348,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="inotify.html#IN_MOVE_SELF"><span class="Identifier">IN_MOVE_SELF</span></a> <span class="Other">=</span> <span class="DecNumber">0x00000800</span></pre></dt>
 <dd>
 
-Self was moved. &nbsp;&nbsp;<a
+Self が移動された。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L36"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L36" class="link-seesrc" target="_blank" >編集</a>
 
@@ -365,7 +357,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="inotify.html#IN_UNMOUNT"><span class="Identifier">IN_UNMOUNT</span></a> <span class="Other">=</span> <span class="DecNumber">0x00002000</span></pre></dt>
 <dd>
 
-Backing fs was unmounted. &nbsp;&nbsp;<a
+裏ファイルシステムがアンマウントされた。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L40"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L40" class="link-seesrc" target="_blank" >編集</a>
 
@@ -374,7 +366,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="inotify.html#IN_Q_OVERFLOW"><span class="Identifier">IN_Q_OVERFLOW</span></a> <span class="Other">=</span> <span class="DecNumber">0x00004000</span></pre></dt>
 <dd>
 
-Event queued overflowed. &nbsp;&nbsp;<a
+イベントキューがオーバーフローした。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L41"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L41" class="link-seesrc" target="_blank" >編集</a>
 
@@ -383,7 +375,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="inotify.html#IN_IGNORED"><span class="Identifier">IN_IGNORED</span></a> <span class="Other">=</span> <span class="DecNumber">0x00008000</span></pre></dt>
 <dd>
 
-File was ignored. &nbsp;&nbsp;<a
+ファイルが無視された。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L42"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L42" class="link-seesrc" target="_blank" >編集</a>
 
@@ -392,7 +384,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="inotify.html#IN_ONLYDIR"><span class="Identifier">IN_ONLYDIR</span></a> <span class="Other">=</span> <span class="DecNumber">0x01000000</span></pre></dt>
 <dd>
 
-Only watch the path if it is a directory. &nbsp;&nbsp;<a
+ディレクトリならばパスだけを監視します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L46"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L46" class="link-seesrc" target="_blank" >編集</a>
 
@@ -401,7 +393,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="inotify.html#IN_DONT_FOLLOW"><span class="Identifier">IN_DONT_FOLLOW</span></a> <span class="Other">=</span> <span class="DecNumber">0x02000000</span></pre></dt>
 <dd>
 
-Do not follow a sym link. &nbsp;&nbsp;<a
+シンボリックリンクを辿らないようにします。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L47"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L47" class="link-seesrc" target="_blank" >編集</a>
 
@@ -410,7 +402,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="inotify.html#IN_EXCL_UNLINK"><span class="Identifier">IN_EXCL_UNLINK</span></a> <span class="Other">=</span> <span class="DecNumber">0x04000000</span></pre></dt>
 <dd>
 
-Exclude events on unlinked objects. &nbsp;&nbsp;<a
+イベントから削除 (unlink) されたオブジェクトを除外します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L48"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L48" class="link-seesrc" target="_blank" >編集</a>
 
@@ -419,7 +411,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="inotify.html#IN_MASK_ADD"><span class="Identifier">IN_MASK_ADD</span></a> <span class="Other">=</span> <span class="DecNumber">0x20000000</span></pre></dt>
 <dd>
 
-Add to the mask of an already existing watch. &nbsp;&nbsp;<a
+すでに存在する監視先へマスクを追加します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L49"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L49" class="link-seesrc" target="_blank" >編集</a>
 
@@ -428,7 +420,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="inotify.html#IN_ISDIR"><span class="Identifier">IN_ISDIR</span></a> <span class="Other">=</span> <span class="DecNumber">0x40000000</span></pre></dt>
 <dd>
 
-Event occurred against dir. &nbsp;&nbsp;<a
+イベントがディレクトリで発生した。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L50"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L50" class="link-seesrc" target="_blank" >編集</a>
 
@@ -437,7 +429,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="inotify.html#IN_ONESHOT"><span class="Identifier">IN_ONESHOT</span></a> <span class="Other">=</span> <span class="DecNumber">0x0000000080000000'i64</span></pre></dt>
 <dd>
 
-Only send event once. &nbsp;&nbsp;<a
+一度だけイベントを送信します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L51"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L51" class="link-seesrc" target="_blank" >編集</a>
 
@@ -462,7 +454,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                                <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">"&lt;sys/inotify.h&gt;"</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Create and initialize inotify instance. &nbsp;&nbsp;<a
+inotify インスタンスの作成と初期化をします。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L60"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L60" class="link-seesrc" target="_blank" >編集</a>
 
@@ -472,7 +464,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">"&lt;sys/inotify.h&gt;"</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Create and initialize inotify instance. &nbsp;&nbsp;<a
+inotify インスタンスの作成と初期化をします。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L64"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L64" class="link-seesrc" target="_blank" >編集</a>
 
@@ -482,7 +474,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">importc</span><span class="Other">:</span> <span class="StringLit">"inotify_add_watch"</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">"&lt;sys/inotify.h&gt;"</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Add watch of object NAME to inotify instance FD. Notify about events specified by MASK. &nbsp;&nbsp;<a
+inotify インスタンス fd へオブジェクト name を監視先として追加します。mask により通知イベントが指定されます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L68"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L68" class="link-seesrc" target="_blank" >編集</a>
 
@@ -492,7 +484,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">"&lt;sys/inotify.h&gt;"</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Remove the watch specified by WD from the inotify instance FD. &nbsp;&nbsp;<a
+inotify インスタンス fd から wd で指定された監視先を除外します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/posix/inotify.nim#L72"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/posix/inotify.nim#L72" class="link-seesrc" target="_blank" >編集</a>
 

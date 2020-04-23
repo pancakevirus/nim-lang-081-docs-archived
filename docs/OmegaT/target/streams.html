@@ -279,7 +279,7 @@ function main() {
   <p class="module-desc"><p>This module provides a stream interface and two implementations thereof: the <a class="reference external" href="#FileStream">FileStream</a> and the <a class="reference external" href="#StringStream">StringStream</a> which implement the stream interface for Nim file objects (<tt class="docutils literal"><span class="pre">File</span></tt>) and strings.</p>
 <p>Other modules may provide other implementations for this standard stream interface.</p>
 
-<h1><a class="toc-backref" id="basic-usage" href="#basic-usage">基本の用法</a></h1><p>The basic flow of using this module is:</p>
+<h1><a class="toc-backref" id="basic-usage" href="#basic-usage">基本の用法</a></h1><p>このモジュールを使うための基本手順は、</p>
 <ol class="simple"><li>入力ストリームを開く</li>
 <li>ストリームの読み書き</li>
 <li>ストリームを閉じる</li>
@@ -1508,7 +1508,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 <p>Peeks a line of text from the stream <tt class="docutils literal"><span class="pre">s</span></tt> into <tt class="docutils literal"><span class="pre">line</span></tt>. <tt class="docutils literal"><span class="pre">line</span></tt> must not be <tt class="docutils literal"><span class="pre">nil</span></tt>!IO 例外が投げられます。</p>
-<p>A line of text may be delimited by <tt class="docutils literal"><span class="pre">CR</span></tt>, <tt class="docutils literal"><span class="pre">LF</span></tt> or <tt class="docutils literal"><span class="pre">CRLF</span></tt>. 改行文字は返された文字列の一部ではありません。Returns <tt class="docutils literal"><span class="pre">false</span></tt> if the end of the file has been reached, <tt class="docutils literal"><span class="pre">true</span></tt> otherwise. If <tt class="docutils literal"><span class="pre">false</span></tt> is returned <tt class="docutils literal"><span class="pre">line</span></tt> contains no new data.</p>
+<p>A line of text may be delimited by <tt class="docutils literal"><span class="pre">CR</span></tt>, <tt class="docutils literal"><span class="pre">LF</span></tt> or <tt class="docutils literal"><span class="pre">CRLF</span></tt>. 改行文字は返された文字列の一部ではありません。ファイル終端に到達したときは <tt class="docutils literal"><span class="pre">false</span></tt> を、それ以外は <tt class="docutils literal"><span class="pre">true</span></tt> を返します。If <tt class="docutils literal"><span class="pre">false</span></tt> is returned <tt class="docutils literal"><span class="pre">line</span></tt> contains no new data.</p>
 <p>関連:</p>
 <ul class="simple"><li><a class="reference external" href="#readLine,Stream">readLine(Stream) proc</a></li>
 <li><a class="reference external" href="#readLine,Stream,TaintedString">readLine(Stream, TaintedString) proc</a></li>

@@ -37,6 +37,25 @@ Zen ‚Íˆ«‚¢Œ¾Œê‚Å‚Í‚È‚¢‚ªA‚¢‚ë‚¢‚ë‚Æ• •‚¢“_‚ª‚ ‚é‚í (fork Œ³‚Å‚Í‚©‚È‚è”½Š´‚ðH‚
 ³’¼A’NŒü‚¯‚ÌŒ¾Œê‚È‚Ì‚©‚³‚Á‚Ï‚èB‚Æ‚Ä‚à‚¶‚á‚È‚¢‚ªA–Ú“I‚Ì‚½‚ß‚É‚ÍŽè’i‚ð‘I‚Î‚È‚¢‚ñ‚Å
 ƒNƒŠ[ƒ“‚Å‚Í‚È‚¢‚µAŠ®¬`•‹y‚Ü‚Å”¼”N‚Å‚ÍÏ‚Ü‚È‚¢‚È‚ ‚Æ‚¢‚Á‚½ˆóÛ (‚»‚ñ‚È‚í‚¯‚Å LOVE for Zen ‚ÌˆÚA‚Í•Û—¯‚É‚µ‚Ä‚¢‚Ü‚·)B
 
+Nim ‚ð‘I‚ñ‚¾——R‚Í Ring ‚Ö‚ÌŽ¸–]‚ª‚ ‚è‚Ü‚·B
+EƒhƒLƒ…ƒƒ“ƒg‚ð’¼‚·‹C‚ª‚È‚¢B
+EPWCT 2.0 ‚ÌŠJ”­‚ªi“W‚µ‚È‚¢B
+EŒ¾‚¤‚Ù‚Ç‘‚­‚à‚È‚¢B
+EÅ¬\¬‚ªŽg‚¢‚Ã‚ç‚¢ (Qt ‚É‚×‚Á‚½‚èˆË‘¶)
+EŒ¾Œê‹@”\‚É”½‚µ‚ÄˆÙ—l‚ÉƒpƒbƒP[ƒW‚ª‘å‚«‚¢B
+
+Ring ‚Íˆ«‚­‚È‚¢‚ñ‚Å‚·‚ªA‚Å‚«‚é‚±‚Æ‚ð–³—‚â‚è‘‚â‚»‚¤‚Æ‚·‚éŽp¨‚Ì‚¹‚¢‚©AƒpƒbƒP[ƒW‚ªˆÙ—l‚É‘å‚«‚­‚È‚Á‚Ä‚µ‚Ü‚¢B 
+”z•zƒpƒbƒP[ƒW‚ª 500MB ˆÈã‰z‚¦‚Ä‚¢‚Ü‚·B‚Ü‚ AŽg‚í‚È‚¢‹@”\‚ð‚²‚Á‚»‚èŽÌ‚Ä‚Ä RayLib ‚É—p“r‚ði‚ê‚Î—Ç‚¢‘I‘ð‚Å‚Í‚È‚¢‚Ì‚Å‚·‚ªA‚»‚ê‚Å‚à•¶Žš—ñˆ—‚ªŽã‚­‚ÄÅ¬ƒpƒbƒP[ƒW‚Å‚ÍUTF-8‚·‚çˆµ‚¦‚Ü‚¹‚ñB
+
+Ring ‚ð‘I‚ñ‚¾‚Ì‚Í Lua ‚É‘Î‚·‚éŽüˆÍ‚Ì—v–] (ƒIƒuƒWƒFƒNƒgŽwŒüŒ¾Œê‚Å‚Í‚È‚¢) ‚ÆŽ¸–]‚Å‚·‚ªB
+
+
+Nim ‚ÍA
+E¬Œ^Œy—Ê
+E”z•zƒpƒbƒP[ƒW‚à¬‚³‚¢B
+EC/C++ƒ‰ƒCƒuƒ‰ƒŠ‚Æ‚ÌÚ‘±‚ª‚µ‚â‚·‚¢ (Euphoria ‚Ý‚½‚¢‚É“ï‰ð‚Å‚Ö‚ñ‚ÈFFI‚ðŽg‚í‚È‚­‚ÄÏ‚Þ)
+
+
 
 E–|–ó‚Ì“ïˆÕ“x
 •ª—Ê‚àŒ…ˆá‚¢‚É‘½‚¢‚Å‚·‚µAƒJƒ“ƒ^ƒ“‚Å‚Í‚È‚¢‚Å‚·‚ËB•’Ê‚Ìl‚ªì‹Æ‚µ‚½‚çA‚à‚Á‚Äˆêƒ–ŒŽ‚Å‚µ‚å‚¤‚©B
@@ -49,7 +68,25 @@ Zen ‚Íˆ«‚¢Œ¾Œê‚Å‚Í‚È‚¢‚ªA‚¢‚ë‚¢‚ë‚Æ• •‚¢“_‚ª‚ ‚é‚í (fork Œ³‚Å‚Í‚©‚È‚è”½Š´‚ðH‚
 —Dæ‚µ‚Ä‚¢‚Ü‚·‚©‚ç–³—‚Å‚·B
 
 
+
+ƒhƒLƒ…ƒƒ“ƒg‚Ì‰¼–óŠ®—¹Œã‚Ì—\’è
+
+E•ú’u‚µ‚½‚Ü‚Ü‚ÌƒEƒFƒuƒTƒCƒg–|–ó‚ðŠ®¬‚³‚¹‚Ü‚· (ƒjƒ…[ƒX–|–óŠ®—¹AƒTƒCƒg‘S‘Ì‚Ì‰ü–ó)B
+E”ñŒöŽ®ƒ~ƒ‰[ƒTƒCƒg‚Ì—pˆÓ (OSDN)
+EŒŸØì‹Æ‚Æ•¹‚¹‚ÄŒë–ó‚ÌC³A‰ü–óì‹Æ‚ðs‚¢‚Ü‚·B
+E–|–óŠÂ‹«‚Ì®”õ (–|–óƒƒ‚ƒŠƒf[ƒ^ƒx[ƒXA—pŒêW‚Ì®”õ)
+ENimble ƒfƒBƒŒƒNƒgƒŠ‚Ì–|–ó
+
+¦NPO–@l‚ÌÝ—§‚È‚Ç‚Íl‚¦‚Ä‚¢‚Ü‚¹‚ñB
+
+
 E¡Œã‚Ì“WŠJ‚É‚Â‚¢‚Ä
+
 2025”N‚­‚ç‚¢‚ÅƒI[ƒvƒ“ƒ\[ƒX–|–ó‚©‚çˆø‘Þ‚·‚é—\’è‚Å‚·B\”N‚­‚ç‚¢‘±‚¯‚½‚Ì‚¾‚©‚çA‚à‚¤Œã”CŽÒ‚Ö”C‚¹‚Ä‚à—Ç‚¢‚Å‚µ‚å‚¤B
-Ž„‚àA‚¢‚Â‚Ü‚Å‚à‚Å‚«‚é‚í‚¯‚Å‚Í‚ ‚è‚Ü‚¹‚ñB‘å—Ê‚É–|–ó‚µ‚Ä‚àˆÓ–¡‚Í‚ ‚è‚Ü‚¹‚ñ‚©‚çAŽc‚èŽl”N”¼‚Í Nim ‚Ö’—Í‚µ‚ÄI—¹—\’è‚Å‚·B
+Ž„‚àA‚¢‚Â‚Ü‚Å‚à‚Å‚«‚é‚í‚¯‚Å‚Í‚ ‚è‚Ü‚¹‚ñB–ñŽl”N”¼‚Í Nim ‚Ö’—Í‚µ‚ÄI—¹—\’è‚Å‚·B
+
+¡Œã‚Í Nim ‚Æ‚ÍŠÖŒW‚Ì‚È‚¢‚à‚Ì‚ð‘å—Ê‚É–|–ó‚µ‚Ä‚àˆÓ–¡‚Í‚ ‚è‚Ü‚¹‚ñB
+
+
+
 

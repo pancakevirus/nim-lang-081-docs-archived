@@ -269,7 +269,7 @@ The quick brown fox</pre>
 </p>
 <p>matches a portion of a subject string that is identical to itself. The power of regular expressions comes from the ability to include alternatives and repetitions in the pattern. These are encoded in the pattern by the use of metacharacters, which do not stand for themselves but instead are interpreted in some special way.</p>
 <p>There are two different sets of metacharacters: those that are recognized anywhere in the pattern except within square brackets, and those that are recognized in square brackets. Outside square brackets, the metacharacters are as follows:</p>
-<table border="1" class="docutils"><tr><th>meta character</th><th>meaning</th></tr>
+<table border="1" class="docutils"><tr><th>meta character</th><th>説明</th></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\</span></tt></td><td>general escape character with several uses</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">^</span></tt></td><td>assert start of string (or line, in multiline mode)</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">$</span></tt></td><td>assert end of string (or line, in multiline mode)</td></tr>
@@ -283,7 +283,7 @@ The quick brown fox</pre>
 <tr><td><tt class="docutils literal"><span class="pre">*</span></tt></td><td>0 or more quantifier (equal to <tt class="docutils literal"><span class="pre">{0,}</span></tt>)</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">+</span></tt></td><td>1 or more quantifier (equal to <tt class="docutils literal"><span class="pre">{1,}</span></tt>)<p>also "possessive quantifier"<br /></p></td></tr>
 </table><p>Part of a pattern that is in square brackets is called a "character class". In a character class the only metacharacters are:</p>
-<table border="1" class="docutils"><tr><th>meta character</th><th>meaning</th></tr>
+<table border="1" class="docutils"><tr><th>meta character</th><th>説明</th></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\</span></tt></td><td>general escape character</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">^</span></tt></td><td>negate the class, but only if the first character</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">-</span></tt></td><td>indicates character range</td></tr>
@@ -295,7 +295,7 @@ The quick brown fox</pre>
 <p>For example, if you want to match a <tt class="docutils literal"><span class="pre">*</span></tt> character, you write <tt class="docutils literal"><span class="pre">\*</span></tt> in the pattern. This escaping action applies whether or not the following character would otherwise be interpreted as a metacharacter, so it is always safe to precede a non-alphanumeric with backslash to specify that it stands for itself. In particular, if you want to match a backslash, you write <tt class="docutils literal"><span class="pre">\\</span></tt>.</p>
 
 <h2><a class="toc-backref" id="regular-expression-syntax-and-semantics-nonminusprinting-characters" href="#regular-expression-syntax-and-semantics-nonminusprinting-characters">Non-printing characters</a></h2><p>A second use of backslash provides a way of encoding non-printing characters in patterns in a visible manner. There is no restriction on the appearance of non-printing characters, apart from the binary zero that terminates a pattern, but when a pattern is being prepared by text editing, it is usually easier to use one of the following escape sequences than the binary character it represents::</p>
-<table border="1" class="docutils"><tr><th>character</th><th>meaning</th></tr>
+<table border="1" class="docutils"><tr><th>character</th><th>説明</th></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\a</span></tt></td><td>alarm, that is, the BEL character (hex 07)</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\e</span></tt></td><td>escape (hex 1B)</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\f</span></tt></td><td>formfeed (hex 0C)</td></tr>
@@ -308,7 +308,7 @@ The quick brown fox</pre>
 <p>After <tt class="docutils literal"><span class="pre">\0</span></tt> up to two further octal digits are read. In both cases, if there are fewer than two digits, just those that are present are used. Thus the sequence <tt class="docutils literal"><span class="pre">\0\x\07</span></tt> specifies two binary zeros followed by a BEL character (code value 7). Make sure you supply two digits after the initial zero if the pattern character that follows is itself an octal digit.</p>
 <p>The handling of a backslash followed by a digit other than 0 is complicated. Outside a character class, PCRE reads it and any following digits as a decimal number. If the number is less than 10, or if there have been at least that many previous capturing left parentheses in the expression, the entire sequence is taken as a back reference. A description of how this works is given later, following the discussion of parenthesized subpatterns.</p>
 <p>Inside a character class, or if the decimal number is greater than 9 and there have not been that many capturing subpatterns, PCRE re-reads up to three octal digits following the backslash, and generates a single byte from the least significant 8 bits of the value. Any subsequent digits stand for themselves. 用例:</p>
-<table border="1" class="docutils"><tr><th>example</th><th>meaning</th></tr>
+<table border="1" class="docutils"><tr><th>example</th><th>説明</th></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\040</span></tt></td><td>is another way of writing a space</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\40</span></tt></td><td>is the same, provided there are fewer than 40 previous capturing subpatterns</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\7</span></tt></td><td>is always a back reference</td></tr>
@@ -322,7 +322,7 @@ The quick brown fox</pre>
 <p>All the sequences that define a single byte value or a single UTF-8 character (in UTF-8 mode) can be used both inside and outside character classes. In addition, inside a character class, the sequence <tt class="docutils literal"><span class="pre">\b</span></tt> is interpreted as the backspace character (hex 08), and the sequence <tt class="docutils literal"><span class="pre">\X</span></tt> is interpreted as the character "X". Outside a character class, these sequences have different meanings (see below).</p>
 
 <h2><a class="toc-backref" id="regular-expression-syntax-and-semantics-generic-character-types" href="#regular-expression-syntax-and-semantics-generic-character-types">Generic character types</a></h2><p>The third use of backslash is for specifying <span id="generic-character-types_1">generic character types</span>. The following are always recognized:</p>
-<table border="1" class="docutils"><tr><th>character type</th><th>meaning</th></tr>
+<table border="1" class="docutils"><tr><th>character type</th><th>説明</th></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\d</span></tt></td><td>any decimal digit</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\D</span></tt></td><td>any character that is not a decimal digit</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\s</span></tt></td><td>any whitespace character</td></tr>
@@ -336,7 +336,7 @@ The quick brown fox</pre>
 <p>In UTF-8 mode, characters with values greater than 128 never match <tt class="docutils literal"><span class="pre">\d</span></tt>, <tt class="docutils literal"><span class="pre">\s</span></tt>, or <tt class="docutils literal"><span class="pre">\w</span></tt>, and always match <tt class="docutils literal"><span class="pre">\D</span></tt>, <tt class="docutils literal"><span class="pre">\S</span></tt>, and <tt class="docutils literal"><span class="pre">\W</span></tt>. This is true even when Unicode character property support is available.</p>
 
 <h2><a class="toc-backref" id="regular-expression-syntax-and-semantics-simple-assertions" href="#regular-expression-syntax-and-semantics-simple-assertions">Simple assertions</a></h2><p>The fourth use of backslash is for certain <span id="simple-assertions_1">simple assertions</span>. An assertion specifies a condition that has to be met at a particular point in a match, without consuming any characters from the subject string. The use of subpatterns for more complicated assertions is described below. The backslashed assertions are::</p>
-<table border="1" class="docutils"><tr><th>assertion</th><th>meaning</th></tr>
+<table border="1" class="docutils"><tr><th>assertion</th><th>説明</th></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\b</span></tt></td><td>matches at a word boundary</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\B</span></tt></td><td>matches when not at a word boundary</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">\A</span></tt></td><td>matches at start of subject</td></tr>
@@ -365,26 +365,18 @@ The quick brown fox</pre>
            <span class="Comment">## expression will be used only once)</span></pre></dt>
 <dd>
 
-
-
-options for regular expressions
-&nbsp;&nbsp;<a
+options for regular expressions &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/impure/re.nim#L31"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/re.nim#L31" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/re.nim#L31" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="Regex"></a>
 <dt><pre><a href="re.html#Regex"><span class="Identifier">Regex</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Identifier">RegexDesc</span></pre></dt>
 <dd>
 
-
-
-a compiled regular expression
-&nbsp;&nbsp;<a
+a compiled regular expression &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/impure/re.nim#L43"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/re.nim#L43" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/re.nim#L43" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="RegexError"></a>
@@ -646,13 +638,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#contains%2Cstring%2CRegex%2Cint"><span class="Identifier">contains</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">pattern</span><span class="Other">:</span> <a href="re.html#Regex"><span class="Identifier">Regex</span></a><span class="Other">;</span> <span class="Identifier">start</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-same as <tt class="docutils literal"><span class="pre">find(s, pattern, start) &gt;= 0</span></tt>
-&nbsp;&nbsp;<a
+same as <tt class="docutils literal"><span class="pre">find(s, pattern, start) &gt;= 0</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/impure/re.nim#L411"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/re.nim#L411" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/re.nim#L411" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="contains,string,Regex,openArray[string],int"></a>
@@ -660,39 +648,27 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-same as <tt class="docutils literal"><span class="pre">find(s, pattern, matches, start) &gt;= 0</span></tt>
-&nbsp;&nbsp;<a
+same as <tt class="docutils literal"><span class="pre">find(s, pattern, matches, start) &gt;= 0</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/impure/re.nim#L415"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/re.nim#L415" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/re.nim#L415" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="startsWith,string,Regex"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#startsWith%2Cstring%2CRegex"><span class="Identifier">startsWith</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">prefix</span><span class="Other">:</span> <a href="re.html#Regex"><span class="Identifier">Regex</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns true if <tt class="docutils literal"><span class="pre">s</span></tt> starts with the pattern <tt class="docutils literal"><span class="pre">prefix</span></tt>
-&nbsp;&nbsp;<a
+returns true if <tt class="docutils literal"><span class="pre">s</span></tt> starts with the pattern <tt class="docutils literal"><span class="pre">prefix</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/impure/re.nim#L420"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/re.nim#L420" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/re.nim#L420" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="endsWith,string,Regex"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#endsWith%2Cstring%2CRegex"><span class="Identifier">endsWith</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">;</span> <span class="Identifier">suffix</span><span class="Other">:</span> <a href="re.html#Regex"><span class="Identifier">Regex</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns true if <tt class="docutils literal"><span class="pre">s</span></tt> ends with the pattern <tt class="docutils literal"><span class="pre">suffix</span></tt>
-&nbsp;&nbsp;<a
+returns true if <tt class="docutils literal"><span class="pre">s</span></tt> ends with the pattern <tt class="docutils literal"><span class="pre">suffix</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/impure/re.nim#L424"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/re.nim#L424" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/impure/re.nim#L424" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="replace,string,Regex,string"></a>

@@ -117,21 +117,21 @@ function main() {
   <ul class="simple simple-toc-section">
       <li><a class="reference" href="#ProcessOption"
     title="ProcessOption = enum
-  poEchoCmd,                  ## Echo the command before execution.
-  poUsePath, ## Asks system to search for executable using PATH environment
-            ## variable.
-            ## On Windows, this is the default.
-  poEvalCommand, ## Pass `command` directly to the shell, without quoting.
-                ## Use it only if `command` comes from trusted source.
-  poStdErrToStdOut,           ## Merge stdout and stderr to the stdout stream.
-  poParentStreams,            ## Use the parent's streams.
-  poInteractive, ## Optimize the buffer handling for responsiveness for
-                ## UI applications. Currently this only affects
-                ## Windows: Named pipes are used so that you can peek
-                ## at the process' output streams.
-  poDaemon                    ## Windows: The program creates no Window.
-          ## Unix: Start the program as a daemon. This is still
-          ## work in progress!"><wbr />Process<wbr />Option<span class="attachedType"></span></a></li>
+  poEchoCmd,                  ## コマンドの実行前にエコー (確認表示) します。
+  poUsePath, ## 環境変数 PATH から実行可能ファイルを検索するよう
+            ## システムに要求します。
+            ## Windows では、これがデフォルトです。
+  poEvalCommand, ## クォート処理なしで、シェルに `command` (コマンド) を渡します。
+                ## 信頼できる配布元から得た `command` に限り使用してください。 
+  poStdErrToStdOut,           ## 標準出力と標準エラー出力を標準出力ストリームへ統合します。
+  poParentStreams,            ## 親ストリームを使います。
+  poInteractive, ## GUI アプリケーションのレスポンス用に
+                ## バッファ処理を最適化します。これは Windows に限り動作します:
+                ## プロセスの出力ストリームを読み出し可能 (peek)
+                ## にするために名前付きパイプが使われます。
+  poDaemon                    ## Windows: プログラムのウィンドウを作成しません。
+          ## Unix: プログラムをデーモンとして起動します。これは未だ
+          ## 未完成です！"><wbr />Process<wbr />Option<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#Process"
     title="Process = ref ProcessObj"><wbr />Process<span class="attachedType"></span></a></li>
 
@@ -217,7 +217,7 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"><p>This module implements an advanced facility for executing OS processes and process communication.</p>
+  <p class="module-desc"><p>このモジュールはオペレーティング・システムのプロセスとプロセス通信を行う先進的機能の実装です。</p>
 <p><strong>関連:</strong></p>
 <ul class="simple"><li><a class="reference external" href="os.html">os モジュール</a></li>
 <li><a class="reference external" href="streams.html">streams モジュール</a></li>
@@ -234,24 +234,24 @@ function main() {
 <dl class="item">
 <a id="ProcessOption"></a>
 <dt><pre><a href="osproc.html#ProcessOption"><span class="Identifier">ProcessOption</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
-  <span class="Identifier">poEchoCmd</span><span class="Other">,</span>                  <span class="Comment">## Echo the command before execution.</span>
-  <span class="Identifier">poUsePath</span><span class="Other">,</span> <span class="Comment">## Asks system to search for executable using PATH environment</span>
-            <span class="Comment">## variable.</span>
-            <span class="Comment">## On Windows, this is the default.</span>
-  <span class="Identifier">poEvalCommand</span><span class="Other">,</span> <span class="Comment">## Pass `command` directly to the shell, without quoting.</span>
-                <span class="Comment">## Use it only if `command` comes from trusted source.</span>
-  <span class="Identifier">poStdErrToStdOut</span><span class="Other">,</span>           <span class="Comment">## Merge stdout and stderr to the stdout stream.</span>
-  <span class="Identifier">poParentStreams</span><span class="Other">,</span>            <span class="Comment">## Use the parent's streams.</span>
-  <span class="Identifier">poInteractive</span><span class="Other">,</span> <span class="Comment">## Optimize the buffer handling for responsiveness for</span>
-                <span class="Comment">## UI applications. Currently this only affects</span>
-                <span class="Comment">## Windows: Named pipes are used so that you can peek</span>
-                <span class="Comment">## at the process' output streams.</span>
-  <span class="Identifier">poDaemon</span>                    <span class="Comment">## Windows: The program creates no Window.</span>
-          <span class="Comment">## Unix: Start the program as a daemon. This is still</span>
-          <span class="Comment">## work in progress!</span></pre></dt>
+  <span class="Identifier">poEchoCmd</span><span class="Other">,</span>                  <span class="Comment">## コマンドの実行前にエコー (確認表示) します。</span>
+  <span class="Identifier">poUsePath</span><span class="Other">,</span> <span class="Comment">## 環境変数 PATH から実行可能ファイルを検索するよう</span>
+            <span class="Comment">## システムに要求します。</span>
+            <span class="Comment">## Windows では、これがデフォルトです。</span>
+  <span class="Identifier">poEvalCommand</span><span class="Other">,</span> <span class="Comment">## クォート処理なしで、シェルに `command` (コマンド) を渡します。</span>
+                <span class="Comment">## 信頼できる配布元から得た `command` に限り使用してください。</span>
+  <span class="Identifier">poStdErrToStdOut</span><span class="Other">,</span>           <span class="Comment">## 標準出力と標準エラー出力を標準出力ストリームへ統合します。</span>
+  <span class="Identifier">poParentStreams</span><span class="Other">,</span>            <span class="Comment">## 親ストリームを使います。</span>
+  <span class="Identifier">poInteractive</span><span class="Other">,</span> <span class="Comment">## GUI アプリケーションのレスポンス用に</span>
+                <span class="Comment">## バッファ処理を最適化します。これは Windows に限り動作します:</span>
+                <span class="Comment">## プロセスの出力ストリームを読み出し可能 (peek)</span>
+                <span class="Comment">## にするために名前付きパイプが使われます。</span>
+  <span class="Identifier">poDaemon</span>                    <span class="Comment">## Windows: プログラムのウィンドウを作成しません。</span>
+          <span class="Comment">## Unix: プログラムをデーモンとして起動します。これは未だ</span>
+          <span class="Comment">## 未完成です！</span></pre></dt>
 <dd>
 
-Options that can be passed to <a class="reference external" href="#startProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]">startProcess proc</a>. &nbsp;&nbsp;<a
+<a class="reference external" href="#startProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]">startProcess プロシージャ</a>へ渡すオプション。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/osproc.nim#L34"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/osproc.nim#L34" class="link-seesrc" target="_blank" >編集</a>
 
@@ -260,7 +260,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="osproc.html#Process"><span class="Identifier">Process</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <span class="Identifier">ProcessObj</span></pre></dt>
 <dd>
 
-Represents an operating system process. &nbsp;&nbsp;<a
+オペレーティング・システムのプロセスを表します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/osproc.nim#L66"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/osproc.nim#L66" class="link-seesrc" target="_blank" >編集</a>
 
@@ -274,7 +274,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="osproc.html#poDemon"><span class="Identifier">poDemon</span></a> <span class="Other">=</span> <span class="DecNumber">poDaemon</span></pre></dt>
 <dd>
 
-Nim versions before 0.20 used the wrong spelling ("demon"). Now <tt class="docutils literal"><span class="pre">ProcessOption</span></tt> uses the correct spelling ("daemon"), and this is needed just for backward compatibility. &nbsp;&nbsp;<a
+Nim バージョン 0.20 以前ではスペル ("demon") が誤ったまま使われていました。現在、 <tt class="docutils literal"><span class="pre">ProcessOption</span></tt> は正しいスペル ("daemon") を使うため、これは後方互換性のためだけに必要とされるものです。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/osproc.nim#L68"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/osproc.nim#L68" class="link-seesrc" target="_blank" >編集</a>
 
@@ -288,9 +288,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#processID%2CProcess"><span class="Identifier">processID</span></a><span class="Other">(</span><span class="Identifier">p</span><span class="Other">:</span> <a href="osproc.html#Process"><span class="Identifier">Process</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nosp$1"</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Returns <tt class="docutils literal"><span class="pre">p</span></tt>'s process ID.</p>
+<p><tt class="docutils literal"><span class="pre">p</span></tt> のプロセス ID を返します。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="os.html#getCurrentProcessId">os.getCurrentProcessId proc</a></li>
+<ul class="simple"><li><a class="reference external" href="os.html#getCurrentProcessId">os.getCurrentProcessId プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -302,11 +302,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#inputHandle%2CProcess"><span class="Identifier">inputHandle</span></a><span class="Other">(</span><span class="Identifier">p</span><span class="Other">:</span> <a href="osproc.html#Process"><span class="Identifier">Process</span></a><span class="Other">)</span><span class="Other">:</span> <a href="io.html#FileHandle"><span class="Identifier">FileHandle</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nosp$1"</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Returns <tt class="docutils literal"><span class="pre">p</span></tt>'s input file handle for writing to.</p>
-<p><strong>WARNING</strong>: The returned <tt class="docutils literal"><span class="pre">FileHandle</span></tt> should not be closed manually as it is closed when closing the Process <tt class="docutils literal"><span class="pre">p</span></tt>.</p>
+<p>書き込みで使う <tt class="docutils literal"><span class="pre">p</span></tt> の入力ファイルハンドラを返します。</p>
+<p><strong>警告</strong>: 返された <tt class="docutils literal"><span class="pre">FileHandle</span></tt> はプロセス <tt class="docutils literal"><span class="pre">p</span></tt> を閉じるときに併せて閉じられますので手動では閉じないでください。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#outputHandle,Process">outputHandle proc</a></li>
-<li><a class="reference external" href="#errorHandle,Process">errorHandle proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#outputHandle,Process">outputHandle プロシージャ</a></li>
+<li><a class="reference external" href="#errorHandle,Process">errorHandle プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -319,11 +319,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                                         <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Returns <tt class="docutils literal"><span class="pre">p</span></tt>'s output file handle for reading from.</p>
-<p><strong>WARNING</strong>: The returned <tt class="docutils literal"><span class="pre">FileHandle</span></tt> should not be closed manually as it is closed when closing the Process <tt class="docutils literal"><span class="pre">p</span></tt>.</p>
+<p>読み取りで使う <tt class="docutils literal"><span class="pre">p</span></tt> の出力ファイルハンドラを返します。</p>
+<p><strong>警告</strong>: 返された <tt class="docutils literal"><span class="pre">FileHandle</span></tt> はプロセス <tt class="docutils literal"><span class="pre">p</span></tt> を閉じるときに併せて閉じられますので手動では閉じないでください。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#inputHandle,Process">inputHandle proc</a></li>
-<li><a class="reference external" href="#errorHandle,Process">errorHandle proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#inputHandle,Process">inputHandle プロシージャ</a></li>
+<li><a class="reference external" href="#errorHandle,Process">errorHandle プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -335,11 +335,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#errorHandle%2CProcess"><span class="Identifier">errorHandle</span></a><span class="Other">(</span><span class="Identifier">p</span><span class="Other">:</span> <a href="osproc.html#Process"><span class="Identifier">Process</span></a><span class="Other">)</span><span class="Other">:</span> <a href="io.html#FileHandle"><span class="Identifier">FileHandle</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nosp$1"</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Returns <tt class="docutils literal"><span class="pre">p</span></tt>'s error file handle for reading from.</p>
-<p><strong>WARNING</strong>: The returned <tt class="docutils literal"><span class="pre">FileHandle</span></tt> should not be closed manually as it is closed when closing the Process <tt class="docutils literal"><span class="pre">p</span></tt>.</p>
+<p>読み取りで使う <tt class="docutils literal"><span class="pre">p</span></tt> のエラーファイルハンドラを返します。</p>
+<p><strong>警告</strong>: 返された <tt class="docutils literal"><span class="pre">FileHandle</span></tt> はプロセス <tt class="docutils literal"><span class="pre">p</span></tt> を閉じるときに併せて閉じられますので手動では閉じないでください。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#inputHandle,Process">inputHandle proc</a></li>
-<li><a class="reference external" href="#outputHandle,Process">outputHandle proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#inputHandle,Process">inputHandle プロシージャ</a></li>
+<li><a class="reference external" href="#outputHandle,Process">outputHandle プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -351,7 +351,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#countProcessors"><span class="Identifier">countProcessors</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nosp$1"</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Returns the number of the processors/cores the machine has. 検出不能時は 0 を返します。It is implemented just calling <tt class="docutils literal"><span class="pre">cpuinfo.countProcessors</span></tt>. &nbsp;&nbsp;<a
+マシンに搭載されているプロセッサ / コア数を返します。検出不能時は 0 を返します。この実装は <tt class="docutils literal"><span class="pre">cpuinfo.countProcessors</span></tt> を呼び出します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/osproc.nim#L293"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/osproc.nim#L293" class="link-seesrc" target="_blank" >編集</a>
 
@@ -365,8 +365,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Executes the commands <tt class="docutils literal"><span class="pre">cmds</span></tt> in parallel. Creates <tt class="docutils literal"><span class="pre">n</span></tt> processes that execute in parallel.</p>
-<p>The highest (absolute) return value of all processes is returned. Runs <tt class="docutils literal"><span class="pre">beforeRunEvent</span></tt> before running each command.</p>
+<p>コマンド <tt class="docutils literal"><span class="pre">cmds</span></tt> を並列実行します。並列実行用のプロセスを <tt class="docutils literal"><span class="pre">n</span></tt> 本作成します。</p>
+<p>全プロセスで最も高いものの値 (確実に) を返します。各コマンドの実行前に <tt class="docutils literal"><span class="pre">beforeRunEvent</span></tt> を実行します。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/osproc.nim#L299"
@@ -381,18 +381,18 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">Defect</span><span class="Other">,</span> <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>A convenience procedure that executes <tt class="docutils literal"><span class="pre">command</span></tt> with <tt class="docutils literal"><span class="pre">startProcess</span></tt> and returns its output as a string.</p>
-<p><strong>WARNING:</strong> This function uses <tt class="docutils literal"><span class="pre">poEvalCommand</span></tt> by default for backward compatibility. Make sure to pass options explicitly.</p>
+<p><tt class="docutils literal"><span class="pre">startProcess</span></tt> で <tt class="docutils literal"><span class="pre">command</span></tt> を実行後に出力文字列を返す便利なプロシージャです。</p>
+<p><strong>警告:</strong> この関数は後方互換性の都合によりデフォルトでは <tt class="docutils literal"><span class="pre">poEvalCommand</span></tt> を使います。オプションが明示的に渡されているか確認してください。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#startProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]">startProcess proc</a></li>
-<li><a class="reference external" href="#execProcesses,openArray[string],proc(int),proc(int,Process)">execProcesses proc</a></li>
-<li><a class="reference external" href="#execCmd,string">execCmd proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#startProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]">startProcess プロシージャ</a></li>
+<li><a class="reference external" href="#execProcesses,openArray[string],proc(int),proc(int,Process)">execProcesses プロシージャ</a></li>
+<li><a class="reference external" href="#execCmd,string">execCmd プロシージャ</a></li>
 </ul>
 <p>用例:</p>
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">outp</span> <span class="Operator">=</span> <span class="Identifier">execProcess</span><span class="Punctuation">(</span><span class="StringLit">"nim"</span><span class="Punctuation">,</span> <span class="Identifier">args</span><span class="Operator">=</span><span class="Punctuation">[</span><span class="StringLit">"c"</span><span class="Punctuation">,</span> <span class="StringLit">"-r"</span><span class="Punctuation">,</span> <span class="StringLit">"mytestfile.nim"</span><span class="Punctuation">]</span><span class="Punctuation">,</span> <span class="Identifier">options</span><span class="Operator">=</span><span class="Punctuation">{</span><span class="Identifier">poUsePath</span><span class="Punctuation">}</span><span class="Punctuation">)</span>
 <span class="Keyword">let</span> <span class="Identifier">outp_shell</span> <span class="Operator">=</span> <span class="Identifier">execProcess</span><span class="Punctuation">(</span><span class="StringLit">"nim c -r mytestfile.nim"</span><span class="Punctuation">)</span>
-<span class="Comment"># Note: outp may have an interleave of text from the nim compile</span>
-<span class="Comment"># and any output from mytestfile when it runs</span></pre>
+<span class="Comment"># outp には Nim のコンパイル、および実行時に</span>
+<span class="Comment"># mytestfile から出力による交互配置されたテキストがあります。</span></pre>
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/osproc.nim#L415"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/osproc.nim#L415" class="link-seesrc" target="_blank" >編集</a>
@@ -406,14 +406,14 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Starts a process. <tt class="docutils literal"><span class="pre">Command</span></tt> is the executable file, <tt class="docutils literal"><span class="pre">workingDir</span></tt> is the process's working directory. If <tt class="docutils literal"><span class="pre">workingDir == ""</span></tt> the current directory is used (default). <tt class="docutils literal"><span class="pre">args</span></tt> are the command line arguments that are passed to the process. On many operating systems, the first command line argument is the name of the executable. <tt class="docutils literal"><span class="pre">args</span></tt> should <em>not</em> contain this argument! <tt class="docutils literal"><span class="pre">env</span></tt> is the environment that will be passed to the process. If <tt class="docutils literal"><span class="pre">env == nil</span></tt> (default) the environment is inherited of the parent process. <tt class="docutils literal"><span class="pre">options</span></tt> are additional flags that may be passed to <tt class="docutils literal"><span class="pre">startProcess</span></tt>. See the documentation of <a class="reference external" href="#ProcessOption">ProcessOption</a> for the meaning of these flags.</p>
-<p>You need to <a class="reference external" href="#close,Process">close</a> the process when done.</p>
-<p>Note that you can't pass any <tt class="docutils literal"><span class="pre">args</span></tt> if you use the option <tt class="docutils literal"><span class="pre">poEvalCommand</span></tt>, which invokes the system shell to run the specified <tt class="docutils literal"><span class="pre">command</span></tt>. In this situation you have to concatenate manually the contents of <tt class="docutils literal"><span class="pre">args</span></tt> to <tt class="docutils literal"><span class="pre">command</span></tt> carefully escaping/quoting any special characters, since it will be passed <em>as is</em> to the system shell. Each system/shell may feature different escaping rules, so try to avoid this kind of shell invocation if possible as it leads to non portable software.</p>
-<p>Return value: The newly created process object. Nil is never returned, but <tt class="docutils literal"><span class="pre">OSError</span></tt> is raised in case of an error.</p>
+<p>プロセスを開始します。<tt class="docutils literal"><span class="pre">Command</span></tt> には実行可能ファイルを、 <tt class="docutils literal"><span class="pre">workingDir</span></tt> にはプロセスの作業ディレクトリを指定します。もし <tt class="docutils literal"><span class="pre">workingDir == ""</span></tt> ならば現在のディレクトリを使います (デフォルト)。<tt class="docutils literal"><span class="pre">args</span></tt> はプロセスへ渡されるコマンドライン引数です。ほとんどのオペレーティング・システムにおいて、第一コマンドライン引数は実行可能ファイル名です。この引数は <tt class="docutils literal"><span class="pre">args</span></tt> に<em>指定しない</em>ください！<tt class="docutils literal"><span class="pre">env</span></tt> はプロセスへ渡される環境変数です。If <tt class="docutils literal"><span class="pre">env == nil</span></tt> (デフォルト) ならば親プロセスから環境変数を継承します。<tt class="docutils literal"><span class="pre">options</span></tt> は <tt class="docutils literal"><span class="pre">startProcess</span></tt> へ渡される追加フラグです。フラグの意味については <a class="reference external" href="#ProcessOption">ProcessOption</a> のドキュメンテーションを参照してください。</p>
+<p>プロセス終了時に <a class="reference external" href="#close,Process">close</a> を必ず呼び出してください。</p>
+<p><tt class="docutils literal"><span class="pre">poEvalCommand</span></tt> オプションを使うときに <tt class="docutils literal"><span class="pre">args</span></tt> に渡せない場合は、指定された <tt class="docutils literal"><span class="pre">command</span></tt> を実行するためにシステムのシェルを呼び出すことに注意してください。この状況ではシステムのシェルへ <tt class="docutils literal"><span class="pre">args</span></tt> が<em>そのまま</em>渡されるため、特殊文字のエスケープやクォート処理と <tt class="docutils literal"><span class="pre">command</span></tt> へ args の内容を慎重に手動連結してください。システムやシェルごとにエスケープ処理のルールが異なります。可能であれば、ソフトウェアの移植性を損なわないために、この方式でのシェル呼び出しは避けてください。</p>
+<p>返値: 新しく作成されたプロセスのオブジェクトです。Nil は返されませんが、この場合のエラーでは <tt class="docutils literal"><span class="pre">OSError</span></tt> が発生します。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#execProcesses,openArray[string],proc(int),proc(int,Process)">execProcesses proc</a></li>
-<li><a class="reference external" href="#execProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]">execProcess proc</a></li>
-<li><a class="reference external" href="#execCmd,string">execCmd proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#execProcesses,openArray[string],proc(int),proc(int,Process)">execProcesses プロシージャ</a></li>
+<li><a class="reference external" href="#execProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]">execProcess プロシージャ</a></li>
+<li><a class="reference external" href="#execCmd,string">execCmd プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -425,8 +425,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#close%2CProcess"><span class="Identifier">close</span></a><span class="Other">(</span><span class="Identifier">p</span><span class="Other">:</span> <a href="osproc.html#Process"><span class="Identifier">Process</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nosp$1"</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><a href="system.html#WriteIOEffect"><span class="Identifier">WriteIOEffect</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>When the process has finished executing, cleanup related handles.</p>
-<p><strong>WARNING:</strong> If the process has not finished executing, this will forcibly terminate the process. Doing so may result in zombie processes and <a class="reference external" href="http://stackoverflow.com/questions/27021641/how-to-fix-request-failed-on-channel-0">pty leaks</a>.</p>
+<p>プロセスの実行終了後に、関連するハンドルを抹消します。</p>
+<p><strong>警告:</strong> プロセスの実行が終了していないときに、これを行うと強制的にプロセスを終了します。これはゾンビ・プロセスや<a class="reference external" href="http://stackoverflow.com/questions/27021641/how-to-fix-request-failed-on-channel-0">疑似端末リーク</a> (pty leak) の原因となります。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/osproc.nim#L654"
@@ -437,11 +437,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#suspend%2CProcess"><span class="Identifier">suspend</span></a><span class="Other">(</span><span class="Identifier">p</span><span class="Other">:</span> <a href="osproc.html#Process"><span class="Identifier">Process</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nosp$1"</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Suspends the process <tt class="docutils literal"><span class="pre">p</span></tt>.</p>
+<p>プロセス <tt class="docutils literal"><span class="pre">p</span></tt> を一時停止します。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#resume,Process">resume proc</a></li>
-<li><a class="reference external" href="#terminate,Process">terminate proc</a></li>
-<li><a class="reference external" href="#kill,Process">kill proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#resume,Process">resume プロシージャ</a></li>
+<li><a class="reference external" href="#terminate,Process">terminate プロシージャ</a></li>
+<li><a class="reference external" href="#kill,Process">kill プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -453,11 +453,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#resume%2CProcess"><span class="Identifier">resume</span></a><span class="Other">(</span><span class="Identifier">p</span><span class="Other">:</span> <a href="osproc.html#Process"><span class="Identifier">Process</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nosp$1"</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Resumes the process <tt class="docutils literal"><span class="pre">p</span></tt>.</p>
+<p>プロセス <tt class="docutils literal"><span class="pre">p</span></tt> を再開します。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#suspend,Process">suspend proc</a></li>
-<li><a class="reference external" href="#terminate,Process">terminate proc</a></li>
-<li><a class="reference external" href="#kill,Process">kill proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#suspend,Process">suspend プロシージャ</a></li>
+<li><a class="reference external" href="#terminate,Process">terminate プロシージャ</a></li>
+<li><a class="reference external" href="#kill,Process">kill プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -469,7 +469,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#running%2CProcess"><span class="Identifier">running</span></a><span class="Other">(</span><span class="Identifier">p</span><span class="Other">:</span> <a href="osproc.html#Process"><span class="Identifier">Process</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nosp$1"</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Returns true iff the process <tt class="docutils literal"><span class="pre">p</span></tt> is still running. Returns immediately. &nbsp;&nbsp;<a
+プロセス <tt class="docutils literal"><span class="pre">p</span></tt> が未だ実行中である場合に限り、 true を返します。即座に返値が返されます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/osproc.nim#L668"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/osproc.nim#L668" class="link-seesrc" target="_blank" >編集</a>
 
@@ -478,12 +478,12 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#terminate%2CProcess"><span class="Identifier">terminate</span></a><span class="Other">(</span><span class="Identifier">p</span><span class="Other">:</span> <a href="osproc.html#Process"><span class="Identifier">Process</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nosp$1"</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Stop the process <tt class="docutils literal"><span class="pre">p</span></tt>.</p>
-<p>On Posix OSes the procedure sends <tt class="docutils literal"><span class="pre">SIGTERM</span></tt> to the process. On Windows the Win32 API function <tt class="docutils literal"><span class="pre">TerminateProcess()</span></tt> is called to stop the process.</p>
+<p>プロセス <tt class="docutils literal"><span class="pre">p</span></tt> を停止します。</p>
+<p>POSIX オペレーティング・システムのプロシージャでは <tt class="docutils literal"><span class="pre">SIGTERM</span></tt> をプロセスへ送信します。Windows においてプロセス停止時に Win32 API 関数である <tt class="docutils literal"><span class="pre">TerminateProcess()</span></tt>  が呼び出されます。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#suspend,Process">suspend proc</a></li>
-<li><a class="reference external" href="#resume,Process">resume proc</a></li>
-<li><a class="reference external" href="#kill,Process">kill proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#suspend,Process">suspend プロシージャ</a></li>
+<li><a class="reference external" href="#resume,Process">resume プロシージャ</a></li>
+<li><a class="reference external" href="#kill,Process">kill プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -495,12 +495,12 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#kill%2CProcess"><span class="Identifier">kill</span></a><span class="Other">(</span><span class="Identifier">p</span><span class="Other">:</span> <a href="osproc.html#Process"><span class="Identifier">Process</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nosp$1"</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Kill the process <tt class="docutils literal"><span class="pre">p</span></tt>.</p>
-<p>On Posix OSes the procedure sends <tt class="docutils literal"><span class="pre">SIGKILL</span></tt> to the process. On Windows <tt class="docutils literal"><span class="pre">kill</span></tt> is simply an alias for <a class="reference external" href="#terminate,Process">terminate()</a>.</p>
+<p>プロセス <tt class="docutils literal"><span class="pre">p</span></tt> を強制終了します。</p>
+<p>POSIX オペレーティング・システムのプロシージャでは <tt class="docutils literal"><span class="pre">SIGKILL</span></tt> をプロセスへ送信します。Windows において <tt class="docutils literal"><span class="pre">kill</span></tt> は <a class="reference external" href="#terminate,Process">terminate()</a> のエイリアスです。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#suspend,Process">suspend proc</a></li>
-<li><a class="reference external" href="#resume,Process">resume proc</a></li>
-<li><a class="reference external" href="#terminate,Process">terminate proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#suspend,Process">suspend プロシージャ</a></li>
+<li><a class="reference external" href="#resume,Process">resume プロシージャ</a></li>
+<li><a class="reference external" href="#terminate,Process">terminate プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -513,9 +513,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Waits for the process to finish and returns <tt class="docutils literal"><span class="pre">p</span></tt>'s error code.</p>
-<p><strong>WARNING</strong>: Be careful when using <tt class="docutils literal"><span class="pre">waitForExit</span></tt> for processes created without <tt class="docutils literal"><span class="pre">poParentStreams</span></tt> because they may fill output buffers, causing deadlock.</p>
-<p>On posix, if the process has exited because of a signal, 128 + signal number will be returned.</p>
+<p>プロセスの終了まで待機した後に <tt class="docutils literal"><span class="pre">p</span></tt> のエラーコードを返します。</p>
+<p><strong>警告</strong>: デッドロックの発生により、出力バッファを使い切ってしまう原因となるため <tt class="docutils literal"><span class="pre">poParentStreams</span></tt>を使わず作成したプロセスで <tt class="docutils literal"><span class="pre">waitForExit</span></tt> を使うときはご注意願います。</p>
+<p>POSIX において、シグナルが原因でプロセスが終了したときは、 128 + シグナル番号を返します。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/osproc.nim#L682"
@@ -526,8 +526,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#peekExitCode%2CProcess"><span class="Identifier">peekExitCode</span></a><span class="Other">(</span><span class="Identifier">p</span><span class="Other">:</span> <a href="osproc.html#Process"><span class="Identifier">Process</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nosp$1"</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Return <tt class="docutils literal"><span class="pre">-1</span></tt> if the process is still running. Otherwise the process' exit code.</p>
-<p>On posix, if the process has exited because of a signal, 128 + signal number will be returned.</p>
+<p>まだプロセスが実行中であれば <tt class="docutils literal"><span class="pre">-1</span></tt> を返します。それ以外はプロセスの終了コードを返します。</p>
+<p>POSIX において、シグナルが原因でプロセスが終了したときは、 128 + シグナル番号を返します。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/osproc.nim#L700"
@@ -538,11 +538,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#inputStream%2CProcess"><span class="Identifier">inputStream</span></a><span class="Other">(</span><span class="Identifier">p</span><span class="Other">:</span> <a href="osproc.html#Process"><span class="Identifier">Process</span></a><span class="Other">)</span><span class="Other">:</span> <a href="streams.html#Stream"><span class="Identifier">Stream</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nosp$1"</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Returns <tt class="docutils literal"><span class="pre">p</span></tt>'s input stream for writing to.</p>
-<p><strong>WARNING</strong>: The returned <tt class="docutils literal"><span class="pre">Stream</span></tt> should not be closed manually as it is closed when closing the Process <tt class="docutils literal"><span class="pre">p</span></tt>.</p>
+<p>書き込みで使う <tt class="docutils literal"><span class="pre">p</span></tt> の入力ストリームを返します。</p>
+<p><strong>警告</strong>: 返された <tt class="docutils literal"><span class="pre">Stream</span></tt> はプロセス <tt class="docutils literal"><span class="pre">p</span></tt> を閉じるときに併せて閉じられますので手動では閉じないでください。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#outputStream,Process">outputStream proc</a></li>
-<li><a class="reference external" href="#errorStream,Process">errorStream proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#outputStream,Process">outputStream プロシージャ</a></li>
+<li><a class="reference external" href="#errorStream,Process">errorStream プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -554,11 +554,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#outputStream%2CProcess"><span class="Identifier">outputStream</span></a><span class="Other">(</span><span class="Identifier">p</span><span class="Other">:</span> <a href="osproc.html#Process"><span class="Identifier">Process</span></a><span class="Other">)</span><span class="Other">:</span> <a href="streams.html#Stream"><span class="Identifier">Stream</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nosp$1"</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Returns <tt class="docutils literal"><span class="pre">p</span></tt>'s output stream for reading from.</p>
-<p><strong>WARNING</strong>: The returned <tt class="docutils literal"><span class="pre">Stream</span></tt> should not be closed manually as it is closed when closing the Process <tt class="docutils literal"><span class="pre">p</span></tt>.</p>
+<p>読み取りで使う <tt class="docutils literal"><span class="pre">p</span></tt> の出力ストリームを返します。</p>
+<p><strong>警告</strong>: 返された <tt class="docutils literal"><span class="pre">Stream</span></tt> はプロセス <tt class="docutils literal"><span class="pre">p</span></tt> を閉じるときに併せて閉じられますので手動では閉じないでください。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#inputStream,Process">inputStream proc</a></li>
-<li><a class="reference external" href="#errorStream,Process">errorStream proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#inputStream,Process">inputStream プロシージャ</a></li>
+<li><a class="reference external" href="#errorStream,Process">errorStream プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -570,11 +570,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#errorStream%2CProcess"><span class="Identifier">errorStream</span></a><span class="Other">(</span><span class="Identifier">p</span><span class="Other">:</span> <a href="osproc.html#Process"><span class="Identifier">Process</span></a><span class="Other">)</span><span class="Other">:</span> <a href="streams.html#Stream"><span class="Identifier">Stream</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nosp$1"</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Returns <tt class="docutils literal"><span class="pre">p</span></tt>'s error stream for reading from.</p>
-<p><strong>WARNING</strong>: The returned <tt class="docutils literal"><span class="pre">Stream</span></tt> should not be closed manually as it is closed when closing the Process <tt class="docutils literal"><span class="pre">p</span></tt>.</p>
+<p>読み取りで使う <tt class="docutils literal"><span class="pre">p</span></tt> のエラーストリームを返します。</p>
+<p><strong>警告</strong>: 返された <tt class="docutils literal"><span class="pre">Stream</span></tt> はプロセス <tt class="docutils literal"><span class="pre">p</span></tt> を閉じるときに併せて閉じられますので手動では閉じないでください。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#inputStream,Process">inputStream proc</a></li>
-<li><a class="reference external" href="#outputStream,Process">outputStream proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#inputStream,Process">inputStream プロシージャ</a></li>
+<li><a class="reference external" href="#outputStream,Process">outputStream プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -587,12 +587,12 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <a href="system.html#ReadIOEffect"><span class="Identifier">ReadIOEffect</span></a><span class="Other">,</span> <a href="system.html#RootEffect"><span class="Identifier">RootEffect</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">OSError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Executes <tt class="docutils literal"><span class="pre">command</span></tt> and returns its error code.</p>
-<p>Standard input, output, error streams are inherited from the calling process. This operation is also often called <span id="system_1">system</span>.</p>
+<p><tt class="docutils literal"><span class="pre">command</span></tt> の実行後にエラーコードを返します。</p>
+<p>呼び出し元プロセスから標準入力、標準出力、標準エラーのストリームを継承します。また、この処理は一般に <span id="system_1">system</span> とも呼ばれています。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#execCmdEx,string,set[ProcessOption]">execCmdEx proc</a></li>
-<li><a class="reference external" href="#startProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]">startProcess proc</a></li>
-<li><a class="reference external" href="#execProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]">execProcess proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#execCmdEx,string,set[ProcessOption]">execCmdEx プロシージャ</a></li>
+<li><a class="reference external" href="#startProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]">startProcess プロシージャ</a></li>
+<li><a class="reference external" href="#execProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]">execProcess プロシージャ</a></li>
 </ul>
 <p>用例:</p>
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">errC</span> <span class="Operator">=</span> <span class="Identifier">execCmd</span><span class="Punctuation">(</span><span class="StringLit">"nim c -r mytestfile.nim"</span><span class="Punctuation">)</span></pre>
@@ -618,11 +618,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <a href="system.html#RootEffect"><span class="Identifier">RootEffect</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">Exception</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">Defect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>A convenience proc that runs the <tt class="docutils literal"><span class="pre">command</span></tt>, grabs all its output and exit code and returns both.</p>
+<p><tt class="docutils literal"><span class="pre">command</span></tt> を実行する上で便利なプロシージャです。出力をすべて取り込んで終了コードを返します。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#execCmd,string">execCmd proc</a></li>
-<li><a class="reference external" href="#startProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]">startProcess proc</a></li>
-<li><a class="reference external" href="#execProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]">execProcess proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#execCmd,string">execCmd プロシージャ</a></li>
+<li><a class="reference external" href="#startProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]">startProcess プロシージャ</a></li>
+<li><a class="reference external" href="#execProcess,string,string,openArray[string],StringTableRef,set[ProcessOption]">execProcess プロシージャ</a></li>
 </ul>
 <p>用例:</p>
 <pre class="listing"><span class="Keyword">let</span> <span class="Punctuation">(</span><span class="Identifier">outp</span><span class="Punctuation">,</span> <span class="Identifier">errC</span><span class="Punctuation">)</span> <span class="Operator">=</span> <span class="Identifier">execCmdEx</span><span class="Punctuation">(</span><span class="StringLit">"nim c -r mytestfile.nim"</span><span class="Punctuation">)</span></pre>

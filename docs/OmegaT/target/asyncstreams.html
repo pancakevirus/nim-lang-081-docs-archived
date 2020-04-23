@@ -168,7 +168,7 @@ function main() {
 </pre></dt>
 <dd>
 
-Special future that acts as a queue. Its API is still experimental and so is subject to change. &nbsp;&nbsp;<a
+キュー機能に特化した Future です。この API は未だ実験段階であり将来変更される場合があります。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/asyncstreams.nim#L17"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncstreams.nim#L17" class="link-seesrc" target="_blank" >編集</a>
 
@@ -182,13 +182,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#newFutureStream%2Cstring"><span class="Identifier">newFutureStream</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">fromProc</span> <span class="Other">=</span> <span class="StringLit">"unspecified"</span><span class="Other">)</span><span class="Other">:</span> <a href="asyncstreams.html#FutureStream"><span class="Identifier">FutureStream</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span></pre></dt>
 <dd>
 
-
-
-Create a new <tt class="docutils literal"><span class="pre">FutureStream</span></tt>. This future's callback is activated when two events occur:<ul class="simple"><li>New data is written into the future stream.</li>
-<li>The future stream is completed (this means that no more data will be written).</li>
+新しい <tt class="docutils literal"><span class="pre">FutureStream</span></tt> を作成します。future のコールバックは２種類のイベント発生時に動作します。<ul class="simple"><li>新しいデータを Future ストリームへ書き込むとき。</li>
+<li>Future ストリームの処理が完了するとき (これは書き出すデータがないことを意味します)。</li>
 </ul>
-<p>Specifying <tt class="docutils literal"><span class="pre">fromProc</span></tt>, which is a string specifying the name of the proc that this future belongs to, is a good habit as it helps with debugging.</p>
-<p><strong>Note:</strong> The API of FutureStream is still new and so has a higher likelihood of changing in the future.</p>
+<p> <tt class="docutils literal"><span class="pre">fromProc</span></tt> への引数として、 future が所属するプロシージャ名を文字列で指定することは、デバッグ時に役に立つため良い慣習であります。</p>
+<p><strong>備考:</strong> FutureStream の API は開発されたばかりであるため、将来変更される可能性が高いです。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/asyncstreams.nim#L25"
@@ -199,7 +197,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#complete%2CFutureStream%5BT%5D"><span class="Identifier">complete</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">future</span><span class="Other">:</span> <a href="asyncstreams.html#FutureStream"><span class="Identifier">FutureStream</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Completes a <tt class="docutils literal"><span class="pre">FutureStream</span></tt> signalling the end of data. &nbsp;&nbsp;<a
+データ終端信号を送信して <tt class="docutils literal"><span class="pre">FutureStream</span></tt> を完了します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/asyncstreams.nim#L41"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncstreams.nim#L41" class="link-seesrc" target="_blank" >編集</a>
 
@@ -209,9 +207,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                  <span class="Identifier">cb</span><span class="Other">:</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">future</span><span class="Other">:</span> <a href="asyncstreams.html#FutureStream"><span class="Identifier">FutureStream</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">closure</span><span class="Other">,</span> <span class="Identifier">gcsafe</span></span><span class="Other">.}</span></span><span class="Other">)</span></pre></dt>
 <dd>
 
-<p>Sets the callback proc to be called when data was placed inside the future stream.</p>
-<p>The callback is also called when the future is completed. So you should use <tt class="docutils literal"><span class="pre">finished</span></tt> to check whether data is available.</p>
-<p>If the future stream already has data or is finished then <tt class="docutils literal"><span class="pre">cb</span></tt> will be called immediately.</p>
+<p>Future ストリームにデータが置かれたときコールバックのプロシージャが呼び出されるようにするための設定をします。</p>
+<p>Future の完了後にもコールバックが呼び出されます。よって、<tt class="docutils literal"><span class="pre">完了後</span></tt>にデータが利用可能であるか確認するときにお使い下さい。</p>
+<p>Future ストリームに既存データがある、または完了しているときは即座に <tt class="docutils literal"><span class="pre">cb</span></tt> (コールバック) を呼び出します。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/asyncstreams.nim#L47"
@@ -222,7 +220,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#finished%2CFutureStream%5BT%5D"><span class="Identifier">finished</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">future</span><span class="Other">:</span> <a href="asyncstreams.html#FutureStream"><span class="Identifier">FutureStream</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a></pre></dt>
 <dd>
 
-Check if a <tt class="docutils literal"><span class="pre">FutureStream</span></tt> is finished. <tt class="docutils literal"><span class="pre">true</span></tt> value means that no more data will be placed inside the stream <em>and</em> that there is no data waiting to be retrieved. &nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">FutureStream</span></tt> が完了したか確認します。<tt class="docutils literal"><span class="pre">true</span></tt> 値のとき、ストリームに置かれているデータは<em>存在しないため</em>、 データの受信待機中ではないことを意味します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/asyncstreams.nim#L61"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncstreams.nim#L61" class="link-seesrc" target="_blank" >編集</a>
 
@@ -231,8 +229,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#write%2CFutureStream%5BT%5D%2CT"><span class="Identifier">write</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">future</span><span class="Other">:</span> <a href="asyncstreams.html#FutureStream"><span class="Identifier">FutureStream</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">value</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <a href="asyncfutures.html#Future"><span class="Identifier">Future</span></a><span class="Other">[</span><a href="system.html#void"><span class="Identifier">void</span></a><span class="Other">]</span></pre></dt>
 <dd>
 
-<p>Writes the specified value inside the specified future stream.</p>
-<p>This will raise <tt class="docutils literal"><span class="pre">ValueError</span></tt> if <tt class="docutils literal"><span class="pre">future</span></tt> is finished.</p>
+<p>指定の Future ストリームへ指定値を出力します。</p>
+<p>これは <tt class="docutils literal"><span class="pre">Future</span></tt> が完了しているときに <tt class="docutils literal"><span class="pre">ValueError</span></tt> が発生します。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/asyncstreams.nim#L67"
@@ -243,8 +241,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#read%2CFutureStream%5BT%5D"><span class="Identifier">read</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">future</span><span class="Other">:</span> <a href="asyncstreams.html#FutureStream"><span class="Identifier">FutureStream</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">owned</span><span class="Other">(</span><a href="asyncfutures.html#Future"><span class="Identifier">Future</span></a><span class="Other">[</span><span class="Other">(</span><a href="system.html#bool"><span class="Identifier">bool</span></a><span class="Other">,</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">]</span><span class="Other">)</span></pre></dt>
 <dd>
 
-<p>Returns a future that will complete when the <tt class="docutils literal"><span class="pre">FutureStream</span></tt> has data placed into it. The future will be completed with the oldest value stored inside the stream. The return value will also determine whether data was retrieved, <tt class="docutils literal"><span class="pre">false</span></tt> means that the future stream was completed and no data was retrieved.</p>
-<p>This function will remove the data that was returned from the underlying <tt class="docutils literal"><span class="pre">FutureStream</span></tt>.</p>
+<p><tt class="docutils literal"><span class="pre">FutureStream</span></tt> にデータが置かれたときに完了する Future を返します。ストリームへ格納された最古値により Future を完了します。返値は取得したか判定するためのものであり、 <tt class="docutils literal"><span class="pre">false</span></tt> ならば Future ストリームは完了しておりデータは取得できていません。</p>
+<p>この関数は潜在的な <tt class="docutils literal"><span class="pre">FutureStream</span></tt> から返されたデータを削除します。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/asyncstreams.nim#L82"
@@ -255,7 +253,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#len%2CFutureStream%5BT%5D"><span class="Identifier">len</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">future</span><span class="Other">:</span> <a href="asyncstreams.html#FutureStream"><span class="Identifier">FutureStream</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a></pre></dt>
 <dd>
 
-Returns the amount of data pieces inside the stream. &nbsp;&nbsp;<a
+ストリームにあるデータ断片量を返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/asyncstreams.nim#L121"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/asyncstreams.nim#L121" class="link-seesrc" target="_blank" >編集</a>
 

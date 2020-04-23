@@ -954,7 +954,7 @@ stmt = (IND{&gt;} complexOrSimpleStmt^+(IND{=} / ';') DED)
 <dd>additional unsigned integer types of XX bits use this naming scheme (example: uint16 is a 16 bit wide unsigned integer). The current implementation supports <tt class="docutils literal"><span class="pre">uint8</span></tt>, <tt class="docutils literal"><span class="pre">uint16</span></tt>, <tt class="docutils literal"><span class="pre">uint32</span></tt>, <tt class="docutils literal"><span class="pre">uint64</span></tt>. Literals of these types have the suffix 'uXX. Unsigned operations all wrap around; they cannot lead to over- or underflow errors.</dd>
 </dl>
 <p>In addition to the usual arithmetic operators for signed and unsigned integers (<tt class="docutils literal"><span class="pre">+ - *</span></tt> etc.) there are also operators that formally work on <em>signed</em> integers but treat their arguments as <em>unsigned</em>: They are mostly provided for backwards compatibility with older versions of the language that lacked unsigned integer types. These unsigned operations for signed integers use the <tt class="docutils literal"><span class="pre">%</span></tt> suffix as convention:</p>
-<table border="1" class="docutils"><tr><th>operation</th><th>meaning</th></tr>
+<table border="1" class="docutils"><tr><th>operation</th><th>説明</th></tr>
 <tr><td><tt class="docutils literal"><span class="pre">a +% b</span></tt></td><td>unsigned integer addition</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">a -% b</span></tt></td><td>unsigned integer subtraction</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">a *% b</span></tt></td><td>unsigned integer multiplication</td></tr>
@@ -1285,7 +1285,7 @@ ord(Direction.west) == 3</pre>
 <span class="Identifier">x</span> <span class="Operator">=</span> <span class="Punctuation">{</span><span class="CharLit">'a'</span><span class="Operator">..</span><span class="CharLit">'z'</span><span class="Punctuation">,</span> <span class="CharLit">'0'</span><span class="Operator">..</span><span class="CharLit">'9'</span><span class="Punctuation">}</span> <span class="Comment"># This constructs a set that contains the</span>
                          <span class="Comment"># letters from 'a' to 'z' and the digits</span>
                          <span class="Comment"># from '0' to '9'</span></pre><p>These operations are supported by sets:</p>
-<table border="1" class="docutils"><tr><th>operation</th><th>meaning</th></tr>
+<table border="1" class="docutils"><tr><th>operation</th><th>説明</th></tr>
 <tr><td><tt class="docutils literal"><span class="pre">A + B</span></tt></td><td>union of two sets</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">A * B</span></tt></td><td>intersection of two sets</td></tr>
 <tr><td><tt class="docutils literal"><span class="pre">A - B</span></tt></td><td>difference of two sets (A without B's elements)</td></tr>

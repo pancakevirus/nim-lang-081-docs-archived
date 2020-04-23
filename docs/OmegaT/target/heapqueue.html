@@ -154,19 +154,18 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc">The <tt class="docutils literal"><span class="pre">heapqueue</span></tt> module implements a <a class="reference external" href="https://en.wikipedia.org/wiki/Heap_(data_structure)">heap data structure</a> that can be used as a <a class="reference external" href="https://en.wikipedia.org/wiki/Priority_queue">priority queue</a>. Heaps are arrays for which <tt class="docutils literal"><span class="pre">a[k] &lt;= a[2*k+1]</span></tt> and <tt class="docutils literal"><span class="pre">a[k] &lt;= a[2*k+2]</span></tt> for all <tt class="docutils literal"><span class="pre">k</span></tt>, counting elements from 0. The interesting property of a heap is that <tt class="docutils literal"><span class="pre">a[0]</span></tt> is always its smallest element.
-
+  <p class="module-desc"><tt class="docutils literal"><span class="pre">heapqueue</span></tt> モジュールは<a class="reference external" href="https://en.wikipedia.org/wiki/Priority_queue">優先順位付きキュー</a>として使える<a class="reference external" href="https://en.wikipedia.org/wiki/Heap_(data_structure)">ヒープによるデータ構造</a>の実装です。ヒープは  <tt class="docutils literal"><span class="pre">a[k] &lt;= a[2*k+1]</span></tt> と <tt class="docutils literal"><span class="pre">k</span></tt> に関する <tt class="docutils literal"><span class="pre">a[k] &lt;= a[2*k+2]</span></tt> の配列がすべてあり、要素は 0 から数えます。ヒープの興味深い性質として <tt class="docutils literal"><span class="pre">a[0]</span></tt> は必ず最小要素になることです。
 <h1><a class="toc-backref" id="basic-usage" href="#basic-usage">基本の用法</a></h1><pre class="listing"><span class="Keyword">import</span> <span class="Identifier">heapqueue</span>
 
 <span class="Keyword">var</span> <span class="Identifier">heap</span> <span class="Operator">=</span> <span class="Identifier">initHeapQueue</span><span class="Punctuation">[</span><span class="Identifier">int</span><span class="Punctuation">]</span><span class="Punctuation">(</span><span class="Punctuation">)</span>
 <span class="Identifier">heap</span><span class="Operator">.</span><span class="Identifier">push</span><span class="Punctuation">(</span><span class="DecNumber">8</span><span class="Punctuation">)</span>
 <span class="Identifier">heap</span><span class="Operator">.</span><span class="Identifier">push</span><span class="Punctuation">(</span><span class="DecNumber">2</span><span class="Punctuation">)</span>
 <span class="Identifier">heap</span><span class="Operator">.</span><span class="Identifier">push</span><span class="Punctuation">(</span><span class="DecNumber">5</span><span class="Punctuation">)</span>
-<span class="Comment"># The first element is the lowest element</span>
+<span class="Comment"># 最初の要素は最下位の要素です</span>
 <span class="Identifier">assert</span> <span class="Identifier">heap</span><span class="Punctuation">[</span><span class="DecNumber">0</span><span class="Punctuation">]</span> <span class="Operator">==</span> <span class="DecNumber">2</span>
-<span class="Comment"># Remove and return the lowest element</span>
+<span class="Comment"># 最下位の要素を削除して返します</span>
 <span class="Identifier">assert</span> <span class="Identifier">heap</span><span class="Operator">.</span><span class="Identifier">pop</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="DecNumber">2</span>
-<span class="Comment"># The lowest element remaining is 5</span>
+<span class="Comment"># 最下位の要素には 5 が残存します</span>
 <span class="Identifier">assert</span> <span class="Identifier">heap</span><span class="Punctuation">[</span><span class="DecNumber">0</span><span class="Punctuation">]</span> <span class="Operator">==</span> <span class="DecNumber">5</span></pre>
 <h1><a class="toc-backref" id="usage-with-custom-object" href="#usage-with-custom-object">カスタムオブジェクトの用法</a></h1><p>カスタムオブジェクトで <tt class="docutils literal"><span class="pre">HeapQueue</span></tt> を使うには、 <tt class="docutils literal"><span class="pre">&lt;</span></tt> 演算子を実装してください。</p>
 <pre class="listing"><span class="Keyword">import</span> <span class="Identifier">heapqueue</span>
@@ -190,7 +189,7 @@ function main() {
 </pre></dt>
 <dd>
 
-A heap queue, commonly known as a priority queue. &nbsp;&nbsp;<a
+一般にヒープキューは、優先順位付きキューとしても知られています。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/heapqueue.nim#L54"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/heapqueue.nim#L54" class="link-seesrc" target="_blank" >編集</a>
 
@@ -231,7 +230,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#push%2CHeapQueue%5BT%5D%2CT"><span class="Identifier">push</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">heap</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="heapqueue.html#HeapQueue"><span class="Identifier">HeapQueue</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">item</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span></pre></dt>
 <dd>
 
-Push <tt class="docutils literal"><span class="pre">item</span></tt> onto heap, maintaining the heap invariant. &nbsp;&nbsp;<a
+ヒープの不変量を持続したまま、ヒープへ <tt class="docutils literal"><span class="pre">item</span></tt> を push (プッシュ、退避) します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/heapqueue.nim#L112"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/heapqueue.nim#L112" class="link-seesrc" target="_blank" >編集</a>
 
@@ -240,7 +239,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#pop%2CHeapQueue%5BT%5D"><span class="Identifier">pop</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">heap</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="heapqueue.html#HeapQueue"><span class="Identifier">HeapQueue</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span></pre></dt>
 <dd>
 
-Pop and return the smallest item from <tt class="docutils literal"><span class="pre">heap</span></tt>, maintaining the heap invariant. &nbsp;&nbsp;<a
+ヒープの不変量を持続したまま、 <tt class="docutils literal"><span class="pre">heap</span></tt> から最小アイテムを pop (ポップ、復帰) して返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/heapqueue.nim#L117"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/heapqueue.nim#L117" class="link-seesrc" target="_blank" >編集</a>
 
@@ -249,7 +248,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#del%2CHeapQueue%5BT%5D%2CNatural"><span class="Identifier">del</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">heap</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="heapqueue.html#HeapQueue"><span class="Identifier">HeapQueue</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">index</span><span class="Other">:</span> <a href="system.html#Natural"><span class="Identifier">Natural</span></a><span class="Other">)</span></pre></dt>
 <dd>
 
-Removes the element at <tt class="docutils literal"><span class="pre">index</span></tt> from <tt class="docutils literal"><span class="pre">heap</span></tt>, maintaining the heap invariant. &nbsp;&nbsp;<a
+ヒープの不変量を持続したまま、 <tt class="docutils literal"><span class="pre">heap</span></tt> から <tt class="docutils literal"><span class="pre">index</span></tt> で指定された要素を削除します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/heapqueue.nim#L128"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/heapqueue.nim#L128" class="link-seesrc" target="_blank" >編集</a>
 
@@ -258,9 +257,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#replace%2CHeapQueue%5BT%5D%2CT"><span class="Identifier">replace</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">heap</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="heapqueue.html#HeapQueue"><span class="Identifier">HeapQueue</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">item</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span></pre></dt>
 <dd>
 
-
-
-Pop and return the current smallest value, and add the new item. This is more efficient than pop() followed by push(), and can be more appropriate when using a fixed-size heap. Note that the value returned may be larger than item! That constrains reasonable uses of this routine unless written as part of a conditional replacement:<pre class="listing"><span class="Keyword">if</span> <span class="Identifier">item</span> <span class="Operator">&gt;</span> <span class="Identifier">heap</span><span class="Punctuation">[</span><span class="DecNumber">0</span><span class="Punctuation">]</span><span class="Punctuation">:</span>
+現在の最小値を pop (ポップ、復帰) して返してから、新しいアイテムを追加します。これは push() の後に pop() をするよりも効率的であり、固定サイズのヒープを使うよりも適切です。返された値はアイテムよりも大きい場合があることに注意してください。このルーチンを使うにあたって条件付き置換の一部が記述されていないならば合理的な制約が課せられます:<pre class="listing"><span class="Keyword">if</span> <span class="Identifier">item</span> <span class="Operator">&gt;</span> <span class="Identifier">heap</span><span class="Punctuation">[</span><span class="DecNumber">0</span><span class="Punctuation">]</span><span class="Punctuation">:</span>
     <span class="Identifier">item</span> <span class="Operator">=</span> <span class="Identifier">replace</span><span class="Punctuation">(</span><span class="Identifier">heap</span><span class="Punctuation">,</span> <span class="Identifier">item</span><span class="Punctuation">)</span></pre>
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/heapqueue.nim#L136"
@@ -271,7 +268,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#pushpop%2CHeapQueue%5BT%5D%2CT"><span class="Identifier">pushpop</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">heap</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="heapqueue.html#HeapQueue"><span class="Identifier">HeapQueue</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">item</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span></pre></dt>
 <dd>
 
-Fast version of a push followed by a pop. &nbsp;&nbsp;<a
+push の高速版です。続けて pop を行います。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/heapqueue.nim#L150"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/heapqueue.nim#L150" class="link-seesrc" target="_blank" >編集</a>
 

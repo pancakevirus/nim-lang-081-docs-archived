@@ -220,13 +220,9 @@ function main() {
   </pre></dt>
 <dd>
 
-
-
-represents a memory mapped file
-&nbsp;&nbsp;<a
+represents a memory mapped file &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/memfiles.nim#L32"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/memfiles.nim#L32" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/memfiles.nim#L32" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="MemSlice"></a>
@@ -236,26 +232,18 @@ class="link-seesrc" target="_blank">Source</a>
 </pre></dt>
 <dd>
 
-
-
-represent slice of a MemFile for iteration over delimited lines/records
-&nbsp;&nbsp;<a
+represent slice of a MemFile for iteration over delimited lines/records &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/memfiles.nim#L366"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/memfiles.nim#L366" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/memfiles.nim#L366" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="MemMapFileStream"></a>
 <dt><pre><a href="memfiles.html#MemMapFileStream"><span class="Identifier">MemMapFileStream</span></a> <span class="Other">=</span> <span class="Keyword">ref</span> <a href="memfiles.html#MemMapFileStreamObj"><span class="Identifier">MemMapFileStreamObj</span></a></pre></dt>
 <dd>
 
-
-
-a stream that encapsulates a <tt class="docutils literal"><span class="pre">MemFile</span></tt>
-&nbsp;&nbsp;<a
+a stream that encapsulates a <tt class="docutils literal"><span class="pre">MemFile</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/memfiles.nim#L468"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/memfiles.nim#L468" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/memfiles.nim#L468" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="MemMapFileStreamObj"></a>
@@ -308,7 +296,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">,</span> <span class="Identifier">OSError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>opens a memory mapped file. If this fails, <tt class="docutils literal"><span class="pre">OSError</span></tt> is raised.</p>
+<p>opens a memory mapped file. 失敗時は <tt class="docutils literal"><span class="pre">IOError</span></tt> が発生します。</p>
 <p><tt class="docutils literal"><span class="pre">newFileSize</span></tt> can only be set if the file does not exist and is opened with write access (e.g., with fmReadWrite).</p>
 <p><tt class="docutils literal"><span class="pre">mappedSize</span></tt> and <tt class="docutils literal"><span class="pre">offset</span></tt> can be used to map only a slice of the file.</p>
 <p><tt class="docutils literal"><span class="pre">offset</span></tt> must be multiples of the PAGE SIZE of your OS (usually 4K or 8K but is unique to your OS)</p>

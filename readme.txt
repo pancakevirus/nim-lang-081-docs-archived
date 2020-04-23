@@ -1,196 +1,197 @@
 
-ƒ‰ƒCƒZƒ“ƒX
+ãƒ©ã‚¤ã‚»ãƒ³ã‚¹
 --------
-Nim ‚Ìƒ‰ƒCƒZƒ“ƒX‚É€‚¸‚é‚à‚Ì‚Æ‚µ‚Ü‚·B‚½‚¾‚µA–|–ó•¨‚É‚à’˜ìŒ ‚ª‚ ‚è‚Ü‚·B
-‚Ü‚½Aå—v–|–óÒ‚ÍˆêØ‚Ì‘Î‰¿‚ğ“¾‚Ä‚¢‚Ü‚¹‚ñB
+Nim ã®ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã«æº–ãšã‚‹ã‚‚ã®ã¨ã—ã¾ã™ã€‚ãŸã ã—ã€ç¿»è¨³ç‰©ã«ã‚‚è‘—ä½œæ¨©ãŒã‚ã‚Šã¾ã™ã€‚
+ã¾ãŸã€ä¸»è¦ç¿»è¨³è€…ã¯ä¸€åˆ‡ã®å¯¾ä¾¡ã‚’å¾—ã¦ã„ã¾ã›ã‚“ã€‚
 
-ŒÂlE–@l‚È‚Ç‚ğ–â‚í‚¸‘–Ê‚É‚æ‚é¤‹Æ—˜—p‚Ìê‡‚ÍA•K‚¸–‘O‚É‹–‘ø‚ğ“¾‚Ä‚­‚¾‚³‚¢B
-‚»‚Ìê‡‚ÌƒvƒƒWƒFƒNƒgx‰‡‚Ì‘Î‰¿‚Í”CˆÓ‚Å‚ ‚è‹­§‚Å‚Í‚ ‚è‚Ü‚¹‚ñB‹–‘ø‚¾‚¯‚Å‚à—ã‚İ‚É‚È‚è‚Ü‚·B
+å€‹äººãƒ»æ³•äººãªã©ã‚’å•ã‚ãšæ›¸é¢ã«ã‚ˆã‚‹å•†æ¥­åˆ©ç”¨ã®å ´åˆã¯ã€å¿…ãšäº‹å‰ã«è¨±è«¾ã‚’å¾—ã¦ãã ã•ã„ã€‚
+ãã®å ´åˆã®ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆæ”¯æ´ã®å¯¾ä¾¡ã¯ä»»æ„ã§ã‚ã‚Šå¼·åˆ¶ã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚è¨±è«¾ã ã‘ã§ã‚‚åŠ±ã¿ã«ãªã‚Šã¾ã™ã€‚
 
-‚Ü‚½AAEE“]EŠˆ“®‚È‚Ç‚É‚¨‚¢‚ÄAŒo—ğ¼Ì‚È‚Ç•s³‚â“—psˆ×‚ÍŒÅ‚­‹Ö‚¶‚Ü‚·
-‚à‚¿‚ë‚ñAŠñ‘¡Ò‚ª‹LÚ‚µ‚Ä‚¢‚¢‚Ì‚ÍA‚ ‚È‚½‚ª’S“–‚µ‚½•”•ª‚¾‚¯‚Å‚·B
+ã¾ãŸã€å°±è·ãƒ»è»¢è·æ´»å‹•ãªã©ã«ãŠã„ã¦ã€çµŒæ­´è©ç§°ãªã©ä¸æ­£ã‚„ç›—ç”¨è¡Œç‚ºã¯å›ºãç¦ã˜ã¾ã™
+ã‚‚ã¡ã‚ã‚“ã€å¯„è´ˆè€…ãŒè¨˜è¼‰ã—ã¦ã„ã„ã®ã¯ã€ã‚ãªãŸãŒæ‹…å½“ã—ãŸéƒ¨åˆ†ã ã‘ã§ã™ã€‚
 
 
-‰¼–óì‹Æ‹L˜^
+ä»®è¨³ä½œæ¥­è¨˜éŒ²
 ------------
-‘ÎÛƒo[ƒWƒ‡ƒ“   : Nim 1.0.6 (1.2.0 ˆÚsì‹Æ’†)
-ì‹ÆŠJn“ú       : 2020”N01Œ02“ú Œß‘O1100•ª
-˜”ÕíI—¹       : 2020/02/27 (Done: 60) Jan ` Feb ŠúŠÔ
-’†”ÕíŠJn       : 2020/02/28 Mar ` May
+å¯¾è±¡ãƒãƒ¼ã‚¸ãƒ§ãƒ³   : Nim 1.0.6 (1.2.0 ç§»è¡Œä½œæ¥­ä¸­)
+ä½œæ¥­é–‹å§‹æ—¥       : 2020å¹´01æœˆ02æ—¥ åˆå‰11æ™‚00åˆ†
+åºç›¤æˆ¦çµ‚äº†       : 2020/02/27 (Done: 60) Jan ï½ Feb æœŸé–“
+ä¸­ç›¤æˆ¦é–‹å§‹       : 2020/02/28 Mar ï½ May
 
 +---------------+-----------------------+-------------+-------------+
-|    2020       | Œ»İó‹µ / ŒY–Ú•W   | c‚è / ‡Œv | ’B¬ó‹µ    |
+|    2020       | ç¾åœ¨çŠ¶æ³ / æœˆç”£ç›®æ¨™   | æ®‹ã‚Š / åˆè¨ˆ | é”æˆçŠ¶æ³    |
 +---------------+-----------------------+-------------+-------------+
-| Jan (v.1.0.4) |               31 / 31 |  150 / 181  |     ›      |
+| Jan (v.1.0.4) |               31 / 31 |  150 / 181  |     â—‹      |
 +---------------+-----------------------+-------------+-------------+
-| Feb (v.1.0.6) |               29 / 29 |  121 / 181  |     ›      |
+| Feb (v.1.0.6) |               29 / 29 |  121 / 181  |     â—‹      |
 +---------------+-----------------------+---------------------------+
-| Mar (v.1.0.6) |               31 / 31 |   90 / 181  |     ›      |
+| Mar (v.1.0.6) |               31 / 31 |   90 / 181  |     â—‹      |
 +---------------+-----------------------+-------------+-------------+
-| Apr (v.1.2.0) |       19 + 11(K) / 30 |   80 / 203  |     ¢      |
+| Apr (v.1.2.0) |               30 / 30 |   82 / 203  |     â–³      |
 +---------------+-----------------------+-------------+-------------+
-| May (v.1.2.0) |                  / 31 | (60) / 203  |     |      |
+| May (v.1.2.0) |                  / 31 | (60) / 203  |     ï¼      |
 +---------------+-----------------------+-------------+-------------+
-| Jun (v.1.2.0) |                  / 30 | (30) / 203  |     |      |
+| Jun (v.1.2.0) |                  / 30 | (30) / 203  |     ï¼      |
 +---------------+-----------------------+-------------+-------------+
-| Jul (v.1.?.?) |                  / 31 | (??) / ???  |     |      |
+| Jul (v.1.?.?) |                  / 31 | (??) / ???  |     ï¼      |
 +---------------+-----------------------+-------------+-------------+
-| Aug (v.1.?.?) |                  / 31 | (??) / ???  |     |      |
+| Aug (v.1.?.?) |                  / 31 | (??) / ???  |     ï¼      |
 +---------------+-----------------------+-------------+-------------+
-| Sep (v.1.?.?) |                  / 30 | (??) / ???  |     |      |
+| Sep (v.1.?.?) |                  / 30 | (??) / ???  |     ï¼      |
 +---------------+-----------------------+-------------+-------------+
-| Oct (v.1.?.?) |                  / 31 | (??) / ???  |     |      |
+| Oct (v.1.?.?) |                  / 31 | (??) / ???  |     ï¼      |
 +---------------+-----------------------+-------------+-------------+
-| Nov (v.1.?.?) |                  / 30 | (??) / ???  |     |      |
+| Nov (v.1.?.?) |                  / 30 | (??) / ???  |     ï¼      |
 +---------------+-----------------------+-------------+-------------+
-| Dec (v.1.?.?) |                  / 31 | (??) / ???  |     |      |
+| Dec (v.1.?.?) |                  / 31 | (??) / ???  |     ï¼      |
 +---------------+-----------------------+-------------+- (121/203) -+
-E    K = ƒRƒŠƒƒ!‰p˜a ˆê”­–|–ó ƒtƒ@ƒCƒ‹Œ`® (kyrdoc)
-E(nn)  = i’»’B¬—\’è
+ãƒ»    K = ã‚³ãƒªãƒ£!è‹±å’Œ ä¸€ç™ºç¿»è¨³ .htmlãƒ•ã‚¡ã‚¤ãƒ«å½¢å¼ (kyrdoc)
+ãƒ»(nn)  = é€²æ—é”æˆäºˆå®š
 
-”õl:
-E2020”N04Œ‚Í v1.0.6 ¨ v1.2.0 ˆÚsì‹ÆA‚È‚ç‚Ñ‚É
-  Šeí•ÏŠ·‚È‚Çì‹Æ€”õ‚Ì‚½‚ßi’»‚ğ—}‚¦‚Ä‚¢‚Ü‚· (¸_–Ê‚Å‚Ì”æ˜J‚à‚ ‚è‚Ü‚·)B
+å‚™è€ƒ:
+ãƒ»2020å¹´04æœˆã¯ v1.0.6 â†’ v1.2.0 ç§»è¡Œä½œæ¥­ã€ãªã‚‰ã³ã«
+  å„ç¨®å¤‰æ›ãªã©ä½œæ¥­æº–å‚™ã®ãŸã‚é€²æ—ã‚’æŠ‘ãˆã¦ã„ã¾ã™ (ç²¾ç¥é¢ã§ã®ç–²åŠ´ã‚‚ã‚ã‚Šã¾ã™)ã€‚
 
 
-Šñ‘¡Ò
+å¯„è´ˆè€…
 ------
-Eå—v–|–óÒ: isVowel (Twitter: @isvowel)
+ãƒ»ä¸»è¦ç¿»è¨³è€…: isVowel (Twitter: @isvowel)
 
-’S“–(‹LÚ—á)
-Ehogefile.html - foobar ‚³‚ñ (˜A—æ/URL)
-E•i¿ŠÇ— (—pŒêWƒf[ƒ^ƒx[ƒX)     : foobar  ‚³‚ñ (˜A—æ/URL)
-E•i¿ŠÇ— (–|–óƒƒ‚ƒŠƒf[ƒ^ƒx[ƒX) : foobar2 ‚³‚ñ (˜A—æ/URL)
+æ‹…å½“(è¨˜è¼‰ä¾‹)
+ãƒ»hogefile.html - foobar ã•ã‚“ (é€£çµ¡å…ˆ/URL)
+ãƒ»å“è³ªç®¡ç† (ç”¨èªé›†ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹)     : foobar  ã•ã‚“ (é€£çµ¡å…ˆ/URL)
+ãƒ»å“è³ªç®¡ç† (ç¿»è¨³ãƒ¡ãƒ¢ãƒªãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹) : foobar2 ã•ã‚“ (é€£çµ¡å…ˆ/URL)
 
 
-‰¼–óŠ®—¹:
+ä»®è¨³å®Œäº†:
+	apis.html
 	assertions.html
+	async.html
 	asyncfile.html
 	asyncftpclient.html
 	asynchttpserver.html
+	asyncjs.html
+	asyncstreams.html
 	base64.html
 	browsers.html
+	cgi.html
 	chains.html
+	channels.html
 	codeowners.html
 	colors.html
+	compilesettings.html
 	complex.html
 	cookies.html
+	coro.html
 	cpuinfo.html
 	cpuload.html
+	critbits.html
+	cstrutils.html
+	db_common.html
+	db_mysql.html
+	db_odbc.html
+	db_postgres.html
+	db_sqlite.html
+	decls.html
+	diff.html
 	distros.html
 	docgen_sample.html
+	dollars.html
 	dom.html
 	dynlib.html
 	editdistance.html
 	encodings.html
 	endians.html
+	estp.html
+	heapqueue.html
 	highlite.html
+	hotcodereloading.html
 	htmlgen.html
 	htmlparser.html
+	inotify.html
 	io.html
+	iterators.html
 	iup.html
 	jsconsole.html
 	jscore.html
 	koch.html
+	lexbase.html
 	linenoise.html
+	linux.html
 	locks.html
+	logic.html
+	macrocache.html
 	marshal.html
 	md5.html
 	mersenne.html
 	mimetypes.html
 	mysql.html
 	nimgrep.html
+	nimhcr.html
+	niminst.html
 	nimprof.html
+	nimrtl.html
+	nimscript.html
 	nimtracker.html
 	odbcsql.html
 	oids.html
+	openssl.html
+	osproc.html
 	oswalkdir.html
 	overview.html
 	packaging.html
+	parsejson.html
 	parsesql.html
+	pathnorm.html
+	posix.html
+	posix_utils.html
+	postgres.html
 	punycode.html
 	rdstdin.html
 	registry.html
+	reservedmem.html
 	rlocks.html
 	rst.html
 	rstast.html
 	rtarrays.html
 	segfaults.html
+	sexp.html
 	sha1.html
 	sharedlist.html
+	smtp.html
 	sqlite3.html
-U:	sugar.html
+	ssl_certs.html
+	stackframes.html
+	sums.html
+	switch_memory.html
+	terminal.html
 	termios.html
 	theindex.html
+	threads.html
 	time_t.html
+	tinyc.html
 	tools.html
-U:	typetraits.html
+	typetraits.html
+	underscored_calls.html
 	unidecode.html
 	util.html
 	varints.html
 	volatile.html
 	widestrs.html
 	winlean.html
+	with.html
 	wordwrap.html
+	wrapnils.html
 	xmlparser.html
 	xmltree.html
-	smtp.html
-	openssl.html
-	nimscript.html
-	sums.html
-	lexbase.html
-	dollars.html
-	diff.html
-	db_common.html
-	linux.html
-	postgres.html
-	parsejson.html
-	estp.html
-	sexp.html
-	posix.html
-	posix_utils.html
-	asyncjs.html
-	async.html
-	decls.html
-	hotcodereloading.html
-	logic.html
-	macrocache.html
-	nimhcr.html
-	nimrtl.html
-	pathnorm.html
-	ssl_certs.html
-	stackframes.html
-	switch_memory.html
-	underscored_calls.html
-	wrapnils.html
-	reservedmem.html
-	tinyc.html
-	apis.html
-	cstrutils.html
-	niminst.html
-	with.html
-	db_mysql.html
-	db_odbc.html
-	db_postgres.html
-	db_sqlite.html
-	coro.html
-	(J) asyncstreams-000.krydoc / .txt : tmx •ÏŠ·‘Ò‚¿
-	(J) cgi-000.krydoc          / .txt : tmx •ÏŠ·‘Ò‚¿
-	(J) channels-000.krydoc     / .txt : tmx •ÏŠ·‘Ò‚¿
-	(J) critbits-000.krydoc     / .txt : tmx •ÏŠ·‘Ò‚¿
-	(J) heapqueue-000.krydoc    / .txt : tmx •ÏŠ·‘Ò‚¿
-	(J) iterators-000.krydoc    / .txt : tmx •ÏŠ·‘Ò‚¿
-	(J) osproc-000.krydoc       / .txt : tmx •ÏŠ·‘Ò‚¿
-	(J) terminal-000.krydoc     / .txt : tmx •ÏŠ·‘Ò‚¿
-	(J) threads-000.krydoc      / .txt : tmx •ÏŠ·‘Ò‚¿
-	compilesettings_v1.2.0.krydoc      / .txt : tmx •ÏŠ·‘Ò‚¿
-	inotify_v1.2.0.krydoc              / .txt : tmx •ÏŠ·‘Ò‚¿
+U:	sugar.html
 
 
-ˆÈ‰º–¢®—
+
+ä»¥ä¸‹æœªæ•´ç†
 ==========
 
-–¢Š® (ƒ‰ƒCƒuƒ‰ƒŠ)
+æœªå®Œ (ãƒ©ã‚¤ãƒ–ãƒ©ãƒª)
 --------------------[0 / 58]
 algorithm
 asyncdispatch
@@ -255,11 +256,11 @@ uri
 
 Updated (Mixed)
 ---------------
-1.0.6 ¨ 1.2.0 ˆÚs‘ÎÛƒtƒ@ƒCƒ‹ : 0 / 6
-‘ÎÛƒo[ƒWƒ‡ƒ“   : Nim 1.2.0
+1.0.6 â†’ 1.2.0 ç§»è¡Œå¯¾è±¡ãƒ•ã‚¡ã‚¤ãƒ« : 1 / 1
+å¯¾è±¡ãƒãƒ¼ã‚¸ãƒ§ãƒ³   : Nim 1.2.0
 
 
-V‹K’Ç‰Á–¢Š®—¹ (0 / 5):
+æ–°è¦è¿½åŠ æœªå®Œäº† (0 / 5):
 	asyncmacro.html
 	atomics.html
 	drnim.html
@@ -267,23 +268,23 @@ Updated (Mixed)
 	kqueue.html
 
 
-Œ´’˜‚Ì•s‹ï‡C³ó‹µ 
+åŸè‘—ã®ä¸å…·åˆä¿®æ­£çŠ¶æ³ 
 --------------------
 
 epoll.html
-	proc epoll_ctl ‚É‚¨‚¢‚Äu1 in case of error ( the "errno" variable will contain thev‚Ìƒ}[ƒJ[‚ªuspecific error code ) v‚Ü‚Å“Í‚¢‚Ä‚¨‚ç‚¸A‰üs‚³‚ê‚Ä‚¢‚Ü‚·B
-	‚¨‚Ü‚¯‚É That ‚Ì‚Ü‚¦‚Ìƒtƒ‹ƒXƒgƒbƒv‚à–Y‚ê‚Ä‚¢‚é‚Ì‚ÅA‚±‚Ì‚Ü‚Ü‹@ŠB–|–ó‚É‚©‚¯‚é‚ÆAŒë–ó‚ÌŒ´ˆö‚Æ‚È‚è‚Ü‚·B
+	proc epoll_ctl ã«ãŠã„ã¦ã€Œ1 in case of error ( the "errno" variable will contain theã€ã®ãƒãƒ¼ã‚«ãƒ¼ãŒã€Œspecific error code ) ã€ã¾ã§å±Šã„ã¦ãŠã‚‰ãšã€æ”¹è¡Œã•ã‚Œã¦ã„ã¾ã™ã€‚
+	ãŠã¾ã‘ã« That ã®ã¾ãˆã®ãƒ•ãƒ«ã‚¹ãƒˆãƒƒãƒ—ã‚‚å¿˜ã‚Œã¦ã„ã‚‹ã®ã§ã€ã“ã®ã¾ã¾æ©Ÿæ¢°ç¿»è¨³ã«ã‹ã‘ã‚‹ã¨ã€èª¤è¨³ã®åŸå› ã¨ãªã‚Šã¾ã™ã€‚
 
 osseps.html
-	•s‹ï‡‚É‚æ‚èo—Í‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB‚»‚Ì‚½‚ß pathnorm.html ‘¤‚Å osseps.html ‚ğQÆ‚µ‚Ä‚àƒŠƒ“ƒNØ‚ê‚Æ‚È‚è‚Ü‚·B
-	‚±‚ê‚É‚Â‚¢‚Ä‚Íèì‹Æ‚Åì‚é‚µ‚©‚È‚¢‚æ‚¤‚Å‚·B
+	ä¸å…·åˆã«ã‚ˆã‚Šå‡ºåŠ›ã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚ãã®ãŸã‚ pathnorm.html å´ã§ osseps.html ã‚’å‚ç…§ã—ã¦ã‚‚ãƒªãƒ³ã‚¯åˆ‡ã‚Œã¨ãªã‚Šã¾ã™ã€‚
+	ã“ã‚Œã«ã¤ã„ã¦ã¯æ‰‹ä½œæ¥­ã§ä½œã‚‹ã—ã‹ãªã„ã‚ˆã†ã§ã™ã€‚
 
 switch_memory.html
-	³‚µ‚­ƒŒƒ“ƒ_ƒŠƒ“ƒO‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB‰Â”\‚ÈŒÀ‚èèì‹Æ‚ÅC³‚µ‚Ä‚¢‚Ü‚· (‚½‚¾‚µA’è”‚ª”²‚¯‚Ä‚¢‚é‚©‚à‚µ‚ê‚Ü‚¹‚ñ)B
+	æ­£ã—ããƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°ã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚å¯èƒ½ãªé™ã‚Šæ‰‹ä½œæ¥­ã§ä¿®æ­£ã—ã¦ã„ã¾ã™ (ãŸã ã—ã€å®šæ•°ãŒæŠœã‘ã¦ã„ã‚‹ã‹ã‚‚ã—ã‚Œã¾ã›ã‚“)ã€‚
 
 
 wrapnils.html
-	Unstable API. ‚Ì‘O‚É‰üs‚ª‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB
+	Unstable API. ã®å‰ã«æ”¹è¡ŒãŒã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚
 
 
 

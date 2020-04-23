@@ -127,15 +127,15 @@ function main() {
     title="OSErrorCode = distinct int32"><wbr />OSError<wbr />Code<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#FilePermission"
     title="FilePermission = enum
-  fpUserExec,                 ## execute access for the file owner
-  fpUserWrite,                ## write access for the file owner
-  fpUserRead,                 ## read access for the file owner
-  fpGroupExec,                ## execute access for the group
-  fpGroupWrite,               ## write access for the group
-  fpGroupRead,                ## read access for the group
-  fpOthersExec,               ## execute access for others
-  fpOthersWrite,              ## write access for others
-  fpOthersRead                ## read access for others"><wbr />File<wbr />Permission<span class="attachedType"></span></a></li>
+  fpUserExec,                 ## ファイル所有者の実行アクセス権
+  fpUserWrite,                ## ファイル所有者の書き込みアクセス権
+  fpUserRead,                 ## ファイル所有者の読み取りアクセス権
+  fpGroupExec,                ## グループの実行アクセス権
+  fpGroupWrite,               ## グループの書き込みアクセス権
+  fpGroupRead,                ## グループの読み取りアクセス権
+  fpOthersExec,               ## 一般ユーザの実行アクセス権
+  fpOthersWrite,              ## 一般ユーザの書き込みアクセス権
+  fpOthersRead                ## 一般ユーザの読み取りアクセス権"><wbr />File<wbr />Permission<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#PathComponent"
     title="PathComponent = enum
   pcFile,                     ## ファイルの参照パス
@@ -440,9 +440,9 @@ function main() {
 
 <span class="Identifier">assert</span> <span class="Identifier">myFile</span><span class="Operator">.</span><span class="Identifier">changeFileExt</span><span class="Punctuation">(</span><span class="StringLit">"c"</span><span class="Punctuation">)</span> <span class="Operator">==</span> <span class="StringLit">"/path/to/my/file.c"</span></pre><blockquote><p><strong>関連:</strong><ul class="simple"><li><a class="reference external" href="osproc.html">osproc module</a> for process communication beyond <a class="reference external" href="#execShellCmd,string">execShellCmd proc</a></li>
 <li><a class="reference external" href="parseopt.html">parseopt module</a> for command-line parser beyond <a class="reference external" href="#parseCmdLine,string">parseCmdLine proc</a></li>
-<li><a class="reference external" href="uri.html">uri module</a></li>
-<li><a class="reference external" href="distros.html">distros module</a></li>
-<li><a class="reference external" href="dynlib.html">dynlib module</a></li>
+<li><a class="reference external" href="uri.html">uri モジュール</a></li>
+<li><a class="reference external" href="distros.html">distros モジュール</a></li>
+<li><a class="reference external" href="dynlib.html">dynlib モジュール</a></li>
 <li><a class="reference external" href="streams.html">streams モジュール</a></li>
 </ul>
 </p></blockquote>
@@ -459,7 +459,7 @@ function main() {
 <dt><pre><a href="os.html#ReadEnvEffect"><span class="Identifier">ReadEnvEffect</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="system.html#ReadIOEffect"><span class="Identifier">ReadIOEffect</span></a></pre></dt>
 <dd>
 
-Effect that denotes a read from an environment variable. &nbsp;&nbsp;<a
+環境変数の読み取りを意味するエフェクト。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/os.nim#L85"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/os.nim#L85" class="link-seesrc" target="_blank" >編集</a>
 
@@ -468,7 +468,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="os.html#WriteEnvEffect"><span class="Identifier">WriteEnvEffect</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="system.html#WriteIOEffect"><span class="Identifier">WriteIOEffect</span></a></pre></dt>
 <dd>
 
-Effect that denotes a write to an environment variable. &nbsp;&nbsp;<a
+環境変数の書き込みを意味するエフェクト。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/os.nim#L87"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/os.nim#L87" class="link-seesrc" target="_blank" >編集</a>
 
@@ -477,7 +477,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="os.html#ReadDirEffect"><span class="Identifier">ReadDirEffect</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="system.html#ReadIOEffect"><span class="Identifier">ReadIOEffect</span></a></pre></dt>
 <dd>
 
-Effect that denotes a read operation from the directory structure. &nbsp;&nbsp;<a
+ディレクトリ構造の読み取り操作を意味するエフェクト。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/os.nim#L90"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/os.nim#L90" class="link-seesrc" target="_blank" >編集</a>
 
@@ -486,7 +486,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="os.html#WriteDirEffect"><span class="Identifier">WriteDirEffect</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="system.html#WriteIOEffect"><span class="Identifier">WriteIOEffect</span></a></pre></dt>
 <dd>
 
-Effect that denotes a write operation to the directory structure. &nbsp;&nbsp;<a
+ディレクトリ構造の書き込み操作を意味するエフェクト。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/os.nim#L93"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/os.nim#L93" class="link-seesrc" target="_blank" >編集</a>
 
@@ -495,29 +495,29 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><a href="os.html#OSErrorCode"><span class="Identifier">OSErrorCode</span></a> <span class="Other">=</span> <span class="Keyword">distinct</span> <a href="system.html#int32"><span class="Identifier">int32</span></a></pre></dt>
 <dd>
 
-Specifies an OS Error Code. &nbsp;&nbsp;<a
+オペレーティング・システムのエラーコード指定。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/os.nim#L97"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/os.nim#L97" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="FilePermission"></a>
 <dt><pre><a href="os.html#FilePermission"><span class="Identifier">FilePermission</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
-  <span class="Identifier">fpUserExec</span><span class="Other">,</span>                 <span class="Comment">## execute access for the file owner</span>
-  <span class="Identifier">fpUserWrite</span><span class="Other">,</span>                <span class="Comment">## write access for the file owner</span>
-  <span class="Identifier">fpUserRead</span><span class="Other">,</span>                 <span class="Comment">## read access for the file owner</span>
-  <span class="Identifier">fpGroupExec</span><span class="Other">,</span>                <span class="Comment">## execute access for the group</span>
-  <span class="Identifier">fpGroupWrite</span><span class="Other">,</span>               <span class="Comment">## write access for the group</span>
-  <span class="Identifier">fpGroupRead</span><span class="Other">,</span>                <span class="Comment">## read access for the group</span>
-  <span class="Identifier">fpOthersExec</span><span class="Other">,</span>               <span class="Comment">## execute access for others</span>
-  <span class="Identifier">fpOthersWrite</span><span class="Other">,</span>              <span class="Comment">## write access for others</span>
-  <span class="Identifier">fpOthersRead</span>                <span class="Comment">## read access for others</span></pre></dt>
+  <span class="Identifier">fpUserExec</span><span class="Other">,</span>                 <span class="Comment">## ファイル所有者の実行アクセス権</span>
+  <span class="Identifier">fpUserWrite</span><span class="Other">,</span>                <span class="Comment">## ファイル所有者の書き込みアクセス権</span>
+  <span class="Identifier">fpUserRead</span><span class="Other">,</span>                 <span class="Comment">## ファイル所有者の読み取りアクセス権</span>
+  <span class="Identifier">fpGroupExec</span><span class="Other">,</span>                <span class="Comment">## グループの実行アクセス権</span>
+  <span class="Identifier">fpGroupWrite</span><span class="Other">,</span>               <span class="Comment">## グループの書き込みアクセス権</span>
+  <span class="Identifier">fpGroupRead</span><span class="Other">,</span>                <span class="Comment">## グループの読み取りアクセス権</span>
+  <span class="Identifier">fpOthersExec</span><span class="Other">,</span>               <span class="Comment">## 一般ユーザの実行アクセス権</span>
+  <span class="Identifier">fpOthersWrite</span><span class="Other">,</span>              <span class="Comment">## 一般ユーザの書き込みアクセス権</span>
+  <span class="Identifier">fpOthersRead</span>                <span class="Comment">## 一般ユーザの読み取りアクセス権</span></pre></dt>
 <dd>
 
-<p>File access permission, modelled after UNIX.</p>
+<p>UNIX を手本にしたファイルアクセス権限。</p>
 <p>関連:</p>
 <ul class="simple"><li><a class="reference external" href="#getFilePermissions,string">getFilePermissions</a></li>
 <li><a class="reference external" href="#setFilePermissions,string,set[FilePermission]">setFilePermissions</a></li>
-<li><a class="reference external" href="#FileInfo">FileInfo object</a></li>
+<li><a class="reference external" href="#FileInfo">FileInfo オブジェクト</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -535,8 +535,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>パス構成の指定に使う列挙型です。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#walkDirRec.i,string">walkDirRec iterator</a></li>
-<li><a class="reference external" href="#FileInfo">FileInfo object</a></li>
+<ul class="simple"><li><a class="reference external" href="#walkDirRec.i,string">walkDirRec イテレータ</a></li>
+<li><a class="reference external" href="#FileInfo">FileInfo オブジェクト</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -579,9 +579,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Contains information associated with a file object.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#getFileInfo,FileHandle">getFileInfo(handle) proc</a></li>
-<li><a class="reference external" href="#getFileInfo,File">getFileInfo(file) proc</a></li>
-<li><a class="reference external" href="#getFileInfo,string">getFileInfo(path) proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#getFileInfo,FileHandle">getFileInfo(handle) プロシージャ</a></li>
+<li><a class="reference external" href="#getFileInfo,File">getFileInfo(file) プロシージャ</a></li>
+<li><a class="reference external" href="#getFileInfo,string">getFileInfo(path) プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -773,11 +773,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Joins two directory names to one.</p>
 <p>returns normalized path concatenation of <tt class="docutils literal"><span class="pre">head</span></tt> and <tt class="docutils literal"><span class="pre">tail</span></tt>, preserving whether or not <tt class="docutils literal"><span class="pre">tail</span></tt> has a trailing slash (or, if tail if empty, whether head has one).</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#joinPath,varargs[string]">joinPath(varargs) proc</a></li>
-<li><a class="reference external" href="#/,string,string">/ proc</a></li>
-<li><a class="reference external" href="#splitPath,string">splitPath proc</a></li>
-<li><a class="reference external" href="uri.html#combine,Uri,Uri">uri.combine proc</a></li>
-<li><a class="reference external" href="uri.html#/,Uri,string">uri./ proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#joinPath,varargs[string]">joinPath(varargs) プロシージャ</a></li>
+<li><a class="reference external" href="#/,string,string">/ プロシージャ</a></li>
+<li><a class="reference external" href="#splitPath,string">splitPath プロシージャ</a></li>
+<li><a class="reference external" href="uri.html#combine,Uri,Uri">uri.combine プロシージャ</a></li>
+<li><a class="reference external" href="uri.html#/,Uri,string">uri./ プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -804,10 +804,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>The same as <a class="reference external" href="#joinPath,string,string">joinPath(head, tail) proc</a>, but works with any number of directory parts.</p>
 <p>You need to pass at least one element or the proc will assert in debug builds and crash on release builds.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#joinPath,string,string">joinPath(head, tail) proc</a></li>
-<li><a class="reference external" href="#/,string,string">/ proc</a></li>
-<li><a class="reference external" href="#/../,string,string">/../ proc</a></li>
-<li><a class="reference external" href="#splitPath,string">splitPath proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#joinPath,string,string">joinPath(head, tail) プロシージャ</a></li>
+<li><a class="reference external" href="#/,string,string">/ プロシージャ</a></li>
+<li><a class="reference external" href="#/../,string,string">/../ プロシージャ</a></li>
+<li><a class="reference external" href="#splitPath,string">splitPath プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -826,12 +826,12 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>The same as <a class="reference external" href="#joinPath,string,string">joinPath(head, tail) proc</a>.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#/../,string,string">/../ proc</a></li>
-<li><a class="reference external" href="#joinPath,string,string">joinPath(head, tail) proc</a></li>
-<li><a class="reference external" href="#joinPath,varargs[string]">joinPath(varargs) proc</a></li>
-<li><a class="reference external" href="#splitPath,string">splitPath proc</a></li>
-<li><a class="reference external" href="uri.html#combine,Uri,Uri">uri.combine proc</a></li>
-<li><a class="reference external" href="uri.html#/,Uri,string">uri./ proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#/../,string,string">/../ プロシージャ</a></li>
+<li><a class="reference external" href="#joinPath,string,string">joinPath(head, tail) プロシージャ</a></li>
+<li><a class="reference external" href="#joinPath,varargs[string]">joinPath(varargs) プロシージャ</a></li>
+<li><a class="reference external" href="#splitPath,string">splitPath プロシージャ</a></li>
+<li><a class="reference external" href="uri.html#combine,Uri,Uri">uri.combine プロシージャ</a></li>
+<li><a class="reference external" href="uri.html#/,Uri,string">uri./ プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -853,11 +853,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Splits a directory into <tt class="docutils literal"><span class="pre">(head, tail)</span></tt> tuple, so that <tt class="docutils literal"><span class="pre">head / tail == path</span></tt> (except for edge cases like "/usr").</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#joinPath,string,string">joinPath(head, tail) proc</a></li>
-<li><a class="reference external" href="#joinPath,varargs[string]">joinPath(varargs) proc</a></li>
-<li><a class="reference external" href="#/,string,string">/ proc</a></li>
-<li><a class="reference external" href="#/../,string,string">/../ proc</a></li>
-<li><a class="reference external" href="#relativePath,string,string">relativePath proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#joinPath,string,string">joinPath(head, tail) プロシージャ</a></li>
+<li><a class="reference external" href="#joinPath,varargs[string]">joinPath(varargs) プロシージャ</a></li>
+<li><a class="reference external" href="#/,string,string">/ プロシージャ</a></li>
+<li><a class="reference external" href="#/../,string,string">/../ プロシージャ</a></li>
+<li><a class="reference external" href="#relativePath,string,string">relativePath プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -904,9 +904,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>The <tt class="docutils literal"><span class="pre">sep</span></tt> (default: <a class="reference external" href="#DirSep">DirSep</a>) is used for the path normalizations, this can be useful to ensure the relative path only contains <tt class="docutils literal"><span class="pre">'/'</span></tt> so that it can be used for URL constructions.</p>
 <p>On windows, if a root of <tt class="docutils literal"><span class="pre">path</span></tt> and a root of <tt class="docutils literal"><span class="pre">base</span></tt> are different, returns <tt class="docutils literal"><span class="pre">path</span></tt> as is because it is impossible to make a relative path. That means an absolute path can be returned.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#splitPath,string">splitPath proc</a></li>
-<li><a class="reference external" href="#parentDir,string">parentDir proc</a></li>
-<li><a class="reference external" href="#tailDir,string">tailDir proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#splitPath,string">splitPath プロシージャ</a></li>
+<li><a class="reference external" href="#parentDir,string">parentDir プロシージャ</a></li>
+<li><a class="reference external" href="#tailDir,string">tailDir プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -950,10 +950,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Returns the parent directory of <tt class="docutils literal"><span class="pre">path</span></tt>.</p>
 <p>This is similar to <tt class="docutils literal"><span class="pre">splitPath(path).head</span></tt> when <tt class="docutils literal"><span class="pre">path</span></tt> doesn't end in a dir separator, but also takes care of path normalizations. The remainder can be obtained with <a class="reference external" href="#lastPathPart,string">lastPathPart(path) proc</a>.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#relativePath,string,string">relativePath proc</a></li>
-<li><a class="reference external" href="#splitPath,string">splitPath proc</a></li>
-<li><a class="reference external" href="#tailDir,string">tailDir proc</a></li>
-<li><a class="reference external" href="#parentDirs.i,string">parentDirs iterator</a></li>
+<ul class="simple"><li><a class="reference external" href="#relativePath,string,string">relativePath プロシージャ</a></li>
+<li><a class="reference external" href="#splitPath,string">splitPath プロシージャ</a></li>
+<li><a class="reference external" href="#tailDir,string">tailDir プロシージャ</a></li>
+<li><a class="reference external" href="#parentDirs.i,string">parentDirs イテレータ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -978,9 +978,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Returns the tail part of <tt class="docutils literal"><span class="pre">path</span></tt>.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#relativePath,string,string">relativePath proc</a></li>
-<li><a class="reference external" href="#splitPath,string">splitPath proc</a></li>
-<li><a class="reference external" href="#parentDir,string">parentDir proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#relativePath,string,string">relativePath プロシージャ</a></li>
+<li><a class="reference external" href="#splitPath,string">splitPath プロシージャ</a></li>
+<li><a class="reference external" href="#parentDir,string">parentDir プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1023,8 +1023,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>The same as <tt class="docutils literal"><span class="pre">parentDir(head) / tail</span></tt>, unless there is no parent directory. Then <tt class="docutils literal"><span class="pre">head / tail</span></tt> is performed instead.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#/,string,string">/ proc</a></li>
-<li><a class="reference external" href="#parentDir,string">parentDir proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#/,string,string">/ プロシージャ</a></li>
+<li><a class="reference external" href="#parentDir,string">parentDir プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1042,11 +1042,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Returns index of the <tt class="docutils literal"><span class="pre">'.'</span></tt> char in <tt class="docutils literal"><span class="pre">path</span></tt> if it signifies the beginning of extension. Returns -1 otherwise.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#splitFile,string">splitFile proc</a></li>
-<li><a class="reference external" href="#extractFilename,string">extractFilename proc</a></li>
-<li><a class="reference external" href="#lastPathPart,string">lastPathPart proc</a></li>
-<li><a class="reference external" href="#changeFileExt,string,string">changeFileExt proc</a></li>
-<li><a class="reference external" href="#addFileExt,string,string">addFileExt proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#splitFile,string">splitFile プロシージャ</a></li>
+<li><a class="reference external" href="#extractFilename,string">extractFilename プロシージャ</a></li>
+<li><a class="reference external" href="#lastPathPart,string">lastPathPart プロシージャ</a></li>
+<li><a class="reference external" href="#changeFileExt,string,string">changeFileExt プロシージャ</a></li>
+<li><a class="reference external" href="#addFileExt,string,string">addFileExt プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1068,11 +1068,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p><tt class="docutils literal"><span class="pre">dir</span></tt> does not end in <a class="reference external" href="#DirSep">DirSep</a> unless it's <tt class="docutils literal"><span class="pre">/</span></tt>. <tt class="docutils literal"><span class="pre">extension</span></tt> includes the leading dot.</p>
 <p>If <tt class="docutils literal"><span class="pre">path</span></tt> has no extension, <tt class="docutils literal"><span class="pre">ext</span></tt> is the empty string. If <tt class="docutils literal"><span class="pre">path</span></tt> has no directory component, <tt class="docutils literal"><span class="pre">dir</span></tt> is the empty string. If <tt class="docutils literal"><span class="pre">path</span></tt> has no filename component, <tt class="docutils literal"><span class="pre">name</span></tt> and <tt class="docutils literal"><span class="pre">ext</span></tt> are empty strings.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#searchExtPos,string">searchExtPos proc</a></li>
-<li><a class="reference external" href="#extractFilename,string">extractFilename proc</a></li>
-<li><a class="reference external" href="#lastPathPart,string">lastPathPart proc</a></li>
-<li><a class="reference external" href="#changeFileExt,string,string">changeFileExt proc</a></li>
-<li><a class="reference external" href="#addFileExt,string,string">addFileExt proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#searchExtPos,string">searchExtPos プロシージャ</a></li>
+<li><a class="reference external" href="#extractFilename,string">extractFilename プロシージャ</a></li>
+<li><a class="reference external" href="#lastPathPart,string">lastPathPart プロシージャ</a></li>
+<li><a class="reference external" href="#changeFileExt,string,string">changeFileExt プロシージャ</a></li>
+<li><a class="reference external" href="#addFileExt,string,string">addFileExt プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1105,11 +1105,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Extracts the filename of a given <tt class="docutils literal"><span class="pre">path</span></tt>.</p>
 <p>This is the same as <tt class="docutils literal"><span class="pre">name &amp; ext</span></tt> from <a class="reference external" href="#splitFile,string">splitFile(path) proc</a>.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#searchExtPos,string">searchExtPos proc</a></li>
-<li><a class="reference external" href="#splitFile,string">splitFile proc</a></li>
-<li><a class="reference external" href="#lastPathPart,string">lastPathPart proc</a></li>
-<li><a class="reference external" href="#changeFileExt,string,string">changeFileExt proc</a></li>
-<li><a class="reference external" href="#addFileExt,string,string">addFileExt proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#searchExtPos,string">searchExtPos プロシージャ</a></li>
+<li><a class="reference external" href="#splitFile,string">splitFile プロシージャ</a></li>
+<li><a class="reference external" href="#lastPathPart,string">lastPathPart プロシージャ</a></li>
+<li><a class="reference external" href="#changeFileExt,string,string">changeFileExt プロシージャ</a></li>
+<li><a class="reference external" href="#addFileExt,string,string">addFileExt プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1128,11 +1128,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Like <a class="reference external" href="#extractFilename,string">extractFilename proc</a>, but ignores trailing dir separator; aka: <span id="basename_1">baseName</span> in some other languages.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#searchExtPos,string">searchExtPos proc</a></li>
-<li><a class="reference external" href="#splitFile,string">splitFile proc</a></li>
-<li><a class="reference external" href="#extractFilename,string">extractFilename proc</a></li>
-<li><a class="reference external" href="#changeFileExt,string,string">changeFileExt proc</a></li>
-<li><a class="reference external" href="#addFileExt,string,string">addFileExt proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#searchExtPos,string">searchExtPos プロシージャ</a></li>
+<li><a class="reference external" href="#splitFile,string">splitFile プロシージャ</a></li>
+<li><a class="reference external" href="#extractFilename,string">extractFilename プロシージャ</a></li>
+<li><a class="reference external" href="#changeFileExt,string,string">changeFileExt プロシージャ</a></li>
+<li><a class="reference external" href="#addFileExt,string,string">addFileExt プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1152,11 +1152,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>If the <tt class="docutils literal"><span class="pre">filename</span></tt> has no extension, <tt class="docutils literal"><span class="pre">ext</span></tt> will be added. If <tt class="docutils literal"><span class="pre">ext</span></tt> == "" then any extension is removed.</p>
 <p><tt class="docutils literal"><span class="pre">Ext</span></tt> should be given without the leading <tt class="docutils literal"><span class="pre">'.'</span></tt>, because some filesystems may use a different character. (Although I know of none such beast.)</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#searchExtPos,string">searchExtPos proc</a></li>
-<li><a class="reference external" href="#splitFile,string">splitFile proc</a></li>
-<li><a class="reference external" href="#extractFilename,string">extractFilename proc</a></li>
-<li><a class="reference external" href="#lastPathPart,string">lastPathPart proc</a></li>
-<li><a class="reference external" href="#addFileExt,string,string">addFileExt proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#searchExtPos,string">searchExtPos プロシージャ</a></li>
+<li><a class="reference external" href="#splitFile,string">splitFile プロシージャ</a></li>
+<li><a class="reference external" href="#extractFilename,string">extractFilename プロシージャ</a></li>
+<li><a class="reference external" href="#lastPathPart,string">lastPathPart プロシージャ</a></li>
+<li><a class="reference external" href="#addFileExt,string,string">addFileExt プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1176,11 +1176,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Adds the file extension <tt class="docutils literal"><span class="pre">ext</span></tt> to <tt class="docutils literal"><span class="pre">filename</span></tt>, unless <tt class="docutils literal"><span class="pre">filename</span></tt> already has an extension.</p>
 <p><tt class="docutils literal"><span class="pre">Ext</span></tt> should be given without the leading <tt class="docutils literal"><span class="pre">'.'</span></tt>, because some filesystems may use a different character. (Although I know of none such beast.)</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#searchExtPos,string">searchExtPos proc</a></li>
-<li><a class="reference external" href="#splitFile,string">splitFile proc</a></li>
-<li><a class="reference external" href="#extractFilename,string">extractFilename proc</a></li>
-<li><a class="reference external" href="#lastPathPart,string">lastPathPart proc</a></li>
-<li><a class="reference external" href="#changeFileExt,string,string">changeFileExt proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#searchExtPos,string">searchExtPos プロシージャ</a></li>
+<li><a class="reference external" href="#splitFile,string">splitFile プロシージャ</a></li>
+<li><a class="reference external" href="#extractFilename,string">extractFilename プロシージャ</a></li>
+<li><a class="reference external" href="#lastPathPart,string">lastPathPart プロシージャ</a></li>
+<li><a class="reference external" href="#changeFileExt,string,string">changeFileExt プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1199,7 +1199,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Compares two paths.</p>
 <p>On a case-sensitive filesystem this is done case-sensitively otherwise case-insensitively. 返値:</p>
-<p>0 iff pathA == pathB<br />&lt; 0 iff pathA &lt; pathB<br />&gt; 0 iff pathA &gt; pathB<br /></p>
+<p>もし pathA == pathB ならば 0<br />もし pathA &lt; pathB ならば 0 以下<br />もし pathA &gt; pathB ならば 0 以上<br /></p>
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">when</span> <span class="Identifier">defined</span><span class="Other">(</span><span class="Identifier">macosx</span><span class="Other">)</span><span class="Other">:</span>
   <span class="Identifier">assert</span> <span class="Identifier">cmpPaths</span><span class="Other">(</span><span class="StringLit">"foo"</span><span class="Other">,</span> <span class="StringLit">"Foo"</span><span class="Other">)</span> <span class="Operator">==</span> <span class="DecNumber">0</span>
@@ -1253,8 +1253,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>If conversion fails, or <tt class="docutils literal"><span class="pre">errorCode</span></tt> is <tt class="docutils literal"><span class="pre">0</span></tt> then <tt class="docutils literal"><span class="pre">""</span></tt> will be returned.</p>
 <p>On Windows, the <tt class="docutils literal"><span class="pre">-d:useWinAnsi</span></tt> compilation flag can be used to make this procedure use the non-unicode Win API calls to retrieve the message.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#raiseOSError,OSErrorCode,string">raiseOSError proc</a></li>
-<li><a class="reference external" href="#osLastError">osLastError proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#raiseOSError,OSErrorCode,string">raiseOSError プロシージャ</a></li>
+<li><a class="reference external" href="#osLastError">osLastError プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1277,8 +1277,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>The error code can be retrieved using the <a class="reference external" href="#osLastError">osLastError proc</a>.</p>
 <p>If the error code is <tt class="docutils literal"><span class="pre">0</span></tt> or an error message could not be retrieved, the message <tt class="docutils literal"><span class="pre">unknown OS error</span></tt> will be used.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#osErrorMsg,OSErrorCode">osErrorMsg proc</a></li>
-<li><a class="reference external" href="#osLastError">osLastError proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#osErrorMsg,OSErrorCode">osErrorMsg プロシージャ</a></li>
+<li><a class="reference external" href="#osLastError">osLastError プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1307,8 +1307,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>This procedure is useful in the event when an OS call fails. In that case this procedure will return the error code describing the reason why the OS call failed. The <tt class="docutils literal"><span class="pre">OSErrorMsg</span></tt> procedure can then be used to convert this code into a string.</p>
 <p><strong>Warning</strong>: The behaviour of this procedure varies between Windows and POSIX systems. On Windows some OS calls can reset the error code to <tt class="docutils literal"><span class="pre">0</span></tt> causing this procedure to return <tt class="docutils literal"><span class="pre">0</span></tt>. It is therefore advised to call this procedure immediately after an OS call fails. On POSIX systems this is not a problem.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#osErrorMsg,OSErrorCode">osErrorMsg proc</a></li>
-<li><a class="reference external" href="#raiseOSError,OSErrorCode,string">raiseOSError proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#osErrorMsg,OSErrorCode">osErrorMsg プロシージャ</a></li>
+<li><a class="reference external" href="#raiseOSError,OSErrorCode,string">raiseOSError プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1323,10 +1323,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Returns the value of the <span id="environment-variable_1">environment variable</span> named <tt class="docutils literal"><span class="pre">key</span></tt>.</p>
 <p>If the variable does not exist, <tt class="docutils literal"><span class="pre">""</span></tt> is returned. To distinguish whether a variable exists or it's value is just <tt class="docutils literal"><span class="pre">""</span></tt>, call <a class="reference external" href="#existsEnv,string">existsEnv(key) proc</a>.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#existsEnv,string">existsEnv proc</a></li>
-<li><a class="reference external" href="#putEnv,string,string">putEnv proc</a></li>
-<li><a class="reference external" href="#delEnv,string">delEnv proc</a></li>
-<li><a class="reference external" href="#envPairs.i">envPairs iterator</a></li>
+<ul class="simple"><li><a class="reference external" href="#existsEnv,string">existsEnv プロシージャ</a></li>
+<li><a class="reference external" href="#putEnv,string,string">putEnv プロシージャ</a></li>
+<li><a class="reference external" href="#delEnv,string">delEnv プロシージャ</a></li>
+<li><a class="reference external" href="#envPairs.i">envPairs イテレータ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1343,10 +1343,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Checks whether the environment variable named <tt class="docutils literal"><span class="pre">key</span></tt> exists. Returns true if it exists, false otherwise.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#getEnv,string,string">getEnv proc</a></li>
-<li><a class="reference external" href="#putEnv,string,string">putEnv proc</a></li>
-<li><a class="reference external" href="#delEnv,string">delEnv proc</a></li>
-<li><a class="reference external" href="#envPairs.i">envPairs iterator</a></li>
+<ul class="simple"><li><a class="reference external" href="#getEnv,string,string">getEnv プロシージャ</a></li>
+<li><a class="reference external" href="#putEnv,string,string">putEnv プロシージャ</a></li>
+<li><a class="reference external" href="#delEnv,string">delEnv プロシージャ</a></li>
+<li><a class="reference external" href="#envPairs.i">envPairs イテレータ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1362,10 +1362,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Sets the value of the <span id="environment-variable_2">environment variable</span> named <tt class="docutils literal"><span class="pre">key</span></tt> to <tt class="docutils literal"><span class="pre">val</span></tt>. If an error occurs, <tt class="docutils literal"><span class="pre">OSError</span></tt> is raised.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#getEnv,string,string">getEnv proc</a></li>
-<li><a class="reference external" href="#existsEnv,string">existsEnv proc</a></li>
-<li><a class="reference external" href="#delEnv,string">delEnv proc</a></li>
-<li><a class="reference external" href="#envPairs.i">envPairs iterator</a></li>
+<ul class="simple"><li><a class="reference external" href="#getEnv,string,string">getEnv プロシージャ</a></li>
+<li><a class="reference external" href="#existsEnv,string">existsEnv プロシージャ</a></li>
+<li><a class="reference external" href="#delEnv,string">delEnv プロシージャ</a></li>
+<li><a class="reference external" href="#envPairs.i">envPairs イテレータ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1379,10 +1379,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Deletes the <span id="environment-variable_3">environment variable</span> named <tt class="docutils literal"><span class="pre">key</span></tt>. If an error occurs, <tt class="docutils literal"><span class="pre">OSError</span></tt> is raised.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#getEnv,string,string">getEnv proc</a></li>
-<li><a class="reference external" href="#existsEnv,string">existsEnv proc</a></li>
-<li><a class="reference external" href="#putEnv,string,string">putEnv proc</a></li>
-<li><a class="reference external" href="#envPairs.i">envPairs iterator</a></li>
+<ul class="simple"><li><a class="reference external" href="#getEnv,string,string">getEnv プロシージャ</a></li>
+<li><a class="reference external" href="#existsEnv,string">existsEnv プロシージャ</a></li>
+<li><a class="reference external" href="#putEnv,string,string">putEnv プロシージャ</a></li>
+<li><a class="reference external" href="#envPairs.i">envPairs イテレータ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1398,11 +1398,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Returns the home directory of the current user.</p>
 <p>This proc is wrapped by the <a class="reference external" href="#expandTilde,string">expandTilde proc</a> for the convenience of processing paths coming from user configuration files.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#getConfigDir">getConfigDir proc</a></li>
-<li><a class="reference external" href="#getTempDir">getTempDir proc</a></li>
-<li><a class="reference external" href="#expandTilde,string">expandTilde proc</a></li>
-<li><a class="reference external" href="#getCurrentDir">getCurrentDir proc</a></li>
-<li><a class="reference external" href="#setCurrentDir,string">setCurrentDir proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#getConfigDir">getConfigDir プロシージャ</a></li>
+<li><a class="reference external" href="#getTempDir">getTempDir プロシージャ</a></li>
+<li><a class="reference external" href="#expandTilde,string">expandTilde プロシージャ</a></li>
+<li><a class="reference external" href="#getCurrentDir">getCurrentDir プロシージャ</a></li>
+<li><a class="reference external" href="#setCurrentDir,string">setCurrentDir プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1421,11 +1421,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>On non-Windows OSs, this proc conforms to the XDG Base Directory spec. Thus, this proc returns the value of the <tt class="docutils literal"><span class="pre">XDG_CONFIG_HOME</span></tt> environment variable if it is set, otherwise it returns the default configuration directory ("~/.config/").</p>
 <p>An OS-dependent trailing slash is always present at the end of the returned string: <tt class="docutils literal"><span class="pre">\</span></tt> on Windows and <tt class="docutils literal"><span class="pre">/</span></tt> on all other OSs.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#getHomeDir">getHomeDir proc</a></li>
-<li><a class="reference external" href="#getTempDir">getTempDir proc</a></li>
-<li><a class="reference external" href="#expandTilde,string">expandTilde proc</a></li>
-<li><a class="reference external" href="#getCurrentDir">getCurrentDir proc</a></li>
-<li><a class="reference external" href="#setCurrentDir,string">setCurrentDir proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#getHomeDir">getHomeDir プロシージャ</a></li>
+<li><a class="reference external" href="#getTempDir">getTempDir プロシージャ</a></li>
+<li><a class="reference external" href="#expandTilde,string">expandTilde プロシージャ</a></li>
+<li><a class="reference external" href="#getCurrentDir">getCurrentDir プロシージャ</a></li>
+<li><a class="reference external" href="#setCurrentDir,string">setCurrentDir プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1441,11 +1441,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Returns the temporary directory of the current user for applications to save temporary files in.</p>
 <p><strong>Please do not use this</strong>: On Android, it currently returns <tt class="docutils literal"><span class="pre">getHomeDir()</span></tt>, and on other Unix based systems it can cause security problems too. That said, you can override this implementation by adding <tt class="docutils literal"><span class="pre">-d:tempDir=mytempname</span></tt> to your compiler invocation.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#getHomeDir">getHomeDir proc</a></li>
-<li><a class="reference external" href="#getConfigDir">getConfigDir proc</a></li>
-<li><a class="reference external" href="#expandTilde,string">expandTilde proc</a></li>
-<li><a class="reference external" href="#getCurrentDir">getCurrentDir proc</a></li>
-<li><a class="reference external" href="#setCurrentDir,string">setCurrentDir proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#getHomeDir">getHomeDir プロシージャ</a></li>
+<li><a class="reference external" href="#getConfigDir">getConfigDir プロシージャ</a></li>
+<li><a class="reference external" href="#expandTilde,string">expandTilde プロシージャ</a></li>
+<li><a class="reference external" href="#getCurrentDir">getCurrentDir プロシージャ</a></li>
+<li><a class="reference external" href="#setCurrentDir,string">setCurrentDir プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1461,11 +1461,11 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Expands <tt class="docutils literal"><span class="pre">~</span></tt> or a path starting with <tt class="docutils literal"><span class="pre">~/</span></tt> to a full path, replacing <tt class="docutils literal"><span class="pre">~</span></tt> with <a class="reference external" href="#getHomeDir">getHomeDir()</a> (otherwise returns <tt class="docutils literal"><span class="pre">path</span></tt> unmodified).</p>
 <p>Windows: this is still supported despite Windows platform not having this convention; also, both <tt class="docutils literal"><span class="pre">~/</span></tt> and <tt class="docutils literal"><span class="pre">~\</span></tt> are handled.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#getHomeDir">getHomeDir proc</a></li>
-<li><a class="reference external" href="#getConfigDir">getConfigDir proc</a></li>
-<li><a class="reference external" href="#getTempDir">getTempDir proc</a></li>
-<li><a class="reference external" href="#getCurrentDir">getCurrentDir proc</a></li>
-<li><a class="reference external" href="#setCurrentDir,string">setCurrentDir proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#getHomeDir">getHomeDir プロシージャ</a></li>
+<li><a class="reference external" href="#getConfigDir">getConfigDir プロシージャ</a></li>
+<li><a class="reference external" href="#getTempDir">getTempDir プロシージャ</a></li>
+<li><a class="reference external" href="#getCurrentDir">getCurrentDir プロシージャ</a></li>
+<li><a class="reference external" href="#setCurrentDir,string">setCurrentDir プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1539,8 +1539,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Returns true if <tt class="docutils literal"><span class="pre">filename</span></tt> exists and is a regular file or symlink.</p>
 <p>Directories, device files, named pipes and sockets return false.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#existsDir,string">existsDir proc</a></li>
-<li><a class="reference external" href="#symlinkExists,string">symlinkExists proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#existsDir,string">existsDir プロシージャ</a></li>
+<li><a class="reference external" href="#symlinkExists,string">symlinkExists プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1555,8 +1555,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Returns true iff the directory <tt class="docutils literal"><span class="pre">dir</span></tt> exists. If <tt class="docutils literal"><span class="pre">dir</span></tt> is a file, false is returned. Follows symlinks.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#existsFile,string">existsFile proc</a></li>
-<li><a class="reference external" href="#symlinkExists,string">symlinkExists proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#existsFile,string">existsFile プロシージャ</a></li>
+<li><a class="reference external" href="#symlinkExists,string">symlinkExists プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1571,8 +1571,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Returns true iff the symlink <tt class="docutils literal"><span class="pre">link</span></tt> exists. Will return true regardless of whether the link points to a directory or file.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#existsFile,string">existsFile proc</a></li>
-<li><a class="reference external" href="#existsDir,string">existsDir proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#existsFile,string">existsFile プロシージャ</a></li>
+<li><a class="reference external" href="#existsDir,string">existsDir プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1584,10 +1584,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#fileExists%2Cstring"><span class="Identifier">fileExists</span></a><span class="Other">(</span><span class="Identifier">filename</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadDirEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Alias for <a class="reference external" href="#existsFile,string">existsFile proc</a>.</p>
+<p><a class="reference external" href="#existsFile,string">existsFile プロシージャ</a>のエイリアスです。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#existsDir,string">existsDir proc</a></li>
-<li><a class="reference external" href="#symlinkExists,string">symlinkExists proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#existsDir,string">existsDir プロシージャ</a></li>
+<li><a class="reference external" href="#symlinkExists,string">symlinkExists プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1599,10 +1599,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#dirExists%2Cstring"><span class="Identifier">dirExists</span></a><span class="Other">(</span><span class="Identifier">dir</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadDirEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Alias for <a class="reference external" href="#existsDir,string">existsDir proc</a>.</p>
+<p><a class="reference external" href="#existsDir,string">existsDir プロシージャ</a>のエイリアスです。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#existsFile,string">existsFile proc</a></li>
-<li><a class="reference external" href="#symlinkExists,string">symlinkExists proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#existsFile,string">existsFile プロシージャ</a></li>
+<li><a class="reference external" href="#symlinkExists,string">symlinkExists プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1632,9 +1632,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Returns the <tt class="docutils literal"><span class="pre">file</span></tt>'s last modification time.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#getLastAccessTime,string">getLastAccessTime proc</a></li>
-<li><a class="reference external" href="#getCreationTime,string">getCreationTime proc</a></li>
-<li><a class="reference external" href="#fileNewer,string,string">fileNewer proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#getLastAccessTime,string">getLastAccessTime エイリアス</a></li>
+<li><a class="reference external" href="#getCreationTime,string">getCreationTime エイリアス</a></li>
+<li><a class="reference external" href="#fileNewer,string,string">fileNewer エイリアス</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1649,9 +1649,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Returns the <tt class="docutils literal"><span class="pre">file</span></tt>'s last read or write access time.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#getLastModificationTime,string">getLastModificationTime proc</a></li>
-<li><a class="reference external" href="#getCreationTime,string">getCreationTime proc</a></li>
-<li><a class="reference external" href="#fileNewer,string,string">fileNewer proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#getLastModificationTime,string">getLastModificationTime エイリアス</a></li>
+<li><a class="reference external" href="#getCreationTime,string">getCreationTime エイリアス</a></li>
+<li><a class="reference external" href="#fileNewer,string,string">fileNewer エイリアス</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1667,9 +1667,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Returns the <tt class="docutils literal"><span class="pre">file</span></tt>'s creation time.</p>
 <p><strong>Note:</strong> Under POSIX OS's, the returned time may actually be the time at which the file's attribute's were last modified. See <a class="reference external" href="https://github.com/nim-lang/Nim/issues/1058">here</a> for details.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#getLastModificationTime,string">getLastModificationTime proc</a></li>
-<li><a class="reference external" href="#getLastAccessTime,string">getLastAccessTime proc</a></li>
-<li><a class="reference external" href="#fileNewer,string,string">fileNewer proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#getLastModificationTime,string">getLastModificationTime エイリアス</a></li>
+<li><a class="reference external" href="#getLastAccessTime,string">getLastAccessTime エイリアス</a></li>
+<li><a class="reference external" href="#fileNewer,string,string">fileNewer エイリアス</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1683,9 +1683,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Returns true if the file <tt class="docutils literal"><span class="pre">a</span></tt> is newer than file <tt class="docutils literal"><span class="pre">b</span></tt>, i.e. if <tt class="docutils literal"><span class="pre">a</span></tt>'s modification time is later than <tt class="docutils literal"><span class="pre">b</span></tt>'s.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#getLastModificationTime,string">getLastModificationTime proc</a></li>
-<li><a class="reference external" href="#getLastAccessTime,string">getLastAccessTime proc</a></li>
-<li><a class="reference external" href="#getCreationTime,string">getCreationTime proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#getLastModificationTime,string">getLastModificationTime エイリアス</a></li>
+<li><a class="reference external" href="#getLastAccessTime,string">getLastAccessTime エイリアス</a></li>
+<li><a class="reference external" href="#getCreationTime,string">getCreationTime エイリアス</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1700,12 +1700,12 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Returns the <span id="current-working-directory_1">current working directory</span> i.e. where the built binary is run.</p>
 <p>So the path returned by this proc is determined at run time.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#getHomeDir">getHomeDir proc</a></li>
-<li><a class="reference external" href="#getConfigDir">getConfigDir proc</a></li>
-<li><a class="reference external" href="#getTempDir">getTempDir proc</a></li>
-<li><a class="reference external" href="#setCurrentDir,string">setCurrentDir proc</a></li>
-<li><a class="reference external" href="system.html#currentSourcePath.t">currentSourcePath template</a></li>
-<li><a class="reference external" href="macros.html#getProjectPath">getProjectPath proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#getHomeDir">getHomeDir プロシージャ</a></li>
+<li><a class="reference external" href="#getConfigDir">getConfigDir プロシージャ</a></li>
+<li><a class="reference external" href="#getTempDir">getTempDir プロシージャ</a></li>
+<li><a class="reference external" href="#setCurrentDir,string">setCurrentDir プロシージャ</a></li>
+<li><a class="reference external" href="system.html#currentSourcePath.t">currentSourcePath テンプレート</a></li>
+<li><a class="reference external" href="macros.html#getProjectPath">getProjectPath プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1719,10 +1719,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Sets the <span id="current-working-directory_2">current working directory</span>; <tt class="docutils literal"><span class="pre">OSError</span></tt> is raised if <tt class="docutils literal"><span class="pre">newDir</span></tt> cannot been set.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#getHomeDir">getHomeDir proc</a></li>
-<li><a class="reference external" href="#getConfigDir">getConfigDir proc</a></li>
-<li><a class="reference external" href="#getTempDir">getTempDir proc</a></li>
-<li><a class="reference external" href="#getCurrentDir">getCurrentDir proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#getHomeDir">getHomeDir プロシージャ</a></li>
+<li><a class="reference external" href="#getConfigDir">getConfigDir プロシージャ</a></li>
+<li><a class="reference external" href="#getTempDir">getTempDir プロシージャ</a></li>
+<li><a class="reference external" href="#getCurrentDir">getCurrentDir プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1737,8 +1737,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Returns the absolute path of <tt class="docutils literal"><span class="pre">path</span></tt>, rooted at <tt class="docutils literal"><span class="pre">root</span></tt> (which must be absolute; default: current directory). If <tt class="docutils literal"><span class="pre">path</span></tt> is absolute, return it, ignoring <tt class="docutils literal"><span class="pre">root</span></tt>.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#normalizedPath,string">normalizedPath proc</a></li>
-<li><a class="reference external" href="#normalizePath,string">normalizePath proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#normalizedPath,string">normalizedPath プロシージャ</a></li>
+<li><a class="reference external" href="#normalizePath,string">normalizePath プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -1757,7 +1757,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>On relative paths, double dot (<tt class="docutils literal"><span class="pre">..</span></tt>) sequences are collapsed if possible. On absolute paths they are always collapsed.</p>
 <p>Warning: URL-encoded and Unicode attempts at directory traversal are not detected. Triple dot is not handled.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#absolutePath,string">absolutePath proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#absolutePath,string">absolutePath プロシージャ</a></li>
 <li><a class="reference external" href="#normalizedPath,string">normalizedPath proc</a> for a version which returns a new string</li>
 </ul>
 
@@ -1777,7 +1777,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Returns a normalized path for the current OS.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#absolutePath,string">absolutePath proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#absolutePath,string">absolutePath プロシージャ</a></li>
 <li><a class="reference external" href="#normalizePath,string">normalizePath proc</a> for the in-place version</li>
 </ul>
 
@@ -1798,7 +1798,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Raises <tt class="docutils literal"><span class="pre">OSError</span></tt> if any of the files does not exist or information about it can not be obtained.</p>
 <p>This proc will return true if given two alternative hard-linked or sym-linked paths to the same file or directory.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#sameFileContent,string,string">sameFileContent proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#sameFileContent,string,string">sameFileContent プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1813,7 +1813,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Returns true if both pathname arguments refer to files with identical binary content.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#sameFile,string,string">sameFile proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#sameFile,string,string">sameFile プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1829,8 +1829,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Retrieves file permissions for <tt class="docutils literal"><span class="pre">filename</span></tt>.</p>
 <p><tt class="docutils literal"><span class="pre">OSError</span></tt> is raised in case of an error. On Windows, only the <tt class="docutils literal"><span class="pre">readonly</span></tt> flag is checked, every other permission is available in any case.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#setFilePermissions,string,set[FilePermission]">setFilePermissions proc</a></li>
-<li><a class="reference external" href="#FilePermission">FilePermission enum</a></li>
+<ul class="simple"><li><a class="reference external" href="#setFilePermissions,string,set[FilePermission]">setFilePermissions プロシージャ</a></li>
+<li><a class="reference external" href="#FilePermission">FilePermission 列挙型</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1847,7 +1847,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p><tt class="docutils literal"><span class="pre">OSError</span></tt> is raised in case of an error. On Windows, only the <tt class="docutils literal"><span class="pre">readonly</span></tt> flag is changed, depending on <tt class="docutils literal"><span class="pre">fpUserWrite</span></tt> permission.</p>
 <p>関連:</p>
 <ul class="simple"><li><a class="reference external" href="#getFilePermissions,string">getFilePermissions</a></li>
-<li><a class="reference external" href="#FilePermission">FilePermission enum</a></li>
+<li><a class="reference external" href="#FilePermission">FilePermission 列挙型</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1861,17 +1861,17 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                                   <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">OSError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Copies a file from <tt class="docutils literal"><span class="pre">source</span></tt> to <tt class="docutils literal"><span class="pre">dest</span></tt>.</p>
-<p>If this fails, <tt class="docutils literal"><span class="pre">OSError</span></tt> is raised.</p>
+<p>ファイルを <tt class="docutils literal"><span class="pre">source</span></tt> から <tt class="docutils literal"><span class="pre">dest</span></tt> へコピーします。</p>
+<p>失敗時は <tt class="docutils literal"><span class="pre">IOError</span></tt> が発生します。</p>
 <p>On the Windows platform this proc will copy the source file's attributes into dest.</p>
 <p>On other platforms you need to use <a class="reference external" href="#getFilePermissions,string">getFilePermissions</a> and <a class="reference external" href="#setFilePermissions,string,set[FilePermission]">setFilePermissions</a> procs to copy them by hand (or use the convenience <a class="reference external" href="#copyFileWithPermissions,string,string">copyFileWithPermissions proc</a>), otherwise <tt class="docutils literal"><span class="pre">dest</span></tt> will inherit the default permissions of a newly created file for the user.</p>
 <p>If <tt class="docutils literal"><span class="pre">dest</span></tt> already exists, the file attributes will be preserved and the content overwritten.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#copyDir,string,string">copyDir proc</a></li>
-<li><a class="reference external" href="#copyFileWithPermissions,string,string">copyFileWithPermissions proc</a></li>
-<li><a class="reference external" href="#tryRemoveFile,string">tryRemoveFile proc</a></li>
-<li><a class="reference external" href="#removeFile,string">removeFile proc</a></li>
-<li><a class="reference external" href="#moveFile,string,string">moveFile proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#copyDir,string,string">copyDir プロシージャ</a></li>
+<li><a class="reference external" href="#copyFileWithPermissions,string,string">copyFileWithPermissions プロシージャ</a></li>
+<li><a class="reference external" href="#tryRemoveFile,string">tryRemoveFile プロシージャ</a></li>
+<li><a class="reference external" href="#removeFile,string">removeFile プロシージャ</a></li>
+<li><a class="reference external" href="#moveFile,string,string">moveFile プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1885,13 +1885,13 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 <p>ファイル <tt class="docutils literal"><span class="pre">file</span></tt> を削除します。</p>
-<p>If this fails, returns <tt class="docutils literal"><span class="pre">false</span></tt>. This does not fail if the file never existed in the first place.</p>
+<p>失敗時は <tt class="docutils literal"><span class="pre">false</span></tt> を返します。This does not fail if the file never existed in the first place.</p>
 <p>On Windows, ignores the read-only attribute.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#copyFile,string,string">copyFile proc</a></li>
-<li><a class="reference external" href="#copyFileWithPermissions,string,string">copyFileWithPermissions proc</a></li>
-<li><a class="reference external" href="#removeFile,string">removeFile proc</a></li>
-<li><a class="reference external" href="#moveFile,string,string">moveFile proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#copyFile,string,string">copyFile プロシージャ</a></li>
+<li><a class="reference external" href="#copyFileWithPermissions,string,string">copyFileWithPermissions プロシージャ</a></li>
+<li><a class="reference external" href="#removeFile,string">removeFile プロシージャ</a></li>
+<li><a class="reference external" href="#moveFile,string,string">moveFile プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1905,14 +1905,14 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 <p>ファイル <tt class="docutils literal"><span class="pre">file</span></tt> を削除します。</p>
-<p>If this fails, <tt class="docutils literal"><span class="pre">OSError</span></tt> is raised. This does not fail if the file never existed in the first place.</p>
+<p>失敗時は <tt class="docutils literal"><span class="pre">IOError</span></tt> が発生します。This does not fail if the file never existed in the first place.</p>
 <p>On Windows, ignores the read-only attribute.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#removeDir,string">removeDir proc</a></li>
-<li><a class="reference external" href="#copyFile,string,string">copyFile proc</a></li>
-<li><a class="reference external" href="#copyFileWithPermissions,string,string">copyFileWithPermissions proc</a></li>
-<li><a class="reference external" href="#tryRemoveFile,string">tryRemoveFile proc</a></li>
-<li><a class="reference external" href="#moveFile,string,string">moveFile proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#removeDir,string">removeDir プロシージャ</a></li>
+<li><a class="reference external" href="#copyFile,string,string">copyFile プロシージャ</a></li>
+<li><a class="reference external" href="#copyFileWithPermissions,string,string">copyFileWithPermissions プロシージャ</a></li>
+<li><a class="reference external" href="#tryRemoveFile,string">tryRemoveFile プロシージャ</a></li>
+<li><a class="reference external" href="#moveFile,string,string">moveFile プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1926,15 +1926,15 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                                   <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">OSError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Moves a file from <tt class="docutils literal"><span class="pre">source</span></tt> to <tt class="docutils literal"><span class="pre">dest</span></tt>.</p>
-<p>If this fails, <tt class="docutils literal"><span class="pre">OSError</span></tt> is raised. If <tt class="docutils literal"><span class="pre">dest</span></tt> already exists, it will be overwritten.</p>
+<p>ファイルを <tt class="docutils literal"><span class="pre">source</span></tt> から <tt class="docutils literal"><span class="pre">dest</span></tt> へ移動します。</p>
+<p>失敗時は <tt class="docutils literal"><span class="pre">IOError</span></tt> が発生します。既に <tt class="docutils literal"><span class="pre">dest</span></tt> 存在しているときは、ファイルを上書きします。</p>
 <p>Can be used to <span id="rename-files_1">rename files</span>.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#moveDir,string,string">moveDir proc</a></li>
-<li><a class="reference external" href="#copyFile,string,string">copyFile proc</a></li>
-<li><a class="reference external" href="#copyFileWithPermissions,string,string">copyFileWithPermissions proc</a></li>
-<li><a class="reference external" href="#removeFile,string">removeFile proc</a></li>
-<li><a class="reference external" href="#tryRemoveFile,string">tryRemoveFile proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#moveDir,string,string">moveDir プロシージャ</a></li>
+<li><a class="reference external" href="#copyFile,string,string">copyFile プロシージャ</a></li>
+<li><a class="reference external" href="#copyFileWithPermissions,string,string">copyFileWithPermissions プロシージャ</a></li>
+<li><a class="reference external" href="#removeFile,string">removeFile プロシージャ</a></li>
+<li><a class="reference external" href="#tryRemoveFile,string">tryRemoveFile プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -1997,15 +1997,15 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 <p>Removes the directory <tt class="docutils literal"><span class="pre">dir</span></tt> including all subdirectories and files in <tt class="docutils literal"><span class="pre">dir</span></tt> (recursively).</p>
-<p>If this fails, <tt class="docutils literal"><span class="pre">OSError</span></tt> is raised. This does not fail if the directory never existed in the first place, unless <tt class="docutils literal"><span class="pre">checkDir</span></tt> = true</p>
+<p>失敗時は <tt class="docutils literal"><span class="pre">IOError</span></tt> が発生します。This does not fail if the directory never existed in the first place, unless <tt class="docutils literal"><span class="pre">checkDir</span></tt> = true</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#tryRemoveFile,string">tryRemoveFile proc</a></li>
-<li><a class="reference external" href="#removeFile,string">removeFile proc</a></li>
-<li><a class="reference external" href="#existsOrCreateDir,string">existsOrCreateDir proc</a></li>
-<li><a class="reference external" href="#createDir,string">createDir proc</a></li>
-<li><a class="reference external" href="#copyDir,string,string">copyDir proc</a></li>
-<li><a class="reference external" href="#copyDirWithPermissions,string,string">copyDirWithPermissions proc</a></li>
-<li><a class="reference external" href="#moveDir,string,string">moveDir proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#tryRemoveFile,string">tryRemoveFile プロシージャ</a></li>
+<li><a class="reference external" href="#removeFile,string">removeFile プロシージャ</a></li>
+<li><a class="reference external" href="#existsOrCreateDir,string">existsOrCreateDir プロシージャ</a></li>
+<li><a class="reference external" href="#createDir,string">createDir プロシージャ</a></li>
+<li><a class="reference external" href="#copyDir,string,string">copyDir プロシージャ</a></li>
+<li><a class="reference external" href="#copyDirWithPermissions,string,string">copyDirWithPermissions プロシージャ</a></li>
+<li><a class="reference external" href="#moveDir,string,string">moveDir プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -2019,14 +2019,14 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                                         <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">IOError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Check if a <span id="directory_1">directory</span> <tt class="docutils literal"><span class="pre">dir</span></tt> exists, and create it otherwise.</p>
+<p><span id="directory_1">ディレクトリ </span> <tt class="docutils literal"><span class="pre">dir</span></tt>  の有無を確認後、無ければ作成します。</p>
 <p>Does not create parent directories (fails if parent does not exist). Returns <tt class="docutils literal"><span class="pre">true</span></tt> if the directory already exists, and <tt class="docutils literal"><span class="pre">false</span></tt> otherwise.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#removeDir,string">removeDir proc</a></li>
-<li><a class="reference external" href="#createDir,string">createDir proc</a></li>
-<li><a class="reference external" href="#copyDir,string,string">copyDir proc</a></li>
-<li><a class="reference external" href="#copyDirWithPermissions,string,string">copyDirWithPermissions proc</a></li>
-<li><a class="reference external" href="#moveDir,string,string">moveDir proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#removeDir,string">removeDir プロシージャ</a></li>
+<li><a class="reference external" href="#createDir,string">createDir プロシージャ</a></li>
+<li><a class="reference external" href="#copyDir,string,string">copyDir プロシージャ</a></li>
+<li><a class="reference external" href="#copyDirWithPermissions,string,string">copyDirWithPermissions プロシージャ</a></li>
+<li><a class="reference external" href="#moveDir,string,string">moveDir プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -2040,15 +2040,15 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                            <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">OSError</span><span class="Other">,</span> <span class="Identifier">IOError</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Creates the <span id="directory_2">directory</span> <tt class="docutils literal"><span class="pre">dir</span></tt>.</p>
-<p>The directory may contain several subdirectories that do not exist yet. The full path is created. If this fails, <tt class="docutils literal"><span class="pre">OSError</span></tt> is raised.</p>
+<p><span id="directory_2">ディレクトリ</span> <tt class="docutils literal"><span class="pre">dir</span></tt> を作成します。</p>
+<p>The directory may contain several subdirectories that do not exist yet. The full path is created. 失敗時は <tt class="docutils literal"><span class="pre">IOError</span></tt> が発生します。</p>
 <p>It does <strong>not</strong> fail if the directory already exists because for most usages this does not indicate an error.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#removeDir,string">removeDir proc</a></li>
-<li><a class="reference external" href="#existsOrCreateDir,string">existsOrCreateDir proc</a></li>
-<li><a class="reference external" href="#copyDir,string,string">copyDir proc</a></li>
-<li><a class="reference external" href="#copyDirWithPermissions,string,string">copyDirWithPermissions proc</a></li>
-<li><a class="reference external" href="#moveDir,string,string">moveDir proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#removeDir,string">removeDir プロシージャ</a></li>
+<li><a class="reference external" href="#existsOrCreateDir,string">existsOrCreateDir プロシージャ</a></li>
+<li><a class="reference external" href="#copyDir,string,string">copyDir プロシージャ</a></li>
+<li><a class="reference external" href="#copyDirWithPermissions,string,string">copyDirWithPermissions プロシージャ</a></li>
+<li><a class="reference external" href="#moveDir,string,string">moveDir プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -2063,17 +2063,17 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 <p>Copies a directory from <tt class="docutils literal"><span class="pre">source</span></tt> to <tt class="docutils literal"><span class="pre">dest</span></tt>.</p>
-<p>If this fails, <tt class="docutils literal"><span class="pre">OSError</span></tt> is raised.</p>
+<p>失敗時は <tt class="docutils literal"><span class="pre">IOError</span></tt> が発生します。</p>
 <p>On the Windows platform this proc will copy the attributes from <tt class="docutils literal"><span class="pre">source</span></tt> into <tt class="docutils literal"><span class="pre">dest</span></tt>.</p>
 <p>On other platforms created files and directories will inherit the default permissions of a newly created file/directory for the user. Use <a class="reference external" href="#copyDirWithPermissions,string,string">copyDirWithPermissions proc</a> to preserve attributes recursively on these platforms.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#copyDirWithPermissions,string,string">copyDirWithPermissions proc</a></li>
-<li><a class="reference external" href="#copyFile,string,string">copyFile proc</a></li>
-<li><a class="reference external" href="#copyFileWithPermissions,string,string">copyFileWithPermissions proc</a></li>
-<li><a class="reference external" href="#removeDir,string">removeDir proc</a></li>
-<li><a class="reference external" href="#existsOrCreateDir,string">existsOrCreateDir proc</a></li>
-<li><a class="reference external" href="#createDir,string">createDir proc</a></li>
-<li><a class="reference external" href="#moveDir,string,string">moveDir proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#copyDirWithPermissions,string,string">copyDirWithPermissions プロシージャ</a></li>
+<li><a class="reference external" href="#copyFile,string,string">copyFile プロシージャ</a></li>
+<li><a class="reference external" href="#copyFileWithPermissions,string,string">copyFileWithPermissions プロシージャ</a></li>
+<li><a class="reference external" href="#removeDir,string">removeDir プロシージャ</a></li>
+<li><a class="reference external" href="#existsOrCreateDir,string">existsOrCreateDir プロシージャ</a></li>
+<li><a class="reference external" href="#createDir,string">createDir プロシージャ</a></li>
+<li><a class="reference external" href="#moveDir,string,string">moveDir プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -2087,14 +2087,14 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 <p>Moves a directory from <tt class="docutils literal"><span class="pre">source</span></tt> to <tt class="docutils literal"><span class="pre">dest</span></tt>.</p>
-<p>If this fails, <tt class="docutils literal"><span class="pre">OSError</span></tt> is raised.</p>
+<p>失敗時は <tt class="docutils literal"><span class="pre">IOError</span></tt> が発生します。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#moveFile,string,string">moveFile proc</a></li>
-<li><a class="reference external" href="#copyDir,string,string">copyDir proc</a></li>
-<li><a class="reference external" href="#copyDirWithPermissions,string,string">copyDirWithPermissions proc</a></li>
-<li><a class="reference external" href="#removeDir,string">removeDir proc</a></li>
-<li><a class="reference external" href="#existsOrCreateDir,string">existsOrCreateDir proc</a></li>
-<li><a class="reference external" href="#createDir,string">createDir proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#moveFile,string,string">moveFile プロシージャ</a></li>
+<li><a class="reference external" href="#copyDir,string,string">copyDir プロシージャ</a></li>
+<li><a class="reference external" href="#copyDirWithPermissions,string,string">copyDirWithPermissions プロシージャ</a></li>
+<li><a class="reference external" href="#removeDir,string">removeDir プロシージャ</a></li>
+<li><a class="reference external" href="#existsOrCreateDir,string">existsOrCreateDir プロシージャ</a></li>
+<li><a class="reference external" href="#createDir,string">createDir プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -2109,8 +2109,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Create a symbolic link at <tt class="docutils literal"><span class="pre">dest</span></tt> which points to the item specified by <tt class="docutils literal"><span class="pre">src</span></tt>. On most operating systems, will fail if a link already exists.</p>
 <p><strong>Warning</strong>: Some OS's (such as Microsoft Windows) restrict the creation of symlinks to root users (administrators).</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#createHardlink,string,string">createHardlink proc</a></li>
-<li><a class="reference external" href="#expandSymlink,string">expandSymlink proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#createHardlink,string,string">createHardlink プロシージャ</a></li>
+<li><a class="reference external" href="#expandSymlink,string">expandSymlink プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -2125,7 +2125,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Create a hard link at <tt class="docutils literal"><span class="pre">dest</span></tt> which points to the item specified by <tt class="docutils literal"><span class="pre">src</span></tt>.</p>
 <p><strong>Warning</strong>: Some OS's restrict the creation of hard links to root users (administrators).</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#createSymlink,string,string">createSymlink proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#createSymlink,string,string">createSymlink プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -2143,12 +2143,12 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>On Windows this proc is just a wrapper for <a class="reference external" href="#copyFile,string,string">copyFile proc</a> since that proc already copies attributes.</p>
 <p>On non-Windows systems permissions are copied after the file itself has been copied, which won't happen atomically and could lead to a race condition. If <tt class="docutils literal"><span class="pre">ignorePermissionErrors</span></tt> is true (default), errors while reading/setting file attributes will be ignored, otherwise will raise <tt class="docutils literal"><span class="pre">OSError</span></tt>.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#copyFile,string,string">copyFile proc</a></li>
-<li><a class="reference external" href="#copyDir,string,string">copyDir proc</a></li>
-<li><a class="reference external" href="#tryRemoveFile,string">tryRemoveFile proc</a></li>
-<li><a class="reference external" href="#removeFile,string">removeFile proc</a></li>
-<li><a class="reference external" href="#moveFile,string,string">moveFile proc</a></li>
-<li><a class="reference external" href="#copyDirWithPermissions,string,string">copyDirWithPermissions proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#copyFile,string,string">copyFile プロシージャ</a></li>
+<li><a class="reference external" href="#copyDir,string,string">copyDir プロシージャ</a></li>
+<li><a class="reference external" href="#tryRemoveFile,string">tryRemoveFile プロシージャ</a></li>
+<li><a class="reference external" href="#removeFile,string">removeFile プロシージャ</a></li>
+<li><a class="reference external" href="#moveFile,string,string">moveFile プロシージャ</a></li>
+<li><a class="reference external" href="#copyDirWithPermissions,string,string">copyDirWithPermissions プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -2163,17 +2163,17 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dd>
 
 <p>Copies a directory from <tt class="docutils literal"><span class="pre">source</span></tt> to <tt class="docutils literal"><span class="pre">dest</span></tt> preserving file permissions.</p>
-<p>If this fails, <tt class="docutils literal"><span class="pre">OSError</span></tt> is raised. This is a wrapper proc around <a class="reference external" href="#copyDir,string,string">copyDir</a> and <a class="reference external" href="#copyFileWithPermissions,string,string">copyFileWithPermissions</a> procs on non-Windows platforms.</p>
+<p>失敗時は <tt class="docutils literal"><span class="pre">IOError</span></tt> が発生します。This is a wrapper proc around <a class="reference external" href="#copyDir,string,string">copyDir</a> and <a class="reference external" href="#copyFileWithPermissions,string,string">copyFileWithPermissions</a> procs on non-Windows platforms.</p>
 <p>On Windows this proc is just a wrapper for <a class="reference external" href="#copyDir,string,string">copyDir proc</a> since that proc already copies attributes.</p>
 <p>On non-Windows systems permissions are copied after the file or directory itself has been copied, which won't happen atomically and could lead to a race condition. If <tt class="docutils literal"><span class="pre">ignorePermissionErrors</span></tt> is true (default), errors while reading/setting file attributes will be ignored, otherwise will raise <tt class="docutils literal"><span class="pre">OSError</span></tt>.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#copyDir,string,string">copyDir proc</a></li>
-<li><a class="reference external" href="#copyFile,string,string">copyFile proc</a></li>
-<li><a class="reference external" href="#copyFileWithPermissions,string,string">copyFileWithPermissions proc</a></li>
-<li><a class="reference external" href="#removeDir,string">removeDir proc</a></li>
-<li><a class="reference external" href="#moveDir,string,string">moveDir proc</a></li>
-<li><a class="reference external" href="#existsOrCreateDir,string">existsOrCreateDir proc</a></li>
-<li><a class="reference external" href="#createDir,string">createDir proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#copyDir,string,string">copyDir プロシージャ</a></li>
+<li><a class="reference external" href="#copyFile,string,string">copyFile プロシージャ</a></li>
+<li><a class="reference external" href="#copyFileWithPermissions,string,string">copyFileWithPermissions プロシージャ</a></li>
+<li><a class="reference external" href="#removeDir,string">removeDir プロシージャ</a></li>
+<li><a class="reference external" href="#moveDir,string,string">moveDir プロシージャ</a></li>
+<li><a class="reference external" href="#existsOrCreateDir,string">existsOrCreateDir プロシージャ</a></li>
+<li><a class="reference external" href="#createDir,string">createDir プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -2214,7 +2214,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Returns a string representing the path to which the symbolic link points.</p>
 <p>On Windows this is a noop, <tt class="docutils literal"><span class="pre">symlinkPath</span></tt> is simply returned.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#createSymlink,string,string">createSymlink proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#createSymlink,string,string">createSymlink プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -2240,10 +2240,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 </ul>
 <p>On Posix systems, it uses the following parsing rules: Components are separated by whitespace unless the whitespace occurs within <tt class="docutils literal"><span class="pre">"</span></tt> or <tt class="docutils literal"><span class="pre">'</span></tt> quotes.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="parseopt.html">parseopt module</a></li>
-<li><a class="reference external" href="#paramCount">paramCount proc</a></li>
-<li><a class="reference external" href="#paramStr,int">paramStr proc</a></li>
-<li><a class="reference external" href="#commandLineParams">commandLineParams proc</a></li>
+<ul class="simple"><li><a class="reference external" href="parseopt.html">parseopt モジュール</a></li>
+<li><a class="reference external" href="#paramCount">paramCount プロシージャ</a></li>
+<li><a class="reference external" href="#paramStr,int">paramStr プロシージャ</a></li>
+<li><a class="reference external" href="#commandLineParams">commandLineParams プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -2259,16 +2259,16 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Unlike <span id="argc_1">argc</span> in C, if your binary was called without parameters this will return zero. You can query each individual parameter with <a class="reference external" href="#paramStr,int">paramStr proc</a> or retrieve all of them in one go with <a class="reference external" href="#commandLineParams">commandLineParams proc</a>.</p>
 <p><strong>Availability</strong>: When generating a dynamic library (see <tt class="docutils literal"><span class="pre">--app:lib</span></tt>) on Posix this proc is not defined. Test for availability using <a class="reference external" href="system.html#declared,untyped">declared()</a>.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="parseopt.html">parseopt module</a></li>
-<li><a class="reference external" href="#parseCmdLine,string">parseCmdLine proc</a></li>
-<li><a class="reference external" href="#paramStr,int">paramStr proc</a></li>
-<li><a class="reference external" href="#commandLineParams">commandLineParams proc</a></li>
+<ul class="simple"><li><a class="reference external" href="parseopt.html">parseopt モジュール</a></li>
+<li><a class="reference external" href="#parseCmdLine,string">parseCmdLine プロシージャ</a></li>
+<li><a class="reference external" href="#paramStr,int">paramStr プロシージャ</a></li>
+<li><a class="reference external" href="#commandLineParams">commandLineParams プロシージャ</a></li>
 </ul>
 <p><strong>用例:</strong></p>
 <pre class="listing"><span class="Keyword">when</span> <span class="Identifier">declared</span><span class="Punctuation">(</span><span class="Identifier">paramCount</span><span class="Punctuation">)</span><span class="Punctuation">:</span>
   <span class="Comment"># Use paramCount() here</span>
 <span class="Keyword">else</span><span class="Punctuation">:</span>
-  <span class="Comment"># Do something else!</span></pre>
+  <span class="Comment"># それ以外の処理はこちらです！</span></pre>
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/os.nim#L2628"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/os.nim#L2628" class="link-seesrc" target="_blank" >編集</a>
@@ -2283,17 +2283,17 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Similarly to <span id="argv_1">argv</span> in C, it is possible to call <tt class="docutils literal"><span class="pre">paramStr(0)</span></tt> but this will return OS specific contents (usually the name of the invoked executable). You should avoid this and call <a class="reference external" href="#getAppFilename">getAppFilename()</a> instead.</p>
 <p><strong>Availability</strong>: When generating a dynamic library (see <tt class="docutils literal"><span class="pre">--app:lib</span></tt>) on Posix this proc is not defined. Test for availability using <a class="reference external" href="system.html#declared,untyped">declared()</a>.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="parseopt.html">parseopt module</a></li>
-<li><a class="reference external" href="#parseCmdLine,string">parseCmdLine proc</a></li>
-<li><a class="reference external" href="#paramCount">paramCount proc</a></li>
-<li><a class="reference external" href="#commandLineParams">commandLineParams proc</a></li>
-<li><a class="reference external" href="#getAppFilename">getAppFilename proc</a></li>
+<ul class="simple"><li><a class="reference external" href="parseopt.html">parseopt モジュール</a></li>
+<li><a class="reference external" href="#parseCmdLine,string">parseCmdLine プロシージャ</a></li>
+<li><a class="reference external" href="#paramCount">paramCount プロシージャ</a></li>
+<li><a class="reference external" href="#commandLineParams">commandLineParams プロシージャ</a></li>
+<li><a class="reference external" href="#getAppFilename">getAppFilename プロシージャ</a></li>
 </ul>
 <p><strong>用例:</strong></p>
 <pre class="listing"><span class="Keyword">when</span> <span class="Identifier">declared</span><span class="Punctuation">(</span><span class="Identifier">paramStr</span><span class="Punctuation">)</span><span class="Punctuation">:</span>
-  <span class="Comment"># Use paramStr() here</span>
+  <span class="Comment"># ここで paramStr() を使います</span>
 <span class="Keyword">else</span><span class="Punctuation">:</span>
-  <span class="Comment"># Do something else!</span></pre>
+  <span class="Comment"># それ以外の処理はこちらです！</span></pre>
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/os.nim#L2656"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/os.nim#L2656" class="link-seesrc" target="_blank" >編集</a>
@@ -2307,17 +2307,17 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>This returns <strong>only</strong> the parameters. If you want to get the application executable filename, call <a class="reference external" href="#getAppFilename">getAppFilename()</a>.</p>
 <p><strong>Availability</strong>: On Posix there is no portable way to get the command line from a DLL and thus the proc isn't defined in this environment. You can test for its availability with <a class="reference external" href="system.html#declared,untyped">declared()</a>.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="parseopt.html">parseopt module</a></li>
-<li><a class="reference external" href="#parseCmdLine,string">parseCmdLine proc</a></li>
-<li><a class="reference external" href="#paramCount">paramCount proc</a></li>
-<li><a class="reference external" href="#paramStr,int">paramStr proc</a></li>
-<li><a class="reference external" href="#getAppFilename">getAppFilename proc</a></li>
+<ul class="simple"><li><a class="reference external" href="parseopt.html">parseopt モジュール</a></li>
+<li><a class="reference external" href="#parseCmdLine,string">parseCmdLine プロシージャ</a></li>
+<li><a class="reference external" href="#paramCount">paramCount プロシージャ</a></li>
+<li><a class="reference external" href="#paramStr,int">paramStr プロシージャ</a></li>
+<li><a class="reference external" href="#getAppFilename">getAppFilename プロシージャ</a></li>
 </ul>
 <p><strong>用例:</strong></p>
 <pre class="listing"><span class="Keyword">when</span> <span class="Identifier">declared</span><span class="Punctuation">(</span><span class="Identifier">commandLineParams</span><span class="Punctuation">)</span><span class="Punctuation">:</span>
   <span class="Comment"># Use commandLineParams() here</span>
 <span class="Keyword">else</span><span class="Punctuation">:</span>
-  <span class="Comment"># Do something else!</span></pre>
+  <span class="Comment"># それ以外の処理はこちらです！</span></pre>
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/os.nim#L2745"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/os.nim#L2745" class="link-seesrc" target="_blank" >編集</a>
@@ -2328,10 +2328,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
                              <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Returns the filename of the application's executable. This proc will resolve symlinks.</p>
+<p>アプリケーションの実行可能ファイル名を返します。このプロシージャはシンボリックリンクを解決します。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#getAppDir">getAppDir proc</a></li>
-<li><a class="reference external" href="#getCurrentCompilerExe">getCurrentCompilerExe proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#getAppDir">getAppDir プロシージャ</a></li>
+<li><a class="reference external" href="#getCurrentCompilerExe">getCurrentCompilerExe プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -2343,9 +2343,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#getAppDir"><span class="Identifier">getAppDir</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">gcsafe</span><span class="Other">,</span> <span class="Identifier">extern</span><span class="Other">:</span> <span class="StringLit">"nos$1"</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><a href="system.html#ReadIOEffect"><span class="Identifier">ReadIOEffect</span></a><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Returns the directory of the application's executable.</p>
+<p>アプリケーションの実行可能ファイルがあるディレクトリを返します。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#getAppFilename">getAppFilename proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#getAppFilename">getAppFilename プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -2379,8 +2379,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Retrieves file information for the file object represented by the given handle.</p>
 <p>If the information cannot be retrieved, such as when the file handle is invalid, <tt class="docutils literal"><span class="pre">OSError</span></tt> is raised.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#getFileInfo,File">getFileInfo(file) proc</a></li>
-<li><a class="reference external" href="#getFileInfo,string">getFileInfo(path) proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#getFileInfo,File">getFileInfo(file) プロシージャ</a></li>
+<li><a class="reference external" href="#getFileInfo,string">getFileInfo(path) プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -2394,8 +2394,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 
 <p>Retrieves file information for the file object.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#getFileInfo,FileHandle">getFileInfo(handle) proc</a></li>
-<li><a class="reference external" href="#getFileInfo,string">getFileInfo(path) proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#getFileInfo,FileHandle">getFileInfo(handle) プロシージャ</a></li>
+<li><a class="reference external" href="#getFileInfo,string">getFileInfo(path) プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -2413,8 +2413,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>When <tt class="docutils literal"><span class="pre">followSymlink</span></tt> is true (default), symlinks are followed and the information retrieved is information related to the symlink's target. Otherwise, information on the symlink itself is retrieved.</p>
 <p>If the information cannot be retrieved, such as when the path doesn't exist, or when permission restrictions prevent the program from retrieving file information, <tt class="docutils literal"><span class="pre">OSError</span></tt> is raised.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#getFileInfo,FileHandle">getFileInfo(handle) proc</a></li>
-<li><a class="reference external" href="#getFileInfo,File">getFileInfo(file) proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#getFileInfo,FileHandle">getFileInfo(handle) プロシージャ</a></li>
+<li><a class="reference external" href="#getFileInfo,File">getFileInfo(file) プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -2448,7 +2448,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#getCurrentProcessId"><span class="Identifier">getCurrentProcessId</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Return current process ID.</p>
+<p>現在のプロセス ID を返します。</p>
 <p>関連:</p>
 <ul class="simple"><li><a class="reference external" href="osproc.html#processID,Process">osproc.processID(p: Process)</a></li>
 </ul>
@@ -2504,7 +2504,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>If <tt class="docutils literal"><span class="pre">fromRoot</span></tt> is true (default: false), the traversal will start from the file system root directory. If <tt class="docutils literal"><span class="pre">inclusive</span></tt> is true (default), the original argument will be included in the traversal.</p>
 <p>Relative paths won't be expanded by this iterator. Instead, it will traverse only the directories appearing in the relative path.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#parentDir,string">parentDir proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#parentDir,string">parentDir プロシージャ</a></li>
 </ul>
 <p><strong>用例:</strong></p>
 <pre class="listing"><span class="Keyword">let</span> <span class="Identifier">g</span> <span class="Operator">=</span> <span class="StringLit">"a/b/c"</span>
@@ -2538,10 +2538,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Iterate over all <span id="environments-variables_1">environments variables</span>.</p>
 <p>In the first component of the tuple is the name of the current variable stored, in the second its value.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#getEnv,string,string">getEnv proc</a></li>
-<li><a class="reference external" href="#existsEnv,string">existsEnv proc</a></li>
-<li><a class="reference external" href="#putEnv,string,string">putEnv proc</a></li>
-<li><a class="reference external" href="#delEnv,string">delEnv proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#getEnv,string,string">getEnv プロシージャ</a></li>
+<li><a class="reference external" href="#existsEnv,string">existsEnv プロシージャ</a></li>
+<li><a class="reference external" href="#putEnv,string,string">putEnv プロシージャ</a></li>
+<li><a class="reference external" href="#delEnv,string">delEnv プロシージャ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -2557,10 +2557,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Iterate over all the files and directories that match the <tt class="docutils literal"><span class="pre">pattern</span></tt>.</p>
 <p>On POSIX this uses the <span id="glob_1">glob</span> call. <tt class="docutils literal"><span class="pre">pattern</span></tt> is OS dependent, but at least the <tt class="docutils literal"><span class="pre">"*.ext"</span></tt> notation is supported.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#walkFiles.i,string">walkFiles iterator</a></li>
-<li><a class="reference external" href="#walkDirs.i,string">walkDirs iterator</a></li>
-<li><a class="reference external" href="#walkDir.i,string">walkDir iterator</a></li>
-<li><a class="reference external" href="#walkDirRec.i,string">walkDirRec iterator</a></li>
+<ul class="simple"><li><a class="reference external" href="#walkFiles.i,string">walkFiles イテレータ</a></li>
+<li><a class="reference external" href="#walkDirs.i,string">walkDirs イテレータ</a></li>
+<li><a class="reference external" href="#walkDir.i,string">walkDir イテレータ</a></li>
+<li><a class="reference external" href="#walkDirRec.i,string">walkDirRec イテレータ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -2575,10 +2575,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Iterate over all the files that match the <tt class="docutils literal"><span class="pre">pattern</span></tt>.</p>
 <p>On POSIX this uses the <span id="glob_2">glob</span> call. <tt class="docutils literal"><span class="pre">pattern</span></tt> is OS dependent, but at least the <tt class="docutils literal"><span class="pre">"*.ext"</span></tt> notation is supported.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#walkPattern.i,string">walkPattern iterator</a></li>
-<li><a class="reference external" href="#walkDirs.i,string">walkDirs iterator</a></li>
-<li><a class="reference external" href="#walkDir.i,string">walkDir iterator</a></li>
-<li><a class="reference external" href="#walkDirRec.i,string">walkDirRec iterator</a></li>
+<ul class="simple"><li><a class="reference external" href="#walkPattern.i,string">walkPattern イテレータ</a></li>
+<li><a class="reference external" href="#walkDirs.i,string">walkDirs イテレータ</a></li>
+<li><a class="reference external" href="#walkDir.i,string">walkDir イテレータ</a></li>
+<li><a class="reference external" href="#walkDirRec.i,string">walkDirRec イテレータ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -2593,10 +2593,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>Iterate over all the directories that match the <tt class="docutils literal"><span class="pre">pattern</span></tt>.</p>
 <p>On POSIX this uses the <span id="glob_3">glob</span> call. <tt class="docutils literal"><span class="pre">pattern</span></tt> is OS dependent, but at least the <tt class="docutils literal"><span class="pre">"*.ext"</span></tt> notation is supported.</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#walkPattern.i,string">walkPattern iterator</a></li>
-<li><a class="reference external" href="#walkFiles.i,string">walkFiles iterator</a></li>
-<li><a class="reference external" href="#walkDir.i,string">walkDir iterator</a></li>
-<li><a class="reference external" href="#walkDirRec.i,string">walkDirRec iterator</a></li>
+<ul class="simple"><li><a class="reference external" href="#walkPattern.i,string">walkPattern イテレータ</a></li>
+<li><a class="reference external" href="#walkFiles.i,string">walkFiles イテレータ</a></li>
+<li><a class="reference external" href="#walkDir.i,string">walkDir イテレータ</a></li>
+<li><a class="reference external" href="#walkDirRec.i,string">walkDirRec イテレータ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -2623,10 +2623,10 @@ dirA/fileA1.txt
 dirA/fileA2.txt</pre>
 </p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#walkPattern.i,string">walkPattern iterator</a></li>
-<li><a class="reference external" href="#walkFiles.i,string">walkFiles iterator</a></li>
-<li><a class="reference external" href="#walkDirs.i,string">walkDirs iterator</a></li>
-<li><a class="reference external" href="#walkDirRec.i,string">walkDirRec iterator</a></li>
+<ul class="simple"><li><a class="reference external" href="#walkPattern.i,string">walkPattern イテレータ</a></li>
+<li><a class="reference external" href="#walkFiles.i,string">walkFiles イテレータ</a></li>
+<li><a class="reference external" href="#walkDirs.i,string">walkDirs イテレータ</a></li>
+<li><a class="reference external" href="#walkDirRec.i,string">walkDirRec イテレータ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -2644,19 +2644,19 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <p>If <tt class="docutils literal"><span class="pre">relative</span></tt> is true (default: false) the resulting path is shortened to be relative to <tt class="docutils literal"><span class="pre">dir</span></tt>, otherwise the full path is returned.</p>
 <p><strong>Warning</strong>: Modifying the directory structure while the iterator is traversing may result in undefined behavior!</p>
 <p>Walking is recursive. <tt class="docutils literal"><span class="pre">followFilter</span></tt> controls the behaviour of the iterator:</p>
-<table border="1" class="docutils"><tr><th>yieldFilter</th><th>meaning</th></tr>
-<tr><td><tt class="docutils literal"><span class="pre">pcFile</span></tt></td><td>yield real files (default)</td></tr>
-<tr><td><tt class="docutils literal"><span class="pre">pcLinkToFile</span></tt></td><td>yield symbolic links to files</td></tr>
-<tr><td><tt class="docutils literal"><span class="pre">pcDir</span></tt></td><td>yield real directories</td></tr>
-<tr><td><tt class="docutils literal"><span class="pre">pcLinkToDir</span></tt></td><td>yield symbolic links to directories</td></tr>
-</table><table border="1" class="docutils"><tr><th>followFilter</th><th>meaning</th></tr>
-<tr><td><tt class="docutils literal"><span class="pre">pcDir</span></tt></td><td>follow real directories (default)</td></tr>
-<tr><td><tt class="docutils literal"><span class="pre">pcLinkToDir</span></tt></td><td>follow symbolic links to directories</td></tr>
+<table border="1" class="docutils"><tr><th>yieldFilter</th><th>説明</th></tr>
+<tr><td><tt class="docutils literal"><span class="pre">pcFile</span></tt></td><td>実ファイルを作成します (デフォルト)。</td></tr>
+<tr><td><tt class="docutils literal"><span class="pre">pcLinkToFile</span></tt></td><td>ファイルへシンボリックリンクを張ります。</td></tr>
+<tr><td><tt class="docutils literal"><span class="pre">pcDir</span></tt></td><td>実ディレクトリを作成します。</td></tr>
+<tr><td><tt class="docutils literal"><span class="pre">pcLinkToDir</span></tt></td><td>ディレクトリへシンボリックリンクを張ります。</td></tr>
+</table><table border="1" class="docutils"><tr><th>followFilter</th><th>説明</th></tr>
+<tr><td><tt class="docutils literal"><span class="pre">pcDir</span></tt></td><td>実ディレクトリを辿ります (デフォルト)。</td></tr>
+<tr><td><tt class="docutils literal"><span class="pre">pcLinkToDir</span></tt></td><td>ディレクトリへのシンボリックリンクを辿ります。</td></tr>
 </table><p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#walkPattern.i,string">walkPattern iterator</a></li>
-<li><a class="reference external" href="#walkFiles.i,string">walkFiles iterator</a></li>
-<li><a class="reference external" href="#walkDirs.i,string">walkDirs iterator</a></li>
-<li><a class="reference external" href="#walkDir.i,string">walkDir iterator</a></li>
+<ul class="simple"><li><a class="reference external" href="#walkPattern.i,string">walkPattern イテレータ</a></li>
+<li><a class="reference external" href="#walkFiles.i,string">walkFiles イテレータ</a></li>
+<li><a class="reference external" href="#walkDirs.i,string">walkDirs イテレータ</a></li>
+<li><a class="reference external" href="#walkDir.i,string">walkDir イテレータ</a></li>
 </ul>
 
 &nbsp;&nbsp;<a

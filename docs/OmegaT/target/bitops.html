@@ -217,13 +217,9 @@ function main() {
 <dt><pre><a href="bitops.html#BitsRange"><span class="Identifier">BitsRange</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span> <span class="Other">=</span> <a href="system.html#range"><span class="Identifier">range</span></a><span class="Other">[</span><span class="DecNumber">0</span> <span class="Operator">..</span> <span class="Identifier">sizeof</span><span class="Other">(</span><span class="Identifier">T</span><span class="Other">)</span> <span class="Operator">*</span> <span class="DecNumber">8</span> <span class="Operator">-</span> <span class="DecNumber">1</span><span class="Other">]</span></pre></dt>
 <dd>
 
-
-
-Returns a range with all bit positions for type <tt class="docutils literal"><span class="pre">T</span></tt>
-&nbsp;&nbsp;<a
+Returns a range with all bit positions for type <tt class="docutils literal"><span class="pre">T</span></tt> &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/bitops.nim#L70"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/bitops.nim#L70" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/bitops.nim#L70" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 
@@ -310,78 +306,54 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#setBit%2CT%2CBitsRange%5BT%3A+SomeInteger%5D"><span class="Identifier">setBit</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <a href="system.html#SomeInteger"><span class="Identifier">SomeInteger</span></a><span class="Other">]</span><span class="Other">(</span><span class="Identifier">v</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">bit</span><span class="Other">:</span> <a href="bitops.html#BitsRange"><span class="Identifier">BitsRange</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Returns <tt class="docutils literal"><span class="pre">v</span></tt>, with the bit at position <tt class="docutils literal"><span class="pre">bit</span></tt> set to 1
-&nbsp;&nbsp;<a
+Returns <tt class="docutils literal"><span class="pre">v</span></tt>, with the bit at position <tt class="docutils literal"><span class="pre">bit</span></tt> set to 1 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/bitops.nim#L85"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/bitops.nim#L85" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/bitops.nim#L85" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="clearBit,T,BitsRange[T: SomeInteger]"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#clearBit%2CT%2CBitsRange%5BT%3A+SomeInteger%5D"><span class="Identifier">clearBit</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <a href="system.html#SomeInteger"><span class="Identifier">SomeInteger</span></a><span class="Other">]</span><span class="Other">(</span><span class="Identifier">v</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">bit</span><span class="Other">:</span> <a href="bitops.html#BitsRange"><span class="Identifier">BitsRange</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Returns <tt class="docutils literal"><span class="pre">v</span></tt>, with the bit at position <tt class="docutils literal"><span class="pre">bit</span></tt> set to 0
-&nbsp;&nbsp;<a
+Returns <tt class="docutils literal"><span class="pre">v</span></tt>, with the bit at position <tt class="docutils literal"><span class="pre">bit</span></tt> set to 0 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/bitops.nim#L89"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/bitops.nim#L89" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/bitops.nim#L89" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="flipBit,T,BitsRange[T: SomeInteger]"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#flipBit%2CT%2CBitsRange%5BT%3A+SomeInteger%5D"><span class="Identifier">flipBit</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <a href="system.html#SomeInteger"><span class="Identifier">SomeInteger</span></a><span class="Other">]</span><span class="Other">(</span><span class="Identifier">v</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">bit</span><span class="Other">:</span> <a href="bitops.html#BitsRange"><span class="Identifier">BitsRange</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Returns <tt class="docutils literal"><span class="pre">v</span></tt>, with the bit at position <tt class="docutils literal"><span class="pre">bit</span></tt> flipped
-&nbsp;&nbsp;<a
+Returns <tt class="docutils literal"><span class="pre">v</span></tt>, with the bit at position <tt class="docutils literal"><span class="pre">bit</span></tt> flipped &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/bitops.nim#L93"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/bitops.nim#L93" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/bitops.nim#L93" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="testBit,T,BitsRange[T: SomeInteger]"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#testBit%2CT%2CBitsRange%5BT%3A+SomeInteger%5D"><span class="Identifier">testBit</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">:</span> <a href="system.html#SomeInteger"><span class="Identifier">SomeInteger</span></a><span class="Other">]</span><span class="Other">(</span><span class="Identifier">v</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">bit</span><span class="Other">:</span> <a href="bitops.html#BitsRange"><span class="Identifier">BitsRange</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Returns true if the bit in <tt class="docutils literal"><span class="pre">v</span></tt> at positions <tt class="docutils literal"><span class="pre">bit</span></tt> is set to 1
-&nbsp;&nbsp;<a
+Returns true if the bit in <tt class="docutils literal"><span class="pre">v</span></tt> at positions <tt class="docutils literal"><span class="pre">bit</span></tt> is set to 1 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/bitops.nim#L118"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/bitops.nim#L118" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/bitops.nim#L118" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="countSetBits,SomeInteger"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#countSetBits%2CSomeInteger"><span class="Identifier">countSetBits</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <a href="system.html#SomeInteger"><span class="Identifier">SomeInteger</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Counts the set bits in integer. (also called <span id="hamming-weight_1">Hamming weight</span>.)
-&nbsp;&nbsp;<a
+Counts the set bits in integer. (also called <span id="hamming-weight_1">Hamming weight</span>.) &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/bitops.nim#L273"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/bitops.nim#L273" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/bitops.nim#L273" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="popcount,SomeInteger"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#popcount%2CSomeInteger"><span class="Identifier">popcount</span></a><span class="Other">(</span><span class="Identifier">x</span><span class="Other">:</span> <a href="system.html#SomeInteger"><span class="Identifier">SomeInteger</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">noSideEffect</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Alias for for countSetBits (Hamming weight.)
-&nbsp;&nbsp;<a
+Alias for for countSetBits (Hamming weight.) &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/bitops.nim#L300"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/bitops.nim#L300" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/bitops.nim#L300" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="parityBits,SomeInteger"></a>
@@ -536,39 +508,27 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#setBits.m%2Ctyped%2Cvarargs%5Btyped%5D"><span class="Identifier">setBits</span></a><span class="Other">(</span><span class="Identifier">v</span><span class="Other">:</span> <a href="system.html#typed"><span class="Identifier">typed</span></a><span class="Other">;</span> <span class="Identifier">bits</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#typed"><span class="Identifier">typed</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-
-
-Returns <tt class="docutils literal"><span class="pre">v</span></tt>, with the bits at positions <tt class="docutils literal"><span class="pre">bits</span></tt> set to 1
-&nbsp;&nbsp;<a
+Returns <tt class="docutils literal"><span class="pre">v</span></tt>, with the bits at positions <tt class="docutils literal"><span class="pre">bits</span></tt> set to 1 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/bitops.nim#L97"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/bitops.nim#L97" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/bitops.nim#L97" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="clearBits.m,typed,varargs[typed]"></a>
 <dt><pre><span class="Keyword">macro</span> <a href="#clearBits.m%2Ctyped%2Cvarargs%5Btyped%5D"><span class="Identifier">clearBits</span></a><span class="Other">(</span><span class="Identifier">v</span><span class="Other">:</span> <a href="system.html#typed"><span class="Identifier">typed</span></a><span class="Other">;</span> <span class="Identifier">bits</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#typed"><span class="Identifier">typed</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-
-
-Returns <tt class="docutils literal"><span class="pre">v</span></tt>, with the bits at positions <tt class="docutils literal"><span class="pre">bits</span></tt> set to 0
-&nbsp;&nbsp;<a
+Returns <tt class="docutils literal"><span class="pre">v</span></tt>, with the bits at positions <tt class="docutils literal"><span class="pre">bits</span></tt> set to 0 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/bitops.nim#L104"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/bitops.nim#L104" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/bitops.nim#L104" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="flipBits.m,typed,varargs[typed]"></a>
 <dt><pre><span class="Keyword">macro</span> <a href="#flipBits.m%2Ctyped%2Cvarargs%5Btyped%5D"><span class="Identifier">flipBits</span></a><span class="Other">(</span><span class="Identifier">v</span><span class="Other">:</span> <a href="system.html#typed"><span class="Identifier">typed</span></a><span class="Other">;</span> <span class="Identifier">bits</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#typed"><span class="Identifier">typed</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-
-
-Returns <tt class="docutils literal"><span class="pre">v</span></tt>, with the bits at positions <tt class="docutils literal"><span class="pre">bits</span></tt> set to 0
-&nbsp;&nbsp;<a
+Returns <tt class="docutils literal"><span class="pre">v</span></tt>, with the bits at positions <tt class="docutils literal"><span class="pre">bits</span></tt> set to 0 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/bitops.nim#L111"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/bitops.nim#L111" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/bitops.nim#L111" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 

@@ -119,9 +119,9 @@ function main() {
     title="CgiError = object of IOError"><wbr />Cgi<wbr />Error<span class="attachedType"></span></a></li>
   <li><a class="reference" href="#RequestMethod"
     title="RequestMethod = enum
-  methodNone,                 ## no REQUEST_METHOD environment variable
-  methodPost,                 ## query uses the POST method
-  methodGet                   ## query uses the GET method"><wbr />Request<wbr />Method<span class="attachedType"></span></a></li>
+  methodNone,                 ## 環境変数 REQUEST_METHOD が存在しない
+  methodPost,                 ## POST メソッドの照会時に使用
+  methodGet                   ## GET メソッドの照会時に使用  "><wbr />Request<wbr />Method<span class="attachedType"></span></a></li>
 
   </ul>
 </li>
@@ -243,18 +243,18 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc">This module implements helper procs for CGI applications. 用例:<pre class="listing"><span class="Keyword">import</span> <span class="Identifier">strtabs</span><span class="Punctuation">,</span> <span class="Identifier">cgi</span>
+  <p class="module-desc">このモジュールはCGIアプリケーションで使える補助プロシージャの実装です。用例:<pre class="listing"><span class="Keyword">import</span> <span class="Identifier">strtabs</span><span class="Punctuation">,</span> <span class="Identifier">cgi</span>
 
-<span class="Comment"># Fill the values when debugging:</span>
+<span class="Comment"># デバッグ用の値を記述します:</span>
 <span class="Keyword">when</span> <span class="Identifier">debug</span><span class="Punctuation">:</span>
   <span class="Identifier">setTestData</span><span class="Punctuation">(</span><span class="StringLit">"name"</span><span class="Punctuation">,</span> <span class="StringLit">"Klaus"</span><span class="Punctuation">,</span> <span class="StringLit">"password"</span><span class="Punctuation">,</span> <span class="StringLit">"123456"</span><span class="Punctuation">)</span>
-<span class="Comment"># read the data into `myData`</span>
+<span class="Comment"># `myData`にあるデータを読み取ります</span>
 <span class="Keyword">var</span> <span class="Identifier">myData</span> <span class="Operator">=</span> <span class="Identifier">readData</span><span class="Punctuation">(</span><span class="Punctuation">)</span>
-<span class="Comment"># check that the data's variable names are "name" or "password"</span>
+<span class="Comment"># データの変数名として "name" または "password" を確認します。</span>
 <span class="Identifier">validateData</span><span class="Punctuation">(</span><span class="Identifier">myData</span><span class="Punctuation">,</span> <span class="StringLit">"name"</span><span class="Punctuation">,</span> <span class="StringLit">"password"</span><span class="Punctuation">)</span>
-<span class="Comment"># start generating content:</span>
+<span class="Comment"># コンテンツの生成開始:</span>
 <span class="Identifier">writeContentType</span><span class="Punctuation">(</span><span class="Punctuation">)</span>
-<span class="Comment"># generate content:</span>
+<span class="Comment"># コンテンツの生成部:</span>
 <span class="Identifier">write</span><span class="Punctuation">(</span><span class="Identifier">stdout</span><span class="Punctuation">,</span> <span class="StringLit">"&lt;!DOCTYPE HTML PUBLIC </span><span class="EscapeSequence">\"</span><span class="EscapeSequence">-//W3C//DTD HTML 4.01//EN\"</span><span class="EscapeSequence">&gt;\n</span><span class="StringLit">"</span><span class="Punctuation">)</span>
 <span class="Identifier">write</span><span class="Punctuation">(</span><span class="Identifier">stdout</span><span class="Punctuation">,</span> <span class="StringLit">"&lt;html&gt;&lt;head&gt;&lt;title&gt;Test&lt;/title&gt;&lt;/head&gt;&lt;body&gt;</span><span class="EscapeSequence">\n</span><span class="StringLit">"</span><span class="Punctuation">)</span>
 <span class="Identifier">writeLine</span><span class="Punctuation">(</span><span class="Identifier">stdout</span><span class="Punctuation">,</span> <span class="StringLit">"your name: "</span> <span class="Operator">&amp;</span> <span class="Identifier">myData</span><span class="Punctuation">[</span><span class="StringLit">"name"</span><span class="Punctuation">]</span><span class="Punctuation">)</span>
@@ -272,29 +272,21 @@ function main() {
 <dt><pre><a href="cgi.html#CgiError"><span class="Identifier">CgiError</span></a> <span class="Other">=</span> <span class="Keyword">object</span> <span class="Keyword">of</span> <a href="system.html#IOError"><span class="Identifier">IOError</span></a></pre></dt>
 <dd>
 
-
-
-exception that is raised if a CGI error occurs
-&nbsp;&nbsp;<a
+CGI エラー時に発生する例外です &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L61"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L61" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L61" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="RequestMethod"></a>
 <dt><pre><a href="cgi.html#RequestMethod"><span class="Identifier">RequestMethod</span></a> <span class="Other">=</span> <span class="Keyword">enum</span>
-  <span class="Identifier">methodNone</span><span class="Other">,</span>                 <span class="Comment">## no REQUEST_METHOD environment variable</span>
-  <span class="Identifier">methodPost</span><span class="Other">,</span>                 <span class="Comment">## query uses the POST method</span>
-  <span class="Identifier">methodGet</span>                   <span class="Comment">## query uses the GET method</span></pre></dt>
+  <span class="Identifier">methodNone</span><span class="Other">,</span>                 <span class="Comment">## 環境変数 REQUEST_METHOD が存在しない</span>
+  <span class="Identifier">methodPost</span><span class="Other">,</span>                 <span class="Comment">## POST メソッドの照会時に使用</span>
+  <span class="Identifier">methodGet</span>                   <span class="Comment">## GET メソッドの照会時に使用</span></pre></dt>
 <dd>
 
-
-
-the used request method
-&nbsp;&nbsp;<a
+リクエストメソッドで使われます &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L62"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L62" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L62" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 
@@ -306,13 +298,11 @@ class="link-seesrc" target="_blank">Source</a>
 <dt><pre><span class="Keyword">proc</span> <a href="#xmlEncode%2Cstring"><span class="Identifier">xmlEncode</span></a><span class="Other">(</span><span class="Identifier">s</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Encodes a value to be XML safe:<ul class="simple"><li><tt class="docutils literal"><span class="pre">"</span></tt> is replaced by <tt class="docutils literal"><span class="pre">&amp;quot;</span></tt></li>
-<li><tt class="docutils literal"><span class="pre">&lt;</span></tt> is replaced by <tt class="docutils literal"><span class="pre">&amp;lt;</span></tt></li>
-<li><tt class="docutils literal"><span class="pre">&gt;</span></tt> is replaced by <tt class="docutils literal"><span class="pre">&amp;gt;</span></tt></li>
-<li><tt class="docutils literal"><span class="pre">&amp;</span></tt> is replaced by <tt class="docutils literal"><span class="pre">&amp;amp;</span></tt></li>
-<li>every other character is carried over.</li>
+安全な XML にするために値をエンコードします:<ul class="simple"><li><tt class="docutils literal"><span class="pre">"</span></tt> は <tt class="docutils literal"><span class="pre">&amp;quot;</span></tt> へ置換</li>
+<li><tt class="docutils literal"><span class="pre">&lt;</span></tt> は <tt class="docutils literal"><span class="pre">&amp;lt;</span></tt> へ置換</li>
+<li><tt class="docutils literal"><span class="pre">&gt;</span></tt> は <tt class="docutils literal"><span class="pre">&amp;gt;</span></tt> へ置換</li>
+<li><tt class="docutils literal"><span class="pre">&amp;</span></tt> は <tt class="docutils literal"><span class="pre">&amp;amp;</span></tt> へ置換</li>
+<li>それ以外の文字はそのままになります。</li>
 </ul>
 
 &nbsp;&nbsp;<a
@@ -324,7 +314,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#cgiError%2Cstring"><span class="Identifier">cgiError</span></a><span class="Other">(</span><span class="Identifier">msg</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">noreturn</span><span class="Other">,</span> <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">CgiError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-raises an ECgi exception with message <tt class="docutils literal"><span class="pre">msg</span></tt>. &nbsp;&nbsp;<a
+メッセージ <tt class="docutils literal"><span class="pre">msg</span></tt> 付きで ECgi 例外を発生させます。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L67"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L67" class="link-seesrc" target="_blank" >編集</a>
 
@@ -334,7 +324,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">CgiError</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">IOError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Read CGI data. If the client does not use a method listed in the <tt class="docutils literal"><span class="pre">allowedMethods</span></tt> set, an <tt class="docutils literal"><span class="pre">ECgi</span></tt> exception is raised. &nbsp;&nbsp;<a
+CGI データを読み取ります。クライアントで <tt class="docutils literal"><span class="pre">allowedMethods</span></tt> 集合にあるメソッドのリストを使っていないときは、 <tt class="docutils literal"><span class="pre">ECgi</span></tt> 例外が発生します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L144"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L144" class="link-seesrc" target="_blank" >編集</a>
 
@@ -343,7 +333,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#readData%2Cstring"><span class="Identifier">readData</span></a><span class="Other">(</span><span class="Identifier">data</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="strtabs.html#StringTableRef"><span class="Identifier">StringTableRef</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">CgiError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Read CGI data from a string. &nbsp;&nbsp;<a
+文字列から CGI データを読み取ります。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L152"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L152" class="link-seesrc" target="_blank" >編集</a>
 
@@ -353,7 +343,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">CgiError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-validates data; raises <tt class="docutils literal"><span class="pre">ECgi</span></tt> if this fails. This checks that each variable name of the CGI <tt class="docutils literal"><span class="pre">data</span></tt> occurs in the <tt class="docutils literal"><span class="pre">validKeys</span></tt> array. &nbsp;&nbsp;<a
+data の妥当性を検証します。失敗時は <tt class="docutils literal"><span class="pre">ECgi</span></tt> が発生します。これは CGI <tt class="docutils literal"><span class="pre">data</span></tt> (データ) における個々の変数名が <tt class="docutils literal"><span class="pre">validKeys</span></tt> 配列に存在するか確認します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L158"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L158" class="link-seesrc" target="_blank" >編集</a>
 
@@ -362,416 +352,288 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#getContentLength"><span class="Identifier">getContentLength</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">CONTENT_LENGTH</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">CONTENT_LENGTH</span></tt>  の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L165"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L165" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L165" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getContentType"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getContentType"><span class="Identifier">getContentType</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">CONTENT_TYPE</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">CONTENT_TYPE</span></tt>  の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L169"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L169" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L169" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getDocumentRoot"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getDocumentRoot"><span class="Identifier">getDocumentRoot</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">DOCUMENT_ROOT</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">DOCUMENT_ROOT</span></tt>  の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L173"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L173" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L173" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getGatewayInterface"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getGatewayInterface"><span class="Identifier">getGatewayInterface</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">GATEWAY_INTERFACE</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">GATEWAY_INTERFACE</span></tt>  の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L177"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L177" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L177" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getHttpAccept"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getHttpAccept"><span class="Identifier">getHttpAccept</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">HTTP_ACCEPT</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">HTTP_ACCEPT</span></tt>  の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L181"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L181" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L181" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getHttpAcceptCharset"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getHttpAcceptCharset"><span class="Identifier">getHttpAcceptCharset</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">HTTP_ACCEPT_CHARSET</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">HTTP_ACCEPT_CHARSET</span></tt>  の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L185"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L185" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L185" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getHttpAcceptEncoding"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getHttpAcceptEncoding"><span class="Identifier">getHttpAcceptEncoding</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">HTTP_ACCEPT_ENCODING</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">HTTP_ACCEPT_ENCODING</span></tt>  の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L189"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L189" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L189" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getHttpAcceptLanguage"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getHttpAcceptLanguage"><span class="Identifier">getHttpAcceptLanguage</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">HTTP_ACCEPT_LANGUAGE</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">HTTP_ACCEPT_LANGUAGE</span></tt>  の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L193"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L193" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L193" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getHttpConnection"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getHttpConnection"><span class="Identifier">getHttpConnection</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">HTTP_CONNECTION</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">HTTP_CONNECTION</span></tt>  の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L197"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L197" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L197" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getHttpCookie"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getHttpCookie"><span class="Identifier">getHttpCookie</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">HTTP_COOKIE</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">HTTP_COOKIE</span></tt> の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L201"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L201" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L201" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getHttpHost"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getHttpHost"><span class="Identifier">getHttpHost</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">HTTP_HOST</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">HTTP_HOST</span></tt> の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L205"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L205" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L205" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getHttpReferer"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getHttpReferer"><span class="Identifier">getHttpReferer</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">HTTP_REFERER</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">HTTP_REFERER</span></tt> の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L209"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L209" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L209" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getHttpUserAgent"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getHttpUserAgent"><span class="Identifier">getHttpUserAgent</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">HTTP_USER_AGENT</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">HTTP_USER_AGENT</span></tt> の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L213"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L213" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L213" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getPathInfo"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getPathInfo"><span class="Identifier">getPathInfo</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">PATH_INFO</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">PATH_INFO</span></tt> の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L217"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L217" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L217" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getPathTranslated"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getPathTranslated"><span class="Identifier">getPathTranslated</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">PATH_TRANSLATED</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">PATH_TRANSLATED</span></tt> の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L221"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L221" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L221" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getQueryString"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getQueryString"><span class="Identifier">getQueryString</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">QUERY_STRING</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">QUERY_STRING</span></tt> の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L225"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L225" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L225" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getRemoteAddr"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getRemoteAddr"><span class="Identifier">getRemoteAddr</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">REMOTE_ADDR</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">REMOTE_ADDR</span></tt> の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L229"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L229" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L229" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getRemoteHost"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getRemoteHost"><span class="Identifier">getRemoteHost</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">REMOTE_HOST</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">REMOTE_HOST</span></tt> の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L233"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L233" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L233" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getRemoteIdent"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getRemoteIdent"><span class="Identifier">getRemoteIdent</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">REMOTE_IDENT</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">REMOTE_IDENT</span></tt> の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L237"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L237" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L237" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getRemotePort"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getRemotePort"><span class="Identifier">getRemotePort</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">REMOTE_PORT</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">REMOTE_PORT</span></tt> の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L241"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L241" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L241" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getRemoteUser"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getRemoteUser"><span class="Identifier">getRemoteUser</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">REMOTE_USER</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">REMOTE_USER</span></tt> の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L245"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L245" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L245" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getRequestMethod"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getRequestMethod"><span class="Identifier">getRequestMethod</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">REQUEST_METHOD</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">REQUEST_METHOD</span></tt> の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L249"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L249" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L249" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getRequestURI"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getRequestURI"><span class="Identifier">getRequestURI</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">REQUEST_URI</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">REQUEST_URI</span></tt> の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L253"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L253" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L253" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getScriptFilename"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getScriptFilename"><span class="Identifier">getScriptFilename</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">SCRIPT_FILENAME</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">SCRIPT_FILENAME</span></tt> の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L257"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L257" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L257" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getScriptName"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getScriptName"><span class="Identifier">getScriptName</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">SCRIPT_NAME</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">SCRIPT_NAME</span></tt> の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L261"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L261" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L261" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getServerAddr"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getServerAddr"><span class="Identifier">getServerAddr</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">SERVER_ADDR</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">SERVER_ADDR</span></tt> の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L265"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L265" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L265" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getServerAdmin"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getServerAdmin"><span class="Identifier">getServerAdmin</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">SERVER_ADMIN</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">SERVER_ADMIN</span></tt> の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L269"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L269" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L269" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getServerName"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getServerName"><span class="Identifier">getServerName</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">SERVER_NAME</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">SERVER_NAME</span></tt> の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L273"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L273" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L273" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getServerPort"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getServerPort"><span class="Identifier">getServerPort</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">SERVER_PORT</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">SERVER_PORT</span></tt> の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L277"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L277" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L277" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getServerProtocol"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getServerProtocol"><span class="Identifier">getServerProtocol</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">SERVER_PROTOCOL</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">SERVER_PROTOCOL</span></tt> の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L281"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L281" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L281" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getServerSignature"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getServerSignature"><span class="Identifier">getServerSignature</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">SERVER_SIGNATURE</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">SERVER_SIGNATURE</span></tt> の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L285"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L285" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L285" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="getServerSoftware"></a>
 <dt><pre><span class="Keyword">proc</span> <a href="#getServerSoftware"><span class="Identifier">getServerSoftware</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-returns contents of the <tt class="docutils literal"><span class="pre">SERVER_SOFTWARE</span></tt> environment variable
-&nbsp;&nbsp;<a
+環境変数 <tt class="docutils literal"><span class="pre">SERVER_SOFTWARE</span></tt> の内容を返します &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L289"
-class="link-seesrc" target="_blank">Source</a>
-<a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L289" class="link-seesrc" target="_blank" >Edit</a>
+class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L289" class="link-seesrc" target="_blank" >編集</a>
 
 </dd>
 <a id="setTestData,varargs[string]"></a>
@@ -779,7 +641,7 @@ class="link-seesrc" target="_blank">Source</a>
     <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">WriteEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-fills the appropriate environment variables to test your CGI application. This can only simulate the 'GET' request method. <tt class="docutils literal"><span class="pre">keysvalues</span></tt> should provide embedded (name, value)-pairs. 用例:<pre class="listing"><span class="Identifier">setTestData</span><span class="Punctuation">(</span><span class="StringLit">"name"</span><span class="Punctuation">,</span> <span class="StringLit">"Hanz"</span><span class="Punctuation">,</span> <span class="StringLit">"password"</span><span class="Punctuation">,</span> <span class="StringLit">"12345"</span><span class="Punctuation">)</span></pre>
+CGI アプリケーションのテストするために適切な環境変数を記述します。これは 'GET' リクエスト・メソッドのシミュレート専用です。<tt class="docutils literal"><span class="pre">keysvalues</span></tt> では組み込み型の (name, value) ペアを指定してください。用例:<pre class="listing"><span class="Identifier">setTestData</span><span class="Punctuation">(</span><span class="StringLit">"name"</span><span class="Punctuation">,</span> <span class="StringLit">"Hanz"</span><span class="Punctuation">,</span> <span class="StringLit">"password"</span><span class="Punctuation">,</span> <span class="StringLit">"12345"</span><span class="Punctuation">)</span></pre>
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L293"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L293" class="link-seesrc" target="_blank" >編集</a>
@@ -789,9 +651,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#writeContentType"><span class="Identifier">writeContentType</span></a><span class="Other">(</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-call this before starting to send your HTML data to <tt class="docutils literal"><span class="pre">stdout</span></tt>. This implements this part of the CGI protocol:<pre class="listing"><span class="Identifier">write</span><span class="Punctuation">(</span><span class="Identifier">stdout</span><span class="Punctuation">,</span> <span class="StringLit">"Content-type: text/html</span><span class="EscapeSequence">\n</span><span class="EscapeSequence">\n</span><span class="StringLit">"</span><span class="Punctuation">)</span></pre>
+これは HTML データを <tt class="docutils literal"><span class="pre">stdout</span></tt> へ送信する前に呼び出してください。これは CGI プロトコルにおける下記の実装です:<pre class="listing"><span class="Identifier">write</span><span class="Punctuation">(</span><span class="Identifier">stdout</span><span class="Punctuation">,</span> <span class="StringLit">"Content-type: text/html</span><span class="EscapeSequence">\n</span><span class="EscapeSequence">\n</span><span class="StringLit">"</span><span class="Punctuation">)</span></pre>
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L311"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L311" class="link-seesrc" target="_blank" >編集</a>
@@ -801,7 +661,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#writeErrorMessage%2Cstring"><span class="Identifier">writeErrorMessage</span></a><span class="Other">(</span><span class="Identifier">data</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Tries to reset browser state and writes <tt class="docutils literal"><span class="pre">data</span></tt> to stdout in &lt;plaintext&gt; tag. &nbsp;&nbsp;<a
+ブラウザのステート、ならびに &lt;plaintext&gt; タグで stdout へ書き込まれた <tt class="docutils literal"><span class="pre">data</span></tt> のリセットを試行します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L329"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L329" class="link-seesrc" target="_blank" >編集</a>
 
@@ -810,7 +670,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#setStackTraceStdout"><span class="Identifier">setStackTraceStdout</span></a><span class="Other">(</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Makes Nim output stacktraces to stdout, instead of server log. &nbsp;&nbsp;<a
+Nim のスタックトレースをサーバログではなく stdout へ出力します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L338"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L338" class="link-seesrc" target="_blank" >編集</a>
 
@@ -819,7 +679,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#setCookie%2Cstring%2Cstring"><span class="Identifier">setCookie</span></a><span class="Other">(</span><span class="Identifier">name</span><span class="Other">,</span> <span class="Identifier">value</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">IOError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">WriteIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Sets a cookie. &nbsp;&nbsp;<a
+クッキーを設定します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L342"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L342" class="link-seesrc" target="_blank" >編集</a>
 
@@ -828,7 +688,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#getCookie%2Cstring"><span class="Identifier">getCookie</span></a><span class="Other">(</span><span class="Identifier">name</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#TaintedString"><span class="Identifier">TaintedString</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Gets a cookie. If no cookie of <tt class="docutils literal"><span class="pre">name</span></tt> exists, "" is returned. &nbsp;&nbsp;<a
+クッキーを取得します。指定されたクッキー <tt class="docutils literal"><span class="pre">name</span></tt> がないときは、  "" を返します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L349"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L349" class="link-seesrc" target="_blank" >編集</a>
 
@@ -837,7 +697,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#existsCookie%2Cstring"><span class="Identifier">existsCookie</span></a><span class="Other">(</span><span class="Identifier">name</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Checks if a cookie of <tt class="docutils literal"><span class="pre">name</span></tt> exists. &nbsp;&nbsp;<a
+指定されたクッキー <tt class="docutils literal"><span class="pre">name</span></tt> があるか確認します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L354"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L354" class="link-seesrc" target="_blank" >編集</a>
 
@@ -852,7 +712,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">CgiError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Reads and decodes CGI data and yields the (name, value) pairs the data consists of. &nbsp;&nbsp;<a
+CGI データの読み取りとデコードを行い (name, value) のペアから成るデータを生成します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L93"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L93" class="link-seesrc" target="_blank" >編集</a>
 
@@ -863,7 +723,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">CgiError</span><span class="Other">,</span> <span class="Identifier">ValueError</span><span class="Other">,</span> <span class="Identifier">IOError</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ReadEnvEffect</span><span class="Other">,</span> <span class="Identifier">ReadIOEffect</span><span class="Other">]</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-Reads and decodes CGI data and yields the (name, value) pairs the data consists of. If the client does not use a method listed in the <tt class="docutils literal"><span class="pre">allowedMethods</span></tt> set, an <tt class="docutils literal"><span class="pre">ECgi</span></tt> exception is raised. &nbsp;&nbsp;<a
+CGI データの読み取りとデコードを行い (name, value) のペアから成るデータを生成します。クライアントで <tt class="docutils literal"><span class="pre">allowedMethods</span></tt> 集合にあるメソッドのリストを使っていないときは、 <tt class="docutils literal"><span class="pre">ECgi</span></tt> 例外が発生します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/cgi.nim#L135"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/cgi.nim#L135" class="link-seesrc" target="_blank" >編集</a>
 
