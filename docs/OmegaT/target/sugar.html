@@ -203,18 +203,18 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#capture.m%2Cvarargs%5Btyped%5D%2Cuntyped"><span class="Identifier">capture</span></a><span class="Other">(</span><span class="Identifier">locals</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#typed"><span class="Identifier">typed</span></a><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">body</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-Useful when creating a closure in a loop to capture some local loop variables by their current iteration values. 用例:<pre class="listing"><span class="Keyword">import</span> <span class="Identifier">strformat</span><span class="Punctuation">,</span> <span class="Identifier">sequtils</span><span class="Punctuation">,</span> <span class="Identifier">sugar</span>
+現在のイテレート値でローカルのループ変数を取り込むときにループでクロージャを作成するときに便利です。用例:<pre class="listing"><span class="Keyword">import</span> <span class="Identifier">strformat</span><span class="Punctuation">,</span> <span class="Identifier">sequtils</span><span class="Punctuation">,</span> <span class="Identifier">sugar</span>
 <span class="Keyword">var</span> <span class="Identifier">myClosure</span> <span class="Punctuation">:</span> <span class="Keyword">proc</span><span class="Punctuation">(</span><span class="Punctuation">)</span>
 <span class="Keyword">for</span> <span class="Identifier">i</span> <span class="Keyword">in</span> <span class="FloatNumber">5.</span><span class="Operator">.</span><span class="DecNumber">7</span><span class="Punctuation">:</span>
   <span class="Keyword">for</span> <span class="Identifier">j</span> <span class="Keyword">in</span> <span class="FloatNumber">7.</span><span class="Operator">.</span><span class="DecNumber">9</span><span class="Punctuation">:</span>
     <span class="Keyword">if</span> <span class="Identifier">i</span> <span class="Operator">*</span> <span class="Identifier">j</span> <span class="Operator">==</span> <span class="DecNumber">42</span><span class="Punctuation">:</span>
       <span class="Identifier">capture</span> <span class="Identifier">i</span><span class="Punctuation">,</span> <span class="Identifier">j</span><span class="Punctuation">:</span>
         <span class="Identifier">myClosure</span> <span class="Operator">=</span> <span class="Keyword">proc</span> <span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Operator">=</span> <span class="Identifier">echo</span> <span class="RawData">fmt"{i} * {j} = 42"</span>
-<span class="Identifier">myClosure</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Comment"># output: 6 * 7 == 42</span>
+<span class="Identifier">myClosure</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Comment"># 出力: 6 * 7 == 42</span>
 <span class="Keyword">let</span> <span class="Identifier">m</span> <span class="Operator">=</span> <span class="Operator">@</span><span class="Punctuation">[</span><span class="Keyword">proc</span> <span class="Punctuation">(</span><span class="Identifier">s</span><span class="Punctuation">:</span> <span class="Identifier">string</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">string</span> <span class="Operator">=</span> <span class="StringLit">"to "</span> <span class="Operator">&amp;</span> <span class="Identifier">s</span><span class="Punctuation">,</span> <span class="Keyword">proc</span> <span class="Punctuation">(</span><span class="Identifier">s</span><span class="Punctuation">:</span> <span class="Identifier">string</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">string</span> <span class="Operator">=</span> <span class="StringLit">"not to "</span> <span class="Operator">&amp;</span> <span class="Identifier">s</span><span class="Punctuation">]</span>
 <span class="Keyword">var</span> <span class="Identifier">l</span> <span class="Operator">=</span> <span class="Identifier">m</span><span class="Operator">.</span><span class="Identifier">mapIt</span><span class="Punctuation">(</span><span class="Identifier">capture</span><span class="Punctuation">(</span><span class="Identifier">it</span><span class="Punctuation">,</span> <span class="Keyword">proc</span> <span class="Punctuation">(</span><span class="Identifier">s</span><span class="Punctuation">:</span> <span class="Identifier">string</span><span class="Punctuation">)</span><span class="Punctuation">:</span> <span class="Identifier">string</span> <span class="Operator">=</span> <span class="Identifier">it</span><span class="Punctuation">(</span><span class="Identifier">s</span><span class="Punctuation">)</span><span class="Punctuation">)</span><span class="Punctuation">)</span>
 <span class="Keyword">let</span> <span class="Identifier">r</span> <span class="Operator">=</span> <span class="Identifier">l</span><span class="Operator">.</span><span class="Identifier">mapIt</span><span class="Punctuation">(</span><span class="Identifier">it</span><span class="Punctuation">(</span><span class="StringLit">"be"</span><span class="Punctuation">)</span><span class="Punctuation">)</span>
-<span class="Identifier">echo</span> <span class="Identifier">r</span><span class="Punctuation">[</span><span class="DecNumber">0</span><span class="Punctuation">]</span> <span class="Operator">&amp;</span> <span class="StringLit">", or "</span> <span class="Operator">&amp;</span> <span class="Identifier">r</span><span class="Punctuation">[</span><span class="DecNumber">1</span><span class="Punctuation">]</span> <span class="Comment"># output: to be, or not to be</span></pre>
+<span class="Identifier">echo</span> <span class="Identifier">r</span><span class="Punctuation">[</span><span class="DecNumber">0</span><span class="Punctuation">]</span> <span class="Operator">&amp;</span> <span class="StringLit">", or "</span> <span class="Operator">&amp;</span> <span class="Identifier">r</span><span class="Punctuation">[</span><span class="DecNumber">1</span><span class="Punctuation">]</span> <span class="Comment"># 出力: to be, または not to be</span></pre>
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/sugar.nim#L168"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/sugar.nim#L168" class="link-seesrc" target="_blank" >編集</a>
@@ -224,10 +224,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#dup.m%2CT%2Cvarargs%5Buntyped%5D"><span class="Identifier">dup</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">arg</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">;</span> <span class="Identifier">calls</span><span class="Other">:</span> <a href="system.html#varargs"><span class="Identifier">varargs</span></a><span class="Other">[</span><a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span></pre></dt>
 <dd>
 
-
-
-Turns an <span id="inminusplace_1">in-place</span> algorithm into one that works on a copy and returns this copy. <strong>Since</strong>: Version 1.2.
-
+<span id="inminusplace_1">インプレース方式</span> (in-place) のアルゴリズムによりコピー処理をすることで変換したコピーを返します。Version 1.2 <strong>以降</strong>
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">import</span>
   <span class="Identifier">algorithm</span>
@@ -249,9 +246,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">macro</span> <a href="#collect.m%2Cuntyped%2Cuntyped"><span class="Identifier">collect</span></a><span class="Other">(</span><span class="Identifier">init</span><span class="Other">,</span> <span class="Identifier">body</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a><span class="Other">)</span><span class="Other">:</span> <a href="system.html#untyped"><span class="Identifier">untyped</span></a></pre></dt>
 <dd>
 
-<p>Comprehension for seq/set/table collections. <tt class="docutils literal"><span class="pre">init</span></tt> is the init call, and so custom collections are supported.</p>
-<p>The last statement of <tt class="docutils literal"><span class="pre">body</span></tt> has special syntax that specifies the collection's add operation. Use <tt class="docutils literal"><span class="pre">{e}</span></tt> for set's <tt class="docutils literal"><span class="pre">incl</span></tt>, <tt class="docutils literal"><span class="pre">{k: v}</span></tt> for table's <tt class="docutils literal"><span class="pre">[]=</span></tt> and <tt class="docutils literal"><span class="pre">e</span></tt> for seq's <tt class="docutils literal"><span class="pre">add</span></tt>.</p>
-<p>The <tt class="docutils literal"><span class="pre">init</span></tt> proc can be called with any number of arguments, i.e. <tt class="docutils literal"><span class="pre">initTable(initialSize)</span></tt>.</p>
+<p>seq/set/table コレクションを読み取ります。<tt class="docutils literal"><span class="pre">init</span></tt> は init を呼び出すため、カスタムコレクションがサポートされています。</p>
+<p><tt class="docutils literal"><span class="pre">body</span></tt> の最後にあるステートメントはコレクションへの add 操作を指示するための特別なシンタックスです。<tt class="docutils literal"><span class="pre">{e}</span></tt> は set (集合) の <tt class="docutils literal"><span class="pre">incl</span></tt> で、 <tt class="docutils literal"><span class="pre">{k: v}</span></tt> は table (テーブル) の <tt class="docutils literal"><span class="pre">[]=</span></tt> で、そして <tt class="docutils literal"><span class="pre">e</span></tt> は seq (シーケンス) の <tt class="docutils literal"><span class="pre">add</span></tt> で使います。</p>
+<p>換言すれば、 <tt class="docutils literal"><span class="pre">initTable(initialSize)</span></tt> といったように <tt class="docutils literal"><span class="pre">init</span></tt> プロシージャには引数を何個でも与えて呼び出せます。</p>
 
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">import</span>
@@ -264,7 +261,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Keyword">if</span> <span class="Identifier">i</span> <span class="Keyword">mod</span> <span class="DecNumber">2</span> <span class="Operator">==</span> <span class="DecNumber">0</span><span class="Other">:</span>
       <span class="Identifier">d</span>
 <span class="Identifier">assert</span> <span class="Identifier">k</span> <span class="Operator">==</span> <span class="Operator">@</span><span class="Other">[</span><span class="StringLit">"bird"</span><span class="Other">]</span>
-<span class="Comment">## seq with initialSize:</span>
+<span class="Comment">## initialSize がある seq:</span>
 <span class="Keyword">let</span> <span class="Identifier">x</span> <span class="Other">=</span> <span class="Identifier">collect</span><span class="Other">(</span><span class="Identifier">newSeqOfCap</span><span class="Other">(</span><span class="DecNumber">4</span><span class="Other">)</span><span class="Other">)</span><span class="Other">:</span>
   <span class="Keyword">for</span> <span class="Identifier">i</span><span class="Other">,</span> <span class="Identifier">d</span> <span class="Keyword">in</span> <span class="Identifier">data</span><span class="Other">.</span><span class="Identifier">pairs</span><span class="Other">:</span>
     <span class="Keyword">if</span> <span class="Identifier">i</span> <span class="Keyword">mod</span> <span class="DecNumber">2</span> <span class="Operator">==</span> <span class="DecNumber">0</span><span class="Other">:</span>
@@ -295,11 +292,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
     <span class="Identifier">deprecated</span><span class="Other">:</span> <span class="StringLit">"use distinctBase from typetraits instead"</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
   <div class="deprecation-message">
-    <b>Deprecated:</b> use distinctBase from typetraits instead
-  
+    <b>廃止:</b> typetraits モジュールの distinctBase をお使いください
   </div>
 
-<tt class="docutils literal"><span class="pre">type T = distinct A</span></tt> を反転します。これは再帰的処理を行います。&nbsp;&nbsp;<a
+<tt class="docutils literal"><span class="pre">type T = distinct A</span></tt> を反転します。これは再帰処理を行います。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/sugar.nim#L164"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/sugar.nim#L164" class="link-seesrc" target="_blank" >編集</a>
 

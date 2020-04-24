@@ -1979,6 +1979,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;b0&gt;</bpt>Deprecated:<ept i="0">&lt;/b0&gt;</ept> use distinctBase from typetraits instead</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200424T200131Z" creationid="isVowel" creationdate="20200424T200131Z">
+        <seg><bpt i="0" x="0">&lt;b0&gt;</bpt>廃止:<ept i="0">&lt;/b0&gt;</ept> typetraits モジュールの distinctBase をお使いください</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg><bpt i="0" x="0">&lt;b0&gt;</bpt>Deprecated:<ept i="0">&lt;/b0&gt;</ept> use readLines with two arguments</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200303T032349Z" creationid="isVowel" creationdate="20200303T024624Z">
@@ -4244,6 +4252,14 @@ even skies of spring and flowers of summer must ever be poison to me."""<ept i="
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg><bpt i="1" x="1">&lt;s1&gt;</bpt>Since<ept i="1">&lt;/s1&gt;</ept>: Version 1.2.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200424T183035Z" creationid="isVowel" creationdate="20200424T183035Z">
+        <seg>Version 1.2 <bpt i="1" x="1">&lt;s1&gt;</bpt>以降<ept i="1">&lt;/s1&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg><bpt i="202" x="202">&lt;s202&gt;</bpt>tagKeygen<ept i="202">&lt;/s202&gt;</ept><bpt i="203" x="203">&lt;s203&gt;</bpt>,<ept i="203">&lt;/s203&gt;</ept>                  <bpt i="204" x="204">&lt;s204&gt;</bpt>## the HTML ``keygen`` element<ept i="204">&lt;/s204&gt;</ept></seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
@@ -6210,6 +6226,38 @@ even skies of spring and flowers of summer must ever be poison to me."""<ept i="
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg><bpt i="38" x="38">&lt;s38&gt;</bpt>d<ept i="38">&lt;/s38&gt;</ept>
+<bpt i="39" x="39">&lt;s39&gt;</bpt>assert<ept i="39">&lt;/s39&gt;</ept> <bpt i="40" x="40">&lt;s40&gt;</bpt>k<ept i="40">&lt;/s40&gt;</ept> <bpt i="41" x="41">&lt;s41&gt;</bpt>==<ept i="41">&lt;/s41&gt;</ept> <bpt i="42" x="42">&lt;s42&gt;</bpt>@<ept i="42">&lt;/s42&gt;</ept><bpt i="43" x="43">&lt;s43&gt;</bpt>[<ept i="43">&lt;/s43&gt;</ept><bpt i="44" x="44">&lt;s44&gt;</bpt>"bird"<ept i="44">&lt;/s44&gt;</ept><bpt i="45" x="45">&lt;s45&gt;</bpt>]<ept i="45">&lt;/s45&gt;</ept>
+<bpt i="46" x="46">&lt;s46&gt;</bpt>## seq with initialSize:<ept i="46">&lt;/s46&gt;</ept>
+<bpt i="47" x="47">&lt;s47&gt;</bpt>let<ept i="47">&lt;/s47&gt;</ept> <bpt i="48" x="48">&lt;s48&gt;</bpt>x<ept i="48">&lt;/s48&gt;</ept> <bpt i="49" x="49">&lt;s49&gt;</bpt>=<ept i="49">&lt;/s49&gt;</ept> <bpt i="50" x="50">&lt;s50&gt;</bpt>collect<ept i="50">&lt;/s50&gt;</ept><bpt i="51" x="51">&lt;s51&gt;</bpt>(<ept i="51">&lt;/s51&gt;</ept><bpt i="52" x="52">&lt;s52&gt;</bpt>newSeqOfCap<ept i="52">&lt;/s52&gt;</ept><bpt i="53" x="53">&lt;s53&gt;</bpt>(<ept i="53">&lt;/s53&gt;</ept><bpt i="54" x="54">&lt;s54&gt;</bpt>4<ept i="54">&lt;/s54&gt;</ept><bpt i="55" x="55">&lt;s55&gt;</bpt>)<ept i="55">&lt;/s55&gt;</ept><bpt i="56" x="56">&lt;s56&gt;</bpt>)<ept i="56">&lt;/s56&gt;</ept><bpt i="57" x="57">&lt;s57&gt;</bpt>:<ept i="57">&lt;/s57&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200424T195400Z" creationid="isVowel" creationdate="20200424T195400Z">
+        <seg><bpt i="38" x="38">&lt;s38&gt;</bpt>d<ept i="38">&lt;/s38&gt;</ept>
+<bpt i="39" x="39">&lt;s39&gt;</bpt>assert<ept i="39">&lt;/s39&gt;</ept> <bpt i="40" x="40">&lt;s40&gt;</bpt>k<ept i="40">&lt;/s40&gt;</ept> <bpt i="41" x="41">&lt;s41&gt;</bpt>==<ept i="41">&lt;/s41&gt;</ept> <bpt i="42" x="42">&lt;s42&gt;</bpt>@<ept i="42">&lt;/s42&gt;</ept><bpt i="43" x="43">&lt;s43&gt;</bpt>[<ept i="43">&lt;/s43&gt;</ept><bpt i="44" x="44">&lt;s44&gt;</bpt>"bird"<ept i="44">&lt;/s44&gt;</ept><bpt i="45" x="45">&lt;s45&gt;</bpt>]<ept i="45">&lt;/s45&gt;</ept>
+<bpt i="46" x="46">&lt;s46&gt;</bpt>## initialSize がある seq:<ept i="46">&lt;/s46&gt;</ept>
+<bpt i="47" x="47">&lt;s47&gt;</bpt>let<ept i="47">&lt;/s47&gt;</ept> <bpt i="48" x="48">&lt;s48&gt;</bpt>x<ept i="48">&lt;/s48&gt;</ept> <bpt i="49" x="49">&lt;s49&gt;</bpt>=<ept i="49">&lt;/s49&gt;</ept> <bpt i="50" x="50">&lt;s50&gt;</bpt>collect<ept i="50">&lt;/s50&gt;</ept><bpt i="51" x="51">&lt;s51&gt;</bpt>(<ept i="51">&lt;/s51&gt;</ept><bpt i="52" x="52">&lt;s52&gt;</bpt>newSeqOfCap<ept i="52">&lt;/s52&gt;</ept><bpt i="53" x="53">&lt;s53&gt;</bpt>(<ept i="53">&lt;/s53&gt;</ept><bpt i="54" x="54">&lt;s54&gt;</bpt>4<ept i="54">&lt;/s54&gt;</ept><bpt i="55" x="55">&lt;s55&gt;</bpt>)<ept i="55">&lt;/s55&gt;</ept><bpt i="56" x="56">&lt;s56&gt;</bpt>)<ept i="56">&lt;/s56&gt;</ept><bpt i="57" x="57">&lt;s57&gt;</bpt>:<ept i="57">&lt;/s57&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="38" x="38">&lt;s38&gt;</bpt>myClosure<ept i="38">&lt;/s38&gt;</ept> <bpt i="39" x="39">&lt;s39&gt;</bpt>=<ept i="39">&lt;/s39&gt;</ept> <bpt i="40" x="40">&lt;s40&gt;</bpt>proc<ept i="40">&lt;/s40&gt;</ept> <bpt i="41" x="41">&lt;s41&gt;</bpt>(<ept i="41">&lt;/s41&gt;</ept><bpt i="42" x="42">&lt;s42&gt;</bpt>)<ept i="42">&lt;/s42&gt;</ept> <bpt i="43" x="43">&lt;s43&gt;</bpt>=<ept i="43">&lt;/s43&gt;</ept> <bpt i="44" x="44">&lt;s44&gt;</bpt>echo<ept i="44">&lt;/s44&gt;</ept> <bpt i="45" x="45">&lt;s45&gt;</bpt>fmt"{i} * {j} = 42"<ept i="45">&lt;/s45&gt;</ept>
+<bpt i="46" x="46">&lt;s46&gt;</bpt>myClosure<ept i="46">&lt;/s46&gt;</ept><bpt i="47" x="47">&lt;s47&gt;</bpt>(<ept i="47">&lt;/s47&gt;</ept><bpt i="48" x="48">&lt;s48&gt;</bpt>)<ept i="48">&lt;/s48&gt;</ept> <bpt i="49" x="49">&lt;s49&gt;</bpt># output: 6 * 7 == 42<ept i="49">&lt;/s49&gt;</ept>
+<bpt i="50" x="50">&lt;s50&gt;</bpt>let<ept i="50">&lt;/s50&gt;</ept> <bpt i="51" x="51">&lt;s51&gt;</bpt>m<ept i="51">&lt;/s51&gt;</ept> <bpt i="52" x="52">&lt;s52&gt;</bpt>=<ept i="52">&lt;/s52&gt;</ept> <bpt i="53" x="53">&lt;s53&gt;</bpt>@<ept i="53">&lt;/s53&gt;</ept><bpt i="54" x="54">&lt;s54&gt;</bpt>[<ept i="54">&lt;/s54&gt;</ept><bpt i="55" x="55">&lt;s55&gt;</bpt>proc<ept i="55">&lt;/s55&gt;</ept> <bpt i="56" x="56">&lt;s56&gt;</bpt>(<ept i="56">&lt;/s56&gt;</ept><bpt i="57" x="57">&lt;s57&gt;</bpt>s<ept i="57">&lt;/s57&gt;</ept><bpt i="58" x="58">&lt;s58&gt;</bpt>:<ept i="58">&lt;/s58&gt;</ept> <bpt i="59" x="59">&lt;s59&gt;</bpt>string<ept i="59">&lt;/s59&gt;</ept><bpt i="60" x="60">&lt;s60&gt;</bpt>)<ept i="60">&lt;/s60&gt;</ept><bpt i="61" x="61">&lt;s61&gt;</bpt>:<ept i="61">&lt;/s61&gt;</ept> <bpt i="62" x="62">&lt;s62&gt;</bpt>string<ept i="62">&lt;/s62&gt;</ept> <bpt i="63" x="63">&lt;s63&gt;</bpt>=<ept i="63">&lt;/s63&gt;</ept> <bpt i="64" x="64">&lt;s64&gt;</bpt>"to "<ept i="64">&lt;/s64&gt;</ept> <bpt i="65" x="65">&lt;s65&gt;</bpt>&amp;<ept i="65">&lt;/s65&gt;</ept> <bpt i="66" x="66">&lt;s66&gt;</bpt>s<ept i="66">&lt;/s66&gt;</ept><bpt i="67" x="67">&lt;s67&gt;</bpt>,<ept i="67">&lt;/s67&gt;</ept> <bpt i="68" x="68">&lt;s68&gt;</bpt>proc<ept i="68">&lt;/s68&gt;</ept> <bpt i="69" x="69">&lt;s69&gt;</bpt>(<ept i="69">&lt;/s69&gt;</ept><bpt i="70" x="70">&lt;s70&gt;</bpt>s<ept i="70">&lt;/s70&gt;</ept><bpt i="71" x="71">&lt;s71&gt;</bpt>:<ept i="71">&lt;/s71&gt;</ept> <bpt i="72" x="72">&lt;s72&gt;</bpt>string<ept i="72">&lt;/s72&gt;</ept><bpt i="73" x="73">&lt;s73&gt;</bpt>)<ept i="73">&lt;/s73&gt;</ept><bpt i="74" x="74">&lt;s74&gt;</bpt>:<ept i="74">&lt;/s74&gt;</ept> <bpt i="75" x="75">&lt;s75&gt;</bpt>string<ept i="75">&lt;/s75&gt;</ept> <bpt i="76" x="76">&lt;s76&gt;</bpt>=<ept i="76">&lt;/s76&gt;</ept> <bpt i="77" x="77">&lt;s77&gt;</bpt>"not to "<ept i="77">&lt;/s77&gt;</ept> <bpt i="78" x="78">&lt;s78&gt;</bpt>&amp;<ept i="78">&lt;/s78&gt;</ept> <bpt i="79" x="79">&lt;s79&gt;</bpt>s<ept i="79">&lt;/s79&gt;</ept><bpt i="80" x="80">&lt;s80&gt;</bpt>]<ept i="80">&lt;/s80&gt;</ept>
+<bpt i="81" x="81">&lt;s81&gt;</bpt>var<ept i="81">&lt;/s81&gt;</ept> <bpt i="82" x="82">&lt;s82&gt;</bpt>l<ept i="82">&lt;/s82&gt;</ept> <bpt i="83" x="83">&lt;s83&gt;</bpt>=<ept i="83">&lt;/s83&gt;</ept> <bpt i="84" x="84">&lt;s84&gt;</bpt>m<ept i="84">&lt;/s84&gt;</ept><bpt i="85" x="85">&lt;s85&gt;</bpt>.<ept i="85">&lt;/s85&gt;</ept><bpt i="86" x="86">&lt;s86&gt;</bpt>mapIt<ept i="86">&lt;/s86&gt;</ept><bpt i="87" x="87">&lt;s87&gt;</bpt>(<ept i="87">&lt;/s87&gt;</ept><bpt i="88" x="88">&lt;s88&gt;</bpt>capture<ept i="88">&lt;/s88&gt;</ept><bpt i="89" x="89">&lt;s89&gt;</bpt>(<ept i="89">&lt;/s89&gt;</ept><bpt i="90" x="90">&lt;s90&gt;</bpt>it<ept i="90">&lt;/s90&gt;</ept><bpt i="91" x="91">&lt;s91&gt;</bpt>,<ept i="91">&lt;/s91&gt;</ept> <bpt i="92" x="92">&lt;s92&gt;</bpt>proc<ept i="92">&lt;/s92&gt;</ept> <bpt i="93" x="93">&lt;s93&gt;</bpt>(<ept i="93">&lt;/s93&gt;</ept><bpt i="94" x="94">&lt;s94&gt;</bpt>s<ept i="94">&lt;/s94&gt;</ept><bpt i="95" x="95">&lt;s95&gt;</bpt>:<ept i="95">&lt;/s95&gt;</ept> <bpt i="96" x="96">&lt;s96&gt;</bpt>string<ept i="96">&lt;/s96&gt;</ept><bpt i="97" x="97">&lt;s97&gt;</bpt>)<ept i="97">&lt;/s97&gt;</ept><bpt i="98" x="98">&lt;s98&gt;</bpt>:<ept i="98">&lt;/s98&gt;</ept> <bpt i="99" x="99">&lt;s99&gt;</bpt>string<ept i="99">&lt;/s99&gt;</ept> <bpt i="100" x="100">&lt;s100&gt;</bpt>=<ept i="100">&lt;/s100&gt;</ept> <bpt i="101" x="101">&lt;s101&gt;</bpt>it<ept i="101">&lt;/s101&gt;</ept><bpt i="102" x="102">&lt;s102&gt;</bpt>(<ept i="102">&lt;/s102&gt;</ept><bpt i="103" x="103">&lt;s103&gt;</bpt>s<ept i="103">&lt;/s103&gt;</ept><bpt i="104" x="104">&lt;s104&gt;</bpt>)<ept i="104">&lt;/s104&gt;</ept><bpt i="105" x="105">&lt;s105&gt;</bpt>)<ept i="105">&lt;/s105&gt;</ept><bpt i="106" x="106">&lt;s106&gt;</bpt>)<ept i="106">&lt;/s106&gt;</ept>
+<bpt i="107" x="107">&lt;s107&gt;</bpt>let<ept i="107">&lt;/s107&gt;</ept> <bpt i="108" x="108">&lt;s108&gt;</bpt>r<ept i="108">&lt;/s108&gt;</ept> <bpt i="109" x="109">&lt;s109&gt;</bpt>=<ept i="109">&lt;/s109&gt;</ept> <bpt i="110" x="110">&lt;s110&gt;</bpt>l<ept i="110">&lt;/s110&gt;</ept><bpt i="111" x="111">&lt;s111&gt;</bpt>.<ept i="111">&lt;/s111&gt;</ept><bpt i="112" x="112">&lt;s112&gt;</bpt>mapIt<ept i="112">&lt;/s112&gt;</ept><bpt i="113" x="113">&lt;s113&gt;</bpt>(<ept i="113">&lt;/s113&gt;</ept><bpt i="114" x="114">&lt;s114&gt;</bpt>it<ept i="114">&lt;/s114&gt;</ept><bpt i="115" x="115">&lt;s115&gt;</bpt>(<ept i="115">&lt;/s115&gt;</ept><bpt i="116" x="116">&lt;s116&gt;</bpt>"be"<ept i="116">&lt;/s116&gt;</ept><bpt i="117" x="117">&lt;s117&gt;</bpt>)<ept i="117">&lt;/s117&gt;</ept><bpt i="118" x="118">&lt;s118&gt;</bpt>)<ept i="118">&lt;/s118&gt;</ept>
+<bpt i="119" x="119">&lt;s119&gt;</bpt>echo<ept i="119">&lt;/s119&gt;</ept> <bpt i="120" x="120">&lt;s120&gt;</bpt>r<ept i="120">&lt;/s120&gt;</ept><bpt i="121" x="121">&lt;s121&gt;</bpt>[<ept i="121">&lt;/s121&gt;</ept><bpt i="122" x="122">&lt;s122&gt;</bpt>0<ept i="122">&lt;/s122&gt;</ept><bpt i="123" x="123">&lt;s123&gt;</bpt>]<ept i="123">&lt;/s123&gt;</ept> <bpt i="124" x="124">&lt;s124&gt;</bpt>&amp;<ept i="124">&lt;/s124&gt;</ept> <bpt i="125" x="125">&lt;s125&gt;</bpt>", or "<ept i="125">&lt;/s125&gt;</ept> <bpt i="126" x="126">&lt;s126&gt;</bpt>&amp;<ept i="126">&lt;/s126&gt;</ept> <bpt i="127" x="127">&lt;s127&gt;</bpt>r<ept i="127">&lt;/s127&gt;</ept><bpt i="128" x="128">&lt;s128&gt;</bpt>[<ept i="128">&lt;/s128&gt;</ept><bpt i="129" x="129">&lt;s129&gt;</bpt>1<ept i="129">&lt;/s129&gt;</ept><bpt i="130" x="130">&lt;s130&gt;</bpt>]<ept i="130">&lt;/s130&gt;</ept> <bpt i="131" x="131">&lt;s131&gt;</bpt># output: to be, or not to be<ept i="131">&lt;/s131&gt;</ept></seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200424T184858Z" creationid="isVowel" creationdate="20200424T182725Z">
+        <seg><bpt i="38" x="38">&lt;s38&gt;</bpt>myClosure<ept i="38">&lt;/s38&gt;</ept> <bpt i="39" x="39">&lt;s39&gt;</bpt>=<ept i="39">&lt;/s39&gt;</ept> <bpt i="40" x="40">&lt;s40&gt;</bpt>proc<ept i="40">&lt;/s40&gt;</ept> <bpt i="41" x="41">&lt;s41&gt;</bpt>(<ept i="41">&lt;/s41&gt;</ept><bpt i="42" x="42">&lt;s42&gt;</bpt>)<ept i="42">&lt;/s42&gt;</ept> <bpt i="43" x="43">&lt;s43&gt;</bpt>=<ept i="43">&lt;/s43&gt;</ept> <bpt i="44" x="44">&lt;s44&gt;</bpt>echo<ept i="44">&lt;/s44&gt;</ept> <bpt i="45" x="45">&lt;s45&gt;</bpt>fmt"{i} * {j} = 42"<ept i="45">&lt;/s45&gt;</ept>
+<bpt i="46" x="46">&lt;s46&gt;</bpt>myClosure<ept i="46">&lt;/s46&gt;</ept><bpt i="47" x="47">&lt;s47&gt;</bpt>(<ept i="47">&lt;/s47&gt;</ept><bpt i="48" x="48">&lt;s48&gt;</bpt>)<ept i="48">&lt;/s48&gt;</ept> <bpt i="49" x="49">&lt;s49&gt;</bpt># 出力: 6 * 7 == 42<ept i="49">&lt;/s49&gt;</ept>
+<bpt i="50" x="50">&lt;s50&gt;</bpt>let<ept i="50">&lt;/s50&gt;</ept> <bpt i="51" x="51">&lt;s51&gt;</bpt>m<ept i="51">&lt;/s51&gt;</ept> <bpt i="52" x="52">&lt;s52&gt;</bpt>=<ept i="52">&lt;/s52&gt;</ept> <bpt i="53" x="53">&lt;s53&gt;</bpt>@<ept i="53">&lt;/s53&gt;</ept><bpt i="54" x="54">&lt;s54&gt;</bpt>[<ept i="54">&lt;/s54&gt;</ept><bpt i="55" x="55">&lt;s55&gt;</bpt>proc<ept i="55">&lt;/s55&gt;</ept> <bpt i="56" x="56">&lt;s56&gt;</bpt>(<ept i="56">&lt;/s56&gt;</ept><bpt i="57" x="57">&lt;s57&gt;</bpt>s<ept i="57">&lt;/s57&gt;</ept><bpt i="58" x="58">&lt;s58&gt;</bpt>:<ept i="58">&lt;/s58&gt;</ept> <bpt i="59" x="59">&lt;s59&gt;</bpt>string<ept i="59">&lt;/s59&gt;</ept><bpt i="60" x="60">&lt;s60&gt;</bpt>)<ept i="60">&lt;/s60&gt;</ept><bpt i="61" x="61">&lt;s61&gt;</bpt>:<ept i="61">&lt;/s61&gt;</ept> <bpt i="62" x="62">&lt;s62&gt;</bpt>string<ept i="62">&lt;/s62&gt;</ept> <bpt i="63" x="63">&lt;s63&gt;</bpt>=<ept i="63">&lt;/s63&gt;</ept> <bpt i="64" x="64">&lt;s64&gt;</bpt>"to "<ept i="64">&lt;/s64&gt;</ept> <bpt i="65" x="65">&lt;s65&gt;</bpt>&amp;<ept i="65">&lt;/s65&gt;</ept> <bpt i="66" x="66">&lt;s66&gt;</bpt>s<ept i="66">&lt;/s66&gt;</ept><bpt i="67" x="67">&lt;s67&gt;</bpt>,<ept i="67">&lt;/s67&gt;</ept> <bpt i="68" x="68">&lt;s68&gt;</bpt>proc<ept i="68">&lt;/s68&gt;</ept> <bpt i="69" x="69">&lt;s69&gt;</bpt>(<ept i="69">&lt;/s69&gt;</ept><bpt i="70" x="70">&lt;s70&gt;</bpt>s<ept i="70">&lt;/s70&gt;</ept><bpt i="71" x="71">&lt;s71&gt;</bpt>:<ept i="71">&lt;/s71&gt;</ept> <bpt i="72" x="72">&lt;s72&gt;</bpt>string<ept i="72">&lt;/s72&gt;</ept><bpt i="73" x="73">&lt;s73&gt;</bpt>)<ept i="73">&lt;/s73&gt;</ept><bpt i="74" x="74">&lt;s74&gt;</bpt>:<ept i="74">&lt;/s74&gt;</ept> <bpt i="75" x="75">&lt;s75&gt;</bpt>string<ept i="75">&lt;/s75&gt;</ept> <bpt i="76" x="76">&lt;s76&gt;</bpt>=<ept i="76">&lt;/s76&gt;</ept> <bpt i="77" x="77">&lt;s77&gt;</bpt>"not to "<ept i="77">&lt;/s77&gt;</ept> <bpt i="78" x="78">&lt;s78&gt;</bpt>&amp;<ept i="78">&lt;/s78&gt;</ept> <bpt i="79" x="79">&lt;s79&gt;</bpt>s<ept i="79">&lt;/s79&gt;</ept><bpt i="80" x="80">&lt;s80&gt;</bpt>]<ept i="80">&lt;/s80&gt;</ept>
+<bpt i="81" x="81">&lt;s81&gt;</bpt>var<ept i="81">&lt;/s81&gt;</ept> <bpt i="82" x="82">&lt;s82&gt;</bpt>l<ept i="82">&lt;/s82&gt;</ept> <bpt i="83" x="83">&lt;s83&gt;</bpt>=<ept i="83">&lt;/s83&gt;</ept> <bpt i="84" x="84">&lt;s84&gt;</bpt>m<ept i="84">&lt;/s84&gt;</ept><bpt i="85" x="85">&lt;s85&gt;</bpt>.<ept i="85">&lt;/s85&gt;</ept><bpt i="86" x="86">&lt;s86&gt;</bpt>mapIt<ept i="86">&lt;/s86&gt;</ept><bpt i="87" x="87">&lt;s87&gt;</bpt>(<ept i="87">&lt;/s87&gt;</ept><bpt i="88" x="88">&lt;s88&gt;</bpt>capture<ept i="88">&lt;/s88&gt;</ept><bpt i="89" x="89">&lt;s89&gt;</bpt>(<ept i="89">&lt;/s89&gt;</ept><bpt i="90" x="90">&lt;s90&gt;</bpt>it<ept i="90">&lt;/s90&gt;</ept><bpt i="91" x="91">&lt;s91&gt;</bpt>,<ept i="91">&lt;/s91&gt;</ept> <bpt i="92" x="92">&lt;s92&gt;</bpt>proc<ept i="92">&lt;/s92&gt;</ept> <bpt i="93" x="93">&lt;s93&gt;</bpt>(<ept i="93">&lt;/s93&gt;</ept><bpt i="94" x="94">&lt;s94&gt;</bpt>s<ept i="94">&lt;/s94&gt;</ept><bpt i="95" x="95">&lt;s95&gt;</bpt>:<ept i="95">&lt;/s95&gt;</ept> <bpt i="96" x="96">&lt;s96&gt;</bpt>string<ept i="96">&lt;/s96&gt;</ept><bpt i="97" x="97">&lt;s97&gt;</bpt>)<ept i="97">&lt;/s97&gt;</ept><bpt i="98" x="98">&lt;s98&gt;</bpt>:<ept i="98">&lt;/s98&gt;</ept> <bpt i="99" x="99">&lt;s99&gt;</bpt>string<ept i="99">&lt;/s99&gt;</ept> <bpt i="100" x="100">&lt;s100&gt;</bpt>=<ept i="100">&lt;/s100&gt;</ept> <bpt i="101" x="101">&lt;s101&gt;</bpt>it<ept i="101">&lt;/s101&gt;</ept><bpt i="102" x="102">&lt;s102&gt;</bpt>(<ept i="102">&lt;/s102&gt;</ept><bpt i="103" x="103">&lt;s103&gt;</bpt>s<ept i="103">&lt;/s103&gt;</ept><bpt i="104" x="104">&lt;s104&gt;</bpt>)<ept i="104">&lt;/s104&gt;</ept><bpt i="105" x="105">&lt;s105&gt;</bpt>)<ept i="105">&lt;/s105&gt;</ept><bpt i="106" x="106">&lt;s106&gt;</bpt>)<ept i="106">&lt;/s106&gt;</ept>
+<bpt i="107" x="107">&lt;s107&gt;</bpt>let<ept i="107">&lt;/s107&gt;</ept> <bpt i="108" x="108">&lt;s108&gt;</bpt>r<ept i="108">&lt;/s108&gt;</ept> <bpt i="109" x="109">&lt;s109&gt;</bpt>=<ept i="109">&lt;/s109&gt;</ept> <bpt i="110" x="110">&lt;s110&gt;</bpt>l<ept i="110">&lt;/s110&gt;</ept><bpt i="111" x="111">&lt;s111&gt;</bpt>.<ept i="111">&lt;/s111&gt;</ept><bpt i="112" x="112">&lt;s112&gt;</bpt>mapIt<ept i="112">&lt;/s112&gt;</ept><bpt i="113" x="113">&lt;s113&gt;</bpt>(<ept i="113">&lt;/s113&gt;</ept><bpt i="114" x="114">&lt;s114&gt;</bpt>it<ept i="114">&lt;/s114&gt;</ept><bpt i="115" x="115">&lt;s115&gt;</bpt>(<ept i="115">&lt;/s115&gt;</ept><bpt i="116" x="116">&lt;s116&gt;</bpt>"be"<ept i="116">&lt;/s116&gt;</ept><bpt i="117" x="117">&lt;s117&gt;</bpt>)<ept i="117">&lt;/s117&gt;</ept><bpt i="118" x="118">&lt;s118&gt;</bpt>)<ept i="118">&lt;/s118&gt;</ept>
+<bpt i="119" x="119">&lt;s119&gt;</bpt>echo<ept i="119">&lt;/s119&gt;</ept> <bpt i="120" x="120">&lt;s120&gt;</bpt>r<ept i="120">&lt;/s120&gt;</ept><bpt i="121" x="121">&lt;s121&gt;</bpt>[<ept i="121">&lt;/s121&gt;</ept><bpt i="122" x="122">&lt;s122&gt;</bpt>0<ept i="122">&lt;/s122&gt;</ept><bpt i="123" x="123">&lt;s123&gt;</bpt>]<ept i="123">&lt;/s123&gt;</ept> <bpt i="124" x="124">&lt;s124&gt;</bpt>&amp;<ept i="124">&lt;/s124&gt;</ept> <bpt i="125" x="125">&lt;s125&gt;</bpt>", or "<ept i="125">&lt;/s125&gt;</ept> <bpt i="126" x="126">&lt;s126&gt;</bpt>&amp;<ept i="126">&lt;/s126&gt;</ept> <bpt i="127" x="127">&lt;s127&gt;</bpt>r<ept i="127">&lt;/s127&gt;</ept><bpt i="128" x="128">&lt;s128&gt;</bpt>[<ept i="128">&lt;/s128&gt;</ept><bpt i="129" x="129">&lt;s129&gt;</bpt>1<ept i="129">&lt;/s129&gt;</ept><bpt i="130" x="130">&lt;s130&gt;</bpt>]<ept i="130">&lt;/s130&gt;</ept> <bpt i="131" x="131">&lt;s131&gt;</bpt># 出力: to be, または not to be<ept i="131">&lt;/s131&gt;</ept></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg><bpt i="38" x="38">&lt;s38&gt;</bpt>n_addrtype<ept i="38">&lt;/s38&gt;</ept><bpt i="39" x="39">&lt;s39&gt;</bpt>*<ept i="39">&lt;/s39&gt;</ept><bpt i="40" x="40">&lt;s40&gt;</bpt>:<ept i="40">&lt;/s40&gt;</ept> <bpt i="41" x="41">&lt;a41&gt;</bpt><bpt i="42" x="42">&lt;s42&gt;</bpt>cint<ept i="42">&lt;/s42&gt;</ept><ept i="41">&lt;/a41&gt;</ept>            <bpt i="43" x="43">&lt;s43&gt;</bpt>## The address type of the network.<ept i="43">&lt;/s43&gt;</ept></seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200410T032223Z" creationid="isVowel" creationdate="20200410T032223Z">
@@ -8134,6 +8182,14 @@ even skies of spring and flowers of summer must ever be poison to me."""<ept i="
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200229T150914Z" creationid="isVowel" creationdate="20200229T150914Z">
         <seg><bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>fn<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> は赤 (R), 緑 (G)、および青 (B) コンポートの各値で呼び出されます。<bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>fn<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> の結果が <bpt i="4" x="4">&lt;t4&gt;</bpt><bpt i="5" x="5">&lt;s5&gt;</bpt>range[0..255]<ept i="5">&lt;/s5&gt;</ept><ept i="4">&lt;/t4&gt;</ept> でなくても、飽和演算を行います。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg><bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>init<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> is the init call, and so custom collections are supported.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200424T190500Z" creationid="isVowel" creationdate="20200424T185806Z">
+        <seg><bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>init<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> は init を呼び出すため、カスタムコレクションがサポートされています。</seg>
       </tuv>
     </tu>
     <tu>
@@ -10370,6 +10426,14 @@ system which can be used to create domain specific languages.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200303T131656Z" creationid="isVowel" creationdate="20200303T131656Z">
         <seg>現在、複素数は一般的な 64-bit または 32-bit float として実装されています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Comprehension for seq/set/table collections.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200424T185702Z" creationid="isVowel" creationdate="20200424T185702Z">
+        <seg>seq/set/table コレクションを読み取ります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -22667,6 +22731,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>The <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>init<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> proc can be called with any number of arguments, i.e. <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>initTable(initialSize)<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200424T195116Z" creationid="isVowel" creationdate="20200424T194927Z">
+        <seg>換言すれば、 <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>initTable(initialSize)<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> といったように <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>init<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> プロシージャには引数を何個でも与えて呼び出せます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>The <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>jsondoc0<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> command:</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200122T060937Z" creationid="isVowel" creationdate="20200122T060937Z">
@@ -23356,6 +23428,14 @@ skipped : スキップする、無視する、読み飛ばす。</note>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200221T092237Z" creationid="isVowel" creationdate="20200221T092237Z">
         <seg>関連する型は 'prev' または 'next' フィールド、およびリストのヘッダは 'head' または 'tail' フィールドにしてください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>The last statement of <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>body<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> has special syntax that specifies the collection's add operation.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200424T191513Z" creationid="isVowel" creationdate="20200424T191513Z">
+        <seg><bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>body<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> の最後にあるステートメントはコレクションへの add 操作を指示するための特別なシンタックスです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -25413,6 +25493,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Turns an <bpt i="0" x="0">&lt;s0&gt;</bpt>in-place<ept i="0">&lt;/s0&gt;</ept> algorithm into one that works on a copy and returns this copy.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200424T184527Z" creationid="isVowel" creationdate="20200424T184527Z">
+        <seg><bpt i="0" x="0">&lt;s0&gt;</bpt>インプレース方式<ept i="0">&lt;/s0&gt;</ept> (in-place) のアルゴリズムによりコピー処理をすることで変換したコピーを返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Turns multiple slashes into single slashes.</seg>
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200408T054132Z" creationid="isVowel" creationdate="20200408T054055Z">
@@ -25786,6 +25874,14 @@ aはアドレス (address)  の略記法
       </tuv>
     </tu>
     <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Use <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>{e}<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> for set's <bpt i="4" x="4">&lt;t4&gt;</bpt><bpt i="5" x="5">&lt;s5&gt;</bpt>incl<ept i="5">&lt;/s5&gt;</ept><ept i="4">&lt;/t4&gt;</ept>, <bpt i="6" x="6">&lt;t6&gt;</bpt><bpt i="7" x="7">&lt;s7&gt;</bpt>{k: v}<ept i="7">&lt;/s7&gt;</ept><ept i="6">&lt;/t6&gt;</ept> for table's <bpt i="8" x="8">&lt;t8&gt;</bpt><bpt i="9" x="9">&lt;s9&gt;</bpt>[]=<ept i="9">&lt;/s9&gt;</ept><ept i="8">&lt;/t8&gt;</ept> and <bpt i="10" x="10">&lt;t10&gt;</bpt><bpt i="11" x="11">&lt;s11&gt;</bpt>e<ept i="11">&lt;/s11&gt;</ept><ept i="10">&lt;/t10&gt;</ept> for seq's <bpt i="12" x="12">&lt;t12&gt;</bpt><bpt i="13" x="13">&lt;s13&gt;</bpt>add<ept i="13">&lt;/s13&gt;</ept><ept i="12">&lt;/t12&gt;</ept>.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200424T191958Z" creationid="isVowel" creationdate="20200424T191958Z">
+        <seg><bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>{e}<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> は set (集合) の <bpt i="4" x="4">&lt;t4&gt;</bpt><bpt i="5" x="5">&lt;s5&gt;</bpt>incl<ept i="5">&lt;/s5&gt;</ept><ept i="4">&lt;/t4&gt;</ept> で、 <bpt i="6" x="6">&lt;t6&gt;</bpt><bpt i="7" x="7">&lt;s7&gt;</bpt>{k: v}<ept i="7">&lt;/s7&gt;</ept><ept i="6">&lt;/t6&gt;</ept> は table (テーブル) の <bpt i="8" x="8">&lt;t8&gt;</bpt><bpt i="9" x="9">&lt;s9&gt;</bpt>[]=<ept i="9">&lt;/s9&gt;</ept><ept i="8">&lt;/t8&gt;</ept> で、そして <bpt i="10" x="10">&lt;t10&gt;</bpt><bpt i="11" x="11">&lt;s11&gt;</bpt>e<ept i="11">&lt;/s11&gt;</ept><ept i="10">&lt;/t10&gt;</ept> は seq (シーケンス) の <bpt i="12" x="12">&lt;t12&gt;</bpt><bpt i="13" x="13">&lt;s13&gt;</bpt>add<ept i="13">&lt;/s13&gt;</ept><ept i="12">&lt;/t12&gt;</ept> で使います。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>この手の話はフレームウォー(中傷合戦)に成りがちです。「蛇さんところてん」vs「駱駝さんおにぎり」の「どっちがいいか」やら「Emacs」vs「vi」、あるいは「静的言語」vs「動的言語」くらいどうでも良い戯論。用途や目的にあわせて、どちらか一方に統一するだけです。
 
 関わるだけ時間の無駄ですね。</note>
@@ -25895,6 +25991,14 @@ aはアドレス (address)  の略記法
       </tuv>
       <tuv xml:lang="JA" changeid="isVowel" changedate="20200415T111344Z" creationid="isVowel" creationdate="20200415T111344Z">
         <seg>電子メールの MIME 形式で使われます。引数は <bpt i="2" x="2">&lt;t2&gt;</bpt><bpt i="3" x="3">&lt;s3&gt;</bpt>lineLen<ept i="3">&lt;/s3&gt;</ept><ept i="2">&lt;/t2&gt;</ept> と <bpt i="4" x="4">&lt;t4&gt;</bpt><bpt i="5" x="5">&lt;s5&gt;</bpt>newline<ept i="5">&lt;/s5&gt;</ept><ept i="4">&lt;/t4&gt;</ept> を指定します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Useful when creating a closure in a loop to capture some local loop variables by their current iteration values.</seg>
+      </tuv>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200424T183001Z" creationid="isVowel" creationdate="20200424T183001Z">
+        <seg>現在のイテレート値でローカルのループ変数を取り込むときにループでクロージャを作成するときに便利です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -33715,8 +33819,8 @@ Description: """これは Nim コンパイラです。</seg>
       <tuv xml:lang="EN-US">
         <seg>reverses <bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>type T = distinct A<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept>; works recursively.</seg>
       </tuv>
-      <tuv xml:lang="JA" changeid="isVowel" changedate="20200127T023815Z" creationid="isVowel" creationdate="20200127T023815Z">
-        <seg><bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>type T = distinct A<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> を反転します。これは再帰的処理を行います。</seg>
+      <tuv xml:lang="JA" changeid="isVowel" changedate="20200424T200158Z" creationid="isVowel" creationdate="20200127T023815Z">
+        <seg><bpt i="0" x="0">&lt;t0&gt;</bpt><bpt i="1" x="1">&lt;s1&gt;</bpt>type T = distinct A<ept i="1">&lt;/s1&gt;</ept><ept i="0">&lt;/t0&gt;</ept> を反転します。これは再帰処理を行います。</seg>
       </tuv>
     </tu>
     <tu>

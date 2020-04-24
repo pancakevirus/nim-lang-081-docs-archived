@@ -4288,6 +4288,14 @@ even skies of spring and flowers of summer must ever be poison to me."""&lt;/s12
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;s1&gt;Since&lt;/s1&gt;: Version 1.2.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T183035Z" creationid="isVowel" creationdate="20200424T183035Z">
+        <seg>Version 1.2 &lt;s1&gt;以降&lt;/s1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;s202&gt;tagKeygen&lt;/s202&gt;&lt;s203&gt;,&lt;/s203&gt;                  &lt;s204&gt;## the HTML ``keygen`` element&lt;/s204&gt;</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
@@ -6262,6 +6270,38 @@ even skies of spring and flowers of summer must ever be poison to me."""&lt;/s12
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;s38&gt;d&lt;/s38&gt;
+&lt;s39&gt;assert&lt;/s39&gt; &lt;s40&gt;k&lt;/s40&gt; &lt;s41&gt;==&lt;/s41&gt; &lt;s42&gt;@&lt;/s42&gt;&lt;s43&gt;[&lt;/s43&gt;&lt;s44&gt;"bird"&lt;/s44&gt;&lt;s45&gt;]&lt;/s45&gt;
+&lt;s46&gt;## seq with initialSize:&lt;/s46&gt;
+&lt;s47&gt;let&lt;/s47&gt; &lt;s48&gt;x&lt;/s48&gt; &lt;s49&gt;=&lt;/s49&gt; &lt;s50&gt;collect&lt;/s50&gt;&lt;s51&gt;(&lt;/s51&gt;&lt;s52&gt;newSeqOfCap&lt;/s52&gt;&lt;s53&gt;(&lt;/s53&gt;&lt;s54&gt;4&lt;/s54&gt;&lt;s55&gt;)&lt;/s55&gt;&lt;s56&gt;)&lt;/s56&gt;&lt;s57&gt;:&lt;/s57&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T195400Z" creationid="isVowel" creationdate="20200424T195400Z">
+        <seg>&lt;s38&gt;d&lt;/s38&gt;
+&lt;s39&gt;assert&lt;/s39&gt; &lt;s40&gt;k&lt;/s40&gt; &lt;s41&gt;==&lt;/s41&gt; &lt;s42&gt;@&lt;/s42&gt;&lt;s43&gt;[&lt;/s43&gt;&lt;s44&gt;"bird"&lt;/s44&gt;&lt;s45&gt;]&lt;/s45&gt;
+&lt;s46&gt;## initialSize がある seq:&lt;/s46&gt;
+&lt;s47&gt;let&lt;/s47&gt; &lt;s48&gt;x&lt;/s48&gt; &lt;s49&gt;=&lt;/s49&gt; &lt;s50&gt;collect&lt;/s50&gt;&lt;s51&gt;(&lt;/s51&gt;&lt;s52&gt;newSeqOfCap&lt;/s52&gt;&lt;s53&gt;(&lt;/s53&gt;&lt;s54&gt;4&lt;/s54&gt;&lt;s55&gt;)&lt;/s55&gt;&lt;s56&gt;)&lt;/s56&gt;&lt;s57&gt;:&lt;/s57&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s38&gt;myClosure&lt;/s38&gt; &lt;s39&gt;=&lt;/s39&gt; &lt;s40&gt;proc&lt;/s40&gt; &lt;s41&gt;(&lt;/s41&gt;&lt;s42&gt;)&lt;/s42&gt; &lt;s43&gt;=&lt;/s43&gt; &lt;s44&gt;echo&lt;/s44&gt; &lt;s45&gt;fmt"{i} * {j} = 42"&lt;/s45&gt;
+&lt;s46&gt;myClosure&lt;/s46&gt;&lt;s47&gt;(&lt;/s47&gt;&lt;s48&gt;)&lt;/s48&gt; &lt;s49&gt;# output: 6 * 7 == 42&lt;/s49&gt;
+&lt;s50&gt;let&lt;/s50&gt; &lt;s51&gt;m&lt;/s51&gt; &lt;s52&gt;=&lt;/s52&gt; &lt;s53&gt;@&lt;/s53&gt;&lt;s54&gt;[&lt;/s54&gt;&lt;s55&gt;proc&lt;/s55&gt; &lt;s56&gt;(&lt;/s56&gt;&lt;s57&gt;s&lt;/s57&gt;&lt;s58&gt;:&lt;/s58&gt; &lt;s59&gt;string&lt;/s59&gt;&lt;s60&gt;)&lt;/s60&gt;&lt;s61&gt;:&lt;/s61&gt; &lt;s62&gt;string&lt;/s62&gt; &lt;s63&gt;=&lt;/s63&gt; &lt;s64&gt;"to "&lt;/s64&gt; &lt;s65&gt;&amp;&lt;/s65&gt; &lt;s66&gt;s&lt;/s66&gt;&lt;s67&gt;,&lt;/s67&gt; &lt;s68&gt;proc&lt;/s68&gt; &lt;s69&gt;(&lt;/s69&gt;&lt;s70&gt;s&lt;/s70&gt;&lt;s71&gt;:&lt;/s71&gt; &lt;s72&gt;string&lt;/s72&gt;&lt;s73&gt;)&lt;/s73&gt;&lt;s74&gt;:&lt;/s74&gt; &lt;s75&gt;string&lt;/s75&gt; &lt;s76&gt;=&lt;/s76&gt; &lt;s77&gt;"not to "&lt;/s77&gt; &lt;s78&gt;&amp;&lt;/s78&gt; &lt;s79&gt;s&lt;/s79&gt;&lt;s80&gt;]&lt;/s80&gt;
+&lt;s81&gt;var&lt;/s81&gt; &lt;s82&gt;l&lt;/s82&gt; &lt;s83&gt;=&lt;/s83&gt; &lt;s84&gt;m&lt;/s84&gt;&lt;s85&gt;.&lt;/s85&gt;&lt;s86&gt;mapIt&lt;/s86&gt;&lt;s87&gt;(&lt;/s87&gt;&lt;s88&gt;capture&lt;/s88&gt;&lt;s89&gt;(&lt;/s89&gt;&lt;s90&gt;it&lt;/s90&gt;&lt;s91&gt;,&lt;/s91&gt; &lt;s92&gt;proc&lt;/s92&gt; &lt;s93&gt;(&lt;/s93&gt;&lt;s94&gt;s&lt;/s94&gt;&lt;s95&gt;:&lt;/s95&gt; &lt;s96&gt;string&lt;/s96&gt;&lt;s97&gt;)&lt;/s97&gt;&lt;s98&gt;:&lt;/s98&gt; &lt;s99&gt;string&lt;/s99&gt; &lt;s100&gt;=&lt;/s100&gt; &lt;s101&gt;it&lt;/s101&gt;&lt;s102&gt;(&lt;/s102&gt;&lt;s103&gt;s&lt;/s103&gt;&lt;s104&gt;)&lt;/s104&gt;&lt;s105&gt;)&lt;/s105&gt;&lt;s106&gt;)&lt;/s106&gt;
+&lt;s107&gt;let&lt;/s107&gt; &lt;s108&gt;r&lt;/s108&gt; &lt;s109&gt;=&lt;/s109&gt; &lt;s110&gt;l&lt;/s110&gt;&lt;s111&gt;.&lt;/s111&gt;&lt;s112&gt;mapIt&lt;/s112&gt;&lt;s113&gt;(&lt;/s113&gt;&lt;s114&gt;it&lt;/s114&gt;&lt;s115&gt;(&lt;/s115&gt;&lt;s116&gt;"be"&lt;/s116&gt;&lt;s117&gt;)&lt;/s117&gt;&lt;s118&gt;)&lt;/s118&gt;
+&lt;s119&gt;echo&lt;/s119&gt; &lt;s120&gt;r&lt;/s120&gt;&lt;s121&gt;[&lt;/s121&gt;&lt;s122&gt;0&lt;/s122&gt;&lt;s123&gt;]&lt;/s123&gt; &lt;s124&gt;&amp;&lt;/s124&gt; &lt;s125&gt;", or "&lt;/s125&gt; &lt;s126&gt;&amp;&lt;/s126&gt; &lt;s127&gt;r&lt;/s127&gt;&lt;s128&gt;[&lt;/s128&gt;&lt;s129&gt;1&lt;/s129&gt;&lt;s130&gt;]&lt;/s130&gt; &lt;s131&gt;# output: to be, or not to be&lt;/s131&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T184858Z" creationid="isVowel" creationdate="20200424T182725Z">
+        <seg>&lt;s38&gt;myClosure&lt;/s38&gt; &lt;s39&gt;=&lt;/s39&gt; &lt;s40&gt;proc&lt;/s40&gt; &lt;s41&gt;(&lt;/s41&gt;&lt;s42&gt;)&lt;/s42&gt; &lt;s43&gt;=&lt;/s43&gt; &lt;s44&gt;echo&lt;/s44&gt; &lt;s45&gt;fmt"{i} * {j} = 42"&lt;/s45&gt;
+&lt;s46&gt;myClosure&lt;/s46&gt;&lt;s47&gt;(&lt;/s47&gt;&lt;s48&gt;)&lt;/s48&gt; &lt;s49&gt;# 出力: 6 * 7 == 42&lt;/s49&gt;
+&lt;s50&gt;let&lt;/s50&gt; &lt;s51&gt;m&lt;/s51&gt; &lt;s52&gt;=&lt;/s52&gt; &lt;s53&gt;@&lt;/s53&gt;&lt;s54&gt;[&lt;/s54&gt;&lt;s55&gt;proc&lt;/s55&gt; &lt;s56&gt;(&lt;/s56&gt;&lt;s57&gt;s&lt;/s57&gt;&lt;s58&gt;:&lt;/s58&gt; &lt;s59&gt;string&lt;/s59&gt;&lt;s60&gt;)&lt;/s60&gt;&lt;s61&gt;:&lt;/s61&gt; &lt;s62&gt;string&lt;/s62&gt; &lt;s63&gt;=&lt;/s63&gt; &lt;s64&gt;"to "&lt;/s64&gt; &lt;s65&gt;&amp;&lt;/s65&gt; &lt;s66&gt;s&lt;/s66&gt;&lt;s67&gt;,&lt;/s67&gt; &lt;s68&gt;proc&lt;/s68&gt; &lt;s69&gt;(&lt;/s69&gt;&lt;s70&gt;s&lt;/s70&gt;&lt;s71&gt;:&lt;/s71&gt; &lt;s72&gt;string&lt;/s72&gt;&lt;s73&gt;)&lt;/s73&gt;&lt;s74&gt;:&lt;/s74&gt; &lt;s75&gt;string&lt;/s75&gt; &lt;s76&gt;=&lt;/s76&gt; &lt;s77&gt;"not to "&lt;/s77&gt; &lt;s78&gt;&amp;&lt;/s78&gt; &lt;s79&gt;s&lt;/s79&gt;&lt;s80&gt;]&lt;/s80&gt;
+&lt;s81&gt;var&lt;/s81&gt; &lt;s82&gt;l&lt;/s82&gt; &lt;s83&gt;=&lt;/s83&gt; &lt;s84&gt;m&lt;/s84&gt;&lt;s85&gt;.&lt;/s85&gt;&lt;s86&gt;mapIt&lt;/s86&gt;&lt;s87&gt;(&lt;/s87&gt;&lt;s88&gt;capture&lt;/s88&gt;&lt;s89&gt;(&lt;/s89&gt;&lt;s90&gt;it&lt;/s90&gt;&lt;s91&gt;,&lt;/s91&gt; &lt;s92&gt;proc&lt;/s92&gt; &lt;s93&gt;(&lt;/s93&gt;&lt;s94&gt;s&lt;/s94&gt;&lt;s95&gt;:&lt;/s95&gt; &lt;s96&gt;string&lt;/s96&gt;&lt;s97&gt;)&lt;/s97&gt;&lt;s98&gt;:&lt;/s98&gt; &lt;s99&gt;string&lt;/s99&gt; &lt;s100&gt;=&lt;/s100&gt; &lt;s101&gt;it&lt;/s101&gt;&lt;s102&gt;(&lt;/s102&gt;&lt;s103&gt;s&lt;/s103&gt;&lt;s104&gt;)&lt;/s104&gt;&lt;s105&gt;)&lt;/s105&gt;&lt;s106&gt;)&lt;/s106&gt;
+&lt;s107&gt;let&lt;/s107&gt; &lt;s108&gt;r&lt;/s108&gt; &lt;s109&gt;=&lt;/s109&gt; &lt;s110&gt;l&lt;/s110&gt;&lt;s111&gt;.&lt;/s111&gt;&lt;s112&gt;mapIt&lt;/s112&gt;&lt;s113&gt;(&lt;/s113&gt;&lt;s114&gt;it&lt;/s114&gt;&lt;s115&gt;(&lt;/s115&gt;&lt;s116&gt;"be"&lt;/s116&gt;&lt;s117&gt;)&lt;/s117&gt;&lt;s118&gt;)&lt;/s118&gt;
+&lt;s119&gt;echo&lt;/s119&gt; &lt;s120&gt;r&lt;/s120&gt;&lt;s121&gt;[&lt;/s121&gt;&lt;s122&gt;0&lt;/s122&gt;&lt;s123&gt;]&lt;/s123&gt; &lt;s124&gt;&amp;&lt;/s124&gt; &lt;s125&gt;", or "&lt;/s125&gt; &lt;s126&gt;&amp;&lt;/s126&gt; &lt;s127&gt;r&lt;/s127&gt;&lt;s128&gt;[&lt;/s128&gt;&lt;s129&gt;1&lt;/s129&gt;&lt;s130&gt;]&lt;/s130&gt; &lt;s131&gt;# 出力: to be, または not to be&lt;/s131&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;s38&gt;n_addrtype&lt;/s38&gt;&lt;s39&gt;*&lt;/s39&gt;&lt;s40&gt;:&lt;/s40&gt; &lt;a41&gt;&lt;s42&gt;cint&lt;/s42&gt;&lt;/a41&gt;            &lt;s43&gt;## The address type of the network.&lt;/s43&gt;</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200410T032223Z" creationid="isVowel" creationdate="20200410T032223Z">
@@ -8198,6 +8238,14 @@ even skies of spring and flowers of summer must ever be poison to me."""&lt;/s12
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;t0&gt;&lt;s1&gt;init&lt;/s1&gt;&lt;/t0&gt; is the init call, and so custom collections are supported.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T190500Z" creationid="isVowel" creationdate="20200424T185806Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;init&lt;/s1&gt;&lt;/t0&gt; は init を呼び出すため、カスタムコレクションがサポートされています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;t0&gt;&lt;s1&gt;init&lt;/s1&gt;&lt;/t0&gt; is used to create a value type &lt;t2&gt;&lt;s3&gt;T&lt;/s3&gt;&lt;/t2&gt;</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200413T043036Z" creationid="isVowel" creationdate="20200413T043017Z">
@@ -9408,6 +9456,14 @@ system which can be used to create domain specific languages.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Another way to do the same without &lt;t5&gt;&lt;s6&gt;when&lt;/s6&gt;&lt;/t5&gt; is to leave the task of picking the appropriate code to a secondary proc which you overload for each field type and pass the &lt;t7&gt;&lt;s8&gt;value&lt;/s8&gt;&lt;/t7&gt; to.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200423T154502Z" creationid="isVowel" creationdate="20200423T154502Z">
+        <seg>これ以外に同じ処理をする方法としては、各フィールド型のオーバーロードと&lt;t7&gt;&lt;s8&gt;値&lt;/s8&gt;&lt;/t7&gt; (value) を渡す先となるセカンダリ・プロシージャで適切なコードを&lt;t5&gt;&lt;s6&gt;選ぶとき&lt;/s6&gt;&lt;/t5&gt;にタスクを残さないことです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Any value in the rst will be stripped form leading/trailing whitespace.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200225T040700Z" creationid="isVowel" creationdate="20200225T040653Z">
@@ -10455,6 +10511,14 @@ system which can be used to create domain specific languages.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200303T131656Z" creationid="isVowel" creationdate="20200303T131656Z">
         <seg>現在、複素数は一般的な 64-bit または 32-bit float として実装されています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Comprehension for seq/set/table collections.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T185702Z" creationid="isVowel" creationdate="20200424T185702Z">
+        <seg>seq/set/table コレクションを読み取ります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -23618,6 +23682,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The &lt;t0&gt;&lt;s1&gt;init&lt;/s1&gt;&lt;/t0&gt; proc can be called with any number of arguments, i.e. &lt;t2&gt;&lt;s3&gt;initTable(initialSize)&lt;/s3&gt;&lt;/t2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T195116Z" creationid="isVowel" creationdate="20200424T194927Z">
+        <seg>換言すれば、 &lt;t2&gt;&lt;s3&gt;initTable(initialSize)&lt;/s3&gt;&lt;/t2&gt; といったように &lt;t0&gt;&lt;s1&gt;init&lt;/s1&gt;&lt;/t0&gt; プロシージャには引数を何個でも与えて呼び出せます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The &lt;t0&gt;&lt;s1&gt;jsondoc0&lt;/s1&gt;&lt;/t0&gt; command:</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T060937Z" creationid="isVowel" creationdate="20200122T060937Z">
@@ -24315,6 +24387,14 @@ skipped : スキップする、無視する、読み飛ばす。</note>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T092237Z" creationid="isVowel" creationdate="20200221T092237Z">
         <seg>関連する型は 'prev' または 'next' フィールド、およびリストのヘッダは 'head' または 'tail' フィールドにしてください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The last statement of &lt;t0&gt;&lt;s1&gt;body&lt;/s1&gt;&lt;/t0&gt; has special syntax that specifies the collection's add operation.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T191513Z" creationid="isVowel" creationdate="20200424T191513Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;body&lt;/s1&gt;&lt;/t0&gt; の最後にあるステートメントはコレクションへの add 操作を指示するための特別なシンタックスです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -26382,6 +26462,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Turns an &lt;s0&gt;in-place&lt;/s0&gt; algorithm into one that works on a copy and returns this copy.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T184527Z" creationid="isVowel" creationdate="20200424T184527Z">
+        <seg>&lt;s0&gt;インプレース方式&lt;/s0&gt; (in-place) のアルゴリズムによりコピー処理をすることで変換したコピーを返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Turns multiple slashes into single slashes.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200408T054132Z" creationid="isVowel" creationdate="20200408T054055Z">
@@ -26755,6 +26843,14 @@ aはアドレス (address)  の略記法
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>Use &lt;t2&gt;&lt;s3&gt;{e}&lt;/s3&gt;&lt;/t2&gt; for set's &lt;t4&gt;&lt;s5&gt;incl&lt;/s5&gt;&lt;/t4&gt;, &lt;t6&gt;&lt;s7&gt;{k: v}&lt;/s7&gt;&lt;/t6&gt; for table's &lt;t8&gt;&lt;s9&gt;[]=&lt;/s9&gt;&lt;/t8&gt; and &lt;t10&gt;&lt;s11&gt;e&lt;/s11&gt;&lt;/t10&gt; for seq's &lt;t12&gt;&lt;s13&gt;add&lt;/s13&gt;&lt;/t12&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T191958Z" creationid="isVowel" creationdate="20200424T191958Z">
+        <seg>&lt;t2&gt;&lt;s3&gt;{e}&lt;/s3&gt;&lt;/t2&gt; は set (集合) の &lt;t4&gt;&lt;s5&gt;incl&lt;/s5&gt;&lt;/t4&gt; で、 &lt;t6&gt;&lt;s7&gt;{k: v}&lt;/s7&gt;&lt;/t6&gt; は table (テーブル) の &lt;t8&gt;&lt;s9&gt;[]=&lt;/s9&gt;&lt;/t8&gt; で、そして &lt;t10&gt;&lt;s11&gt;e&lt;/s11&gt;&lt;/t10&gt; は seq (シーケンス) の &lt;t12&gt;&lt;s13&gt;add&lt;/s13&gt;&lt;/t12&gt; で使います。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>この手の話はフレームウォー(中傷合戦)に成りがちです。「蛇さんところてん」vs「駱駝さんおにぎり」の「どっちがいいか」やら「Emacs」vs「vi」、あるいは「静的言語」vs「動的言語」くらいどうでも良い戯論。用途や目的にあわせて、どちらか一方に統一するだけです。
 
 関わるだけ時間の無駄ですね。</note>
@@ -26864,6 +26960,14 @@ aはアドレス (address)  の略記法
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200415T111344Z" creationid="isVowel" creationdate="20200415T111344Z">
         <seg>電子メールの MIME 形式で使われます。引数は &lt;t2&gt;&lt;s3&gt;lineLen&lt;/s3&gt;&lt;/t2&gt; と &lt;t4&gt;&lt;s5&gt;newline&lt;/s5&gt;&lt;/t4&gt; を指定します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Useful when creating a closure in a loop to capture some local loop variables by their current iteration values.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T183001Z" creationid="isVowel" creationdate="20200424T183001Z">
+        <seg>現在のイテレート値でローカルのループ変数を取り込むときにループでクロージャを作成するときに便利です。</seg>
       </tuv>
     </tu>
     <tu>

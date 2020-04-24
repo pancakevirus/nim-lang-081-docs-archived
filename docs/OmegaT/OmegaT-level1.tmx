@@ -1979,6 +1979,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Deprecated: use distinctBase from typetraits instead</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T200131Z" creationid="isVowel" creationdate="20200424T200131Z">
+        <seg>廃止: typetraits モジュールの distinctBase をお使いください</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Deprecated: use readLines with two arguments</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200303T032349Z" creationid="isVowel" creationdate="20200303T024624Z">
@@ -4244,6 +4252,14 @@ assert s == """{"f": 2}"""</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Since: Version 1.2.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T183035Z" creationid="isVowel" creationdate="20200424T183035Z">
+        <seg>Version 1.2 以降</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>tagKeygen,                  ## the HTML ``keygen`` element</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T030547Z" creationid="isVowel" creationdate="20200221T030350Z">
@@ -6210,6 +6226,38 @@ db.close()</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>d
+assert k == @["bird"]
+## seq with initialSize:
+let x = collect(newSeqOfCap(4)):</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T195400Z" creationid="isVowel" creationdate="20200424T195400Z">
+        <seg>d
+assert k == @["bird"]
+## initialSize がある seq:
+let x = collect(newSeqOfCap(4)):</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>myClosure = proc () = echo fmt"{i} * {j} = 42"
+myClosure() # output: 6 * 7 == 42
+let m = @[proc (s: string): string = "to " &amp; s, proc (s: string): string = "not to " &amp; s]
+var l = m.mapIt(capture(it, proc (s: string): string = it(s)))
+let r = l.mapIt(it("be"))
+echo r[0] &amp; ", or " &amp; r[1] # output: to be, or not to be</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T184858Z" creationid="isVowel" creationdate="20200424T182725Z">
+        <seg>myClosure = proc () = echo fmt"{i} * {j} = 42"
+myClosure() # 出力: 6 * 7 == 42
+let m = @[proc (s: string): string = "to " &amp; s, proc (s: string): string = "not to " &amp; s]
+var l = m.mapIt(capture(it, proc (s: string): string = it(s)))
+let r = l.mapIt(it("be"))
+echo r[0] &amp; ", or " &amp; r[1] # 出力: to be, または not to be</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>n_addrtype*: cint            ## The address type of the network.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200410T032223Z" creationid="isVowel" creationdate="20200410T032223Z">
@@ -8134,6 +8182,14 @@ writeLine(stdout, "&lt;/body&gt;&lt;/html&gt;")</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200229T150914Z" creationid="isVowel" creationdate="20200229T150914Z">
         <seg>fn は赤 (R), 緑 (G)、および青 (B) コンポートの各値で呼び出されます。fn の結果が range[0..255] でなくても、飽和演算を行います。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>init is the init call, and so custom collections are supported.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T190500Z" creationid="isVowel" creationdate="20200424T185806Z">
+        <seg>init は init を呼び出すため、カスタムコレクションがサポートされています。</seg>
       </tuv>
     </tu>
     <tu>
@@ -10370,6 +10426,14 @@ system which can be used to create domain specific languages.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200303T131656Z" creationid="isVowel" creationdate="20200303T131656Z">
         <seg>現在、複素数は一般的な 64-bit または 32-bit float として実装されています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Comprehension for seq/set/table collections.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T185702Z" creationid="isVowel" creationdate="20200424T185702Z">
+        <seg>seq/set/table コレクションを読み取ります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -22667,6 +22731,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The init proc can be called with any number of arguments, i.e. initTable(initialSize).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T195116Z" creationid="isVowel" creationdate="20200424T194927Z">
+        <seg>換言すれば、 initTable(initialSize) といったように init プロシージャには引数を何個でも与えて呼び出せます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The jsondoc0 command:</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200122T060937Z" creationid="isVowel" creationdate="20200122T060937Z">
@@ -23356,6 +23428,14 @@ skipped : スキップする、無視する、読み飛ばす。</note>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T092237Z" creationid="isVowel" creationdate="20200221T092237Z">
         <seg>関連する型は 'prev' または 'next' フィールド、およびリストのヘッダは 'head' または 'tail' フィールドにしてください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The last statement of body has special syntax that specifies the collection's add operation.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T191513Z" creationid="isVowel" creationdate="20200424T191513Z">
+        <seg>body の最後にあるステートメントはコレクションへの add 操作を指示するための特別なシンタックスです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -25413,6 +25493,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Turns an in-place algorithm into one that works on a copy and returns this copy.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T184527Z" creationid="isVowel" creationdate="20200424T184527Z">
+        <seg>インプレース方式 (in-place) のアルゴリズムによりコピー処理をすることで変換したコピーを返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Turns multiple slashes into single slashes.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200408T054132Z" creationid="isVowel" creationdate="20200408T054055Z">
@@ -25786,6 +25874,14 @@ aはアドレス (address)  の略記法
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>Use {e} for set's incl, {k: v} for table's []= and e for seq's add.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T191958Z" creationid="isVowel" creationdate="20200424T191958Z">
+        <seg>{e} は set (集合) の incl で、 {k: v} は table (テーブル) の []= で、そして e は seq (シーケンス) の add で使います。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>この手の話はフレームウォー(中傷合戦)に成りがちです。「蛇さんところてん」vs「駱駝さんおにぎり」の「どっちがいいか」やら「Emacs」vs「vi」、あるいは「静的言語」vs「動的言語」くらいどうでも良い戯論。用途や目的にあわせて、どちらか一方に統一するだけです。
 
 関わるだけ時間の無駄ですね。</note>
@@ -25895,6 +25991,14 @@ aはアドレス (address)  の略記法
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200415T111344Z" creationid="isVowel" creationdate="20200415T111344Z">
         <seg>電子メールの MIME 形式で使われます。引数は lineLen と newline を指定します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Useful when creating a closure in a loop to capture some local loop variables by their current iteration values.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T183001Z" creationid="isVowel" creationdate="20200424T183001Z">
+        <seg>現在のイテレート値でローカルのループ変数を取り込むときにループでクロージャを作成するときに便利です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -33715,8 +33819,8 @@ Description: """これは Nim コンパイラです。</seg>
       <tuv lang="EN-US">
         <seg>reverses type T = distinct A; works recursively.</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200127T023815Z" creationid="isVowel" creationdate="20200127T023815Z">
-        <seg>type T = distinct A を反転します。これは再帰的処理を行います。</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T200158Z" creationid="isVowel" creationdate="20200127T023815Z">
+        <seg>type T = distinct A を反転します。これは再帰処理を行います。</seg>
       </tuv>
     </tu>
     <tu>
