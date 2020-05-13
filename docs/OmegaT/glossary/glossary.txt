@@ -113,3 +113,4 @@ Provide	搭載
 limits	制限
 Provides	取得
 Runtime type inform	実行時型情報
+underlying	基本的な

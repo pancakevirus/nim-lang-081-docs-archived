@@ -535,8 +535,8 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       <tuv lang="EN-US">
         <seg>(Generic symbol lookup prepass.)   &lt;a0&gt;Source&lt;/a0&gt; &lt;a1&gt;Edit&lt;/a1&gt;</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200415T122401Z" creationid="isVowel" creationdate="20200415T122401Z">
-        <seg>(Generic symbol lookup prepass.)   &lt;a0&gt;ソース&lt;/a0&gt; &lt;a1&gt;編集&lt;/a1&gt;</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200511T175331Z" creationid="isVowel" creationdate="20200415T122401Z">
+        <seg>(汎用シンボル参照の事前渡し)   &lt;a0&gt;ソース&lt;/a0&gt; &lt;a1&gt;編集&lt;/a1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -1113,6 +1113,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a0&gt;channels module&lt;/a0&gt; for inter-thread communication</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T081218Z" creationid="isVowel" creationdate="20200512T081152Z">
+        <seg>&lt;a0&gt;channels モジュール&lt;/a0&gt;はスレッド間通信の実装です</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;a0&gt;channels&lt;/a0&gt; Nim message passing support for threads.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200408T103137Z" creationid="isVowel" creationdate="20200408T103137Z">
@@ -1129,10 +1137,26 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a0&gt;coro&lt;/a0&gt; This module implements experimental coroutines in Nim.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T012322Z" creationid="isVowel" creationdate="20200513T012322Z">
+        <seg>&lt;a0&gt;coro&lt;/a0&gt; このモジュールは Nim におけるコルーチンの試験実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;a0&gt;cpuinfo&lt;/a0&gt; This module implements procs to determine the number of CPUs / cores.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200226T055613Z" creationid="isVowel" creationdate="20200226T055613Z">
         <seg>&lt;a0&gt;cpuinfo&lt;/a0&gt; このモジュールは CPU / コア数を判定するプロシージャの実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;critbits&lt;/a0&gt; This module implements a &lt;e1&gt;crit bit tree&lt;/e1&gt; which is an efficient container for a sorted set of strings, or for a sorted mapping of strings.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T050938Z" creationid="isVowel" creationdate="20200513T050938Z">
+        <seg>&lt;a0&gt;critbits&lt;/a0&gt; このモジュールは文字列集合のソート、または文字列写像のソートで効率的なコンテナである &lt;s1&gt;crit ビットツリー&lt;/s1&gt;の実装です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1197,6 +1221,15 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200123T080842Z" creationid="isVowel" creationdate="20200123T080810Z">
         <seg>&lt;a0&gt;decode プロシージャ&lt;/a0&gt; は文字列のデコードをします</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>わからないひとはバーベキューでもいいです。頭からでも後ろからでもいただけます。</note>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;deques&lt;/a0&gt; Implementation of a double-ended queue.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T021923Z" creationid="isVowel" creationdate="20200513T021923Z">
+        <seg>&lt;a0&gt;deques&lt;/a0&gt; デキュー (両頭待ち行列) の実装です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1289,6 +1322,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a0&gt;heapqueue&lt;/a0&gt; Implementation of a heap data structure that can be used as a priority queue.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T022045Z" creationid="isVowel" creationdate="20200513T022045Z">
+        <seg>&lt;a0&gt;heapqueue&lt;/a0&gt; 優先順位付きキューとして使えるヒープによるデータ構造の実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;a0&gt;htmlgen module&lt;/a0&gt; for html code generator</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200301T074750Z" creationid="isVowel" creationdate="20200213T060035Z">
@@ -1309,6 +1350,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200226T084916Z" creationid="isVowel" creationdate="20200226T084916Z">
         <seg>&lt;a0&gt;htmlparser&lt;/a0&gt; このモジュールは XML ドキュメントの構文解析と XML ツリー表現を作成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;httpclient&lt;/a0&gt; This module implements a simple HTTP client which supports both synchronous and asynchronous retrieval of web pages.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T015152Z" creationid="isVowel" creationdate="20200513T015152Z">
+        <seg>&lt;a0&gt;httpclient&lt;/a0&gt; このモジュールはウェブページの同期・非同期受信をサポートした HTTP クライアントの実装です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1457,10 +1506,34 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a0&gt;jsconsole&lt;/a0&gt; Wrapper for the &lt;t1&gt;&lt;s2&gt;console&lt;/s2&gt;&lt;/t1&gt; object.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T012112Z" creationid="isVowel" creationdate="20200513T012112Z">
+        <seg>&lt;a0&gt;jsconsole&lt;/a0&gt; &lt;t1&gt;&lt;s2&gt;console&lt;/s2&gt;&lt;/t1&gt; オブジェクトのラッパーです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;a0&gt;jscore&lt;/a0&gt; Wrapper of core JavaScript functions.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200226T080219Z" creationid="isVowel" creationdate="20200226T080219Z">
         <seg>&lt;a0&gt;jscore&lt;/a0&gt; コア JavaScript 関数のラッパーです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;lenientops&lt;/a0&gt; Provides binary operators for mixed integer/float expressions for convenience.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T054629Z" creationid="isVowel" creationdate="20200513T021109Z">
+        <seg>&lt;a0&gt;lenientops&lt;/a0&gt; 整数と浮動小数を併用する式で便利な二項演算子の機能です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;lists module&lt;/a0&gt; for singly and doubly linked lists and rings</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T081145Z" creationid="isVowel" creationdate="20200512T081145Z">
+        <seg>&lt;a0&gt;lists モジュール&lt;/a0&gt;は単方向・双方向連結リストと環状リストの実装です</seg>
       </tuv>
     </tu>
     <tu>
@@ -1706,10 +1779,26 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a0&gt;segfaults&lt;/a0&gt; Turns access violations or segfaults into a &lt;t1&gt;&lt;s2&gt;NilAccessError&lt;/s2&gt;&lt;/t1&gt; exception.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T012536Z" creationid="isVowel" creationdate="20200513T012536Z">
+        <seg>&lt;a0&gt;segfaults&lt;/a0&gt; アクセス違反 (access violations)、セグメンテーション違反 (segfaults) を &lt;t1&gt;&lt;s2&gt;NilAccessError&lt;/s2&gt;&lt;/t1&gt; 例外に差し替えます。 </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;a0&gt;sequtils module&lt;/a0&gt; for working with the built-in seq type</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T044025Z" creationid="isVowel" creationdate="20200113T044025Z">
         <seg>&lt;a0&gt;sequtils モジュール&lt;/a0&gt; for working with the built-in seq type</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;sequtils&lt;/a0&gt; This module implements operations for the built-in seq type which were inspired by functional programming languages.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T050643Z" creationid="isVowel" creationdate="20200513T050643Z">
+        <seg>&lt;a0&gt;sequtils&lt;/a0&gt; このモジュールは関数型プログラミング言語から着想を得た組み込み seq 型に関する処理の実装です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1795,6 +1884,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;a0&gt;sugar&lt;/a0&gt; This module implements nice syntactic sugar based on Nim's macro system.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T012630Z" creationid="isVowel" creationdate="20200513T012630Z">
+        <seg>&lt;a0&gt;sugar&lt;/a0&gt; このモジュールは Nim のマクロシステムをベースとした素晴らしいシンタックスシュガーの実装です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;a0&gt;system&lt;/a0&gt; Basic procs and operators that every program needs.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200418T101801Z" creationid="isVowel" creationdate="20200418T101801Z">
@@ -1823,6 +1920,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200214T073758Z" creationid="isVowel" creationdate="20200214T073758Z">
         <seg>&lt;a0&gt;tag= プロシージャ&lt;/a0&gt; は tag の setter です</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;a0&gt;terminal&lt;/a0&gt; This module contains a few procedures to control the &lt;e1&gt;terminal&lt;/e1&gt; (also called &lt;e2&gt;console&lt;/e2&gt;).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T015833Z" creationid="isVowel" creationdate="20200513T015833Z">
+        <seg>&lt;a0&gt;terminal&lt;/a0&gt; このモジュールには&lt;e1&gt;ターミナル&lt;/e1&gt; (&lt;e2&gt;コンソール&lt;/e2&gt;とも言います) 制御用のプロシージャがあります。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1975,6 +2080,14 @@ nim buildIndex -o:htmldocs/theindex.html htmldocs</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200303T032349Z" creationid="isVowel" creationdate="20200211T131858Z">
         <seg>&lt;b0&gt;廃止:&lt;/b0&gt; 'init' をお使いください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Deprecated:&lt;/b0&gt; use distinctBase from typetraits instead</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T200131Z" creationid="isVowel" creationdate="20200424T200131Z">
+        <seg>&lt;b0&gt;廃止:&lt;/b0&gt; typetraits モジュールの distinctBase をお使いください</seg>
       </tuv>
     </tu>
     <tu>
@@ -2696,6 +2809,20 @@ even skies of spring and flowers of summer must ever be poison to me."""&lt;/s12
 &lt;s69&gt;#   &lt;myTag&gt;テキスト&lt;!-- これはコメントです --&gt;&lt;/myTag&gt;&lt;/s69&gt;
 &lt;s70&gt;#   &lt;secondTag&gt;&amp;エンティティ;&lt;/secondTag&gt;&lt;/s70&gt;
 &lt;s71&gt;# &lt;/treeTag&gt;&lt;/s71&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s0&gt;let&lt;/s0&gt; &lt;s1&gt;a&lt;/s1&gt; &lt;s2&gt;=&lt;/s2&gt; &lt;s3&gt;getMonoTime&lt;/s3&gt;&lt;s4&gt;(&lt;/s4&gt;&lt;s5&gt;)&lt;/s5&gt;
+&lt;s6&gt;# ... do some work&lt;/s6&gt;
+&lt;s7&gt;let&lt;/s7&gt; &lt;s8&gt;b&lt;/s8&gt; &lt;s9&gt;=&lt;/s9&gt; &lt;s10&gt;getMonoTime&lt;/s10&gt;&lt;s11&gt;(&lt;/s11&gt;&lt;s12&gt;)&lt;/s12&gt;
+&lt;s13&gt;assert&lt;/s13&gt; &lt;s14&gt;a&lt;/s14&gt; &lt;s15&gt;&lt;=&lt;/s15&gt; &lt;s16&gt;b&lt;/s16&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T004837Z" creationid="isVowel" creationdate="20200513T004837Z">
+        <seg>&lt;s0&gt;let&lt;/s0&gt; &lt;s1&gt;a&lt;/s1&gt; &lt;s2&gt;=&lt;/s2&gt; &lt;s3&gt;getMonoTime&lt;/s3&gt;&lt;s4&gt;(&lt;/s4&gt;&lt;s5&gt;)&lt;/s5&gt;
+&lt;s6&gt;# ... 処理内容&lt;/s6&gt;
+&lt;s7&gt;let&lt;/s7&gt; &lt;s8&gt;b&lt;/s8&gt; &lt;s9&gt;=&lt;/s9&gt; &lt;s10&gt;getMonoTime&lt;/s10&gt;&lt;s11&gt;(&lt;/s11&gt;&lt;s12&gt;)&lt;/s12&gt;
+&lt;s13&gt;assert&lt;/s13&gt; &lt;s14&gt;a&lt;/s14&gt; &lt;s15&gt;&lt;=&lt;/s15&gt; &lt;s16&gt;b&lt;/s16&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -3842,6 +3969,18 @@ even skies of spring and flowers of summer must ever be poison to me."""&lt;/s12
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200310T034353Z" creationid="isVowel" creationdate="20200310T034353Z">
         <seg>&lt;s16&gt;Verbose&lt;/s16&gt;&lt;s17&gt;,&lt;/s17&gt;                    &lt;s18&gt;## 詳細表示。&lt;/s18&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s16&gt;a&lt;/s16&gt;&lt;s17&gt;.&lt;/s17&gt;&lt;s18&gt;addLast&lt;/s18&gt;&lt;s19&gt;(&lt;/s19&gt;&lt;s20&gt;10&lt;/s20&gt;&lt;s21&gt;*&lt;/s21&gt;&lt;s22&gt;i&lt;/s22&gt;&lt;s23&gt;)&lt;/s23&gt;
+
+&lt;s24&gt;for&lt;/s24&gt; &lt;s25&gt;x&lt;/s25&gt; &lt;s26&gt;in&lt;/s26&gt; &lt;s27&gt;a&lt;/s27&gt;&lt;s28&gt;:&lt;/s28&gt;  &lt;s29&gt;# the same as: for x in items(a):&lt;/s29&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T094253Z" creationid="isVowel" creationdate="20200512T094253Z">
+        <seg>&lt;s16&gt;a&lt;/s16&gt;&lt;s17&gt;.&lt;/s17&gt;&lt;s18&gt;addLast&lt;/s18&gt;&lt;s19&gt;(&lt;/s19&gt;&lt;s20&gt;10&lt;/s20&gt;&lt;s21&gt;*&lt;/s21&gt;&lt;s22&gt;i&lt;/s22&gt;&lt;s23&gt;)&lt;/s23&gt;
+
+&lt;s24&gt;for&lt;/s24&gt; &lt;s25&gt;x&lt;/s25&gt; &lt;s26&gt;in&lt;/s26&gt; &lt;s27&gt;a&lt;/s27&gt;&lt;s28&gt;:&lt;/s28&gt;  &lt;s29&gt;# これと同じです: for x in items(a):&lt;/s29&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -5962,6 +6101,22 @@ even skies of spring and flowers of summer must ever be poison to me."""&lt;/s12
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200421T034615Z" creationid="isVowel" creationdate="20200421T034615Z">
         <seg>&lt;s34&gt;doAssert&lt;/s34&gt; &lt;s35&gt;watchdoge&lt;/s35&gt; &lt;s36&gt;&gt;=&lt;/s36&gt; &lt;s37&gt;0&lt;/s37&gt;        &lt;s38&gt;## エラーの確認。&lt;/s38&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;s34&gt;echo&lt;/s34&gt; &lt;s35&gt;"key: "&lt;/s35&gt;&lt;s36&gt;,&lt;/s36&gt; &lt;s37&gt;k&lt;/s37&gt;&lt;s38&gt;,&lt;/s38&gt; &lt;s39&gt;", value: "&lt;/s39&gt;&lt;s40&gt;,&lt;/s40&gt; &lt;s41&gt;v&lt;/s41&gt;
+
+&lt;s42&gt;# key: 0, value: 10&lt;/s42&gt;
+&lt;s43&gt;# key: 1, value: 20&lt;/s43&gt;
+&lt;s44&gt;# key: 2, value: 30&lt;/s44&gt;</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T094552Z" creationid="isVowel" creationdate="20200512T094552Z">
+        <seg>&lt;s34&gt;echo&lt;/s34&gt; &lt;s35&gt;"キー: "&lt;/s35&gt;&lt;s36&gt;,&lt;/s36&gt; &lt;s37&gt;k&lt;/s37&gt;&lt;s38&gt;,&lt;/s38&gt; &lt;s39&gt;", 値: "&lt;/s39&gt;&lt;s40&gt;,&lt;/s40&gt; &lt;s41&gt;v&lt;/s41&gt;
+
+&lt;s42&gt;# キー: 0, 値: 10&lt;/s42&gt;
+&lt;s43&gt;# キー: 1, 値: 20&lt;/s43&gt;
+&lt;s44&gt;# キー: 2, 値: 30&lt;/s44&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -8198,10 +8353,26 @@ even skies of spring and flowers of summer must ever be poison to me."""&lt;/s12
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;t0&gt;&lt;s1&gt;asyncdispatch&lt;/s1&gt;&lt;/t0&gt; module depends on the &lt;t2&gt;&lt;s3&gt;asyncmacro&lt;/s3&gt;&lt;/t2&gt; module to work properly.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200511T175001Z" creationid="isVowel" creationdate="20200511T175001Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;asyncdispatch&lt;/s1&gt;&lt;/t0&gt; モジュールは &lt;t2&gt;&lt;s3&gt;asyncmacro&lt;/s3&gt;&lt;/t2&gt; モジュールの機能に完全依存します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;t0&gt;&lt;s1&gt;comp&lt;/s1&gt;&lt;/t0&gt; is the actual list comprehension, for example &lt;t2&gt;&lt;s3&gt;x | (x &lt;- 1..10, x mod 2 == 0)&lt;/s3&gt;&lt;/t2&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T022854Z" creationid="isVowel" creationdate="20200127T022653Z">
         <seg>&lt;t0&gt;&lt;s1&gt;comp&lt;/s1&gt;&lt;/t0&gt; は、 &lt;t2&gt;&lt;s3&gt;x | (x &lt;- 1..10, x mod 2 == 0)&lt;/s3&gt;&lt;/t2&gt; などの解読対象となるリストです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;t0&gt;&lt;s1&gt;deq[^1]&lt;/s1&gt;&lt;/t0&gt; is the last element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T090311Z" creationid="isVowel" creationdate="20200512T090311Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;deq[^1]&lt;/s1&gt;&lt;/t0&gt; は末尾要素です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -8250,6 +8421,14 @@ even skies of spring and flowers of summer must ever be poison to me."""&lt;/s12
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200413T043036Z" creationid="isVowel" creationdate="20200413T043017Z">
         <seg>&lt;t0&gt;&lt;s1&gt;init&lt;/s1&gt;&lt;/t0&gt; は &lt;t2&gt;&lt;s3&gt;T&lt;/s3&gt;&lt;/t2&gt; 型を作成するのに使われます</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;t0&gt;&lt;s1&gt;initialSize&lt;/s1&gt;&lt;/t0&gt; must be a power of two (default: 4).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T084727Z" creationid="isVowel" creationdate="20200512T084727Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;initialSize&lt;/s1&gt;&lt;/t0&gt; には必ず二の累乗を指定してください (デフォルトは 4)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -8656,6 +8835,14 @@ even skies of spring and flowers of summer must ever be poison to me."""&lt;/s12
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A double-ended queue backed with a ringed seq buffer.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T081956Z" creationid="isVowel" creationdate="20200512T081956Z">
+        <seg>deque の裏方である環状 seq バッファです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A file stream object.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200212T182434Z" creationid="isVowel" creationdate="20200212T182434Z">
@@ -8756,6 +8943,14 @@ even skies of spring and flowers of summer must ever be poison to me."""&lt;/s12
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200303T024524Z" creationid="isVowel" creationdate="20200303T024524Z">
         <seg>テキスト行の区切り文字は &lt;t6&gt;&lt;s7&gt;LF&lt;/s7&gt;&lt;/t6&gt; または &lt;t8&gt;&lt;s9&gt;CRLF&lt;/s9&gt;&lt;/t8&gt; です。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A monotonic timestamp represents the time that has passed since some system defined point in time.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T004828Z" creationid="isVowel" creationdate="20200513T004746Z">
+        <seg>モノトニック・タイムスタンプはシステムにより定義された始点時間からの経過時間を表します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -8947,6 +9142,30 @@ system which can be used to create domain specific languages.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Access the backwards indexed i-th element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T090247Z" creationid="isVowel" creationdate="20200512T090247Z">
+        <seg>インデックスの末尾から i 番目にある要素へアクセスします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Access the i-th element of &lt;t0&gt;&lt;s1&gt;deq&lt;/s1&gt;&lt;/t0&gt; and return a mutable reference to it.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T090122Z" creationid="isVowel" creationdate="20200512T090122Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;deq&lt;/s1&gt;&lt;/t0&gt; の i 番目にある要素へアクセスを行いミュータブル (状態変更可能) な参照を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Access the i-th element of &lt;t0&gt;&lt;s1&gt;deq&lt;/s1&gt;&lt;/t0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T085635Z" creationid="isVowel" creationdate="20200512T085635Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;deq&lt;/s1&gt;&lt;/t0&gt; の i 番目にある要素へアクセスします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Access the i-th element of &lt;t0&gt;&lt;s1&gt;heap&lt;/s1&gt;&lt;/t0&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200307T143001Z" creationid="isVowel" creationdate="20200307T143001Z">
@@ -9007,6 +9226,22 @@ system which can be used to create domain specific languages.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200303T131903Z" creationid="isVowel" creationdate="20200303T131903Z">
         <seg>複素数へ実数を加算します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Add an &lt;t0&gt;&lt;s1&gt;item&lt;/s1&gt;&lt;/t0&gt; to the beginning of the &lt;t2&gt;&lt;s3&gt;deq&lt;/s3&gt;&lt;/t2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T091215Z" creationid="isVowel" creationdate="20200512T091215Z">
+        <seg>&lt;t2&gt;&lt;s3&gt;deq&lt;/s3&gt;&lt;/t2&gt; の先頭に &lt;t0&gt;&lt;s1&gt;item&lt;/s1&gt;&lt;/t0&gt; を追加します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Add an &lt;t0&gt;&lt;s1&gt;item&lt;/s1&gt;&lt;/t0&gt; to the end of the &lt;t2&gt;&lt;s3&gt;deq&lt;/s3&gt;&lt;/t2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T091234Z" creationid="isVowel" creationdate="20200512T091234Z">
+        <seg>&lt;t2&gt;&lt;s3&gt;deq&lt;/s3&gt;&lt;/t2&gt; の末尾に &lt;t0&gt;&lt;s1&gt;item&lt;/s1&gt;&lt;/t0&gt; を追加します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9269,6 +9504,14 @@ system which can be used to create domain specific languages.</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>All operations convert the integer operand into the type of the float operand.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T054719Z" creationid="isVowel" creationdate="20200513T054719Z">
+        <seg>全演算処理で整数オペランドを浮動小数オペランド型へ変換します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>All parsing errors are ignored.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T021433Z" creationid="isVowel" creationdate="20200221T021433Z">
@@ -9516,6 +9759,14 @@ system which can be used to create domain specific languages.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200127T023845Z" creationid="isVowel" creationdate="20200127T023845Z">
         <seg>用例:</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>As such, a check to see if the deque is empty is needed before any access, unless your program logic guarantees it indirectly.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T081713Z" creationid="isVowel" creationdate="20200512T080749Z">
+        <seg>したがって、プログラムのロジックで間接的に保証されない限り、アクセス前に deque が空であるか確かめるための検査が必要です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -10011,6 +10262,22 @@ system which can be used to create domain specific languages.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200227T065034Z" creationid="isVowel" creationdate="20200227T065034Z">
         <seg>Cast 演算子</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Change the backwards indexed i-th element.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T090415Z" creationid="isVowel" creationdate="20200512T090415Z">
+        <seg>インデックスの末尾から i 番目にある要素を変更します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Change the i-th element of &lt;t0&gt;&lt;s1&gt;deq&lt;/s1&gt;&lt;/t0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T090139Z" creationid="isVowel" creationdate="20200512T090139Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;deq&lt;/s1&gt;&lt;/t0&gt; の i 番目にある要素を変更します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -10896,6 +11163,14 @@ system which can be used to create domain specific languages.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200421T032209Z" creationid="isVowel" creationdate="20200421T032209Z">
         <seg>新しい &lt;t0&gt;&lt;s1&gt;FutureStream&lt;/s1&gt;&lt;/t0&gt; を作成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Create a new empty deque.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T082140Z" creationid="isVowel" creationdate="20200512T082140Z">
+        <seg>空の deque を新規作成します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -12923,6 +13198,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200316T011647Z" creationid="isVowel" creationdate="20200316T004319Z">
         <seg>これ以外の &lt;t0&gt;&lt;s1&gt;typedesc&lt;/s1&gt;&lt;/t0&gt; を処理するプロシージャに関しては、 &lt;a2&gt;typetraits モジュール&lt;/a2&gt;を参照してください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For numerical expressions, the return type is always the type of the float involved in the expression, i.e., there is no auto conversion from float32 to float64.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T054737Z" creationid="isVowel" creationdate="20200513T054737Z">
+        <seg>数式では、返値型は必ず式と関連する浮動小数型となります。すなわち、 float32 から float64 へ自動変換は行われません。</seg>
       </tuv>
     </tu>
     <tu>
@@ -15272,6 +15555,14 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Get the current &lt;t0&gt;&lt;s1&gt;MonoTime&lt;/s1&gt;&lt;/t0&gt; timestamp.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T003609Z" creationid="isVowel" creationdate="20200513T003609Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;MonoTime&lt;/s1&gt;&lt;/t0&gt; による現在のタイムスタンプを取得します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Gets &lt;t0&gt;&lt;s1&gt;n&lt;/s1&gt;&lt;/t0&gt;'s tag as a &lt;t2&gt;&lt;s3&gt;HtmlTag&lt;/s3&gt;&lt;/t2&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200221T023827Z" creationid="isVowel" creationdate="20200221T023827Z">
@@ -15550,6 +15841,14 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>However, since &lt;t0&gt;&lt;s1&gt;MonoTime&lt;/s1&gt;&lt;/t0&gt; represents the time that has passed since some unknown time origin, it cannot be converted to a human readable timestamp.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T005806Z" creationid="isVowel" creationdate="20200513T005806Z">
+        <seg>しかしながら、 &lt;t0&gt;&lt;s1&gt;MonoTime&lt;/s1&gt;&lt;/t0&gt; は未知の始点時間からの経過時間を表したものであるため、人間が理解できるタイムスタンプへの変換はできません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>However, there are also lots of procs that aid in debugging:</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200414T053232Z" creationid="isVowel" creationdate="20200414T052413Z">
@@ -15824,6 +16123,15 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If compiled with &lt;t0&gt;&lt;s1&gt;boundChecks&lt;/s1&gt;&lt;/t0&gt; option, those procs will raise an &lt;t2&gt;&lt;s3&gt;IndexError&lt;/s3&gt;&lt;/t2&gt; on such access.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T075920Z" creationid="isVowel" creationdate="20200512T075920Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;boundChecks&lt;/s1&gt;&lt;/t0&gt; オプションを指定してコンパイルしたとき、
+プロシージャによるアクセスなどで &lt;t2&gt;&lt;s3&gt;IndexError&lt;/s3&gt;&lt;/t2&gt; が発生します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If expression</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T081813Z" creationid="isVowel" creationdate="20200114T081813Z">
@@ -16030,6 +16338,14 @@ inclusion :包含、含有、挿入(意訳)
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If the supplied number of elements exceeds the total number of elements in the deque, the deque will remain empty.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T094143Z" creationid="isVowel" creationdate="20200512T094117Z">
+        <seg>deque の合計要素数を超過した要素数が指定されたときは、そのまま deque は空になります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If this fails, &lt;t0&gt;&lt;s1&gt;OSError&lt;/s1&gt;&lt;/t0&gt; is raised.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200422T150144Z" creationid="isVowel" creationdate="20200422T150144Z">
@@ -16042,6 +16358,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200423T041609Z" creationid="isVowel" creationdate="20200423T041609Z">
         <seg>失敗時は &lt;t0&gt;&lt;s1&gt;false&lt;/s1&gt;&lt;/t0&gt; を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If this is required, the &lt;t2&gt;&lt;s3&gt;times.Time&lt;/s3&gt;&lt;/t2&gt; type should be used instead.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T005831Z" creationid="isVowel" creationdate="20200513T005831Z">
+        <seg>この処理が必要ならば &lt;t2&gt;&lt;s3&gt;times.Time&lt;/s3&gt;&lt;/t2&gt;  型をお使いください。</seg>
       </tuv>
     </tu>
     <tu>
@@ -16066,6 +16390,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200310T071832Z" creationid="isVowel" creationdate="20200310T071832Z">
         <seg>恒常的に変更したいときは、 &lt;a0&gt;cd()&lt;/a0&gt; プロシージャをお使いください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you need to accept runtime values for this you could use the &lt;a2&gt;nextPowerOfTwo proc&lt;/a2&gt; from the &lt;a3&gt;math module&lt;/a3&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T085244Z" creationid="isVowel" creationdate="20200512T085239Z">
+        <seg>この値を実行時に受け付ける必要があるときは &lt;a3&gt;math モジュール&lt;/a3&gt;の &lt;a2&gt;nextPowerOfTwo プロシージャ&lt;/a2&gt;を使います。</seg>
       </tuv>
     </tu>
     <tu>
@@ -16122,6 +16454,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200309T013403Z" creationid="isVowel" creationdate="20200309T013403Z">
         <seg>OpenSSL 1.0.x を静的リンクする場合は、 &lt;t4&gt;&lt;s5&gt;-d:openssl10&lt;/s5&gt;&lt;/t4&gt; で &lt;t2&gt;&lt;s3&gt;openssl10&lt;/s3&gt;&lt;/t2&gt; シンボルを定義してください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Implementation of a &lt;s0&gt;deque&lt;/s0&gt; (double-ended queue).</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T075804Z" creationid="isVowel" creationdate="20200512T075804Z">
+        <seg>&lt;s0&gt;deque&lt;/s0&gt; (double-ended queue: 両頭待ち行列) の実装です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -16308,6 +16648,14 @@ inclusion :包含、含有、挿入(意訳)
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T082140Z" creationid="isVowel" creationdate="20200114T082140Z">
         <seg>IncompleteStruct プラグマ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Increases &lt;t0&gt;&lt;s1&gt;a&lt;/s1&gt;&lt;/t0&gt; by &lt;t2&gt;&lt;s3&gt;b&lt;/s3&gt;&lt;/t2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T003145Z" creationid="isVowel" creationdate="20200513T003145Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;a&lt;/s1&gt;&lt;/t0&gt; を &lt;t2&gt;&lt;s3&gt;b&lt;/s3&gt;&lt;/t2&gt; で増します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -16730,6 +17078,14 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200313T101642Z" creationid="isVowel" creationdate="20200313T100332Z">
         <seg>つまり、プログラミング言語 Nim の説明 (definition) ではありません (&lt;a1&gt;マニュアル&lt;/a1&gt;で扱います)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It is the equivalent of &lt;t2&gt;&lt;s3&gt;deq.find(item) &gt;= 0&lt;/s3&gt;&lt;/t2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T091128Z" creationid="isVowel" creationdate="20200512T091128Z">
+        <seg>これは &lt;t2&gt;&lt;s3&gt;deq.find(item) &gt;= 0&lt;/s3&gt;&lt;/t2&gt; と等価です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -17427,6 +17783,22 @@ replacementは「代替手段」を指します。このまま「代替ツール
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200411T155845Z" creationid="isVowel" creationdate="20200411T155845Z">
         <seg>通常のプロシージャを JavaScript 互換 async プロシージャへ変換するマクロです   &lt;a0&gt;ソース&lt;/a0&gt; &lt;a1&gt;編集&lt;/a1&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Macro which processes async procedures into both asynchronous and synchronous procedures.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200511T180507Z" creationid="isVowel" creationdate="20200511T180507Z">
+        <seg>async プロシージャにある非同期および同期プロシージャの双方を処理するマクロです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Macro which processes async procedures into the appropriate iterators and yield statements.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200511T180304Z" creationid="isVowel" creationdate="20200511T180304Z">
+        <seg>async プロシージャにある適切なイテレータと yield ステートメントを処理するマクロです。</seg>
       </tuv>
     </tu>
     <tu>
@@ -18853,6 +19225,14 @@ pkgFiles: "compiler/*;doc/basicopt.txt;doc/advopt.txt;doc/nimdoc.css"</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>None of the procs that get an individual value from the deque can be used on an empty deque.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T075850Z" creationid="isVowel" creationdate="20200512T075850Z">
+        <seg>deque から個別値を取得するプロシージャは空の deque を扱えません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Noop unless passing --stacktraceMsgs and --stacktrace   &lt;a2&gt;Source&lt;/a2&gt; &lt;a3&gt;Edit&lt;/a3&gt;</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200407T065433Z" creationid="isVowel" creationdate="20200407T065433Z">
@@ -18953,6 +19333,14 @@ pkgFiles: "compiler/*;doc/basicopt.txt;doc/advopt.txt;doc/nimdoc.css"</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200318T092252Z" creationid="isVowel" creationdate="20200318T092252Z">
         <seg>注意として、単文字オプションの引数はコロンで指定してください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note: In general, auto-converting from int to float loses information, which is why these operators live in a separate module.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T054808Z" creationid="isVowel" creationdate="20200513T054808Z">
+        <seg>注意: 一般に、整数から浮動小数へ自動変換すると情報が欠落します。このため、演算子はモジュールごと実装されています。</seg>
       </tuv>
     </tu>
     <tu>
@@ -19329,6 +19717,14 @@ pkgFiles: "compiler/*;doc/basicopt.txt;doc/advopt.txt;doc/nimdoc.css"</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041707Z" creationid="isVowel" creationdate="20200113T041707Z">
         <seg>演算子</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Optionally, the initial capacity can be reserved via &lt;t0&gt;&lt;s1&gt;initialSize&lt;/s1&gt;&lt;/t0&gt; as a performance optimization.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T084538Z" creationid="isVowel" creationdate="20200512T084538Z">
+        <seg>オプションとして、 &lt;t0&gt;&lt;s1&gt;initialSize&lt;/s1&gt;&lt;/t0&gt; の初期容量を予約することで処理速度を最適化できます。</seg>
       </tuv>
     </tu>
     <tu>
@@ -20329,10 +20725,26 @@ https://en.wikipedia.org/wiki/Futures_and_promises</note>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Reduces &lt;t0&gt;&lt;s1&gt;a&lt;/s1&gt;&lt;/t0&gt; by &lt;t2&gt;&lt;s3&gt;b&lt;/s3&gt;&lt;/t2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T003123Z" creationid="isVowel" creationdate="20200513T003123Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;a&lt;/s1&gt;&lt;/t0&gt; を &lt;t2&gt;&lt;s3&gt;b&lt;/s3&gt;&lt;/t2&gt; で減らします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Reference and pointer types</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T042206Z" creationid="isVowel" creationdate="20200113T042206Z">
         <seg>参照とポインタ型</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Regarding binary comparison, this module only provides unequal operators.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T054943Z" creationid="isVowel" creationdate="20200513T054923Z">
+        <seg>二項比較演算において、このモジュール専用の不等価演算子を実装しています。</seg>
       </tuv>
     </tu>
     <tu>
@@ -20409,10 +20821,34 @@ https://en.wikipedia.org/wiki/Futures_and_promises</note>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Remove &lt;t0&gt;&lt;s1&gt;fromFirst&lt;/s1&gt;&lt;/t0&gt; elements from the front of the deque and &lt;t2&gt;&lt;s3&gt;fromLast&lt;/s3&gt;&lt;/t2&gt; elements from the back.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T093856Z" creationid="isVowel" creationdate="20200512T093856Z">
+        <seg>deque の先頭から &lt;t0&gt;&lt;s1&gt;fromFirst&lt;/s1&gt;&lt;/t0&gt; 要素を、末尾から &lt;t2&gt;&lt;s3&gt;fromLast&lt;/s3&gt;&lt;/t2&gt; 要素を削除します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Remove all elements from &lt;t0&gt;&lt;s1&gt;heap&lt;/s1&gt;&lt;/t0&gt;, making it empty.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200307T142158Z" creationid="isVowel" creationdate="20200307T142158Z">
         <seg>&lt;t0&gt;&lt;s1&gt;heap&lt;/s1&gt;&lt;/t0&gt; から要素をすべて削除して、空にします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Remove and returns the first element of the &lt;t0&gt;&lt;s1&gt;deq&lt;/s1&gt;&lt;/t0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T091829Z" creationid="isVowel" creationdate="20200512T091829Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;deq&lt;/s1&gt;&lt;/t0&gt; の先頭要素を削除したものを返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Remove and returns the last element of the &lt;t0&gt;&lt;s1&gt;deq&lt;/s1&gt;&lt;/t0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T091844Z" creationid="isVowel" creationdate="20200512T091844Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;deq&lt;/s1&gt;&lt;/t0&gt; の末尾要素を削除したものを返します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -20473,6 +20909,14 @@ https://en.wikipedia.org/wiki/Futures_and_promises</note>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Represents a monotonic timestamp.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T004130Z" creationid="isVowel" creationdate="20200513T003705Z">
+        <seg>モノトニック・タイムスタンプ表現。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Represents an operating system process.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200423T061332Z" creationid="isVowel" creationdate="20200423T061332Z">
@@ -20509,6 +20953,14 @@ https://en.wikipedia.org/wiki/Futures_and_promises</note>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200421T043737Z" creationid="isVowel" creationdate="20200421T043737Z">
         <seg>属性をすべてリセットします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Resets the deque so that it is empty.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T091942Z" creationid="isVowel" creationdate="20200512T091942Z">
+        <seg>deque を空にすることでリセットを行います。</seg>
       </tuv>
     </tu>
     <tu>
@@ -20853,6 +21305,14 @@ https://en.wikipedia.org/wiki/Futures_and_promises</note>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200229T081040Z" creationid="isVowel" creationdate="20200229T081040Z">
         <seg>名前付きタプルならば true を、それ以外の型ならば false を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Return true if &lt;t0&gt;&lt;s1&gt;item&lt;/s1&gt;&lt;/t0&gt; is in &lt;t2&gt;&lt;s3&gt;deq&lt;/s3&gt;&lt;/t2&gt; or false if not found.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T092258Z" creationid="isVowel" creationdate="20200512T090949Z">
+        <seg>&lt;t2&gt;&lt;s3&gt;deq&lt;/s3&gt;&lt;/t2&gt; に &lt;t0&gt;&lt;s1&gt;item&lt;/s1&gt;&lt;/t0&gt; があれば true を、なければ false を返します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -21513,6 +21973,14 @@ https://en.wikipedia.org/wiki/Futures_and_promises</note>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Returns the difference between two &lt;t0&gt;&lt;s1&gt;MonoTime&lt;/s1&gt;&lt;/t0&gt; timestamps as a &lt;t2&gt;&lt;s3&gt;Duration&lt;/s3&gt;&lt;/t2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T003343Z" creationid="isVowel" creationdate="20200513T003343Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;MonoTime&lt;/s1&gt;&lt;/t0&gt; によるタイムスタンプ同士における &lt;t2&gt;&lt;s3&gt;Duration&lt;/s3&gt;&lt;/t2&gt; の相違を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Returns the directory name.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200410T072828Z" creationid="isVowel" creationdate="20200410T072828Z">
@@ -21557,6 +22025,22 @@ https://en.wikipedia.org/wiki/Futures_and_promises</note>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200422T144047Z" creationid="isVowel" creationdate="20200422T144047Z">
         <seg>アプリケーションの実行可能ファイル名を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the first element of &lt;t0&gt;&lt;s1&gt;deq&lt;/s1&gt;&lt;/t0&gt;, but does not remove it from the deque.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T091348Z" creationid="isVowel" creationdate="20200512T091348Z">
+        <seg>deque から削除せずに &lt;t0&gt;&lt;s1&gt;deq&lt;/s1&gt;&lt;/t0&gt; の先頭要素を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the highest representable &lt;t0&gt;&lt;s1&gt;MonoTime&lt;/s1&gt;&lt;/t0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T002820Z" creationid="isVowel" creationdate="20200513T002820Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;MonoTime&lt;/s1&gt;&lt;/t0&gt; の最大表現可能範囲を返します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -21705,6 +22189,14 @@ https://en.wikipedia.org/wiki/Futures_and_promises</note>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Returns the last element of &lt;t0&gt;&lt;s1&gt;deq&lt;/s1&gt;&lt;/t0&gt;, but does not remove it from the deque.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T091402Z" creationid="isVowel" creationdate="20200512T091402Z">
+        <seg>deque から削除せずに &lt;t0&gt;&lt;s1&gt;deq&lt;/s1&gt;&lt;/t0&gt; の末尾要素を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Returns the local hostname (not the FQDN)   &lt;a0&gt;Source&lt;/a0&gt; &lt;a1&gt;Edit&lt;/a1&gt;</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200415T122401Z" creationid="isVowel" creationdate="20200415T122401Z">
@@ -21725,6 +22217,14 @@ https://en.wikipedia.org/wiki/Futures_and_promises</note>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200303T132359Z" creationid="isVowel" creationdate="20200303T132359Z">
         <seg>2 を底とする対数 &lt;t0&gt;&lt;s1&gt;z&lt;/s1&gt;&lt;/t0&gt; を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the lowest representable &lt;t0&gt;&lt;s1&gt;MonoTime&lt;/s1&gt;&lt;/t0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T002804Z" creationid="isVowel" creationdate="20200513T002804Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;MonoTime&lt;/s1&gt;&lt;/t0&gt; の最低表現可能範囲を返します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -21797,6 +22297,14 @@ https://en.wikipedia.org/wiki/Futures_and_promises</note>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200303T132944Z" creationid="isVowel" creationdate="20200303T132944Z">
         <seg>&lt;t0&gt;&lt;s1&gt;z&lt;/s1&gt;&lt;/t0&gt; の位相を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns the raw ticks value from a &lt;t0&gt;&lt;s1&gt;MonoTime&lt;/s1&gt;&lt;/t0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T003543Z" creationid="isVowel" creationdate="20200513T003543Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;MonoTime&lt;/s1&gt;&lt;/t0&gt; から生度数値 (raw ticks value) を返します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -21893,6 +22401,30 @@ https://en.wikipedia.org/wiki/Futures_and_promises</note>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200225T041125Z" creationid="isVowel" creationdate="20200225T041125Z">
         <seg>指定された &lt;t0&gt;&lt;s1&gt;rnField&lt;/s1&gt;&lt;/t0&gt; ノードの値を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns true if &lt;t0&gt;&lt;s1&gt;a&lt;/s1&gt;&lt;/t0&gt; and &lt;t2&gt;&lt;s3&gt;b&lt;/s3&gt;&lt;/t2&gt; happened simultaneous.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T002933Z" creationid="isVowel" creationdate="20200513T002933Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;a&lt;/s1&gt;&lt;/t0&gt; と &lt;t2&gt;&lt;s3&gt;b&lt;/s3&gt;&lt;/t2&gt; が同時発生したときは true を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns true if &lt;t0&gt;&lt;s1&gt;a&lt;/s1&gt;&lt;/t0&gt; happened before &lt;t2&gt;&lt;s3&gt;b&lt;/s3&gt;&lt;/t2&gt; or if they happened simultaneous.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T002958Z" creationid="isVowel" creationdate="20200513T002958Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;a&lt;/s1&gt;&lt;/t0&gt; が &lt;t2&gt;&lt;s3&gt;b&lt;/s3&gt;&lt;/t2&gt; 以前に発生するか両方とも同時発生したときは true を返します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Returns true if &lt;t0&gt;&lt;s1&gt;a&lt;/s1&gt;&lt;/t0&gt; happened before &lt;t2&gt;&lt;s3&gt;b&lt;/s3&gt;&lt;/t2&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T003041Z" creationid="isVowel" creationdate="20200513T003041Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;a&lt;/s1&gt;&lt;/t0&gt; が &lt;t2&gt;&lt;s3&gt;b&lt;/s3&gt;&lt;/t2&gt; 以前に発生したときは true を返します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -22277,6 +22809,14 @@ https://en.wikipedia.org/wiki/Futures_and_promises</note>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200421T045555Z" creationid="isVowel" creationdate="20200421T045555Z">
         <seg>&lt;a0&gt;このメモリモデルに関する詳細情報はマニュアル&lt;/a0&gt;を参照してください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See &lt;a2&gt;MDN&lt;/a2&gt; for more information.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T003656Z" creationid="isVowel" creationdate="20200513T003656Z">
+        <seg>詳細情報は &lt;a2&gt;Mozllia 開発者ネットワーク (MDN)&lt;/a2&gt; を参照してください。</seg>
       </tuv>
     </tu>
     <tu>
@@ -23388,8 +23928,8 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       <tuv lang="EN-US">
         <seg>Template based implementation of singly and doubly linked lists.</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200221T092043Z" creationid="isVowel" creationdate="20200221T092043Z">
-        <seg>単方向・双方向リストのテンプレートベースによる実装です。</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T081235Z" creationid="isVowel" creationdate="20200221T092043Z">
+        <seg>単方向・双方向連結リストのテンプレートベースによる実装です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -23561,6 +24101,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>The 'await' keyword is also defined here for technical reasons.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200511T175227Z" creationid="isVowel" creationdate="20200511T175227Z">
+        <seg>技術上の理由により 'await' キーワードをここでも定義しています。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>1.「accept(s)」は「受け入れる」ですが、「扱えます」や「指定できます」のほうが良いこともあります。また、「要求」の意味もあります。
 
 2. 「accepts」は「必要です」と訳してしまうと、オプション省略時の動作がないと誤解の恐れがある (-d:release の説明と異なってしまう)。よって「指定できます」のほうが自然です。
@@ -23638,6 +24186,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200116T034310Z" creationid="isVowel" creationdate="20200116T034247Z">
         <seg>&lt;t0&gt;&lt;s1&gt;--parallelBuild:n&lt;/s1&gt;&lt;/t0&gt; スイッチやコンフィギュレーションオプションは並列ジョブ数の強制指定、または起動から一貫して直列ジョブで実行するために使います (&lt;t2&gt;&lt;s3&gt;n == 1&lt;/s3&gt;&lt;/t2&gt;)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;t0&gt;&lt;s1&gt;MonoTime&lt;/s1&gt;&lt;/t0&gt; type stores the timestamp in nanosecond resolution, but note that the actual supported time resolution differs for different systems.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T010129Z" creationid="isVowel" creationdate="20200513T010129Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;MonoTime&lt;/s1&gt;&lt;/t0&gt; 型はタイムスタンプをナノ秒分解能で格納しますが、実際にサポートされる時間分解能は異種システム間で異なることに注意しください。</seg>
       </tuv>
     </tu>
     <tu>
@@ -23742,6 +24298,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200422T073813Z" creationid="isVowel" creationdate="20200422T073813Z">
         <seg>未処理アイテム件数が &lt;t2&gt;&lt;s3&gt;maxItems&lt;/s3&gt;&lt;/t2&gt; 以下になるまで &lt;t0&gt;&lt;s1&gt;send&lt;/s1&gt;&lt;/t0&gt; 処理をブロックします。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;t0&gt;&lt;s1&gt;std/monotimes&lt;/s1&gt;&lt;/t0&gt; module implements monotonic timestamps.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T004526Z" creationid="isVowel" creationdate="20200513T004526Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;std/monotimes&lt;/s1&gt;&lt;/t0&gt; モジュールはモノトニック・タイムスタンプ (単調型ファイル時刻情報) の実装です。</seg>
       </tuv>
     </tu>
     <tu>
@@ -24166,6 +24730,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The equality operator &lt;t0&gt;&lt;s1&gt;==&lt;/s1&gt;&lt;/t0&gt; is omitted, because depending on the use case either casting to float or rounding to int might be preferred, and users should make an explicit choice.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T055835Z" creationid="isVowel" creationdate="20200513T055714Z">
+        <seg>等価演算子 &lt;t0&gt;&lt;s1&gt;==&lt;/s1&gt;&lt;/t0&gt; は、使用事例により浮動小数へのキャストや int へ切り捨てたほうが好ましく、ユーザが明示的に選択するものであるため実装していません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The event's &lt;t8&gt;&lt;s9&gt;filename&lt;/s9&gt;&lt;/t8&gt; field will be equal to &lt;t10&gt;&lt;s11&gt;file&lt;/s11&gt;&lt;/t10&gt;.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200224T041153Z" creationid="isVowel" creationdate="20200224T041153Z">
@@ -24310,6 +24882,14 @@ B. 本ドキュメントにおける Nim の機能解説は未だ不十分であ
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The generated async procedures use the &lt;t0&gt;&lt;s1&gt;async&lt;/s1&gt;&lt;/t0&gt; macro, whereas the generated synchronous procedures simply strip off the &lt;t2&gt;&lt;s3&gt;await&lt;/s3&gt;&lt;/t2&gt; calls.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200511T180842Z" creationid="isVowel" creationdate="20200511T180842Z">
+        <seg>生成後の async プロシージャでは &lt;t0&gt;&lt;s1&gt;async&lt;/s1&gt;&lt;/t0&gt; マクロを使いますが、生成後の同期プロシージャでは &lt;t2&gt;&lt;s3&gt;await&lt;/s3&gt;&lt;/t2&gt; 呼び出しを無効化します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The generated index.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200209T061215Z" creationid="isVowel" creationdate="20200209T061215Z">
@@ -24399,6 +24979,14 @@ skipped : スキップする、無視する、読み飛ばす。</note>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The length of a newly created deque will still be 0.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T084635Z" creationid="isVowel" creationdate="20200512T084635Z">
+        <seg>新規作成された deque の長さは 0 になります。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The let statement</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T041153Z" creationid="isVowel" creationdate="20200113T041153Z">
@@ -24419,6 +25007,14 @@ skipped : スキップする、無視する、読み飛ばす。</note>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200413T050641Z" creationid="isVowel" creationdate="20200413T042317Z">
         <seg>シンプルな命名体系となるよう名前が短く意味が通じるもので一般的によく使われる略語をライブラリで採用しています。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The monotonic timestamps are guaranteed to always increase, meaning that that the following is guaranteed to work:</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T004734Z" creationid="isVowel" creationdate="20200513T004734Z">
+        <seg>モノトニック・タイムスタンプは常時増加することが保証されています。つまり、このような動作を保証します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -24773,6 +25369,14 @@ skipped : スキップする、無視する、読み飛ばす。</note>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200413T050320Z" creationid="isVowel" creationdate="20200413T050320Z">
         <seg>最終目標はプログラマが名前から機能や用途を&lt;e1&gt;推測可能&lt;/e1&gt;にすることです。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The underlying implementation uses a &lt;t1&gt;&lt;s2&gt;seq&lt;/s2&gt;&lt;/t1&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T075843Z" creationid="isVowel" creationdate="20200512T075843Z">
+        <seg>基本的な実装は &lt;t1&gt;&lt;s2&gt;seq&lt;/s2&gt;&lt;/t1&gt; を使います。</seg>
       </tuv>
     </tu>
     <tu>
@@ -25214,6 +25818,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This is not guaranteed for the &lt;t0&gt;&lt;s1&gt;times.Time&lt;/s1&gt;&lt;/t0&gt; type!</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T010300Z" creationid="isVowel" creationdate="20200513T004921Z">
+        <seg>これは &lt;t0&gt;&lt;s1&gt;times.Time&lt;/s1&gt;&lt;/t0&gt;  型として保証されていません！　</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This is not posix compliant, may introduce undefined behavior.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200211T132032Z" creationid="isVowel" creationdate="20200211T132032Z">
@@ -25370,6 +25982,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200228T060127Z" creationid="isVowel" creationdate="20200228T060127Z">
         <seg>つまり、この関数はオブジェクトが compiletime 型とは別のランタイム型ならば基本的に動作しません。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This means that the &lt;t2&gt;&lt;s3&gt;MonoTime&lt;/s3&gt;&lt;/t2&gt; should be used when measuring durations of time with high precision.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T005316Z" creationid="isVowel" creationdate="20200513T005316Z">
+        <seg>つまり &lt;t2&gt;&lt;s3&gt;MonoTime&lt;/s3&gt;&lt;/t2&gt; は継続時間の高精度時間測定で使います。</seg>
       </tuv>
     </tu>
     <tu>
@@ -25759,6 +26379,15 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
     </tu>
     <tu>
+      <note>ここで work は「処理、動作」ではなく「可能、実現」と訳出しています。ようするに型を超えて float /int 型を混在して演算子で処理できるようにするのが、このモジュールの用途ですからね。</note>
+      <tuv lang="EN-US">
+        <seg>This module offers implementations of common binary operations like &lt;t0&gt;&lt;s1&gt;+&lt;/s1&gt;&lt;/t0&gt;, &lt;t2&gt;&lt;s3&gt;-&lt;/s3&gt;&lt;/t2&gt;, &lt;t4&gt;&lt;s5&gt;*&lt;/s5&gt;&lt;/t4&gt;, &lt;t6&gt;&lt;s7&gt;/&lt;/s7&gt;&lt;/t6&gt; and comparison operations, which work for mixed float/int operands.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T060103Z" creationid="isVowel" creationdate="20200513T054711Z">
+        <seg>このモジュールは &lt;t0&gt;&lt;s1&gt;+&lt;/s1&gt;&lt;/t0&gt;, &lt;t2&gt;&lt;s3&gt;-&lt;/s3&gt;&lt;/t2&gt;, &lt;t4&gt;&lt;s5&gt;*&lt;/s5&gt;&lt;/t4&gt;, &lt;t6&gt;&lt;s7&gt;/&lt;/s7&gt;&lt;/t6&gt;  など一般的な二項演算と比較演算の実装であり、浮動小数 (float) と整数 (int) オペランドの併用を可能します。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <tuv lang="EN-US">
         <seg>This module parses an XML document and creates its XML tree representation.</seg>
       </tuv>
@@ -25957,6 +26586,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This should not be relied upon, as &lt;t4&gt;&lt;s5&gt;-d:release&lt;/s5&gt;&lt;/t4&gt; will disable those checks and may return garbage or crash the program.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T080757Z" creationid="isVowel" creationdate="20200512T080455Z">
+        <seg>&lt;t4&gt;&lt;s5&gt;-d:release&lt;/s5&gt;&lt;/t4&gt; を指定すると検査は無効となりますが、異物が返されたりプログラムの異常終了の原因となるため、これは当てにしないでください。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This simplifies code by reducing need for if-else branches around intermediate values that maybe be nil.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200410T150042Z" creationid="isVowel" creationdate="20200410T150042Z">
@@ -26059,6 +26696,14 @@ A3. RST (reStructuredText) ファイルを入力して LaTeX と HTML にする�
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200319T035719Z" creationid="isVowel" creationdate="20200319T035719Z">
         <seg>これは &lt;t0&gt;&lt;s1&gt;config\nim.cfg&lt;/s1&gt;&lt;/t0&gt; で定義されている &lt;t2&gt;&lt;s3&gt;lvm_gcc&lt;/s3&gt;&lt;/t2&gt; の構成を使います。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This value always uses nanosecond time resolution.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T003427Z" creationid="isVowel" creationdate="20200513T003427Z">
+        <seg>この値はナノ秒時による分解能を使います。</seg>
       </tuv>
     </tu>
     <tu>
@@ -26270,6 +26915,14 @@ sudo apt-get libvoodoo</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>To initialize an empty deque use &lt;a0&gt;initDeque proc&lt;/a0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T082058Z" creationid="isVowel" creationdate="20200512T082058Z">
+        <seg>空の deque で初期化するには &lt;a0&gt;initDeque プロシージャ&lt;/a0&gt; を使います。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>To learn about scripting in Nim see &lt;a0&gt;NimScript&lt;/a0&gt;</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200310T034332Z" creationid="isVowel" creationdate="20200310T034332Z">
@@ -26442,6 +27095,14 @@ sudo apt-get libvoodoo</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200113T042200Z" creationid="isVowel" creationdate="20200113T042200Z">
         <seg>タプル</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Turn a deque into its string representation.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T092221Z" creationid="isVowel" creationdate="20200512T092221Z">
+        <seg>deque を文字列形式へ変換します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -26948,6 +27609,14 @@ aはアドレス (address)  の略記法
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Use with care.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T054838Z" creationid="isVowel" creationdate="20200513T054838Z">
+        <seg>ご使用の際はご注意を。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Used by &lt;t0&gt;&lt;s1&gt;os.nim&lt;/s1&gt;&lt;/t0&gt; but also generally useful for dealing with paths.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200408T053749Z" creationid="isVowel" creationdate="20200408T053749Z">
@@ -26996,6 +27665,14 @@ aはアドレス (address)  の略記法
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200114T081743Z" creationid="isVowel" creationdate="20200114T081743Z">
         <seg>Using ステートメント</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Usually used via the &lt;t0&gt;&lt;s1&gt;in&lt;/s1&gt;&lt;/t0&gt; operator.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T091034Z" creationid="isVowel" creationdate="20200512T091034Z">
+        <seg>通常は &lt;t0&gt;&lt;s1&gt;in&lt;/s1&gt;&lt;/t0&gt; 演算子で使われます。</seg>
       </tuv>
     </tu>
     <tu>
@@ -27200,6 +27877,14 @@ OpenSSL [is の] [dynamically linked 動的リンク] [When 時は]、 OpenSSL [
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200219T111223Z" creationid="isVowel" creationdate="20200219T111223Z">
         <seg>クライアントによるリクエスト時は指定されたコールバックが呼び出されます。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When compiled with the JS backend and executed in a browser, this proc calls &lt;t0&gt;&lt;s1&gt;window.performance.now()&lt;/s1&gt;&lt;/t0&gt;, which is not supported by older browsers.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200513T003636Z" creationid="isVowel" creationdate="20200513T003636Z">
+        <seg>JS バックエンドでのコンパイルとブラウザでの実行時、このプロシージャは旧式のブラウザではサポートされていない &lt;t0&gt;&lt;s1&gt;window.performance.now()&lt;/s1&gt;&lt;/t0&gt; を呼び出します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -27441,6 +28126,30 @@ OpenSSL [is の] [dynamically linked 動的リンク] [When 時は]、 OpenSSL [
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200408T105208Z" creationid="isVowel" creationdate="20200408T105208Z">
         <seg>もちろん &lt;t2&gt;&lt;s3&gt;--profiler:off&lt;/s3&gt;&lt;/t2&gt; を指定します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Yield every (position, value) of &lt;t0&gt;&lt;s1&gt;deq&lt;/s1&gt;&lt;/t0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T094439Z" creationid="isVowel" creationdate="20200512T094439Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;deq&lt;/s1&gt;&lt;/t0&gt; の (position, value) をすべて生成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Yield every element of &lt;t0&gt;&lt;s1&gt;deq&lt;/s1&gt;&lt;/t0&gt;, which can be modified.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T094331Z" creationid="isVowel" creationdate="20200512T094331Z">
+        <seg>変更可能な &lt;t0&gt;&lt;s1&gt;deq&lt;/s1&gt;&lt;/t0&gt; の全要素を生成します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Yield every element of &lt;t0&gt;&lt;s1&gt;deq&lt;/s1&gt;&lt;/t0&gt;.</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T094214Z" creationid="isVowel" creationdate="20200512T094214Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;deq&lt;/s1&gt;&lt;/t0&gt; の全要素を生成します。</seg>
       </tuv>
     </tu>
     <tu>
@@ -27838,6 +28547,22 @@ key3: """三連クォート文字列にも
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200423T035839Z" creationid="isVowel" creationdate="20200423T035839Z">
         <seg>addFileExt プロシージャ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>addFirst proc</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T070040Z" creationid="isVowel" creationdate="20200512T070040Z">
+        <seg>addFirst プロシージャ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>addLast proc</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T070041Z" creationid="isVowel" creationdate="20200512T070041Z">
+        <seg>addLast プロシージャ</seg>
       </tuv>
     </tu>
     <tu>
@@ -28422,6 +29147,14 @@ key3: """三連クォート文字列にも
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200421T030931Z" creationid="isVowel" creationdate="20200421T030931Z">
         <seg>cincludes,                  ## C/C++ コンパイラに渡される #include パス</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>clear proc</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T070046Z" creationid="isVowel" creationdate="20200512T070046Z">
+        <seg>clear プロシージャ</seg>
       </tuv>
     </tu>
     <tu>
@@ -29269,10 +30002,16 @@ key3: """三連クォート文字列にも
       <tuv lang="EN-US">
         <seg>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH4QQQEwksSS9ZWwAAAk1JREFUWMPtll2ITVEUx39nn/O7Y5qR8f05wtCUUr6ZIS++8pEnkZInPImneaCQ5METNdOkeFBKUhMPRIkHKfEuUZSUlGlKPN2TrgfncpvmnntnmlEyq1Z7t89/rf9a6+y99oZxGZf/XeIq61EdtgKXgdXA0xrYAvBjOIF1AI9zvjcC74BSpndrJPkBWDScTF8Aa4E3wDlgHbASaANmVqlcCnwHvgDvgVfAJ+AikAAvgfVZwLnSVZHZaOuKoQi3ZOMi4NkYkpe1p4J7A8BpYAD49hfIy/oqG0+hLomiKP2L5L+1ubn5115S+3OAn4EnwBlgMzCjyt6ZAnQCJ4A7wOs88iRJHvw50HoujuPBoCKwHWiosy8MdfZnAdcHk8dxXFJ3VQbQlCTJvRBCGdRbD4M6uc5glpY3eAihpN5S5w12diSEcCCEcKUO4ljdr15T76ur1FDDLIQQ3qv71EdDOe3Kxj3leRXyk+pxdWnFWod6Wt2bY3de3aSuUHcPBVimHs7mK9WrmeOF6lR1o9qnzskh2ar2qm1qizpfXaPeVGdlmGN5pb09qMxz1Xb1kLqgzn1RyH7JUXW52lr5e/Kqi9qpto7V1atuUzfnARrV7jEib1T76gG2qxdGmXyiekkt1GswPTtek0aBfJp6YySGBfWg2tPQ0FAYgf1stUfdmdcjarbYJEniKIq6gY/Aw+zWHAC+p2labGpqiorFYgGYCEzN7oQdQClN07O1/EfDyGgC0ALMBdYAi4FyK+4H3gLPsxfR1zRNi+NP7nH5J+QntnXe5B5mpfQAAAAASUVORK5CYII=</seg>
       </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T070202Z">
+        <seg>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH4QQQEwksSS9ZWwAAAk1JREFUWMPtll2ITVEUx39nn/O7Y5qR8f05wtCUUr6ZIS++8pEnkZInPImneaCQ5METNdOkeFBKUhMPRIkHKfEuUZSUlGlKPN2TrgfncpvmnntnmlEyq1Z7t89/rf9a6+y99oZxGZf/XeIq61EdtgKXgdXA0xrYAvBjOIF1AI9zvjcC74BSpndrJPkBWDScTF8Aa4E3wDlgHbASaANmVqlcCnwHvgDvgVfAJ+AikAAvgfVZwLnSVZHZaOuKoQi3ZOMi4NkYkpe1p4J7A8BpYAD49hfIy/oqG0+hLomiKP2L5L+1ubn5115S+3OAn4EnwBlgMzCjyt6ZAnQCJ4A7wOs88iRJHvw50HoujuPBoCKwHWiosy8MdfZnAdcHk8dxXFJ3VQbQlCTJvRBCGdRbD4M6uc5glpY3eAihpN5S5w12diSEcCCEcKUO4ljdr15T76ur1FDDLIQQ3qv71EdDOe3Kxj3leRXyk+pxdWnFWod6Wt2bY3de3aSuUHcPBVimHs7mK9WrmeOF6lR1o9qnzskh2ar2qm1qizpfXaPeVGdlmGN5pb09qMxz1Xb1kLqgzn1RyH7JUXW52lr5e/Kqi9qpto7V1atuUzfnARrV7jEib1T76gG2qxdGmXyiekkt1GswPTtek0aBfJp6YySGBfWg2tPQ0FAYgf1stUfdmdcjarbYJEniKIq6gY/Aw+zWHAC+p2labGpqiorFYgGYCEzN7oQdQClN07O1/EfDyGgC0ALMBdYAi4FyK+4H3gLPsxfR1zRNi+NP7nH5J+QntnXe5B5mpfQAAAAASUVORK5CYII=</seg>
+      </tuv>
     </tu>
     <tu>
       <note>このブロックは作業対象外です。変更してしまうと、正常に動作しなくなります。</note>
       <tuv lang="EN-US">
+        <seg>data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA==</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T070159Z">
         <seg>data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAUAAAAF////AP///wD///8A////AP///wD///8A////AP///wD///8A////AAAAAAIAAABbAAAAlQAAAKIAAACbAAAAmwAAAKIAAACVAAAAWwAAAAL///8A////AP///wD///8A////AAAAABQAAADAAAAAYwAAAA3///8A////AP///wD///8AAAAADQAAAGMAAADAAAAAFP///wD///8A////AP///wAAAACdAAAAOv///wD///8A////AP///wD///8A////AP///wD///8AAAAAOgAAAJ3///8A////AP///wAAAAAnAAAAcP///wAAAAAoAAAASv///wD///8A////AP///wAAAABKAAAAKP///wAAAABwAAAAJ////wD///8AAAAAgQAAABwAAACIAAAAkAAAAJMAAACtAAAAFQAAABUAAACtAAAAkwAAAJAAAACIAAAAHAAAAIH///8A////AAAAAKQAAACrAAAAaP///wD///8AAAAARQAAANIAAADSAAAARf///wD///8AAAAAaAAAAKsAAACk////AAAAADMAAACcAAAAnQAAABj///8A////AP///wAAAAAYAAAAGP///wD///8A////AAAAABgAAACdAAAAnAAAADMAAAB1AAAAwwAAAP8AAADpAAAAsQAAAE4AAAAb////AP///wAAAAAbAAAATgAAALEAAADpAAAA/wAAAMMAAAB1AAAAtwAAAOkAAAD/AAAA/wAAAP8AAADvAAAA3gAAAN4AAADeAAAA3gAAAO8AAAD/AAAA/wAAAP8AAADpAAAAtwAAAGUAAAA/AAAA3wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAADfAAAAPwAAAGX///8A////AAAAAEgAAADtAAAAvwAAAL0AAADGAAAA7wAAAO8AAADGAAAAvQAAAL8AAADtAAAASP///wD///8A////AP///wD///8AAAAAO////wD///8A////AAAAAIcAAACH////AP///wD///8AAAAAO////wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A//8AAP//AAD4HwAA7/cAAN/7AAD//wAAoYUAAJ55AACf+QAAh+EAAAAAAADAAwAA4AcAAP5/AAD//wAA//8AAA==</seg>
       </tuv>
     </tu>
@@ -29839,6 +30578,9 @@ key3: """三連クォート文字列にも
     <tu>
       <note>このブロックは作業対象外です。変更してしまうと、正常に動作しなくなります。</note>
       <tuv lang="EN-US">
+        <seg>en</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T070217Z">
         <seg>en</seg>
       </tuv>
     </tu>
@@ -31992,11 +32734,33 @@ key3: """三連クォート文字列にも
       <tuv lang="EN-US">
         <seg>https://fonts.googleapis.com/css?family=Lato:400,600,900</seg>
       </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T070206Z">
+        <seg>https://fonts.googleapis.com/css?family=Lato:400,600,900</seg>
+      </tuv>
     </tu>
     <tu>
       <note>このブロックは作業対象外です。変更してしまうと、正常に動作しなくなります。</note>
       <tuv lang="EN-US">
         <seg>https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T070209Z">
+        <seg>https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/deques.nim#L236</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T070116Z" creationid="isVowel" creationdate="20200512T070116Z">
+        <seg>https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/deques.nim#L236</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/deques.nim#L236</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T070118Z" creationid="isVowel" creationdate="20200512T070118Z">
+        <seg>https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/deques.nim#L236</seg>
       </tuv>
     </tu>
     <tu>
@@ -33593,6 +34357,22 @@ Description: """これは Nim コンパイラです。</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>peekFirst proc</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T070042Z" creationid="isVowel" creationdate="20200512T070042Z">
+        <seg>peekFirst プロシージャ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>peekLast proc</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T070044Z" creationid="isVowel" creationdate="20200512T070044Z">
+        <seg>peekLast プロシージャ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>poDaemon                    ## Windows: The program creates no Window.</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200423T044410Z" creationid="isVowel" creationdate="20200423T044410Z">
@@ -33648,6 +34428,22 @@ Description: """これは Nim コンパイラです。</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200423T044010Z" creationid="isVowel" creationdate="20200423T044010Z">
         <seg>poUsePath, ## 環境変数 PATH から実行可能ファイルを検索するよう</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>popFirst proc</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T070057Z" creationid="isVowel" creationdate="20200512T070057Z">
+        <seg>popFirst プロシージャ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>popLast proc</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T070045Z" creationid="isVowel" creationdate="20200512T070045Z">
+        <seg>popLast プロシージャ</seg>
       </tuv>
     </tu>
     <tu>
@@ -34812,8 +35608,8 @@ Description: """これは Nim コンパイラです。</seg>
       <tuv lang="EN-US">
         <seg>reverses &lt;t0&gt;&lt;s1&gt;type T = distinct A&lt;/s1&gt;&lt;/t0&gt;; works recursively.</seg>
       </tuv>
-      <tuv lang="JA" changeid="isVowel" changedate="20200127T023815Z" creationid="isVowel" creationdate="20200127T023815Z">
-        <seg>&lt;t0&gt;&lt;s1&gt;type T = distinct A&lt;/s1&gt;&lt;/t0&gt; を反転します。これは再帰的処理を行います。</seg>
+      <tuv lang="JA" changeid="isVowel" changedate="20200424T200158Z" creationid="isVowel" creationdate="20200127T023815Z">
+        <seg>&lt;t0&gt;&lt;s1&gt;type T = distinct A&lt;/s1&gt;&lt;/t0&gt; を反転します。これは再帰処理を行います。</seg>
       </tuv>
     </tu>
     <tu>
@@ -35318,6 +36114,14 @@ Description: """これは Nim コンパイラです。</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200130T040935Z" creationid="isVowel" creationdate="20200130T031642Z">
         <seg>このヘルプを表示します。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>shrink proc</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T070047Z" creationid="isVowel" creationdate="20200512T070047Z">
+        <seg>shrink プロシージャ</seg>
       </tuv>
     </tu>
     <tu>
@@ -37613,6 +38417,14 @@ Description: """これは Nim コンパイラです。</seg>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>times module</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T233647Z" creationid="isVowel" creationdate="20200512T233647Z">
+        <seg>times モジュール</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>tm_hour*: cint               ## Hour [0,23].</seg>
       </tuv>
       <tuv lang="JA" changeid="isVowel" changedate="20200409T044235Z" creationid="isVowel" creationdate="20200409T044235Z">
@@ -38182,6 +38994,9 @@ Description: """これは Nim コンパイラです。</seg>
     <tu>
       <note>このブロックは作業対象外です。変更してしまうと、正常に動作しなくなります。</note>
       <tuv lang="EN-US">
+        <seg>width=device-width, initial-scale=1.0</seg>
+      </tuv>
+      <tuv lang="JA" changeid="isVowel" changedate="20200512T070222Z">
         <seg>width=device-width, initial-scale=1.0</seg>
       </tuv>
     </tu>

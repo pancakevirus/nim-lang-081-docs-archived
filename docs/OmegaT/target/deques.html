@@ -191,9 +191,10 @@ function main() {
   <div class="nine columns" id="content">
   <div id="tocRoot"></div>
   
-  <p class="module-desc"><p>Implementation of a <span id="deque_1">deque</span> (double-ended queue). The underlying implementation uses a <tt class="docutils literal"><span class="pre">seq</span></tt>.</p>
-<p>None of the procs that get an individual value from the deque can be used on an empty deque. If compiled with <tt class="docutils literal"><span class="pre">boundChecks</span></tt> option, those procs will raise an <tt class="docutils literal"><span class="pre">IndexError</span></tt> on such access. This should not be relied upon, as <tt class="docutils literal"><span class="pre">-d:release</span></tt> will disable those checks and may return garbage or crash the program.</p>
-<p>As such, a check to see if the deque is empty is needed before any access, unless your program logic guarantees it indirectly.</p>
+  <p class="module-desc"><p><span id="deque_1">deque</span> (double-ended queue: 両頭待ち行列) の実装です。基本的な実装は <tt class="docutils literal"><span class="pre">seq</span></tt> を使います。</p>
+<p>deque から個別値を取得するプロシージャは空の deque を扱えません。<tt class="docutils literal"><span class="pre">boundChecks</span></tt> オプションを指定してコンパイルしたとき、
+プロシージャによるアクセスなどで <tt class="docutils literal"><span class="pre">IndexError</span></tt> が発生します。<tt class="docutils literal"><span class="pre">-d:release</span></tt> を指定すると検査は無効となりますが、異物が返されたりプログラムの異常終了の原因となるため、これは当てにしないでください。</p>
+<p>したがって、プログラムのロジックで間接的に保証されない限り、アクセス前に deque が空であるか確かめるための検査が必要です。</p>
 <pre class="listing"><span class="Keyword">import</span> <span class="Identifier">deques</span>
 
 <span class="Keyword">var</span> <span class="Identifier">a</span> <span class="Operator">=</span> <span class="Identifier">initDeque</span><span class="Punctuation">[</span><span class="Identifier">int</span><span class="Punctuation">]</span><span class="Punctuation">(</span><span class="Punctuation">)</span>
@@ -219,8 +220,8 @@ function main() {
 
 <span class="Identifier">a</span><span class="Operator">.</span><span class="Identifier">shrink</span><span class="Punctuation">(</span><span class="Identifier">fromFirst</span> <span class="Operator">=</span> <span class="DecNumber">1</span><span class="Punctuation">,</span> <span class="Identifier">fromLast</span> <span class="Operator">=</span> <span class="DecNumber">2</span><span class="Punctuation">)</span>
 <span class="Identifier">assert</span> <span class="Operator">$</span><span class="Identifier">a</span> <span class="Operator">==</span> <span class="StringLit">"[22, 11, 20]"</span></pre><p><strong>関連:</strong></p>
-<ul class="simple"><li><a class="reference external" href="lists.html">lists module</a> for singly and doubly linked lists and rings</li>
-<li><a class="reference external" href="channels.html">channels module</a> for inter-thread communication</li>
+<ul class="simple"><li><a class="reference external" href="lists.html">lists モジュール</a>は単方向・双方向連結リストと環状リストの実装です</li>
+<li><a class="reference external" href="channels.html">channels モジュール</a>はスレッド間通信の実装です</li>
 </ul>
 </p>
   <div class="section" id="6">
@@ -238,8 +239,8 @@ function main() {
 </pre></dt>
 <dd>
 
-<p>A double-ended queue backed with a ringed seq buffer.</p>
-<p>To initialize an empty deque use <a class="reference external" href="#initDeque,int">initDeque proc</a>.</p>
+<p>deque の裏方である環状 seq バッファです。</p>
+<p>空の deque で初期化するには <a class="reference external" href="#initDeque,int">initDeque プロシージャ</a> を使います。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/deques.nim#L58"
@@ -270,9 +271,9 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#initDeque%2Cint"><span class="Identifier">initDeque</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">initialSize</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a> <span class="Other">=</span> <span class="DecNumber">4</span><span class="Other">)</span><span class="Other">:</span> <a href="deques.html#Deque"><span class="Identifier">Deque</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span></pre></dt>
 <dd>
 
-<p>Create a new empty deque.</p>
-<p>Optionally, the initial capacity can be reserved via <tt class="docutils literal"><span class="pre">initialSize</span></tt> as a performance optimization. The length of a newly created deque will still be 0.</p>
-<p><tt class="docutils literal"><span class="pre">initialSize</span></tt> must be a power of two (default: 4). If you need to accept runtime values for this you could use the <a class="reference external" href="math.html#nextPowerOfTwo,int">nextPowerOfTwo proc</a> from the <a class="reference external" href="math.html">math module</a>.</p>
+<p>空の deque を新規作成します。</p>
+<p>オプションとして、 <tt class="docutils literal"><span class="pre">initialSize</span></tt> の初期容量を予約することで処理速度を最適化できます。新規作成された deque の長さは 0 になります。</p>
+<p><tt class="docutils literal"><span class="pre">initialSize</span></tt> には必ず二の累乗を指定してください (デフォルトは 4)。この値を実行時に受け付ける必要があるときは <a class="reference external" href="math.html">math モジュール</a>の <a class="reference external" href="math.html#nextPowerOfTwo,int">nextPowerOfTwo プロシージャ</a>を使います。</p>
 
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/deques.nim#L78"
@@ -292,10 +293,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%5B%5D%2CDeque%5BT%5D%2CNatural"><span class="Identifier">`[]`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">deq</span><span class="Other">:</span> <a href="deques.html#Deque"><span class="Identifier">Deque</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">i</span><span class="Other">:</span> <a href="system.html#Natural"><span class="Identifier">Natural</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Access the i-th element of <tt class="docutils literal"><span class="pre">deq</span></tt>.
-
+<tt class="docutils literal"><span class="pre">deq</span></tt> の i 番目にある要素へアクセスします。
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">a</span> <span class="Other">=</span> <span class="Identifier">initDeque</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">(</span><span class="Other">)</span>
 <span class="Keyword">for</span> <span class="Identifier">i</span> <span class="Keyword">in</span> <span class="DecNumber">1</span> <span class="Operator">..</span> <span class="DecNumber">5</span><span class="Other">:</span>
@@ -312,10 +310,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%5B%5D%2CDeque%5BT%5D%2CNatural_2"><span class="Identifier">`[]`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">deq</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="deques.html#Deque"><span class="Identifier">Deque</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">i</span><span class="Other">:</span> <a href="system.html#Natural"><span class="Identifier">Natural</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">T</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Access the i-th element of <tt class="docutils literal"><span class="pre">deq</span></tt> and return a mutable reference to it.
-
+<tt class="docutils literal"><span class="pre">deq</span></tt> の i 番目にある要素へアクセスを行いミュータブル (状態変更可能) な参照を返します。
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">a</span> <span class="Other">=</span> <span class="Identifier">initDeque</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">(</span><span class="Other">)</span>
 <span class="Keyword">for</span> <span class="Identifier">i</span> <span class="Keyword">in</span> <span class="DecNumber">1</span> <span class="Operator">..</span> <span class="DecNumber">5</span><span class="Other">:</span>
@@ -332,10 +327,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%5B%5D%3D%2CDeque%5BT%5D%2CNatural%2CT"><span class="Identifier">`[]=`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">deq</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="deques.html#Deque"><span class="Identifier">Deque</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">i</span><span class="Other">:</span> <a href="system.html#Natural"><span class="Identifier">Natural</span></a><span class="Other">;</span> <span class="Identifier">val</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-
-
-Change the i-th element of <tt class="docutils literal"><span class="pre">deq</span></tt>.
-
+<tt class="docutils literal"><span class="pre">deq</span></tt> の i 番目にある要素を変更します。
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">a</span> <span class="Other">=</span> <span class="Identifier">initDeque</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">(</span><span class="Other">)</span>
 <span class="Keyword">for</span> <span class="Identifier">i</span> <span class="Keyword">in</span> <span class="DecNumber">1</span> <span class="Operator">..</span> <span class="DecNumber">5</span><span class="Other">:</span>
@@ -352,8 +344,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%5B%5D%2CDeque%5BT%5D%2CBackwardsIndex"><span class="Identifier">`[]`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">deq</span><span class="Other">:</span> <a href="deques.html#Deque"><span class="Identifier">Deque</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">i</span><span class="Other">:</span> <a href="system.html#BackwardsIndex"><span class="Identifier">BackwardsIndex</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Access the backwards indexed i-th element.</p>
-<p><tt class="docutils literal"><span class="pre">deq[^1]</span></tt> is the last element.</p>
+<p>インデックスの末尾から i 番目にある要素へアクセスします。</p>
+<p><tt class="docutils literal"><span class="pre">deq[^1]</span></tt> は末尾要素です。</p>
 
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">a</span> <span class="Other">=</span> <span class="Identifier">initDeque</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">(</span><span class="Other">)</span>
@@ -371,8 +363,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%5B%5D%2CDeque%5BT%5D%2CBackwardsIndex_2"><span class="Identifier">`[]`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">deq</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="deques.html#Deque"><span class="Identifier">Deque</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">i</span><span class="Other">:</span> <a href="system.html#BackwardsIndex"><span class="Identifier">BackwardsIndex</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">T</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Access the backwards indexed i-th element.</p>
-<p><tt class="docutils literal"><span class="pre">deq[^1]</span></tt> is the last element.</p>
+<p>インデックスの末尾から i 番目にある要素へアクセスします。</p>
+<p><tt class="docutils literal"><span class="pre">deq[^1]</span></tt> は末尾要素です。</p>
 
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">a</span> <span class="Other">=</span> <span class="Identifier">initDeque</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">(</span><span class="Other">)</span>
@@ -390,8 +382,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%5B%5D%3D%2CDeque%5BT%5D%2CBackwardsIndex%2CT"><span class="Identifier">`[]=`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">deq</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="deques.html#Deque"><span class="Identifier">Deque</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">i</span><span class="Other">:</span> <a href="system.html#BackwardsIndex"><span class="Identifier">BackwardsIndex</span></a><span class="Other">;</span> <span class="Identifier">x</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Change the backwards indexed i-th element.</p>
-<p><tt class="docutils literal"><span class="pre">deq[^1]</span></tt> is the last element.</p>
+<p>インデックスの末尾から i 番目にある要素を変更します。</p>
+<p><tt class="docutils literal"><span class="pre">deq[^1]</span></tt> は末尾要素です。</p>
 
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">a</span> <span class="Other">=</span> <span class="Identifier">initDeque</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">(</span><span class="Other">)</span>
@@ -409,8 +401,8 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#contains%2CDeque%5BT%5D%2CT"><span class="Identifier">contains</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">deq</span><span class="Other">:</span> <a href="deques.html#Deque"><span class="Identifier">Deque</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">item</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#bool"><span class="Identifier">bool</span></a> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Return true if <tt class="docutils literal"><span class="pre">item</span></tt> is in <tt class="docutils literal"><span class="pre">deq</span></tt> or false if not found.</p>
-<p>Usually used via the <tt class="docutils literal"><span class="pre">in</span></tt> operator. It is the equivalent of <tt class="docutils literal"><span class="pre">deq.find(item) &gt;= 0</span></tt>.</p>
+<p><tt class="docutils literal"><span class="pre">deq</span></tt> に <tt class="docutils literal"><span class="pre">item</span></tt> があれば true を、なければ false を返します。</p>
+<p>通常は <tt class="docutils literal"><span class="pre">in</span></tt> 演算子で使われます。これは <tt class="docutils literal"><span class="pre">deq.find(item) &gt;= 0</span></tt> と等価です。</p>
 <pre class="listing"><span class="Keyword">if</span> <span class="Identifier">x</span> <span class="Keyword">in</span> <span class="Identifier">q</span><span class="Punctuation">:</span>
   <span class="Identifier">assert</span> <span class="Identifier">q</span><span class="Operator">.</span><span class="Identifier">contains</span><span class="Punctuation">(</span><span class="Identifier">x</span><span class="Punctuation">)</span></pre>
 &nbsp;&nbsp;<a
@@ -422,13 +414,13 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#addFirst%2CDeque%5BT%5D%2CT"><span class="Identifier">addFirst</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">deq</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="deques.html#Deque"><span class="Identifier">Deque</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">item</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span></pre></dt>
 <dd>
 
-<p>Add an <tt class="docutils literal"><span class="pre">item</span></tt> to the beginning of the <tt class="docutils literal"><span class="pre">deq</span></tt>.</p>
+<p><tt class="docutils literal"><span class="pre">deq</span></tt> の先頭に <tt class="docutils literal"><span class="pre">item</span></tt> を追加します。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#addLast,Deque[T],T">addLast proc</a></li>
-<li><a class="reference external" href="#peekFirst,Deque[T]">peekFirst proc</a></li>
-<li><a class="reference external" href="#peekLast,Deque[T]">peekLast proc</a></li>
-<li><a class="reference external" href="#popFirst,Deque[T]">popFirst proc</a></li>
-<li><a class="reference external" href="#popLast,Deque[T]">popLast proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#addLast,Deque[T],T">addLast プロシージャ</a></li>
+<li><a class="reference external" href="#peekFirst,Deque[T]">peekFirst プロシージャ</a></li>
+<li><a class="reference external" href="#peekLast,Deque[T]">peekLast プロシージャ</a></li>
+<li><a class="reference external" href="#popFirst,Deque[T]">popFirst プロシージャ</a></li>
+<li><a class="reference external" href="#popLast,Deque[T]">popLast プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -445,13 +437,13 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#addLast%2CDeque%5BT%5D%2CT"><span class="Identifier">addLast</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">deq</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="deques.html#Deque"><span class="Identifier">Deque</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">item</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">)</span></pre></dt>
 <dd>
 
-<p>Add an <tt class="docutils literal"><span class="pre">item</span></tt> to the end of the <tt class="docutils literal"><span class="pre">deq</span></tt>.</p>
+<p><tt class="docutils literal"><span class="pre">deq</span></tt> の末尾に <tt class="docutils literal"><span class="pre">item</span></tt> を追加します。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#addFirst,Deque[T],T">addFirst proc</a></li>
-<li><a class="reference external" href="#peekFirst,Deque[T]">peekFirst proc</a></li>
-<li><a class="reference external" href="#peekLast,Deque[T]">peekLast proc</a></li>
-<li><a class="reference external" href="#popFirst,Deque[T]">popFirst proc</a></li>
-<li><a class="reference external" href="#popLast,Deque[T]">popLast proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#addFirst,Deque[T],T">addFirst プロシージャ</a></li>
+<li><a class="reference external" href="#peekFirst,Deque[T]">peekFirst プロシージャ</a></li>
+<li><a class="reference external" href="#peekLast,Deque[T]">peekLast プロシージャ</a></li>
+<li><a class="reference external" href="#popFirst,Deque[T]">popFirst プロシージャ</a></li>
+<li><a class="reference external" href="#popLast,Deque[T]">popLast プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -468,13 +460,13 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#peekFirst%2CDeque%5BT%5D"><span class="Identifier">peekFirst</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">deq</span><span class="Other">:</span> <a href="deques.html#Deque"><span class="Identifier">Deque</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Returns the first element of <tt class="docutils literal"><span class="pre">deq</span></tt>, but does not remove it from the deque.</p>
+<p>deque から削除せずに <tt class="docutils literal"><span class="pre">deq</span></tt> の先頭要素を返します。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#addFirst,Deque[T],T">addFirst proc</a></li>
-<li><a class="reference external" href="#addLast,Deque[T],T">addLast proc</a></li>
-<li><a class="reference external" href="#peekLast,Deque[T]">peekLast proc</a></li>
-<li><a class="reference external" href="#popFirst,Deque[T]">popFirst proc</a></li>
-<li><a class="reference external" href="#popLast,Deque[T]">popLast proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#addFirst,Deque[T],T">addFirst プロシージャ</a></li>
+<li><a class="reference external" href="#addLast,Deque[T],T">addLast プロシージャ</a></li>
+<li><a class="reference external" href="#peekLast,Deque[T]">peekLast プロシージャ</a></li>
+<li><a class="reference external" href="#popFirst,Deque[T]">popFirst プロシージャ</a></li>
+<li><a class="reference external" href="#popLast,Deque[T]">popLast プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -493,13 +485,13 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#peekLast%2CDeque%5BT%5D"><span class="Identifier">peekLast</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">deq</span><span class="Other">:</span> <a href="deques.html#Deque"><span class="Identifier">Deque</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Returns the last element of <tt class="docutils literal"><span class="pre">deq</span></tt>, but does not remove it from the deque.</p>
+<p>deque から削除せずに <tt class="docutils literal"><span class="pre">deq</span></tt> の末尾要素を返します。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#addFirst,Deque[T],T">addFirst proc</a></li>
-<li><a class="reference external" href="#addLast,Deque[T],T">addLast proc</a></li>
-<li><a class="reference external" href="#peekFirst,Deque[T]">peekFirst proc</a></li>
-<li><a class="reference external" href="#popFirst,Deque[T]">popFirst proc</a></li>
-<li><a class="reference external" href="#popLast,Deque[T]">popLast proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#addFirst,Deque[T],T">addFirst プロシージャ</a></li>
+<li><a class="reference external" href="#addLast,Deque[T],T">addLast プロシージャ</a></li>
+<li><a class="reference external" href="#peekFirst,Deque[T]">peekFirst プロシージャ</a></li>
+<li><a class="reference external" href="#popFirst,Deque[T]">popFirst プロシージャ</a></li>
+<li><a class="reference external" href="#popLast,Deque[T]">popLast プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -518,15 +510,15 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#popFirst%2CDeque%5BT%5D"><span class="Identifier">popFirst</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">deq</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="deques.html#Deque"><span class="Identifier">Deque</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">discardable</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Remove and returns the first element of the <tt class="docutils literal"><span class="pre">deq</span></tt>.</p>
+<p><tt class="docutils literal"><span class="pre">deq</span></tt> の先頭要素を削除したものを返します。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#addFirst,Deque[T],T">addFirst proc</a></li>
-<li><a class="reference external" href="#addLast,Deque[T],T">addLast proc</a></li>
-<li><a class="reference external" href="#peekFirst,Deque[T]">peekFirst proc</a></li>
-<li><a class="reference external" href="#peekLast,Deque[T]">peekLast proc</a></li>
-<li><a class="reference external" href="#popLast,Deque[T]">popLast proc</a></li>
-<li><a class="reference external" href="#clear,Deque[T]">clear proc</a></li>
-<li><a class="reference external" href="#shrink,Deque[T],int,int">shrink proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#addFirst,Deque[T],T">addFirst プロシージャ</a></li>
+<li><a class="reference external" href="#addLast,Deque[T],T">addLast プロシージャ</a></li>
+<li><a class="reference external" href="#peekFirst,Deque[T]">peekFirst プロシージャ</a></li>
+<li><a class="reference external" href="#peekLast,Deque[T]">peekLast プロシージャ</a></li>
+<li><a class="reference external" href="#popLast,Deque[T]">popLast プロシージャ</a></li>
+<li><a class="reference external" href="#clear,Deque[T]">clear プロシージャ</a></li>
+<li><a class="reference external" href="#shrink,Deque[T],int,int">shrink プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -545,15 +537,15 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#popLast%2CDeque%5BT%5D"><span class="Identifier">popLast</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">deq</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="deques.html#Deque"><span class="Identifier">Deque</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span><span class="Other">,</span> <span class="Identifier">discardable</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Remove and returns the last element of the <tt class="docutils literal"><span class="pre">deq</span></tt>.</p>
+<p><tt class="docutils literal"><span class="pre">deq</span></tt> の末尾要素を削除したものを返します。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#addFirst,Deque[T],T">addFirst proc</a></li>
-<li><a class="reference external" href="#addLast,Deque[T],T">addLast proc</a></li>
-<li><a class="reference external" href="#peekFirst,Deque[T]">peekFirst proc</a></li>
-<li><a class="reference external" href="#peekLast,Deque[T]">peekLast proc</a></li>
-<li><a class="reference external" href="#popFirst,Deque[T]">popFirst proc</a></li>
-<li><a class="reference external" href="#clear,Deque[T]">clear proc</a></li>
-<li><a class="reference external" href="#shrink,Deque[T],int,int">shrink proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#addFirst,Deque[T],T">addFirst プロシージャ</a></li>
+<li><a class="reference external" href="#addLast,Deque[T],T">addLast プロシージャ</a></li>
+<li><a class="reference external" href="#peekFirst,Deque[T]">peekFirst プロシージャ</a></li>
+<li><a class="reference external" href="#peekLast,Deque[T]">peekLast プロシージャ</a></li>
+<li><a class="reference external" href="#popFirst,Deque[T]">popFirst プロシージャ</a></li>
+<li><a class="reference external" href="#clear,Deque[T]">clear プロシージャ</a></li>
+<li><a class="reference external" href="#shrink,Deque[T],int,int">shrink プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -572,10 +564,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#clear%2CDeque%5BT%5D"><span class="Identifier">clear</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">deq</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="deques.html#Deque"><span class="Identifier">Deque</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span> <span><span class="Other">{</span><span class="Other pragmadots">...</span><span class="Other">}</span></span><span class="pragmawrap"><span class="Other">{.</span><span class="pragma"><span class="Identifier">inline</span></span><span class="Other">.}</span></span></pre></dt>
 <dd>
 
-<p>Resets the deque so that it is empty.</p>
+<p>deque を空にすることでリセットを行います。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#clear,Deque[T]">clear proc</a></li>
-<li><a class="reference external" href="#shrink,Deque[T],int,int">shrink proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#clear,Deque[T]">clear プロシージャ</a></li>
+<li><a class="reference external" href="#shrink,Deque[T],int,int">shrink プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -594,10 +586,10 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#shrink%2CDeque%5BT%5D%2Cint%2Cint"><span class="Identifier">shrink</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">deq</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="deques.html#Deque"><span class="Identifier">Deque</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">;</span> <span class="Identifier">fromFirst</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">;</span> <span class="Identifier">fromLast</span> <span class="Other">=</span> <span class="DecNumber">0</span><span class="Other">)</span></pre></dt>
 <dd>
 
-<p>Remove <tt class="docutils literal"><span class="pre">fromFirst</span></tt> elements from the front of the deque and <tt class="docutils literal"><span class="pre">fromLast</span></tt> elements from the back.</p>
-<p>If the supplied number of elements exceeds the total number of elements in the deque, the deque will remain empty.</p>
+<p>deque の先頭から <tt class="docutils literal"><span class="pre">fromFirst</span></tt> 要素を、末尾から <tt class="docutils literal"><span class="pre">fromLast</span></tt> 要素を削除します。</p>
+<p>deque の合計要素数を超過した要素数が指定されたときは、そのまま deque は空になります。</p>
 <p>関連:</p>
-<ul class="simple"><li><a class="reference external" href="#clear,Deque[T]">clear proc</a></li>
+<ul class="simple"><li><a class="reference external" href="#clear,Deque[T]">clear プロシージャ</a></li>
 </ul>
 
 <p><strong class="examples_text">用例:</strong></p>
@@ -616,7 +608,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">proc</span> <a href="#%24%2CDeque%5BT%5D"><span class="Identifier">`$`</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">deq</span><span class="Other">:</span> <a href="deques.html#Deque"><span class="Identifier">Deque</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <a href="system.html#string"><span class="Identifier">string</span></a></pre></dt>
 <dd>
 
-Turn a deque into its string representation. &nbsp;&nbsp;<a
+deque を文字列形式へ変換します。&nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/deques.nim#L468"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/deques.nim#L468" class="link-seesrc" target="_blank" >編集</a>
 
@@ -630,13 +622,13 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#items.i%2CDeque%5BT%5D"><span class="Identifier">items</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">deq</span><span class="Other">:</span> <a href="deques.html#Deque"><span class="Identifier">Deque</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">T</span></pre></dt>
 <dd>
 
-<p>Yield every element of <tt class="docutils literal"><span class="pre">deq</span></tt>.</p>
+<p><tt class="docutils literal"><span class="pre">deq</span></tt> の全要素を生成します。</p>
 <p><strong>用例:</strong></p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">a</span> <span class="Operator">=</span> <span class="Identifier">initDeque</span><span class="Punctuation">[</span><span class="Identifier">int</span><span class="Punctuation">]</span><span class="Punctuation">(</span><span class="Punctuation">)</span>
 <span class="Keyword">for</span> <span class="Identifier">i</span> <span class="Keyword">in</span> <span class="DecNumber">1</span> <span class="Operator">..</span> <span class="DecNumber">3</span><span class="Punctuation">:</span>
   <span class="Identifier">a</span><span class="Operator">.</span><span class="Identifier">addLast</span><span class="Punctuation">(</span><span class="DecNumber">10</span><span class="Operator">*</span><span class="Identifier">i</span><span class="Punctuation">)</span>
 
-<span class="Keyword">for</span> <span class="Identifier">x</span> <span class="Keyword">in</span> <span class="Identifier">a</span><span class="Punctuation">:</span>  <span class="Comment"># the same as: for x in items(a):</span>
+<span class="Keyword">for</span> <span class="Identifier">x</span> <span class="Keyword">in</span> <span class="Identifier">a</span><span class="Punctuation">:</span>  <span class="Comment"># これと同じです: for x in items(a):</span>
   <span class="Identifier">echo</span> <span class="Identifier">x</span>
 
 <span class="Comment"># 10</span>
@@ -651,10 +643,7 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#mitems.i%2CDeque%5BT%5D"><span class="Identifier">mitems</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">deq</span><span class="Other">:</span> <span class="Keyword">var</span> <a href="deques.html#Deque"><span class="Identifier">Deque</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">var</span> <span class="Identifier">T</span></pre></dt>
 <dd>
 
-
-
-Yield every element of <tt class="docutils literal"><span class="pre">deq</span></tt>, which can be modified.
-
+変更可能な <tt class="docutils literal"><span class="pre">deq</span></tt> の全要素を生成します。
 <p><strong class="examples_text">用例:</strong></p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">a</span> <span class="Other">=</span> <span class="Identifier">initDeque</span><span class="Other">[</span><span class="Identifier">int</span><span class="Other">]</span><span class="Other">(</span><span class="Other">)</span>
 <span class="Keyword">for</span> <span class="Identifier">i</span> <span class="Keyword">in</span> <span class="DecNumber">1</span> <span class="Operator">..</span> <span class="DecNumber">5</span><span class="Other">:</span>
@@ -672,18 +661,18 @@ class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/ni
 <dt><pre><span class="Keyword">iterator</span> <a href="#pairs.i%2CDeque%5BT%5D"><span class="Identifier">pairs</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">(</span><span class="Identifier">deq</span><span class="Other">:</span> <a href="deques.html#Deque"><span class="Identifier">Deque</span></a><span class="Other">[</span><span class="Identifier">T</span><span class="Other">]</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">tuple</span><span class="Other">[</span><span class="Identifier">key</span><span class="Other">:</span> <a href="system.html#int"><span class="Identifier">int</span></a><span class="Other">,</span> <span class="Identifier">val</span><span class="Other">:</span> <span class="Identifier">T</span><span class="Other">]</span></pre></dt>
 <dd>
 
-<p>Yield every (position, value) of <tt class="docutils literal"><span class="pre">deq</span></tt>.</p>
+<p><tt class="docutils literal"><span class="pre">deq</span></tt> の (position, value) をすべて生成します。</p>
 <p><strong>用例:</strong></p>
 <pre class="listing"><span class="Keyword">var</span> <span class="Identifier">a</span> <span class="Operator">=</span> <span class="Identifier">initDeque</span><span class="Punctuation">[</span><span class="Identifier">int</span><span class="Punctuation">]</span><span class="Punctuation">(</span><span class="Punctuation">)</span>
 <span class="Keyword">for</span> <span class="Identifier">i</span> <span class="Keyword">in</span> <span class="DecNumber">1</span> <span class="Operator">..</span> <span class="DecNumber">3</span><span class="Punctuation">:</span>
   <span class="Identifier">a</span><span class="Operator">.</span><span class="Identifier">addLast</span><span class="Punctuation">(</span><span class="DecNumber">10</span><span class="Operator">*</span><span class="Identifier">i</span><span class="Punctuation">)</span>
 
 <span class="Keyword">for</span> <span class="Identifier">k</span><span class="Punctuation">,</span> <span class="Identifier">v</span> <span class="Keyword">in</span> <span class="Identifier">pairs</span><span class="Punctuation">(</span><span class="Identifier">a</span><span class="Punctuation">)</span><span class="Punctuation">:</span>
-  <span class="Identifier">echo</span> <span class="StringLit">"key: "</span><span class="Punctuation">,</span> <span class="Identifier">k</span><span class="Punctuation">,</span> <span class="StringLit">", value: "</span><span class="Punctuation">,</span> <span class="Identifier">v</span>
+  <span class="Identifier">echo</span> <span class="StringLit">"キー: "</span><span class="Punctuation">,</span> <span class="Identifier">k</span><span class="Punctuation">,</span> <span class="StringLit">", 値: "</span><span class="Punctuation">,</span> <span class="Identifier">v</span>
 
-<span class="Comment"># key: 0, value: 10</span>
-<span class="Comment"># key: 1, value: 20</span>
-<span class="Comment"># key: 2, value: 30</span></pre>
+<span class="Comment"># キー: 0, 値: 10</span>
+<span class="Comment"># キー: 1, 値: 20</span>
+<span class="Comment"># キー: 2, 値: 30</span></pre>
 &nbsp;&nbsp;<a
 href="https://github.com/nim-lang/Nim/tree/version-1-2/lib/pure/collections/deques.nim#L236"
 class="link-seesrc" target="_blank">ソース</a> <a href="https://github.com/nim-lang/Nim/edit/devel/lib/pure/collections/deques.nim#L236" class="link-seesrc" target="_blank" >編集</a>

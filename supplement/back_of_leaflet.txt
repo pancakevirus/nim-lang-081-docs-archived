@@ -38,6 +38,9 @@ Zen ‚Íˆ«‚¢Œ¾Œê‚Å‚Í‚È‚¢‚ªA‚¢‚ë‚¢‚ë‚Æ• •‚¢“_‚ª‚ ‚é‚í (fork Œ³‚Å‚Í‚©‚È‚è”½Š´‚ðH‚
 Š®¬`•‹y‚Ü‚Å”¼”N‚Å‚ÍÏ‚Ü‚È‚¢‚È‚ ‚Æ‚¢‚Á‚½ˆóÛ (‚»‚ñ‚È‚í‚¯‚Å LOVE for Zen ‚ÌˆÚA‚Í•Û—¯‚É‚µ‚Ä‚¢‚Ü‚·B
 ’ú‚ß‚ÄTilengine‚Å‚¢‚¢‚©‚à)B
 
+Zig ‚à‚È‚ñ‚¾‚©B
+
+
 
 Nim ‚ð‘I‚ñ‚¾——R‚Í Ring ‚Ö‚ÌŽ¸–]‚ª‚ ‚è‚Ü‚·B
 EƒhƒLƒ…ƒƒ“ƒg‚ð’¼‚·‹C‚ª‚È‚¢B
@@ -49,12 +52,8 @@ Nim ‚ð‘I‚ñ‚¾——R‚Í Ring ‚Ö‚ÌŽ¸–]‚ª‚ ‚è‚Ü‚·B
 Ring ‚Íˆ«‚­‚È‚¢‚ñ‚Å‚·‚ªA‚Å‚«‚é‚±‚Æ‚ð–³—‚â‚è‘‚â‚»‚¤‚Æ‚·‚éŽp¨‚Ì‚¹‚¢‚©AƒoƒCƒiƒŠƒpƒbƒP[ƒW‚ªˆÙ—l‚É‘å‚«‚­‚È‚Á‚Ä‚µ‚Ü‚¢B ”z•zƒpƒbƒP[ƒW‚ª 500MB ˆÈã‰z‚¦‚Ä‚¢‚Ü‚·B
 
 ‚Ü‚ AŽg‚í‚È‚¢Šg’£‹@”\‚ð‚²‚Á‚»‚èŽÌ‚Ä‚Ä RayLib ‚É—p“r‚ði‚ê‚Îˆ«‚­‚Í‘I‘ð‚Å‚Í‚È‚¢‚Ì‚Å‚·‚ªA
-‚»‚ê‚Å‚à•¶Žš—ñˆ—‚ªŽã‚­‚ÄÅ¬ƒpƒbƒP[ƒW‚Å‚Í UTF-8 ‚·‚çˆµ‚¦‚Ü‚¹‚ñB‚µ‚å‚¤‚ª‚È‚¢‚Ì‚ÅAllegro‚ðŽg‚¤‚±‚Æ‚ÉB
-
-
-‚»‚ñ‚È‚ñ‚Å•‹y‚·‚é‚©‚Á‚Ä‚ÌB
-ƒs[ƒL[‚·‚¬‚éB
-
+‚»‚ê‚Å‚à•¶Žš—ñˆ—‚ªŽã‚­‚ÄÅ¬ƒpƒbƒP[ƒW‚Å‚Í UTF-8 ‚·‚çˆµ‚¦‚Ü‚¹‚ñB‚µ‚å‚¤‚ª‚È‚¢‚Ì‚ÅAllegro‚ðŽg‚¤‚±‚Æ‚É‚È‚é‚í‚¯‚ÅB
+‚ ‚Ü‚è‚Éƒs[ƒL[‚·‚¬‚éÝŒv‚È‚ñ‚ÅA”MS‚È•Ïl‚ªŒ»‚ê‚È‚¢ŒÀ‚è•‹y‚µ‚È‚¢‚Å‚·‚ËB
 
 ‚½‚¾A‚»‚Ì‘O‚ÉRing ‚ð‘I‚ñ‚¾‚Ì‚Í Lua ‚É‘Î‚·‚éŽüˆÍ‚Ì—v–] (ƒIƒuƒWƒFƒNƒgŽwŒüŒ¾Œê‚Å‚Í‚È‚¢) ‚ÆŽ¸–]‚Å‚·B
 
@@ -93,10 +92,7 @@ Nim ‚ÍA
 E¡Œã‚Ì“WŠJ‚É‚Â‚¢‚Ä
 
 2025”N‚­‚ç‚¢‚ÅƒI[ƒvƒ“ƒ\[ƒX–|–ó‚©‚çˆø‘Þ‚·‚é—\’è‚Å‚·B\”N‚­‚ç‚¢‘±‚¯‚½‚Ì‚¾‚©‚çA‚à‚¤Œã”CŽÒ‚Ö”C‚¹‚Ä‚à—Ç‚¢‚Å‚µ‚å‚¤B
-Ž„‚àA‚¢‚Â‚Ü‚Å‚à‚Å‚«‚é‚í‚¯‚Å‚Í‚ ‚è‚Ü‚¹‚ñB–ñŽl”N”¼‚Í Nim ‚Ö’—Í‚µ‚ÄI—¹—\’è‚Å‚·B
-
-¡Œã‚Í Nim ‚Æ‚ÍŠÖŒW‚Ì‚È‚¢‚à‚Ì‚ð‘å—Ê‚É–|–ó‚µ‚Ä‚àˆÓ–¡‚Í‚ ‚è‚Ü‚¹‚ñB
-
-
+Ž„‚àA‚¢‚Â‚Ü‚Å‚à‚Å‚«‚é‚í‚¯‚Å‚Í‚ ‚è‚Ü‚¹‚ñBŽc‚è–ñŽl”N”¼‚Í Nim ‚Ö’—Í‚µ‚ÄI—¹—\’è‚Å‚·B
+¡Œã‚Í Nim ‚Æ‚ÍŠÖŒW‚Ì‚È‚¢‚à‚Ì‚ð‘å—Ê‚É–|–ó‚µ‚Ä‚àˆÓ–¡‚Í‚ ‚è‚Ü‚¹‚ñB2021”NˆÈ~‚Í
 
 
